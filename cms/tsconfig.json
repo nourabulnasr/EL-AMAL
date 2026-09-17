@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "incremental": false,
+    "plugins": [],
+    "paths": {
+      "payload": ["./node_modules/payload"],
+      "@payloadcms/db-postgres": ["./node_modules/@payloadcms/db-postgres"]
+    }
+  },
+  "include": ["../src/cms/**/*.ts", "../src/payload.config.ts", "../src/lib/access.ts"],
+  "exclude": ["node_modules"]
+}

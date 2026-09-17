@@ -1,8 +1,8 @@
 # CMS preparation
 
-The Payload/PostgreSQL dependency set was verified against package peer metadata and official installation guidance, but installation failed because the npm registry connection reset fetching @payloadcms/drizzle. These packages are kept in this separate manifest to let the frontend preview install from the local cache.
+The isolated Payload/PostgreSQL installation succeeded on retry on 17 September 2026. Exact resolved versions are saved in cms/package-lock.json. Run npm ci --prefix cms --ignore-scripts to reproduce this preparation environment. Packages remain separate from the frontend until database integration is ready. Installation scripts were deliberately not run; runtime integration still needs validation.
 
-src/payload.config.ts and src/cms/collections.ts are prepared schema source, excluded from the frontend TypeScript build until the CMS packages are installed. They are not an operational admin. The /admin page explains setup status and accepts no credentials. Public preview pages currently read clearly labelled fixture records, not CMS content.
+src/payload.config.ts and src/cms/collections.ts are prepared schema source, excluded from the frontend TypeScript build and checked separately with node node_modules/typescript/bin/tsc --project cms/tsconfig.json. They are not an operational admin. The /admin page explains setup status and accepts no credentials. Public preview pages currently read clearly labelled fixture records, not CMS content.
 
 Next integration steps:
 
@@ -20,3 +20,4 @@ References checked 17 September 2026:
 - https://payloadcms.com/docs/local-api/access-control
 
 All future Local API public operations must pass overrideAccess: false and an appropriate user context. Internal bypasses need explicit review.
+
