@@ -35,3 +35,5 @@ Next: finish CMS dependency installation, connect isolated PostgreSQL, implement
 - [Progress](PROGRESS.md)
 
 Source proposal text, local screenshots and secrets are ignored by Git. Visual approval belongs to Nour. This preview does not constitute delivery of the full proposal.
+
+Client review: https://el-amal-sigma.vercel.app/en. Vercel automatically deploys pushes to codex/el-amal-foundation to this stable URL. The deployed application is still a sample-content preview, with live enquiries and inventory pending.

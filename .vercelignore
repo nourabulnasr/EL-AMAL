@@ -1,0 +1,13 @@
+.git
+.next
+node_modules
+.env*
+docs/source
+artifacts
+cms
+README.md
+PROGRESS.md
+AGENTS.md
+CLAUDE.md
+docs
+tests
