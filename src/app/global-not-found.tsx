@@ -1,0 +1,1 @@
+export default function NotFound(){return <html lang="en"><body style={{fontFamily:'Arial,sans-serif',padding:'12vh 8%',background:'#f1f3f2',color:'#171c20'}}><main><p>EL AMAL / 404</p><h1>Page not found</h1><p lang="ar" dir="rtl">الصفحة غير موجودة</p><a href="/en">English catalogue</a> · <a href="/ar" lang="ar">الكتالوج العربي</a></main></body></html>;}

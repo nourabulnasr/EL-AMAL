@@ -1,0 +1,2 @@
+export const metadata={title:'EL AMAL administration setup',robots:{index:false,follow:false}};
+export default function Page(){return <main style={{maxWidth:640,margin:'12vh auto',padding:32}}><p>EL AMAL / Administration</p><h1>Database setup required</h1><p>The catalogue schemas are prepared. Staff sign-in will be available after an isolated PostgreSQL database, migrations and the first owner account are configured and tested.</p><p>This preview does not accept staff credentials or modify stock.</p><a href="/en">Return to the website preview</a></main>;}
