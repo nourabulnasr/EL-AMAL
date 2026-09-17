@@ -26,3 +26,11 @@ CMS dependencies successfully installed in the isolated cms package; lockfile sa
 CMS is still not integrated into the live app. No PostgreSQL connection, migrations, trusted owner bootstrap, operational admin, HTTP permission verification or live RFQ exists yet. No local psql/docker executable found in PATH. User was asked whether a database already exists; no specific database answer received. Next: arrange isolated PostgreSQL and secure secret configuration, integrate pinned Payload packages into root, generate migrations/types and test admin plus direct API permissions. Never silently provision paid services or paste credentials into chat.
 
 Resume from phone using the same task via Remote; see docs/continue-project.md. Live client URL remains https://el-amal-sigma.vercel.app/en.
+
+## 18 September 2026 — database setup awaiting account owner
+
+Resumed from checkpoint; clean working tree. Vercel integration list and env ls confirmed no connected resources or variables. Marketplace lists Neon free_v3 (Free). Attempted el-amal-development in iad1, built-in Neon auth disabled (Payload owns staff auth), development environment only, no env pull. CLI returned action_required: integration_terms_acceptance_required. No database was created. Nour must review/accept https://vercel.com/nour-abulnasrs-projects/~/integrations/accept-terms/neon?source=cli then retry the same command. Do not accept legal terms for Nour.
+
+Resume command after acceptance: vercel integration add neon --name el-amal-development --plan free_v3 --metadata region=iad1 --metadata auth=false --environment development --no-env-pull --scope nour-abulnasrs-projects
+
+Then verify resources once before retrying, pull development credentials into ignored .env.local without printing values, integrate CMS, generate/review migrations and test against this isolated database. Live client preview remains unaffected. No paid plan authorized or provisioned.
