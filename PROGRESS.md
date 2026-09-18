@@ -50,3 +50,9 @@ Verification completed: production build exit0 (webpack compiled with warnings, 
 Cloud build1bfe7bd found .vercelignore cms pattern also excluded src/cms. Narrowed to /cms/ so only the obsolete root preparation package is excluded. Previous client deployment stayed live; verifying replacement build.
 
 Deployment verification: corrected commit06441b5 is Ready on Vercel (dpl_EB2pTLtJvo6igopgmaw5kYnxtqYo), aliased to https://el-amal-sigma.vercel.app. Unauthenticated live checks: /en200, /ar200, /admin200 setup page, /api/staff503 confirming CMS disabled. Permanent owner email still required for next authenticated admin milestone.
+
+## 18 September 2026 — development owner bootstrap
+
+Created the user-supplied owner account in the development database through scripts/bootstrap-owner.ts. Generated password is in ignored .env.owner.local; it was not printed, committed or emailed. Bootstrap refuses an existing staff database and uses exclusive credential-file creation to avoid overwriting credentials. Account email is kept with the local credentials rather than in this repository.
+
+Verified Payload login and HTTP owner role, authenticated /api/staff/me, /api/skus and /api/categories200, cookie-authenticated /admin200, and logout200. Local admin preview runs at http://127.0.0.1:3005/admin with CMS enabled only for this local process. Public Vercel admin stays disabled. Browser visual walkthrough and non-owner HTTP role matrix remain pending. No live email service or automatic password reset. Owner should replace the generated temporary password through the authenticated account page before real use.

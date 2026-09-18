@@ -19,3 +19,5 @@ Admin and REST routes are integrated and guarded by CMS_ENABLED=true plus valid 
 Initial migration: src/migrations/20260918_090933_initial_catalogue.ts. Applied to the new development database, with automatic schema push disabled. No production migrations, customer products, inventory balances, live RFQ or email delivery are configured.
 
 Pending: owner bootstrap, authenticated admin walkthrough and HTTP role tests, email service, reviewed content adapter, stock/RFQ transaction services, separate deployment database and release checks. Browser visual approval remains Nour's.
+
+Owner bootstrap: scripts/bootstrap-owner.ts requires CMS_BOOTSTRAP=development and BOOTSTRAP_OWNER_EMAIL. It refuses to operate if any staff account exists, writes a random password to ignored .env.owner.local with exclusive creation, creates the first owner and verifies login. Do not rerun to reset an account. The user-supplied development owner has now been created; authenticate with the local credential file. No credentials belong in Git or chat.
