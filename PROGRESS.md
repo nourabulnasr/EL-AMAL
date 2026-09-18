@@ -46,3 +46,5 @@ Admin and REST routes integrated with explicit CMS_ENABLED gate. Public first-re
 Local memory exhaustion interrupted several commands; sequential checks with reduced Node heap succeeded. See current build/test output before claiming the latest deployment verified. Next: receive owner email, bootstrap securely, verify authenticated admin/API roles, connect reviewed catalogue, and implement RFQ/stock services. Do not expose unrestricted first-user registration.
 
 Verification completed: production build exit0 (webpack compiled with warnings, no error details emitted); TypeScript succeeded within build. Enabled-development HTTP /en and /admin/login returned200; /api/staff/first-register POST, /api/staff/forgot-password POST and /api/skus GET returned403; /api/products GET returned200 with zero records. Temporary local test server stopped after checks. Authenticated browser testing remains pending permanent owner setup.
+
+Cloud build1bfe7bd found .vercelignore cms pattern also excluded src/cms. Narrowed to /cms/ so only the obsolete root preparation package is excluded. Previous client deployment stayed live; verifying replacement build.
