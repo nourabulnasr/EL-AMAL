@@ -11,6 +11,7 @@ const bilingual=(name:string,type:'text'|'textarea'='text'):Field=>({
 });
 export const Staff:CollectionConfig={
  slug:'staff',auth:{maxLoginAttempts:5,lockTime:600000},admin:{useAsTitle:'email'},
+ endpoints:[{path:'/first-register',method:'post',handler:async()=>Response.json({error:'Owner setup requires a trusted local operation.'},{status:403})}],
  access:{create:owner,read:({req})=>hasRole(req.user,['owner'])?true:req.user?{id:{equals:req.user.id}}:false,update:owner,delete:()=>false,admin:({req})=>hasRole(req.user,['owner','catalogue-editor','sales','warehouse'])},
  fields:[{name:'role',type:'select',required:true,defaultValue:'catalogue-editor',options:['owner','catalogue-editor','sales','warehouse'],access:{create:({req})=>hasRole(req.user,['owner']),update:({req})=>hasRole(req.user,['owner'])}}],
 };

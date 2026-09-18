@@ -1,23 +1,21 @@
-# CMS preparation
+# CMS integration
 
-The isolated Payload/PostgreSQL installation succeeded on retry on 17 September 2026. Exact resolved versions are saved in cms/package-lock.json. Run npm ci --prefix cms --ignore-scripts to reproduce this preparation environment. Packages remain separate from the frontend until database integration is ready. Installation scripts were deliberately not run; runtime integration still needs validation.
+Payload 3.78.0 and the PostgreSQL adapter are installed in the root application. The old isolated cms/package.json and lockfile are retained only as history; use root npm ci and npm run typecheck. All source, including CMS and migrations, now participates in root type checking.
 
-src/payload.config.ts and src/cms/collections.ts are prepared schema source, excluded from the frontend TypeScript build and checked separately with node node_modules/typescript/bin/tsc --project cms/tsconfig.json. They are not an operational admin. The /admin page explains setup status and accepts no credentials. Public preview pages currently read clearly labelled fixture records, not CMS content.
+The free Neon database el-amal-development is connected only to Vercel's development environment. Credentials live in ignored .env.local; the local Payload secret is in ignored .env.development.local. Never print or commit those files. Do not point local tests at a production database.
 
-Next integration steps:
+Commands (development environment files required):
 
-1. Install the exact packages in this manifest into the root application after registry access recovers; remove this temporary manifest separation.
-2. Configure a new isolated PostgreSQL database and a random PAYLOAD_SECRET. Keep automatic schema push disabled; generate, review and run migrations.
-3. Restore withPayload in next.config.mjs, include CMS source in type checking, generate Payload types and use the official Payload route-group layout/admin/REST entry points.
-4. Bootstrap the first owner through a one-time trusted local operation. Public registration must remain disabled; do not default publicly created users to owner.
-5. Prove direct API role boundaries, publication rules for both languages, and private-field protections using the real CMS and database.
-6. Add the reviewed catalogue adapter. Keep fixture records separate and never import them as publishable products.
+- npm run cms -- generate:types
+- npm run cms -- migrate:create descriptive_name
+- Review generated migration SQL, then npm run cms -- migrate
+- npm run cms -- migrate:status
+- Set CMS_DATABASE_CHECK=development, then npm run cms -- run scripts/check-cms-database.ts
 
-Inventory balances and events are deliberately not editable CMS fields. A future tested transactional service must own them. Current schemas have not been run against a database and no migrations are claimed.
+The database check creates uniquely identified temporary records and deletes only those exact IDs. Explicit overrideAccess:true is limited to trusted test setup/cleanup; permission assertions use overrideAccess:false.
 
-References checked 17 September 2026:
-- https://payloadcms.com/docs/getting-started/installation
-- https://payloadcms.com/docs/local-api/access-control
+Admin and REST routes are integrated and guarded by CMS_ENABLED=true plus valid database/secret configuration. The public Vercel review deployment has no CMS credentials or enable flag and remains disabled. Public first-register is blocked at the route and collection endpoint; password-reset routes stay blocked until a real email adapter exists. A permanent owner must be bootstrapped through a trusted local procedure after Nour supplies the owner email. Never expose first-user self-registration.
 
-All future Local API public operations must pass overrideAccess: false and an appropriate user context. Internal bypasses need explicit review.
+Initial migration: src/migrations/20260918_090933_initial_catalogue.ts. Applied to the new development database, with automatic schema push disabled. No production migrations, customer products, inventory balances, live RFQ or email delivery are configured.
 
+Pending: owner bootstrap, authenticated admin walkthrough and HTTP role tests, email service, reviewed content adapter, stock/RFQ transaction services, separate deployment database and release checks. Browser visual approval remains Nour's.

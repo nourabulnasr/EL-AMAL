@@ -9,5 +9,3 @@ docs/source/
 artifacts/
 .DS_Store
 .vercel/
-
-.vercel

@@ -1,4 +1,5 @@
-export default {
+import {withPayload} from '@payloadcms/next/withPayload';
+const nextConfig = {
   experimental: { globalNotFound: true, cpus: 1 },
   poweredByHeader: false,
   async headers() { return [{ source: '/:path*', headers: [
@@ -9,3 +10,4 @@ export default {
     {key:'Permissions-Policy',value:'camera=(), microphone=(), geolocation=()'},
   ] }]; },
 };
+export default withPayload(nextConfig);

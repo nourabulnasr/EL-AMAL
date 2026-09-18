@@ -11,19 +11,24 @@
     "build": "next build --webpack",
     "start": "next start --hostname 127.0.0.1 --port 3004",
     "typecheck": "tsc --noEmit",
-    "test": "node --experimental-strip-types --test tests/*.test.mjs"
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "cms": "node --env-file=.env.local --env-file=.env.development.local node_modules/payload/bin.js"
   },
   "dependencies": {
+    "@payloadcms/db-postgres": "3.78.0",
+    "@payloadcms/next": "3.78.0",
+    "graphql": "16.11.0",
     "next": "16.3.5",
+    "payload": "3.78.0",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },
   "devDependencies": {
-    "typescript": "5.9.3",
+    "@tailwindcss/postcss": "4.3.3",
     "@types/node": "22.20.2",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "tailwindcss": "4.3.3",
-    "@tailwindcss/postcss": "4.3.3"
+    "typescript": "5.9.3"
   }
 }

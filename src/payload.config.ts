@@ -1,10 +1,10 @@
 import {buildConfig} from 'payload';
 import {postgresAdapter} from '@payloadcms/db-postgres';
-import {Staff,Categories,Products,SKUs} from './cms/collections';
+import {Staff,Categories,Products,SKUs} from './cms/collections.ts';
 export default buildConfig({
  secret:process.env.PAYLOAD_SECRET||'',
  admin:{user:'staff'},
- db:postgresAdapter({pool:{connectionString:process.env.DATABASE_URL||''},push:false}),
+ db:postgresAdapter({pool:{connectionString:process.env.DATABASE_URL||'',max:3,connectionTimeoutMillis:15000},push:false,migrationDir:'src/migrations'}),
  collections:[Staff,Categories,Products,SKUs],
  typescript:{outputFile:'src/payload-types.ts'},
  graphQL:{disable:true},

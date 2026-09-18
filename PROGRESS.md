@@ -34,3 +34,15 @@ Resumed from checkpoint; clean working tree. Vercel integration list and env ls 
 Resume command after acceptance: vercel integration add neon --name el-amal-development --plan free_v3 --metadata region=iad1 --metadata auth=false --environment development --no-env-pull --scope nour-abulnasrs-projects
 
 Then verify resources once before retrying, pull development credentials into ignored .env.local without printing values, integrate CMS, generate/review migrations and test against this isolated database. Live client preview remains unaffected. No paid plan authorized or provisioned.
+
+## 18 September 2026 — PostgreSQL and admin integration
+
+Nour accepted Neon terms. Provisioned free_v3 el-amal-development in iad1 with Neon auth disabled and development-only Vercel connection. Verified database connectivity. Credentials are in ignored .env.local and generated local-only Payload secret in ignored .env.development.local; no secret values printed or committed.
+
+Root application now owns pinned Payload packages. Generated src/payload-types.ts and initial catalogue migration; reviewed and applied migration to the new empty development database with push:false. Real Payload/PostgreSQL checks verified draft persistence, public draft exclusion, anonymous staff-create denial and private-SKU denial; temporary records removed. All16 unit tests succeeded. Root TypeScript includes CMS and migrations now.
+
+Admin and REST routes integrated with explicit CMS_ENABLED gate. Public first-register blocked in both route and collection endpoint. Password-reset routes blocked pending a configured mail adapter. Public client review still has no CMS flag/credentials; do not enable it with the development database. Permanent owner email requested and still pending. No permanent admin account created, no authenticated browser walkthrough yet, no real catalogue/import, live RFQ or stock service.
+
+Local memory exhaustion interrupted several commands; sequential checks with reduced Node heap succeeded. See current build/test output before claiming the latest deployment verified. Next: receive owner email, bootstrap securely, verify authenticated admin/API roles, connect reviewed catalogue, and implement RFQ/stock services. Do not expose unrestricted first-user registration.
+
+Verification completed: production build exit0 (webpack compiled with warnings, no error details emitted); TypeScript succeeded within build. Enabled-development HTTP /en and /admin/login returned200; /api/staff/first-register POST, /api/staff/forgot-password POST and /api/skus GET returned403; /api/products GET returned200 with zero records. Temporary local test server stopped after checks. Authenticated browser testing remains pending permanent owner setup.

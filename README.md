@@ -22,13 +22,13 @@ Open http://127.0.0.1:3004/en or /ar. For production preview: `npm run build` th
 
 ## Validation
 
-`npm test` runs ten unit tests. `npm run typecheck` checks the frontend. Production build succeeded. Browser checks covered model search, language switching, Arabic product details, basket persistence, mobile menu and empty-search reset. Detailed evidence and limitations: [verification report](docs/verification-2026-09-17.md).
+`npm test` runs sixteen unit tests. `npm run typecheck` checks the frontend. Production build succeeded. Browser checks covered model search, language switching, Arabic product details, basket persistence, mobile menu and empty-search reset. Detailed evidence and limitations: [verification report](docs/verification-2026-09-17.md).
 
 ## Not yet live
 
-CMS dependencies could not finish downloading. CMS source is excluded from frontend type checking and is not operational. No database, email service, customer enquiry submission, transactional inventory or deployment is configured. No actual stock or product specifications are invented. Preview pages have noindex headers; the sitemap is intentionally empty.
+CMS dependencies, guarded admin/API routes and the initial PostgreSQL migration are integrated. The isolated free development database is connected and tested. Permanent owner setup and authenticated admin verification remain pending. The client review deployment keeps CMS disabled. No email service, customer enquiry submission or transactional inventory is configured. No actual stock or product specifications are invented. Preview pages have noindex headers; the sitemap is intentionally empty.
 
-Next: finish CMS dependency installation, connect isolated PostgreSQL, implement and test enquiry/stock workflows, import reviewed bilingual catalogue data, replace provisional branding and illustration, complete remaining content and production SEO, then deployment and acceptance checks.
+Next: bootstrap the permanent owner, verify authenticated admin/API workflows, implement and test enquiry/stock workflows, import reviewed bilingual catalogue data, replace provisional branding and illustration, complete remaining content and production SEO, then deployment and acceptance checks.
 
 - [Kickoff scope](docs/kickoff-2026-09-17.md)
 - [Foundation plan](docs/foundation-plan.md)
@@ -37,3 +37,4 @@ Next: finish CMS dependency installation, connect isolated PostgreSQL, implement
 Source proposal text, local screenshots and secrets are ignored by Git. Visual approval belongs to Nour. This preview does not constitute delivery of the full proposal.
 
 Client review: https://el-amal-sigma.vercel.app/en. Vercel automatically deploys pushes to codex/el-amal-foundation to this stable URL. The deployed application is still a sample-content preview, with live enquiries and inventory pending.
+

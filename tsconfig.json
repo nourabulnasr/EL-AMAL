@@ -41,8 +41,6 @@
   ],
   "exclude": [
     "node_modules",
-    "cms/node_modules",
-    "src/cms",
-    "src/payload.config.ts"
+    "cms/node_modules"
   ]
 }
