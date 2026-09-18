@@ -48,3 +48,5 @@ Local memory exhaustion interrupted several commands; sequential checks with red
 Verification completed: production build exit0 (webpack compiled with warnings, no error details emitted); TypeScript succeeded within build. Enabled-development HTTP /en and /admin/login returned200; /api/staff/first-register POST, /api/staff/forgot-password POST and /api/skus GET returned403; /api/products GET returned200 with zero records. Temporary local test server stopped after checks. Authenticated browser testing remains pending permanent owner setup.
 
 Cloud build1bfe7bd found .vercelignore cms pattern also excluded src/cms. Narrowed to /cms/ so only the obsolete root preparation package is excluded. Previous client deployment stayed live; verifying replacement build.
+
+Deployment verification: corrected commit06441b5 is Ready on Vercel (dpl_EB2pTLtJvo6igopgmaw5kYnxtqYo), aliased to https://el-amal-sigma.vercel.app. Unauthenticated live checks: /en200, /ar200, /admin200 setup page, /api/staff503 confirming CMS disabled. Permanent owner email still required for next authenticated admin milestone.
