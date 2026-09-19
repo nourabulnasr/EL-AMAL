@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {randomBytes} from 'node:crypto';
 import {getPayload} from 'payload';
 import config from '../src/payload.config.ts';
+import {toPublicCatalogue} from '../src/lib/public-catalogue.ts';
 
 // Run only against the isolated development database. No customer data is seeded.
 if (process.env.CMS_DATABASE_CHECK !== 'development') {
@@ -36,6 +37,21 @@ try {
   assert.equal(anonymous.totalDocs,0,'Anonymous users must not see draft products');
   const staff=await payload.find({collection:'products',overrideAccess:false,user,where:{id:{equals:product.id}}});
   assert.equal(staff.totalDocs,1,'Owner must be able to retrieve persisted draft');
+  const published=await payload.update({collection:'products',id:product.id,overrideAccess:false,user,data:{
+    _status:'published',reviewedBy:owner.id,reviewedAt:new Date().toISOString(),rightsConfirmed:true,
+  }});
+  const readPublic=async()=>{
+    const records=await payload.find({collection:'products',overrideAccess:true,draft:false,depth:0,
+      where:{and:[{id:{equals:product.id}},{_status:{equals:'published'}}]}});
+    return toPublicCatalogue(records.docs,[category]);
+  };
+  assert.equal((await readPublic()).products[0]?.id,`cms-${published.id}`);
+  await payload.update({collection:'products',id:product.id,overrideAccess:false,user,draft:true,
+    data:{_status:'draft',name:{en:'Unpublished edit',ar:'تعديل غير منشور'}}});
+  assert.equal((await readPublic()).products[0]?.name.en,'Temporary test','Draft edits must not replace public content');
+  await payload.update({collection:'products',id:product.id,overrideAccess:false,user,data:{_status:'draft'}});
+  assert.equal((await readPublic()).products.length,0,'Unpublished products must disappear');
+  console.log('Public catalogue checks succeeded: publish, draft isolation, unpublish and explicit public projection.');
   console.log('Database checks succeeded: anonymous staff creation denied, private SKUs denied, draft persisted and hidden from public reads.');
 } finally {
   try {

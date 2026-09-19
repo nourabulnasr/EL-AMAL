@@ -38,3 +38,8 @@ Source proposal text, local screenshots and secrets are ignored by Git. Visual a
 
 Client review: https://el-amal-sigma.vercel.app/en. Vercel automatically deploys pushes to codex/el-amal-foundation to this stable URL. The deployed application is still a sample-content preview, with live enquiries and inventory pending.
 
+
+## Catalogue source
+The public website now uses a shared server catalogue loader. `CATALOGUE_SOURCE=demo` (default) preserves the labelled review records. Set `CATALOGUE_SOURCE=cms` and redeploy only when reviewed content is ready; `CMS_ENABLED`, database connection and Payload secret must also be configured. CMS mode reads published records at request time and explicitly projects public fields. It never falls back to demo products on empty data or failure. Drafts, review identities, source evidence and SKUs are not sent to the public UI. Demo and CMS baskets use different local-storage keys.
+
+This does not enable enquiry submission or stock reservations. Images remain labelled illustrations until authorised assets are supplied. Keep noindex enabled until release acceptance.
