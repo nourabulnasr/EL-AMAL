@@ -29,3 +29,13 @@ Remaining: full T01–T14 acceptance, end-to-end enquiry/stock tests, security/r
 URL: https://el-amal-sigma.vercel.app/admin
 Hosted credentials: ignored .env.hosted-owner.local. Development credentials: .env.owner.local (different password). Copy only values after the equals sign. Never commit or share credential files.
 Latest live verification: hosted login200 with owner role and cookie-authenticated admin200; test session logged out. This verifies server authentication, not the owner's browser walkthrough.
+
+## UI/UX across the phases
+- Phase 1: information architecture and approved design direction (Precision in steel); basic admin foundation.
+- Phase 2: main public UI/UX — typography, colour, navigation, bilingual/RTL layouts, responsive homepage/catalogue/product detail, search/filter states, basket interactions and accessibility. Initial interface exists; authentic assets, full interaction states, usability/performance verification and Nour's visual approval remain.
+- Phase 3: enquiry form, validation, attachment, verification, confirmation and staff enquiry experience.
+- Phase 4: stock status, reservation/expiry/dispatch feedback and staff inventory workflows.
+- Phase 5: remaining content page design, visual consistency, final assets, copy and agreed motion polish.
+- Phase 6: full mobile/desktop/RTL, keyboard/accessibility and end-to-end usability acceptance. UI/UX is continuous, not deferred until phase5.
+
+Browser login follow-up: used the existing hosted credentials through the live form in the user's in-app browser. Navigation reached /admin with Dashboard visible. No credential change was needed. Earlier failure was not reproduced and its cause is unconfirmed.
