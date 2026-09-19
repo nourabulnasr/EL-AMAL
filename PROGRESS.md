@@ -56,3 +56,9 @@ Deployment verification: corrected commit06441b5 is Ready on Vercel (dpl_EB2pTLt
 Created the user-supplied owner account in the development database through scripts/bootstrap-owner.ts. Generated password is in ignored .env.owner.local; it was not printed, committed or emailed. Bootstrap refuses an existing staff database and uses exclusive credential-file creation to avoid overwriting credentials. Account email is kept with the local credentials rather than in this repository.
 
 Verified Payload login and HTTP owner role, authenticated /api/staff/me, /api/skus and /api/categories200, cookie-authenticated /admin200, and logout200. Local admin preview runs at http://127.0.0.1:3005/admin with CMS enabled only for this local process. Public Vercel admin stays disabled. Browser visual walkthrough and non-owner HTTP role matrix remain pending. No live email service or automatic password reset. Owner should replace the generated temporary password through the authenticated account page before real use.
+
+## 19 September 2026 — hosted admin activation
+
+Nour explicitly requested the admin at https://el-amal-sigma.vercel.app/admin. Created separate free Neon el-amal-hosted in iad1, production environment only, built-in Neon auth=false. Applied the reviewed initial migration. Configured Vercel production PAYLOAD_SECRET, CMS_ENABLED=true and SITE_URL; no secrets printed. Created the requested owner via trusted bootstrap and verified Payload login. Hosted credentials are in ignored .env.hosted-owner.local, distinct from development credentials. Bootstrap supports explicit hosted target; refuses any existing staff database.
+
+Redeployment and public HTTPS access verification are the next checks. Development remains separate. Public catalogue still reads labelled fixtures, not CMS records. No mail adapter/password recovery, attachments, RFQ persistence or transactional stock yet.
