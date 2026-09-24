@@ -2,6 +2,8 @@
 
 ## 24 September update — work independent of catalogue
 
+Notification follow-up: transactional queue creation and injectable retry worker implemented/tested; sample requests are disabled, no sender or scheduler configured. Worker tests cover rollback, claim contention, retry limits and stale responses with fake sends only. Customer email verification remains unimplemented. Read latest PROGRESS.md for deployment evidence.
+
 Phase1 security upgrade is live and verified. Phase3 now has a tested persistence service and protected owner/sales enquiry collection: server-resolved immutable item snapshots, request-key deduplication including simultaneous retries, status/internal notes, and denied public creation/read. The public form remains preview-only. No real enquiry submission, outgoing email, verification, attachment upload or stock reservation is active. See PROGRESS.md for deployment status of the inbox increment.
 
 Work that can continue before catalogue intake: enquiry HTTP/form integration and abuse controls; email outbox/verification mechanics (delivery needs sender setup); private uploads/scanning integration; stock ledger and reservation logic using isolated synthetic SKUs; remaining content-page structures; accessibility/performance/role/restore tests. Final business wording/assets, sender configuration, stock timing policies, real catalogue/SKUs and operational opening stock remain separate inputs. Do not label any entire phase complete because its foundation exists.

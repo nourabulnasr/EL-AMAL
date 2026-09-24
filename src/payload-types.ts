@@ -72,6 +72,7 @@ export interface Config {
     products: Product;
     skus: Skus;
     enquiries: Enquiry;
+    notifications: Notification;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -84,6 +85,7 @@ export interface Config {
     products: ProductsSelect<false> | ProductsSelect<true>;
     skus: SkusSelect<false> | SkusSelect<true>;
     enquiries: EnquiriesSelect<false> | EnquiriesSelect<true>;
+    notifications: NotificationsSelect<false> | NotificationsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -248,6 +250,30 @@ export interface Enquiry {
   createdAt: string;
 }
 /**
+ * Delivery preparation only. Sample requests are disabled. No sender or automatic worker is configured.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "notifications".
+ */
+export interface Notification {
+  id: number;
+  reference: string;
+  enquiry: number | Enquiry;
+  deliveryKey: string;
+  recipient: string;
+  source: 'demo' | 'cms';
+  status: 'disabled' | 'pending' | 'processing' | 'sent' | 'failed';
+  attempts: number;
+  nextAttemptAt?: string | null;
+  leaseToken?: string | null;
+  leaseExpiresAt?: string | null;
+  sentAt?: string | null;
+  providerMessageId?: string | null;
+  lastError?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
@@ -290,6 +316,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'enquiries';
         value: number | Enquiry;
+      } | null)
+    | ({
+        relationTo: 'notifications';
+        value: number | Notification;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -447,6 +477,27 @@ export interface EnquiriesSelect<T extends boolean = true> {
   deliveryStatus?: T;
   status?: T;
   internalNotes?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "notifications_select".
+ */
+export interface NotificationsSelect<T extends boolean = true> {
+  reference?: T;
+  enquiry?: T;
+  deliveryKey?: T;
+  recipient?: T;
+  source?: T;
+  status?: T;
+  attempts?: T;
+  nextAttemptAt?: T;
+  leaseToken?: T;
+  leaseExpiresAt?: T;
+  sentAt?: T;
+  providerMessageId?: T;
+  lastError?: T;
   updatedAt?: T;
   createdAt?: T;
 }

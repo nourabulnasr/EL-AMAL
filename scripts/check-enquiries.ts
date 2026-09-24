@@ -48,6 +48,8 @@ try {
   await assert.rejects(payload.update({collection:'enquiries',id:record.id,overrideAccess:true,data:{company:'Trusted tampering'}}),/immutable/);
   console.log('Enquiry checks succeeded: durable snapshots, repeat/conflict/concurrent requests, owner/sales workflow, private reads and immutable contact details.');
 }finally{
+  const records=await payload.find({collection:'enquiries',overrideAccess:true,where:{requestKey:{in:requestKeys}},depth:0,limit:100});
+  if(records.docs.length)await payload.delete({collection:'notifications',overrideAccess:true,where:{enquiry:{in:records.docs.map(doc=>doc.id)}}});
   await payload.delete({collection:'enquiries',overrideAccess:true,where:{requestKey:{in:requestKeys}}});
   for(const id of staffIds.reverse())await payload.delete({collection:'staff',id,overrideAccess:true});
   assert.equal(Object.keys(payload.db.sessions??{}).length,0);

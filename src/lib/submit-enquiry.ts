@@ -17,13 +17,23 @@ export async function submitEnquiry(payload:Payload,raw:unknown,catalogue:Catalo
   const previous=await existing();
   if(previous)return previous;
   const items=snapshotItems(input.lines,catalogue.products);
+  const transactionID=await payload.db.beginTransaction();
+  if(transactionID===null)throw new Error('Enquiry persistence requires transactions');
+  const req={transactionID};
   try {
-    const record=await payload.create({collection:'enquiries',overrideAccess:true,depth:0,data:{
+    const record=await payload.create({collection:'enquiries',overrideAccess:true,depth:0,req,data:{
       reference:`EA-${randomUUID()}`,requestKey:input.requestKey,fingerprint,locale:input.locale,source:catalogue.source,
       ...input.contact,items,status:'new',verificationStatus:'unverified',deliveryStatus:'not-configured',
     }});
+    await payload.create({collection:'notifications',overrideAccess:true,depth:0,req,data:{
+      enquiry:record.id,reference:record.reference,deliveryKey:`enquiry-${record.reference}`,
+      recipient:process.env.ENQUIRY_NOTIFICATION_TO||'mohamed.sorour8@icloud.com',source:catalogue.source,
+      status:catalogue.source==='demo'?'disabled':'pending',attempts:0,nextAttemptAt:new Date().toISOString(),
+    }});
+    await payload.db.commitTransaction(transactionID);
     return {reference:record.reference,repeated:false};
   }catch(error){
+    await payload.db.rollbackTransaction(transactionID);
     // The unique database constraint also covers simultaneous identical requests.
     const raced=await existing();
     if(raced)return raced;

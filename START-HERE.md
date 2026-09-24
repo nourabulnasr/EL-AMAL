@@ -8,6 +8,8 @@ Later update: durable enquiry service and protected owner/sales inbox now live. 
 
 Latest: owner/sales users can now save sample requests from the bilingual quote form after signing in. Staff-only demo submission endpoint and browser-to-admin journey verified;28 tests succeeded. Anonymous visitors still cannot submit. Next: notification outbox and email verification/sender setup, then uploads and inventory tests. Catalogue deferred.
 
+Notification update: queue and injectable retry worker now implemented/deployed;31 unit tests plus database queue tests succeeded. Enquiries and queue records save atomically. Samples are disabled, no sender configured and no worker scheduled. Next is customer verification and sender integration/operational delivery. See docs/notification-queue.md and newest PROGRESS entry.
+
 ## Resume prompt
 
 Paste this into a new Codex task with this folder attached:

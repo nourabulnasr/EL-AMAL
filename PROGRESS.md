@@ -1,5 +1,13 @@
 # EL AMAL progress
 
+## Latest checkpoint — 24 September notification queue live, sending disabled
+
+Added private owner/sales Notification queue and transactional enquiry+notification creation. Duplicate requests share one notification. Demo requests create disabled records; worker claims only cms-source records. Injectable worker has no configured transport and no scheduled/API entry point. It supports atomic SKIP LOCKED claims, five-minute leases, stable provider idempotency keys, exponential delay, five-attempt limit, stale-result protection and generic error storage. No customer details are copied into message content beyond the random reference. Confirmed recipient is configurable via ENQUIRY_NOTIFICATION_TO.
+
+31 unit tests and TypeScript succeeded. Development database tests verified enqueue rollback, duplicate/concurrent enquiries, demo suppression, delayed retry, worker contention, stale results and retry exhaustion with fake sender only; temporary rows removed. Hosted migration applied. Cloud deployment dpl_5tsnqsZbcgxHWZDJRNz9ArCX8Ync Ready/promoted. Staged owner queue/API/admin HTML200; live pages/login200 and anonymous queue/enquiry/private setup403. No emails sent. Existing public form remains staff-only demo testing.
+
+Next: customer email verification/token flow, actual sender adapter/configuration, provider idempotency and timeout handling, scheduled delivery and operational monitoring. These are NOT complete. Secure attachments and stock workflow remain after that. Catalogue remains deferred. Queue is preparation, not enabled email delivery. See docs/notification-queue.md.
+
 ## Latest checkpoint — 24 September staff test form connected
 
 Live deployment dpl_3edTG9kJaoJKL3wChEWqv1Z4FUZH adds an authenticated sample-enquiry flow. /api/enquiry-submissions GET exposes only no-store canSaveTest; POST checks configured CMS, demo source, owner/sales staff auth, exact request origin, JSON and streamed32KB limit. Public access remains denied. English/Arabic review shows Save test enquiry only to authorised staff, preserves request keys across retries/edit-review, prevents double clicks and returns a reference plus inbox link. No outgoing emails, verification or stock writes.
