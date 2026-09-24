@@ -67,13 +67,15 @@ try {
   const staff=await payload.find({collection:'products',overrideAccess:false,user,where:{id:{equals:product.id}}});
   assert.equal(staff.totalDocs,1,'Owner must be able to retrieve persisted draft');
   const published=await payload.update({collection:'products',id:product.id,overrideAccess:false,user,data:{
-    _status:'published',reviewedBy:owner.id,reviewedAt:new Date().toISOString(),rightsConfirmed:true,
+    _status:'published',reviewedBy:owner.id,reviewedAt:new Date().toISOString(),rightsConfirmed:true,instrumentType:'pressure-gauge',applications:['oil-gas'],datasheetUrl:'https://example.invalid/test.pdf',
   }});
   const readPublic=async()=>{
     const records=await payload.find({collection:'products',overrideAccess:true,draft:false,depth:0,
       where:{and:[{id:{equals:product.id}},{_status:{equals:'published'}}]}});
     return toPublicCatalogue(records.docs,[category]);
   };
+  assert.equal((await readPublic()).products[0]?.datasheetUrl,'https://example.invalid/test.pdf');
+  assert.deepEqual((await readPublic()).products[0]?.applications,['oil-gas']);
   assert.equal((await readPublic()).products[0]?.id,`cms-${published.id}`);
   await payload.update({collection:'products',id:product.id,overrideAccess:false,user,draft:true,
     data:{_status:'draft',name:{en:'Unpublished edit',ar:'تعديل غير منشور'}}});

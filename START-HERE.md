@@ -111,3 +111,6 @@ The working folder is already on this laptop. A private ZIP is stored under `art
 This folder does not contain a full conversation export, cloud database dump, installed global plugins/skills, or account authentication sessions. Durable project decisions are summarised above. Keep the original account accessible if you need its historical chat. On the same laptop the global tools may still exist; on another machine reinstall tools and reauthenticate rather than copying account tokens.
 
 Sign in with the new account, add/open this existing folder as a local project, and paste the resume prompt above. Do not start a blank project or clone over this folder. If restoring the ZIP, extract into a new empty folder, preserving hidden `.git`, `.env*` and `.vercel` files. Local project folders and durable AGENTS.md/documentation support resuming work: https://learn.chatgpt.com/docs/projects
+
+
+Latest priority: client requirements from 24 September now deployed. Read the newest PROGRESS.md checkpoint and docs/client-requirements-2026-09-24.md before resuming the older phases. Phone/WhatsApp and WIKA evidence await Nour; catalogue remains deferred.

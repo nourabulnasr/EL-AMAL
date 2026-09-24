@@ -1,5 +1,14 @@
 # EL AMAL progress
 
+## Latest checkpoint — 24 September client requirements deployed
+
+Previous phase order paused at Nour's request. Added bilingual type/application catalogue filters; CMS fields for reviewed instrument type, applications and HTTPS datasheet links; honest missing-datasheet state; direct /en/rfq and /ar/rfq with model/quantity/range independent of catalogue; immutable staff-test persistence and retry handling; oil-and-gas and general-industry pages with application links. Existing steel visual direction retained. Contact bar/WhatsApp draft and WIKA evidence section are prepared but gated on actual client information. No invented numbers, relationship claims or datasheets.
+
+34 unit tests and TypeScript succeeded. Development integration verified direct RFQ persistence/retries/conflicts, access restrictions and publication of catalogue metadata; disposable records removed. Additive migration 20260924_182238_client_requirements applied to both databases. Final cloud deployment dpl_AGeYNGhwap1cFxhJmCCwNZS8HuE1 Ready and promoted to https://el-amal-sigma.vercel.app. Browser verified EN/AR direct RFQ review, Arabic type+application intersection, industry navigation and mobile layout. A low-contrast industry label was corrected. Live RFQ/industry/product/admin routes200 and anonymous submission403. No emails or stock writes. Visual acceptance and broad performance/accessibility audit remain pending.
+
+Needed from Nour: business phone/WhatsApp numbers; exact approved WIKA relationship plus evidence and bilingual wording. Catalogue and actual model datasheets later. Public RFQ submission is still disabled pending the operational sending/verification flow; signed-in owner/sales can save tests. See docs/client-requirements-2026-09-24.md. No secrets in tracked files.
+
+
 ## Latest checkpoint — 24 September notification queue live, sending disabled
 
 Added private owner/sales Notification queue and transactional enquiry+notification creation. Duplicate requests share one notification. Demo requests create disabled records; worker claims only cms-source records. Injectable worker has no configured transport and no scheduled/API entry point. It supports atomic SKIP LOCKED claims, five-minute leases, stable provider idempotency keys, exponential delay, five-attempt limit, stale-result protection and generic error storage. No customer details are copied into message content beyond the random reference. Confirmed recipient is configurable via ENQUIRY_NOTIFICATION_TO.

@@ -26,3 +26,12 @@ test('demo is explicit default, invalid source fails instead of silently showing
  assert.equal(catalogueSource('cms'),'cms');
  assert.throws(()=>catalogueSource('production'));
 });
+
+test('public datasheets must be HTTPS and cannot include URL credentials',()=>{
+ for(const url of ['javascript:alert(1)','http://example.com/a.pdf','https://user:pass@example.com/a.pdf','invalid']){
+  assert.equal(toPublicCatalogue([{...published,datasheetUrl:url}],[category]).products[0].datasheetUrl,undefined);
+ }
+ const product=toPublicCatalogue([{...published,instrumentType:'pressure-gauge',applications:['oil-gas'],datasheetUrl:'https://example.com/a.pdf'}],[category]).products[0];
+ assert.equal(product.datasheetUrl,'https://example.com/a.pdf');
+ assert.equal(product.instrumentType,'pressure-gauge');assert.deepEqual(product.applications,['oil-gas']);
+});

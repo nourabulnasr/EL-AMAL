@@ -16,7 +16,7 @@ export async function submitEnquiry(payload:Payload,raw:unknown,catalogue:Catalo
   };
   const previous=await existing();
   if(previous)return previous;
-  const items=snapshotItems(input.lines,catalogue.products);
+  const items=input.manual?[{productId:'customer-specified',model:input.manual.model,quantity:input.manual.quantity,range:input.manual.range,nameEn:'Customer-specified model — technical review required',nameAr:'طراز حدده العميل — يتطلب مراجعة فنية'}]:snapshotItems(input.lines,catalogue.products);
   const transactionID=await payload.db.beginTransaction();
   if(transactionID===null)throw new Error('Enquiry persistence requires transactions');
   const req={transactionID};

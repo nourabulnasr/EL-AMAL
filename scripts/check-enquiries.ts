@@ -7,7 +7,7 @@ import {EnquiryConflictError} from '../src/lib/enquiries.ts';
 import type {Catalogue} from '../src/lib/public-catalogue.ts';
 if(process.env.CMS_DATABASE_CHECK!=='development')throw new Error('Development database only');
 const payload=await getPayload({config});
-const requestKeys=[randomUUID(),randomUUID()];
+const requestKeys=[randomUUID(),randomUUID(),randomUUID()];
 const staffIds:number[]=[];
 const catalogue:Catalogue={source:'demo',categories:[],products:[{id:'test-1',model:'TEST-MODEL',category:'test',name:{en:'Test instrument',ar:'جهاز اختبار'},description:{en:'Test',ar:'اختبار'}}]};
 const input={requestKey:requestKeys[0],locale:'en',contact:{name:'Test engineer',email:'enquiry-test@example.invalid',company:'Test only',notes:'Temporary verification'},lines:[{productId:'test-1',quantity:2}]};
@@ -46,6 +46,13 @@ try {
     await assert.rejects(payload.delete({collection:'enquiries',id:record.id,overrideAccess:false,user}),forbidden);
   }
   await assert.rejects(payload.update({collection:'enquiries',id:record.id,overrideAccess:true,data:{company:'Trusted tampering'}}),/immutable/);
+  const direct={...input,requestKey:requestKeys[2],lines:[],manual:{model:'CUSTOM-42',quantity:4,range:'0–10 bar'}};
+  const saved=await submitEnquiry(payload,direct,{...catalogue,products:[]});
+  assert.equal((await submitEnquiry(payload,direct,{...catalogue,products:[]})).reference,saved.reference);
+  const directRecord=(await payload.find({collection:'enquiries',overrideAccess:true,where:{reference:{equals:saved.reference}}})).docs[0];
+  assert.equal(directRecord.items[0].range,'0–10 bar');assert.equal(directRecord.items[0].model,'CUSTOM-42');assert.equal(directRecord.items[0].quantity,4);
+  await assert.rejects(submitEnquiry(payload,{...direct,manual:{...direct.manual,range:'0–16 bar'}},catalogue),EnquiryConflictError);
+  console.log('Direct RFQ checks succeeded: model/range persistence, duplicate retry and changed-range conflict.');
   console.log('Enquiry checks succeeded: durable snapshots, repeat/conflict/concurrent requests, owner/sales workflow, private reads and immutable contact details.');
 }finally{
   const records=await payload.find({collection:'enquiries',overrideAccess:true,where:{requestKey:{in:requestKeys}},depth:0,limit:100});

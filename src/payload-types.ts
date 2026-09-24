@@ -187,6 +187,16 @@ export interface Product {
     en: string;
     ar: string;
   };
+  instrumentType?:
+    ('pressure-gauge' | 'pressure-transmitter' | 'pressure-switch' | 'temperature-instrument' | 'accessory') | null;
+  /**
+   * Choose only applications supported by reviewed manufacturer information.
+   */
+  applications?: ('oil-gas' | 'general-industry')[] | null;
+  /**
+   * Link to the actual model datasheet. Verify the document and reuse rights before publishing.
+   */
+  datasheetUrl?: string | null;
   sourceRef: string;
   reviewedBy?: (number | null) | Staff;
   reviewedAt?: string | null;
@@ -240,6 +250,7 @@ export interface Enquiry {
     nameEn: string;
     nameAr: string;
     quantity: number;
+    range?: string | null;
     id?: string | null;
   }[];
   verificationStatus: 'unverified';
@@ -428,6 +439,9 @@ export interface ProductsSelect<T extends boolean = true> {
         en?: T;
         ar?: T;
       };
+  instrumentType?: T;
+  applications?: T;
+  datasheetUrl?: T;
   sourceRef?: T;
   reviewedBy?: T;
   reviewedAt?: T;
@@ -471,6 +485,7 @@ export interface EnquiriesSelect<T extends boolean = true> {
         nameEn?: T;
         nameAr?: T;
         quantity?: T;
+        range?: T;
         id?: T;
       };
   verificationStatus?: T;

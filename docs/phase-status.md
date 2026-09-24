@@ -1,3 +1,5 @@
+> Update 24 September: previous phase order paused for client requirements. See [client requirements](client-requirements-2026-09-24.md) and the latest PROGRESS.md. New direct RFQ is staff-test capable; public sending remains disabled.
+
 # Implementation phase status — 19 September 2026
 
 ## 24 September update — work independent of catalogue

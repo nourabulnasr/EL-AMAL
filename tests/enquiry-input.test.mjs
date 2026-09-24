@@ -19,3 +19,12 @@ test('item snapshots use server catalogue fields and reject unknown IDs',()=>{
   assert.equal(items[0].quantity,2);
   assert.throws(()=>snapshotItems([{productId:'unknown',quantity:1}],[product]));
 });
+
+test('direct RFQ validates model, quantity and range without catalogue IDs',()=>{
+ const raw={...input(),lines:[],manual:{model:' CUSTOM-42 ',quantity:3,range:' 0–10 bar '}};
+ const parsed=parseEnquiry(raw);
+ assert.deepEqual(parsed.manual,{model:'CUSTOM-42',quantity:3,range:'0–10 bar'});
+ assert.notEqual(enquiryFingerprint(parsed,'demo'),enquiryFingerprint({...parsed,manual:{...parsed.manual,range:'0–16 bar'}},'demo'));
+ for(const change of [{model:''},{model:' '.repeat(5)},{quantity:0},{quantity:1.5},{quantity:'2'},{range:''},{range:'x'.repeat(161)}])assert.throws(()=>parseEnquiry({...raw,manual:{...raw.manual,...change}}));
+ assert.throws(()=>parseEnquiry({...raw,lines:input().lines}));
+});

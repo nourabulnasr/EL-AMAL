@@ -29,3 +29,17 @@ button,input,select,textarea{font:inherit}textarea{width:100%;min-width:0;resize
 @media(max-width:420px){.hero h1{font-size:clamp(56px,18.4vw,72px)}.instrument-stage{min-height:385px}.instrument-stage .instrument{transform:scale(.96) rotate(-18deg)}.stage-caption{bottom:8px;font-size:12px}.stage-caption small{font-size:9px}.catalogue-empty{padding:28px}.enquiry-heading{gap:14px}.enquiry-heading h2{font-size:30px}.technical-section{padding:24px}.hero-description{font-size:14px}.catalogue-filter{padding:20px}.catalogue-title-row h1{font-size:44px}.quote-summary{padding:24px}.form-actions .button{width:100%}}
 html[lang=ar] .hero h1{font-size:clamp(56px,7vw,102px);line-height:1.4}html[lang=ar] .category-row h3{font-family:var(--font-body);font-size:22px;line-height:1.6}html[lang=ar] .enquiry-heading h2{line-height:1.5}html[lang=ar] .catalogue-title-row h1{font-size:clamp(38px,5vw,62px)}
 @media(prefers-reduced-motion:reduce){.instrument-parallax,.instrument-tilt{transform:none!important;will-change:auto}.product-visual:hover .instrument{transform:scale(.62) rotate(-12deg)}.motion-control{display:none}.header-scrolled{backdrop-filter:none;background:var(--ink)}}
+
+/* Client requirements: use the existing steel palette and type hierarchy. */
+.business-contact{display:flex;gap:24px;flex-wrap:wrap;justify-content:flex-end;padding:12px 5%;border-bottom:1px solid var(--line);font-size:14px}
+.business-contact a{min-height:28px;display:inline-flex;align-items:center;gap:8px;text-decoration:underline;text-underline-offset:4px}
+.industry-hero{background:var(--ink,#16191b);color:var(--paper,#fafafa);padding:48px 6% 80px}
+.industry-hero h1{font-size:clamp(40px,6vw,88px);max-width:1000px;line-height:1.1;margin:32px 0}
+.industry-hero .page-intro{max-width:720px;margin-bottom:32px;color:inherit}
+.industry-list>a{display:flex;align-items:center;gap:20px;padding:32px 0;border-bottom:1px solid var(--line)}
+.industry-list>a h3{flex:1}.industry-checks article{display:grid;grid-template-columns:minmax(160px,1fr) 2fr;gap:32px;padding:32px 0;border-bottom:1px solid var(--line)}
+.industry-checks p{max-width:65ch}.industry-requirements h2{font-size:clamp(32px,4vw,56px)}
+.extra-filter{display:grid;gap:8px}.direct-rfq{max-width:1000px}.direct-rfq fieldset{border:0;padding:0;margin:24px 0}.direct-rfq fieldset:disabled{opacity:1}.direct-rfq input:disabled,.direct-rfq textarea:disabled{color:inherit;-webkit-text-fill-color:currentColor;opacity:1;background:transparent}.direct-rfq .review-notice .text-link{display:block;margin-top:20px}.active-filters>span{padding:8px 12px;border:1px solid var(--line)}
+@media(max-width:640px){.industry-checks article{grid-template-columns:1fr;gap:12px}.business-contact{justify-content:flex-start;gap:16px}.industry-hero{padding:32px 6% 56px}}
+
+.industry-hero .breadcrumb,.industry-hero .section-kicker{color:oklch(80% .008 235)}
