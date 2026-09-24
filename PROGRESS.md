@@ -1,5 +1,11 @@
 # EL AMAL progress
 
+## Latest checkpoint — 24 September staff test form connected
+
+Live deployment dpl_3edTG9kJaoJKL3wChEWqv1Z4FUZH adds an authenticated sample-enquiry flow. /api/enquiry-submissions GET exposes only no-store canSaveTest; POST checks configured CMS, demo source, owner/sales staff auth, exact request origin, JSON and streamed32KB limit. Public access remains denied. English/Arabic review shows Save test enquiry only to authorised staff, preserves request keys across retries/edit-review, prevents double clicks and returns a reference plus inbox link. No outgoing emails, verification or stock writes.
+
+28 unit tests and TypeScript succeeded; cloud build Ready. Staged anonymous capability false/POST403 verified. Live mobile browser owner login → sample DEMO-P1 basket → form → save confirmation → admin record succeeded. Saved bilingual names/model/quantity and immutable fields checked; internal note saved through UI and confirmed in DB. Exact synthetic record and test basket line removed. Arabic review/staff action verified without another submission. No real visitor intake enabled; sender/outbox/verification/uploads remain next work. Existing visual design reused; broad accessibility/performance acceptance not claimed.
+
 ## Latest checkpoint — 24 September enquiry persistence and staff inbox live
 
 Catalogue-independent Phase3 foundation implemented: private Payload Enquiries collection, server submission service with bounded input validation, immutable server-resolved model/name/quantity snapshots, canonical fingerprint and database-unique request-key handling (including concurrent duplicate attempts), owner/sales status and internal notes. Catalogue-editor/warehouse/anonymous reads and writes denied; direct create/delete denied even for owner/sales. No public submission endpoint/form integration yet. No email, verification, attachment or stock operations.

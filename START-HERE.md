@@ -6,6 +6,8 @@ Update: the Payload3.90.2 security upgrade is now live, with its additive migrat
 
 Later update: durable enquiry service and protected owner/sales inbox now live. See newest PROGRESS.md entry and docs/enquiry-implementation.md. Public form is still preview-only; submission endpoint, abuse controls, mail/verification/uploads and stock remain pending.25 unit tests and development enquiry integration checks succeeded. No real catalogue needed for the next backend increments.
 
+Latest: owner/sales users can now save sample requests from the bilingual quote form after signing in. Staff-only demo submission endpoint and browser-to-admin journey verified;28 tests succeeded. Anonymous visitors still cannot submit. Next: notification outbox and email verification/sender setup, then uploads and inventory tests. Catalogue deferred.
+
 ## Resume prompt
 
 Paste this into a new Codex task with this folder attached:
