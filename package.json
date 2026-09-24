@@ -15,12 +15,12 @@
     "cms": "node --env-file=.env.local --env-file=.env.development.local node_modules/payload/bin.js"
   },
   "dependencies": {
-    "@payloadcms/db-postgres": "3.78.0",
-    "@payloadcms/next": "3.78.0",
+    "@payloadcms/db-postgres": "3.90.2",
+    "@payloadcms/next": "3.90.2",
     "graphql": "16.11.0",
     "motion": "12.43.0",
     "next": "16.3.5",
-    "payload": "3.78.0",
+    "payload": "3.90.2",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },
