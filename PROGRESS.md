@@ -1,5 +1,11 @@
 # EL AMAL progress
 
+## Latest checkpoint — 24 September 2026 security upgrade live
+
+Payload, @payloadcms/next and @payloadcms/db-postgres upgraded to3.90.2. Additive reset-password-request timestamp migration applied to development and hosted PostgreSQL. Cloud build succeeded; dpl_9N5fhCvqL3gii2RUsTkJPPKJzwVz promoted to stable client domain. Live EN/AR/catalogue/quote/admin pages200, owner authentication verified, private SKU and disabled registration/recovery endpoints403. Development role/publication checks and cleanup exit0;22 unit tests and final TypeScript succeeded. Audit at verification reported zero known vulnerabilities. Full HTTP role matrix and broader acceptance remain pending.
+
+Hosted owner password changed as requested and verified; ignored credential file updated. Earlier private ZIP credentials are stale. Notification recipient confirmed as mohamed.sorour8@icloud.com. Sender service/domain remains unconfigured. No mail sent; actual products deferred. Next: durable RFQ backend and staff workflow. See docs/resume-2026-09-24.md for detailed evidence and resolved blockers. No UI changes in this increment.
+
 ## 17 September 2026 — first working preview
 
 Direction 1, Precision in steel, selected by Nour. Implemented bilingual homepage, catalogue search, categories, product detail and persistent local quote basket on codex/el-amal-foundation. Ten fixtures are clearly labelled synthetic. The proposal was read completely; its commercial and operational defaults remain proposals, not recorded client acceptance.

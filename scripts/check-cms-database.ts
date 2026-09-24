@@ -93,14 +93,12 @@ try {
     }
     console.log('Temporary database records removed.');
   } finally {
-    console.log('Shutting down Payload.');
+    assert.equal(Object.keys(payload.db.sessions ?? {}).length,0,'No test transaction may remain open');
     await payload.destroy();
-    console.log('Closing PostgreSQL pool.');
-    // The adapter clears its schema but leaves the Node PostgreSQL pool open.
-    await payload.db.pool.end();
   }
 }
-console.log('Temporary test records removed and development connection closed.');
-// Payload dependencies may retain background handles after their pool is closed.
-// This standalone CLI has no further work; errors above still exit unsuccessfully.
+console.log('Database verification complete; temporary records removed and no open transactions.');
+// Payload 3.90.2 retains its initial pool.connect() client for reconnect handling.
+// pool.end() would wait indefinitely for it. Exit this standalone CLI only after
+// awaited cleanup and transaction checks; the OS closes its remaining sockets.
 process.exit(0);

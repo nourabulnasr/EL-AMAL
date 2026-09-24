@@ -2,6 +2,8 @@
 
 Handover prepared 24 September 2026. Latest implemented application commit: `052ce3c`; verification checkpoint: `eb5df17`. Check Git for newer commits before work. This document is a portable project summary, not a full chat transcript.
 
+Update: the Payload3.90.2 security upgrade is now live, with its additive migration applied to both databases. See the latest PROGRESS.md entry and docs/resume-2026-09-24.md; older security blockers below are superseded. Next priority is durable RFQ/backend work. Notification recipient confirmed; sender service not yet configured. Existing private backup ZIP predates the owner password change.
+
 ## Resume prompt
 
 Paste this into a new Codex task with this folder attached:
