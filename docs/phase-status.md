@@ -1,5 +1,11 @@
 # Implementation phase status — 19 September 2026
 
+## 24 September update — work independent of catalogue
+
+Phase1 security upgrade is live and verified. Phase3 now has a tested persistence service and protected owner/sales enquiry collection: server-resolved immutable item snapshots, request-key deduplication including simultaneous retries, status/internal notes, and denied public creation/read. The public form remains preview-only. No real enquiry submission, outgoing email, verification, attachment upload or stock reservation is active. See PROGRESS.md for deployment status of the inbox increment.
+
+Work that can continue before catalogue intake: enquiry HTTP/form integration and abuse controls; email outbox/verification mechanics (delivery needs sender setup); private uploads/scanning integration; stock ledger and reservation logic using isolated synthetic SKUs; remaining content-page structures; accessibility/performance/role/restore tests. Final business wording/assets, sender configuration, stock timing policies, real catalogue/SKUs and operational opening stock remain separate inputs. Do not label any entire phase complete because its foundation exists.
+
 Current position: phase 2 is underway, with phase 1 operational follow-ups. The live site is a client review deployment, not an operational launch.
 
 ## 1. Foundation — core built

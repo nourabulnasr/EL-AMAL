@@ -1,5 +1,13 @@
 # EL AMAL progress
 
+## Latest checkpoint — 24 September enquiry persistence and staff inbox live
+
+Catalogue-independent Phase3 foundation implemented: private Payload Enquiries collection, server submission service with bounded input validation, immutable server-resolved model/name/quantity snapshots, canonical fingerprint and database-unique request-key handling (including concurrent duplicate attempts), owner/sales status and internal notes. Catalogue-editor/warehouse/anonymous reads and writes denied; direct create/delete denied even for owner/sales. No public submission endpoint/form integration yet. No email, verification, attachment or stock operations.
+
+Additive enquiry migration applied to development and hosted databases. Generated rollback orders the external FK removal before dropping its referenced table.25 unit tests and TypeScript succeeded. Development integration checks covered persistence, same-key repeat/conflict/race, retries after catalogue removal, role access, immutable fields and cleanup; temporary records removed. Cloud build Ready; deployment dpl_EjfJX3sGZChNMJnpp3itJYmqef2W promoted to stable URL. Authenticated staged API and admin HTML verified empty owner inbox; live pages/login200, public enquiry GET/POST403 and existing private/setup403. Visual admin browser walkthrough remains pending.
+
+Next: connect a protected test submission flow/public intake with abuse controls; notification outbox, sender configuration and verification; attachments/scanning; then inventory service with isolated sample SKUs. Actual catalogue remains deferred. No new input required for backend test work. Recipient mohamed.sorour8@icloud.com confirmed; delivery still needs sender setup.
+
 ## Latest checkpoint — 24 September 2026 security upgrade live
 
 Payload, @payloadcms/next and @payloadcms/db-postgres upgraded to3.90.2. Additive reset-password-request timestamp migration applied to development and hosted PostgreSQL. Cloud build succeeded; dpl_9N5fhCvqL3gii2RUsTkJPPKJzwVz promoted to stable client domain. Live EN/AR/catalogue/quote/admin pages200, owner authentication verified, private SKU and disabled registration/recovery endpoints403. Development role/publication checks and cleanup exit0;22 unit tests and final TypeScript succeeded. Audit at verification reported zero known vulnerabilities. Full HTTP role matrix and broader acceptance remain pending.

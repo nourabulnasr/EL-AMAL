@@ -71,6 +71,7 @@ export interface Config {
     categories: Category;
     products: Product;
     skus: Skus;
+    enquiries: Enquiry;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -82,6 +83,7 @@ export interface Config {
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
     products: ProductsSelect<false> | ProductsSelect<true>;
     skus: SkusSelect<false> | SkusSelect<true>;
+    enquiries: EnquiriesSelect<false> | EnquiriesSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -214,6 +216,38 @@ export interface Skus {
   createdAt: string;
 }
 /**
+ * Saved requests. Email delivery and stock reservation are not active yet.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "enquiries".
+ */
+export interface Enquiry {
+  id: number;
+  reference: string;
+  requestKey: string;
+  fingerprint: string;
+  locale: 'en' | 'ar';
+  source: 'demo' | 'cms';
+  name: string;
+  email: string;
+  company: string;
+  notes?: string | null;
+  items: {
+    productId: string;
+    model: string;
+    nameEn: string;
+    nameAr: string;
+    quantity: number;
+    id?: string | null;
+  }[];
+  verificationStatus: 'unverified';
+  deliveryStatus: 'not-configured';
+  status: 'new' | 'reviewing' | 'awaiting-customer' | 'quoted' | 'closed';
+  internalNotes?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
@@ -252,6 +286,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'skus';
         value: number | Skus;
+      } | null)
+    | ({
+        relationTo: 'enquiries';
+        value: number | Enquiry;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -378,6 +416,37 @@ export interface SkusSelect<T extends boolean = true> {
   manufacturerPartNumber?: T;
   configuration?: T;
   active?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "enquiries_select".
+ */
+export interface EnquiriesSelect<T extends boolean = true> {
+  reference?: T;
+  requestKey?: T;
+  fingerprint?: T;
+  locale?: T;
+  source?: T;
+  name?: T;
+  email?: T;
+  company?: T;
+  notes?: T;
+  items?:
+    | T
+    | {
+        productId?: T;
+        model?: T;
+        nameEn?: T;
+        nameAr?: T;
+        quantity?: T;
+        id?: T;
+      };
+  verificationStatus?: T;
+  deliveryStatus?: T;
+  status?: T;
+  internalNotes?: T;
   updatedAt?: T;
   createdAt?: T;
 }

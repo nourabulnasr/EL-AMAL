@@ -1,0 +1,11 @@
+# Enquiry workflow — catalogue-independent implementation
+
+Continue the previously agreed enquiry scope using synthetic products for verification. This increment adds durable submissions and a staff inbox, without enabling production intake or sending email.
+
+Use one Payload collection in the existing PostgreSQL database. An enquiry contains a random public reference, unique client request key, canonical request fingerprint, locale, catalogue source, bounded contact details and immutable server-resolved product snapshots. Records have a staff-editable workflow status and internal notes. Owner and sales can read/update workflow fields; catalogue editors, warehouse and anonymous clients cannot read enquiries. Submission fields are immutable through all REST/admin updates. Direct collection creation/deletion is disabled; only the trusted service creates records.
+
+The submission service validates unknown input before database work, resolves IDs against the current supplied catalogue, rejects duplicate/unknown lines and non-integer quantities, and stores names/models from server data. A unique request key plus canonical fingerprint makes repeated identical submissions return the existing reference; changed input with the same key returns conflict, including concurrent insert races. One document stores contact and item snapshots atomically. No stock or mail operation is performed.
+
+No public submission endpoint is exposed in this increment. Before operational activation it still needs distributed abuse limits, verified sender/delivery, email verification, and reviewed privacy/retention. This foundation sends no mail and reserves no stock. Existing form preview remains unchanged. Direct REST creation on the enquiry collection is denied for everyone; trusted server code alone can submit requests.
+
+Implementation order: pure validation/fingerprint tests; collection/service; generated types and additive migration; development database tests for persistence/retries/concurrency/roles/immutability; cloud build; hosted migration and deployment with intake disabled; verify admin/API protection and record the remaining work.

@@ -4,6 +4,8 @@ Handover prepared 24 September 2026. Latest implemented application commit: `052
 
 Update: the Payload3.90.2 security upgrade is now live, with its additive migration applied to both databases. See the latest PROGRESS.md entry and docs/resume-2026-09-24.md; older security blockers below are superseded. Next priority is durable RFQ/backend work. Notification recipient confirmed; sender service not yet configured. Existing private backup ZIP predates the owner password change.
 
+Later update: durable enquiry service and protected owner/sales inbox now live. See newest PROGRESS.md entry and docs/enquiry-implementation.md. Public form is still preview-only; submission endpoint, abuse controls, mail/verification/uploads and stock remain pending.25 unit tests and development enquiry integration checks succeeded. No real catalogue needed for the next backend increments.
+
 ## Resume prompt
 
 Paste this into a new Codex task with this folder attached:
