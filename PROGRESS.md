@@ -1,5 +1,11 @@
 # EL AMAL progress
 
+## Latest checkpoint — 25 September hover and press motion
+
+Nour requested more transitions, especially hover feedback. Extended the existing steel direction with lightweight CSS spring-shaped button lift/press, one-pass sheen, arrow movement, navigation underlines, product image lift, category/chip feedback and field focus treatment. No dependencies or JavaScript added. Hover movement requires a fine hover-capable pointer; touch retains press feedback. RTL motion direction and reduced-motion overrides included. Removed legacy product hover scaling that could abruptly shrink the larger featured illustration.
+
+Browser checked staged English product button hover (computed lift/spring curve), add/remove sample basket round-trip with cleanup, visible keyboard focus, Arabic390px catalogue and no horizontal overflow. Visual review screenshots inspected; client visual acceptance remains pending. Reduced-motion rules inspected in source; no OS preference emulation was available through the browser tools, so runtime reduced-motion testing remains a limitation. No new unit tests for this CSS-only change. Final cloud build dpl_82bEHbhYQ4r7SBLKLEfKDbh2BxHU reached Ready and was promoted. Final staged catalogue loaded the intended button/illustration transitions with no overflow; live English product and Arabic catalogue returned200.
+
 ## Latest checkpoint — 25 September encrypted customer email outbox
 
 Implemented optional transactional CMS enquiry + verification digest + encrypted email enqueue, stable snapshotted delivery messages, private owner/sales queue status, protected one-item POST worker, retries/leases/expiry/terminal envelope deletion and controlled trusted resend (one-minute cooldown, three generations per24 hours). New generations invalidate old links. Demo enquiries never enqueue customer email. No public resend/intake activation, sender configuration or scheduler; no real messages sent.
