@@ -2,7 +2,7 @@ import type {CollectionConfig} from 'payload';
 import {hasRole} from '../lib/access.ts';
 export const Notifications:CollectionConfig={
  slug:'notifications',labels:{singular:'Notification',plural:'Notification queue'},
- admin:{useAsTitle:'reference',defaultColumns:['reference','status','attempts','nextAttemptAt'],description:'Delivery preparation only. Sample requests are disabled. No sender or automatic worker is configured.'},
+ admin:{useAsTitle:'reference',defaultColumns:['reference','status','attempts','nextAttemptAt'],description:'Sample requests never send. Delivery requires explicit sender activation. Sent means provider accepted, not confirmed inbox delivery. Failed records require review; do not reset attempts or change their creation date.'},
  access:{create:()=>false,read:({req})=>hasRole(req.user,['owner','sales']),update:()=>false,delete:()=>false},
  fields:[
   {name:'reference',type:'text',required:true},

@@ -1,5 +1,18 @@
 # EL AMAL progress
 
+## Latest checkpoint — 25 September delivery safeguards and SEO deployed
+
+Nour requested continuing implementation while deferring all client-supplied details to one end-of-project checklist (docs/final-client-inputs.md). Do not repeatedly ask for numbers, WIKA proof, catalogue or sender setup.
+
+Implemented a Resend HTTPS notification adapter with15-second timeout, stable idempotency key, generic errors, receipt validation and explicit configuration/off switch. Protected POST /api/internal/notifications processes at most one eligible notification per authorised call; separate32+ character bearer secret, constant-time byte comparison, no GET send action, no-store responses. Delivery remains disabled: no sender/API key configured and no scheduler or messages. Existing worker now stops before the provider24-hour deduplication boundary (conservative23 hours from queue creation) and correctly reports fifth-attempt terminal failure. Read-only npm run readiness reports configuration booleans without values or network activity.
+
+Bilingual canonical/hreflang/Open Graph/Twitter metadata added across routes. Shared WebSite/Organization JSON-LD asserts only existing identity. Central launch policy requires explicit indexing flag, cms catalogue and production environment; defaults stay noindex. Sitemap generates public bilingual routes/records only after activation, remains empty for demo. Admin/API remain noindex; basket excluded. See docs/seo-readiness.md and updated docs/notification-queue.md.
+
+42 unit tests and TypeScript succeeded. Development database fake-send integration verified concurrency, rollback, expired retry window, terminal failure and cleanup. No schema migration required. Deployment dpl_GKRsCdzPWnYdGAERVShc4kdYnC5k Ready/promoted. Staged browser checked Arabic RFQ canonical/languages/schema/noindex. Live home/RFQ/product/industry200 with metadata and noindex; demo sitemap empty; worker POST401 and GET405. No customer emails, public intake or stock operations enabled.
+
+Remaining development: customer email verification and public abuse controls, secure attachment workflow, inventory/reservation service, operational delivery scheduling/monitoring, final accessibility/performance and launch checks. These are not all blocked by client input and are not complete. Client information remains deferred as requested. Existing visual layout retained.
+
+
 ## Latest checkpoint — 24 September client requirements deployed
 
 Previous phase order paused at Nour's request. Added bilingual type/application catalogue filters; CMS fields for reviewed instrument type, applications and HTTPS datasheet links; honest missing-datasheet state; direct /en/rfq and /ar/rfq with model/quantity/range independent of catalogue; immutable staff-test persistence and retry handling; oil-and-gas and general-industry pages with application links. Existing steel visual direction retained. Contact bar/WhatsApp draft and WIKA evidence section are prepared but gated on actual client information. No invented numbers, relationship claims or datasheets.

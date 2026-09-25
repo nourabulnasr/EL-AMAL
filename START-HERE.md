@@ -114,3 +114,6 @@ Sign in with the new account, add/open this existing folder as a local project, 
 
 
 Latest priority: client requirements from 24 September now deployed. Read the newest PROGRESS.md checkpoint and docs/client-requirements-2026-09-24.md before resuming the older phases. Phone/WhatsApp and WIKA evidence await Nour; catalogue remains deferred.
+
+
+25 September update: sender adapter/protected worker and bilingual SEO preparation are deployed, but sending/public intake remain off. Read latest PROGRESS.md. Defer all client-supplied information to docs/final-client-inputs.md while continuing outstanding development.

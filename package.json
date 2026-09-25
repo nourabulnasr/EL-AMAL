@@ -11,6 +11,7 @@
     "build": "next build --webpack",
     "start": "next start --hostname 127.0.0.1 --port 3004",
     "typecheck": "tsc --noEmit",
+    "readiness": "node --experimental-strip-types scripts/check-readiness.ts",
     "test": "node --experimental-strip-types --test tests/*.test.mjs",
     "cms": "node --env-file=.env.local --env-file=.env.development.local node_modules/payload/bin.js"
   },

@@ -55,6 +55,14 @@ try{
  await deliverNextNotification(payload,fake);
  assert.equal((await payload.findByID({collection:'notifications',id,overrideAccess:true})).status,'failed');
  assert.equal(deliveredKeys.length,1);
+ // Old queued work must never outlive the provider's deduplication window.
+ await payload.db.pool.query("update notifications set status='pending',attempts=1,next_attempt_at=now()-interval '1 second',created_at=now()-interval '24 hours' where id=$1",[id]);
+ assert.equal((await deliverNextNotification(payload,fake)).outcome,'empty');
+ row=await payload.findByID({collection:'notifications',id,overrideAccess:true});
+ assert.equal(row.status,'failed');assert.match(row.lastError??'',/Retry window expired/);assert.equal(deliveredKeys.length,1);
+ // The fifth failed send reports terminal failure, not a retry that cannot occur.
+ await payload.db.pool.query("update notifications set status='pending',attempts=4,next_attempt_at=now()-interval '1 second',created_at=now() where id=$1",[id]);
+ assert.equal((await deliverNextNotification(payload,{send:async()=>{throw new Error('Test failure');}})).outcome,'failed');
  const disabled=await payload.find({collection:'notifications',overrideAccess:true,where:{reference:{equals:demo.reference}}});
  assert.equal(disabled.docs[0].status,'disabled');
  await assert.rejects(payload.find({collection:'notifications',overrideAccess:false}));

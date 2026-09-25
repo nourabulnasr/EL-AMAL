@@ -1,3 +1,4 @@
+import {pageMetadata} from '@/lib/page-metadata';
 import {WikaEvidence} from '@/components/wika-evidence';
 import {industries} from '@/content/industries';
 import Link from 'next/link';
@@ -7,7 +8,7 @@ import {copy} from '@/content/copy';
 import {loadCatalogue} from '@/lib/load-catalogue';
 import {HeroInstrument} from '@/components/hero-instrument';
 import {ProductCard} from '@/components/product-card';
-export async function generateMetadata({params}:{params:Promise<{locale:string}>}){const {locale}=await params;return {title:locale==='ar'?'أجهزة القياس الصناعية | الأمل':'Industrial instrumentation | EL AMAL',description:locale==='ar'?'تصفح أدوات قياس الضغط والحرارة والملحقات.':'Explore pressure and temperature instruments and accessories.'};}
+export async function generateMetadata({params}:{params:Promise<{locale:string}>}){const {locale}=await params;if(!isLocale(locale))notFound();return pageMetadata(locale,'',locale==='ar'?'أجهزة القياس الصناعية':'Industrial instrumentation',locale==='ar'?'تصفح أدوات قياس الضغط والحرارة والملحقات وابدأ طلب عرض سعر.':'Explore pressure and temperature instruments and accessories, and prepare a quotation request.');}
 export default async function Home({params}:{params:Promise<{locale:string}>}){
  const {locale}=await params;if(!isLocale(locale))notFound();const t=copy[locale],ar=locale==='ar';const {products,categories,source}=await loadCatalogue();
  return <><section className="hero"><div className="hero-copy"><p className="hero-intro"><span/>{ar?'أجهزة القياس الصناعية':'Industrial measurement, considered.'}</p><h1>{ar?<>الدقة.<br/>في كل<br/>تفصيلة.</>:<>Precision.<br/>At every<br/>connection.</>}</h1><p className="hero-description">{ar?'أدوات الضغط والحرارة والملحقات. ابحث عن الطراز، وحدد متطلباتك، واطلب عرض سعر من الأمل.':'Pressure, temperature and the connections between. Find your instrument and bring your requirements to EL AMAL.'}</p><form className="hero-search" action={`/${locale}/products`}><label className="sr-only" htmlFor="hero-query">{t.search}</label><span aria-hidden="true">⌕</span><input id="hero-query" name="q" maxLength={120} placeholder={t.search}/><button aria-label={t.searchButton}><span aria-hidden="true">↗</span></button></form><Link className="hero-link" href={`/${locale}/products`}>{t.browse}<span aria-hidden="true">↗</span></Link></div><HeroInstrument locale={locale}/><div className="hero-bottom"><span>{ar?'الضغط / الحرارة / الملحقات':'Pressure / Temperature / Accessories'}</span><a href="#catalogue">{ar?'اكتشف المزيد':'Explore below'} <span aria-hidden="true">↓</span></a></div></section>

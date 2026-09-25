@@ -261,7 +261,7 @@ export interface Enquiry {
   createdAt: string;
 }
 /**
- * Delivery preparation only. Sample requests are disabled. No sender or automatic worker is configured.
+ * Sample requests never send. Delivery requires explicit sender activation. Sent means provider accepted, not confirmed inbox delivery. Failed records require review; do not reset attempts or change their creation date.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "notifications".
