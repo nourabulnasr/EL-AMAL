@@ -1,6 +1,6 @@
 import {randomUUID} from 'node:crypto';
 import type {Payload} from 'payload';
-export type NotificationTransport={send:(message:{to:string;subject:string;text:string;idempotencyKey:string})=>Promise<{id:string}>};
+export type NotificationTransport={send:(message:{from?:string;to:string;subject:string;text:string;idempotencyKey:string})=>Promise<{id:string}>};
 export function retryDelay(attempt:number){return Math.min(3600,60*2**Math.max(0,attempt-1));}
 // No transport is configured by default. A protected caller supplies the transport.
 // Transport implementations must deduplicate on idempotencyKey, including after an ambiguous timeout.

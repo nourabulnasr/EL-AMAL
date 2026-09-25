@@ -2,9 +2,11 @@ import {randomUUID} from 'node:crypto';
 import type {Payload} from 'payload';
 import type {Catalogue} from './public-catalogue.ts';
 import {parseEnquiry,enquiryFingerprint,snapshotItems,EnquiryConflictError} from './enquiries.ts';
+import {enqueueInitialVerification} from './verification-outbox.ts';
+import type {VerificationSettings} from './verification-message.ts';
 
 // Trusted server service only. Never accept product descriptions or status from a caller.
-export async function submitEnquiry(payload:Payload,raw:unknown,catalogue:Catalogue) {
+export async function submitEnquiry(payload:Payload,raw:unknown,catalogue:Catalogue,verification?:VerificationSettings) {
   const input=parseEnquiry(raw);
   const fingerprint=enquiryFingerprint(input,catalogue.source);
   const existing=async()=>{
@@ -30,6 +32,7 @@ export async function submitEnquiry(payload:Payload,raw:unknown,catalogue:Catalo
       recipient:process.env.ENQUIRY_NOTIFICATION_TO||'mohamed.sorour8@icloud.com',source:catalogue.source,
       status:catalogue.source==='demo'?'disabled':'pending',attempts:0,nextAttemptAt:new Date().toISOString(),
     }});
+    if(verification)await enqueueInitialVerification(payload,record,verification,req);
     await payload.db.commitTransaction(transactionID);
     return {reference:record.reference,repeated:false};
   }catch(error){

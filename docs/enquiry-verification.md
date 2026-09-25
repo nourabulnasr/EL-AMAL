@@ -20,7 +20,7 @@ Requests require matching Origin and application/json; streamed bodies are limit
 
 ## Still to connect
 
-Customer verification email generation, durable delivery/retry/resend workflow and activation with the sender provider; anonymous submission limits including email-based controls; verified-enquiry notification/stock policy; retention/monitoring. Do not return customer tokens in public submission responses. Sender information remains on the deferred end checklist.
+Customer email generation, encrypted transactional outbox, retry worker and controlled trusted resend are now implemented; see [verification-email-outbox.md](verification-email-outbox.md). Still to connect: guarded anonymous intake/resend, actual sender activation, verified-enquiry notification/stock policy, retention and monitoring. Do not return customer tokens in public submission responses. Sender information remains on the deferred end checklist.
 
 Tests cover token rotation/expiry/replay, concurrent single-use, distinct demo/customer states, source-restricted issuance, private collection access and concurrent limit/reset behavior. All development test records are removed and no external mail is sent. Browser/deployment evidence is in PROGRESS.md.
 

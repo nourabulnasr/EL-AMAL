@@ -75,6 +75,7 @@ export interface Config {
     notifications: Notification;
     'enquiry-verifications': EnquiryVerification;
     'request-limits': RequestLimit;
+    'verification-emails': VerificationEmail;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -90,6 +91,7 @@ export interface Config {
     notifications: NotificationsSelect<false> | NotificationsSelect<true>;
     'enquiry-verifications': EnquiryVerificationsSelect<false> | EnquiryVerificationsSelect<true>;
     'request-limits': RequestLimitsSelect<false> | RequestLimitsSelect<true>;
+    'verification-emails': VerificationEmailsSelect<false> | VerificationEmailsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -315,6 +317,33 @@ export interface RequestLimit {
   createdAt: string;
 }
 /**
+ * Customer confirmation delivery. Sample enquiries never send. Sent means provider acceptance, not confirmed inbox delivery. Message contents are encrypted and excluded from staff API access.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "verification-emails".
+ */
+export interface VerificationEmail {
+  id: number;
+  reference: string;
+  enquiry: number | Enquiry;
+  deliveryKey: string;
+  sealedMessage?: string | null;
+  status: 'pending' | 'processing' | 'sent' | 'failed' | 'cancelled';
+  attempts: number;
+  nextAttemptAt?: string | null;
+  leaseToken?: string | null;
+  leaseExpiresAt?: string | null;
+  expiresAt: string;
+  sentAt?: string | null;
+  providerMessageId?: string | null;
+  lastError?: string | null;
+  issueCount: number;
+  issuanceWindowEndsAt: string;
+  lastIssuedAt: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
@@ -369,6 +398,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'request-limits';
         value: number | RequestLimit;
+      } | null)
+    | ({
+        relationTo: 'verification-emails';
+        value: number | VerificationEmail;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -575,6 +608,30 @@ export interface RequestLimitsSelect<T extends boolean = true> {
   key?: T;
   hits?: T;
   windowEndsAt?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "verification-emails_select".
+ */
+export interface VerificationEmailsSelect<T extends boolean = true> {
+  reference?: T;
+  enquiry?: T;
+  deliveryKey?: T;
+  sealedMessage?: T;
+  status?: T;
+  attempts?: T;
+  nextAttemptAt?: T;
+  leaseToken?: T;
+  leaseExpiresAt?: T;
+  expiresAt?: T;
+  sentAt?: T;
+  providerMessageId?: T;
+  lastError?: T;
+  issueCount?: T;
+  issuanceWindowEndsAt?: T;
+  lastIssuedAt?: T;
   updatedAt?: T;
   createdAt?: T;
 }

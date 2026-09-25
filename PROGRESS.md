@@ -1,5 +1,15 @@
 # EL AMAL progress
 
+## Latest checkpoint — 25 September encrypted customer email outbox
+
+Implemented optional transactional CMS enquiry + verification digest + encrypted email enqueue, stable snapshotted delivery messages, private owner/sales queue status, protected one-item POST worker, retries/leases/expiry/terminal envelope deletion and controlled trusted resend (one-minute cooldown, three generations per24 hours). New generations invalidate old links. Demo enquiries never enqueue customer email. No public resend/intake activation, sender configuration or scheduler; no real messages sent.
+
+51 unit tests and TypeScript succeeded. Development integration verified rollback, duplicate enqueue, hidden message fields, identical retry messages/keys, concurrent worker/resend behavior, old-link invalidation, confirmation suppression, expiry, cooldown/window reset, leases, stale completion, terminal attempts and tampering. Disposable records removed. Existing verification and staff-notification database regression checks also succeeded with cleanup. Additive migration20260925_121725_verification_email_outbox applied to development and hosted databases; corrected down migration FK order, no down run.
+
+Deployment dpl_ARf7KcsTZniW5HTfWdw3spFX9EtA reached Ready and was promoted to the stable client URL. Staged worker401 and queue403 verified. Live home/Arabic confirmation200, owner queue200, anonymous queue403, worker GET405/POST401, private token/rate collections403, anonymous test issuer403 and confirmation GET405 verified. Owner test session logged out. EN/AR verification/RFQ retain noindex. No actual messages or new hosted enquiry records were created. See docs/verification-email-outbox.md for architecture and activation limits. Existing callers without verification settings keep previous behavior; future public intake must supply settings and fail closed on readiness. Staff notifications are not yet gated on customer verification. Payload secret rotation requires a pending-envelope plan.
+
+Next: anonymous intake/email-based abuse controls and safe resend UI/API, secure attachments, inventory/reservations, operational scheduling/monitoring and final audits. All client-supplied details remain deferred in docs/final-client-inputs.md. The full website is not yet operationally complete.
+
 ## Latest checkpoint — 25 September single-use verification flow deployed
 
 Implemented private digest-only enquiry verification records, one-hour random tokens, replacement of unused links, atomic single-use confirmation and immutable verified timestamp/status. Demo records become test-verified, distinct from real verified records. Owner/sales can create test links only for unverified demo enquiries. The trusted customer-source issuer exists server-side but is not exposed through public submission and is not connected to email delivery yet.

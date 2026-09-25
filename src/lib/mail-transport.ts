@@ -17,10 +17,11 @@ export function notificationTransport(env:Environment=process.env,fetcher:typeof
   if(!Object.values(mailReadiness(env)).every(Boolean))return;
   return {send:async message=>{
     try {
+      if(message.from!==undefined&&!email(message.from))throw new Error('Invalid sender');
       const response=await fetcher('https://api.resend.com/emails',{
         method:'POST',redirect:'error',signal:AbortSignal.timeout(15000),
         headers:{Authorization:`Bearer ${env.RESEND_API_KEY}`,'Content-Type':'application/json','Idempotency-Key':message.idempotencyKey},
-        body:JSON.stringify({from:env.MAIL_FROM,to:[message.to],subject:message.subject,text:message.text}),
+        body:JSON.stringify({from:message.from??env.MAIL_FROM,to:[message.to],subject:message.subject,text:message.text}),
       });
       // Do not retain provider response errors: they may contain submitted addresses.
       if(!response.ok)throw new Error('Delivery not confirmed');

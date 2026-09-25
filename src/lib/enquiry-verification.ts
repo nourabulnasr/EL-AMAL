@@ -9,6 +9,7 @@ export async function issueVerification(payload:Payload,reference:string,source:
  const token=randomBytes(32).toString('hex');
  const result=await payload.db.pool.query(`INSERT INTO enquiry_verifications (enquiry_id,token_hash,expires_at,created_at,updated_at)
  SELECT id,$1,now()+interval '1 hour',now(),now() FROM enquiries WHERE reference=$2 AND source=$3 AND verification_status='unverified'
+ AND NOT EXISTS (SELECT 1 FROM verification_emails q WHERE q.enquiry_id=enquiries.id)
  ON CONFLICT (enquiry_id) DO UPDATE SET token_hash=EXCLUDED.token_hash,expires_at=EXCLUDED.expires_at,updated_at=now()
  WHERE enquiry_verifications.consumed_at IS NULL RETURNING id`,[tokenDigest(token),reference,source]);
  return result.rowCount?token:null;

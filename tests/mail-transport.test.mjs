@@ -24,3 +24,10 @@ test('timeouts, provider errors and invalid receipts remain generic',async()=>{
   await assert.rejects(notificationTransport(env,fetcher).send(message),{message:'Delivery not confirmed'});
  }
 });
+test('verification retries use the snapshotted sender even after configuration changes',async()=>{
+ let body;
+ const transport=notificationTransport(env,async(_url,options)=>{body=JSON.parse(options.body);return Response.json({id:'receipt'});});
+ await transport.send({...message,from:'original@example.invalid'});
+ assert.equal(body.from,'original@example.invalid');
+ await assert.rejects(transport.send({...message,from:'invalid'}),{message:'Delivery not confirmed'});
+});

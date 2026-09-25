@@ -4,6 +4,7 @@ import * as migration_20260924_173404_enquiry_inbox from './20260924_173404_enqu
 import * as migration_20260924_180259_notification_queue from './20260924_180259_notification_queue';
 import * as migration_20260924_182238_client_requirements from './20260924_182238_client_requirements';
 import * as migration_20260925_114611_enquiry_verification from './20260925_114611_enquiry_verification';
+import * as migration_20260925_121725_verification_email_outbox from './20260925_121725_verification_email_outbox';
 
 export const migrations = [
   {
@@ -34,6 +35,11 @@ export const migrations = [
   {
     up: migration_20260925_114611_enquiry_verification.up,
     down: migration_20260925_114611_enquiry_verification.down,
-    name: '20260925_114611_enquiry_verification'
+    name: '20260925_114611_enquiry_verification',
+  },
+  {
+    up: migration_20260925_121725_verification_email_outbox.up,
+    down: migration_20260925_121725_verification_email_outbox.down,
+    name: '20260925_121725_verification_email_outbox'
   },
 ];
