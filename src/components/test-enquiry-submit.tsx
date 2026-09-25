@@ -1,4 +1,5 @@
 'use client';
+import {TestVerificationLink} from './test-verification-link';
 import {useEffect,useRef,useState} from 'react';
 import type {EnquiryDetails} from '@/lib/enquiry-preview';
 import type {Locale} from '@/lib/catalogue';
@@ -16,7 +17,7 @@ export function TestEnquirySubmit({details,locale,active,manual}:{details:Enquir
     return()=>controller.abort();
   },[]);
   if(!active||!allowed||catalogue.source!=='demo')return null;
-  if(saved?.signature===signature)return <div className="review-notice" role="status"><strong>{ar?'تم حفظ الاستفسار التجريبي':'Test enquiry saved'}</strong><p><bdi>{saved.reference}</bdi></p><p>{ar?'لم يُرسل بريد إلكتروني ولم يُحجز مخزون.':'No email was sent and no stock was reserved.'}</p><a className="text-link" href="/admin/collections/enquiries">{ar?'فتح الاستفسارات في لوحة الإدارة':'Open the admin enquiry inbox'}</a></div>;
+  if(saved?.signature===signature)return <div className="review-notice" role="status"><strong>{ar?'تم حفظ الاستفسار التجريبي':'Test enquiry saved'}</strong><p><bdi>{saved.reference}</bdi></p><p>{ar?'لم يُرسل بريد إلكتروني ولم يُحجز مخزون.':'No email was sent and no stock was reserved.'}</p><TestVerificationLink reference={saved.reference} locale={locale}/><a className="text-link" href="/admin/collections/enquiries">{ar?'فتح الاستفسارات في لوحة الإدارة':'Open the admin enquiry inbox'}</a></div>;
   return <div className="review-notice">
     <p>{ar?'اختبار للموظفين: سيحفظ هذا الإجراء بياناتك والعناصر التجريبية في لوحة الإدارة. لن يُرسل بريد إلكتروني ولن يُحجز مخزون.':'Staff test: this saves your details and sample items in the admin inbox. It sends no email and reserves no stock.'}</p>
     {error&&<p role="alert">{ar?'تعذّر تأكيد الحفظ. حاول مجدداً بنفس البيانات؛ لن تتكرر العملية.':'We could not confirm the save. Retry with the same details; the request will not be duplicated.'}</p>}

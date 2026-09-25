@@ -9,7 +9,7 @@ export const Enquiries:CollectionConfig={
   access:{create:()=>false,read:sales,update:sales,delete:()=>false},
   hooks:{beforeChange:[({operation,data,originalDoc})=>{
     // Field access protects REST/admin; this also prevents trusted updates from rewriting history.
-    if(operation==='update')for(const key of ['reference','requestKey','fingerprint','locale','source','name','email','company','notes','items','verificationStatus','deliveryStatus']){
+    if(operation==='update')for(const key of ['reference','requestKey','fingerprint','locale','source','name','email','company','notes','items','verificationStatus','verifiedAt','deliveryStatus']){
       if(key in data&&JSON.stringify(data[key])!==JSON.stringify(originalDoc[key]))throw new Error('Submitted enquiry details are immutable.');
     }
     return data;
@@ -29,7 +29,8 @@ export const Enquiries:CollectionConfig={
       {name:'nameEn',type:'text',required:true},{name:'nameAr',type:'text',required:true},
       {name:'quantity',type:'number',required:true,min:1,max:9999},{name:'range',type:'text',maxLength:160},
     ]}),
-    fixed({name:'verificationStatus',type:'select',required:true,defaultValue:'unverified',options:['unverified']}),
+    fixed({name:'verificationStatus',type:'select',required:true,defaultValue:'unverified',options:['unverified','test-verified','verified']}),
+    fixed({name:'verifiedAt',type:'date'}),
     fixed({name:'deliveryStatus',type:'select',required:true,defaultValue:'not-configured',options:['not-configured']}),
     {name:'status',type:'select',required:true,defaultValue:'new',options:['new','reviewing','awaiting-customer','quoted','closed']},
     {name:'internalNotes',type:'textarea',maxLength:10000},

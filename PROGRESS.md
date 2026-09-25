@@ -1,5 +1,20 @@
 # EL AMAL progress
 
+## Latest checkpoint — 25 September single-use verification flow deployed
+
+Implemented private digest-only enquiry verification records, one-hour random tokens, replacement of unused links, atomic single-use confirmation and immutable verified timestamp/status. Demo records become test-verified, distinct from real verified records. Owner/sales can create test links only for unverified demo enquiries. The trusted customer-source issuer exists server-side but is not exposed through public submission and is not connected to email delivery yet.
+
+Added /en/verify and /ar/verify: token in URL fragment, explicit confirm button (GET cannot consume it), language switching preserves the unused link, token removed from address bar before POST, clear test/customer/unavailable/limited/error states, noindex/no-referrer. Staff saved-test UI now offers the test link. No stock reservation or messages occur.
+
+Verification endpoints enforce same Origin, bounded4KB JSON, private issuer auth and PostgreSQL-backed10/minute pseudonymous per-client/per-scope limits. Vercel-overwritten IP header is trusted only on Vercel; otherwise shared fallback. No raw IP stored; bounded opportunistic cleanup of stale buckets. This protects verification only; public intake spam protection is still separate work.
+
+48 unit tests and TypeScript succeeded. Development integration verified token digest/rotation/expiry/replay, concurrent single-use, source separation, distinct confirmation statuses, private collections, exact concurrent limits/window reset and cleanup. Additive migration 20260925_114611_enquiry_verification applied dev/hosted. Rollback FK ordering fixed and rollback refuses existing confirmed states; no down migration run.
+
+Deployment dpl_5DSP3H4yfQvcai8rfgx4i9os2imU Ready and promoted. CLI had a local telemetry spawn error after creating the deployment; inspected the existing deployment successfully rather than duplicating it. Browser owner login -> direct test RFQ save -> create link -> open without consumption (checked DB) -> switch Arabic -> confirm succeeded. Exact disposable hosted enquiry/token/notification rows were checked and removed. Live EN/AR verify/RFQ200+noindex; token/rate collections403; anonymous issuer403; GET confirmation405. No mail sent. See docs/enquiry-verification.md.
+
+Next: durable customer verification-email delivery/resend connection, anonymous intake abuse controls, secure attachments, inventory/reservations, scheduling/monitoring and final audits. Client details remain deferred per docs/final-client-inputs.md. Core token confirmation is implemented; customer email verification delivery is not operational.
+
+
 ## Latest checkpoint — 25 September delivery safeguards and SEO deployed
 
 Nour requested continuing implementation while deferring all client-supplied details to one end-of-project checklist (docs/final-client-inputs.md). Do not repeatedly ask for numbers, WIKA proof, catalogue or sender setup.

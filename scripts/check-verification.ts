@@ -1,0 +1,52 @@
+import assert from 'node:assert/strict';
+import {randomUUID,randomBytes} from 'node:crypto';
+import {getPayload} from 'payload';
+import config from '../src/payload.config.ts';
+import {submitEnquiry} from '../src/lib/submit-enquiry.ts';
+import {issueVerification,confirmVerification,tokenDigest} from '../src/lib/enquiry-verification.ts';
+import {allowRequest} from '../src/lib/request-limits.ts';
+if(process.env.CMS_DATABASE_CHECK!=='development')throw new Error('Development database only');
+const payload=await getPayload({config}),keys=[randomUUID(),randomUUID(),randomUUID()];
+const limitKey=randomBytes(32).toString('hex');
+const catalogue={source:'demo' as const,categories:[],products:[]};
+const input={locale:'en',contact:{name:'Verification test',company:'Disposable test',email:'verification@example.invalid',notes:''},lines:[],manual:{model:'TEST',quantity:1,range:'0–10 bar'}};
+try{
+ const first=await submitEnquiry(payload,{...input,requestKey:keys[0]},catalogue);
+ assert.equal(await issueVerification(payload,first.reference,'cms'),null,'Test issuer cannot cross sources');
+ const old=await issueVerification(payload,first.reference,'demo');assert.ok(old);
+ const token=await issueVerification(payload,first.reference,'demo');assert.ok(token);assert.notEqual(old,token);
+ assert.equal(await confirmVerification(payload,old),null,'Rotating an unused link invalidates it');
+ const stored=await payload.db.pool.query('select token_hash from enquiry_verifications where token_hash=$1',[tokenDigest(token)]);
+ assert.equal(stored.rows[0].token_hash,tokenDigest(token));assert.notEqual(stored.rows[0].token_hash,token);
+ const concurrent=await Promise.all([confirmVerification(payload,token),confirmVerification(payload,token)]);
+ assert.equal(concurrent.filter(Boolean).length,1,'Only one concurrent confirmation wins');
+ assert.equal(concurrent.find(Boolean)?.mode,'test');
+ assert.equal(await confirmVerification(payload,token),null,'Consumed link cannot replay');
+ assert.equal(await issueVerification(payload,first.reference,'demo'),null,'Confirmed request cannot get another link');
+ const firstRow=(await payload.find({collection:'enquiries',overrideAccess:true,where:{reference:{equals:first.reference}}})).docs[0];
+ assert.equal(firstRow.verificationStatus,'test-verified');assert.ok(firstRow.verifiedAt);
+ const notification=(await payload.find({collection:'notifications',overrideAccess:true,where:{reference:{equals:first.reference}}})).docs[0];assert.equal(notification.status,'disabled');
+ const second=await submitEnquiry(payload,{...input,requestKey:keys[1]},catalogue);
+ const expired=await issueVerification(payload,second.reference,'demo');assert.ok(expired);
+ await payload.db.pool.query("update enquiry_verifications set expires_at=now()-interval '1 second' where token_hash=$1",[tokenDigest(expired)]);
+ assert.equal(await confirmVerification(payload,expired),null,'Expired token does not verify');
+ const customer=await submitEnquiry(payload,{...input,requestKey:keys[2]},{...catalogue,source:'cms'});
+ assert.equal(await issueVerification(payload,customer.reference,'demo'),null);
+ const customerToken=await issueVerification(payload,customer.reference,'cms');assert.ok(customerToken);
+ assert.equal((await confirmVerification(payload,customerToken))?.mode,'customer');
+ const customerRow=(await payload.find({collection:'enquiries',overrideAccess:true,where:{reference:{equals:customer.reference}}})).docs[0];assert.equal(customerRow.verificationStatus,'verified');
+ for(const collection of ['enquiry-verifications','request-limits'] as const)await assert.rejects(payload.find({collection,overrideAccess:false}));
+ const requests=await Promise.all(Array.from({length:12},()=>allowRequest(payload,limitKey,5)));
+ assert.equal(requests.filter(Boolean).length,5,'Distributed limit remains exact during contention');
+ await payload.db.pool.query("update request_limits set window_ends_at=now()-interval '1 second' where key=$1",[limitKey]);
+ assert.equal(await allowRequest(payload,limitKey,5),true,'Expired rate window resets');
+ console.log('Verification checks succeeded: digest-only storage, rotation, expiry, replay, concurrent single-use, separate demo/customer states, private collections and exact concurrent request limits. No emails.');
+}finally{
+ const records=await payload.find({collection:'enquiries',overrideAccess:true,where:{requestKey:{in:keys}},depth:0,limit:100});
+ const ids=records.docs.map(x=>x.id);
+ if(ids.length){await payload.delete({collection:'enquiry-verifications',overrideAccess:true,where:{enquiry:{in:ids}}});await payload.delete({collection:'notifications',overrideAccess:true,where:{enquiry:{in:ids}}});}
+ await payload.delete({collection:'enquiries',overrideAccess:true,where:{requestKey:{in:keys}}});
+ await payload.db.pool.query('delete from request_limits where key=$1',[limitKey]);
+ assert.equal(Object.keys(payload.db.sessions??{}).length,0);await payload.destroy();
+}
+console.log('Temporary verification records removed.');process.exit(0);

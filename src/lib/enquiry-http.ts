@@ -3,11 +3,11 @@ import {EnquiryInputError,EnquiryConflictError} from './enquiries.ts';
 type Dependencies={enabled:()=>boolean;source:()=>string;authenticate:(headers:Headers)=>Promise<unknown>;submit:(input:unknown)=>Promise<{reference:string;repeated:boolean}>};
 const json=(body:unknown,status=200)=>Response.json(body,{status,headers:{'Cache-Control':'no-store'}});
 const permitted=(user:unknown)=>!!user&&typeof user==='object'&&'collection' in user&&user.collection==='staff'&&hasRole(user,['owner','sales']);
-async function readInput(request:Request){
+export async function readInput(request:Request,maxBytes=32768){
   const reader=request.body?.getReader();if(!reader)throw new EnquiryInputError('Missing request');
   const chunks:Uint8Array[]=[];let size=0;
   try {while(true){const part=await reader.read();if(part.done)break;size+=part.value.byteLength;
-    if(size>32768){await reader.cancel();throw new EnquiryInputError('Request too large');}chunks.push(part.value);
+    if(size>maxBytes){await reader.cancel();throw new EnquiryInputError('Request too large');}chunks.push(part.value);
   }}finally{reader.releaseLock();}
   const bytes=new Uint8Array(size);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.byteLength;}
   try{return JSON.parse(new TextDecoder().decode(bytes));}catch{throw new EnquiryInputError('Invalid JSON');}

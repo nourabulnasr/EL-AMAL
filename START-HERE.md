@@ -117,3 +117,6 @@ Latest priority: client requirements from 24 September now deployed. Read the ne
 
 
 25 September update: sender adapter/protected worker and bilingual SEO preparation are deployed, but sending/public intake remain off. Read latest PROGRESS.md. Defer all client-supplied information to docs/final-client-inputs.md while continuing outstanding development.
+
+
+25 September verification update: single-use confirmation and verification endpoint limits are live, with staff demo test links and bilingual confirmation pages. Real customer verification-email delivery remains unconnected. Read latest PROGRESS.md and docs/enquiry-verification.md. Client inputs still deferred.

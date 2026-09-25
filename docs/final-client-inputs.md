@@ -10,4 +10,4 @@ Nour asked to defer requests for client-supplied information while implementatio
 - Final public domain if it will replace the current Vercel URL.
 - Client review and launch approval after real content, contact links and email receipt have been verified.
 
-Development still owed (not client input): customer email verification, anonymous abuse controls, safe attachment handling, stock/reservation workflow, delivery scheduling and monitoring, final accessibility/performance checks and launch acceptance. These must not be presented as finished or as blocked solely by client information.
+Development still owed (not client input): customer verification-email delivery/resend (single-use token confirmation is implemented), anonymous intake abuse controls, safe attachment handling, stock/reservation workflow, delivery scheduling and monitoring, final accessibility/performance checks and launch acceptance. These must not be presented as finished or as blocked solely by client information.

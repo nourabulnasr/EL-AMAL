@@ -73,6 +73,8 @@ export interface Config {
     skus: Skus;
     enquiries: Enquiry;
     notifications: Notification;
+    'enquiry-verifications': EnquiryVerification;
+    'request-limits': RequestLimit;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -86,6 +88,8 @@ export interface Config {
     skus: SkusSelect<false> | SkusSelect<true>;
     enquiries: EnquiriesSelect<false> | EnquiriesSelect<true>;
     notifications: NotificationsSelect<false> | NotificationsSelect<true>;
+    'enquiry-verifications': EnquiryVerificationsSelect<false> | EnquiryVerificationsSelect<true>;
+    'request-limits': RequestLimitsSelect<false> | RequestLimitsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -253,7 +257,8 @@ export interface Enquiry {
     range?: string | null;
     id?: string | null;
   }[];
-  verificationStatus: 'unverified';
+  verificationStatus: 'unverified' | 'test-verified' | 'verified';
+  verifiedAt?: string | null;
   deliveryStatus: 'not-configured';
   status: 'new' | 'reviewing' | 'awaiting-customer' | 'quoted' | 'closed';
   internalNotes?: string | null;
@@ -281,6 +286,31 @@ export interface Notification {
   sentAt?: string | null;
   providerMessageId?: string | null;
   lastError?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "enquiry-verifications".
+ */
+export interface EnquiryVerification {
+  id: number;
+  enquiry: number | Enquiry;
+  tokenHash: string;
+  expiresAt: string;
+  consumedAt?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "request-limits".
+ */
+export interface RequestLimit {
+  id: number;
+  key: string;
+  hits: number;
+  windowEndsAt: string;
   updatedAt: string;
   createdAt: string;
 }
@@ -331,6 +361,14 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'notifications';
         value: number | Notification;
+      } | null)
+    | ({
+        relationTo: 'enquiry-verifications';
+        value: number | EnquiryVerification;
+      } | null)
+    | ({
+        relationTo: 'request-limits';
+        value: number | RequestLimit;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -489,6 +527,7 @@ export interface EnquiriesSelect<T extends boolean = true> {
         id?: T;
       };
   verificationStatus?: T;
+  verifiedAt?: T;
   deliveryStatus?: T;
   status?: T;
   internalNotes?: T;
@@ -513,6 +552,29 @@ export interface NotificationsSelect<T extends boolean = true> {
   sentAt?: T;
   providerMessageId?: T;
   lastError?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "enquiry-verifications_select".
+ */
+export interface EnquiryVerificationsSelect<T extends boolean = true> {
+  enquiry?: T;
+  tokenHash?: T;
+  expiresAt?: T;
+  consumedAt?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "request-limits_select".
+ */
+export interface RequestLimitsSelect<T extends boolean = true> {
+  key?: T;
+  hits?: T;
+  windowEndsAt?: T;
   updatedAt?: T;
   createdAt?: T;
 }
