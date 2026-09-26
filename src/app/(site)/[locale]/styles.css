@@ -149,3 +149,49 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
   .button::before { display: none; }
   .category-row:hover .category-arrow { transform: none; }
 }
+
+/* Client palette — 27 September 2026. Semantic surfaces stay separate from text. */
+:root {
+  color-scheme: dark;
+  --navy-deep: #010736;
+  --navy-panel: #091540;
+  --ink: #fff;
+  --paper: var(--navy-deep);
+  --white: #fff;
+  --muted: #fff;
+  --surface: var(--navy-panel);
+  --line: rgb(255 255 255 / .24);
+  --accent-soft: var(--navy-panel);
+  --error: #fff;
+}
+body, .hero, .site-header, .closing, .site-footer, #header-marker { background: var(--navy-deep); color: #fff; }
+.preview-note, .selected-section, .approach, .catalogue-heading, .industry-hero,
+.catalogue-filter, .catalogue-empty, .technical-section, .quote-summary,
+.review-notice, .active-filters a, .hero-search, .skip-link { background: var(--navy-panel); color: #fff; }
+.header-scrolled { background: rgb(1 7 54 / .96); border-bottom-color: var(--line); }
+.product-visual, .detail-visual { background: linear-gradient(145deg, #091540, #010736); border: 1px solid var(--line); }
+.sample-label { background: var(--navy-deep); color: #fff; border: 1px solid var(--line); }
+input, select, textarea { background: var(--navy-deep); color: #fff; border-color: rgb(255 255 255 / .5); }
+input::placeholder, textarea::placeholder { color: rgb(255 255 255 / .78); opacity: 1; }
+option { background: var(--navy-deep); color: #fff; }
+.hero-search input { color: #fff; }
+.button-dark, .button-light { background: var(--navy-panel); color: #fff; border-color: rgb(255 255 255 / .5); }
+.quote-summary .button, .catalogue-filter .button { background: var(--navy-deep); }
+.button:hover { border-color: var(--accent); }
+.wordmark small, .hero-intro, .hero-description, .hero-bottom, .art-caption,
+.stage-caption, .stage-caption small, .stage-index, .motion-control, .closing p,
+.site-footer, .footer-brand, .industry-hero .breadcrumb, .industry-hero .section-kicker { color: #fff; }
+.category-row:hover, .industry-list > a:hover { background: var(--navy-panel); }
+.process-list li, .process-list li:first-child, .category-list, .category-row,
+.site-header, .site-footer, .footer-bottom, .hero-bottom { border-color: var(--line); }
+/* Orange remains in its existing highlights. Dark glyphs preserve contrast on orange. */
+.hero-search button, .basket-link span { color: var(--navy-deep); }
+::selection { background: var(--accent); color: var(--navy-deep); }
+.category-tabs a[aria-current=page] { border-color: #fff; }
+.basket-line:first-child { border-top-color: var(--line); }
+.field-error { border-inline-start: 2px solid var(--accent); padding-inline-start: 10px; }
+.field input[aria-invalid=true] { border-color: var(--accent); }
+input:focus-visible, select:focus-visible, textarea:focus-visible { box-shadow: none; }
+.engineering-circle { border-color: rgb(255 255 255 / .16); }
+.stage-light { background: radial-gradient(ellipse at 40% 40%, #091540, transparent 70%); }
+@media (prefers-reduced-motion: reduce) { .header-scrolled { background: var(--navy-deep); } }

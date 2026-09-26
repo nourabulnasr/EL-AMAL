@@ -1,0 +1,44 @@
+/* Shared client palette, independent of the user's Payload light/dark preference. */
+:root, html[data-theme=light], html[data-theme=dark] {
+  color-scheme: dark;
+  --theme-bg: #010736;
+  --theme-input-bg: #091540;
+  --theme-text: #fff;
+  --theme-border-color: rgb(255 255 255 / .25);
+  --theme-elevation-0: #010736;
+  --theme-elevation-50: #091540;
+  --theme-elevation-100: #091540;
+  --theme-elevation-150: #091540;
+  --theme-elevation-200: rgb(255 255 255 / .35);
+  --theme-elevation-250: rgb(255 255 255 / .35);
+  --theme-elevation-300: rgb(255 255 255 / .35);
+  --theme-elevation-350: #fff;
+  --theme-elevation-400: #fff;
+  --theme-elevation-450: #fff;
+  --theme-elevation-500: #fff;
+  --theme-elevation-550: #fff;
+  --theme-elevation-600: #fff;
+  --theme-elevation-650: #fff;
+  --theme-elevation-700: #fff;
+  --theme-elevation-750: #fff;
+  --theme-elevation-800: #fff;
+  --theme-elevation-850: #fff;
+  --theme-elevation-900: #fff;
+  --theme-elevation-950: #fff;
+  --theme-elevation-1000: #fff;
+}
+body { background: #010736; color: #fff; }
+.btn--style-primary { --bg-color: #091540; --color: #fff; --hover-bg: #010736; --hover-color: #fff; border: 1px solid rgb(255 255 255 / .5); }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid oklch(72% .14 55); outline-offset: 3px; }
+
+.react-datepicker__day:focus, .react-datepicker__month-text:focus,
+.react-datepicker__day--keyboard-selected, .react-datepicker__month-text--keyboard-selected {
+  background: #091540;
+  color: #fff;
+  outline: 2px solid oklch(72% .14 55);
+  outline-offset: -2px;
+}
+.tooltip { background: #091540; color: #fff; border: 1px solid rgb(255 255 255 / .35); }
+
+input:not([type=checkbox]):not([type=radio]):not([type=hidden]), textarea, select { border-color: rgb(255 255 255 / .5); }
+textarea:focus-visible, select:focus-visible { outline: 2px solid oklch(72% .14 55); outline-offset: 3px; }

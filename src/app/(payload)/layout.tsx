@@ -3,6 +3,7 @@ import type {ServerFunctionClient} from 'payload';
 import {cmsEnabled} from '@/lib/cms-runtime';
 import {importMap} from './admin/importMap';
 import '@payloadcms/next/css';
+import './brand.css';
 
 const serverFunction:ServerFunctionClient = async args => {
   'use server';

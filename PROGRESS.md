@@ -1,5 +1,17 @@
 # EL AMAL progress
 
+## Latest checkpoint — 27 September navy design and quality hardening
+
+Applied Nour's exact #010736 / #091540 backgrounds, white text and retained orange accents across public routes, admin and global 404. Preserved instrument materials and existing hover/press/reduced-motion behavior. Added visible field boundaries and admin calendar/tooltip focus corrections. Added generated branded social image, Twitter large-image fallback to Next-generated OG metadata, and product-page WebPage/BreadcrumbList schema; real Product entities only for CMS records, without invented offers or ratings.
+
+Scoped Monaco DOMPurify override to 3.4.16. npm audit now reports zero high/critical/low and five moderate entries from the inherited Drizzle/esbuild development-tool chain (GHSA-67mh-4wv8-2f99). No unsafe major override applied. Added baseline CSP object/base/framing/form restrictions and HSTS; this is not a complete script CSP or security certification.
+
+All 53 unit tests and TypeScript succeeded. Browser inspected English home/product, Arabic RFQ at 390px (375px content width, no horizontal overflow), admin login, global 404 and generated social image. Fixed Twitter URL discovered during deployed metadata inspection. Source review found calendar focus and standalone 404 link contrast issues, corrected. Authenticated full admin theme, runtime reduced motion and measured Lighthouse/Core Web Vitals still need broader review. No real emails sent, database migrations or actual products added.
+
+Final deployment dpl_E3NuhKKwp4M9XZryZMc6oPkRKSmV reached Ready and was promoted to https://el-amal-sigma.vercel.app. Live EN/AR/product/admin login returned200, private SKU API403, CSP/HSTS present, generated social image200 image/png. Final browser metadata confirms Twitter and OG use the same generated image URL. Live homepage screenshot: artifacts/2026-09-27/navy-homepage.png.
+
+Research, design targets and honest remaining work: docs/quality-roadmap-2026-09-27.md. Public intake/resend integration, secure attachments, inventory/reservation workflow, scheduling/monitoring and final operational/accessibility/performance/security verification remain agent-owned work. Client inputs remain deferred. This checkpoint is not full operational completion or an award/ranking claim.
+
 ## Latest checkpoint — 25 September hover and press motion
 
 Nour requested more transitions, especially hover feedback. Extended the existing steel direction with lightweight CSS spring-shaped button lift/press, one-pass sheen, arrow movement, navigation underlines, product image lift, category/chip feedback and field focus treatment. No dependencies or JavaScript added. Hover movement requires a fine hover-capable pointer; touch retains press feedback. RTL motion direction and reduced-motion overrides included. Removed legacy product hover scaling that could abruptly shrink the larger featured illustration.

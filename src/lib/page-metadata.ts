@@ -6,5 +6,5 @@ export function pageMetadata(locale:Locale,path:string,title:string,description:
  return {title,description,alternates:{canonical:url,languages:{en:`${origin}/en${path}`,ar:`${origin}/ar${path}`}},
  robots:{index:indexingEnabled()&&path!=='/quote',follow:indexingEnabled()},
  openGraph:{type:'website',siteName:'EL AMAL',title,description,url,locale:locale==='ar'?'ar_EG':'en_GB',alternateLocale:locale==='ar'?'en_GB':'ar_EG'},
- twitter:{card:'summary',title,description}};
+ twitter:{card:'summary_large_image',title,description}};
 }
