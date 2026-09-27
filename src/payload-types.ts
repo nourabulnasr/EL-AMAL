@@ -182,6 +182,18 @@ export interface Category {
  */
 export interface Product {
   id: number;
+  /**
+   * Reviewed manufacturer image, bilingual specifications, dated model availability and datasheets.
+   */
+  catalogueDetails?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   externalId: string;
   model: string;
   category: number | Category;
@@ -495,6 +507,7 @@ export interface CategoriesSelect<T extends boolean = true> {
  * via the `definition` "products_select".
  */
 export interface ProductsSelect<T extends boolean = true> {
+  catalogueDetails?: T;
   externalId?: T;
   model?: T;
   category?: T;

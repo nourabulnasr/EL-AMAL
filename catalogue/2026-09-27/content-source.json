@@ -1,0 +1,6330 @@
+[
+  {
+    "model": "DIH10",
+    "label": "Connection head with digital indicator",
+    "sourceId": "in-stock-01",
+    "page": 35,
+    "header": "DIH10",
+    "availability": "in-stock",
+    "printedDatasheetIds": "AC 80.11",
+    "image": {
+      "src": "/images/products/wika-dih10.png",
+      "width": 186,
+      "height": 263,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Input",
+        "value": "4 … 20 mA"
+      },
+      {
+        "label": "Auxiliary power",
+        "value": "Supply from the 4 … 20 mA current loop"
+      }
+    ],
+    "rawSpecifications": "Input 4 … 20 mA\nAuxiliary power Supply from the 4 … 20 mA current loop\nData sheet AC 80.11",
+    "box": [
+      28.276,
+      226.20500000000004,
+      198.35500000000002,
+      325.4594000000001
+    ],
+    "datasheetIds": [
+      "AC80.11"
+    ]
+  },
+  {
+    "model": "DIH50, DIH52",
+    "label": "Current-loop display with HART communication",
+    "sourceId": "in-stock-01",
+    "page": 35,
+    "header": "DIH50, DIH52",
+    "availability": "in-stock",
+    "printedDatasheetIds": "AC 80.10",
+    "image": {
+      "src": "/images/products/wika-dih50-dih52.png",
+      "width": 225,
+      "height": 194,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Dimension",
+        "value": "150 x 127 x 127 mm"
+      },
+      {
+        "label": "Case",
+        "value": "Aluminium, stainless steel"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Adjustment of display range and unit via HART® communication\n• Model DIH52 additionally suitable for multidrop operation and with local master function"
+      },
+      {
+        "label": "Approval",
+        "value": "• Intrinsically safe\n• Flameproof enclosure"
+      }
+    ],
+    "rawSpecifications": "Dimension 150 x 127 x 127 mm\nCase Aluminium, stainless steel\nSpecial feature • Adjustment of display range and unit via\nHART® communication\n• Model DIH52 additionally suitable\nfor multidrop operation and with local\nmaster function\nApproval • Intrinsically safe\n• Flameproof enclosure\nData sheet AC 80.10",
+    "box": [
+      212.528,
+      226.20500000000004,
+      382.60699999999997,
+      393.4869
+    ],
+    "datasheetIds": [
+      "AC80.10"
+    ]
+  },
+  {
+    "model": "TF-LCD",
+    "label": "Temperature probe with digital indicator",
+    "sourceId": "in-stock-01",
+    "page": 35,
+    "header": "TF-LCD",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 85.01",
+    "image": {
+      "src": "/images/products/wika-tf-lcd.png",
+      "width": 355,
+      "height": 196,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Measuring range",
+        "value": "-40 … +120 °C"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Dust and waterproof case, IP68\n• Battery or solar operation\n• Extremely long service life"
+      }
+    ],
+    "rawSpecifications": "Measuring range -40 … +120 °C\nSpecial feature • Dust and waterproof case, IP68\n• Battery or solar operation\n• Extremely long service life\nData sheet TE 85.01",
+    "box": [
+      396.638,
+      226.20500000000004,
+      567,
+      348.1359
+    ],
+    "datasheetIds": [
+      "TE85.01"
+    ]
+  },
+  {
+    "model": "DI10",
+    "label": "Panel-mounted current-loop display",
+    "sourceId": "in-stock-02",
+    "page": 34,
+    "header": "DI10",
+    "availability": "in-stock",
+    "printedDatasheetIds": "AC 80.06",
+    "image": {
+      "src": "/images/products/wika-di10.png",
+      "width": 327,
+      "height": 160,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Input",
+        "value": "4 … 20 mA, 2-wire"
+      },
+      {
+        "label": "Alarm output",
+        "value": "2 electronic contacts (optional)"
+      },
+      {
+        "label": "Special feature",
+        "value": "Wall-mounting case (optional)"
+      },
+      {
+        "label": "Auxiliary power",
+        "value": "Supply from the 4 … 20 mA current loop"
+      }
+    ],
+    "rawSpecifications": "Input 4 … 20 mA, 2-wire\nAlarm output 2 electronic contacts (optional)\nSpecial feature Wall-mounting case (optional)\nAuxiliary power Supply from the 4 … 20 mA current loop\nData sheet AC 80.06",
+    "box": [
+      28.724,
+      226.20500000000004,
+      198.803,
+      348.1394
+    ],
+    "datasheetIds": [
+      "AC80.06"
+    ]
+  },
+  {
+    "model": "DI32-1",
+    "label": "Panel-mounted digital indicator",
+    "sourceId": "in-stock-02",
+    "page": 34,
+    "header": "DI32-1",
+    "availability": "in-stock",
+    "printedDatasheetIds": "AC 80.13",
+    "image": {
+      "src": "/images/products/wika-di32-1.png",
+      "width": 267,
+      "height": 150,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Input",
+        "value": "Multi-function input for resistance thermometers, thermocouples and standard signals"
+      },
+      {
+        "label": "Alarm output",
+        "value": "2 electronic contacts"
+      },
+      {
+        "label": "Auxiliary power",
+        "value": "DC 9 … 28 V"
+      }
+    ],
+    "rawSpecifications": "Input Multi-function input for resistance thermo-\nmeters, thermocouples and standard\nsignals\nAlarm output 2 electronic contacts\nAuxiliary power DC 9 … 28 V\nData sheet AC 80.13",
+    "box": [
+      28.772,
+      498.89799999999997,
+      198.851,
+      632.1663
+    ],
+    "datasheetIds": [
+      "AC80.13"
+    ]
+  },
+  {
+    "model": "DI30",
+    "label": "Panel-mounted digital indicator",
+    "sourceId": "in-stock-02",
+    "page": 34,
+    "header": "DI30",
+    "availability": "in-stock",
+    "printedDatasheetIds": "AC 80.05",
+    "image": {
+      "src": "/images/products/wika-di30.png",
+      "width": 184,
+      "height": 184,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Input",
+        "value": "Standard signals"
+      },
+      {
+        "label": "Alarm output",
+        "value": "2 relays"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Integrated transmitter power supply\n• Wall-mounting case (optional)"
+      },
+      {
+        "label": "Auxiliary power",
+        "value": "AC 230 V or AC 115 V"
+      }
+    ],
+    "rawSpecifications": "Input Standard signals\nAlarm output 2 relays\nSpecial feature • Integrated transmitter power supply\n• Wall-mounting case (optional)\nAuxiliary power AC 230 V or AC 115 V\nData sheet AC 80.05",
+    "box": [
+      212.598,
+      226.20500000000004,
+      382.677,
+      359.47249999999997
+    ],
+    "datasheetIds": [
+      "AC80.05"
+    ]
+  },
+  {
+    "model": "DI35",
+    "label": "Panel-mounted digital indicator",
+    "sourceId": "in-stock-02",
+    "page": 34,
+    "header": "DI35",
+    "availability": "in-stock",
+    "printedDatasheetIds": "AC 80.03",
+    "image": {
+      "src": "/images/products/wika-di35.png",
+      "width": 229,
+      "height": 121,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Input",
+        "value": "• Multi-function input for resistance thermometers, thermocouples and standard signals\n• Alternatively double input for standard signals with calculation function (+ - x /) for two transmitters"
+      },
+      {
+        "label": "Alarm output",
+        "value": "2 or 4 relays (optional)"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Integrated transmitter power supply\n• Analogue output signal (optional)"
+      },
+      {
+        "label": "Auxiliary power",
+        "value": "• AC/DC 100 … 240 V\n• DC 10 … 40 V, AC 18 … 30 V"
+      }
+    ],
+    "rawSpecifications": "Input • Multi-function input for resistance\nthermometers, thermocouples and\nstandard signals\n• Alternatively double input for standard\nsignals with calculation function (+ - x /)\nfor two transmitters\nAlarm output 2 or 4 relays (optional)\nSpecial feature • Integrated transmitter power supply\n• Analogue output signal (optional)\nAuxiliary power • AC/DC 100 … 240 V\n• DC 10 … 40 V, AC 18 … 30 V\nData sheet AC 80.03",
+    "box": [
+      213.024,
+      498.89799999999997,
+      382.678,
+      688.857
+    ],
+    "datasheetIds": [
+      "AC80.03"
+    ]
+  },
+  {
+    "model": "TC10-K",
+    "label": "Thermocouple measuring insert for TC10-L",
+    "sourceId": "in-stock-03",
+    "page": 37,
+    "header": "TC10-K",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.11",
+    "image": {
+      "src": "/images/products/wika-tc10-k.png",
+      "width": 93,
+      "height": 294,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, E, N or T"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-40 … +1,200 °C, -40 … +2,192 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, E, N or T\nMeasuring range -40 … +1,200 °C, -40 … +2,192 °F\nMeasuring location Ungrounded or grounded\nData sheet TE 65.11",
+    "box": [
+      28.346,
+      363.685,
+      198.425,
+      474.27969999999993
+    ],
+    "datasheetIds": [
+      "TE65.11"
+    ]
+  },
+  {
+    "model": "TC12-A",
+    "label": "Measuring insert for process thermocouple",
+    "sourceId": "in-stock-03",
+    "page": 37,
+    "header": "TC12-A",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.16",
+    "image": {
+      "src": "/images/products/wika-tc12-a.png",
+      "width": 74,
+      "height": 367,
+      "pdfImageName": "Im11"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, N or T"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-40 … +1,200 °C, -40 … +2,192 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, N or T\nMeasuring range -40 … +1,200 °C, -40 … +2,192 °F\nMeasuring location Ungrounded or grounded\nData sheet TE 65.16",
+    "box": [
+      28.276,
+      630.142,
+      198.496,
+      740.7364
+    ],
+    "datasheetIds": [
+      "TE65.16"
+    ]
+  },
+  {
+    "model": "TC10-L",
+    "label": "Thermocouple with flameproof enclosure",
+    "sourceId": "in-stock-03",
+    "page": 37,
+    "header": "TC10-L",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.12",
+    "image": {
+      "src": "/images/products/wika-tc10-l.png",
+      "width": 112,
+      "height": 299,
+      "pdfImageName": "Im4"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, E, N or T"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-40 … +1,200 °C, -40 … +2,192 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, E, N or T\nMeasuring range -40 … +1,200 °C, -40 … +2,192 °F\nMeasuring location Ungrounded or grounded\nData sheet TE 65.12",
+    "box": [
+      212.598,
+      363.685,
+      382.818,
+      474.27969999999993
+    ],
+    "datasheetIds": [
+      "TE65.12"
+    ]
+  },
+  {
+    "model": "TC12-B",
+    "label": "Process thermocouple for additional thermowell",
+    "sourceId": "in-stock-03",
+    "page": 37,
+    "header": "TC12-B",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.17",
+    "image": {
+      "src": "/images/products/wika-tc12-b.png",
+      "width": 112,
+      "height": 299,
+      "pdfImageName": "Im5"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, E, N or T"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-40 … +1,200 °C, -40 … +2,192 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      },
+      {
+        "label": "Option",
+        "value": "Ex i, Ex d"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, E, N or T\nMeasuring range -40 … +1,200 °C, -40 … +2,192 °F\nMeasuring location Ungrounded or grounded\nOption Ex i, Ex d\nData sheet TE 65.17",
+    "box": [
+      212.598,
+      630.142,
+      382.677,
+      752.0764
+    ],
+    "datasheetIds": [
+      "TE65.17"
+    ]
+  },
+  {
+    "model": "TC12-M",
+    "label": "Process thermocouple basic module",
+    "sourceId": "in-stock-03",
+    "page": 37,
+    "header": "TC12-M",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.17",
+    "image": {
+      "src": "/images/products/wika-tc12-m.png",
+      "width": 112,
+      "height": 299,
+      "pdfImageName": "Im6"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, E, N or T"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-40 … +1,200 °C, -40 … +2,192 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      },
+      {
+        "label": "Option",
+        "value": "Ex i, Ex d"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, E, N or T\nMeasuring range -40 … +1,200 °C, -40 … +2,192 °F\nMeasuring location Ungrounded or grounded\nOption Ex i, Ex d\nData sheet TE 65.17",
+    "box": [
+      396.85,
+      630.142,
+      567.212,
+      752.0764
+    ],
+    "datasheetIds": [
+      "TE65.17"
+    ]
+  },
+  {
+    "model": "TC10-A",
+    "label": "Thermocouple measuring insert",
+    "sourceId": "in-stock-04",
+    "page": 36,
+    "header": "TC10-A",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.01",
+    "image": {
+      "src": "/images/products/wika-tc10-a.png",
+      "width": 93,
+      "height": 294,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, E, N or T"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-40 … +1,200 °C, -40 … +2,192 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, E, N or T\nMeasuring range -40 … +1,200 °C, -40 … +2,192 °F\nMeasuring location Ungrounded or grounded\nData sheet TE 65.01",
+    "box": [
+      28.311,
+      363.685,
+      198.531,
+      474.27969999999993
+    ],
+    "datasheetIds": [
+      "TE65.01"
+    ]
+  },
+  {
+    "model": "TC10-D",
+    "label": "Threaded miniature thermocouple",
+    "sourceId": "in-stock-04",
+    "page": 36,
+    "header": "TC10-D",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.04",
+    "image": {
+      "src": "/images/products/wika-tc10-d.png",
+      "width": 77,
+      "height": 246,
+      "pdfImageName": "Im15"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, E, N or T"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-40 … +600 °C, -40 … +1,112 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      },
+      {
+        "label": "Process connection",
+        "value": "Mounting thread"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, E, N or T\nMeasuring range -40 … +600 °C, -40 … +1,112 °F\nMeasuring location Ungrounded or grounded\nProcess connection Mounting thread\nData sheet TE 65.04",
+    "box": [
+      28.346,
+      630.142,
+      198.708,
+      752.0764
+    ],
+    "datasheetIds": [
+      "TE65.04"
+    ]
+  },
+  {
+    "model": "TC10-B",
+    "label": "Thermocouple for additional thermowell",
+    "sourceId": "in-stock-04",
+    "page": 36,
+    "header": "TC10-B",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.02",
+    "image": {
+      "src": "/images/products/wika-tc10-b.png",
+      "width": 84,
+      "height": 296,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, E, N or T"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-40 … +1,200 °C, -40 … +2,192 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, E, N or T\nMeasuring range -40 … +1,200 °C, -40 … +2,192 °F\nMeasuring location Ungrounded or grounded\nData sheet TE 65.02",
+    "box": [
+      212.705,
+      363.685,
+      382.925,
+      474.27969999999993
+    ],
+    "datasheetIds": [
+      "TE65.02"
+    ]
+  },
+  {
+    "model": "TC10-F",
+    "label": "Flanged thermocouple with protection tube",
+    "sourceId": "in-stock-04",
+    "page": 36,
+    "header": "TC10-F",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.06",
+    "image": {
+      "src": "/images/products/wika-tc10-f.png",
+      "width": 112,
+      "height": 287,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, E, N or T"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-40 … +1,200 °C, -40 … +2,192 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      },
+      {
+        "label": "Process connection",
+        "value": "Flange"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, E, N or T\nMeasuring range -40 … +1,200 °C, -40 … +2,192 °F\nMeasuring location Ungrounded or grounded\nProcess connection Flange\nData sheet TE 65.06",
+    "box": [
+      212.598,
+      630.142,
+      382.96000000000004,
+      752.0764
+    ],
+    "datasheetIds": [
+      "TE65.06"
+    ]
+  },
+  {
+    "model": "TC10-C",
+    "label": "Threaded thermocouple with protection tube",
+    "sourceId": "in-stock-04",
+    "page": 36,
+    "header": "TC10-C",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.03",
+    "image": {
+      "src": "/images/products/wika-tc10-c.png",
+      "width": 116,
+      "height": 297,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, E, N or T"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-40 … +1,200 °C, -40 … +2,192 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      },
+      {
+        "label": "Process connection",
+        "value": "Mounting thread"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, E, N or T\nMeasuring range -40 … +1,200 °C, -40 … +2,192 °F\nMeasuring location Ungrounded or grounded\nProcess connection Mounting thread\nData sheet TE 65.03",
+    "box": [
+      396.886,
+      363.685,
+      567.106,
+      485.6196999999999
+    ],
+    "datasheetIds": [
+      "TE65.03"
+    ]
+  },
+  {
+    "model": "TC10-H",
+    "label": "Thermocouple without thermowell",
+    "sourceId": "in-stock-04",
+    "page": 36,
+    "header": "TC10-H",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.08",
+    "image": {
+      "src": "/images/products/wika-tc10-h.png",
+      "width": 138,
+      "height": 291,
+      "pdfImageName": "Im4"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, E, N or T"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-40 … +1,200 °C, -40 … +2,192 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      },
+      {
+        "label": "Process connection",
+        "value": "Mounting thread"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, E, N or T\nMeasuring range -40 … +1,200 °C, -40 … +2,192 °F\nMeasuring location Ungrounded or grounded\nProcess connection Mounting thread\nData sheet TE 65.08",
+    "box": [
+      396.85,
+      630.142,
+      567.212,
+      752.0764
+    ],
+    "datasheetIds": [
+      "TE65.08"
+    ]
+  },
+  {
+    "model": "TC59-T",
+    "label": "Tubeskin thermocouple assembly, TEFRACTO-PAD",
+    "sourceId": "in-stock-05",
+    "page": 39,
+    "header": "TC59-T",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.60",
+    "image": {
+      "src": "/images/products/wika-tc59-t.png",
+      "width": 229,
+      "height": 176,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, N, E"
+      },
+      {
+        "label": "Measuring range",
+        "value": "0 ... 1,260 °C, 32 ... 2,300 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      },
+      {
+        "label": "Process connection",
+        "value": "Surface mounting, welded/shielded"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, N, E\nMeasuring range 0 ... 1,260 °C, 32 ... 2,300 °F\nMeasuring location Ungrounded or grounded\nProcess connection Surface mounting, welded/shielded\nData sheet TE 65.60",
+    "box": [
+      28.382,
+      294.52,
+      198.744,
+      416.45429999999993
+    ],
+    "datasheetIds": [
+      "TE65.60"
+    ]
+  },
+  {
+    "model": "TC59-E",
+    "label": "Tubeskin thermocouple assembly, eTEFRACTO-PAD",
+    "sourceId": "in-stock-05",
+    "page": 39,
+    "header": "TC59-E",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.61",
+    "image": {
+      "src": "/images/products/wika-tc59-e.png",
+      "width": 256,
+      "height": 132,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, N, E"
+      },
+      {
+        "label": "Measuring range",
+        "value": "0 ... 1,260 °C, 32 ... 2,300 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      },
+      {
+        "label": "Process connection",
+        "value": "Surface mounting, extractable/shielded"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, N, E\nMeasuring range 0 ... 1,260 °C, 32 ... 2,300 °F\nMeasuring location Ungrounded or grounded\nProcess connection Surface mounting, extractable/shielded\nData sheet TE 65.61",
+    "box": [
+      212.421,
+      294.52,
+      382.5,
+      416.45429999999993
+    ],
+    "datasheetIds": [
+      "TE65.61"
+    ]
+  },
+  {
+    "model": "TC59-V",
+    "label": "Tubeskin thermocouple assembly, V-PAD",
+    "sourceId": "in-stock-05",
+    "page": 39,
+    "header": "TC59-V",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.59",
+    "image": {
+      "src": "/images/products/wika-tc59-v.png",
+      "width": 268,
+      "height": 141,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, N, E"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-25 … +400 °C, -13 … + 752 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded"
+      },
+      {
+        "label": "Process connection",
+        "value": "Surface mounting, welded"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, N, E\nMeasuring range -25 … +400 °C, -13 … + 752 °F\nMeasuring location Ungrounded\nProcess connection Surface mounting, welded\nData sheet TE 65.59",
+    "box": [
+      396.886,
+      294.52,
+      566.894,
+      416.45429999999993
+    ],
+    "datasheetIds": [
+      "TE65.59"
+    ]
+  },
+  {
+    "model": "TCC",
+    "label": "Linear sensor for hot-spot detection",
+    "sourceId": "in-stock-06",
+    "page": 40,
+    "header": "TCC",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 64.40",
+    "image": {
+      "src": "/images/products/wika-tcc.png",
+      "width": 181,
+      "height": 254,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Type K thermocouple wires"
+      },
+      {
+        "label": "Measuring range",
+        "value": "0 … 400 °C, 32 … 752 °F"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Continuous monitoring\n• Self-restoring\n• Passive element"
+      }
+    ],
+    "rawSpecifications": "Sensor element Type K thermocouple wires\nMeasuring range 0 … 400 °C, 32 … 752 °F\nSpecial feature • Continuous monitoring\n• Self-restoring\n• Passive element\nData sheet TE 64.40",
+    "box": [
+      28.346,
+      294.803,
+      198.425,
+      428.073
+    ],
+    "datasheetIds": [
+      "TE64.40"
+    ]
+  },
+  {
+    "model": "TC82",
+    "label": "High-temperature thermocouple",
+    "sourceId": "in-stock-06",
+    "page": 40,
+    "header": "TC82",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.82",
+    "image": {
+      "src": "/images/products/wika-tc82.png",
+      "width": 89,
+      "height": 330,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, E, N, S, R or B"
+      },
+      {
+        "label": "Measuring range",
+        "value": "0 … 1,700 °C, 32 … 3,092 °F"
+      },
+      {
+        "label": "Thermowell",
+        "value": "C610, C799"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, E, N, S, R or B\nMeasuring range 0 … 1,700 °C, 32 … 3,092 °F\nThermowell C610, C799\nData sheet TE 65.82",
+    "box": [
+      28.346,
+      587.055,
+      198.425,
+      697.6498
+    ],
+    "datasheetIds": [
+      "TE65.82"
+    ]
+  },
+  {
+    "model": "TC80",
+    "label": "High-temperature thermocouple",
+    "sourceId": "in-stock-06",
+    "page": 40,
+    "header": "TC80",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.80",
+    "image": {
+      "src": "/images/products/wika-tc80.png",
+      "width": 198,
+      "height": 299,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types S, R, B, K, N or J"
+      },
+      {
+        "label": "Measuring range",
+        "value": "0 … 1,700 °C, 32 … 3,092 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded"
+      },
+      {
+        "label": "Process connection",
+        "value": "Stop flange, threaded bushing"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types S, R, B, K, N or J\nMeasuring range 0 … 1,700 °C, 32 … 3,092 °F\nMeasuring location Ungrounded\nProcess connection Stop flange, threaded bushing\nData sheet TE 65.80",
+    "box": [
+      212.598,
+      294.803,
+      382.677,
+      416.7378999999999
+    ],
+    "datasheetIds": [
+      "TE65.80"
+    ]
+  },
+  {
+    "model": "TC83",
+    "label": "Calitum sapphire-design thermocouple",
+    "sourceId": "in-stock-06",
+    "page": 40,
+    "header": "TC83\nCalitum",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.83",
+    "image": {
+      "src": "/images/products/wika-tc83.png",
+      "width": 89,
+      "height": 326,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, E, N, S, R or B"
+      },
+      {
+        "label": "Measuring range",
+        "value": "0 … 1,700 °C, 32 … 3,092 °F"
+      },
+      {
+        "label": "Thermowell",
+        "value": "Sapphire (monocrystalline)"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, E, N, S, R or B\nMeasuring range 0 … 1,700 °C, 32 … 3,092 °F\nThermowell Sapphire (monocrystalline)\nData sheet TE 65.83",
+    "box": [
+      212.598,
+      587.055,
+      382.677,
+      697.6498
+    ],
+    "datasheetIds": [
+      "TE65.83"
+    ]
+  },
+  {
+    "model": "TC81",
+    "label": "Thermocouple for flue-gas measurements",
+    "sourceId": "in-stock-06",
+    "page": 40,
+    "header": "TC81",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.81",
+    "image": {
+      "src": "/images/products/wika-tc81.png",
+      "width": 92,
+      "height": 243,
+      "pdfImageName": "Im4"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, N or J"
+      },
+      {
+        "label": "Measuring range",
+        "value": "0 … 1,200 °C, 32 … 2,192 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      },
+      {
+        "label": "Process connection",
+        "value": "Stop flange, threaded bushing"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, N or J\nMeasuring range 0 … 1,200 °C, 32 … 2,192 °F\nMeasuring location Ungrounded or grounded\nProcess connection Stop flange, threaded bushing\nData sheet TE 65.81",
+    "box": [
+      396.85,
+      294.803,
+      566.9290000000001,
+      416.7378999999999
+    ],
+    "datasheetIds": [
+      "TE65.81"
+    ]
+  },
+  {
+    "model": "TC84",
+    "label": "Sapphire-design thermocouple",
+    "sourceId": "in-stock-06",
+    "page": 40,
+    "header": "TC84",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.84",
+    "image": {
+      "src": "/images/products/wika-tc84.png",
+      "width": 184,
+      "height": 271,
+      "pdfImageName": "Im5"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types S, R, B"
+      },
+      {
+        "label": "Measuring range",
+        "value": "0 … 1,700 °C, 32 … 3,092 °F"
+      },
+      {
+        "label": "Thermowell",
+        "value": "Sapphire (monocrystalline)"
+      },
+      {
+        "label": "Case",
+        "value": "Highest safety thanks to 2-chamber system"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types S, R, B\nMeasuring range 0 … 1,700 °C, 32 … 3,092 °F\nThermowell Sapphire (monocrystalline)\nCase Highest safety thanks to 2-chamber\nsystem\nData sheet TE 65.84",
+    "box": [
+      396.85,
+      587.055,
+      566.9290000000001,
+      720.3238
+    ],
+    "datasheetIds": [
+      "TE65.84"
+    ]
+  },
+  {
+    "model": "TC90",
+    "label": "High-pressure thermocouple",
+    "sourceId": "in-stock-07",
+    "page": 41,
+    "header": "TC90",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.90",
+    "image": {
+      "src": "/images/products/wika-tc90.png",
+      "width": 37,
+      "height": 335,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, E, N or T"
+      },
+      {
+        "label": "Measuring range",
+        "value": "0 … 350 °C, 32 … 662 °F"
+      },
+      {
+        "label": "Measuring tip",
+        "value": "Ungrounded or grounded"
+      },
+      {
+        "label": "Process connection",
+        "value": "Various high-pressure connections"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, E, N or T\nMeasuring range 0 … 350 °C, 32 … 662 °F\nMeasuring tip Ungrounded or grounded\nProcess connection Various high-pressure connections\nData sheet TE 65.90",
+    "box": [
+      28.346,
+      294.803,
+      198.425,
+      416.7378999999999
+    ],
+    "datasheetIds": [
+      "TE65.90"
+    ]
+  },
+  {
+    "model": "TC96-O",
+    "label": "Flexible multipoint thermometer for thermowells/protection tubes",
+    "sourceId": "in-stock-07",
+    "page": 41,
+    "header": "TC96-O",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 70.11",
+    "image": {
+      "src": "/images/products/wika-tc96-o.png",
+      "width": 305,
+      "height": 148,
+      "pdfImageName": "Im6"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, E or N"
+      },
+      {
+        "label": "Measuring range",
+        "value": "0 ... 1,200 °C, 32 ... 2,192 °F"
+      },
+      {
+        "label": "Measuring tip",
+        "value": "Ungrounded or grounded"
+      },
+      {
+        "label": "Process connection",
+        "value": "Various process connections"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, E or N\nMeasuring range 0 ... 1,200 °C, 32 ... 2,192 °F\nMeasuring tip Ungrounded or grounded\nProcess connection Various process connections\nData sheet TE 70.11",
+    "box": [
+      28.346,
+      587.055,
+      198.425,
+      708.9898000000001
+    ],
+    "datasheetIds": [
+      "TE70.11"
+    ]
+  },
+  {
+    "model": "TC95",
+    "label": "Multipoint thermocouple",
+    "sourceId": "in-stock-07",
+    "page": 41,
+    "header": "TC95",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 70.01",
+    "image": {
+      "src": "/images/products/wika-tc95.png",
+      "width": 121,
+      "height": 255,
+      "pdfImageName": "Im4"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, E, N or T"
+      },
+      {
+        "label": "Measuring range",
+        "value": "0 … 1,200 °C, 32 … 2,192 °F"
+      },
+      {
+        "label": "Measuring tip",
+        "value": "Ungrounded or grounded"
+      },
+      {
+        "label": "Process connection",
+        "value": "Various process connections"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, E, N or T\nMeasuring range 0 … 1,200 °C, 32 … 2,192 °F\nMeasuring tip Ungrounded or grounded\nProcess connection Various process connections\nData sheet TE 70.01",
+    "box": [
+      212.598,
+      294.803,
+      382.677,
+      416.7378999999999
+    ],
+    "datasheetIds": [
+      "TE70.01"
+    ]
+  },
+  {
+    "model": "TC96-R",
+    "label": "Flexible multipoint thermocouple",
+    "sourceId": "in-stock-07",
+    "page": 41,
+    "header": "TC96-R",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 70.10",
+    "image": {
+      "src": "/images/products/wika-tc96-r.png",
+      "width": 347,
+      "height": 137,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, E or N"
+      },
+      {
+        "label": "Measuring range",
+        "value": "0 … 1,200 °C, 32 … 2,192 °F"
+      },
+      {
+        "label": "Measuring tip",
+        "value": "Ungrounded or grounded"
+      },
+      {
+        "label": "Process connection",
+        "value": "Various process connections"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, E or N\nMeasuring range 0 … 1,200 °C, 32 … 2,192 °F\nMeasuring tip Ungrounded or grounded\nProcess connection Various process connections\nData sheet TE 70.10",
+    "box": [
+      396.85,
+      294.803,
+      566.9290000000001,
+      416.7378999999999
+    ],
+    "datasheetIds": [
+      "TE70.10"
+    ]
+  },
+  {
+    "model": "TR10-A",
+    "label": "Resistance thermometer measuring insert, MIMS cable",
+    "sourceId": "in-stock-08",
+    "page": 42,
+    "header": "TR10-A",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.01",
+    "image": {
+      "src": "/images/products/wika-tr10-a.png",
+      "width": 82,
+      "height": 294,
+      "pdfImageName": "Im5"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-196 … +600 °C, -320 … +1,112 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Measuring insert",
+        "value": "MIMS cable"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -196 … +600 °C, -320 … +1,112 °F\nConnection method 2-, 3- and 4-wire\nMeasuring insert MIMS cable\nData sheet TE 60.01",
+    "box": [
+      28.346,
+      375.166,
+      198.425,
+      497.0999999999999
+    ],
+    "datasheetIds": [
+      "TE60.01"
+    ]
+  },
+  {
+    "model": "TR10-D",
+    "label": "Threaded miniature resistance thermometer",
+    "sourceId": "in-stock-08",
+    "page": 42,
+    "header": "TR10-D",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.04",
+    "image": {
+      "src": "/images/products/wika-tr10-d.png",
+      "width": 77,
+      "height": 246,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-196 … +500 °C, -320 … +932 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Process connection",
+        "value": "Mounting thread"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -196 … +500 °C, -320 … +932 °F\nConnection method 2-, 3- and 4-wire\nProcess connection Mounting thread\nData sheet TE 60.04",
+    "box": [
+      28.346,
+      633.827,
+      198.425,
+      755.7614
+    ],
+    "datasheetIds": [
+      "TE60.04"
+    ]
+  },
+  {
+    "model": "TR10-B",
+    "label": "Resistance thermometer for additional thermowell",
+    "sourceId": "in-stock-08",
+    "page": 42,
+    "header": "TR10-B",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.02",
+    "image": {
+      "src": "/images/products/wika-tr10-b.png",
+      "width": 98,
+      "height": 296,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-196 … +600 °C, -320 … +1,112 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Measuring insert",
+        "value": "MIMS cable"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -196 … +600 °C, -320 … +1,112 °F\nConnection method 2-, 3- and 4-wire\nMeasuring insert MIMS cable\nData sheet TE 60.02",
+    "box": [
+      212.598,
+      375.166,
+      382.677,
+      497.0999999999999
+    ],
+    "datasheetIds": [
+      "TE60.02"
+    ]
+  },
+  {
+    "model": "TR10-F",
+    "label": "Flanged resistance thermometer with protection tube",
+    "sourceId": "in-stock-08",
+    "page": 42,
+    "header": "TR10-F",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.06",
+    "image": {
+      "src": "/images/products/wika-tr10-f.png",
+      "width": 112,
+      "height": 287,
+      "pdfImageName": "Im4"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-196 … +600 °C, -320 … +1,112 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Process connection",
+        "value": "Flange"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -196 … +600 °C, -320 … +1,112 °F\nConnection method 2-, 3- and 4-wire\nProcess connection Flange\nData sheet TE 60.06",
+    "box": [
+      212.598,
+      633.827,
+      382.677,
+      755.7614
+    ],
+    "datasheetIds": [
+      "TE60.06"
+    ]
+  },
+  {
+    "model": "TR10-C",
+    "label": "Threaded resistance thermometer with protection tube",
+    "sourceId": "in-stock-08",
+    "page": 42,
+    "header": "TR10-C",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.03",
+    "image": {
+      "src": "/images/products/wika-tr10-c.png",
+      "width": 116,
+      "height": 297,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-196 … +600 °C, -320 … +1,112 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Process connection",
+        "value": "Mounting thread"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -196 … +600 °C, -320 … +1,112 °F\nConnection method 2-, 3- and 4-wire\nProcess connection Mounting thread\nData sheet TE 60.03",
+    "box": [
+      396.85,
+      375.166,
+      566.9290000000001,
+      497.0999999999999
+    ],
+    "datasheetIds": [
+      "TE60.03"
+    ]
+  },
+  {
+    "model": "TR10-H",
+    "label": "Resistance thermometer without thermowell",
+    "sourceId": "in-stock-08",
+    "page": 42,
+    "header": "TR10-H",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.08",
+    "image": {
+      "src": "/images/products/wika-tr10-h.png",
+      "width": 138,
+      "height": 291,
+      "pdfImageName": "Im6"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-196 … +600 °C, -320 … +1,112 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Process connection",
+        "value": "Mounting thread"
+      },
+      {
+        "label": "Measuring insert",
+        "value": "MIMS cable"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -196 … +600 °C, -320 … +1,112 °F\nConnection method 2-, 3- and 4-wire\nProcess connection Mounting thread\nMeasuring insert MIMS cable\nData sheet TE 60.08",
+    "box": [
+      396.85,
+      633.827,
+      566.9290000000001,
+      767.1014
+    ],
+    "datasheetIds": [
+      "TE60.08"
+    ]
+  },
+  {
+    "model": "TR11-A",
+    "label": "Resistance thermometer measuring insert, tubular design",
+    "sourceId": "in-stock-09",
+    "page": 43,
+    "header": "TR11-A",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.13",
+    "image": {
+      "src": "/images/products/wika-tr11-a.png",
+      "width": 79,
+      "height": 296,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-50 … +250 °C, -58 … +482 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Measuring insert",
+        "value": "Tubular design"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -50 … +250 °C, -58 … +482 °F\nConnection method 2-, 3- and 4-wire\nMeasuring insert Tubular design\nData sheet TE 60.13",
+    "box": [
+      28.346,
+      375.166,
+      198.425,
+      497.0999999999999
+    ],
+    "datasheetIds": [
+      "TE60.13"
+    ]
+  },
+  {
+    "model": "TR12-A",
+    "label": "Measuring insert for process resistance thermometer TR12-B",
+    "sourceId": "in-stock-09",
+    "page": 43,
+    "header": "TR12-A",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.16",
+    "image": {
+      "src": "/images/products/wika-tr12-a.png",
+      "width": 138,
+      "height": 368,
+      "pdfImageName": "Im4"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-196 … +600 °C, -320 … +1,112 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Measuring insert",
+        "value": "MIMS cable"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -196 … +600 °C, -320 … +1,112 °F\nConnection method 2-, 3- and 4-wire\nMeasuring insert MIMS cable\nData sheet TE 60.16",
+    "box": [
+      28.346,
+      633.827,
+      198.425,
+      755.7614
+    ],
+    "datasheetIds": [
+      "TE60.16"
+    ]
+  },
+  {
+    "model": "TR10-K",
+    "label": "Measuring insert for installation in TR10-L",
+    "sourceId": "in-stock-09",
+    "page": 43,
+    "header": "TR10-K",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.11",
+    "image": {
+      "src": "/images/products/wika-tr10-k.png",
+      "width": 79,
+      "height": 296,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-196 … +600 °C, -320 … +1,112 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Measuring insert",
+        "value": "MIMS cable"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -196 … +600 °C, -320 … +1,112 °F\nConnection method 2-, 3- and 4-wire\nMeasuring insert MIMS cable\nData sheet TE 60.11",
+    "box": [
+      212.598,
+      375.166,
+      382.677,
+      497.0999999999999
+    ],
+    "datasheetIds": [
+      "TE60.11"
+    ]
+  },
+  {
+    "model": "TR12-B",
+    "label": "Process resistance thermometer for additional thermowell",
+    "sourceId": "in-stock-09",
+    "page": 43,
+    "header": "TR12-B",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.17",
+    "image": {
+      "src": "/images/products/wika-tr12-b.png",
+      "width": 112,
+      "height": 299,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-196 … +600 °C, -320…+1,112 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Measuring insert",
+        "value": "MIMS cable"
+      },
+      {
+        "label": "Option",
+        "value": "Ex i, Ex d"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -196 … +600 °C, -320…+1,112 °F\nConnection method 2-, 3- and 4-wire\nMeasuring insert MIMS cable\nOption Ex i, Ex d\nData sheet TE 60.17",
+    "box": [
+      212.598,
+      633.827,
+      382.96000000000004,
+      767.1014
+    ],
+    "datasheetIds": [
+      "TE60.17"
+    ]
+  },
+  {
+    "model": "TR12-M",
+    "label": "Process resistance thermometer basic module",
+    "sourceId": "in-stock-09",
+    "page": 43,
+    "header": "TR12-M",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.17",
+    "image": {
+      "src": "/images/products/wika-tr12-m.png",
+      "width": 112,
+      "height": 299,
+      "pdfImageName": "Im5"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-196 … +600 °C, -320 … +1,112 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Measuring insert",
+        "value": "MIMS cable"
+      },
+      {
+        "label": "Option",
+        "value": "Ex i, Ex d"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -196 … +600 °C, -320 … +1,112 °F\nConnection method 2-, 3- and 4-wire\nMeasuring insert MIMS cable\nOption Ex i, Ex d\nData sheet TE 60.17",
+    "box": [
+      396.425,
+      633.827,
+      566.787,
+      767.1014
+    ],
+    "datasheetIds": [
+      "TE60.17"
+    ]
+  },
+  {
+    "model": "TR10-L",
+    "label": "Resistance thermometer with flameproof enclosure",
+    "sourceId": "in-stock-09",
+    "page": 43,
+    "header": "TR10-L",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.12",
+    "image": {
+      "src": "/images/products/wika-tr10-l.png",
+      "width": 112,
+      "height": 299,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-196 … +600 °C, -320 … +1,112 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Measuring insert",
+        "value": "MIMS cable"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -196 … +600 °C, -320 … +1,112 °F\nConnection method 2-, 3- and 4-wire\nMeasuring insert MIMS cable\nData sheet TE 60.12",
+    "box": [
+      396.85,
+      375.166,
+      566.9290000000001,
+      497.0999999999999
+    ],
+    "datasheetIds": [
+      "TE60.12"
+    ]
+  },
+  {
+    "model": "TC40",
+    "label": "Cable thermocouple",
+    "sourceId": "in-stock-10",
+    "page": 38,
+    "header": "TC40",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.40",
+    "image": {
+      "src": "/images/products/wika-tc40.png",
+      "width": 81,
+      "height": 288,
+      "pdfImageName": "Im13"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, E, N or T"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-40 … +1,200 °C, -40 … +2,192 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      },
+      {
+        "label": "Cable",
+        "value": "Silicone, PTFE/PFA, fibreglass"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, E, N or T\nMeasuring range -40 … +1,200 °C, -40 … +2,192 °F\nMeasuring location Ungrounded or grounded\nCable Silicone, PTFE/PFA, fibreglass\nData sheet TE 65.40",
+    "box": [
+      28.382,
+      294.803,
+      198.744,
+      416.7378999999999
+    ],
+    "datasheetIds": [
+      "TE65.40"
+    ]
+  },
+  {
+    "model": "TC50",
+    "label": "Surface thermocouple",
+    "sourceId": "in-stock-10",
+    "page": 38,
+    "header": "TC50",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.50",
+    "image": {
+      "src": "/images/products/wika-tc50.png",
+      "width": 238,
+      "height": 187,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, E, N or T"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-40 … +1,200 °C, -40 … +2,192 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      },
+      {
+        "label": "Process connection",
+        "value": "Surface mounting"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, E, N or T\nMeasuring range -40 … +1,200 °C, -40 … +2,192 °F\nMeasuring location Ungrounded or grounded\nProcess connection Surface mounting\nData sheet TE 65.50",
+    "box": [
+      28.382,
+      570.202,
+      198.461,
+      692.1367
+    ],
+    "datasheetIds": [
+      "TE65.50"
+    ]
+  },
+  {
+    "model": "TC46",
+    "label": "Hot-runner thermocouple",
+    "sourceId": "in-stock-10",
+    "page": 38,
+    "header": "TC46",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.46",
+    "image": {
+      "src": "/images/products/wika-tc46.png",
+      "width": 28,
+      "height": 330,
+      "pdfImageName": "Im10"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types J or K"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-25 … +400 °C, -13 … +752 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Probe diameter 0.5 … 3.0 mm\n• Plastic-moulded transition"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types J or K\nMeasuring range -25 … +400 °C, -13 … +752 °F\nMeasuring location Ungrounded or grounded\nSpecial feature • Probe diameter 0.5 … 3.0 mm\n• Plastic-moulded transition\nData sheet TE 65.46",
+    "box": [
+      212.421,
+      294.803,
+      382.5,
+      428.0696
+    ],
+    "datasheetIds": [
+      "TE65.46"
+    ]
+  },
+  {
+    "model": "TC53",
+    "label": "Bayonet thermocouple",
+    "sourceId": "in-stock-10",
+    "page": 38,
+    "header": "TC53",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 65.53",
+    "image": {
+      "src": "/images/products/wika-tc53.png",
+      "width": 458,
+      "height": 221,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types K, J, N, E or T"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-40 … +1,200 °C, -40 … +2,192 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Single and dual thermocouple\n• Explosion-protected versions"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types K, J, N, E or T\nMeasuring range -40 … +1,200 °C, -40 … +2,192 °F\nMeasuring location Ungrounded or grounded\nSpecial feature • Single and dual thermocouple\n• Explosion-protected versions\nData sheet TE 65.53",
+    "box": [
+      212.634,
+      569.764,
+      382.71299999999997,
+      703.0301999999999
+    ],
+    "datasheetIds": [
+      "TE65.53"
+    ]
+  },
+  {
+    "model": "TC47",
+    "label": "Thermocouple for plastics machinery",
+    "sourceId": "in-stock-10",
+    "page": 38,
+    "header": "TC47",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 67.20",
+    "image": {
+      "src": "/images/products/wika-tc47.png",
+      "width": 200,
+      "height": 93,
+      "pdfImageName": "Im4"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "Types J or K"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-25 … +400 °C, -13 … + 752 °F"
+      },
+      {
+        "label": "Measuring location",
+        "value": "Ungrounded or grounded"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Various process connections\n• Connection lead fibreglass with stainless steel braid"
+      }
+    ],
+    "rawSpecifications": "Sensor element Types J or K\nMeasuring range -25 … +400 °C, -13 … + 752 °F\nMeasuring location Ungrounded or grounded\nSpecial feature • Various process connections\n• Connection lead fibreglass with stain-\nless steel braid\nData sheet TE 67.20",
+    "box": [
+      396.886,
+      294.803,
+      566.894,
+      439.40959999999995
+    ],
+    "datasheetIds": [
+      "TE67.20"
+    ]
+  },
+  {
+    "model": "TR53",
+    "label": "Bayonet resistance thermometer",
+    "sourceId": "in-stock-11",
+    "page": 45,
+    "header": "TR53",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.53",
+    "image": {
+      "src": "/images/products/wika-tr53.png",
+      "width": 197,
+      "height": 263,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-196 … +400 °C, -320 … +752 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Process connection",
+        "value": "Bayonet"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -196 … +400 °C, -320 … +752 °F\nConnection method 2-, 3- and 4-wire\nProcess connection Bayonet\nData sheet TE 60.53",
+    "box": [
+      28.482,
+      388.49899999999997,
+      198.561,
+      524.04
+    ],
+    "datasheetIds": [
+      "TE60.53"
+    ]
+  },
+  {
+    "model": "TR75",
+    "label": "DiwiTherm with digital indicator",
+    "sourceId": "in-stock-11",
+    "page": 45,
+    "header": "TR75",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.75",
+    "image": {
+      "src": "/images/products/wika-tr75.png",
+      "width": 144,
+      "height": 177,
+      "pdfImageName": "Im11"
+    },
+    "rows": [
+      {
+        "label": "Measuring range",
+        "value": "-40.0 … +199.9 °C, +200 … +450 °C with automatic measuring range changeover (autorange)"
+      },
+      {
+        "label": "Power supply",
+        "value": "Battery operation"
+      }
+    ],
+    "rawSpecifications": "Measuring range -40.0 … +199.9 °C, +200 … +450 °C\nwith automatic measuring range\nchangeover (autorange)\nPower supply Battery operation\nData sheet TE 60.75",
+    "box": [
+      28.346,
+      629.698,
+      198.425,
+      765.2323
+    ],
+    "datasheetIds": [
+      "TE60.75"
+    ]
+  },
+  {
+    "model": "TR55",
+    "label": "Resistance thermometer with spring-loaded tip",
+    "sourceId": "in-stock-11",
+    "page": 45,
+    "header": "TR55",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.55",
+    "image": {
+      "src": "/images/products/wika-tr55.png",
+      "width": 145,
+      "height": 233,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-196 … +500 °C, -320 … +932 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Process connection",
+        "value": "Compression fitting"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -196 … +500 °C, -320 … +932 °F\nConnection method 2-, 3- and 4-wire\nProcess connection Compression fitting\nData sheet TE 60.55",
+    "box": [
+      211.181,
+      389.461,
+      381.26,
+      525.0015999999998
+    ],
+    "datasheetIds": [
+      "TE60.55"
+    ]
+  },
+  {
+    "model": "TR81",
+    "label": "Resistance thermometer for flue-gas measurements",
+    "sourceId": "in-stock-11",
+    "page": 45,
+    "header": "TR81",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.81",
+    "image": {
+      "src": "/images/products/wika-tr81.png",
+      "width": 104,
+      "height": 276,
+      "pdfImageName": "Im12"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-196 … +600 °C, -320 … +1,112 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Thermowell",
+        "value": "Metal"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -196 … +600 °C, -320 … +1,112 °F\nConnection method 2-, 3- and 4-wire\nThermowell Metal\nData sheet TE 60.81",
+    "box": [
+      212.598,
+      629.698,
+      382.677,
+      765.2383
+    ],
+    "datasheetIds": [
+      "TE60.81"
+    ]
+  },
+  {
+    "model": "TR50",
+    "label": "Surface resistance thermometer",
+    "sourceId": "in-stock-11",
+    "page": 45,
+    "header": "TR50",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.50",
+    "image": {
+      "src": "/images/products/wika-tr50.png",
+      "width": 197,
+      "height": 155,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-196 … +600 °C, -320 … +1,112 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Process connection",
+        "value": "Surface mounting"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -196 … +600 °C, -320 … +1,112 °F\nConnection method 2-, 3- and 4-wire\nProcess connection Surface mounting\nData sheet TE 60.50",
+    "box": [
+      397.134,
+      150.236,
+      567.213,
+      272.1709000000002
+    ],
+    "datasheetIds": [
+      "TE60.50"
+    ]
+  },
+  {
+    "model": "TR60",
+    "label": "Indoor and outdoor resistance thermometer",
+    "sourceId": "in-stock-11",
+    "page": 45,
+    "header": "TR60",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.60",
+    "image": {
+      "src": "/images/products/wika-tr60.png",
+      "width": 139,
+      "height": 237,
+      "pdfImageName": "Im9"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-40 … +80 °C, -40 … +176 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Process connection",
+        "value": "Wall mounting"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -40 … +80 °C, -40 … +176 °F\nConnection method 2-, 3- and 4-wire\nProcess connection Wall mounting\nData sheet TE 60.60",
+    "box": [
+      396.85,
+      389.461,
+      566.9290000000001,
+      525.0015999999998
+    ],
+    "datasheetIds": [
+      "TE60.60"
+    ]
+  },
+  {
+    "model": "TR95",
+    "label": "Multipoint resistance thermometer",
+    "sourceId": "in-stock-11",
+    "page": 45,
+    "header": "TR95",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 70.01",
+    "image": {
+      "src": "/images/products/wika-tr95.png",
+      "width": 125,
+      "height": 264,
+      "pdfImageName": "Im15"
+    },
+    "rows": [
+      {
+        "label": "Sensor",
+        "value": "Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-196 … +600 °C, -320 … +1,112 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Process connection",
+        "value": "Various process connections"
+      }
+    ],
+    "rawSpecifications": "Sensor Pt100\nMeasuring range -196 … +600 °C, -320 … +1,112 °F\nConnection method 2-, 3- and 4-wire\nProcess connection Various process connections\nData sheet TE 70.01",
+    "box": [
+      396.85,
+      629.697,
+      566.9290000000001,
+      765.2378
+    ],
+    "datasheetIds": [
+      "TE70.01"
+    ]
+  },
+  {
+    "model": "TF35",
+    "label": "Threaded temperature probe with plug connection",
+    "sourceId": "in-stock-12",
+    "page": 46,
+    "header": "TF35",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 67.10",
+    "image": {
+      "src": "/images/products/wika-tf35.png",
+      "width": 78,
+      "height": 199,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Measuring range",
+        "value": "-50 … +250 °C"
+      },
+      {
+        "label": "Measuring element",
+        "value": "Pt1000, Pt100, NTC, KTY"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Very high vibration resistance\n• Compact design\n• Electrical connection via plug connection"
+      }
+    ],
+    "rawSpecifications": "Measuring range -50 … +250 °C\nMeasuring element Pt1000, Pt100, NTC, KTY\nSpecial feature • Very high vibration resistance\n• Compact design\n• Electrical connection via plug connec-\ntion\nData sheet TE 67.10",
+    "box": [
+      28.346,
+      265.05999999999995,
+      198.425,
+      398.3233
+    ],
+    "datasheetIds": [
+      "TE67.10"
+    ]
+  },
+  {
+    "model": "TF-2000",
+    "label": "Cable temperature probe for heating and refrigeration",
+    "sourceId": "in-stock-12",
+    "page": 46,
+    "header": "TF-2000",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 67.40",
+    "image": {
+      "src": "/images/products/wika-tf-2000.png",
+      "width": 22,
+      "height": 307,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Measuring range",
+        "value": "-50 … +105 °C"
+      },
+      {
+        "label": "Measuring element",
+        "value": "Pt100, Pt1000, NTC"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Permanently protected against condensation\n• Cost savings thanks to quick assembly\n• Delivery reliability, even for large orders"
+      }
+    ],
+    "rawSpecifications": "Measuring range -50 … +105 °C\nMeasuring element Pt100, Pt1000, NTC\nSpecial feature • Permanently protected against\ncondensation\n• Cost savings thanks to quick assembly\n• Delivery reliability, even for large orders\nData sheet TE 67.40",
+    "box": [
+      28.488,
+      587.622,
+      198.85,
+      732.2279
+    ],
+    "datasheetIds": [
+      "TE67.40"
+    ]
+  },
+  {
+    "model": "TF37",
+    "label": "Threaded temperature probe with connection lead",
+    "sourceId": "in-stock-12",
+    "page": 46,
+    "header": "TF37",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 67.12",
+    "image": {
+      "src": "/images/products/wika-tf37.png",
+      "width": 227,
+      "height": 246,
+      "pdfImageName": "Im5"
+    },
+    "rows": [
+      {
+        "label": "Measuring range",
+        "value": "-50 … +260 °C"
+      },
+      {
+        "label": "Measuring element",
+        "value": "Pt100, Pt1000, NTC, KTY, Ni1000"
+      },
+      {
+        "label": "Special feature",
+        "value": "• High vibration resistance\n• Connection lead made of PVC, silicone, PTFE\n• Brass or stainless steel thermowell"
+      }
+    ],
+    "rawSpecifications": "Measuring range -50 … +260 °C\nMeasuring element Pt100, Pt1000, NTC, KTY, Ni1000\nSpecial feature • High vibration resistance\n• Connection lead made of PVC, silicone,\nPTFE\n• Brass or stainless steel thermowell\nData sheet TE 67.12",
+    "box": [
+      212.598,
+      265.03999999999996,
+      382.96000000000004,
+      398.3052
+    ],
+    "datasheetIds": [
+      "TE67.12"
+    ]
+  },
+  {
+    "model": "TF44",
+    "label": "Cable temperature probe for tubeskin measurement",
+    "sourceId": "in-stock-12",
+    "page": 46,
+    "header": "TF44",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 67.14",
+    "image": {
+      "src": "/images/products/wika-tf44.png",
+      "width": 302,
+      "height": 217,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Measuring range",
+        "value": "-50 … +200 °C"
+      },
+      {
+        "label": "Measuring element",
+        "value": "Pt100, Pt1000, NTC, KTY"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Connection lead from PVC, silicone\n• Aluminium probe sleeve\n• Protected against dust and water jets, IP65\n• With quick-mounting bracket"
+      }
+    ],
+    "rawSpecifications": "Measuring range -50 … +200 °C\nMeasuring element Pt100, Pt1000, NTC, KTY\nSpecial feature • Connection lead from PVC, silicone\n• Aluminium probe sleeve\n• Protected against dust and water jets,\nIP65\n• With quick-mounting bracket\nData sheet TE 67.14",
+    "box": [
+      212.74,
+      587.622,
+      382.677,
+      732.2298999999999
+    ],
+    "datasheetIds": [
+      "TE67.14"
+    ]
+  },
+  {
+    "model": "TF41",
+    "label": "Temperature probe for outdoor temperature measurement",
+    "sourceId": "in-stock-12",
+    "page": 46,
+    "header": "TF41",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 67.17",
+    "image": {
+      "src": "/images/products/wika-tf41.png",
+      "width": 266,
+      "height": 111,
+      "pdfImageName": "Im4"
+    },
+    "rows": [
+      {
+        "label": "Measuring range",
+        "value": "-40 … +100 °C"
+      },
+      {
+        "label": "Measuring element",
+        "value": "Pt100, Pt1000, NTC"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Smallest case design, UV-resistant\n• Protected against dust and water jets, IP65\n• Clip-on sun protector"
+      }
+    ],
+    "rawSpecifications": "Measuring range -40 … +100 °C\nMeasuring element Pt100, Pt1000, NTC\nSpecial feature • Smallest case design, UV-resistant\n• Protected against dust and water jets,\nIP65\n• Clip-on sun protector\nData sheet TE 67.17",
+    "box": [
+      396.992,
+      265.03999999999996,
+      567.071,
+      398.3052
+    ],
+    "datasheetIds": [
+      "TE67.17"
+    ]
+  },
+  {
+    "model": "TF45",
+    "label": "Cable temperature probe for general industrial applications",
+    "sourceId": "in-stock-12",
+    "page": 46,
+    "header": "TF45",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 67.15",
+    "image": {
+      "src": "/images/products/wika-tf45.png",
+      "width": 163,
+      "height": 242,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Measuring range",
+        "value": "-50 … +260 °C"
+      },
+      {
+        "label": "Measuring element",
+        "value": "Pt100, Pt1000, NTC, KTY, Ni1000"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Connection lead made of PVC, silicone, PTFE\n• Probe sleeve from stainless steel\n• Protected against dust and water jets, IP65"
+      }
+    ],
+    "rawSpecifications": "Measuring range -50 … +260 °C\nMeasuring element Pt100, Pt1000, NTC, KTY, Ni1000\nSpecial feature • Connection lead made of PVC, silicone,\nPTFE\n• Probe sleeve from stainless steel\n• Protected against dust and water jets,\nIP65\nData sheet TE 67.15",
+    "box": [
+      396.992,
+      587.622,
+      567.071,
+      732.2279
+    ],
+    "datasheetIds": [
+      "TE67.15"
+    ]
+  },
+  {
+    "model": "T15",
+    "label": "Digital temperature transmitter for resistance sensors",
+    "sourceId": "in-stock-13",
+    "page": 47,
+    "header": "T15",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 15.01",
+    "image": {
+      "src": "/images/products/wika-t15.png",
+      "width": 175,
+      "height": 256,
+      "pdfImageName": "Im7"
+    },
+    "rows": [
+      {
+        "label": "Input",
+        "value": "Resistance thermometers, potentiometers"
+      },
+      {
+        "label": "Accuracy",
+        "value": "< 0.1 %"
+      },
+      {
+        "label": "Output",
+        "value": "4 … 20 mA"
+      },
+      {
+        "label": "Special feature",
+        "value": "Quick and simple configuration"
+      }
+    ],
+    "rawSpecifications": "Input Resistance thermometers, potentiometers\nAccuracy < 0.1 %\nOutput 4 … 20 mA\nSpecial feature The fastest and simplest configuration on\nthe market\nData sheet TE 15.01",
+    "box": [
+      28.346,
+      265.323,
+      198.425,
+      398.5914999999999
+    ],
+    "datasheetIds": [
+      "TE15.01"
+    ]
+  },
+  {
+    "model": "T32",
+    "label": "Digital temperature transmitter with HART protocol",
+    "sourceId": "in-stock-13",
+    "page": 47,
+    "header": "T32",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 32.04",
+    "image": {
+      "src": "/images/products/wika-t32.png",
+      "width": 172,
+      "height": 231,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Input",
+        "value": "Resistance thermometers, thermocouples, potentiometers"
+      },
+      {
+        "label": "Accuracy",
+        "value": "< 0.1 %"
+      },
+      {
+        "label": "Output",
+        "value": "4 … 20 mA, HART protocol"
+      },
+      {
+        "label": "Special feature",
+        "value": "TÜV-certified SIL version (full assessment)"
+      }
+    ],
+    "rawSpecifications": "Input Resistance thermometers, thermocouples,\npotentiometers\nAccuracy < 0.1 %\nOutput 4 … 20 mA, HART® protocol\nSpecial feature TÜV-certified SIL version\n(full assessment)\nData sheet TE 32.04",
+    "box": [
+      28.346,
+      587.622,
+      198.425,
+      732.2264
+    ],
+    "datasheetIds": [
+      "TE32.04"
+    ]
+  },
+  {
+    "model": "T16",
+    "label": "Digital temperature transmitter for thermocouples",
+    "sourceId": "in-stock-13",
+    "page": 47,
+    "header": "T16",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 16.01",
+    "image": {
+      "src": "/images/products/wika-t16.png",
+      "width": 175,
+      "height": 255,
+      "pdfImageName": "Im8"
+    },
+    "rows": [
+      {
+        "label": "Input",
+        "value": "All commercially available thermocouples"
+      },
+      {
+        "label": "Accuracy",
+        "value": "Typical < 2 K"
+      },
+      {
+        "label": "Output",
+        "value": "4 … 20 mA"
+      },
+      {
+        "label": "Special feature",
+        "value": "Quick and simple configuration"
+      }
+    ],
+    "rawSpecifications": "Input All commercially available thermocouples\nAccuracy Typical < 2 K\nOutput 4 … 20 mA\nSpecial feature The fastest and simplest configuration on\nthe market\nData sheet TE 16.01",
+    "box": [
+      212.598,
+      265.323,
+      382.677,
+      398.5914999999999
+    ],
+    "datasheetIds": [
+      "TE16.01"
+    ]
+  },
+  {
+    "model": "T91",
+    "label": "Analogue temperature transmitter",
+    "sourceId": "in-stock-13",
+    "page": 47,
+    "header": "T91",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 91.01; TE 91.02",
+    "image": {
+      "src": "/images/products/wika-t91.png",
+      "width": 133,
+      "height": 272,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Input",
+        "value": "Resistance thermometers, thermocouples"
+      },
+      {
+        "label": "Accuracy",
+        "value": "< 0.5 or < 1 %"
+      },
+      {
+        "label": "Output",
+        "value": "0 … 10 V, 4 ... 20 mA"
+      },
+      {
+        "label": "Special feature",
+        "value": "Fixed measuring range"
+      }
+    ],
+    "rawSpecifications": "Input Resistance thermometers, thermocouples\nAccuracy < 0.5 or < 1 %\nOutput 0 … 10 V, 4 ... 20 mA\nSpecial feature Fixed measuring range\nData sheet TE 91.01, TE 91.02",
+    "box": [
+      212.598,
+      587.622,
+      382.677,
+      709.5567
+    ],
+    "datasheetIds": [
+      "TE91.01",
+      "TE91.02"
+    ]
+  },
+  {
+    "model": "T38",
+    "label": "Digital temperature transmitter with HART protocol",
+    "sourceId": "in-stock-13",
+    "page": 47,
+    "header": "T38",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 38.01",
+    "image": {
+      "src": "/images/products/wika-t38.png",
+      "width": 185,
+      "height": 241,
+      "pdfImageName": "Im9"
+    },
+    "rows": [
+      {
+        "label": "Input",
+        "value": "Universal use for 1 or 2 sensors: resistance thermometers (up to 2 x 3-wire), thermocouples, potentiometers, reed chains"
+      },
+      {
+        "label": "Accuracy",
+        "value": "< 0.1 %"
+      },
+      {
+        "label": "Output",
+        "value": "4 … 20 mA, HART protocol"
+      },
+      {
+        "label": "Special feature",
+        "value": "TÜV-certified SIL version (full assessment), True Drift Detection technology"
+      }
+    ],
+    "rawSpecifications": "Input Universal use for 1 or 2 sensors:\nresistance thermometers (up to 2 x\n3-wire), thermocouples, potentiometers,\nreed chains\nAccuracy < 0.1 %\nOutput 4 … 20 mA, HART® protocol\nSpecial feature TÜV-certified SIL version (full assess-\nment), True Drift Detection technology\nData sheet TE 38.01",
+    "box": [
+      396.85,
+      264.664,
+      566.9290000000001,
+      420.60639999999995
+    ],
+    "datasheetIds": [
+      "TE38.01"
+    ]
+  },
+  {
+    "model": "TIF50, TIF52",
+    "label": "HART field temperature transmitter",
+    "sourceId": "in-stock-13",
+    "page": 47,
+    "header": "TIF50, TIF52",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 62.01",
+    "image": {
+      "src": "/images/products/wika-tif50-tif52.png",
+      "width": 233,
+      "height": 201,
+      "pdfImageName": "Im5"
+    },
+    "rows": [
+      {
+        "label": "Input",
+        "value": "Resistance thermometers, thermocouples, potentiometers"
+      },
+      {
+        "label": "Accuracy",
+        "value": "< 0.1 %"
+      },
+      {
+        "label": "Output",
+        "value": "4 … 20 mA, HART protocol"
+      },
+      {
+        "label": "Special feature",
+        "value": "PC configurable"
+      }
+    ],
+    "rawSpecifications": "Input Resistance thermometers, thermocouples,\npotentiometers\nAccuracy < 0.1 %\nOutput 4 … 20 mA, HART® protocol\nSpecial feature PC configurable\nData sheet TE 62.01",
+    "box": [
+      396.567,
+      587.622,
+      566.646,
+      720.8924
+    ],
+    "datasheetIds": [
+      "TE62.01"
+    ]
+  },
+  {
+    "model": "TSD-30",
+    "label": "Electronic temperature switch with display",
+    "sourceId": "in-stock-14",
+    "page": 48,
+    "header": "TSD-30",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 67.03",
+    "image": {
+      "src": "/images/products/wika-tsd-30.png",
+      "width": 81,
+      "height": 274,
+      "pdfImageName": "Im12"
+    },
+    "rows": [
+      {
+        "label": "Measuring range",
+        "value": "-20 … +80 °C, -20 … +120 °C, 0 … 150 °C"
+      },
+      {
+        "label": "Output",
+        "value": "• Switching outputs PNP or NPN\n• 4 … 20 mA\n• 0 … 10 V\n• IO-Link 1.1"
+      }
+    ],
+    "rawSpecifications": "Measuring range -20 … +80 °C, -20 … +120 °C,\n0 … 150 °C\nOutput • Switching outputs PNP or NPN\n• 4 … 20 mA\n• 0 … 10 V\n• IO-Link 1.1\nData sheet TE 67.03",
+    "box": [
+      28.346,
+      251.71699999999998,
+      198.708,
+      384.98240000000004
+    ],
+    "datasheetIds": [
+      "TE67.03"
+    ]
+  },
+  {
+    "model": "TXS, TXA",
+    "label": "Mini temperature switches",
+    "sourceId": "in-stock-14",
+    "page": 48,
+    "header": "TXS, TXA",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TV 31.70; TV 31.72",
+    "image": {
+      "src": "/images/products/wika-txs-txa.png",
+      "width": 119,
+      "height": 210,
+      "pdfImageName": "Im4"
+    },
+    "rows": [
+      {
+        "label": "Setting range",
+        "value": "-15 … +20 to 180 … 250 °C"
+      },
+      {
+        "label": "Ignition protection type",
+        "value": "Ex ia or Ex d"
+      },
+      {
+        "label": "Switch",
+        "value": "1 x SPDT"
+      },
+      {
+        "label": "Switching power",
+        "value": "AC 220 V/5 A DC 24 V/5 A"
+      }
+    ],
+    "rawSpecifications": "Setting range -15 … +20 to 180 … 250 °C\nIgnition protection\ntype Ex ia or Ex d\nSwitch 1 x SPDT\nSwitching power AC 220 V/5 A\nDC 24 V/5 A\nData sheet TV 31.70, TV 31.72",
+    "box": [
+      28.63,
+      571.4649999999999,
+      198.709,
+      716.0672
+    ],
+    "datasheetIds": [
+      "TV31.70",
+      "TV31.72"
+    ]
+  },
+  {
+    "model": "TFS35",
+    "label": "Bimetal temperature switch for switching voltages to 48 V",
+    "sourceId": "in-stock-14",
+    "page": 48,
+    "header": "TFS35",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TV 35.01",
+    "image": {
+      "src": "/images/products/wika-tfs35.png",
+      "width": 111,
+      "height": 256,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Switching temperature",
+        "value": "50 … 155 °C, fixed"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Switching voltage to AC 48 V, DC 24 V\n• Compact version: Normally closed (NC), normally open (NO)\n• Electr. connection via plug connection"
+      }
+    ],
+    "rawSpecifications": "Switching\ntemperature 50 … 155 °C, fixed\nSpecial feature • Switching voltage to AC 48 V, DC 24 V\n• Compact version: Normally closed (NC),\nnormally open (NO)\n• Electr. connection via plug connection\nData sheet TV 35.01",
+    "box": [
+      212.598,
+      251.71699999999998,
+      382.677,
+      384.98240000000004
+    ],
+    "datasheetIds": [
+      "TV35.01"
+    ]
+  },
+  {
+    "model": "TCS, TCA",
+    "label": "Compact temperature switches",
+    "sourceId": "in-stock-14",
+    "page": 48,
+    "header": "TCS, TCA",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TV 31.64; TV 31.65",
+    "image": {
+      "src": "/images/products/wika-tcs-tca.png",
+      "width": 176,
+      "height": 252,
+      "pdfImageName": "Im9"
+    },
+    "rows": [
+      {
+        "label": "Setting range",
+        "value": "-30 … +10 to 160 … 250 °C"
+      },
+      {
+        "label": "Ignition protection type",
+        "value": "Ex ia or Ex d"
+      },
+      {
+        "label": "Switch",
+        "value": "1 x SPDT or 1 x DPDT"
+      },
+      {
+        "label": "Switching power",
+        "value": "AC 250 V/15 A DC 24 V/2 A"
+      }
+    ],
+    "rawSpecifications": "Setting range -30 … +10 to 160 … 250 °C\nIgnition protection\ntype Ex ia or Ex d\nSwitch 1 x SPDT or 1 x DPDT\nSwitching power AC 250 V/15 A\nDC 24 V/2 A\nData sheet TV 31.64, TV 31.65",
+    "box": [
+      212.598,
+      571.4649999999999,
+      382.677,
+      716.0672
+    ],
+    "datasheetIds": [
+      "TV31.64",
+      "TV31.65"
+    ]
+  },
+  {
+    "model": "TFS135",
+    "label": "Bimetal temperature switch for switching voltages to 250 V",
+    "sourceId": "in-stock-14",
+    "page": 48,
+    "header": "TFS135",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TV 35.02",
+    "image": {
+      "src": "/images/products/wika-tfs135.png",
+      "width": 111,
+      "height": 254,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Switching temperature",
+        "value": "50 … 130 °C, fixed"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Switching voltages to AC 250 V\n• Contact version normally closed (NC)\n• Electr. connection via plug connection\n• 1 or 2 switch contacts\n• Option: With measuring element Pt1000 / Pt100"
+      }
+    ],
+    "rawSpecifications": "Switching\ntemperature 50 … 130 °C, fixed\nSpecial feature • Switching voltages to AC 250 V\n• Contact version normally closed (NC)\n• Electr. connection via plug connection\n• 1 or 2 switch contacts\n• Option: With measuring element Pt1000\n/ Pt100\nData sheet TV 35.02",
+    "box": [
+      396.85,
+      251.71699999999998,
+      566.9290000000001,
+      407.65840000000003
+    ],
+    "datasheetIds": [
+      "TV35.02"
+    ]
+  },
+  {
+    "model": "TWG, TAG",
+    "label": "Heavy-duty temperature switches",
+    "sourceId": "in-stock-14",
+    "page": 48,
+    "header": "TWG, TAG",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TV 31.60; TV 31.61",
+    "image": {
+      "src": "/images/products/wika-twg-tag.png",
+      "width": 175,
+      "height": 206,
+      "pdfImageName": "Im6"
+    },
+    "rows": [
+      {
+        "label": "Setting range",
+        "value": "-30 … +70 to 0 … 600 °C"
+      },
+      {
+        "label": "Ignition protection type",
+        "value": "Ex ia or Ex d"
+      },
+      {
+        "label": "Switch",
+        "value": "1 or 2 SPDT or 1x DPDT"
+      },
+      {
+        "label": "Switching power",
+        "value": "AC 250 V/20 A DC 24 V/2 A"
+      }
+    ],
+    "rawSpecifications": "Setting range -30 … +70 to 0 … 600 °C\nIgnition protection\ntype Ex ia or Ex d\nSwitch 1 or 2 SPDT or 1x DPDT\nSwitching power AC 250 V/20 A\nDC 24 V/2 A\nData sheet TV 31.60, TV 31.61",
+    "box": [
+      396.85,
+      571.4649999999999,
+      566.9290000000001,
+      716.0672
+    ],
+    "datasheetIds": [
+      "TV31.60",
+      "TV31.61"
+    ]
+  },
+  {
+    "model": "SC15",
+    "label": "Expansion thermometer with microswitch, indicating temperature controller",
+    "sourceId": "in-stock-15",
+    "page": 49,
+    "header": "SC15",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TV 28.02",
+    "image": {
+      "src": "/images/products/wika-sc15.png",
+      "width": 281,
+      "height": 246,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "60, 80, 100 mm 72 x 72, 96 x 96 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "-100 … +400 °C"
+      },
+      {
+        "label": "Wetted parts",
+        "value": "Copper alloy"
+      },
+      {
+        "label": "Option",
+        "value": "Sheet steel version"
+      }
+    ],
+    "rawSpecifications": "Nominal size 60, 80, 100 mm\n72 x 72, 96 x 96 mm\nScale range -100 … +400 °C\nWetted parts Copper alloy\nOption Sheet steel version\nData sheet TV 28.02",
+    "box": [
+      28.346,
+      251.86699999999996,
+      198.425,
+      384.8521999999999
+    ],
+    "datasheetIds": [
+      "TV28.02"
+    ]
+  },
+  {
+    "model": "TGS55",
+    "label": "Bimetal thermometer, stainless steel version",
+    "sourceId": "in-stock-15",
+    "page": 49,
+    "header": "TGS55",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TV 25.01",
+    "image": {
+      "src": "/images/products/wika-tgs55.png",
+      "width": 226,
+      "height": 258,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "-70 … +30 to 0 … 600 °C"
+      },
+      {
+        "label": "Wetted parts",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Option",
+        "value": "Liquid damping to max. 250 °C (case and probe)"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100 mm\nScale range -70 … +30 to 0 … 600 °C\nWetted parts Stainless steel\nOption Liquid damping to max. 250 °C\n(case and probe)\nData sheet TV 25.01",
+    "box": [
+      28.346,
+      571.654,
+      198.425,
+      704.9222
+    ],
+    "datasheetIds": [
+      "TV25.01"
+    ]
+  },
+  {
+    "model": "SB15",
+    "label": "Expansion thermometer with microswitch, safety temperature limiter",
+    "sourceId": "in-stock-15",
+    "page": 49,
+    "header": "SB15",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TV 28.03",
+    "image": {
+      "src": "/images/products/wika-sb15.png",
+      "width": 282,
+      "height": 190,
+      "pdfImageName": "Im4"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "60, 80, 100 mm 72 x 72, 96 x 96 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 400 °C"
+      },
+      {
+        "label": "Wetted parts",
+        "value": "Copper alloy"
+      },
+      {
+        "label": "Option",
+        "value": "• Sheet steel version"
+      }
+    ],
+    "rawSpecifications": "Nominal size 60, 80, 100 mm\n72 x 72, 96 x 96 mm\nScale range 0 … 400 °C\nWetted parts Copper alloy\nOption • Sheet steel version\nData sheet TV 28.03",
+    "box": [
+      212.598,
+      251.86699999999996,
+      382.677,
+      384.85249999999996
+    ],
+    "datasheetIds": [
+      "TV28.03"
+    ]
+  },
+  {
+    "model": "TGS73",
+    "label": "Gas-actuated thermometer, stainless steel version",
+    "sourceId": "in-stock-15",
+    "page": 49,
+    "header": "TGS73",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TV 27.01",
+    "image": {
+      "src": "/images/products/wika-tgs73.png",
+      "width": 186,
+      "height": 206,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "-200 … +100 to 0 … 700 °C"
+      },
+      {
+        "label": "Wetted parts",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Option",
+        "value": "• Capillary\n• Liquid damping (case)"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range -200 … +100 to 0 … 700 °C\nWetted parts Stainless steel\nOption • Capillary\n• Liquid damping (case)\nData sheet TV 27.01",
+    "box": [
+      212.598,
+      571.654,
+      382.677,
+      704.9199
+    ],
+    "datasheetIds": [
+      "TV27.01"
+    ]
+  },
+  {
+    "model": "70 with 8xx",
+    "label": "Expansion thermometer with microswitch",
+    "sourceId": "in-stock-15",
+    "page": 49,
+    "header": "70 with 8xx",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TV 28.01",
+    "image": {
+      "src": "/images/products/wika-70-with-8xx.png",
+      "width": 126,
+      "height": 259,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "-60 … +40 to 0 … 250 °C"
+      },
+      {
+        "label": "Wetted parts",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Option",
+        "value": "Various contact versions"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100 mm\nScale range -60 … +40 to 0 … 250 °C\nWetted parts Stainless steel\nOption Various contact versions\nData sheet TV 28.01",
+    "box": [
+      396.85,
+      571.654,
+      566.9290000000001,
+      693.5882
+    ],
+    "datasheetIds": [
+      "TV28.01"
+    ]
+  },
+  {
+    "model": "CS4R",
+    "label": "Rail-mounted temperature controller",
+    "sourceId": "in-stock-16",
+    "page": 50,
+    "header": "CS4R",
+    "availability": "in-stock",
+    "printedDatasheetIds": "AC 85.05",
+    "image": {
+      "src": "/images/products/wika-cs4r.png",
+      "width": 103,
+      "height": 246,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Input",
+        "value": "Multi-function input for resistance thermometers, thermocouples and standard signals"
+      },
+      {
+        "label": "Control mode",
+        "value": "PID, PI, PD, P, ON/OFF (configurable)"
+      },
+      {
+        "label": "Monitoring output",
+        "value": "Relay or logic level DC 0/12 V to control an electronic switch relay (SSR) or analogue current signal 4 … 20 mA"
+      },
+      {
+        "label": "Auxiliary power",
+        "value": "• AC 100 … 240 V\n• AC/DC 24 V"
+      }
+    ],
+    "rawSpecifications": "Input Multi-function input for resistance thermo-\nmeters, thermocouples and standard\nsignals\nControl mode PID, PI, PD, P, ON/OFF (configurable)\nMonitoring output Relay or logic level DC 0/12 V to control an\nelectronic switch relay (SSR) or analogue\ncurrent signal 4 … 20 mA\nAuxiliary power • AC 100 … 240 V\n• AC/DC 24 V\nData sheet AC 85.05",
+    "box": [
+      28.346,
+      211.51599999999996,
+      198.49,
+      390.1368
+    ],
+    "datasheetIds": [
+      "AC85.05"
+    ]
+  },
+  {
+    "model": "TND",
+    "label": "Display for T38 temperature transmitter",
+    "sourceId": "in-stock-16",
+    "page": 50,
+    "header": "TND",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 38.01",
+    "image": {
+      "src": "/images/products/wika-tnd.png",
+      "width": 172,
+      "height": 250,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Input",
+        "value": "4 … 20 mA"
+      },
+      {
+        "label": "Dimension",
+        "value": "∅ 44 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "13.5 x 28 mm"
+      },
+      {
+        "label": "Special feature",
+        "value": "• 5-digit main measured value display\n• 2 variants: with clip-on adapter or remote for mounting in the connection head cover (BSZ-H)"
+      }
+    ],
+    "rawSpecifications": "Input 4 … 20 mA\nDimension ∅ 44 mm\nScale range 13.5 x 28 mm\nSpecial feature • 5-digit main measured value display\n• 2 variants: with clip-on adapter or\nremote for mounting in the connection\nhead cover (BSZ-H)\nData sheet TE 38.01",
+    "box": [
+      28.346,
+      612.284,
+      198.425,
+      756.8839
+    ],
+    "datasheetIds": [
+      "TE38.01"
+    ]
+  },
+  {
+    "model": "CS6S, CS6H, CS6L",
+    "label": "Panel-mounted temperature controllers",
+    "sourceId": "in-stock-16",
+    "page": 50,
+    "header": "CS6S, CS6H, CS6L",
+    "availability": "in-stock",
+    "printedDatasheetIds": "AC 85.08",
+    "image": {
+      "src": "/images/products/wika-cs6s-cs6h-cs6l.png",
+      "width": 241,
+      "height": 215,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Input",
+        "value": "Multi-function input for resistance thermometers, thermocouples and standard signals"
+      },
+      {
+        "label": "Control mode",
+        "value": "PID, PI, PD, P, ON/OFF (configurable)"
+      },
+      {
+        "label": "Monitoring output",
+        "value": "Relay (AC 250 V, 3A, (R) or 1A (L)) or logic level DC 0/12 V for 3-point control to control an electronic switch relay (SSR) or analogue current signal 4 … 20 mA"
+      },
+      {
+        "label": "Auxiliary power",
+        "value": "• AC 100 … 240 V\n• AC/DC 24 V"
+      }
+    ],
+    "rawSpecifications": "Input Multi-function input for resistance thermo-\nmeters, thermocouples and standard\nsignals\nControl mode PID, PI, PD, P, ON/OFF (configurable)\nMonitoring output Relay (AC 250 V, 3A, (R) or 1A (L)) or\nlogic level DC 0/12 V for 3-point control to\ncontrol an electronic switch relay (SSR) or\nanalogue current signal 4 … 20 mA\nAuxiliary power • AC 100 … 240 V\n• AC/DC 24 V\nData sheet AC 85.08",
+    "box": [
+      212.598,
+      211.46500000000003,
+      382.677,
+      401.4239
+    ],
+    "datasheetIds": [
+      "AC85.08"
+    ]
+  },
+  {
+    "model": "IR80",
+    "label": "Installation rods",
+    "sourceId": "in-stock-16",
+    "page": 50,
+    "header": "IR80",
+    "availability": "in-stock",
+    "printedDatasheetIds": "",
+    "image": {
+      "src": "/images/products/wika-ir80.png",
+      "width": 142,
+      "height": 308,
+      "pdfImageName": "Im4"
+    },
+    "rows": [
+      {
+        "label": "Application",
+        "value": "Installation of high-temperature thermocouples"
+      },
+      {
+        "label": "Installation",
+        "value": "Horizontal and vertical installation"
+      },
+      {
+        "label": "Compatibility",
+        "value": "Flanged thermocouples"
+      },
+      {
+        "label": "Construction",
+        "value": "High mechanical stability and low weight"
+      }
+    ],
+    "rawSpecifications": "For installation of high-temperature thermocouples\nSuited for horizontal and vertical installation\nCan be used with flanged thermocouples\nCombines high mechanical stability and low weight",
+    "box": [
+      212.598,
+      612.284,
+      382.177,
+      754.5829
+    ],
+    "datasheetIds": [
+      "AC80.22"
+    ]
+  },
+  {
+    "model": "PP82",
+    "label": "Purge-gas control panel",
+    "sourceId": "in-stock-16",
+    "page": 50,
+    "header": "PP82",
+    "availability": "in-stock",
+    "printedDatasheetIds": "AC 80.19",
+    "image": {
+      "src": "/images/products/wika-pp82.png",
+      "width": 213,
+      "height": 274,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Material",
+        "value": "Heavy-duty stainless steel"
+      },
+      {
+        "label": "Construction",
+        "value": "Side protection for mechanical stability"
+      },
+      {
+        "label": "Mounting",
+        "value": "Wall or 2-inch pipe mounting"
+      },
+      {
+        "label": "Pressure indication",
+        "value": "Pressure gauge with liquid damping"
+      }
+    ],
+    "rawSpecifications": "Heavy-duty stainless steel version\nHigh mechanical stability through side protection\nFor wall and pipe mounting, 2\"\nPressure gauge with liquid damping\nData sheet AC 80.19",
+    "box": [
+      396.85,
+      612.284,
+      566.4290000000001,
+      734.2181
+    ],
+    "datasheetIds": [
+      "AC80.19"
+    ]
+  },
+  {
+    "model": "TR36",
+    "label": "Compact resistance thermometer",
+    "sourceId": "in-stock-17",
+    "page": 44,
+    "header": "TR36",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.36",
+    "image": {
+      "src": "/images/products/wika-tr36.png",
+      "width": 94,
+      "height": 290,
+      "pdfImageName": "Im8"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 1 x Pt1000"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-50 … +250 °C, -58 … +482 °F"
+      },
+      {
+        "label": "Output",
+        "value": "Pt100, 4 … 20 mA"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 1 x Pt1000\nMeasuring range -50 … +250 °C, -58 … +482 °F\nOutput Pt100, 4 … 20 mA\nData sheet TE 60.36",
+    "box": [
+      28.346,
+      389.461,
+      198.425,
+      513.6615999999999
+    ],
+    "datasheetIds": [
+      "TE60.36"
+    ]
+  },
+  {
+    "model": "TR34",
+    "label": "Miniature resistance thermometer, explosion-protected design",
+    "sourceId": "in-stock-17",
+    "page": 44,
+    "header": "TR34",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.34",
+    "image": {
+      "src": "/images/products/wika-tr34.png",
+      "width": 57,
+      "height": 313,
+      "pdfImageName": "Im11"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 1 x Pt1000"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-50 … +250 °C, -58 … +482 °F"
+      },
+      {
+        "label": "Output",
+        "value": "Pt100, Pt1000, 4 … 20 mA"
+      },
+      {
+        "label": "CSA",
+        "value": "Hazardous locations"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 1 x Pt1000\nMeasuring range -50 … +250 °C, -58 … +482 °F\nOutput Pt100, Pt1000, 4 … 20 mA\nCSA Hazardous locations\nData sheet TE 60.34",
+    "box": [
+      28.346,
+      629.697,
+      198.425,
+      765.2378
+    ],
+    "datasheetIds": [
+      "TE60.34"
+    ]
+  },
+  {
+    "model": "TR31",
+    "label": "OEM miniature resistance thermometer",
+    "sourceId": "in-stock-17",
+    "page": 44,
+    "header": "TR31",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.31",
+    "image": {
+      "src": "/images/products/wika-tr31.png",
+      "width": 60,
+      "height": 316,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 1 x Pt1000"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-50 … +250 °C, -58 … +482 °F"
+      },
+      {
+        "label": "Output",
+        "value": "Pt100, Pt1000, 4 … 20 mA"
+      },
+      {
+        "label": "CSA",
+        "value": "Ordinary and hazardous locations"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 1 x Pt1000\nMeasuring range -50 … +250 °C, -58 … +482 °F\nOutput Pt100, Pt1000, 4 … 20 mA\nCSA Ordinary and hazardous locations\nData sheet TE 60.31",
+    "box": [
+      212.598,
+      389.461,
+      382.677,
+      525.0015999999998
+    ],
+    "datasheetIds": [
+      "TE60.31"
+    ]
+  },
+  {
+    "model": "TR40",
+    "label": "Cable resistance thermometer, MIMS cable",
+    "sourceId": "in-stock-17",
+    "page": 44,
+    "header": "TR40",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.40",
+    "image": {
+      "src": "/images/products/wika-tr40.png",
+      "width": 77,
+      "height": 274,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-196 … +600 °C, -320 … +1,112 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Cable",
+        "value": "Silicone, PTFE, PFA"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -196 … +600 °C, -320 … +1,112 °F\nConnection method 2-, 3- and 4-wire\nCable Silicone, PTFE, PFA\nData sheet TE 60.40",
+    "box": [
+      212.598,
+      629.697,
+      382.677,
+      765.2378
+    ],
+    "datasheetIds": [
+      "TE60.40"
+    ]
+  },
+  {
+    "model": "TFT35",
+    "label": "Threaded temperature probe with integrated transmitter",
+    "sourceId": "in-stock-17",
+    "page": 44,
+    "header": "TFT35",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 76.18",
+    "image": {
+      "src": "/images/products/wika-tft35.png",
+      "width": 102,
+      "height": 286,
+      "pdfImageName": "Im12"
+    },
+    "rows": [
+      {
+        "label": "Measuring range",
+        "value": "-50 … +200 °C"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Output signal 4 ... 20 mA, 0 ... 10 V\n• Factory configured\n• Electr. connection via plug connection"
+      }
+    ],
+    "rawSpecifications": "Measuring range -50 … +200 °C\nSpecial feature • Output signal 4 ... 20 mA, 0 ... 10 V\n• Factory configured\n• Electr. connection via plug connection\nData sheet TE 76.18",
+    "box": [
+      396.85,
+      150.70899999999995,
+      566.9290000000001,
+      272.63980000000004
+    ],
+    "datasheetIds": [
+      "TE76.18"
+    ]
+  },
+  {
+    "model": "TR33",
+    "label": "Miniature resistance thermometer, standard version",
+    "sourceId": "in-stock-17",
+    "page": 44,
+    "header": "TR33",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.33",
+    "image": {
+      "src": "/images/products/wika-tr33.png",
+      "width": 61,
+      "height": 317,
+      "pdfImageName": "Im10"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 1 x Pt1000"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-50 … +250 °C, -58 … +482 °F"
+      },
+      {
+        "label": "Output",
+        "value": "Pt100, Pt1000, 4 … 20 mA"
+      },
+      {
+        "label": "CSA",
+        "value": "Ordinary locations"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 1 x Pt1000\nMeasuring range -50 … +250 °C, -58 … +482 °F\nOutput Pt100, Pt1000, 4 … 20 mA\nCSA Ordinary locations\nData sheet TE 60.33",
+    "box": [
+      396.85,
+      389.461,
+      566.9290000000001,
+      525.0015999999998
+    ],
+    "datasheetIds": [
+      "TE60.33"
+    ]
+  },
+  {
+    "model": "TR41",
+    "label": "Cable resistance thermometer, tubular design",
+    "sourceId": "in-stock-17",
+    "page": 44,
+    "header": "TR41",
+    "availability": "in-stock",
+    "printedDatasheetIds": "TE 60.41",
+    "image": {
+      "src": "/images/products/wika-tr41.png",
+      "width": 197,
+      "height": 257,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Sensor element",
+        "value": "1 x Pt100, 2 x Pt100"
+      },
+      {
+        "label": "Measuring range",
+        "value": "-60 ... +250 °C, -76 ... +482 °F"
+      },
+      {
+        "label": "Connection method",
+        "value": "2-, 3- and 4-wire"
+      },
+      {
+        "label": "Cable",
+        "value": "Silicone, PTFE, PFA"
+      }
+    ],
+    "rawSpecifications": "Sensor element 1 x Pt100, 2 x Pt100\nMeasuring range -60 ... +250 °C, -76 ... +482 °F\nConnection method 2-, 3- and 4-wire\nCable Silicone, PTFE, PFA\nData sheet TE 60.41",
+    "box": [
+      396.85,
+      629.697,
+      566.9290000000001,
+      765.2378
+    ],
+    "datasheetIds": [
+      "TE60.41"
+    ]
+  },
+  {
+    "model": "O-10",
+    "label": "OEM pressure sensor for industrial applications",
+    "sourceId": "out-of-stock-01",
+    "page": 18,
+    "header": "O-10",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PE 81.65",
+    "image": {
+      "src": "/images/products/wika-o-10.png",
+      "width": 100,
+      "height": 207,
+      "pdfImageName": "Im4"
+    },
+    "rows": [
+      {
+        "label": "Non-linearity (± % of span)",
+        "value": "≤ 0.5 BFSL"
+      },
+      {
+        "label": "Measuring range",
+        "value": "• 0 … 6 to 0 … 600 bar\n• -1 … +5 to -1 … +59 bar"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Customer-specific solutions\n• Excellent long-term stability\n• Consistent quality\n• Good delivery performance"
+      }
+    ],
+    "rawSpecifications": "Non-linearity\n(± % of span) ≤ 0.5 BFSL\nMeasuring range • 0 … 6 to 0 … 600 bar\n• -1 … +5 to -1 … +59 bar\nSpecial feature • Customer-specific solutions\n• Excellent long-term stability\n• Consistent quality\n• Good delivery performance\nData sheet PE 81.65",
+    "box": [
+      28.346,
+      234.70899999999995,
+      198.425,
+      401.9917
+    ],
+    "datasheetIds": [
+      "PE81.65"
+    ]
+  },
+  {
+    "model": "MH-3-HY",
+    "label": "Pressure sensor for mobile hydrogen applications",
+    "sourceId": "out-of-stock-01",
+    "page": 18,
+    "header": "MH-3-HY",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PE 81.59",
+    "image": {
+      "src": "/images/products/wika-mh-3-hy.png",
+      "width": 151,
+      "height": 196,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Accuracy (± % of span)",
+        "value": "≤ 1"
+      },
+      {
+        "label": "Measuring range",
+        "value": "0 … 20 to 0 … 600 bar"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Approval per EC79/2009\n• Compact and robust design\n• Diagnostic function (optional)"
+      }
+    ],
+    "rawSpecifications": "Accuracy\n(± % of span) ≤ 1\nMeasuring range 0 … 20 to 0 … 600 bar\nSpecial feature • Approval per EC79/2009\n• Compact and robust design\n• Diagnostic function (optional)\nData sheet PE 81.59",
+    "box": [
+      28.417,
+      537.6800000000001,
+      198.354,
+      682.2881
+    ],
+    "datasheetIds": [
+      "PE81.59"
+    ]
+  },
+  {
+    "model": "MH-4",
+    "label": "Pressure sensor for mobile working machines",
+    "sourceId": "out-of-stock-01",
+    "page": 18,
+    "header": "MH-4",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PE 81.63",
+    "image": {
+      "src": "/images/products/wika-mh-4.png",
+      "width": 89,
+      "height": 194,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Non-linearity (per IEC 62828-1)",
+        "value": "≤ ±0.25 % of span (BFSL)"
+      },
+      {
+        "label": "Measuring range",
+        "value": "0 ... 6 to 0 ... 1,000 bar"
+      },
+      {
+        "label": "Special feature",
+        "value": "• For extreme operating conditions\n• Reliable and accurate\n• Customer-specific solutions\n• High production capacities"
+      }
+    ],
+    "rawSpecifications": "Non-linearity\n(per IEC 62828-1) ≤ ±0.25 % of span (BFSL)\nMeasuring range 0 ... 6 to 0 ... 1,000 bar\nSpecial feature • For extreme operating conditions\n• Reliable and accurate\n• Customer-specific solutions\n• High production capacities\nData sheet PE 81.63",
+    "box": [
+      212.669,
+      234.70899999999995,
+      382.74800000000005,
+      390.65319999999997
+    ],
+    "datasheetIds": [
+      "PE81.63"
+    ]
+  },
+  {
+    "model": "MG-1",
+    "label": "Pressure sensor for medical gases",
+    "sourceId": "out-of-stock-01",
+    "page": 18,
+    "header": "MG-1",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PE 81.44",
+    "image": {
+      "src": "/images/products/wika-mg-1.png",
+      "width": 90,
+      "height": 167,
+      "pdfImageName": "Im5"
+    },
+    "rows": [
+      {
+        "label": "Non-linearity (± % of span)",
+        "value": "≤ 0.5 BFSL"
+      },
+      {
+        "label": "Measuring range",
+        "value": "0 … 6 to 0 … 400 bar"
+      },
+      {
+        "label": "Special feature",
+        "value": "Cleaned, packed and marked for oxygen per international standards"
+      }
+    ],
+    "rawSpecifications": "Non-linearity\n(± % of span) ≤ 0.5 BFSL\nMeasuring range 0 … 6 to 0 … 400 bar\nSpecial feature Cleaned, packed and marked for oxygen\nper international standards\nData sheet PE 81.44",
+    "box": [
+      212.669,
+      537.591,
+      382.74800000000005,
+      670.8532
+    ],
+    "datasheetIds": [
+      "PE81.44"
+    ]
+  },
+  {
+    "model": "MH-4-CAN",
+    "label": "Pressure sensor with CANopen/J1939",
+    "sourceId": "out-of-stock-01",
+    "page": 18,
+    "header": "MH-4-CAN",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PE 83.02",
+    "image": {
+      "src": "/images/products/wika-mh-4-can.png",
+      "width": 89,
+      "height": 187,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Non-linearity (per IEC 62828-1)",
+        "value": "≤ ±0.25 % of span (BFSL)"
+      },
+      {
+        "label": "Measuring range",
+        "value": "0 … 40 to 0 … 600 bar"
+      },
+      {
+        "label": "Special feature",
+        "value": "• For extreme operating conditions\n• Signal stability thanks to CANopen®\n• Reliable and accurate\n• Customer-specific solutions\n• High production capacities"
+      }
+    ],
+    "rawSpecifications": "Non-linearity\n(per IEC 62828-1) ≤ ±0.25 % of span (BFSL)\nMeasuring range 0 … 40 to 0 … 600 bar\nSpecial feature • For extreme operating conditions\n• Signal stability thanks to CANopen®\n• Reliable and accurate\n• Customer-specific solutions\n• High production capacities\nData sheet PE 83.02",
+    "box": [
+      396.992,
+      234.75,
+      567.071,
+      390.696
+    ],
+    "datasheetIds": [
+      "PE83.02"
+    ]
+  },
+  {
+    "model": "R-1",
+    "label": "Pressure sensor for heating and refrigeration",
+    "sourceId": "out-of-stock-01",
+    "page": 18,
+    "header": "R-1",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PE 81.45",
+    "image": {
+      "src": "/images/products/wika-r-1.png",
+      "width": 96,
+      "height": 247,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Accuracy (± % of span)",
+        "value": "≤ 2"
+      },
+      {
+        "label": "Measuring range",
+        "value": "• 0 … 6 to 0 … 160 bar\n• -1 … +7 to -1 … +45 bar"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Special case design for the best possible condensation tightness\n• Resistant to all common refrigerants\n• Wetted parts from stainless steel"
+      }
+    ],
+    "rawSpecifications": "Accuracy\n(± % of span) ≤ 2\nMeasuring range • 0 … 6 to 0 … 160 bar\n• -1 … +7 to -1 … +45 bar\nSpecial feature • Special case design for the best possi-\nble condensation tightness\n• Resistant to all common refrigerants\n• Wetted parts from stainless steel\nData sheet PE 81.45",
+    "box": [
+      396.921,
+      537.591,
+      566.858,
+      704.8734999999999
+    ],
+    "datasheetIds": [
+      "PE81.45"
+    ]
+  },
+  {
+    "model": "DPGT43",
+    "label": "Differential-pressure gauge with output signal",
+    "sourceId": "out-of-stock-02",
+    "page": 20,
+    "header": "DPGT43",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 17.05",
+    "image": {
+      "src": "/images/products/wika-dpgt43.png",
+      "width": 164,
+      "height": 240,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 16 mbar to 0 … 40 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.6"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54, filled IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 0 … 16 mbar to 0 … 40 bar\nAccuracy class 1.6\nIngress protection IP54, filled IP65\nData sheet PV 17.05",
+    "box": [
+      28.346,
+      379.276,
+      198.425,
+      501.21019999999993
+    ],
+    "datasheetIds": [
+      "PV17.05"
+    ]
+  },
+  {
+    "model": "DPGT40",
+    "label": "Differential-pressure gauge with integrated working-pressure indication",
+    "sourceId": "out-of-stock-02",
+    "page": 20,
+    "header": "DPGT40",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 17.19",
+    "image": {
+      "src": "/images/products/wika-dpgt40.png",
+      "width": 258,
+      "height": 202,
+      "pdfImageName": "Im6"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 160 mbar to 0 … 10 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "2.5 (1.6 optional)"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100 mm\nScale range 0 … 160 mbar to 0 … 10 bar\nAccuracy class 2.5 (1.6 optional)\nIngress protection IP65\nData sheet PV 17.19",
+    "box": [
+      28.346,
+      612.411,
+      198.425,
+      739.4477
+    ],
+    "datasheetIds": [
+      "PV17.19"
+    ]
+  },
+  {
+    "model": "DPGT43HP",
+    "label": "High-overload differential-pressure gauge with output signal",
+    "sourceId": "out-of-stock-02",
+    "page": 20,
+    "header": "DPGT43HP",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 17.13",
+    "image": {
+      "src": "/images/products/wika-dpgt43hp.png",
+      "width": 272,
+      "height": 212,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 60 mbar to 0 … 40 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.6"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54, filled IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 0 … 60 mbar to 0 … 40 bar\nAccuracy class 1.6\nIngress protection IP54, filled IP65\nData sheet PV 17.13",
+    "box": [
+      212.598,
+      379.276,
+      382.677,
+      501.21019999999993
+    ],
+    "datasheetIds": [
+      "PV17.13"
+    ]
+  },
+  {
+    "model": "APGT43",
+    "label": "Absolute-pressure gauge with output signal",
+    "sourceId": "out-of-stock-02",
+    "page": 20,
+    "header": "APGT43",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 15.02",
+    "image": {
+      "src": "/images/products/wika-apgt43.png",
+      "width": 174,
+      "height": 249,
+      "pdfImageName": "Im7"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 25 mbar to 0 … 25 bar abs."
+      },
+      {
+        "label": "Accuracy class",
+        "value": "2.5"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54, with liquid filling IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 0 … 25 mbar to 0 … 25 bar abs.\nAccuracy class 2.5\nIngress protection IP54, with liquid filling IP65\nData sheet PV 15.02",
+    "box": [
+      212.598,
+      612.411,
+      382.677,
+      739.4477
+    ],
+    "datasheetIds": [
+      "PV15.02"
+    ]
+  },
+  {
+    "model": "PGS21",
+    "label": "Bourdon-tube contact pressure gauge, stainless steel case",
+    "sourceId": "out-of-stock-03",
+    "page": 21,
+    "header": "PGS21",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 21.02",
+    "image": {
+      "src": "/images/products/wika-pgs21.png",
+      "width": 195,
+      "height": 238,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "40, 50, 63 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 2.5 to 0 … 400 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "2.5"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP65"
+      },
+      {
+        "label": "Special feature",
+        "value": "Version with VdS or LPCB approval possible"
+      }
+    ],
+    "rawSpecifications": "Nominal size 40, 50, 63 mm\nScale range 0 … 2.5 to 0 … 400 bar\nAccuracy class 2.5\nIngress protection IP65\nSpecial feature Version with VdS or LPCB approval\npossible\nData sheet PV 21.02",
+    "box": [
+      28.346,
+      378.709,
+      198.425,
+      523.3172999999999
+    ],
+    "datasheetIds": [
+      "PV21.02"
+    ]
+  },
+  {
+    "model": "PGS23.100, PGS23.160",
+    "label": "Process-industry Bourdon-tube contact pressure gauges",
+    "sourceId": "out-of-stock-03",
+    "page": 21,
+    "header": "PGS23.100,\nPGS23.160",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 22.02",
+    "image": {
+      "src": "/images/products/wika-pgs23-100-pgs23-160.png",
+      "width": 260,
+      "height": 232,
+      "pdfImageName": "Im4"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 0.6 to 0 … 1,600 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.0"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP65 or IP66"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 0 … 0.6 to 0 … 1,600 bar\nAccuracy class 1.0\nIngress protection IP65 or IP66\nData sheet PV 22.02",
+    "box": [
+      28.346,
+      612,
+      198.425,
+      739.3205
+    ],
+    "datasheetIds": [
+      "PV22.02"
+    ]
+  },
+  {
+    "model": "PGS25",
+    "label": "Bourdon-tube gauge with electronic pressure switch",
+    "sourceId": "out-of-stock-03",
+    "page": 21,
+    "header": "PGS25",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 21.04",
+    "image": {
+      "src": "/images/products/wika-pgs25.png",
+      "width": 204,
+      "height": 241,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "50, 63 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 1.6 to 0 … 400 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "2.5"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 50, 63 mm\nScale range 0 … 1.6 to 0 … 400 bar\nAccuracy class 2.5\nIngress protection IP65\nData sheet PV 21.04",
+    "box": [
+      212.598,
+      378.709,
+      382.677,
+      500.6432999999999
+    ],
+    "datasheetIds": [
+      "PV21.04"
+    ]
+  },
+  {
+    "model": "PGS23.063",
+    "label": "Safety-version Bourdon-tube contact pressure gauge",
+    "sourceId": "out-of-stock-03",
+    "page": 21,
+    "header": "PGS23.063",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 22.03",
+    "image": {
+      "src": "/images/products/wika-pgs23-063.png",
+      "width": 192,
+      "height": 220,
+      "pdfImageName": "Im6"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "63 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 4 to 0 … 400 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.6"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54"
+      }
+    ],
+    "rawSpecifications": "Nominal size 63 mm\nScale range 0 … 4 to 0 … 400 bar\nAccuracy class 1.6\nIngress protection IP54\nData sheet PV 22.03",
+    "box": [
+      212.598,
+      612,
+      382.677,
+      739.037
+    ],
+    "datasheetIds": [
+      "PV22.03"
+    ]
+  },
+  {
+    "model": "PGS21.100, PGS21.160",
+    "label": "Bourdon-tube contact pressure gauges",
+    "sourceId": "out-of-stock-03",
+    "page": 21,
+    "header": "PGS21.100,\nPGS21.160",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 22.01",
+    "image": {
+      "src": "/images/products/wika-pgs21-100-pgs21-160.png",
+      "width": 266,
+      "height": 226,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 0.6 to 0 … 600 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.0"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 0 … 0.6 to 0 … 600 bar\nAccuracy class 1.0\nIngress protection IP54\nData sheet PV 22.01",
+    "box": [
+      396.85,
+      378.709,
+      566.9290000000001,
+      500.6432999999999
+    ],
+    "datasheetIds": [
+      "PV22.01"
+    ]
+  },
+  {
+    "model": "PGS43.100, PGS43.160",
+    "label": "Diaphragm contact pressure gauges",
+    "sourceId": "out-of-stock-03",
+    "page": 21,
+    "header": "PGS43.100,\nPGS43.160",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 24.03",
+    "image": {
+      "src": "/images/products/wika-pgs43-100-pgs43-160.png",
+      "width": 238,
+      "height": 250,
+      "pdfImageName": "Im5"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 25 mbar to 0 … 25 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.6"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54, with liquid filling IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 0 … 25 mbar to 0 … 25 bar\nAccuracy class 1.6\nIngress protection IP54, with liquid filling IP65\nData sheet PV 24.03",
+    "box": [
+      396.85,
+      612,
+      566.9290000000001,
+      739.3205
+    ],
+    "datasheetIds": [
+      "PV24.03"
+    ]
+  },
+  {
+    "model": "532.53 with 8xx",
+    "label": "Absolute-pressure contact gauge",
+    "sourceId": "out-of-stock-04",
+    "page": 22,
+    "header": "532.53 with 8xx",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 25.02",
+    "image": {
+      "src": "/images/products/wika-532-53-with-8xx.png",
+      "width": 187,
+      "height": 262,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 25 mbar to 0 … 25 bar abs."
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.6"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54, with liquid filling IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 0 … 25 mbar to 0 … 25 bar abs.\nAccuracy class 1.6\nIngress protection IP54, with liquid filling IP65\nData sheet PV 25.02",
+    "box": [
+      28.22,
+      360.142,
+      198.299,
+      490.01339999999993
+    ],
+    "datasheetIds": [
+      "PV25.02"
+    ]
+  },
+  {
+    "model": "DPGS40TA",
+    "label": "Differential-pressure gauge with microswitches and component testing",
+    "sourceId": "out-of-stock-04",
+    "page": 22,
+    "header": "DPGS40TA",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 27.22",
+    "image": {
+      "src": "/images/products/wika-dpgs40ta.png",
+      "width": 214,
+      "height": 227,
+      "pdfImageName": "Im9"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 250 mbar to 0 … 10 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "2.5 (1.6 optional)"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100 mm\nScale range 0 … 250 mbar to 0 … 10 bar\nAccuracy class 2.5 (1.6 optional)\nIngress protection IP65\nData sheet PV 27.22",
+    "box": [
+      28.555,
+      617.386,
+      198.63400000000001,
+      758.5961
+    ],
+    "datasheetIds": [
+      "PV27.22"
+    ]
+  },
+  {
+    "model": "632.51 with 8xx",
+    "label": "Capsule contact pressure gauge",
+    "sourceId": "out-of-stock-04",
+    "page": 22,
+    "header": "632.51 with 8xx",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 26.06",
+    "image": {
+      "src": "/images/products/wika-632-51-with-8xx.png",
+      "width": 174,
+      "height": 234,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 2.5 to 0 … 100 mbar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.6"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 0 … 2.5 to 0 … 100 mbar\nAccuracy class 1.6\nIngress protection IP54\nData sheet PV 26.06",
+    "box": [
+      212.472,
+      360.142,
+      382.55100000000004,
+      490.01339999999993
+    ],
+    "datasheetIds": [
+      "PV26.06"
+    ]
+  },
+  {
+    "model": "DPGS43",
+    "label": "Differential contact pressure gauge, all-metal media chamber",
+    "sourceId": "out-of-stock-04",
+    "page": 22,
+    "header": "DPGS43",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 27.05",
+    "image": {
+      "src": "/images/products/wika-dpgs43.png",
+      "width": 176,
+      "height": 245,
+      "pdfImageName": "Im11"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 16 mbar to 0 … 40 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.6"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54, filled IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 0 … 16 mbar to 0 … 40 bar\nAccuracy class 1.6\nIngress protection IP54, filled IP65\nData sheet PV 27.05",
+    "box": [
+      212.598,
+      617.386,
+      382.677,
+      758.5961
+    ],
+    "datasheetIds": [
+      "PV27.05"
+    ]
+  },
+  {
+    "model": "432.36, 432.56 with 8xx",
+    "label": "Diaphragm contact pressure gauges",
+    "sourceId": "out-of-stock-04",
+    "page": 22,
+    "header": "432.36,\n432.56 with 8xx",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 24.07",
+    "image": {
+      "src": "/images/products/wika-432-36-432-56-with-8xx.png",
+      "width": 223,
+      "height": 257,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 25 mbar to 0 … 40 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.6"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54, with liquid filling IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 0 … 25 mbar to 0 … 40 bar\nAccuracy class 1.6\nIngress protection IP54, with liquid filling IP65\nData sheet PV 24.07",
+    "box": [
+      397.417,
+      139.74799999999993,
+      567.496,
+      267.0685000000001
+    ],
+    "datasheetIds": [
+      "PV24.07"
+    ]
+  },
+  {
+    "model": "DPGS40",
+    "label": "Differential-pressure gauge with microswitches and working-pressure indication",
+    "sourceId": "out-of-stock-04",
+    "page": 22,
+    "header": "DPGS40",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 27.20",
+    "image": {
+      "src": "/images/products/wika-dpgs40.png",
+      "width": 210,
+      "height": 189,
+      "pdfImageName": "Im10"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 250 mbar to 0 … 10 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "2.5 (1.6 optional)"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100 mm\nScale range 0 … 250 mbar to 0 … 10 bar\nAccuracy class 2.5 (1.6 optional)\nIngress protection IP65\nData sheet PV 27.20",
+    "box": [
+      397.35,
+      360.142,
+      567.4290000000001,
+      490.01339999999993
+    ],
+    "datasheetIds": [
+      "PV27.20"
+    ]
+  },
+  {
+    "model": "DPGS43HP",
+    "label": "High-overload differential contact pressure gauge",
+    "sourceId": "out-of-stock-04",
+    "page": 22,
+    "header": "DPGS43HP",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 27.13",
+    "image": {
+      "src": "/images/products/wika-dpgs43hp.png",
+      "width": 255,
+      "height": 184,
+      "pdfImageName": "Im12"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 60 mbar to 0 … 40 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.6"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54, filled IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 0 … 60 mbar to 0 … 40 bar\nAccuracy class 1.6\nIngress protection IP54, filled IP65\nData sheet PV 27.13",
+    "box": [
+      397.35,
+      617.386,
+      567.4290000000001,
+      758.5961
+    ],
+    "datasheetIds": [
+      "PV27.13"
+    ]
+  },
+  {
+    "model": "PGT21",
+    "label": "Bourdon-tube pressure gauge with output signal",
+    "sourceId": "out-of-stock-05",
+    "page": 19,
+    "header": "PGT21",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 11.03",
+    "image": {
+      "src": "/images/products/wika-pgt21.png",
+      "width": 211,
+      "height": 238,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "50, 63 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 1.6 to 0 … 400 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "2.5"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP65 (IP67 optional)"
+      }
+    ],
+    "rawSpecifications": "Nominal size 50, 63 mm\nScale range 0 … 1.6 to 0 … 400 bar\nAccuracy class 2.5\nIngress protection IP65 (IP67 optional)\nData sheet PV 11.03",
+    "box": [
+      28.346,
+      406.914,
+      198.425,
+      528.8480999999999
+    ],
+    "datasheetIds": [
+      "PV11.03"
+    ]
+  },
+  {
+    "model": "PGT43",
+    "label": "Diaphragm pressure gauge with output signal",
+    "sourceId": "out-of-stock-05",
+    "page": 19,
+    "header": "PGT43",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 14.03",
+    "image": {
+      "src": "/images/products/wika-pgt43.png",
+      "width": 201,
+      "height": 228,
+      "pdfImageName": "Im7"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 16 mbar to 0 … 25 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.6"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54, with liquid filling IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 0 … 16 mbar to 0 … 25 bar\nAccuracy class 1.6\nIngress protection IP54, with liquid filling IP65\nData sheet PV 14.03",
+    "box": [
+      28.346,
+      626.0319999999999,
+      198.425,
+      761.5725
+    ],
+    "datasheetIds": [
+      "PV14.03"
+    ]
+  },
+  {
+    "model": "PGT23.063",
+    "label": "Safety-version Bourdon-tube gauge with output signal",
+    "sourceId": "out-of-stock-05",
+    "page": 19,
+    "header": "PGT23.063",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 12.03",
+    "image": {
+      "src": "/images/products/wika-pgt23-063.png",
+      "width": 208,
+      "height": 252,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "63 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 1 to 0 … 1,000 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.6"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54, filled IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 63 mm\nScale range 0 … 1 to 0 … 1,000 bar\nAccuracy class 1.6\nIngress protection IP54, filled IP65\nData sheet PV 12.03",
+    "box": [
+      212.598,
+      406.914,
+      382.677,
+      528.8480999999999
+    ],
+    "datasheetIds": [
+      "PV12.03"
+    ]
+  },
+  {
+    "model": "PGT43HP",
+    "label": "High-overload diaphragm gauge with output signal",
+    "sourceId": "out-of-stock-05",
+    "page": 19,
+    "header": "PGT43HP",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 14.07",
+    "image": {
+      "src": "/images/products/wika-pgt43hp.png",
+      "width": 205,
+      "height": 248,
+      "pdfImageName": "Im8"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 16 mbar to 0 … 40 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.6"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54, with liquid filling IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 0 … 16 mbar to 0 … 40 bar\nAccuracy class 1.6\nIngress protection IP54, with liquid filling IP65\nData sheet PV 14.07",
+    "box": [
+      212.598,
+      626.0319999999999,
+      382.677,
+      761.5725
+    ],
+    "datasheetIds": [
+      "PV14.07"
+    ]
+  },
+  {
+    "model": "PGT23.100, PGT23.160",
+    "label": "Process-industry Bourdon-tube gauges with output signal",
+    "sourceId": "out-of-stock-05",
+    "page": 19,
+    "header": "PGT23.100,\nPGT23.160",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 12.04",
+    "image": {
+      "src": "/images/products/wika-pgt23-100-pgt23-160.png",
+      "width": 268,
+      "height": 250,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 0.6 to 0 … 1,600 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.0"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54, filled IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 0 … 0.6 to 0 … 1,600 bar\nAccuracy class 1.0\nIngress protection IP54, filled IP65\nData sheet PV 12.04",
+    "box": [
+      396.85,
+      406.914,
+      566.9290000000001,
+      528.8480999999999
+    ],
+    "datasheetIds": [
+      "PV12.04"
+    ]
+  },
+  {
+    "model": "PGT63HP",
+    "label": "High-overload capsule gauge with output signal",
+    "sourceId": "out-of-stock-05",
+    "page": 19,
+    "header": "PGT63HP",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV 16.06",
+    "image": {
+      "src": "/images/products/wika-pgt63hp.png",
+      "width": 197,
+      "height": 266,
+      "pdfImageName": "Im11"
+    },
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "2.5 … 100 mbar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.6"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 2.5 … 100 mbar\nAccuracy class 1.6\nIngress protection IP54\nData sheet PV 16.06",
+    "box": [
+      396.85,
+      626.0319999999999,
+      566.9290000000001,
+      761.5725
+    ],
+    "datasheetIds": [
+      "PV16.06"
+    ]
+  },
+  {
+    "model": "PSM01",
+    "label": "Compact pressure switch",
+    "sourceId": "out-of-stock-06",
+    "page": 24,
+    "header": "PSM01",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV34.81",
+    "image": {
+      "src": "/images/products/wika-psm01.png",
+      "width": 118,
+      "height": 266,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Setting range",
+        "value": "• -0.85 … -0.15 bar\n• 0.2 … 2 bar to 30 … 320 bar"
+      },
+      {
+        "label": "Switching function",
+        "value": "Normally open, normally closed, changeover contact"
+      },
+      {
+        "label": "Material",
+        "value": "Galvanised steel or stainless steel"
+      },
+      {
+        "label": "Switching power",
+        "value": "• 2 A, AC 48 V\n• 1 A / 2 A, DC 24 V"
+      }
+    ],
+    "rawSpecifications": "Setting range • -0.85 … -0.15 bar\n• 0.2 … 2 bar to 30 … 320 bar\nSwitching function Normally open, normally closed, change-\nover contact\nMaterial Galvanised steel or stainless steel\nSwitching power • 2 A, AC 48 V\n• 1 A / 2 A, DC 24 V\nData sheet PV 34.81",
+    "box": [
+      28.346,
+      294.803,
+      198.425,
+      450.7468
+    ],
+    "datasheetIds": [
+      "PV34.81"
+    ]
+  },
+  {
+    "model": "PSM-520",
+    "label": "Pressure switch with settable hysteresis",
+    "sourceId": "out-of-stock-06",
+    "page": 24,
+    "header": "PSM-520",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV35.01",
+    "image": {
+      "src": "/images/products/wika-psm-520.png",
+      "width": 226,
+      "height": 258,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Setting range",
+        "value": "• -0.4 … +7 bar\n• 0 … 5 bar to 6 … 30 bar"
+      },
+      {
+        "label": "Switching function",
+        "value": "Normally open, normally closed, changeover contact"
+      },
+      {
+        "label": "Material",
+        "value": "• Bellows: Copper alloy CuSn6 per EN 1652\n• Process connection: free cutting steel EN1A per EN 10277-3, tin-plated"
+      },
+      {
+        "label": "Switching power",
+        "value": "10 A / 6 A, AC 230 V"
+      }
+    ],
+    "rawSpecifications": "Setting range • -0.4 … +7 bar\n• 0 … 5 bar to 6 … 30 bar\nSwitching function Normally open, normally closed, change-\nover contact\nMaterial • Bellows: Copper alloy CuSn6 per EN\n1652\n• Process connection: free cutting steel\nEN1A per EN 10277-3, tin-plated\nSwitching power 10 A / 6 A, AC 230 V\nData sheet PV 35.01",
+    "box": [
+      28.346,
+      602.788,
+      198.425,
+      781.4084
+    ],
+    "datasheetIds": [
+      "PV35.01"
+    ]
+  },
+  {
+    "model": "PSM02",
+    "label": "Compact pressure switch with settable hysteresis",
+    "sourceId": "out-of-stock-06",
+    "page": 24,
+    "header": "PSM02",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV34.82",
+    "image": {
+      "src": "/images/products/wika-psm02.png",
+      "width": 161,
+      "height": 258,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Setting range",
+        "value": "• -0.85 … -0.15 bar\n• 0.2 … 2 bar to 30 … 320 bar"
+      },
+      {
+        "label": "Switching function",
+        "value": "Normally open, normally closed, changeover contact"
+      },
+      {
+        "label": "Material",
+        "value": "Galvanised steel or stainless steel"
+      },
+      {
+        "label": "Switching power",
+        "value": "• 2 A / 4 A, AC 250 V\n• 2 A / 4 A, DC 24 V"
+      }
+    ],
+    "rawSpecifications": "Setting range • -0.85 … -0.15 bar\n• 0.2 … 2 bar to 30 … 320 bar\nSwitching function Normally open, normally closed, change-\nover contact\nMaterial Galvanised steel or stainless steel\nSwitching power • 2 A / 4 A, AC 250 V\n• 2 A / 4 A, DC 24 V\nData sheet PV 34.82",
+    "box": [
+      212.598,
+      294.803,
+      382.677,
+      450.7468
+    ],
+    "datasheetIds": [
+      "PV34.82"
+    ]
+  },
+  {
+    "model": "PSM-550",
+    "label": "Pressure switch for demanding industrial applications",
+    "sourceId": "out-of-stock-06",
+    "page": 24,
+    "header": "PSM-550",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV35.03",
+    "image": {
+      "src": "/images/products/wika-psm-550.png",
+      "width": 163,
+      "height": 256,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Setting range",
+        "value": "• -1 … 0 and -0.8 … +5 bar\n• 0 … 300 mbar\n• 0.1 … 1.1 bar to 10 … 30 bar"
+      },
+      {
+        "label": "Switching function",
+        "value": "Change-over contact (SPDT)"
+      },
+      {
+        "label": "Material",
+        "value": "• Bellows / Process connection: Copper alloy CuSn6 per EN 1652 or stainless steel 1.4401\n• With NBR diaphragm: Process connection: free cutting steel EN1A per EN 10277-3, tin-plated"
+      },
+      {
+        "label": "Switching power",
+        "value": "4 A / 10 A, AC 230 V"
+      }
+    ],
+    "rawSpecifications": "Setting range • -1 … 0 and -0.8 … +5 bar\n• 0 … 300 mbar\n• 0.1 … 1.1 bar to 10 … 30 bar\nSwitching function Change-over contact (SPDT)\nMaterial • Bellows / Process connection:\nCopper alloy CuSn6 per EN 1652 or\nstainless steel 1.4401\n• With NBR diaphragm:\nProcess connection: free cutting steel\nEN1A per EN 10277-3, tin-plated\nSwitching power 4 A / 10 A, AC 230 V\nData sheet PV 35.03",
+    "box": [
+      212.598,
+      602.4169999999999,
+      382.677,
+      792.3737
+    ],
+    "datasheetIds": [
+      "PV35.03"
+    ]
+  },
+  {
+    "model": "PSM-700",
+    "label": "Pressure switch with adjustable switch differential",
+    "sourceId": "out-of-stock-06",
+    "page": 24,
+    "header": "PSM-700",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV35.05",
+    "image": {
+      "src": "/images/products/wika-psm-700.png",
+      "width": 181,
+      "height": 252,
+      "pdfImageName": "Im4"
+    },
+    "rows": [
+      {
+        "label": "Setting range",
+        "value": "• -1 … 1.5 bar\n• 0.2 … 1.6 bar, 7 … 35 bar"
+      },
+      {
+        "label": "Switching function",
+        "value": "Change-over contact (SPDT and DPDT)"
+      },
+      {
+        "label": "Material",
+        "value": "• Measuring element: Stainless steel 316L\n• Process connection: Stainless steel 316L\n• Case: Aluminium"
+      },
+      {
+        "label": "Switching power",
+        "value": "Up to AC 250 V/15 A"
+      }
+    ],
+    "rawSpecifications": "Setting range • -1 … 1.5 bar\n• 0.2 … 1.6 bar, 7 … 35 bar\nSwitching function Change-over contact (SPDT and DPDT)\nMaterial • Measuring element: Stainless steel\n316L\n• Process connection: Stainless steel\n316L\n• Case: Aluminium\nSwitching power Up to AC 250 V/15 A\nData sheet PV 35.05",
+    "box": [
+      396.85,
+      602.4169999999999,
+      566.9290000000001,
+      769.7031
+    ],
+    "datasheetIds": [
+      "PV35.05"
+    ]
+  },
+  {
+    "model": "PXS, PXA",
+    "label": "Miniature pressure switches",
+    "sourceId": "out-of-stock-07",
+    "page": 25,
+    "header": "PXS, PXA",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV34.36;PV34.38",
+    "image": {
+      "src": "/images/products/wika-pxs-pxa.png",
+      "width": 198,
+      "height": 284,
+      "pdfImageName": "Im13"
+    },
+    "rows": [
+      {
+        "label": "Setting range",
+        "value": "1 … 2.5 to 200 … 1,000 bar"
+      },
+      {
+        "label": "Ignition protection type",
+        "value": "Ex ia or Ex d"
+      },
+      {
+        "label": "Switch",
+        "value": "1 x SPDT or DPDT"
+      },
+      {
+        "label": "Switching power",
+        "value": "• AC 250 V/5 A\n• DC 24 V/5 A"
+      }
+    ],
+    "rawSpecifications": "Setting range 1 … 2.5 to 200 … 1,000 bar\nIgnition protection\ntype Ex ia or Ex d\nSwitch 1 x SPDT or DPDT\nSwitching power • AC 250 V/5 A\n• DC 24 V/5 A\nData sheet PV 34.36, PV 34.38",
+    "box": [
+      28.341,
+      363.702,
+      198.42000000000002,
+      508.3063
+    ],
+    "datasheetIds": [
+      "PV34.36",
+      "PV34.38"
+    ]
+  },
+  {
+    "model": "BWX, BA",
+    "label": "Bourdon tube pressure switches",
+    "sourceId": "out-of-stock-07",
+    "page": 25,
+    "header": "BWX, BA",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV32.20;PV32.22",
+    "image": {
+      "src": "/images/products/wika-bwx-ba.png",
+      "width": 168,
+      "height": 178,
+      "pdfImageName": "Im10"
+    },
+    "rows": [
+      {
+        "label": "Setting range",
+        "value": "0 … 2.5 to 0 … 1,000 bar"
+      },
+      {
+        "label": "Ignition protection type",
+        "value": "Ex ia or Ex d"
+      },
+      {
+        "label": "Switch",
+        "value": "1 or 2 x SPDT or 1 x DPDT"
+      },
+      {
+        "label": "Switching power",
+        "value": "• AC 250 V/20 A\n• DC 24 V/2 A"
+      }
+    ],
+    "rawSpecifications": "Setting range 0 … 2.5 to 0 … 1,000 bar\nIgnition protection\ntype Ex ia or Ex d\nSwitch 1 or 2 x SPDT or 1 x DPDT\nSwitching power • AC 250 V/20 A\n• DC 24 V/2 A\nData sheet PV 32.20, PV 32.22",
+    "box": [
+      28.341,
+      602.362,
+      198.42000000000002,
+      746.9672
+    ],
+    "datasheetIds": [
+      "PV32.20",
+      "PV32.22"
+    ]
+  },
+  {
+    "model": "PCS, PCA",
+    "label": "Compact pressure switches",
+    "sourceId": "out-of-stock-07",
+    "page": 25,
+    "header": "PCS, PCA",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV33.30;PV33.31",
+    "image": {
+      "src": "/images/products/wika-pcs-pca.png",
+      "width": 127,
+      "height": 221,
+      "pdfImageName": "Im15"
+    },
+    "rows": [
+      {
+        "label": "Setting range",
+        "value": "-1 … -0.2 to 200 … 1,000 bar"
+      },
+      {
+        "label": "Ignition protection type",
+        "value": "Ex ia or Ex d"
+      },
+      {
+        "label": "Switch",
+        "value": "1 x SPDT or DPDT"
+      },
+      {
+        "label": "Switching power",
+        "value": "• AC 250 V/15 A\n• DC 24 V/2 A"
+      }
+    ],
+    "rawSpecifications": "Setting range -1 … -0.2 to 200 … 1,000 bar\nIgnition protection\ntype Ex ia or Ex d\nSwitch 1 x SPDT or DPDT\nSwitching power • AC 250 V/15 A\n• DC 24 V/2 A\nData sheet PV 33.30, PV 33.31",
+    "box": [
+      212.357,
+      363.702,
+      382.43600000000004,
+      508.3069
+    ],
+    "datasheetIds": [
+      "PV33.30",
+      "PV33.31"
+    ]
+  },
+  {
+    "model": "DW, DA",
+    "label": "Differential pressure switches",
+    "sourceId": "out-of-stock-07",
+    "page": 25,
+    "header": "DW, DA",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV35.42;PV35.43;PV35.50",
+    "image": {
+      "src": "/images/products/wika-dw-da.png",
+      "width": 203,
+      "height": 163,
+      "pdfImageName": "Im12"
+    },
+    "rows": [
+      {
+        "label": "Setting range",
+        "value": "0 … 16 mbar to 0 … 40 bar, static pressure to 160 bar"
+      },
+      {
+        "label": "Ignition protection type",
+        "value": "Ex ia or Ex d"
+      },
+      {
+        "label": "Switch",
+        "value": "1 or 2 x SPDT or 1 x DPDT"
+      },
+      {
+        "label": "Switching power",
+        "value": "• AC 250 V/20 A\n• DC 24 V/2 A"
+      }
+    ],
+    "rawSpecifications": "Setting range 0 … 16 mbar to 0 … 40 bar,\nstatic pressure to 160 bar\nIgnition protection\ntype Ex ia or Ex d\nSwitch 1 or 2 x SPDT or 1 x DPDT\nSwitching power • AC 250 V/20 A\n• DC 24 V/2 A\nData sheet PV 35.42, PV 35.43, PV 35.50",
+    "box": [
+      212.593,
+      602.362,
+      382.672,
+      758.3058
+    ],
+    "datasheetIds": [
+      "PV35.42",
+      "PV35.43",
+      "PV35.50"
+    ]
+  },
+  {
+    "model": "MW, MA",
+    "label": "Diaphragm pressure switches",
+    "sourceId": "out-of-stock-07",
+    "page": 25,
+    "header": "MW, MA",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV31.10;PV31.11",
+    "image": {
+      "src": "/images/products/wika-mw-ma.png",
+      "width": 193,
+      "height": 153,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Setting range",
+        "value": "0 … 16 mbar to 30 … 600 bar"
+      },
+      {
+        "label": "Ignition protection type",
+        "value": "Ex ia or Ex d"
+      },
+      {
+        "label": "Switch",
+        "value": "1 or 2 x SPDT or 1 x DPDT"
+      },
+      {
+        "label": "Switching power",
+        "value": "• AC 250 V/20 A\n• DC 24 V/2 A"
+      }
+    ],
+    "rawSpecifications": "Setting range 0 … 16 mbar to 30 … 600 bar\nIgnition protection\ntype Ex ia or Ex d\nSwitch 1 or 2 x SPDT or 1 x DPDT\nSwitching power • AC 250 V/20 A\n• DC 24 V/2 A\nData sheet PV 31.10, PV 31.11",
+    "box": [
+      396.845,
+      363.702,
+      566.924,
+      508.3063
+    ],
+    "datasheetIds": [
+      "PV31.10",
+      "PV31.11"
+    ]
+  },
+  {
+    "model": "APW, APA",
+    "label": "Absolute pressure switches",
+    "sourceId": "out-of-stock-07",
+    "page": 25,
+    "header": "APW, APA",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PV35.49;PV35.48",
+    "image": {
+      "src": "/images/products/wika-apw-apa.png",
+      "width": 215,
+      "height": 161,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Setting range",
+        "value": "0 … 25 mbar to 0 … 1.5 bar abs."
+      },
+      {
+        "label": "Proof pressure",
+        "value": "11 bar abs."
+      },
+      {
+        "label": "Ignition protection type",
+        "value": "Ex ia or Ex d"
+      },
+      {
+        "label": "Switch",
+        "value": "1 or 2 x SPDT or 1 x DPDT"
+      }
+    ],
+    "rawSpecifications": "Setting range 0 … 25 mbar to 0 … 1.5 bar abs.\nProof pressure 11 bar abs.\nIgnition protection\ntype Ex ia or Ex d\nSwitch 1 or 2 x SPDT or 1 x DPDT\nData sheet PV 35.49, PV 35.48",
+    "box": [
+      396.845,
+      602.362,
+      566.499,
+      735.6309
+    ],
+    "datasheetIds": [
+      "PV35.49",
+      "PV35.48"
+    ]
+  },
+  {
+    "model": "DSS26M",
+    "label": "Diaphragm seal system with pressure gauge, internal diaphragm and flange connection",
+    "sourceId": "out-of-stock-08",
+    "page": 26,
+    "header": "DSS26M",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "DS95.09",
+    "image": {
+      "src": "/images/products/wika-dss26m.png",
+      "width": 156,
+      "height": 265,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Application",
+        "value": "Small flange process connections in the process industry"
+      },
+      {
+        "label": "PN max.",
+        "value": "40 bar"
+      },
+      {
+        "label": "System fill fluid",
+        "value": "KN2 for general applications"
+      }
+    ],
+    "rawSpecifications": "Applications with small flange process connections in the\nprocess industry\nPN max. 40 bar\nSystem fill fluid KN2 for general applications\nData sheet DS 95.09",
+    "box": [
+      28.346,
+      400.81899999999996,
+      198.425,
+      522.7475999999999
+    ],
+    "datasheetIds": [
+      "DS95.09"
+    ]
+  },
+  {
+    "model": "DSS26T",
+    "label": "Diaphragm seal system with pressure sensor, internal diaphragm and flange connection",
+    "sourceId": "out-of-stock-08",
+    "page": 26,
+    "header": "DSS26T",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "DS95.10",
+    "image": {
+      "src": "/images/products/wika-dss26t.png",
+      "width": 190,
+      "height": 265,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Application",
+        "value": "Small flange process connections in the process industry"
+      },
+      {
+        "label": "PN max.",
+        "value": "40 bar"
+      },
+      {
+        "label": "System fill fluid",
+        "value": "KN2 for general applications"
+      }
+    ],
+    "rawSpecifications": "Applications with small flange process connections in the\nprocess industry\nPN max. 40 bar\nSystem fill fluid KN2 for general applications\nData sheet DS 95.10",
+    "box": [
+      28.346,
+      643.748,
+      198.425,
+      765.6767
+    ],
+    "datasheetIds": [
+      "DS95.10"
+    ]
+  },
+  {
+    "model": "DSS34M",
+    "label": "Diaphragm seal system with pressure gauge, welded construction and threaded connection",
+    "sourceId": "out-of-stock-08",
+    "page": 26,
+    "header": "DSS34M",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "DS95.15",
+    "image": {
+      "src": "/images/products/wika-dss34m.png",
+      "width": 130,
+      "height": 262,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Application",
+        "value": "Chemical, petrochemical and water treatment industries"
+      },
+      {
+        "label": "PN max.",
+        "value": "60 bar"
+      },
+      {
+        "label": "System fill fluid",
+        "value": "KN2 for general applications"
+      }
+    ],
+    "rawSpecifications": "Applications with high requirements in the chemical,\npetrochemical and water treatment industries\nPN max. 60 bar\nSystem fill fluid KN2 for general applications\nData sheet DS 95.15",
+    "box": [
+      212.598,
+      400.81899999999996,
+      382.677,
+      522.7475999999999
+    ],
+    "datasheetIds": [
+      "DS95.15"
+    ]
+  },
+  {
+    "model": "DSS34T",
+    "label": "Diaphragm seal system with pressure sensor, welded construction and threaded connection",
+    "sourceId": "out-of-stock-08",
+    "page": 26,
+    "header": "DSS34T",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "DS95.16",
+    "image": {
+      "src": "/images/products/wika-dss34t.png",
+      "width": 105,
+      "height": 265,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Application",
+        "value": "Chemical, petrochemical and water treatment industries"
+      },
+      {
+        "label": "PN max.",
+        "value": "60 bar"
+      },
+      {
+        "label": "System fill fluid",
+        "value": "KN2 for general applications"
+      }
+    ],
+    "rawSpecifications": "Applications with high requirements in the chemical,\npetrochemical and water treatment industries\nPN max. 60 bar\nSystem fill fluid KN2 for general applications\nData sheet DS 95.16",
+    "box": [
+      212.598,
+      643.748,
+      382.677,
+      765.6767
+    ],
+    "datasheetIds": [
+      "DS95.16"
+    ]
+  },
+  {
+    "model": "IV1",
+    "label": "Needle valve and multiport needle valve",
+    "sourceId": "out-of-stock-09",
+    "page": 27,
+    "header": "IV1",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "AC09.22",
+    "image": {
+      "src": "/images/products/wika-iv1.png",
+      "width": 234,
+      "height": 180,
+      "pdfImageName": "Im4"
+    },
+    "rows": [
+      {
+        "label": "Application",
+        "value": "For shutting off pressure measuring instruments with threaded connection"
+      },
+      {
+        "label": "Version",
+        "value": "Needle valve and multiport needle valve"
+      },
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Nominal pressure",
+        "value": "To PN 420 (6,000 psi) Option: to PN 680 (10,000 psi)"
+      }
+    ],
+    "rawSpecifications": "Application For shutting off pressure measuring instru-\nments with threaded connection\nVersion Needle valve and multiport needle valve\nMaterial Stainless steel\nNominal pressure To PN 420 (6,000 psi)\nOption: to PN 680 (10,000 psi)\nData sheet AC 09.22",
+    "box": [
+      28.346,
+      312.236,
+      198.425,
+      456.8388999999999
+    ],
+    "datasheetIds": [
+      "AC09.22"
+    ]
+  },
+  {
+    "model": "IVM",
+    "label": "Monoflanges",
+    "sourceId": "out-of-stock-09",
+    "page": 27,
+    "header": "IVM",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "AC09.17",
+    "image": {
+      "src": "/images/products/wika-ivm.png",
+      "width": 210,
+      "height": 177,
+      "pdfImageName": "Im9"
+    },
+    "rows": [
+      {
+        "label": "Application",
+        "value": "For shutting off and venting pressure measuring instruments with flange connection"
+      },
+      {
+        "label": "Version",
+        "value": "Flange connection per ASME or EN"
+      },
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Nominal pressure",
+        "value": "To PN 420 (6,000 psi)"
+      }
+    ],
+    "rawSpecifications": "Application For shutting off and venting pressure\nmeasuring instruments with flange\nconnection\nVersion Flange connection per ASME or EN\nMaterial Stainless steel\nNominal pressure To PN 420 (6,000 psi)\nData sheet AC 09.17",
+    "box": [
+      28.346,
+      576,
+      198.425,
+      720.6086
+    ],
+    "datasheetIds": [
+      "AC09.17"
+    ]
+  },
+  {
+    "model": "IBM, IBF",
+    "label": "Monoblock as double block-and-bleed valve",
+    "sourceId": "out-of-stock-09",
+    "page": 27,
+    "header": "IBM, IBF",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "AC09.24;AC09.25",
+    "image": {
+      "src": "/images/products/wika-ibm-ibf.png",
+      "width": 123,
+      "height": 206,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Application",
+        "value": "Direct connection of pressure measuring instruments to pipelines or containers without interface valves. Control panels, lubrication systems, dry gas seals"
+      },
+      {
+        "label": "Version",
+        "value": "Flange/threaded, flange/flange or threaded/threaded"
+      },
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Nominal pressure",
+        "value": "IBF: class 150 … class 2,500, in line with ASME B16.5 PN 16 … PN 100, in line with EN 1092-1 IBM: 6,000 ... 10,000 psi (420 ... 690 bar)"
+      }
+    ],
+    "rawSpecifications": "Application Direct connection of pressure measuring\ninstruments to pipelines or containers\nwithout interface valves. Control panels,\nlubrication systems, dry gas seals\nVersion Flange/threaded, flange/flange or\nthreaded/threaded\nMaterial Stainless steel\nNominal pressure BF: class 150 … class 2,500,\nin line with ASME B16.5\nPN 16 … PN 100, in line with EN 1092-1\nIBM: 6,000 ... 10,000 psi (420 ... 690 bar)\nData sheet AC 09.24, AC 09.25",
+    "box": [
+      212.409,
+      576,
+      382.488,
+      765.9446
+    ],
+    "datasheetIds": [
+      "AC09.24",
+      "AC09.25"
+    ]
+  },
+  {
+    "model": "IV2",
+    "label": "Block-and-bleed valve, square or flat form",
+    "sourceId": "out-of-stock-09",
+    "page": 27,
+    "header": "IV2",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "AC09.19",
+    "image": {
+      "src": "/images/products/wika-iv2.png",
+      "width": 199,
+      "height": 168,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Application",
+        "value": "For shutting off and venting pressure measuring instruments with threaded connection"
+      },
+      {
+        "label": "Version",
+        "value": "Block-and-bleed valve"
+      },
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Nominal pressure",
+        "value": "To PN 420 (6,000 psi) Option: to PN 680 (10,000 psi)"
+      }
+    ],
+    "rawSpecifications": "Application For shutting off and venting pressure\nmeasuring instruments with threaded\nconnection\nVersion Block-and-bleed valve\nMaterial Stainless steel\nNominal pressure To PN 420 (6,000 psi)\nOption: to PN 680 (10,000 psi)\nData sheet AC 09.19",
+    "box": [
+      212.976,
+      312.236,
+      383.055,
+      468.1788999999999
+    ],
+    "datasheetIds": [
+      "AC09.19"
+    ]
+  },
+  {
+    "model": "IV3, IV5",
+    "label": "Valve manifolds for differential pressure measuring instruments",
+    "sourceId": "out-of-stock-09",
+    "page": 27,
+    "header": "IV3, IV5",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "AC09.23",
+    "image": {
+      "src": "/images/products/wika-iv3-iv5.png",
+      "width": 259,
+      "height": 132,
+      "pdfImageName": "Im6"
+    },
+    "rows": [
+      {
+        "label": "Application",
+        "value": "For shutting off, pressure equalising as well as purging and venting differential pressure measuring instruments"
+      },
+      {
+        "label": "Version",
+        "value": "3-way and 5-way valve"
+      },
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Nominal pressure",
+        "value": "To PN 420 (6,000 psi) Option: to PN 680 (10,000 psi)"
+      }
+    ],
+    "rawSpecifications": "Application For shutting off, pressure equalising as\nwell as purging and venting differential\npressure measuring instruments\nVersion 3-way and 5-way valve\nMaterial Stainless steel\nNominal pressure To PN 420 (6,000 psi)\nOption: to PN 680 (10,000 psi)\nData sheet AC 09.23",
+    "box": [
+      396.85,
+      312.236,
+      566.9290000000001,
+      468.1788999999999
+    ],
+    "datasheetIds": [
+      "AC09.23"
+    ]
+  },
+  {
+    "model": "910.10, 910.11",
+    "label": "Stopcock and DIN shut-off valve",
+    "sourceId": "out-of-stock-09",
+    "page": 27,
+    "header": "910.10, 910.11",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "AC09.01;AC09.02",
+    "image": {
+      "src": "/images/products/wika-910-10-910-11.png",
+      "width": 165,
+      "height": 197,
+      "pdfImageName": "Im10"
+    },
+    "rows": [
+      {
+        "label": "Application",
+        "value": "For shutting off pressure measuring instruments with threaded connection"
+      },
+      {
+        "label": "Version",
+        "value": "910.10: per DIN 16261, DIN 16262, DIN 16263 910.11: per DIN 16270, DIN 16271, DIN 16272"
+      },
+      {
+        "label": "Material",
+        "value": "Brass, steel, stainless steel"
+      },
+      {
+        "label": "Nominal pressure",
+        "value": "910.10: to 25 bar 910.11: to 400 bar"
+      }
+    ],
+    "rawSpecifications": "Application For shutting off pressure measuring instru-\nments with threaded connection\nVersion 910.10: per DIN 16261, DIN 16262,\nDIN 16263\n910.11: per DIN 16270, DIN 16271,\nDIN 16272\nMaterial Brass, steel, stainless steel\nNominal pressure 910.10: to 25 bar\n910.11: to 400 bar\nData sheet AC 09.01, AC 09.02",
+    "box": [
+      397.134,
+      576,
+      567.213,
+      743.2706
+    ],
+    "datasheetIds": [
+      "AC09.01",
+      "AC09.02"
+    ]
+  },
+  {
+    "model": "BV",
+    "label": "Ball valve",
+    "sourceId": "out-of-stock-10",
+    "page": 28,
+    "header": "BV",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "AC09.28",
+    "image": {
+      "src": "/images/products/wika-bv.png",
+      "width": 255,
+      "height": 167,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Application",
+        "value": "First shut-off valve for pressure tap to local instrument installation, media distribution, drain or vent in pipelines"
+      },
+      {
+        "label": "Version",
+        "value": "Process and instrument version"
+      },
+      {
+        "label": "Material",
+        "value": "Stainless steel 316L"
+      },
+      {
+        "label": "Nominal pressure",
+        "value": "To PN 420 (6,000 psi) Option: to PN 680 (10,000 psi)"
+      }
+    ],
+    "rawSpecifications": "Application First shut-off valve for pressure tap to local\ninstrument installation, media distribution,\ndrain or vent in pipelines\nVersion Process and instrument version\nMaterial Stainless steel 316L\nNominal pressure To PN 420 (6,000 psi)\nOption: to PN 680 (10,000 psi)\nData sheet AC 09.28",
+    "box": [
+      28.205,
+      238.11,
+      198.284,
+      394.0529
+    ],
+    "datasheetIds": [
+      "AC09.28"
+    ]
+  },
+  {
+    "model": "910.15",
+    "label": "Syphons and connecting pipes",
+    "sourceId": "out-of-stock-10",
+    "page": 28,
+    "header": "910.15",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "AC09.06",
+    "image": {
+      "src": "/images/products/wika-910-15.png",
+      "width": 219,
+      "height": 222,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Application",
+        "value": "For the protection of pressure measuring instruments from excessive pulsation and heat"
+      },
+      {
+        "label": "Version",
+        "value": "U-form, trumpet form, compact form, standard"
+      },
+      {
+        "label": "Material",
+        "value": "Steel, stainless steel"
+      },
+      {
+        "label": "Nominal pressure",
+        "value": "To 160 bar"
+      }
+    ],
+    "rawSpecifications": "Application For the protection of pressure measuring\ninstruments from excessive pulsation\nand heat\nVersion U-form, trumpet form, compact form,\nstandard\nMaterial Steel, stainless steel\nNominal pressure To 160 bar\nData sheet AC 09.06",
+    "box": [
+      27.812,
+      557.008,
+      197.89100000000002,
+      712.9504999999999
+    ],
+    "datasheetIds": [
+      "AC09.06"
+    ]
+  },
+  {
+    "model": "HPNV",
+    "label": "High-pressure needle valve",
+    "sourceId": "out-of-stock-10",
+    "page": 28,
+    "header": "HPNV",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "AC09.27",
+    "image": {
+      "src": "/images/products/wika-hpnv.png",
+      "width": 143,
+      "height": 246,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Application",
+        "value": "For injection systems, test benches, hydraulic power packs, blow-out protection, blasting/cutting with water, high-pressure cleaning"
+      },
+      {
+        "label": "Version",
+        "value": "2-way valve, straight or angled bore; 3-way valve, one or two pressure connections"
+      },
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Nominal pressure",
+        "value": "15,000 ... 60,000 psi [1,034 ... 4,136 bar] Option: To PN 680 (10,000 psi)"
+      }
+    ],
+    "rawSpecifications": "Application For injection systems, test benches, hy-\ndraulic power packs, blow-out protection,\nblasting/cutting with water, high-pressure\ncleaning\nVersion 2-way valve, straight or angled bore; 3-way\nvalve, one or two pressure connections\nMaterial Stainless steel\nNominal pressure 15,000 ... 60,000 psi [1,034 ... 4,136 bar]\nOption: To PN 680 (10,000 psi)\nData sheet AC 09.27",
+    "box": [
+      213.323,
+      238.11,
+      383.40200000000004,
+      405.3809
+    ],
+    "datasheetIds": [
+      "AC09.27"
+    ]
+  },
+  {
+    "model": "HPFA",
+    "label": "High-pressure fittings and accessories",
+    "sourceId": "out-of-stock-10",
+    "page": 28,
+    "header": "HPFA",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "AC09.32",
+    "image": {
+      "src": "/images/products/wika-hpfa.png",
+      "width": 138,
+      "height": 140,
+      "pdfImageName": "Im10"
+    },
+    "rows": [
+      {
+        "label": "Application",
+        "value": "For high-pressure applications in control panels, where the space is restricted, or test benches"
+      },
+      {
+        "label": "Version",
+        "value": "Elbow fitting, T-fitting, cross fitting, bulkhead connector, anti-vibration gland, gland collar, threaded connection, nipple, sealing cap, blind plug"
+      },
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Nominal pressure",
+        "value": "15,000 ... 60,000 psi [1,034 ... 4,136 bar]"
+      }
+    ],
+    "rawSpecifications": "Application For high-pressure applications in control\npanels, where the space is restricted, or\ntest benches\nVersion Elbow fitting, T-fitting, cross fitting, bulk-\nhead connector, anti-vibration gland, gland\ncollar, threaded connection, nipple, sealing\ncap, blind plug\nMaterial Stainless steel\nNominal pressure 15,000 ... 60,000 psi [1,034 ... 4,136 bar]\nData sheet AC 09.32",
+    "box": [
+      213.165,
+      557.008,
+      383.244,
+      735.6244999999999
+    ],
+    "datasheetIds": [
+      "AC09.32"
+    ]
+  },
+  {
+    "model": "910.12",
+    "label": "Snubber",
+    "sourceId": "out-of-stock-10",
+    "page": 28,
+    "header": "910.12",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "AC09.03",
+    "image": {
+      "src": "/images/products/wika-910-12.png",
+      "width": 92,
+      "height": 176,
+      "pdfImageName": "Im5"
+    },
+    "rows": [
+      {
+        "label": "Application",
+        "value": "For the protection of pressure measuring instruments from pressure surges and pulsations"
+      },
+      {
+        "label": "Material",
+        "value": "Brass, steel, stainless steel"
+      },
+      {
+        "label": "Nominal pressure",
+        "value": "To 400 bar"
+      }
+    ],
+    "rawSpecifications": "Application For the protection of pressure measuring\ninstruments from pressure surges and\npulsations\nMaterial Brass, steel, stainless steel\nNominal pressure To 400 bar\nData sheet AC 09.03",
+    "box": [
+      396.85,
+      238.11,
+      566.9290000000001,
+      371.37890000000004
+    ],
+    "datasheetIds": [
+      "AC09.03"
+    ]
+  },
+  {
+    "model": "A-AI-1, A-IAI-1",
+    "label": "LCD attachable indicators",
+    "sourceId": "out-of-stock-11",
+    "page": 29,
+    "header": "A-AI-1,\nA-IAI-1",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "AC80.07",
+    "image": {
+      "src": "/images/products/wika-a-ai-1-a-iai-1.png",
+      "width": 264,
+      "height": 173,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Input",
+        "value": "4 … 20 mA, 2-wire"
+      },
+      {
+        "label": "Auxiliary power",
+        "value": "Supply from the 4 … 20 mA current loop"
+      },
+      {
+        "label": "Special feature",
+        "value": "Model A-IAI-1 intrinsically safe per ATEX"
+      }
+    ],
+    "rawSpecifications": "Input 4 … 20 mA, 2-wire\nAuxiliary power Supply from the 4 … 20 mA current loop\nSpecial feature Model A-IAI-1 intrinsically safe per ATEX\nData sheet AC 80.07",
+    "box": [
+      28.346,
+      237.649,
+      198.425,
+      348.2437
+    ],
+    "datasheetIds": [
+      "AC80.07"
+    ]
+  },
+  {
+    "model": "904",
+    "label": "Control unit for inductive contacts model 831",
+    "sourceId": "out-of-stock-11",
+    "page": 29,
+    "header": "904",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "AC08.04",
+    "image": {
+      "src": "/images/products/wika-904.png",
+      "width": 152,
+      "height": 226,
+      "pdfImageName": "Im3"
+    },
+    "rows": [
+      {
+        "label": "Application",
+        "value": "For operating measuring instruments with inductive switch contacts"
+      }
+    ],
+    "rawSpecifications": "Application For operating measuring instruments with\ninductive switch contacts\nData sheet AC 08.04",
+    "box": [
+      28.346,
+      556.7249999999999,
+      198.425,
+      655.9730999999999
+    ],
+    "datasheetIds": [
+      "AC08.04"
+    ]
+  },
+  {
+    "model": "M12 x 1 cable",
+    "label": "Preassembled cables M12 x 1",
+    "sourceId": "out-of-stock-11",
+    "page": 29,
+    "header": "M12 x 1 cable",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "",
+    "image": {
+      "src": "/images/products/wika-m12-x-1-cable.png",
+      "width": 242,
+      "height": 242,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Connector",
+        "value": "Circular connector M12 x 1, 4- and 5-pin"
+      },
+      {
+        "label": "Version",
+        "value": "Straight and angled"
+      },
+      {
+        "label": "Cable length",
+        "value": "2, 5 or 10 m"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP67"
+      }
+    ],
+    "rawSpecifications": "Circular connector M12 x 1, 4- and 5-pin\nStraight and angled version\n2, 5 or 10 m cable\nIngress protection IP67",
+    "box": [
+      212.598,
+      237.75800000000004,
+      382.677,
+      402.7342
+    ],
+    "datasheetIds": []
+  },
+  {
+    "model": "PSD-4",
+    "label": "Electronic pressure switch with display",
+    "sourceId": "out-of-stock-12",
+    "page": 23,
+    "header": "PSD-4",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PE81.86",
+    "image": {
+      "src": "/images/products/wika-psd-4.png",
+      "width": 106,
+      "height": 217,
+      "pdfImageName": "Im0"
+    },
+    "rows": [
+      {
+        "label": "Accuracy (± % of span)",
+        "value": "≤ 0.5"
+      },
+      {
+        "label": "Measuring range",
+        "value": "• 0 … 0.4 to 0 … 1,000 bar\n• 0 … 0.4 to 0 … 25 bar abs.\n• -1 … 0 to -1 … +24 bar"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Condition monitoring via IO-Link\n• Reduction of variants\n• Easy installation, good readability\n• Parameterisation via 3 buttons"
+      }
+    ],
+    "rawSpecifications": "Accuracy\n(± % of span) ≤ 0.5\nMeasuring range • 0 … 0.4 to 0 … 1,000 bar\n• 0 … 0.4 to 0 … 25 bar abs.\n• -1 … 0 to -1 … +24 bar\nSpecial feature • Condition monitoring via IO-Link\n• Reduction of variants\n• Easy installation, good readability\n• Parameterisation via 3 buttons\nData sheet PE 81.86",
+    "box": [
+      28.346,
+      235.25800000000004,
+      198.425,
+      421.8168
+    ],
+    "datasheetIds": [
+      "PE81.86"
+    ]
+  },
+  {
+    "model": "A-1200",
+    "label": "Pressure sensor with IO-Link and PNP or NPN switching output",
+    "sourceId": "out-of-stock-12",
+    "page": 23,
+    "header": "A-1200",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PE81.90",
+    "image": {
+      "src": "/images/products/wika-a-1200.png",
+      "width": 107,
+      "height": 223,
+      "pdfImageName": "Im2"
+    },
+    "rows": [
+      {
+        "label": "Accuracy (± % of span)",
+        "value": "≤ 0.5 or ≤ 1"
+      },
+      {
+        "label": "Measuring range",
+        "value": "• 0 … 0.4 to 0 … 1,000 bar\n• 0 … 0.4 to 0 … 25 bar abs.\n• 1 … 0 to -1 … +24 bar"
+      },
+      {
+        "label": "Special feature",
+        "value": "• IO-Link version 1.1\n• Medium temperature to +125 °C\n• Multicolour 360° LED status display"
+      }
+    ],
+    "rawSpecifications": "Accuracy\n(± % of span) ≤ 0.5 or ≤ 1\nMeasuring range • 0 … 0.4 to 0 … 1,000 bar\n• 0 … 0.4 to 0 … 25 bar abs.\n• 1 … 0 to -1 … +24 bar\nSpecial feature • IO-Link version 1.1\n• Medium temperature to +125 °C\n• Multicolour 360° LED status display\nData sheet PE 81.90",
+    "box": [
+      28.346,
+      573.006,
+      198.425,
+      759.5672999999999
+    ],
+    "datasheetIds": [
+      "PE81.90"
+    ]
+  },
+  {
+    "model": "PSD-4-ECO",
+    "label": "Electronic pressure switch with display",
+    "sourceId": "out-of-stock-12",
+    "page": 23,
+    "header": "PSD-4-ECO",
+    "availability": "out-of-stock",
+    "printedDatasheetIds": "PE81.69",
+    "image": {
+      "src": "/images/products/wika-psd-4-eco.png",
+      "width": 92,
+      "height": 241,
+      "pdfImageName": "Im1"
+    },
+    "rows": [
+      {
+        "label": "Accuracy (± % of span)",
+        "value": "≤ 1.0"
+      },
+      {
+        "label": "Measuring range",
+        "value": "• 0 … 0.4 to 0 … 1,000 bar\n• 0 … 0.4 to 0 … 25 bar abs.\n• -1 … 0 to -1 … +24 bar"
+      },
+      {
+        "label": "Special feature",
+        "value": "• Good/Bad indication through parameterisable digital display (red/green)\n• Compact size enables easy installation in confined spaces\n• Optimised design makes OEM machine integration easier\n• Designed for rough demands to 50g shock and -40 … +125 °C [-40 … +257 °F]"
+      }
+    ],
+    "rawSpecifications": "Accuracy\n(± % of span) ≤ 1.0\nMeasuring range • 0 … 0.4 to 0 … 1,000 bar\n• 0 … 0.4 to 0 … 25 bar abs.\n• -1 … 0 to -1 … +24 bar\nSpecial feature • Good/Bad indication through parame-\nterisable digital display (red/green)\n• Compact size enables easy installation\nin confined spaces\n• Optimised design makes OEM machine\nintegration easier\n• Designed for rough demands to\n50g shock and -40 … +125 °C\n[-40 … +257 °F]\nData sheet PE 81.69",
+    "box": [
+      212.598,
+      235.25800000000004,
+      382.677,
+      455.8308
+    ],
+    "datasheetIds": [
+      "PE81.69"
+    ]
+  }
+]

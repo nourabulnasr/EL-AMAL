@@ -11,6 +11,7 @@ export function productSchema(product:Product,locale:Locale,source:'demo'|'cms')
  // Sample records are never represented as products offered by this business.
  return {'@context':'https://schema.org','@graph':[page,breadcrumbs,...(source==='cms'?[{
   '@type':'Product','@id':`${url}#product`,url,name:product.name[locale],description:product.description[locale],model:product.model,
+  ...(product.details?{image:`${origin}${product.details.image.src}`,manufacturer:{'@type':'Organization',name:product.details.manufacturer}}:{}),
  }]:[])]};
 }
 export function schemaJson(value:unknown){return JSON.stringify(value).replace(/</g,'\\u003c');}

@@ -1,0 +1,1946 @@
+[
+  {
+    "id": 0,
+    "en": "Connection head with digital indicator"
+  },
+  {
+    "id": 1,
+    "en": "Input"
+  },
+  {
+    "id": 2,
+    "en": "4 … 20 mA"
+  },
+  {
+    "id": 3,
+    "en": "Auxiliary power"
+  },
+  {
+    "id": 4,
+    "en": "Supply from the 4 … 20 mA current loop"
+  },
+  {
+    "id": 5,
+    "en": "Current-loop display with HART communication"
+  },
+  {
+    "id": 6,
+    "en": "Dimension"
+  },
+  {
+    "id": 7,
+    "en": "150 x 127 x 127 mm"
+  },
+  {
+    "id": 8,
+    "en": "Case"
+  },
+  {
+    "id": 9,
+    "en": "Aluminium, stainless steel"
+  },
+  {
+    "id": 10,
+    "en": "Special feature"
+  },
+  {
+    "id": 11,
+    "en": "• Adjustment of display range and unit via HART® communication\n• Model DIH52 additionally suitable for multidrop operation and with local master function"
+  },
+  {
+    "id": 12,
+    "en": "Approval"
+  },
+  {
+    "id": 13,
+    "en": "• Intrinsically safe\n• Flameproof enclosure"
+  },
+  {
+    "id": 14,
+    "en": "Temperature probe with digital indicator"
+  },
+  {
+    "id": 15,
+    "en": "Measuring range"
+  },
+  {
+    "id": 16,
+    "en": "-40 … +120 °C"
+  },
+  {
+    "id": 17,
+    "en": "• Dust and waterproof case, IP68\n• Battery or solar operation\n• Extremely long service life"
+  },
+  {
+    "id": 18,
+    "en": "Panel-mounted current-loop display"
+  },
+  {
+    "id": 19,
+    "en": "4 … 20 mA, 2-wire"
+  },
+  {
+    "id": 20,
+    "en": "Alarm output"
+  },
+  {
+    "id": 21,
+    "en": "2 electronic contacts (optional)"
+  },
+  {
+    "id": 22,
+    "en": "Wall-mounting case (optional)"
+  },
+  {
+    "id": 23,
+    "en": "Panel-mounted digital indicator"
+  },
+  {
+    "id": 24,
+    "en": "Multi-function input for resistance thermometers, thermocouples and standard signals"
+  },
+  {
+    "id": 25,
+    "en": "2 electronic contacts"
+  },
+  {
+    "id": 26,
+    "en": "DC 9 … 28 V"
+  },
+  {
+    "id": 27,
+    "en": "Standard signals"
+  },
+  {
+    "id": 28,
+    "en": "2 relays"
+  },
+  {
+    "id": 29,
+    "en": "• Integrated transmitter power supply\n• Wall-mounting case (optional)"
+  },
+  {
+    "id": 30,
+    "en": "AC 230 V or AC 115 V"
+  },
+  {
+    "id": 31,
+    "en": "• Multi-function input for resistance thermometers, thermocouples and standard signals\n• Alternatively double input for standard signals with calculation function (+ - x /) for two transmitters"
+  },
+  {
+    "id": 32,
+    "en": "2 or 4 relays (optional)"
+  },
+  {
+    "id": 33,
+    "en": "• Integrated transmitter power supply\n• Analogue output signal (optional)"
+  },
+  {
+    "id": 34,
+    "en": "• AC/DC 100 … 240 V\n• DC 10 … 40 V, AC 18 … 30 V"
+  },
+  {
+    "id": 35,
+    "en": "Thermocouple measuring insert for TC10-L"
+  },
+  {
+    "id": 36,
+    "en": "Sensor element"
+  },
+  {
+    "id": 37,
+    "en": "Types K, J, E, N or T"
+  },
+  {
+    "id": 38,
+    "en": "-40 … +1,200 °C, -40 … +2,192 °F"
+  },
+  {
+    "id": 39,
+    "en": "Measuring location"
+  },
+  {
+    "id": 40,
+    "en": "Ungrounded or grounded"
+  },
+  {
+    "id": 41,
+    "en": "Measuring insert for process thermocouple"
+  },
+  {
+    "id": 42,
+    "en": "Types K, J, N or T"
+  },
+  {
+    "id": 43,
+    "en": "Thermocouple with flameproof enclosure"
+  },
+  {
+    "id": 44,
+    "en": "Process thermocouple for additional thermowell"
+  },
+  {
+    "id": 45,
+    "en": "Option"
+  },
+  {
+    "id": 46,
+    "en": "Ex i, Ex d"
+  },
+  {
+    "id": 47,
+    "en": "Process thermocouple basic module"
+  },
+  {
+    "id": 48,
+    "en": "Thermocouple measuring insert"
+  },
+  {
+    "id": 49,
+    "en": "Threaded miniature thermocouple"
+  },
+  {
+    "id": 50,
+    "en": "-40 … +600 °C, -40 … +1,112 °F"
+  },
+  {
+    "id": 51,
+    "en": "Process connection"
+  },
+  {
+    "id": 52,
+    "en": "Mounting thread"
+  },
+  {
+    "id": 53,
+    "en": "Thermocouple for additional thermowell"
+  },
+  {
+    "id": 54,
+    "en": "Flanged thermocouple with protection tube"
+  },
+  {
+    "id": 55,
+    "en": "Flange"
+  },
+  {
+    "id": 56,
+    "en": "Threaded thermocouple with protection tube"
+  },
+  {
+    "id": 57,
+    "en": "Thermocouple without thermowell"
+  },
+  {
+    "id": 58,
+    "en": "Tubeskin thermocouple assembly, TEFRACTO-PAD"
+  },
+  {
+    "id": 59,
+    "en": "Types K, J, N, E"
+  },
+  {
+    "id": 60,
+    "en": "0 ... 1,260 °C, 32 ... 2,300 °F"
+  },
+  {
+    "id": 61,
+    "en": "Surface mounting, welded/shielded"
+  },
+  {
+    "id": 62,
+    "en": "Tubeskin thermocouple assembly, eTEFRACTO-PAD"
+  },
+  {
+    "id": 63,
+    "en": "Surface mounting, extractable/shielded"
+  },
+  {
+    "id": 64,
+    "en": "Tubeskin thermocouple assembly, V-PAD"
+  },
+  {
+    "id": 65,
+    "en": "-25 … +400 °C, -13 … + 752 °F"
+  },
+  {
+    "id": 66,
+    "en": "Ungrounded"
+  },
+  {
+    "id": 67,
+    "en": "Surface mounting, welded"
+  },
+  {
+    "id": 68,
+    "en": "Linear sensor for hot-spot detection"
+  },
+  {
+    "id": 69,
+    "en": "Type K thermocouple wires"
+  },
+  {
+    "id": 70,
+    "en": "0 … 400 °C, 32 … 752 °F"
+  },
+  {
+    "id": 71,
+    "en": "• Continuous monitoring\n• Self-restoring\n• Passive element"
+  },
+  {
+    "id": 72,
+    "en": "High-temperature thermocouple"
+  },
+  {
+    "id": 73,
+    "en": "Types K, J, E, N, S, R or B"
+  },
+  {
+    "id": 74,
+    "en": "0 … 1,700 °C, 32 … 3,092 °F"
+  },
+  {
+    "id": 75,
+    "en": "Thermowell"
+  },
+  {
+    "id": 76,
+    "en": "C610, C799"
+  },
+  {
+    "id": 77,
+    "en": "Types S, R, B, K, N or J"
+  },
+  {
+    "id": 78,
+    "en": "Stop flange, threaded bushing"
+  },
+  {
+    "id": 79,
+    "en": "Calitum sapphire-design thermocouple"
+  },
+  {
+    "id": 80,
+    "en": "Sapphire (monocrystalline)"
+  },
+  {
+    "id": 81,
+    "en": "Thermocouple for flue-gas measurements"
+  },
+  {
+    "id": 82,
+    "en": "Types K, N or J"
+  },
+  {
+    "id": 83,
+    "en": "0 … 1,200 °C, 32 … 2,192 °F"
+  },
+  {
+    "id": 84,
+    "en": "Sapphire-design thermocouple"
+  },
+  {
+    "id": 85,
+    "en": "Types S, R, B"
+  },
+  {
+    "id": 86,
+    "en": "Highest safety thanks to 2-chamber system"
+  },
+  {
+    "id": 87,
+    "en": "High-pressure thermocouple"
+  },
+  {
+    "id": 88,
+    "en": "0 … 350 °C, 32 … 662 °F"
+  },
+  {
+    "id": 89,
+    "en": "Measuring tip"
+  },
+  {
+    "id": 90,
+    "en": "Various high-pressure connections"
+  },
+  {
+    "id": 91,
+    "en": "Flexible multipoint thermometer for thermowells/protection tubes"
+  },
+  {
+    "id": 92,
+    "en": "Types K, J, E or N"
+  },
+  {
+    "id": 93,
+    "en": "0 ... 1,200 °C, 32 ... 2,192 °F"
+  },
+  {
+    "id": 94,
+    "en": "Various process connections"
+  },
+  {
+    "id": 95,
+    "en": "Multipoint thermocouple"
+  },
+  {
+    "id": 96,
+    "en": "Flexible multipoint thermocouple"
+  },
+  {
+    "id": 97,
+    "en": "Resistance thermometer measuring insert, MIMS cable"
+  },
+  {
+    "id": 98,
+    "en": "1 x Pt100, 2 x Pt100"
+  },
+  {
+    "id": 99,
+    "en": "-196 … +600 °C, -320 … +1,112 °F"
+  },
+  {
+    "id": 100,
+    "en": "Connection method"
+  },
+  {
+    "id": 101,
+    "en": "2-, 3- and 4-wire"
+  },
+  {
+    "id": 102,
+    "en": "Measuring insert"
+  },
+  {
+    "id": 103,
+    "en": "MIMS cable"
+  },
+  {
+    "id": 104,
+    "en": "Threaded miniature resistance thermometer"
+  },
+  {
+    "id": 105,
+    "en": "-196 … +500 °C, -320 … +932 °F"
+  },
+  {
+    "id": 106,
+    "en": "Resistance thermometer for additional thermowell"
+  },
+  {
+    "id": 107,
+    "en": "Flanged resistance thermometer with protection tube"
+  },
+  {
+    "id": 108,
+    "en": "Threaded resistance thermometer with protection tube"
+  },
+  {
+    "id": 109,
+    "en": "Resistance thermometer without thermowell"
+  },
+  {
+    "id": 110,
+    "en": "Resistance thermometer measuring insert, tubular design"
+  },
+  {
+    "id": 111,
+    "en": "-50 … +250 °C, -58 … +482 °F"
+  },
+  {
+    "id": 112,
+    "en": "Tubular design"
+  },
+  {
+    "id": 113,
+    "en": "Measuring insert for process resistance thermometer TR12-B"
+  },
+  {
+    "id": 114,
+    "en": "Measuring insert for installation in TR10-L"
+  },
+  {
+    "id": 115,
+    "en": "Process resistance thermometer for additional thermowell"
+  },
+  {
+    "id": 116,
+    "en": "-196 … +600 °C, -320…+1,112 °F"
+  },
+  {
+    "id": 117,
+    "en": "Process resistance thermometer basic module"
+  },
+  {
+    "id": 118,
+    "en": "Resistance thermometer with flameproof enclosure"
+  },
+  {
+    "id": 119,
+    "en": "Cable thermocouple"
+  },
+  {
+    "id": 120,
+    "en": "Cable"
+  },
+  {
+    "id": 121,
+    "en": "Silicone, PTFE/PFA, fibreglass"
+  },
+  {
+    "id": 122,
+    "en": "Surface thermocouple"
+  },
+  {
+    "id": 123,
+    "en": "Surface mounting"
+  },
+  {
+    "id": 124,
+    "en": "Hot-runner thermocouple"
+  },
+  {
+    "id": 125,
+    "en": "Types J or K"
+  },
+  {
+    "id": 126,
+    "en": "-25 … +400 °C, -13 … +752 °F"
+  },
+  {
+    "id": 127,
+    "en": "• Probe diameter 0.5 … 3.0 mm\n• Plastic-moulded transition"
+  },
+  {
+    "id": 128,
+    "en": "Bayonet thermocouple"
+  },
+  {
+    "id": 129,
+    "en": "Types K, J, N, E or T"
+  },
+  {
+    "id": 130,
+    "en": "• Single and dual thermocouple\n• Explosion-protected versions"
+  },
+  {
+    "id": 131,
+    "en": "Thermocouple for plastics machinery"
+  },
+  {
+    "id": 132,
+    "en": "• Various process connections\n• Connection lead fibreglass with stainless steel braid"
+  },
+  {
+    "id": 133,
+    "en": "Bayonet resistance thermometer"
+  },
+  {
+    "id": 134,
+    "en": "-196 … +400 °C, -320 … +752 °F"
+  },
+  {
+    "id": 135,
+    "en": "Bayonet"
+  },
+  {
+    "id": 136,
+    "en": "DiwiTherm with digital indicator"
+  },
+  {
+    "id": 137,
+    "en": "-40.0 … +199.9 °C, +200 … +450 °C with automatic measuring range changeover (autorange)"
+  },
+  {
+    "id": 138,
+    "en": "Power supply"
+  },
+  {
+    "id": 139,
+    "en": "Battery operation"
+  },
+  {
+    "id": 140,
+    "en": "Resistance thermometer with spring-loaded tip"
+  },
+  {
+    "id": 141,
+    "en": "Compression fitting"
+  },
+  {
+    "id": 142,
+    "en": "Resistance thermometer for flue-gas measurements"
+  },
+  {
+    "id": 143,
+    "en": "Metal"
+  },
+  {
+    "id": 144,
+    "en": "Surface resistance thermometer"
+  },
+  {
+    "id": 145,
+    "en": "Indoor and outdoor resistance thermometer"
+  },
+  {
+    "id": 146,
+    "en": "-40 … +80 °C, -40 … +176 °F"
+  },
+  {
+    "id": 147,
+    "en": "Wall mounting"
+  },
+  {
+    "id": 148,
+    "en": "Multipoint resistance thermometer"
+  },
+  {
+    "id": 149,
+    "en": "Sensor"
+  },
+  {
+    "id": 150,
+    "en": "Pt100"
+  },
+  {
+    "id": 151,
+    "en": "Threaded temperature probe with plug connection"
+  },
+  {
+    "id": 152,
+    "en": "-50 … +250 °C"
+  },
+  {
+    "id": 153,
+    "en": "Measuring element"
+  },
+  {
+    "id": 154,
+    "en": "Pt1000, Pt100, NTC, KTY"
+  },
+  {
+    "id": 155,
+    "en": "• Very high vibration resistance\n• Compact design\n• Electrical connection via plug connection"
+  },
+  {
+    "id": 156,
+    "en": "Cable temperature probe for heating and refrigeration"
+  },
+  {
+    "id": 157,
+    "en": "-50 … +105 °C"
+  },
+  {
+    "id": 158,
+    "en": "Pt100, Pt1000, NTC"
+  },
+  {
+    "id": 159,
+    "en": "• Permanently protected against condensation\n• Cost savings thanks to quick assembly\n• Delivery reliability, even for large orders"
+  },
+  {
+    "id": 160,
+    "en": "Threaded temperature probe with connection lead"
+  },
+  {
+    "id": 161,
+    "en": "-50 … +260 °C"
+  },
+  {
+    "id": 162,
+    "en": "Pt100, Pt1000, NTC, KTY, Ni1000"
+  },
+  {
+    "id": 163,
+    "en": "• High vibration resistance\n• Connection lead made of PVC, silicone, PTFE\n• Brass or stainless steel thermowell"
+  },
+  {
+    "id": 164,
+    "en": "Cable temperature probe for tubeskin measurement"
+  },
+  {
+    "id": 165,
+    "en": "-50 … +200 °C"
+  },
+  {
+    "id": 166,
+    "en": "Pt100, Pt1000, NTC, KTY"
+  },
+  {
+    "id": 167,
+    "en": "• Connection lead from PVC, silicone\n• Aluminium probe sleeve\n• Protected against dust and water jets, IP65\n• With quick-mounting bracket"
+  },
+  {
+    "id": 168,
+    "en": "Temperature probe for outdoor temperature measurement"
+  },
+  {
+    "id": 169,
+    "en": "-40 … +100 °C"
+  },
+  {
+    "id": 170,
+    "en": "• Smallest case design, UV-resistant\n• Protected against dust and water jets, IP65\n• Clip-on sun protector"
+  },
+  {
+    "id": 171,
+    "en": "Cable temperature probe for general industrial applications"
+  },
+  {
+    "id": 172,
+    "en": "• Connection lead made of PVC, silicone, PTFE\n• Probe sleeve from stainless steel\n• Protected against dust and water jets, IP65"
+  },
+  {
+    "id": 173,
+    "en": "Digital temperature transmitter for resistance sensors"
+  },
+  {
+    "id": 174,
+    "en": "Resistance thermometers, potentiometers"
+  },
+  {
+    "id": 175,
+    "en": "Accuracy"
+  },
+  {
+    "id": 176,
+    "en": "< 0.1 %"
+  },
+  {
+    "id": 177,
+    "en": "Output"
+  },
+  {
+    "id": 178,
+    "en": "Quick and simple configuration"
+  },
+  {
+    "id": 179,
+    "en": "Digital temperature transmitter with HART protocol"
+  },
+  {
+    "id": 180,
+    "en": "Resistance thermometers, thermocouples, potentiometers"
+  },
+  {
+    "id": 181,
+    "en": "4 … 20 mA, HART protocol"
+  },
+  {
+    "id": 182,
+    "en": "TÜV-certified SIL version (full assessment)"
+  },
+  {
+    "id": 183,
+    "en": "Digital temperature transmitter for thermocouples"
+  },
+  {
+    "id": 184,
+    "en": "All commercially available thermocouples"
+  },
+  {
+    "id": 185,
+    "en": "Typical < 2 K"
+  },
+  {
+    "id": 186,
+    "en": "Analogue temperature transmitter"
+  },
+  {
+    "id": 187,
+    "en": "Resistance thermometers, thermocouples"
+  },
+  {
+    "id": 188,
+    "en": "< 0.5 or < 1 %"
+  },
+  {
+    "id": 189,
+    "en": "0 … 10 V, 4 ... 20 mA"
+  },
+  {
+    "id": 190,
+    "en": "Fixed measuring range"
+  },
+  {
+    "id": 191,
+    "en": "Universal use for 1 or 2 sensors: resistance thermometers (up to 2 x 3-wire), thermocouples, potentiometers, reed chains"
+  },
+  {
+    "id": 192,
+    "en": "TÜV-certified SIL version (full assessment), True Drift Detection technology"
+  },
+  {
+    "id": 193,
+    "en": "HART field temperature transmitter"
+  },
+  {
+    "id": 194,
+    "en": "PC configurable"
+  },
+  {
+    "id": 195,
+    "en": "Electronic temperature switch with display"
+  },
+  {
+    "id": 196,
+    "en": "-20 … +80 °C, -20 … +120 °C, 0 … 150 °C"
+  },
+  {
+    "id": 197,
+    "en": "• Switching outputs PNP or NPN\n• 4 … 20 mA\n• 0 … 10 V\n• IO-Link 1.1"
+  },
+  {
+    "id": 198,
+    "en": "Mini temperature switches"
+  },
+  {
+    "id": 199,
+    "en": "Setting range"
+  },
+  {
+    "id": 200,
+    "en": "-15 … +20 to 180 … 250 °C"
+  },
+  {
+    "id": 201,
+    "en": "Ignition protection type"
+  },
+  {
+    "id": 202,
+    "en": "Ex ia or Ex d"
+  },
+  {
+    "id": 203,
+    "en": "Switch"
+  },
+  {
+    "id": 204,
+    "en": "1 x SPDT"
+  },
+  {
+    "id": 205,
+    "en": "Switching power"
+  },
+  {
+    "id": 206,
+    "en": "AC 220 V/5 A DC 24 V/5 A"
+  },
+  {
+    "id": 207,
+    "en": "Bimetal temperature switch for switching voltages to 48 V"
+  },
+  {
+    "id": 208,
+    "en": "Switching temperature"
+  },
+  {
+    "id": 209,
+    "en": "50 … 155 °C, fixed"
+  },
+  {
+    "id": 210,
+    "en": "• Switching voltage to AC 48 V, DC 24 V\n• Compact version: Normally closed (NC), normally open (NO)\n• Electr. connection via plug connection"
+  },
+  {
+    "id": 211,
+    "en": "Compact temperature switches"
+  },
+  {
+    "id": 212,
+    "en": "-30 … +10 to 160 … 250 °C"
+  },
+  {
+    "id": 213,
+    "en": "1 x SPDT or 1 x DPDT"
+  },
+  {
+    "id": 214,
+    "en": "AC 250 V/15 A DC 24 V/2 A"
+  },
+  {
+    "id": 215,
+    "en": "Bimetal temperature switch for switching voltages to 250 V"
+  },
+  {
+    "id": 216,
+    "en": "50 … 130 °C, fixed"
+  },
+  {
+    "id": 217,
+    "en": "• Switching voltages to AC 250 V\n• Contact version normally closed (NC)\n• Electr. connection via plug connection\n• 1 or 2 switch contacts\n• Option: With measuring element Pt1000 / Pt100"
+  },
+  {
+    "id": 218,
+    "en": "Heavy-duty temperature switches"
+  },
+  {
+    "id": 219,
+    "en": "-30 … +70 to 0 … 600 °C"
+  },
+  {
+    "id": 220,
+    "en": "1 or 2 SPDT or 1x DPDT"
+  },
+  {
+    "id": 221,
+    "en": "AC 250 V/20 A DC 24 V/2 A"
+  },
+  {
+    "id": 222,
+    "en": "Expansion thermometer with microswitch, indicating temperature controller"
+  },
+  {
+    "id": 223,
+    "en": "Nominal size"
+  },
+  {
+    "id": 224,
+    "en": "60, 80, 100 mm 72 x 72, 96 x 96 mm"
+  },
+  {
+    "id": 225,
+    "en": "Scale range"
+  },
+  {
+    "id": 226,
+    "en": "-100 … +400 °C"
+  },
+  {
+    "id": 227,
+    "en": "Wetted parts"
+  },
+  {
+    "id": 228,
+    "en": "Copper alloy"
+  },
+  {
+    "id": 229,
+    "en": "Sheet steel version"
+  },
+  {
+    "id": 230,
+    "en": "Bimetal thermometer, stainless steel version"
+  },
+  {
+    "id": 231,
+    "en": "100 mm"
+  },
+  {
+    "id": 232,
+    "en": "-70 … +30 to 0 … 600 °C"
+  },
+  {
+    "id": 233,
+    "en": "Stainless steel"
+  },
+  {
+    "id": 234,
+    "en": "Liquid damping to max. 250 °C (case and probe)"
+  },
+  {
+    "id": 235,
+    "en": "Expansion thermometer with microswitch, safety temperature limiter"
+  },
+  {
+    "id": 236,
+    "en": "0 … 400 °C"
+  },
+  {
+    "id": 237,
+    "en": "• Sheet steel version"
+  },
+  {
+    "id": 238,
+    "en": "Gas-actuated thermometer, stainless steel version"
+  },
+  {
+    "id": 239,
+    "en": "100, 160 mm"
+  },
+  {
+    "id": 240,
+    "en": "-200 … +100 to 0 … 700 °C"
+  },
+  {
+    "id": 241,
+    "en": "• Capillary\n• Liquid damping (case)"
+  },
+  {
+    "id": 242,
+    "en": "Expansion thermometer with microswitch"
+  },
+  {
+    "id": 243,
+    "en": "-60 … +40 to 0 … 250 °C"
+  },
+  {
+    "id": 244,
+    "en": "Various contact versions"
+  },
+  {
+    "id": 245,
+    "en": "Rail-mounted temperature controller"
+  },
+  {
+    "id": 246,
+    "en": "Control mode"
+  },
+  {
+    "id": 247,
+    "en": "PID, PI, PD, P, ON/OFF (configurable)"
+  },
+  {
+    "id": 248,
+    "en": "Monitoring output"
+  },
+  {
+    "id": 249,
+    "en": "Relay or logic level DC 0/12 V to control an electronic switch relay (SSR) or analogue current signal 4 … 20 mA"
+  },
+  {
+    "id": 250,
+    "en": "• AC 100 … 240 V\n• AC/DC 24 V"
+  },
+  {
+    "id": 251,
+    "en": "Display for T38 temperature transmitter"
+  },
+  {
+    "id": 252,
+    "en": "∅ 44 mm"
+  },
+  {
+    "id": 253,
+    "en": "13.5 x 28 mm"
+  },
+  {
+    "id": 254,
+    "en": "• 5-digit main measured value display\n• 2 variants: with clip-on adapter or remote for mounting in the connection head cover (BSZ-H)"
+  },
+  {
+    "id": 255,
+    "en": "Panel-mounted temperature controllers"
+  },
+  {
+    "id": 256,
+    "en": "Relay (AC 250 V, 3A, (R) or 1A (L)) or logic level DC 0/12 V for 3-point control to control an electronic switch relay (SSR) or analogue current signal 4 … 20 mA"
+  },
+  {
+    "id": 257,
+    "en": "Installation rods"
+  },
+  {
+    "id": 258,
+    "en": "Application"
+  },
+  {
+    "id": 259,
+    "en": "Installation of high-temperature thermocouples"
+  },
+  {
+    "id": 260,
+    "en": "Installation"
+  },
+  {
+    "id": 261,
+    "en": "Horizontal and vertical installation"
+  },
+  {
+    "id": 262,
+    "en": "Compatibility"
+  },
+  {
+    "id": 263,
+    "en": "Flanged thermocouples"
+  },
+  {
+    "id": 264,
+    "en": "Construction"
+  },
+  {
+    "id": 265,
+    "en": "High mechanical stability and low weight"
+  },
+  {
+    "id": 266,
+    "en": "Purge-gas control panel"
+  },
+  {
+    "id": 267,
+    "en": "Material"
+  },
+  {
+    "id": 268,
+    "en": "Heavy-duty stainless steel"
+  },
+  {
+    "id": 269,
+    "en": "Side protection for mechanical stability"
+  },
+  {
+    "id": 270,
+    "en": "Mounting"
+  },
+  {
+    "id": 271,
+    "en": "Wall or 2-inch pipe mounting"
+  },
+  {
+    "id": 272,
+    "en": "Pressure indication"
+  },
+  {
+    "id": 273,
+    "en": "Pressure gauge with liquid damping"
+  },
+  {
+    "id": 274,
+    "en": "Compact resistance thermometer"
+  },
+  {
+    "id": 275,
+    "en": "1 x Pt100, 1 x Pt1000"
+  },
+  {
+    "id": 276,
+    "en": "Pt100, 4 … 20 mA"
+  },
+  {
+    "id": 277,
+    "en": "Miniature resistance thermometer, explosion-protected design"
+  },
+  {
+    "id": 278,
+    "en": "Pt100, Pt1000, 4 … 20 mA"
+  },
+  {
+    "id": 279,
+    "en": "CSA"
+  },
+  {
+    "id": 280,
+    "en": "Hazardous locations"
+  },
+  {
+    "id": 281,
+    "en": "OEM miniature resistance thermometer"
+  },
+  {
+    "id": 282,
+    "en": "Ordinary and hazardous locations"
+  },
+  {
+    "id": 283,
+    "en": "Cable resistance thermometer, MIMS cable"
+  },
+  {
+    "id": 284,
+    "en": "Silicone, PTFE, PFA"
+  },
+  {
+    "id": 285,
+    "en": "Threaded temperature probe with integrated transmitter"
+  },
+  {
+    "id": 286,
+    "en": "• Output signal 4 ... 20 mA, 0 ... 10 V\n• Factory configured\n• Electr. connection via plug connection"
+  },
+  {
+    "id": 287,
+    "en": "Miniature resistance thermometer, standard version"
+  },
+  {
+    "id": 288,
+    "en": "Ordinary locations"
+  },
+  {
+    "id": 289,
+    "en": "Cable resistance thermometer, tubular design"
+  },
+  {
+    "id": 290,
+    "en": "-60 ... +250 °C, -76 ... +482 °F"
+  },
+  {
+    "id": 291,
+    "en": "OEM pressure sensor for industrial applications"
+  },
+  {
+    "id": 292,
+    "en": "Non-linearity (± % of span)"
+  },
+  {
+    "id": 293,
+    "en": "≤ 0.5 BFSL"
+  },
+  {
+    "id": 294,
+    "en": "• 0 … 6 to 0 … 600 bar\n• -1 … +5 to -1 … +59 bar"
+  },
+  {
+    "id": 295,
+    "en": "• Customer-specific solutions\n• Excellent long-term stability\n• Consistent quality\n• Good delivery performance"
+  },
+  {
+    "id": 296,
+    "en": "Pressure sensor for mobile hydrogen applications"
+  },
+  {
+    "id": 297,
+    "en": "Accuracy (± % of span)"
+  },
+  {
+    "id": 298,
+    "en": "≤ 1"
+  },
+  {
+    "id": 299,
+    "en": "0 … 20 to 0 … 600 bar"
+  },
+  {
+    "id": 300,
+    "en": "• Approval per EC79/2009\n• Compact and robust design\n• Diagnostic function (optional)"
+  },
+  {
+    "id": 301,
+    "en": "Pressure sensor for mobile working machines"
+  },
+  {
+    "id": 302,
+    "en": "Non-linearity (per IEC 62828-1)"
+  },
+  {
+    "id": 303,
+    "en": "≤ ±0.25 % of span (BFSL)"
+  },
+  {
+    "id": 304,
+    "en": "0 ... 6 to 0 ... 1,000 bar"
+  },
+  {
+    "id": 305,
+    "en": "• For extreme operating conditions\n• Reliable and accurate\n• Customer-specific solutions\n• High production capacities"
+  },
+  {
+    "id": 306,
+    "en": "Pressure sensor for medical gases"
+  },
+  {
+    "id": 307,
+    "en": "0 … 6 to 0 … 400 bar"
+  },
+  {
+    "id": 308,
+    "en": "Cleaned, packed and marked for oxygen per international standards"
+  },
+  {
+    "id": 309,
+    "en": "Pressure sensor with CANopen/J1939"
+  },
+  {
+    "id": 310,
+    "en": "0 … 40 to 0 … 600 bar"
+  },
+  {
+    "id": 311,
+    "en": "• For extreme operating conditions\n• Signal stability thanks to CANopen®\n• Reliable and accurate\n• Customer-specific solutions\n• High production capacities"
+  },
+  {
+    "id": 312,
+    "en": "Pressure sensor for heating and refrigeration"
+  },
+  {
+    "id": 313,
+    "en": "≤ 2"
+  },
+  {
+    "id": 314,
+    "en": "• 0 … 6 to 0 … 160 bar\n• -1 … +7 to -1 … +45 bar"
+  },
+  {
+    "id": 315,
+    "en": "• Special case design for the best possible condensation tightness\n• Resistant to all common refrigerants\n• Wetted parts from stainless steel"
+  },
+  {
+    "id": 316,
+    "en": "Differential-pressure gauge with output signal"
+  },
+  {
+    "id": 317,
+    "en": "0 … 16 mbar to 0 … 40 bar"
+  },
+  {
+    "id": 318,
+    "en": "Accuracy class"
+  },
+  {
+    "id": 319,
+    "en": "1.6"
+  },
+  {
+    "id": 320,
+    "en": "Ingress protection"
+  },
+  {
+    "id": 321,
+    "en": "IP54, filled IP65"
+  },
+  {
+    "id": 322,
+    "en": "Differential-pressure gauge with integrated working-pressure indication"
+  },
+  {
+    "id": 323,
+    "en": "0 … 160 mbar to 0 … 10 bar"
+  },
+  {
+    "id": 324,
+    "en": "2.5 (1.6 optional)"
+  },
+  {
+    "id": 325,
+    "en": "IP65"
+  },
+  {
+    "id": 326,
+    "en": "High-overload differential-pressure gauge with output signal"
+  },
+  {
+    "id": 327,
+    "en": "0 … 60 mbar to 0 … 40 bar"
+  },
+  {
+    "id": 328,
+    "en": "Absolute-pressure gauge with output signal"
+  },
+  {
+    "id": 329,
+    "en": "0 … 25 mbar to 0 … 25 bar abs."
+  },
+  {
+    "id": 330,
+    "en": "2.5"
+  },
+  {
+    "id": 331,
+    "en": "IP54, with liquid filling IP65"
+  },
+  {
+    "id": 332,
+    "en": "Bourdon-tube contact pressure gauge, stainless steel case"
+  },
+  {
+    "id": 333,
+    "en": "40, 50, 63 mm"
+  },
+  {
+    "id": 334,
+    "en": "0 … 2.5 to 0 … 400 bar"
+  },
+  {
+    "id": 335,
+    "en": "Version with VdS or LPCB approval possible"
+  },
+  {
+    "id": 336,
+    "en": "Process-industry Bourdon-tube contact pressure gauges"
+  },
+  {
+    "id": 337,
+    "en": "0 … 0.6 to 0 … 1,600 bar"
+  },
+  {
+    "id": 338,
+    "en": "1.0"
+  },
+  {
+    "id": 339,
+    "en": "IP65 or IP66"
+  },
+  {
+    "id": 340,
+    "en": "Bourdon-tube gauge with electronic pressure switch"
+  },
+  {
+    "id": 341,
+    "en": "50, 63 mm"
+  },
+  {
+    "id": 342,
+    "en": "0 … 1.6 to 0 … 400 bar"
+  },
+  {
+    "id": 343,
+    "en": "Safety-version Bourdon-tube contact pressure gauge"
+  },
+  {
+    "id": 344,
+    "en": "63 mm"
+  },
+  {
+    "id": 345,
+    "en": "0 … 4 to 0 … 400 bar"
+  },
+  {
+    "id": 346,
+    "en": "IP54"
+  },
+  {
+    "id": 347,
+    "en": "Bourdon-tube contact pressure gauges"
+  },
+  {
+    "id": 348,
+    "en": "0 … 0.6 to 0 … 600 bar"
+  },
+  {
+    "id": 349,
+    "en": "Diaphragm contact pressure gauges"
+  },
+  {
+    "id": 350,
+    "en": "0 … 25 mbar to 0 … 25 bar"
+  },
+  {
+    "id": 351,
+    "en": "Absolute-pressure contact gauge"
+  },
+  {
+    "id": 352,
+    "en": "Differential-pressure gauge with microswitches and component testing"
+  },
+  {
+    "id": 353,
+    "en": "0 … 250 mbar to 0 … 10 bar"
+  },
+  {
+    "id": 354,
+    "en": "Capsule contact pressure gauge"
+  },
+  {
+    "id": 355,
+    "en": "0 … 2.5 to 0 … 100 mbar"
+  },
+  {
+    "id": 356,
+    "en": "Differential contact pressure gauge, all-metal media chamber"
+  },
+  {
+    "id": 357,
+    "en": "0 … 25 mbar to 0 … 40 bar"
+  },
+  {
+    "id": 358,
+    "en": "Differential-pressure gauge with microswitches and working-pressure indication"
+  },
+  {
+    "id": 359,
+    "en": "High-overload differential contact pressure gauge"
+  },
+  {
+    "id": 360,
+    "en": "Bourdon-tube pressure gauge with output signal"
+  },
+  {
+    "id": 361,
+    "en": "IP65 (IP67 optional)"
+  },
+  {
+    "id": 362,
+    "en": "Diaphragm pressure gauge with output signal"
+  },
+  {
+    "id": 363,
+    "en": "0 … 16 mbar to 0 … 25 bar"
+  },
+  {
+    "id": 364,
+    "en": "Safety-version Bourdon-tube gauge with output signal"
+  },
+  {
+    "id": 365,
+    "en": "0 … 1 to 0 … 1,000 bar"
+  },
+  {
+    "id": 366,
+    "en": "High-overload diaphragm gauge with output signal"
+  },
+  {
+    "id": 367,
+    "en": "Process-industry Bourdon-tube gauges with output signal"
+  },
+  {
+    "id": 368,
+    "en": "High-overload capsule gauge with output signal"
+  },
+  {
+    "id": 369,
+    "en": "2.5 … 100 mbar"
+  },
+  {
+    "id": 370,
+    "en": "Compact pressure switch"
+  },
+  {
+    "id": 371,
+    "en": "• -0.85 … -0.15 bar\n• 0.2 … 2 bar to 30 … 320 bar"
+  },
+  {
+    "id": 372,
+    "en": "Switching function"
+  },
+  {
+    "id": 373,
+    "en": "Normally open, normally closed, changeover contact"
+  },
+  {
+    "id": 374,
+    "en": "Galvanised steel or stainless steel"
+  },
+  {
+    "id": 375,
+    "en": "• 2 A, AC 48 V\n• 1 A / 2 A, DC 24 V"
+  },
+  {
+    "id": 376,
+    "en": "Pressure switch with settable hysteresis"
+  },
+  {
+    "id": 377,
+    "en": "• -0.4 … +7 bar\n• 0 … 5 bar to 6 … 30 bar"
+  },
+  {
+    "id": 378,
+    "en": "• Bellows: Copper alloy CuSn6 per EN 1652\n• Process connection: free cutting steel EN1A per EN 10277-3, tin-plated"
+  },
+  {
+    "id": 379,
+    "en": "10 A / 6 A, AC 230 V"
+  },
+  {
+    "id": 380,
+    "en": "Compact pressure switch with settable hysteresis"
+  },
+  {
+    "id": 381,
+    "en": "• 2 A / 4 A, AC 250 V\n• 2 A / 4 A, DC 24 V"
+  },
+  {
+    "id": 382,
+    "en": "Pressure switch for demanding industrial applications"
+  },
+  {
+    "id": 383,
+    "en": "• -1 … 0 and -0.8 … +5 bar\n• 0 … 300 mbar\n• 0.1 … 1.1 bar to 10 … 30 bar"
+  },
+  {
+    "id": 384,
+    "en": "Change-over contact (SPDT)"
+  },
+  {
+    "id": 385,
+    "en": "• Bellows / Process connection: Copper alloy CuSn6 per EN 1652 or stainless steel 1.4401\n• With NBR diaphragm: Process connection: free cutting steel EN1A per EN 10277-3, tin-plated"
+  },
+  {
+    "id": 386,
+    "en": "4 A / 10 A, AC 230 V"
+  },
+  {
+    "id": 387,
+    "en": "Pressure switch with adjustable switch differential"
+  },
+  {
+    "id": 388,
+    "en": "• -1 … 1.5 bar\n• 0.2 … 1.6 bar, 7 … 35 bar"
+  },
+  {
+    "id": 389,
+    "en": "Change-over contact (SPDT and DPDT)"
+  },
+  {
+    "id": 390,
+    "en": "• Measuring element: Stainless steel 316L\n• Process connection: Stainless steel 316L\n• Case: Aluminium"
+  },
+  {
+    "id": 391,
+    "en": "Up to AC 250 V/15 A"
+  },
+  {
+    "id": 392,
+    "en": "Miniature pressure switches"
+  },
+  {
+    "id": 393,
+    "en": "1 … 2.5 to 200 … 1,000 bar"
+  },
+  {
+    "id": 394,
+    "en": "1 x SPDT or DPDT"
+  },
+  {
+    "id": 395,
+    "en": "• AC 250 V/5 A\n• DC 24 V/5 A"
+  },
+  {
+    "id": 396,
+    "en": "Bourdon tube pressure switches"
+  },
+  {
+    "id": 397,
+    "en": "0 … 2.5 to 0 … 1,000 bar"
+  },
+  {
+    "id": 398,
+    "en": "1 or 2 x SPDT or 1 x DPDT"
+  },
+  {
+    "id": 399,
+    "en": "• AC 250 V/20 A\n• DC 24 V/2 A"
+  },
+  {
+    "id": 400,
+    "en": "Compact pressure switches"
+  },
+  {
+    "id": 401,
+    "en": "-1 … -0.2 to 200 … 1,000 bar"
+  },
+  {
+    "id": 402,
+    "en": "• AC 250 V/15 A\n• DC 24 V/2 A"
+  },
+  {
+    "id": 403,
+    "en": "Differential pressure switches"
+  },
+  {
+    "id": 404,
+    "en": "0 … 16 mbar to 0 … 40 bar, static pressure to 160 bar"
+  },
+  {
+    "id": 405,
+    "en": "Diaphragm pressure switches"
+  },
+  {
+    "id": 406,
+    "en": "0 … 16 mbar to 30 … 600 bar"
+  },
+  {
+    "id": 407,
+    "en": "Absolute pressure switches"
+  },
+  {
+    "id": 408,
+    "en": "0 … 25 mbar to 0 … 1.5 bar abs."
+  },
+  {
+    "id": 409,
+    "en": "Proof pressure"
+  },
+  {
+    "id": 410,
+    "en": "11 bar abs."
+  },
+  {
+    "id": 411,
+    "en": "Diaphragm seal system with pressure gauge, internal diaphragm and flange connection"
+  },
+  {
+    "id": 412,
+    "en": "Small flange process connections in the process industry"
+  },
+  {
+    "id": 413,
+    "en": "PN max."
+  },
+  {
+    "id": 414,
+    "en": "40 bar"
+  },
+  {
+    "id": 415,
+    "en": "System fill fluid"
+  },
+  {
+    "id": 416,
+    "en": "KN2 for general applications"
+  },
+  {
+    "id": 417,
+    "en": "Diaphragm seal system with pressure sensor, internal diaphragm and flange connection"
+  },
+  {
+    "id": 418,
+    "en": "Diaphragm seal system with pressure gauge, welded construction and threaded connection"
+  },
+  {
+    "id": 419,
+    "en": "Chemical, petrochemical and water treatment industries"
+  },
+  {
+    "id": 420,
+    "en": "60 bar"
+  },
+  {
+    "id": 421,
+    "en": "Diaphragm seal system with pressure sensor, welded construction and threaded connection"
+  },
+  {
+    "id": 422,
+    "en": "Needle valve and multiport needle valve"
+  },
+  {
+    "id": 423,
+    "en": "For shutting off pressure measuring instruments with threaded connection"
+  },
+  {
+    "id": 424,
+    "en": "Version"
+  },
+  {
+    "id": 425,
+    "en": "Nominal pressure"
+  },
+  {
+    "id": 426,
+    "en": "To PN 420 (6,000 psi) Option: to PN 680 (10,000 psi)"
+  },
+  {
+    "id": 427,
+    "en": "Monoflanges"
+  },
+  {
+    "id": 428,
+    "en": "For shutting off and venting pressure measuring instruments with flange connection"
+  },
+  {
+    "id": 429,
+    "en": "Flange connection per ASME or EN"
+  },
+  {
+    "id": 430,
+    "en": "To PN 420 (6,000 psi)"
+  },
+  {
+    "id": 431,
+    "en": "Monoblock as double block-and-bleed valve"
+  },
+  {
+    "id": 432,
+    "en": "Direct connection of pressure measuring instruments to pipelines or containers without interface valves. Control panels, lubrication systems, dry gas seals"
+  },
+  {
+    "id": 433,
+    "en": "Flange/threaded, flange/flange or threaded/threaded"
+  },
+  {
+    "id": 434,
+    "en": "IBF: class 150 … class 2,500, in line with ASME B16.5 PN 16 … PN 100, in line with EN 1092-1 IBM: 6,000 ... 10,000 psi (420 ... 690 bar)"
+  },
+  {
+    "id": 435,
+    "en": "Block-and-bleed valve, square or flat form"
+  },
+  {
+    "id": 436,
+    "en": "For shutting off and venting pressure measuring instruments with threaded connection"
+  },
+  {
+    "id": 437,
+    "en": "Block-and-bleed valve"
+  },
+  {
+    "id": 438,
+    "en": "Valve manifolds for differential pressure measuring instruments"
+  },
+  {
+    "id": 439,
+    "en": "For shutting off, pressure equalising as well as purging and venting differential pressure measuring instruments"
+  },
+  {
+    "id": 440,
+    "en": "3-way and 5-way valve"
+  },
+  {
+    "id": 441,
+    "en": "Stopcock and DIN shut-off valve"
+  },
+  {
+    "id": 442,
+    "en": "910.10: per DIN 16261, DIN 16262, DIN 16263 910.11: per DIN 16270, DIN 16271, DIN 16272"
+  },
+  {
+    "id": 443,
+    "en": "Brass, steel, stainless steel"
+  },
+  {
+    "id": 444,
+    "en": "910.10: to 25 bar 910.11: to 400 bar"
+  },
+  {
+    "id": 445,
+    "en": "Ball valve"
+  },
+  {
+    "id": 446,
+    "en": "First shut-off valve for pressure tap to local instrument installation, media distribution, drain or vent in pipelines"
+  },
+  {
+    "id": 447,
+    "en": "Process and instrument version"
+  },
+  {
+    "id": 448,
+    "en": "Stainless steel 316L"
+  },
+  {
+    "id": 449,
+    "en": "Syphons and connecting pipes"
+  },
+  {
+    "id": 450,
+    "en": "For the protection of pressure measuring instruments from excessive pulsation and heat"
+  },
+  {
+    "id": 451,
+    "en": "U-form, trumpet form, compact form, standard"
+  },
+  {
+    "id": 452,
+    "en": "Steel, stainless steel"
+  },
+  {
+    "id": 453,
+    "en": "To 160 bar"
+  },
+  {
+    "id": 454,
+    "en": "High-pressure needle valve"
+  },
+  {
+    "id": 455,
+    "en": "For injection systems, test benches, hydraulic power packs, blow-out protection, blasting/cutting with water, high-pressure cleaning"
+  },
+  {
+    "id": 456,
+    "en": "2-way valve, straight or angled bore; 3-way valve, one or two pressure connections"
+  },
+  {
+    "id": 457,
+    "en": "15,000 ... 60,000 psi [1,034 ... 4,136 bar] Option: To PN 680 (10,000 psi)"
+  },
+  {
+    "id": 458,
+    "en": "High-pressure fittings and accessories"
+  },
+  {
+    "id": 459,
+    "en": "For high-pressure applications in control panels, where the space is restricted, or test benches"
+  },
+  {
+    "id": 460,
+    "en": "Elbow fitting, T-fitting, cross fitting, bulkhead connector, anti-vibration gland, gland collar, threaded connection, nipple, sealing cap, blind plug"
+  },
+  {
+    "id": 461,
+    "en": "15,000 ... 60,000 psi [1,034 ... 4,136 bar]"
+  },
+  {
+    "id": 462,
+    "en": "Snubber"
+  },
+  {
+    "id": 463,
+    "en": "For the protection of pressure measuring instruments from pressure surges and pulsations"
+  },
+  {
+    "id": 464,
+    "en": "To 400 bar"
+  },
+  {
+    "id": 465,
+    "en": "LCD attachable indicators"
+  },
+  {
+    "id": 466,
+    "en": "Model A-IAI-1 intrinsically safe per ATEX"
+  },
+  {
+    "id": 467,
+    "en": "Control unit for inductive contacts model 831"
+  },
+  {
+    "id": 468,
+    "en": "For operating measuring instruments with inductive switch contacts"
+  },
+  {
+    "id": 469,
+    "en": "Preassembled cables M12 x 1"
+  },
+  {
+    "id": 470,
+    "en": "Connector"
+  },
+  {
+    "id": 471,
+    "en": "Circular connector M12 x 1, 4- and 5-pin"
+  },
+  {
+    "id": 472,
+    "en": "Straight and angled"
+  },
+  {
+    "id": 473,
+    "en": "Cable length"
+  },
+  {
+    "id": 474,
+    "en": "2, 5 or 10 m"
+  },
+  {
+    "id": 475,
+    "en": "IP67"
+  },
+  {
+    "id": 476,
+    "en": "Electronic pressure switch with display"
+  },
+  {
+    "id": 477,
+    "en": "≤ 0.5"
+  },
+  {
+    "id": 478,
+    "en": "• 0 … 0.4 to 0 … 1,000 bar\n• 0 … 0.4 to 0 … 25 bar abs.\n• -1 … 0 to -1 … +24 bar"
+  },
+  {
+    "id": 479,
+    "en": "• Condition monitoring via IO-Link\n• Reduction of variants\n• Easy installation, good readability\n• Parameterisation via 3 buttons"
+  },
+  {
+    "id": 480,
+    "en": "Pressure sensor with IO-Link and PNP or NPN switching output"
+  },
+  {
+    "id": 481,
+    "en": "≤ 0.5 or ≤ 1"
+  },
+  {
+    "id": 482,
+    "en": "• 0 … 0.4 to 0 … 1,000 bar\n• 0 … 0.4 to 0 … 25 bar abs.\n• 1 … 0 to -1 … +24 bar"
+  },
+  {
+    "id": 483,
+    "en": "• IO-Link version 1.1\n• Medium temperature to +125 °C\n• Multicolour 360° LED status display"
+  },
+  {
+    "id": 484,
+    "en": "≤ 1.0"
+  },
+  {
+    "id": 485,
+    "en": "• Good/Bad indication through parameterisable digital display (red/green)\n• Compact size enables easy installation in confined spaces\n• Optimised design makes OEM machine integration easier\n• Designed for rough demands to 50g shock and -40 … +125 °C [-40 … +257 °F]"
+  }
+]

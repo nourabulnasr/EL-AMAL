@@ -1,4 +1,10 @@
-# EL AMAL catalogue intake — 27 September 2026
+# EL AMAL real catalogue — publication checkpoint 28 September 2026
+
+All151 entries/model groups are now published in the hosted CMS, with151 original manufacturer images and560 bilingual specification rows. Stock follows Nour's confirmed main-page folder classification:90 in stock,61 out of stock.150 entries have verified manufacturer datasheets; M12 cable uses official catalogue page29. See ../../docs/catalogue-publication-2026-09-28.md and PROGRESS.md for verification and deployment status.
+
+New reproducible files: extract-official.py/official-extraction.json; prepare-content.mjs/content-source.json; translation-input.json/translations.json; verify-datasheets.mjs/datasheet-links.json; build-publication.mjs/publication.json. The trusted ../../scripts/import-catalogue.ts validates all coverage/assets, authenticates the owner, saves an affected-record backup and creates/updates by external ID; dry run is default. Original source photos/PDFs remain private under docs/source; extracted product PNGs are published under public/images/products. No exact SKU quantities or price claims.
+
+## Historical intake checkpoint (superseded by complete publication above)
 
 The 29 photographs contain **151 product cards/model groups: 90 in stock and 61 out of stock**. There are 17 in-stock photos and 12 out-of-stock photos. A card can contain several models or a family; this is not an exact product or SKU count.
 

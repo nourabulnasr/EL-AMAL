@@ -1,0 +1,2432 @@
+[
+  {
+    "id": 0,
+    "en": "Connection head with digital indicator",
+    "ar": "رأس توصيل مزوّد بمؤشر رقمي"
+  },
+  {
+    "id": 1,
+    "en": "Input",
+    "ar": "الدخل"
+  },
+  {
+    "id": 2,
+    "en": "4 … 20 mA",
+    "ar": "4 … 20 mA"
+  },
+  {
+    "id": 3,
+    "en": "Auxiliary power",
+    "ar": "التغذية المساعدة"
+  },
+  {
+    "id": 4,
+    "en": "Supply from the 4 … 20 mA current loop",
+    "ar": "التغذية من حلقة التيار 4 … 20 mA"
+  },
+  {
+    "id": 5,
+    "en": "Current-loop display with HART communication",
+    "ar": "شاشة حلقة تيار مع اتصال HART"
+  },
+  {
+    "id": 6,
+    "en": "Dimension",
+    "ar": "الأبعاد"
+  },
+  {
+    "id": 7,
+    "en": "150 x 127 x 127 mm",
+    "ar": "150 x 127 x 127 mm"
+  },
+  {
+    "id": 8,
+    "en": "Case",
+    "ar": "الغلاف"
+  },
+  {
+    "id": 9,
+    "en": "Aluminium, stainless steel",
+    "ar": "ألمنيوم، فولاذ مقاوم للصدأ"
+  },
+  {
+    "id": 10,
+    "en": "Special feature",
+    "ar": "ميزة خاصة"
+  },
+  {
+    "id": 11,
+    "en": "• Adjustment of display range and unit via HART® communication\n• Model DIH52 additionally suitable for multidrop operation and with local master function",
+    "ar": "• ضبط نطاق العرض والوحدة عبر اتصال HART®\n• الطراز DIH52 مناسب أيضًا للتشغيل متعدد النقاط، مع وظيفة الجهاز الرئيسي المحلي"
+  },
+  {
+    "id": 12,
+    "en": "Approval",
+    "ar": "الاعتماد"
+  },
+  {
+    "id": 13,
+    "en": "• Intrinsically safe\n• Flameproof enclosure",
+    "ar": "• آمن جوهريًا\n• غلاف مقاوم للهب"
+  },
+  {
+    "id": 14,
+    "en": "Temperature probe with digital indicator",
+    "ar": "مسبار حرارة مزوّد بمؤشر رقمي"
+  },
+  {
+    "id": 15,
+    "en": "Measuring range",
+    "ar": "نطاق القياس"
+  },
+  {
+    "id": 16,
+    "en": "-40 … +120 °C",
+    "ar": "-40 … +120 °C"
+  },
+  {
+    "id": 17,
+    "en": "• Dust and waterproof case, IP68\n• Battery or solar operation\n• Extremely long service life",
+    "ar": "• غلاف محكم ضد الغبار والماء، IP68\n• يعمل بالبطارية أو بالطاقة الشمسية\n• عمر خدمة طويل للغاية"
+  },
+  {
+    "id": 18,
+    "en": "Panel-mounted current-loop display",
+    "ar": "شاشة حلقة تيار للتركيب على لوحة"
+  },
+  {
+    "id": 19,
+    "en": "4 … 20 mA, 2-wire",
+    "ar": "4 … 20 mA، توصيل بـ 2 سلك"
+  },
+  {
+    "id": 20,
+    "en": "Alarm output",
+    "ar": "خرج الإنذار"
+  },
+  {
+    "id": 21,
+    "en": "2 electronic contacts (optional)",
+    "ar": "2 نقطة تلامس إلكترونية (اختياري)"
+  },
+  {
+    "id": 22,
+    "en": "Wall-mounting case (optional)",
+    "ar": "غلاف للتركيب على الحائط (اختياري)"
+  },
+  {
+    "id": 23,
+    "en": "Panel-mounted digital indicator",
+    "ar": "مؤشر رقمي للتركيب على لوحة"
+  },
+  {
+    "id": 24,
+    "en": "Multi-function input for resistance thermometers, thermocouples and standard signals",
+    "ar": "دخل متعدد الوظائف لمقاييس الحرارة بالمقاومة والمزدوجات الحرارية والإشارات القياسية"
+  },
+  {
+    "id": 25,
+    "en": "2 electronic contacts",
+    "ar": "2 نقطة تلامس إلكترونية"
+  },
+  {
+    "id": 26,
+    "en": "DC 9 … 28 V",
+    "ar": "DC 9 … 28 V"
+  },
+  {
+    "id": 27,
+    "en": "Standard signals",
+    "ar": "إشارات قياسية"
+  },
+  {
+    "id": 28,
+    "en": "2 relays",
+    "ar": "2 مرحل"
+  },
+  {
+    "id": 29,
+    "en": "• Integrated transmitter power supply\n• Wall-mounting case (optional)",
+    "ar": "• تغذية مدمجة للمرسِل\n• غلاف للتركيب على الحائط (اختياري)"
+  },
+  {
+    "id": 30,
+    "en": "AC 230 V or AC 115 V",
+    "ar": "AC 230 V أو AC 115 V"
+  },
+  {
+    "id": 31,
+    "en": "• Multi-function input for resistance thermometers, thermocouples and standard signals\n• Alternatively double input for standard signals with calculation function (+ - x /) for two transmitters",
+    "ar": "• دخل متعدد الوظائف لمقاييس الحرارة بالمقاومة والمزدوجات الحرارية والإشارات القياسية\n• أو دخل مزدوج للإشارات القياسية مع وظيفة حسابية (+ - x /) لمرسِلَين"
+  },
+  {
+    "id": 32,
+    "en": "2 or 4 relays (optional)",
+    "ar": "2 أو 4 مرحلات (اختياري)"
+  },
+  {
+    "id": 33,
+    "en": "• Integrated transmitter power supply\n• Analogue output signal (optional)",
+    "ar": "• تغذية مدمجة للمرسِل\n• إشارة خرج تناظرية (اختياري)"
+  },
+  {
+    "id": 34,
+    "en": "• AC/DC 100 … 240 V\n• DC 10 … 40 V, AC 18 … 30 V",
+    "ar": "• AC/DC 100 … 240 V\n• DC 10 … 40 V, AC 18 … 30 V"
+  },
+  {
+    "id": 35,
+    "en": "Thermocouple measuring insert for TC10-L",
+    "ar": "عنصر قياس داخلي لمزدوج حراري للطراز TC10-L"
+  },
+  {
+    "id": 36,
+    "en": "Sensor element",
+    "ar": "عنصر الاستشعار"
+  },
+  {
+    "id": 37,
+    "en": "Types K, J, E, N or T",
+    "ar": "الأنواع K، J، E، N أو T"
+  },
+  {
+    "id": 38,
+    "en": "-40 … +1,200 °C, -40 … +2,192 °F",
+    "ar": "-40 … +1,200 °C, -40 … +2,192 °F"
+  },
+  {
+    "id": 39,
+    "en": "Measuring location",
+    "ar": "موضع القياس"
+  },
+  {
+    "id": 40,
+    "en": "Ungrounded or grounded",
+    "ar": "وصلة قياس معزولة أو مؤرضة"
+  },
+  {
+    "id": 41,
+    "en": "Measuring insert for process thermocouple",
+    "ar": "عنصر قياس داخلي لمزدوج حراري للعمليات الصناعية"
+  },
+  {
+    "id": 42,
+    "en": "Types K, J, N or T",
+    "ar": "الأنواع K، J، N أو T"
+  },
+  {
+    "id": 43,
+    "en": "Thermocouple with flameproof enclosure",
+    "ar": "مزدوج حراري بغلاف مقاوم للهب"
+  },
+  {
+    "id": 44,
+    "en": "Process thermocouple for additional thermowell",
+    "ar": "مزدوج حراري للعمليات الصناعية، للاستخدام مع غلاف حماية حراري إضافي"
+  },
+  {
+    "id": 45,
+    "en": "Option",
+    "ar": "خيار"
+  },
+  {
+    "id": 46,
+    "en": "Ex i, Ex d",
+    "ar": "Ex i, Ex d"
+  },
+  {
+    "id": 47,
+    "en": "Process thermocouple basic module",
+    "ar": "وحدة أساسية لمزدوج حراري للعمليات الصناعية"
+  },
+  {
+    "id": 48,
+    "en": "Thermocouple measuring insert",
+    "ar": "عنصر قياس داخلي لمزدوج حراري"
+  },
+  {
+    "id": 49,
+    "en": "Threaded miniature thermocouple",
+    "ar": "مزدوج حراري مصغّر بوصلة ملولبة"
+  },
+  {
+    "id": 50,
+    "en": "-40 … +600 °C, -40 … +1,112 °F",
+    "ar": "-40 … +600 °C, -40 … +1,112 °F"
+  },
+  {
+    "id": 51,
+    "en": "Process connection",
+    "ar": "وصلة العملية"
+  },
+  {
+    "id": 52,
+    "en": "Mounting thread",
+    "ar": "سن لولبي للتركيب"
+  },
+  {
+    "id": 53,
+    "en": "Thermocouple for additional thermowell",
+    "ar": "مزدوج حراري للاستخدام مع غلاف حماية حراري إضافي"
+  },
+  {
+    "id": 54,
+    "en": "Flanged thermocouple with protection tube",
+    "ar": "مزدوج حراري بفلنجة وأنبوب حماية"
+  },
+  {
+    "id": 55,
+    "en": "Flange",
+    "ar": "فلنجة"
+  },
+  {
+    "id": 56,
+    "en": "Threaded thermocouple with protection tube",
+    "ar": "مزدوج حراري بوصلة ملولبة وأنبوب حماية"
+  },
+  {
+    "id": 57,
+    "en": "Thermocouple without thermowell",
+    "ar": "مزدوج حراري دون غلاف حماية حراري"
+  },
+  {
+    "id": 58,
+    "en": "Tubeskin thermocouple assembly, TEFRACTO-PAD",
+    "ar": "مجموعة مزدوج حراري لسطح الأنبوب، TEFRACTO-PAD"
+  },
+  {
+    "id": 59,
+    "en": "Types K, J, N, E",
+    "ar": "الأنواع K، J، N، E"
+  },
+  {
+    "id": 60,
+    "en": "0 ... 1,260 °C, 32 ... 2,300 °F",
+    "ar": "0 ... 1,260 °C, 32 ... 2,300 °F"
+  },
+  {
+    "id": 61,
+    "en": "Surface mounting, welded/shielded",
+    "ar": "تركيب سطحي، ملحوم/مزوّد بدرع حماية"
+  },
+  {
+    "id": 62,
+    "en": "Tubeskin thermocouple assembly, eTEFRACTO-PAD",
+    "ar": "مجموعة مزدوج حراري لسطح الأنبوب، eTEFRACTO-PAD"
+  },
+  {
+    "id": 63,
+    "en": "Surface mounting, extractable/shielded",
+    "ar": "تركيب سطحي، قابل للسحب/مزوّد بدرع حماية"
+  },
+  {
+    "id": 64,
+    "en": "Tubeskin thermocouple assembly, V-PAD",
+    "ar": "مجموعة مزدوج حراري لسطح الأنبوب، V-PAD"
+  },
+  {
+    "id": 65,
+    "en": "-25 … +400 °C, -13 … + 752 °F",
+    "ar": "-25 … +400 °C, -13 … + 752 °F"
+  },
+  {
+    "id": 66,
+    "en": "Ungrounded",
+    "ar": "وصلة قياس معزولة"
+  },
+  {
+    "id": 67,
+    "en": "Surface mounting, welded",
+    "ar": "تركيب سطحي، ملحوم"
+  },
+  {
+    "id": 68,
+    "en": "Linear sensor for hot-spot detection",
+    "ar": "حساس خطي للكشف عن البقع الساخنة"
+  },
+  {
+    "id": 69,
+    "en": "Type K thermocouple wires",
+    "ar": "أسلاك مزدوج حراري من النوع K"
+  },
+  {
+    "id": 70,
+    "en": "0 … 400 °C, 32 … 752 °F",
+    "ar": "0 … 400 °C, 32 … 752 °F"
+  },
+  {
+    "id": 71,
+    "en": "• Continuous monitoring\n• Self-restoring\n• Passive element",
+    "ar": "• مراقبة مستمرة\n• استعادة ذاتية للحالة الأصلية\n• عنصر سلبي"
+  },
+  {
+    "id": 72,
+    "en": "High-temperature thermocouple",
+    "ar": "مزدوج حراري لدرجات الحرارة المرتفعة"
+  },
+  {
+    "id": 73,
+    "en": "Types K, J, E, N, S, R or B",
+    "ar": "الأنواع K، J، E، N، S، R أو B"
+  },
+  {
+    "id": 74,
+    "en": "0 … 1,700 °C, 32 … 3,092 °F",
+    "ar": "0 … 1,700 °C, 32 … 3,092 °F"
+  },
+  {
+    "id": 75,
+    "en": "Thermowell",
+    "ar": "غلاف حماية حراري"
+  },
+  {
+    "id": 76,
+    "en": "C610, C799",
+    "ar": "C610, C799"
+  },
+  {
+    "id": 77,
+    "en": "Types S, R, B, K, N or J",
+    "ar": "الأنواع S، R، B، K، N أو J"
+  },
+  {
+    "id": 78,
+    "en": "Stop flange, threaded bushing",
+    "ar": "فلنجة تثبيت، جلبة ملولبة"
+  },
+  {
+    "id": 79,
+    "en": "Calitum sapphire-design thermocouple",
+    "ar": "مزدوج حراري Calitum بتصميم من الياقوت"
+  },
+  {
+    "id": 80,
+    "en": "Sapphire (monocrystalline)",
+    "ar": "ياقوت (أحادي البلورة)"
+  },
+  {
+    "id": 81,
+    "en": "Thermocouple for flue-gas measurements",
+    "ar": "مزدوج حراري لقياس غازات المداخن"
+  },
+  {
+    "id": 82,
+    "en": "Types K, N or J",
+    "ar": "الأنواع K، N أو J"
+  },
+  {
+    "id": 83,
+    "en": "0 … 1,200 °C, 32 … 2,192 °F",
+    "ar": "0 … 1,200 °C, 32 … 2,192 °F"
+  },
+  {
+    "id": 84,
+    "en": "Sapphire-design thermocouple",
+    "ar": "مزدوج حراري بتصميم من الياقوت"
+  },
+  {
+    "id": 85,
+    "en": "Types S, R, B",
+    "ar": "الأنواع S، R، B"
+  },
+  {
+    "id": 86,
+    "en": "Highest safety thanks to 2-chamber system",
+    "ar": "أعلى مستوى من السلامة بفضل نظام مكوّن من 2 حجرة"
+  },
+  {
+    "id": 87,
+    "en": "High-pressure thermocouple",
+    "ar": "مزدوج حراري للضغط المرتفع"
+  },
+  {
+    "id": 88,
+    "en": "0 … 350 °C, 32 … 662 °F",
+    "ar": "0 … 350 °C, 32 … 662 °F"
+  },
+  {
+    "id": 89,
+    "en": "Measuring tip",
+    "ar": "طرف القياس"
+  },
+  {
+    "id": 90,
+    "en": "Various high-pressure connections",
+    "ar": "وصلات متنوعة للضغط المرتفع"
+  },
+  {
+    "id": 91,
+    "en": "Flexible multipoint thermometer for thermowells/protection tubes",
+    "ar": "مقياس حرارة مرن متعدد النقاط لأغلفة الحماية الحرارية/أنابيب الحماية"
+  },
+  {
+    "id": 92,
+    "en": "Types K, J, E or N",
+    "ar": "الأنواع K، J، E أو N"
+  },
+  {
+    "id": 93,
+    "en": "0 ... 1,200 °C, 32 ... 2,192 °F",
+    "ar": "0 ... 1,200 °C, 32 ... 2,192 °F"
+  },
+  {
+    "id": 94,
+    "en": "Various process connections",
+    "ar": "وصلات متنوعة للعملية"
+  },
+  {
+    "id": 95,
+    "en": "Multipoint thermocouple",
+    "ar": "مزدوج حراري متعدد النقاط"
+  },
+  {
+    "id": 96,
+    "en": "Flexible multipoint thermocouple",
+    "ar": "مزدوج حراري مرن متعدد النقاط"
+  },
+  {
+    "id": 97,
+    "en": "Resistance thermometer measuring insert, MIMS cable",
+    "ar": "عنصر قياس داخلي لمقياس حرارة بالمقاومة، بكابل MIMS"
+  },
+  {
+    "id": 98,
+    "en": "1 x Pt100, 2 x Pt100",
+    "ar": "1 x Pt100, 2 x Pt100"
+  },
+  {
+    "id": 99,
+    "en": "-196 … +600 °C, -320 … +1,112 °F",
+    "ar": "-196 … +600 °C, -320 … +1,112 °F"
+  },
+  {
+    "id": 100,
+    "en": "Connection method",
+    "ar": "طريقة التوصيل"
+  },
+  {
+    "id": 101,
+    "en": "2-, 3- and 4-wire",
+    "ar": "توصيل بـ 2 أو 3 أو 4 أسلاك"
+  },
+  {
+    "id": 102,
+    "en": "Measuring insert",
+    "ar": "عنصر القياس الداخلي"
+  },
+  {
+    "id": 103,
+    "en": "MIMS cable",
+    "ar": "كابل MIMS"
+  },
+  {
+    "id": 104,
+    "en": "Threaded miniature resistance thermometer",
+    "ar": "مقياس حرارة مصغّر بالمقاومة بوصلة ملولبة"
+  },
+  {
+    "id": 105,
+    "en": "-196 … +500 °C, -320 … +932 °F",
+    "ar": "-196 … +500 °C, -320 … +932 °F"
+  },
+  {
+    "id": 106,
+    "en": "Resistance thermometer for additional thermowell",
+    "ar": "مقياس حرارة بالمقاومة للاستخدام مع غلاف حماية حراري إضافي"
+  },
+  {
+    "id": 107,
+    "en": "Flanged resistance thermometer with protection tube",
+    "ar": "مقياس حرارة بالمقاومة بفلنجة وأنبوب حماية"
+  },
+  {
+    "id": 108,
+    "en": "Threaded resistance thermometer with protection tube",
+    "ar": "مقياس حرارة بالمقاومة بوصلة ملولبة وأنبوب حماية"
+  },
+  {
+    "id": 109,
+    "en": "Resistance thermometer without thermowell",
+    "ar": "مقياس حرارة بالمقاومة دون غلاف حماية حراري"
+  },
+  {
+    "id": 110,
+    "en": "Resistance thermometer measuring insert, tubular design",
+    "ar": "عنصر قياس داخلي لمقياس حرارة بالمقاومة، بتصميم أنبوبي"
+  },
+  {
+    "id": 111,
+    "en": "-50 … +250 °C, -58 … +482 °F",
+    "ar": "-50 … +250 °C, -58 … +482 °F"
+  },
+  {
+    "id": 112,
+    "en": "Tubular design",
+    "ar": "تصميم أنبوبي"
+  },
+  {
+    "id": 113,
+    "en": "Measuring insert for process resistance thermometer TR12-B",
+    "ar": "عنصر قياس داخلي لمقياس حرارة بالمقاومة للعمليات الصناعية TR12-B"
+  },
+  {
+    "id": 114,
+    "en": "Measuring insert for installation in TR10-L",
+    "ar": "عنصر قياس داخلي للتركيب في TR10-L"
+  },
+  {
+    "id": 115,
+    "en": "Process resistance thermometer for additional thermowell",
+    "ar": "مقياس حرارة بالمقاومة للعمليات الصناعية، للاستخدام مع غلاف حماية حراري إضافي"
+  },
+  {
+    "id": 116,
+    "en": "-196 … +600 °C, -320…+1,112 °F",
+    "ar": "-196 … +600 °C, -320…+1,112 °F"
+  },
+  {
+    "id": 117,
+    "en": "Process resistance thermometer basic module",
+    "ar": "وحدة أساسية لمقياس حرارة بالمقاومة للعمليات الصناعية"
+  },
+  {
+    "id": 118,
+    "en": "Resistance thermometer with flameproof enclosure",
+    "ar": "مقياس حرارة بالمقاومة بغلاف مقاوم للهب"
+  },
+  {
+    "id": 119,
+    "en": "Cable thermocouple",
+    "ar": "مزدوج حراري بكابل"
+  },
+  {
+    "id": 120,
+    "en": "Cable",
+    "ar": "الكابل"
+  },
+  {
+    "id": 121,
+    "en": "Silicone, PTFE/PFA, fibreglass",
+    "ar": "سيليكون، PTFE/PFA، ألياف زجاجية"
+  },
+  {
+    "id": 122,
+    "en": "Surface thermocouple",
+    "ar": "مزدوج حراري سطحي"
+  },
+  {
+    "id": 123,
+    "en": "Surface mounting",
+    "ar": "تركيب سطحي"
+  },
+  {
+    "id": 124,
+    "en": "Hot-runner thermocouple",
+    "ar": "مزدوج حراري لقنوات الحقن الساخنة"
+  },
+  {
+    "id": 125,
+    "en": "Types J or K",
+    "ar": "النوعان J أو K"
+  },
+  {
+    "id": 126,
+    "en": "-25 … +400 °C, -13 … +752 °F",
+    "ar": "-25 … +400 °C, -13 … +752 °F"
+  },
+  {
+    "id": 127,
+    "en": "• Probe diameter 0.5 … 3.0 mm\n• Plastic-moulded transition",
+    "ar": "• قطر المسبار 0.5 … 3.0 mm\n• وصلة انتقال مصبوبة بالبلاستيك"
+  },
+  {
+    "id": 128,
+    "en": "Bayonet thermocouple",
+    "ar": "مزدوج حراري بتثبيت حربة"
+  },
+  {
+    "id": 129,
+    "en": "Types K, J, N, E or T",
+    "ar": "الأنواع K، J، N، E أو T"
+  },
+  {
+    "id": 130,
+    "en": "• Single and dual thermocouple\n• Explosion-protected versions",
+    "ar": "• مزدوج حراري مفرد أو مزدوج\n• إصدارات محمية من الانفجار"
+  },
+  {
+    "id": 131,
+    "en": "Thermocouple for plastics machinery",
+    "ar": "مزدوج حراري لآلات البلاستيك"
+  },
+  {
+    "id": 132,
+    "en": "• Various process connections\n• Connection lead fibreglass with stainless steel braid",
+    "ar": "• وصلات متنوعة للعملية\n• كابل توصيل من الألياف الزجاجية بجديلة من الفولاذ المقاوم للصدأ"
+  },
+  {
+    "id": 133,
+    "en": "Bayonet resistance thermometer",
+    "ar": "مقياس حرارة بالمقاومة بتثبيت حربة"
+  },
+  {
+    "id": 134,
+    "en": "-196 … +400 °C, -320 … +752 °F",
+    "ar": "-196 … +400 °C, -320 … +752 °F"
+  },
+  {
+    "id": 135,
+    "en": "Bayonet",
+    "ar": "تثبيت حربة"
+  },
+  {
+    "id": 136,
+    "en": "DiwiTherm with digital indicator",
+    "ar": "DiwiTherm مزوّد بمؤشر رقمي"
+  },
+  {
+    "id": 137,
+    "en": "-40.0 … +199.9 °C, +200 … +450 °C with automatic measuring range changeover (autorange)",
+    "ar": "-40.0 … +199.9 °C، +200 … +450 °C مع التبديل التلقائي لنطاق القياس"
+  },
+  {
+    "id": 138,
+    "en": "Power supply",
+    "ar": "مصدر التغذية"
+  },
+  {
+    "id": 139,
+    "en": "Battery operation",
+    "ar": "تشغيل بالبطارية"
+  },
+  {
+    "id": 140,
+    "en": "Resistance thermometer with spring-loaded tip",
+    "ar": "مقياس حرارة بالمقاومة بطرف محمّل بنابض"
+  },
+  {
+    "id": 141,
+    "en": "Compression fitting",
+    "ar": "وصلة ضغط"
+  },
+  {
+    "id": 142,
+    "en": "Resistance thermometer for flue-gas measurements",
+    "ar": "مقياس حرارة بالمقاومة لقياس غازات المداخن"
+  },
+  {
+    "id": 143,
+    "en": "Metal",
+    "ar": "معدن"
+  },
+  {
+    "id": 144,
+    "en": "Surface resistance thermometer",
+    "ar": "مقياس حرارة سطحي بالمقاومة"
+  },
+  {
+    "id": 145,
+    "en": "Indoor and outdoor resistance thermometer",
+    "ar": "مقياس حرارة بالمقاومة للاستخدام الداخلي والخارجي"
+  },
+  {
+    "id": 146,
+    "en": "-40 … +80 °C, -40 … +176 °F",
+    "ar": "-40 … +80 °C, -40 … +176 °F"
+  },
+  {
+    "id": 147,
+    "en": "Wall mounting",
+    "ar": "تركيب على الحائط"
+  },
+  {
+    "id": 148,
+    "en": "Multipoint resistance thermometer",
+    "ar": "مقياس حرارة بالمقاومة متعدد النقاط"
+  },
+  {
+    "id": 149,
+    "en": "Sensor",
+    "ar": "الحساس"
+  },
+  {
+    "id": 150,
+    "en": "Pt100",
+    "ar": "Pt100"
+  },
+  {
+    "id": 151,
+    "en": "Threaded temperature probe with plug connection",
+    "ar": "مسبار حرارة بوصلة ملولبة وقابس توصيل"
+  },
+  {
+    "id": 152,
+    "en": "-50 … +250 °C",
+    "ar": "-50 … +250 °C"
+  },
+  {
+    "id": 153,
+    "en": "Measuring element",
+    "ar": "عنصر القياس"
+  },
+  {
+    "id": 154,
+    "en": "Pt1000, Pt100, NTC, KTY",
+    "ar": "Pt1000, Pt100, NTC, KTY"
+  },
+  {
+    "id": 155,
+    "en": "• Very high vibration resistance\n• Compact design\n• Electrical connection via plug connection",
+    "ar": "• مقاومة عالية جدًا للاهتزاز\n• تصميم مدمج\n• توصيل كهربائي عبر قابس"
+  },
+  {
+    "id": 156,
+    "en": "Cable temperature probe for heating and refrigeration",
+    "ar": "مسبار حرارة بكابل للتدفئة والتبريد"
+  },
+  {
+    "id": 157,
+    "en": "-50 … +105 °C",
+    "ar": "-50 … +105 °C"
+  },
+  {
+    "id": 158,
+    "en": "Pt100, Pt1000, NTC",
+    "ar": "Pt100, Pt1000, NTC"
+  },
+  {
+    "id": 159,
+    "en": "• Permanently protected against condensation\n• Cost savings thanks to quick assembly\n• Delivery reliability, even for large orders",
+    "ar": "• حماية دائمة من التكاثف\n• خفض التكاليف بفضل التجميع السريع\n• موثوقية التسليم حتى للطلبات الكبيرة"
+  },
+  {
+    "id": 160,
+    "en": "Threaded temperature probe with connection lead",
+    "ar": "مسبار حرارة بوصلة ملولبة وكابل توصيل"
+  },
+  {
+    "id": 161,
+    "en": "-50 … +260 °C",
+    "ar": "-50 … +260 °C"
+  },
+  {
+    "id": 162,
+    "en": "Pt100, Pt1000, NTC, KTY, Ni1000",
+    "ar": "Pt100, Pt1000, NTC, KTY, Ni1000"
+  },
+  {
+    "id": 163,
+    "en": "• High vibration resistance\n• Connection lead made of PVC, silicone, PTFE\n• Brass or stainless steel thermowell",
+    "ar": "• مقاومة عالية للاهتزاز\n• كابل توصيل من PVC أو السيليكون أو PTFE\n• غلاف حماية حراري من النحاس الأصفر أو الفولاذ المقاوم للصدأ"
+  },
+  {
+    "id": 164,
+    "en": "Cable temperature probe for tubeskin measurement",
+    "ar": "مسبار حرارة بكابل لقياس حرارة سطح الأنبوب"
+  },
+  {
+    "id": 165,
+    "en": "-50 … +200 °C",
+    "ar": "-50 … +200 °C"
+  },
+  {
+    "id": 166,
+    "en": "Pt100, Pt1000, NTC, KTY",
+    "ar": "Pt100, Pt1000, NTC, KTY"
+  },
+  {
+    "id": 167,
+    "en": "• Connection lead from PVC, silicone\n• Aluminium probe sleeve\n• Protected against dust and water jets, IP65\n• With quick-mounting bracket",
+    "ar": "• كابل توصيل من PVC أو السيليكون\n• غلاف المسبار من الألمنيوم\n• حماية من الغبار ونفثات الماء، IP65\n• مع حامل سريع التركيب"
+  },
+  {
+    "id": 168,
+    "en": "Temperature probe for outdoor temperature measurement",
+    "ar": "مسبار حرارة لقياس درجة الحرارة الخارجية"
+  },
+  {
+    "id": 169,
+    "en": "-40 … +100 °C",
+    "ar": "-40 … +100 °C"
+  },
+  {
+    "id": 170,
+    "en": "• Smallest case design, UV-resistant\n• Protected against dust and water jets, IP65\n• Clip-on sun protector",
+    "ar": "• أصغر تصميم للغلاف، مقاوم للأشعة فوق البنفسجية\n• حماية من الغبار ونفثات الماء، IP65\n• واقٍ من الشمس يُثبّت بالمشبك"
+  },
+  {
+    "id": 171,
+    "en": "Cable temperature probe for general industrial applications",
+    "ar": "مسبار حرارة بكابل للتطبيقات الصناعية العامة"
+  },
+  {
+    "id": 172,
+    "en": "• Connection lead made of PVC, silicone, PTFE\n• Probe sleeve from stainless steel\n• Protected against dust and water jets, IP65",
+    "ar": "• كابل توصيل من PVC أو السيليكون أو PTFE\n• غلاف المسبار من الفولاذ المقاوم للصدأ\n• حماية من الغبار ونفثات الماء، IP65"
+  },
+  {
+    "id": 173,
+    "en": "Digital temperature transmitter for resistance sensors",
+    "ar": "مرسِل حرارة رقمي لحساسات المقاومة"
+  },
+  {
+    "id": 174,
+    "en": "Resistance thermometers, potentiometers",
+    "ar": "مقاييس حرارة بالمقاومة، مقاييس جهد"
+  },
+  {
+    "id": 175,
+    "en": "Accuracy",
+    "ar": "الدقة"
+  },
+  {
+    "id": 176,
+    "en": "< 0.1 %",
+    "ar": "< 0.1 %"
+  },
+  {
+    "id": 177,
+    "en": "Output",
+    "ar": "الخرج"
+  },
+  {
+    "id": 178,
+    "en": "Quick and simple configuration",
+    "ar": "تهيئة سريعة وبسيطة"
+  },
+  {
+    "id": 179,
+    "en": "Digital temperature transmitter with HART protocol",
+    "ar": "مرسِل حرارة رقمي ببروتوكول HART"
+  },
+  {
+    "id": 180,
+    "en": "Resistance thermometers, thermocouples, potentiometers",
+    "ar": "مقاييس حرارة بالمقاومة، مزدوجات حرارية، مقاييس جهد"
+  },
+  {
+    "id": 181,
+    "en": "4 … 20 mA, HART protocol",
+    "ar": "4 … 20 mA، بروتوكول HART"
+  },
+  {
+    "id": 182,
+    "en": "TÜV-certified SIL version (full assessment)",
+    "ar": "إصدار SIL معتمد من TÜV (تقييم كامل)"
+  },
+  {
+    "id": 183,
+    "en": "Digital temperature transmitter for thermocouples",
+    "ar": "مرسِل حرارة رقمي للمزدوجات الحرارية"
+  },
+  {
+    "id": 184,
+    "en": "All commercially available thermocouples",
+    "ar": "جميع المزدوجات الحرارية المتاحة تجاريًا"
+  },
+  {
+    "id": 185,
+    "en": "Typical < 2 K",
+    "ar": "القيمة النموذجية < 2 K"
+  },
+  {
+    "id": 186,
+    "en": "Analogue temperature transmitter",
+    "ar": "مرسِل حرارة تناظري"
+  },
+  {
+    "id": 187,
+    "en": "Resistance thermometers, thermocouples",
+    "ar": "مقاييس حرارة بالمقاومة، مزدوجات حرارية"
+  },
+  {
+    "id": 188,
+    "en": "< 0.5 or < 1 %",
+    "ar": "< 0.5 أو < 1 %"
+  },
+  {
+    "id": 189,
+    "en": "0 … 10 V, 4 ... 20 mA",
+    "ar": "0 … 10 V, 4 ... 20 mA"
+  },
+  {
+    "id": 190,
+    "en": "Fixed measuring range",
+    "ar": "نطاق قياس ثابت"
+  },
+  {
+    "id": 191,
+    "en": "Universal use for 1 or 2 sensors: resistance thermometers (up to 2 x 3-wire), thermocouples, potentiometers, reed chains",
+    "ar": "استخدام شامل مع 1 أو 2 حساس: مقاييس حرارة بالمقاومة (حتى 2 x توصيل بـ 3 أسلاك)، ومزدوجات حرارية، ومقاييس جهد، وسلاسل مفاتيح ريد"
+  },
+  {
+    "id": 192,
+    "en": "TÜV-certified SIL version (full assessment), True Drift Detection technology",
+    "ar": "إصدار SIL معتمد من TÜV (تقييم كامل)، وتقنية الكشف عن الانجراف الفعلي"
+  },
+  {
+    "id": 193,
+    "en": "HART field temperature transmitter",
+    "ar": "مرسِل حرارة ميداني ببروتوكول HART"
+  },
+  {
+    "id": 194,
+    "en": "PC configurable",
+    "ar": "قابل للتهيئة عبر الحاسوب"
+  },
+  {
+    "id": 195,
+    "en": "Electronic temperature switch with display",
+    "ar": "مفتاح حرارة إلكتروني مزوّد بشاشة"
+  },
+  {
+    "id": 196,
+    "en": "-20 … +80 °C, -20 … +120 °C, 0 … 150 °C",
+    "ar": "-20 … +80 °C, -20 … +120 °C, 0 … 150 °C"
+  },
+  {
+    "id": 197,
+    "en": "• Switching outputs PNP or NPN\n• 4 … 20 mA\n• 0 … 10 V\n• IO-Link 1.1",
+    "ar": "• مخارج تبديل PNP أو NPN\n• 4 … 20 mA\n• 0 … 10 V\n• IO-Link 1.1"
+  },
+  {
+    "id": 198,
+    "en": "Mini temperature switches",
+    "ar": "مفاتيح حرارة مصغّرة"
+  },
+  {
+    "id": 199,
+    "en": "Setting range",
+    "ar": "نطاق الضبط"
+  },
+  {
+    "id": 200,
+    "en": "-15 … +20 to 180 … 250 °C",
+    "ar": "-15 … +20 إلى 180 … 250 °C"
+  },
+  {
+    "id": 201,
+    "en": "Ignition protection type",
+    "ar": "نوع الحماية من الاشتعال"
+  },
+  {
+    "id": 202,
+    "en": "Ex ia or Ex d",
+    "ar": "Ex ia أو Ex d"
+  },
+  {
+    "id": 203,
+    "en": "Switch",
+    "ar": "المفتاح"
+  },
+  {
+    "id": 204,
+    "en": "1 x SPDT",
+    "ar": "1 x SPDT"
+  },
+  {
+    "id": 205,
+    "en": "Switching power",
+    "ar": "قدرة التبديل"
+  },
+  {
+    "id": 206,
+    "en": "AC 220 V/5 A DC 24 V/5 A",
+    "ar": "AC 220 V/5 A DC 24 V/5 A"
+  },
+  {
+    "id": 207,
+    "en": "Bimetal temperature switch for switching voltages to 48 V",
+    "ar": "مفتاح حرارة ثنائي المعدن لجهود تبديل حتى 48 V"
+  },
+  {
+    "id": 208,
+    "en": "Switching temperature",
+    "ar": "درجة حرارة التبديل"
+  },
+  {
+    "id": 209,
+    "en": "50 … 155 °C, fixed",
+    "ar": "50 … 155 °C، ثابتة"
+  },
+  {
+    "id": 210,
+    "en": "• Switching voltage to AC 48 V, DC 24 V\n• Compact version: Normally closed (NC), normally open (NO)\n• Electr. connection via plug connection",
+    "ar": "• جهد تبديل حتى AC 48 V، DC 24 V\n• إصدار مدمج: مغلق عادةً (NC)، مفتوح عادةً (NO)\n• توصيل كهربائي عبر قابس"
+  },
+  {
+    "id": 211,
+    "en": "Compact temperature switches",
+    "ar": "مفاتيح حرارة مدمجة"
+  },
+  {
+    "id": 212,
+    "en": "-30 … +10 to 160 … 250 °C",
+    "ar": "-30 … +10 إلى 160 … 250 °C"
+  },
+  {
+    "id": 213,
+    "en": "1 x SPDT or 1 x DPDT",
+    "ar": "1 x SPDT أو 1 x DPDT"
+  },
+  {
+    "id": 214,
+    "en": "AC 250 V/15 A DC 24 V/2 A",
+    "ar": "AC 250 V/15 A DC 24 V/2 A"
+  },
+  {
+    "id": 215,
+    "en": "Bimetal temperature switch for switching voltages to 250 V",
+    "ar": "مفتاح حرارة ثنائي المعدن لجهود تبديل حتى 250 V"
+  },
+  {
+    "id": 216,
+    "en": "50 … 130 °C, fixed",
+    "ar": "50 … 130 °C، ثابتة"
+  },
+  {
+    "id": 217,
+    "en": "• Switching voltages to AC 250 V\n• Contact version normally closed (NC)\n• Electr. connection via plug connection\n• 1 or 2 switch contacts\n• Option: With measuring element Pt1000 / Pt100",
+    "ar": "• جهود تبديل حتى AC 250 V\n• إصدار بنقطة تلامس مغلقة عادةً (NC)\n• توصيل كهربائي عبر قابس\n• 1 أو 2 نقطة تلامس للتبديل\n• اختياري: مع عنصر قياس Pt1000 / Pt100"
+  },
+  {
+    "id": 218,
+    "en": "Heavy-duty temperature switches",
+    "ar": "مفاتيح حرارة للخدمة الشاقة"
+  },
+  {
+    "id": 219,
+    "en": "-30 … +70 to 0 … 600 °C",
+    "ar": "-30 … +70 إلى 0 … 600 °C"
+  },
+  {
+    "id": 220,
+    "en": "1 or 2 SPDT or 1x DPDT",
+    "ar": "1 أو 2 SPDT أو 1x DPDT"
+  },
+  {
+    "id": 221,
+    "en": "AC 250 V/20 A DC 24 V/2 A",
+    "ar": "AC 250 V/20 A DC 24 V/2 A"
+  },
+  {
+    "id": 222,
+    "en": "Expansion thermometer with microswitch, indicating temperature controller",
+    "ar": "مقياس حرارة بالتمدد مع مفتاح دقيق، ومتحكم حرارة مزوّد بمؤشر"
+  },
+  {
+    "id": 223,
+    "en": "Nominal size",
+    "ar": "المقاس الاسمي"
+  },
+  {
+    "id": 224,
+    "en": "60, 80, 100 mm 72 x 72, 96 x 96 mm",
+    "ar": "60, 80, 100 mm 72 x 72, 96 x 96 mm"
+  },
+  {
+    "id": 225,
+    "en": "Scale range",
+    "ar": "نطاق التدريج"
+  },
+  {
+    "id": 226,
+    "en": "-100 … +400 °C",
+    "ar": "-100 … +400 °C"
+  },
+  {
+    "id": 227,
+    "en": "Wetted parts",
+    "ar": "الأجزاء الملامسة للوسط"
+  },
+  {
+    "id": 228,
+    "en": "Copper alloy",
+    "ar": "سبيكة نحاس"
+  },
+  {
+    "id": 229,
+    "en": "Sheet steel version",
+    "ar": "إصدار من صفائح الفولاذ"
+  },
+  {
+    "id": 230,
+    "en": "Bimetal thermometer, stainless steel version",
+    "ar": "مقياس حرارة ثنائي المعدن، بإصدار من الفولاذ المقاوم للصدأ"
+  },
+  {
+    "id": 231,
+    "en": "100 mm",
+    "ar": "100 mm"
+  },
+  {
+    "id": 232,
+    "en": "-70 … +30 to 0 … 600 °C",
+    "ar": "-70 … +30 إلى 0 … 600 °C"
+  },
+  {
+    "id": 233,
+    "en": "Stainless steel",
+    "ar": "فولاذ مقاوم للصدأ"
+  },
+  {
+    "id": 234,
+    "en": "Liquid damping to max. 250 °C (case and probe)",
+    "ar": "تخميد بالسائل حتى 250 °C كحد أقصى (الغلاف والمسبار)"
+  },
+  {
+    "id": 235,
+    "en": "Expansion thermometer with microswitch, safety temperature limiter",
+    "ar": "مقياس حرارة بالتمدد مع مفتاح دقيق، ومحدد أمان لدرجة الحرارة"
+  },
+  {
+    "id": 236,
+    "en": "0 … 400 °C",
+    "ar": "0 … 400 °C"
+  },
+  {
+    "id": 237,
+    "en": "• Sheet steel version",
+    "ar": "• إصدار من صفائح الفولاذ"
+  },
+  {
+    "id": 238,
+    "en": "Gas-actuated thermometer, stainless steel version",
+    "ar": "مقياس حرارة يعمل بتمدد الغاز، بإصدار من الفولاذ المقاوم للصدأ"
+  },
+  {
+    "id": 239,
+    "en": "100, 160 mm",
+    "ar": "100, 160 mm"
+  },
+  {
+    "id": 240,
+    "en": "-200 … +100 to 0 … 700 °C",
+    "ar": "-200 … +100 إلى 0 … 700 °C"
+  },
+  {
+    "id": 241,
+    "en": "• Capillary\n• Liquid damping (case)",
+    "ar": "• أنبوب شعري\n• تخميد بالسائل (الغلاف)"
+  },
+  {
+    "id": 242,
+    "en": "Expansion thermometer with microswitch",
+    "ar": "مقياس حرارة بالتمدد مع مفتاح دقيق"
+  },
+  {
+    "id": 243,
+    "en": "-60 … +40 to 0 … 250 °C",
+    "ar": "-60 … +40 إلى 0 … 250 °C"
+  },
+  {
+    "id": 244,
+    "en": "Various contact versions",
+    "ar": "إصدارات متنوعة لنقاط التلامس"
+  },
+  {
+    "id": 245,
+    "en": "Rail-mounted temperature controller",
+    "ar": "متحكم حرارة للتركيب على سكة"
+  },
+  {
+    "id": 246,
+    "en": "Control mode",
+    "ar": "نمط التحكم"
+  },
+  {
+    "id": 247,
+    "en": "PID, PI, PD, P, ON/OFF (configurable)",
+    "ar": "PID، PI، PD، P، ON/OFF (قابل للتهيئة)"
+  },
+  {
+    "id": 248,
+    "en": "Monitoring output",
+    "ar": "خرج المراقبة"
+  },
+  {
+    "id": 249,
+    "en": "Relay or logic level DC 0/12 V to control an electronic switch relay (SSR) or analogue current signal 4 … 20 mA",
+    "ar": "مرحل أو مستوى منطقي DC 0/12 V للتحكم في مرحل إلكتروني (SSR)، أو إشارة تيار تناظرية 4 … 20 mA"
+  },
+  {
+    "id": 250,
+    "en": "• AC 100 … 240 V\n• AC/DC 24 V",
+    "ar": "• AC 100 … 240 V\n• AC/DC 24 V"
+  },
+  {
+    "id": 251,
+    "en": "Display for T38 temperature transmitter",
+    "ar": "شاشة لمرسِل الحرارة T38"
+  },
+  {
+    "id": 252,
+    "en": "∅ 44 mm",
+    "ar": "∅ 44 mm"
+  },
+  {
+    "id": 253,
+    "en": "13.5 x 28 mm",
+    "ar": "13.5 x 28 mm"
+  },
+  {
+    "id": 254,
+    "en": "• 5-digit main measured value display\n• 2 variants: with clip-on adapter or remote for mounting in the connection head cover (BSZ-H)",
+    "ar": "• شاشة رئيسية للقيمة المقاسة من 5 خانات\n• 2 إصدار: مع مهايئ يُثبّت بالمشبك، أو إصدار منفصل للتركيب في غطاء رأس التوصيل (BSZ-H)"
+  },
+  {
+    "id": 255,
+    "en": "Panel-mounted temperature controllers",
+    "ar": "متحكمات حرارة للتركيب على لوحة"
+  },
+  {
+    "id": 256,
+    "en": "Relay (AC 250 V, 3A, (R) or 1A (L)) or logic level DC 0/12 V for 3-point control to control an electronic switch relay (SSR) or analogue current signal 4 … 20 mA",
+    "ar": "مرحل (AC 250 V، 3A، (R) أو 1A (L)) أو مستوى منطقي DC 0/12 V للتحكم بـ 3 نقاط لتشغيل مرحل إلكتروني (SSR)، أو إشارة تيار تناظرية 4 … 20 mA"
+  },
+  {
+    "id": 257,
+    "en": "Installation rods",
+    "ar": "قضبان التركيب"
+  },
+  {
+    "id": 258,
+    "en": "Application",
+    "ar": "التطبيق"
+  },
+  {
+    "id": 259,
+    "en": "Installation of high-temperature thermocouples",
+    "ar": "تركيب المزدوجات الحرارية لدرجات الحرارة المرتفعة"
+  },
+  {
+    "id": 260,
+    "en": "Installation",
+    "ar": "التركيب"
+  },
+  {
+    "id": 261,
+    "en": "Horizontal and vertical installation",
+    "ar": "تركيب أفقي ورأسي"
+  },
+  {
+    "id": 262,
+    "en": "Compatibility",
+    "ar": "التوافق"
+  },
+  {
+    "id": 263,
+    "en": "Flanged thermocouples",
+    "ar": "مزدوجات حرارية بفلنجات"
+  },
+  {
+    "id": 264,
+    "en": "Construction",
+    "ar": "البنية"
+  },
+  {
+    "id": 265,
+    "en": "High mechanical stability and low weight",
+    "ar": "ثبات ميكانيكي عالٍ ووزن منخفض"
+  },
+  {
+    "id": 266,
+    "en": "Purge-gas control panel",
+    "ar": "لوحة تحكم في غاز التطهير"
+  },
+  {
+    "id": 267,
+    "en": "Material",
+    "ar": "المادة"
+  },
+  {
+    "id": 268,
+    "en": "Heavy-duty stainless steel",
+    "ar": "فولاذ مقاوم للصدأ للخدمة الشاقة"
+  },
+  {
+    "id": 269,
+    "en": "Side protection for mechanical stability",
+    "ar": "حماية جانبية لتحقيق الثبات الميكانيكي"
+  },
+  {
+    "id": 270,
+    "en": "Mounting",
+    "ar": "التثبيت"
+  },
+  {
+    "id": 271,
+    "en": "Wall or 2-inch pipe mounting",
+    "ar": "تركيب على الحائط أو على أنبوب مقاس 2 بوصة"
+  },
+  {
+    "id": 272,
+    "en": "Pressure indication",
+    "ar": "بيان الضغط"
+  },
+  {
+    "id": 273,
+    "en": "Pressure gauge with liquid damping",
+    "ar": "مقياس ضغط مع تخميد بالسائل"
+  },
+  {
+    "id": 274,
+    "en": "Compact resistance thermometer",
+    "ar": "مقياس حرارة مدمج بالمقاومة"
+  },
+  {
+    "id": 275,
+    "en": "1 x Pt100, 1 x Pt1000",
+    "ar": "1 x Pt100, 1 x Pt1000"
+  },
+  {
+    "id": 276,
+    "en": "Pt100, 4 … 20 mA",
+    "ar": "Pt100, 4 … 20 mA"
+  },
+  {
+    "id": 277,
+    "en": "Miniature resistance thermometer, explosion-protected design",
+    "ar": "مقياس حرارة مصغّر بالمقاومة، بتصميم محمي من الانفجار"
+  },
+  {
+    "id": 278,
+    "en": "Pt100, Pt1000, 4 … 20 mA",
+    "ar": "Pt100, Pt1000, 4 … 20 mA"
+  },
+  {
+    "id": 279,
+    "en": "CSA",
+    "ar": "CSA"
+  },
+  {
+    "id": 280,
+    "en": "Hazardous locations",
+    "ar": "مواقع خطرة"
+  },
+  {
+    "id": 281,
+    "en": "OEM miniature resistance thermometer",
+    "ar": "مقياس حرارة مصغّر بالمقاومة للمصنّعين الأصليين للمعدات (OEM)"
+  },
+  {
+    "id": 282,
+    "en": "Ordinary and hazardous locations",
+    "ar": "مواقع عادية وخطرة"
+  },
+  {
+    "id": 283,
+    "en": "Cable resistance thermometer, MIMS cable",
+    "ar": "مقياس حرارة بالمقاومة بكابل MIMS"
+  },
+  {
+    "id": 284,
+    "en": "Silicone, PTFE, PFA",
+    "ar": "سيليكون، PTFE، PFA"
+  },
+  {
+    "id": 285,
+    "en": "Threaded temperature probe with integrated transmitter",
+    "ar": "مسبار حرارة بوصلة ملولبة ومرسِل مدمج"
+  },
+  {
+    "id": 286,
+    "en": "• Output signal 4 ... 20 mA, 0 ... 10 V\n• Factory configured\n• Electr. connection via plug connection",
+    "ar": "• إشارة خرج 4 ... 20 mA، 0 ... 10 V\n• مهيّأ في المصنع\n• توصيل كهربائي عبر قابس"
+  },
+  {
+    "id": 287,
+    "en": "Miniature resistance thermometer, standard version",
+    "ar": "مقياس حرارة مصغّر بالمقاومة، بإصدار قياسي"
+  },
+  {
+    "id": 288,
+    "en": "Ordinary locations",
+    "ar": "مواقع عادية"
+  },
+  {
+    "id": 289,
+    "en": "Cable resistance thermometer, tubular design",
+    "ar": "مقياس حرارة بالمقاومة بكابل، بتصميم أنبوبي"
+  },
+  {
+    "id": 290,
+    "en": "-60 ... +250 °C, -76 ... +482 °F",
+    "ar": "-60 ... +250 °C, -76 ... +482 °F"
+  },
+  {
+    "id": 291,
+    "en": "OEM pressure sensor for industrial applications",
+    "ar": "حساس ضغط للمصنّعين الأصليين للمعدات (OEM) للتطبيقات الصناعية"
+  },
+  {
+    "id": 292,
+    "en": "Non-linearity (± % of span)",
+    "ar": "اللاخطية (± % من امتداد نطاق القياس)"
+  },
+  {
+    "id": 293,
+    "en": "≤ 0.5 BFSL",
+    "ar": "≤ 0.5 BFSL"
+  },
+  {
+    "id": 294,
+    "en": "• 0 … 6 to 0 … 600 bar\n• -1 … +5 to -1 … +59 bar",
+    "ar": "• 0 … 6 إلى 0 … 600 bar\n• -1 … +5 إلى -1 … +59 bar"
+  },
+  {
+    "id": 295,
+    "en": "• Customer-specific solutions\n• Excellent long-term stability\n• Consistent quality\n• Good delivery performance",
+    "ar": "• حلول مخصصة للعملاء\n• ثبات ممتاز على المدى الطويل\n• جودة ثابتة\n• أداء جيد في التسليم"
+  },
+  {
+    "id": 296,
+    "en": "Pressure sensor for mobile hydrogen applications",
+    "ar": "حساس ضغط لتطبيقات الهيدروجين المتنقلة"
+  },
+  {
+    "id": 297,
+    "en": "Accuracy (± % of span)",
+    "ar": "الدقة (± % من امتداد نطاق القياس)"
+  },
+  {
+    "id": 298,
+    "en": "≤ 1",
+    "ar": "≤ 1"
+  },
+  {
+    "id": 299,
+    "en": "0 … 20 to 0 … 600 bar",
+    "ar": "0 … 20 إلى 0 … 600 bar"
+  },
+  {
+    "id": 300,
+    "en": "• Approval per EC79/2009\n• Compact and robust design\n• Diagnostic function (optional)",
+    "ar": "• اعتماد وفق EC79/2009\n• تصميم مدمج ومتين\n• وظيفة تشخيص (اختياري)"
+  },
+  {
+    "id": 301,
+    "en": "Pressure sensor for mobile working machines",
+    "ar": "حساس ضغط للمعدات المتنقلة"
+  },
+  {
+    "id": 302,
+    "en": "Non-linearity (per IEC 62828-1)",
+    "ar": "اللاخطية (وفق IEC 62828-1)"
+  },
+  {
+    "id": 303,
+    "en": "≤ ±0.25 % of span (BFSL)",
+    "ar": "≤ ±0.25 % من امتداد نطاق القياس (BFSL)"
+  },
+  {
+    "id": 304,
+    "en": "0 ... 6 to 0 ... 1,000 bar",
+    "ar": "0 ... 6 إلى 0 ... 1,000 bar"
+  },
+  {
+    "id": 305,
+    "en": "• For extreme operating conditions\n• Reliable and accurate\n• Customer-specific solutions\n• High production capacities",
+    "ar": "• لظروف التشغيل القاسية\n• موثوق ودقيق\n• حلول مخصصة للعملاء\n• قدرات إنتاجية عالية"
+  },
+  {
+    "id": 306,
+    "en": "Pressure sensor for medical gases",
+    "ar": "حساس ضغط للغازات الطبية"
+  },
+  {
+    "id": 307,
+    "en": "0 … 6 to 0 … 400 bar",
+    "ar": "0 … 6 إلى 0 … 400 bar"
+  },
+  {
+    "id": 308,
+    "en": "Cleaned, packed and marked for oxygen per international standards",
+    "ar": "منظّف ومعبّأ وموسوم للاستخدام مع الأكسجين وفق المعايير الدولية"
+  },
+  {
+    "id": 309,
+    "en": "Pressure sensor with CANopen/J1939",
+    "ar": "حساس ضغط مع CANopen/J1939"
+  },
+  {
+    "id": 310,
+    "en": "0 … 40 to 0 … 600 bar",
+    "ar": "0 … 40 إلى 0 … 600 bar"
+  },
+  {
+    "id": 311,
+    "en": "• For extreme operating conditions\n• Signal stability thanks to CANopen®\n• Reliable and accurate\n• Customer-specific solutions\n• High production capacities",
+    "ar": "• لظروف التشغيل القاسية\n• ثبات الإشارة بفضل CANopen®\n• موثوق ودقيق\n• حلول مخصصة للعملاء\n• قدرات إنتاجية عالية"
+  },
+  {
+    "id": 312,
+    "en": "Pressure sensor for heating and refrigeration",
+    "ar": "حساس ضغط للتدفئة والتبريد"
+  },
+  {
+    "id": 313,
+    "en": "≤ 2",
+    "ar": "≤ 2"
+  },
+  {
+    "id": 314,
+    "en": "• 0 … 6 to 0 … 160 bar\n• -1 … +7 to -1 … +45 bar",
+    "ar": "• 0 … 6 إلى 0 … 160 bar\n• -1 … +7 إلى -1 … +45 bar"
+  },
+  {
+    "id": 315,
+    "en": "• Special case design for the best possible condensation tightness\n• Resistant to all common refrigerants\n• Wetted parts from stainless steel",
+    "ar": "• تصميم خاص للغلاف لتحقيق أفضل إحكام ممكن ضد التكاثف\n• مقاوم لجميع مواد التبريد الشائعة\n• الأجزاء الملامسة للوسط من الفولاذ المقاوم للصدأ"
+  },
+  {
+    "id": 316,
+    "en": "Differential-pressure gauge with output signal",
+    "ar": "مقياس ضغط تفاضلي مع إشارة خرج"
+  },
+  {
+    "id": 317,
+    "en": "0 … 16 mbar to 0 … 40 bar",
+    "ar": "0 … 16 mbar إلى 0 … 40 bar"
+  },
+  {
+    "id": 318,
+    "en": "Accuracy class",
+    "ar": "فئة الدقة"
+  },
+  {
+    "id": 319,
+    "en": "1.6",
+    "ar": "1.6"
+  },
+  {
+    "id": 320,
+    "en": "Ingress protection",
+    "ar": "درجة الحماية من دخول الأجسام والماء"
+  },
+  {
+    "id": 321,
+    "en": "IP54, filled IP65",
+    "ar": "IP54، وللإصدار المملوء IP65"
+  },
+  {
+    "id": 322,
+    "en": "Differential-pressure gauge with integrated working-pressure indication",
+    "ar": "مقياس ضغط تفاضلي مع مؤشر مدمج لضغط التشغيل"
+  },
+  {
+    "id": 323,
+    "en": "0 … 160 mbar to 0 … 10 bar",
+    "ar": "0 … 160 mbar إلى 0 … 10 bar"
+  },
+  {
+    "id": 324,
+    "en": "2.5 (1.6 optional)",
+    "ar": "2.5 (1.6 اختياري)"
+  },
+  {
+    "id": 325,
+    "en": "IP65",
+    "ar": "IP65"
+  },
+  {
+    "id": 326,
+    "en": "High-overload differential-pressure gauge with output signal",
+    "ar": "مقياس ضغط تفاضلي عالي التحمل للحمل الزائد مع إشارة خرج"
+  },
+  {
+    "id": 327,
+    "en": "0 … 60 mbar to 0 … 40 bar",
+    "ar": "0 … 60 mbar إلى 0 … 40 bar"
+  },
+  {
+    "id": 328,
+    "en": "Absolute-pressure gauge with output signal",
+    "ar": "مقياس ضغط مطلق مع إشارة خرج"
+  },
+  {
+    "id": 329,
+    "en": "0 … 25 mbar to 0 … 25 bar abs.",
+    "ar": "0 … 25 mbar إلى 0 … 25 bar abs."
+  },
+  {
+    "id": 330,
+    "en": "2.5",
+    "ar": "2.5"
+  },
+  {
+    "id": 331,
+    "en": "IP54, with liquid filling IP65",
+    "ar": "IP54، ومع التعبئة بالسائل IP65"
+  },
+  {
+    "id": 332,
+    "en": "Bourdon-tube contact pressure gauge, stainless steel case",
+    "ar": "مقياس ضغط بأنبوب بوردون ونقاط تلامس، بغلاف من الفولاذ المقاوم للصدأ"
+  },
+  {
+    "id": 333,
+    "en": "40, 50, 63 mm",
+    "ar": "40, 50, 63 mm"
+  },
+  {
+    "id": 334,
+    "en": "0 … 2.5 to 0 … 400 bar",
+    "ar": "0 … 2.5 إلى 0 … 400 bar"
+  },
+  {
+    "id": 335,
+    "en": "Version with VdS or LPCB approval possible",
+    "ar": "يمكن توفير إصدار معتمد من VdS أو LPCB"
+  },
+  {
+    "id": 336,
+    "en": "Process-industry Bourdon-tube contact pressure gauges",
+    "ar": "مقاييس ضغط بأنبوب بوردون ونقاط تلامس لصناعات العمليات"
+  },
+  {
+    "id": 337,
+    "en": "0 … 0.6 to 0 … 1,600 bar",
+    "ar": "0 … 0.6 إلى 0 … 1,600 bar"
+  },
+  {
+    "id": 338,
+    "en": "1.0",
+    "ar": "1.0"
+  },
+  {
+    "id": 339,
+    "en": "IP65 or IP66",
+    "ar": "IP65 أو IP66"
+  },
+  {
+    "id": 340,
+    "en": "Bourdon-tube gauge with electronic pressure switch",
+    "ar": "مقياس ضغط بأنبوب بوردون مع مفتاح ضغط إلكتروني"
+  },
+  {
+    "id": 341,
+    "en": "50, 63 mm",
+    "ar": "50, 63 mm"
+  },
+  {
+    "id": 342,
+    "en": "0 … 1.6 to 0 … 400 bar",
+    "ar": "0 … 1.6 إلى 0 … 400 bar"
+  },
+  {
+    "id": 343,
+    "en": "Safety-version Bourdon-tube contact pressure gauge",
+    "ar": "مقياس ضغط بأنبوب بوردون ونقاط تلامس، بإصدار أمان"
+  },
+  {
+    "id": 344,
+    "en": "63 mm",
+    "ar": "63 mm"
+  },
+  {
+    "id": 345,
+    "en": "0 … 4 to 0 … 400 bar",
+    "ar": "0 … 4 إلى 0 … 400 bar"
+  },
+  {
+    "id": 346,
+    "en": "IP54",
+    "ar": "IP54"
+  },
+  {
+    "id": 347,
+    "en": "Bourdon-tube contact pressure gauges",
+    "ar": "مقاييس ضغط بأنبوب بوردون ونقاط تلامس"
+  },
+  {
+    "id": 348,
+    "en": "0 … 0.6 to 0 … 600 bar",
+    "ar": "0 … 0.6 إلى 0 … 600 bar"
+  },
+  {
+    "id": 349,
+    "en": "Diaphragm contact pressure gauges",
+    "ar": "مقاييس ضغط غشائية بنقاط تلامس"
+  },
+  {
+    "id": 350,
+    "en": "0 … 25 mbar to 0 … 25 bar",
+    "ar": "0 … 25 mbar إلى 0 … 25 bar"
+  },
+  {
+    "id": 351,
+    "en": "Absolute-pressure contact gauge",
+    "ar": "مقياس ضغط مطلق بنقاط تلامس"
+  },
+  {
+    "id": 352,
+    "en": "Differential-pressure gauge with microswitches and component testing",
+    "ar": "مقياس ضغط تفاضلي مع مفاتيح دقيقة واختبار للمكوّنات"
+  },
+  {
+    "id": 353,
+    "en": "0 … 250 mbar to 0 … 10 bar",
+    "ar": "0 … 250 mbar إلى 0 … 10 bar"
+  },
+  {
+    "id": 354,
+    "en": "Capsule contact pressure gauge",
+    "ar": "مقياس ضغط كبسولي بنقاط تلامس"
+  },
+  {
+    "id": 355,
+    "en": "0 … 2.5 to 0 … 100 mbar",
+    "ar": "0 … 2.5 إلى 0 … 100 mbar"
+  },
+  {
+    "id": 356,
+    "en": "Differential contact pressure gauge, all-metal media chamber",
+    "ar": "مقياس ضغط تفاضلي بنقاط تلامس، مع حجرة للوسط مصنوعة بالكامل من المعدن"
+  },
+  {
+    "id": 357,
+    "en": "0 … 25 mbar to 0 … 40 bar",
+    "ar": "0 … 25 mbar إلى 0 … 40 bar"
+  },
+  {
+    "id": 358,
+    "en": "Differential-pressure gauge with microswitches and working-pressure indication",
+    "ar": "مقياس ضغط تفاضلي مع مفاتيح دقيقة ومؤشر لضغط التشغيل"
+  },
+  {
+    "id": 359,
+    "en": "High-overload differential contact pressure gauge",
+    "ar": "مقياس ضغط تفاضلي بنقاط تلامس وعالي التحمل للحمل الزائد"
+  },
+  {
+    "id": 360,
+    "en": "Bourdon-tube pressure gauge with output signal",
+    "ar": "مقياس ضغط بأنبوب بوردون مع إشارة خرج"
+  },
+  {
+    "id": 361,
+    "en": "IP65 (IP67 optional)",
+    "ar": "IP65 (IP67 اختياري)"
+  },
+  {
+    "id": 362,
+    "en": "Diaphragm pressure gauge with output signal",
+    "ar": "مقياس ضغط غشائي مع إشارة خرج"
+  },
+  {
+    "id": 363,
+    "en": "0 … 16 mbar to 0 … 25 bar",
+    "ar": "0 … 16 mbar إلى 0 … 25 bar"
+  },
+  {
+    "id": 364,
+    "en": "Safety-version Bourdon-tube gauge with output signal",
+    "ar": "مقياس ضغط بأنبوب بوردون وإشارة خرج، بإصدار أمان"
+  },
+  {
+    "id": 365,
+    "en": "0 … 1 to 0 … 1,000 bar",
+    "ar": "0 … 1 إلى 0 … 1,000 bar"
+  },
+  {
+    "id": 366,
+    "en": "High-overload diaphragm gauge with output signal",
+    "ar": "مقياس ضغط غشائي عالي التحمل للحمل الزائد مع إشارة خرج"
+  },
+  {
+    "id": 367,
+    "en": "Process-industry Bourdon-tube gauges with output signal",
+    "ar": "مقاييس ضغط بأنبوب بوردون وإشارة خرج لصناعات العمليات"
+  },
+  {
+    "id": 368,
+    "en": "High-overload capsule gauge with output signal",
+    "ar": "مقياس ضغط كبسولي عالي التحمل للحمل الزائد مع إشارة خرج"
+  },
+  {
+    "id": 369,
+    "en": "2.5 … 100 mbar",
+    "ar": "2.5 … 100 mbar"
+  },
+  {
+    "id": 370,
+    "en": "Compact pressure switch",
+    "ar": "مفتاح ضغط مدمج"
+  },
+  {
+    "id": 371,
+    "en": "• -0.85 … -0.15 bar\n• 0.2 … 2 bar to 30 … 320 bar",
+    "ar": "• -0.85 … -0.15 bar\n• 0.2 … 2 bar إلى 30 … 320 bar"
+  },
+  {
+    "id": 372,
+    "en": "Switching function",
+    "ar": "وظيفة التبديل"
+  },
+  {
+    "id": 373,
+    "en": "Normally open, normally closed, changeover contact",
+    "ar": "مفتوح عادةً، مغلق عادةً، نقطة تلامس تحويلية"
+  },
+  {
+    "id": 374,
+    "en": "Galvanised steel or stainless steel",
+    "ar": "فولاذ مجلفن أو فولاذ مقاوم للصدأ"
+  },
+  {
+    "id": 375,
+    "en": "• 2 A, AC 48 V\n• 1 A / 2 A, DC 24 V",
+    "ar": "• 2 A, AC 48 V\n• 1 A / 2 A, DC 24 V"
+  },
+  {
+    "id": 376,
+    "en": "Pressure switch with settable hysteresis",
+    "ar": "مفتاح ضغط بفارق تبديل قابل للضبط"
+  },
+  {
+    "id": 377,
+    "en": "• -0.4 … +7 bar\n• 0 … 5 bar to 6 … 30 bar",
+    "ar": "• -0.4 … +7 bar\n• 0 … 5 bar إلى 6 … 30 bar"
+  },
+  {
+    "id": 378,
+    "en": "• Bellows: Copper alloy CuSn6 per EN 1652\n• Process connection: free cutting steel EN1A per EN 10277-3, tin-plated",
+    "ar": "• المنفاخ: سبيكة نحاس CuSn6 وفق EN 1652\n• وصلة العملية: فولاذ سهل التشغيل بالقطع EN1A وفق EN 10277-3، مطلي بالقصدير"
+  },
+  {
+    "id": 379,
+    "en": "10 A / 6 A, AC 230 V",
+    "ar": "10 A / 6 A, AC 230 V"
+  },
+  {
+    "id": 380,
+    "en": "Compact pressure switch with settable hysteresis",
+    "ar": "مفتاح ضغط مدمج بفارق تبديل قابل للضبط"
+  },
+  {
+    "id": 381,
+    "en": "• 2 A / 4 A, AC 250 V\n• 2 A / 4 A, DC 24 V",
+    "ar": "• 2 A / 4 A, AC 250 V\n• 2 A / 4 A, DC 24 V"
+  },
+  {
+    "id": 382,
+    "en": "Pressure switch for demanding industrial applications",
+    "ar": "مفتاح ضغط للتطبيقات الصناعية الشاقة"
+  },
+  {
+    "id": 383,
+    "en": "• -1 … 0 and -0.8 … +5 bar\n• 0 … 300 mbar\n• 0.1 … 1.1 bar to 10 … 30 bar",
+    "ar": "• -1 … 0 و -0.8 … +5 bar\n• 0 … 300 mbar\n• 0.1 … 1.1 bar إلى 10 … 30 bar"
+  },
+  {
+    "id": 384,
+    "en": "Change-over contact (SPDT)",
+    "ar": "نقطة تلامس تحويلية (SPDT)"
+  },
+  {
+    "id": 385,
+    "en": "• Bellows / Process connection: Copper alloy CuSn6 per EN 1652 or stainless steel 1.4401\n• With NBR diaphragm: Process connection: free cutting steel EN1A per EN 10277-3, tin-plated",
+    "ar": "• المنفاخ / وصلة العملية: سبيكة نحاس CuSn6 وفق EN 1652 أو فولاذ مقاوم للصدأ 1.4401\n• مع غشاء NBR: وصلة العملية: فولاذ سهل التشغيل بالقطع EN1A وفق EN 10277-3، مطلي بالقصدير"
+  },
+  {
+    "id": 386,
+    "en": "4 A / 10 A, AC 230 V",
+    "ar": "4 A / 10 A, AC 230 V"
+  },
+  {
+    "id": 387,
+    "en": "Pressure switch with adjustable switch differential",
+    "ar": "مفتاح ضغط بفارق تبديل قابل للضبط"
+  },
+  {
+    "id": 388,
+    "en": "• -1 … 1.5 bar\n• 0.2 … 1.6 bar, 7 … 35 bar",
+    "ar": "• -1 … 1.5 bar\n• 0.2 … 1.6 bar, 7 … 35 bar"
+  },
+  {
+    "id": 389,
+    "en": "Change-over contact (SPDT and DPDT)",
+    "ar": "نقطة تلامس تحويلية (SPDT و DPDT)"
+  },
+  {
+    "id": 390,
+    "en": "• Measuring element: Stainless steel 316L\n• Process connection: Stainless steel 316L\n• Case: Aluminium",
+    "ar": "• عنصر القياس: فولاذ مقاوم للصدأ 316L\n• وصلة العملية: فولاذ مقاوم للصدأ 316L\n• الغلاف: ألمنيوم"
+  },
+  {
+    "id": 391,
+    "en": "Up to AC 250 V/15 A",
+    "ar": "حتى AC 250 V/15 A"
+  },
+  {
+    "id": 392,
+    "en": "Miniature pressure switches",
+    "ar": "مفاتيح ضغط مصغّرة"
+  },
+  {
+    "id": 393,
+    "en": "1 … 2.5 to 200 … 1,000 bar",
+    "ar": "1 … 2.5 إلى 200 … 1,000 bar"
+  },
+  {
+    "id": 394,
+    "en": "1 x SPDT or DPDT",
+    "ar": "1 x SPDT أو DPDT"
+  },
+  {
+    "id": 395,
+    "en": "• AC 250 V/5 A\n• DC 24 V/5 A",
+    "ar": "• AC 250 V/5 A\n• DC 24 V/5 A"
+  },
+  {
+    "id": 396,
+    "en": "Bourdon tube pressure switches",
+    "ar": "مفاتيح ضغط بأنبوب بوردون"
+  },
+  {
+    "id": 397,
+    "en": "0 … 2.5 to 0 … 1,000 bar",
+    "ar": "0 … 2.5 إلى 0 … 1,000 bar"
+  },
+  {
+    "id": 398,
+    "en": "1 or 2 x SPDT or 1 x DPDT",
+    "ar": "1 أو 2 x SPDT أو 1 x DPDT"
+  },
+  {
+    "id": 399,
+    "en": "• AC 250 V/20 A\n• DC 24 V/2 A",
+    "ar": "• AC 250 V/20 A\n• DC 24 V/2 A"
+  },
+  {
+    "id": 400,
+    "en": "Compact pressure switches",
+    "ar": "مفاتيح ضغط مدمجة"
+  },
+  {
+    "id": 401,
+    "en": "-1 … -0.2 to 200 … 1,000 bar",
+    "ar": "-1 … -0.2 إلى 200 … 1,000 bar"
+  },
+  {
+    "id": 402,
+    "en": "• AC 250 V/15 A\n• DC 24 V/2 A",
+    "ar": "• AC 250 V/15 A\n• DC 24 V/2 A"
+  },
+  {
+    "id": 403,
+    "en": "Differential pressure switches",
+    "ar": "مفاتيح ضغط تفاضلي"
+  },
+  {
+    "id": 404,
+    "en": "0 … 16 mbar to 0 … 40 bar, static pressure to 160 bar",
+    "ar": "0 … 16 mbar إلى 0 … 40 bar، ضغط ساكن حتى 160 bar"
+  },
+  {
+    "id": 405,
+    "en": "Diaphragm pressure switches",
+    "ar": "مفاتيح ضغط غشائية"
+  },
+  {
+    "id": 406,
+    "en": "0 … 16 mbar to 30 … 600 bar",
+    "ar": "0 … 16 mbar إلى 30 … 600 bar"
+  },
+  {
+    "id": 407,
+    "en": "Absolute pressure switches",
+    "ar": "مفاتيح ضغط مطلق"
+  },
+  {
+    "id": 408,
+    "en": "0 … 25 mbar to 0 … 1.5 bar abs.",
+    "ar": "0 … 25 mbar إلى 0 … 1.5 bar abs."
+  },
+  {
+    "id": 409,
+    "en": "Proof pressure",
+    "ar": "ضغط التحمل الاختباري"
+  },
+  {
+    "id": 410,
+    "en": "11 bar abs.",
+    "ar": "11 bar abs."
+  },
+  {
+    "id": 411,
+    "en": "Diaphragm seal system with pressure gauge, internal diaphragm and flange connection",
+    "ar": "نظام عازل غشائي مع مقياس ضغط وغشاء داخلي ووصلة بفلنجة"
+  },
+  {
+    "id": 412,
+    "en": "Small flange process connections in the process industry",
+    "ar": "وصلات عملية بفلنجات صغيرة في صناعات العمليات"
+  },
+  {
+    "id": 413,
+    "en": "PN max.",
+    "ar": "الحد الأقصى لـ PN"
+  },
+  {
+    "id": 414,
+    "en": "40 bar",
+    "ar": "40 bar"
+  },
+  {
+    "id": 415,
+    "en": "System fill fluid",
+    "ar": "سائل تعبئة النظام"
+  },
+  {
+    "id": 416,
+    "en": "KN2 for general applications",
+    "ar": "KN2 للتطبيقات العامة"
+  },
+  {
+    "id": 417,
+    "en": "Diaphragm seal system with pressure sensor, internal diaphragm and flange connection",
+    "ar": "نظام عازل غشائي مع حساس ضغط وغشاء داخلي ووصلة بفلنجة"
+  },
+  {
+    "id": 418,
+    "en": "Diaphragm seal system with pressure gauge, welded construction and threaded connection",
+    "ar": "نظام عازل غشائي مع مقياس ضغط وبنية ملحومة ووصلة ملولبة"
+  },
+  {
+    "id": 419,
+    "en": "Chemical, petrochemical and water treatment industries",
+    "ar": "الصناعات الكيميائية والبتروكيميائية ومعالجة المياه"
+  },
+  {
+    "id": 420,
+    "en": "60 bar",
+    "ar": "60 bar"
+  },
+  {
+    "id": 421,
+    "en": "Diaphragm seal system with pressure sensor, welded construction and threaded connection",
+    "ar": "نظام عازل غشائي مع حساس ضغط وبنية ملحومة ووصلة ملولبة"
+  },
+  {
+    "id": 422,
+    "en": "Needle valve and multiport needle valve",
+    "ar": "صمام إبرة وصمام إبرة متعدد المنافذ"
+  },
+  {
+    "id": 423,
+    "en": "For shutting off pressure measuring instruments with threaded connection",
+    "ar": "لعزل أجهزة قياس الضغط ذات الوصلات الملولبة"
+  },
+  {
+    "id": 424,
+    "en": "Version",
+    "ar": "الإصدار"
+  },
+  {
+    "id": 425,
+    "en": "Nominal pressure",
+    "ar": "الضغط الاسمي"
+  },
+  {
+    "id": 426,
+    "en": "To PN 420 (6,000 psi) Option: to PN 680 (10,000 psi)",
+    "ar": "حتى PN 420 (6,000 psi)، اختياري: حتى PN 680 (10,000 psi)"
+  },
+  {
+    "id": 427,
+    "en": "Monoflanges",
+    "ar": "فلنجات أحادية"
+  },
+  {
+    "id": 428,
+    "en": "For shutting off and venting pressure measuring instruments with flange connection",
+    "ar": "لعزل أجهزة قياس الضغط ذات الوصلات بفلنجة وتنفيسها"
+  },
+  {
+    "id": 429,
+    "en": "Flange connection per ASME or EN",
+    "ar": "وصلة بفلنجة وفق ASME أو EN"
+  },
+  {
+    "id": 430,
+    "en": "To PN 420 (6,000 psi)",
+    "ar": "حتى PN 420 (6,000 psi)"
+  },
+  {
+    "id": 431,
+    "en": "Monoblock as double block-and-bleed valve",
+    "ar": "كتلة صمامات مدمجة للعزل المزدوج والتنفيس"
+  },
+  {
+    "id": 432,
+    "en": "Direct connection of pressure measuring instruments to pipelines or containers without interface valves. Control panels, lubrication systems, dry gas seals",
+    "ar": "توصيل مباشر لأجهزة قياس الضغط بخطوط الأنابيب أو الأوعية دون صمامات وسيطة. لوحات التحكم، أنظمة التزييت، موانع التسرب بالغاز الجاف"
+  },
+  {
+    "id": 433,
+    "en": "Flange/threaded, flange/flange or threaded/threaded",
+    "ar": "فلنجة/وصلة ملولبة، فلنجة/فلنجة، أو وصلة ملولبة/وصلة ملولبة"
+  },
+  {
+    "id": 434,
+    "en": "IBF: class 150 … class 2,500, in line with ASME B16.5 PN 16 … PN 100, in line with EN 1092-1 IBM: 6,000 ... 10,000 psi (420 ... 690 bar)",
+    "ar": "IBF: الفئة 150 … الفئة 2,500، وفق ASME B16.5؛ PN 16 … PN 100، وفق EN 1092-1؛ IBM: 6,000 ... 10,000 psi (420 ... 690 bar)"
+  },
+  {
+    "id": 435,
+    "en": "Block-and-bleed valve, square or flat form",
+    "ar": "صمام عزل وتنفيس، بشكل مربع أو مسطح"
+  },
+  {
+    "id": 436,
+    "en": "For shutting off and venting pressure measuring instruments with threaded connection",
+    "ar": "لعزل أجهزة قياس الضغط ذات الوصلات الملولبة وتنفيسها"
+  },
+  {
+    "id": 437,
+    "en": "Block-and-bleed valve",
+    "ar": "صمام عزل وتنفيس"
+  },
+  {
+    "id": 438,
+    "en": "Valve manifolds for differential pressure measuring instruments",
+    "ar": "مجمّعات صمامات لأجهزة قياس الضغط التفاضلي"
+  },
+  {
+    "id": 439,
+    "en": "For shutting off, pressure equalising as well as purging and venting differential pressure measuring instruments",
+    "ar": "لعزل أجهزة قياس الضغط التفاضلي وموازنة الضغط وتطهيرها وتنفيسها"
+  },
+  {
+    "id": 440,
+    "en": "3-way and 5-way valve",
+    "ar": "صمام بـ 3 مسارات وصمام بـ 5 مسارات"
+  },
+  {
+    "id": 441,
+    "en": "Stopcock and DIN shut-off valve",
+    "ar": "محبس وصمام إغلاق وفق DIN"
+  },
+  {
+    "id": 442,
+    "en": "910.10: per DIN 16261, DIN 16262, DIN 16263 910.11: per DIN 16270, DIN 16271, DIN 16272",
+    "ar": "910.10: وفق DIN 16261، DIN 16262، DIN 16263؛ 910.11: وفق DIN 16270، DIN 16271، DIN 16272"
+  },
+  {
+    "id": 443,
+    "en": "Brass, steel, stainless steel",
+    "ar": "نحاس أصفر، فولاذ، فولاذ مقاوم للصدأ"
+  },
+  {
+    "id": 444,
+    "en": "910.10: to 25 bar 910.11: to 400 bar",
+    "ar": "910.10: حتى 25 bar؛ 910.11: حتى 400 bar"
+  },
+  {
+    "id": 445,
+    "en": "Ball valve",
+    "ar": "صمام كروي"
+  },
+  {
+    "id": 446,
+    "en": "First shut-off valve for pressure tap to local instrument installation, media distribution, drain or vent in pipelines",
+    "ar": "صمام العزل الأول من مأخذ الضغط إلى موقع تركيب الجهاز، ولتوزيع الوسط أو التصريف أو التنفيس في خطوط الأنابيب"
+  },
+  {
+    "id": 447,
+    "en": "Process and instrument version",
+    "ar": "إصدار للعمليات وإصدار للأجهزة"
+  },
+  {
+    "id": 448,
+    "en": "Stainless steel 316L",
+    "ar": "فولاذ مقاوم للصدأ 316L"
+  },
+  {
+    "id": 449,
+    "en": "Syphons and connecting pipes",
+    "ar": "سيفونات وأنابيب توصيل"
+  },
+  {
+    "id": 450,
+    "en": "For the protection of pressure measuring instruments from excessive pulsation and heat",
+    "ar": "لحماية أجهزة قياس الضغط من النبضات المفرطة والحرارة"
+  },
+  {
+    "id": 451,
+    "en": "U-form, trumpet form, compact form, standard",
+    "ar": "شكل U، شكل بوقي، شكل مدمج، قياسي"
+  },
+  {
+    "id": 452,
+    "en": "Steel, stainless steel",
+    "ar": "فولاذ، فولاذ مقاوم للصدأ"
+  },
+  {
+    "id": 453,
+    "en": "To 160 bar",
+    "ar": "حتى 160 bar"
+  },
+  {
+    "id": 454,
+    "en": "High-pressure needle valve",
+    "ar": "صمام إبرة للضغط المرتفع"
+  },
+  {
+    "id": 455,
+    "en": "For injection systems, test benches, hydraulic power packs, blow-out protection, blasting/cutting with water, high-pressure cleaning",
+    "ar": "لأنظمة الحقن، ومناضد الاختبار، ووحدات القدرة الهيدروليكية، والحماية من الاندفاع، والقذف/القطع بالماء، والتنظيف بالضغط المرتفع"
+  },
+  {
+    "id": 456,
+    "en": "2-way valve, straight or angled bore; 3-way valve, one or two pressure connections",
+    "ar": "صمام بـ 2 مسار، بمجرى مستقيم أو بزاوية؛ صمام بـ 3 مسارات، بوصلة ضغط واحدة أو وصلتين"
+  },
+  {
+    "id": 457,
+    "en": "15,000 ... 60,000 psi [1,034 ... 4,136 bar] Option: To PN 680 (10,000 psi)",
+    "ar": "15,000 ... 60,000 psi [1,034 ... 4,136 bar]، اختياري: حتى PN 680 (10,000 psi)"
+  },
+  {
+    "id": 458,
+    "en": "High-pressure fittings and accessories",
+    "ar": "وصلات وملحقات للضغط المرتفع"
+  },
+  {
+    "id": 459,
+    "en": "For high-pressure applications in control panels, where the space is restricted, or test benches",
+    "ar": "لتطبيقات الضغط المرتفع في لوحات التحكم ذات المساحة المحدودة، أو مناضد الاختبار"
+  },
+  {
+    "id": 460,
+    "en": "Elbow fitting, T-fitting, cross fitting, bulkhead connector, anti-vibration gland, gland collar, threaded connection, nipple, sealing cap, blind plug",
+    "ar": "وصلة كوع، وصلة T، وصلة صليبية، وصلة اختراق حاجز، جلبة مقاومة للاهتزاز، طوق جلبة، وصلة ملولبة، وصلة ذكر، غطاء إحكام، سدادة مصمتة"
+  },
+  {
+    "id": 461,
+    "en": "15,000 ... 60,000 psi [1,034 ... 4,136 bar]",
+    "ar": "15,000 ... 60,000 psi [1,034 ... 4,136 bar]"
+  },
+  {
+    "id": 462,
+    "en": "Snubber",
+    "ar": "مخمّد نبضات الضغط"
+  },
+  {
+    "id": 463,
+    "en": "For the protection of pressure measuring instruments from pressure surges and pulsations",
+    "ar": "لحماية أجهزة قياس الضغط من الارتفاعات المفاجئة والنبضات"
+  },
+  {
+    "id": 464,
+    "en": "To 400 bar",
+    "ar": "حتى 400 bar"
+  },
+  {
+    "id": 465,
+    "en": "LCD attachable indicators",
+    "ar": "مؤشرات LCD قابلة للتركيب على الجهاز"
+  },
+  {
+    "id": 466,
+    "en": "Model A-IAI-1 intrinsically safe per ATEX",
+    "ar": "الطراز A-IAI-1 آمن جوهريًا وفق ATEX"
+  },
+  {
+    "id": 467,
+    "en": "Control unit for inductive contacts model 831",
+    "ar": "وحدة تحكم لنقاط التلامس الحثية طراز 831"
+  },
+  {
+    "id": 468,
+    "en": "For operating measuring instruments with inductive switch contacts",
+    "ar": "لتشغيل أجهزة القياس المزودة بنقاط تلامس تبديل حثية"
+  },
+  {
+    "id": 469,
+    "en": "Preassembled cables M12 x 1",
+    "ar": "كابلات M12 x 1 مجمّعة مسبقًا"
+  },
+  {
+    "id": 470,
+    "en": "Connector",
+    "ar": "الموصّل"
+  },
+  {
+    "id": 471,
+    "en": "Circular connector M12 x 1, 4- and 5-pin",
+    "ar": "موصّل دائري M12 x 1، بعدد 4 و 5 أطراف"
+  },
+  {
+    "id": 472,
+    "en": "Straight and angled",
+    "ar": "مستقيم وبزاوية"
+  },
+  {
+    "id": 473,
+    "en": "Cable length",
+    "ar": "طول الكابل"
+  },
+  {
+    "id": 474,
+    "en": "2, 5 or 10 m",
+    "ar": "2, 5 أو 10 m"
+  },
+  {
+    "id": 475,
+    "en": "IP67",
+    "ar": "IP67"
+  },
+  {
+    "id": 476,
+    "en": "Electronic pressure switch with display",
+    "ar": "مفتاح ضغط إلكتروني مزوّد بشاشة"
+  },
+  {
+    "id": 477,
+    "en": "≤ 0.5",
+    "ar": "≤ 0.5"
+  },
+  {
+    "id": 478,
+    "en": "• 0 … 0.4 to 0 … 1,000 bar\n• 0 … 0.4 to 0 … 25 bar abs.\n• -1 … 0 to -1 … +24 bar",
+    "ar": "• 0 … 0.4 إلى 0 … 1,000 bar\n• 0 … 0.4 إلى 0 … 25 bar abs.\n• -1 … 0 إلى -1 … +24 bar"
+  },
+  {
+    "id": 479,
+    "en": "• Condition monitoring via IO-Link\n• Reduction of variants\n• Easy installation, good readability\n• Parameterisation via 3 buttons",
+    "ar": "• مراقبة الحالة عبر IO-Link\n• تقليل تنوع الإصدارات\n• تركيب سهل وقراءة واضحة\n• ضبط المعلمات عبر 3 أزرار"
+  },
+  {
+    "id": 480,
+    "en": "Pressure sensor with IO-Link and PNP or NPN switching output",
+    "ar": "حساس ضغط مع IO-Link وخرج تبديل PNP أو NPN"
+  },
+  {
+    "id": 481,
+    "en": "≤ 0.5 or ≤ 1",
+    "ar": "≤ 0.5 أو ≤ 1"
+  },
+  {
+    "id": 482,
+    "en": "• 0 … 0.4 to 0 … 1,000 bar\n• 0 … 0.4 to 0 … 25 bar abs.\n• 1 … 0 to -1 … +24 bar",
+    "ar": "• 0 … 0.4 إلى 0 … 1,000 bar\n• 0 … 0.4 إلى 0 … 25 bar abs.\n• 1 … 0 إلى -1 … +24 bar"
+  },
+  {
+    "id": 483,
+    "en": "• IO-Link version 1.1\n• Medium temperature to +125 °C\n• Multicolour 360° LED status display",
+    "ar": "• IO-Link الإصدار 1.1\n• درجة حرارة الوسط حتى +125 °C\n• مؤشر حالة LED متعدد الألوان بزاوية 360°"
+  },
+  {
+    "id": 484,
+    "en": "≤ 1.0",
+    "ar": "≤ 1.0"
+  },
+  {
+    "id": 485,
+    "en": "• Good/Bad indication through parameterisable digital display (red/green)\n• Compact size enables easy installation in confined spaces\n• Optimised design makes OEM machine integration easier\n• Designed for rough demands to 50g shock and -40 … +125 °C [-40 … +257 °F]",
+    "ar": "• بيان الحالة السليمة/غير السليمة عبر شاشة رقمية قابلة لضبط المعلمات (أحمر/أخضر)\n• حجم مدمج يسهّل التركيب في الأماكن الضيقة\n• تصميم محسّن يسهّل الدمج في آلات المصنّعين الأصليين للمعدات (OEM)\n• مصمم للظروف القاسية حتى صدمات 50g ودرجات حرارة -40 … +125 °C [-40 … +257 °F]"
+  }
+]

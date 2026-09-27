@@ -272,3 +272,21 @@ html[lang=ar] .information-lead h1{max-width:15ch;font-size:clamp(40px,5.5vw,80p
  .intro-needle{animation-duration:.6s}
  .intro-wordmark span{animation-duration:.5s}
 }
+
+/* Manufacturer photography keeps a fixed stage while preserving the complete instrument. */
+.product-visual:has(.manufacturer-image){height:320px;min-height:0;background:#fff}
+.detail-visual:has(.manufacturer-image){background:#fff;min-width:0}
+.manufacturer-image{display:block;width:100%;height:100%;max-height:520px;object-fit:contain;padding:24px}
+.product-visual .manufacturer-image{height:320px}
+.detail-visual .manufacturer-image{padding:40px 24px 64px}
+.detail-visual:has(.manufacturer-image)>p{color:#091540;inset-inline-end:20px}
+.product-info h3,.detail-copy h1,.model,.breadcrumb,.technical-section dd,.technical-section dt{overflow-wrap:anywhere}
+.product-detail>*{min-width:0}
+.dated-availability{align-items:flex-start;flex-direction:column;gap:4px}
+.dated-availability strong{font-weight:600;color:var(--ink)}
+.dated-availability small{font-size:11px}
+.datasheet-links{display:flex;flex-wrap:wrap;gap:12px;margin-block:24px}
+.datasheet-links a{max-width:100%;overflow-wrap:anywhere}
+.catalogue-pagination{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:48px;border-top:1px solid var(--line);padding-top:24px;font-size:14px}
+.catalogue-pagination a{min-height:44px;display:flex;align-items:center;padding:8px 16px;border:1px solid var(--line)}
+@media(max-width:420px){.technical-section{padding:24px}.technical-section dl>div{grid-template-columns:1fr;gap:8px}}

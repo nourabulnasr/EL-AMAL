@@ -1,5 +1,6 @@
 import type {Access,CollectionConfig,Field} from 'payload';
 import {safeDatasheetUrl} from '../lib/public-catalogue.ts';
+import {parseCatalogueDetails,validateCatalogueDetails} from '../lib/catalogue-details.ts';
 import {instrumentTypes,applications} from '../content/product-options.ts';
 import {hasRole,canPublish} from '../lib/access.ts';
 const owner:Access=({req})=>hasRole(req.user,['owner']);
@@ -26,13 +27,18 @@ export const Products:CollectionConfig={
  access:{create:catalogue,read:({req})=>hasRole(req.user,['owner','catalogue-editor','sales','warehouse'])?true:{_status:{equals:'published'}},update:catalogue,delete:()=>false},
  hooks:{beforeChange:[({data,originalDoc,req})=>{
    const merged={...originalDoc,...data};
+   if(merged.catalogueDetails!=null){
+     const details=parseCatalogueDetails(merged.catalogueDetails);
+     if(!details)throw new Error(String(validateCatalogueDetails(merged.catalogueDetails)));
+     data.catalogueDetails=details;
+   }
    if(merged._status==='published'){
      if(!hasRole(req.user,['owner']))throw new Error('Only the owner can publish reviewed products.');
      if(!canPublish(merged))throw new Error('Publication requires reviewed English and Arabic content, source evidence and asset rights.');
    }
    return data;
  }]},
- fields:[{name:'externalId',type:'text',required:true,unique:true},{name:'model',type:'text',required:true,index:true},{name:'category',type:'relationship',relationTo:'categories',required:true},bilingual('name'),bilingual('description','textarea'),{name:'instrumentType',type:'select',options:instrumentTypes.map(x=>({label:x.en,value:x.id}))},{name:'applications',type:'select',hasMany:true,options:applications.map(x=>({label:x.en,value:x.id})),admin:{description:'Choose only applications supported by reviewed manufacturer information.'}},{name:'datasheetUrl',type:'text',validate:(value:unknown)=>!value||!!safeDatasheetUrl(value)||'Enter an HTTPS manufacturer datasheet URL.',admin:{description:'Link to the actual model datasheet. Verify the document and reuse rights before publishing.'}},{name:'sourceRef',type:'text',required:true,access:{read:({req})=>!!req.user}},{name:'reviewedBy',type:'relationship',relationTo:'staff',access:{read:({req})=>hasRole(req.user,['owner','catalogue-editor']),create:({req})=>hasRole(req.user,['owner']),update:({req})=>hasRole(req.user,['owner'])}},{name:'reviewedAt',type:'date',access:{create:({req})=>hasRole(req.user,['owner']),update:({req})=>hasRole(req.user,['owner'])}},{name:'rightsConfirmed',type:'checkbox',defaultValue:false,access:{create:({req})=>hasRole(req.user,['owner']),update:({req})=>hasRole(req.user,['owner'])}}],
+ fields:[{name:'catalogueDetails',type:'json',validate:validateCatalogueDetails,admin:{description:'Reviewed manufacturer image, bilingual specifications, dated model availability and datasheets.'}},{name:'externalId',type:'text',required:true,unique:true},{name:'model',type:'text',required:true,index:true},{name:'category',type:'relationship',relationTo:'categories',required:true},bilingual('name'),bilingual('description','textarea'),{name:'instrumentType',type:'select',options:instrumentTypes.map(x=>({label:x.en,value:x.id}))},{name:'applications',type:'select',hasMany:true,options:applications.map(x=>({label:x.en,value:x.id})),admin:{description:'Choose only applications supported by reviewed manufacturer information.'}},{name:'datasheetUrl',type:'text',validate:(value:unknown)=>!value||!!safeDatasheetUrl(value)||'Enter an HTTPS manufacturer datasheet URL.',admin:{description:'Link to the actual model datasheet. Verify the document and reuse rights before publishing.'}},{name:'sourceRef',type:'text',required:true,access:{read:({req})=>!!req.user}},{name:'reviewedBy',type:'relationship',relationTo:'staff',access:{read:({req})=>hasRole(req.user,['owner','catalogue-editor']),create:({req})=>hasRole(req.user,['owner']),update:({req})=>hasRole(req.user,['owner'])}},{name:'reviewedAt',type:'date',access:{create:({req})=>hasRole(req.user,['owner']),update:({req})=>hasRole(req.user,['owner'])}},{name:'rightsConfirmed',type:'checkbox',defaultValue:false,access:{create:({req})=>hasRole(req.user,['owner']),update:({req})=>hasRole(req.user,['owner'])}}],
 };
 export const SKUs:CollectionConfig={
  slug:'skus',admin:{useAsTitle:'skuCode'},access:{create:owner,read:staff,update:owner,delete:()=>false},

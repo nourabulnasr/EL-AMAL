@@ -1,5 +1,16 @@
 # EL AMAL progress
 
+## Latest checkpoint — 28 September complete real catalogue publication
+
+Nour instructed publishing every actual catalogue entry with specifications and real photos. All29 main pages now map to151 model-group entries (90 in stock,61 out of stock),151 original manufacturer images and560 bilingual technical rows.159 official PDF downloads verified;150 entries have datasheets,M12 cable uses catalogue page29. Source/model exceptions corrected. Details: docs/catalogue-publication-2026-09-28.md and catalogue/2026-09-27/README.md.
+
+Implemented validated CMS details,real photos/stock dates/specifications,24-card pagination,bilingual model/range isolation,family guidance,manufacturer/image schema and pagination canonicals. Full technical data remains server-rendered instead of basket hydration. Existing access gates retained.
+
+65 unit tests/TypeScript succeeded; additive migration applied development+hosted. Development permissions/draft/public-projection checks succeeded. Import resumed without duplicates (64 unchanged/87 created); hosted151 created and projected. Local production build succeeded; EN/AR390px grouped-model/detail checks and all151 image contact sheets inspected. Two independent review findings corrected.
+
+Vercel sign-in renewed with Nour's authorization; correct EL AMAL project verified and CATALOGUE_SOURCE=cms added for production. Hosted content ready. Git release/cloud/live verification in progress; do not claim stable URL updated until recorded below. No public sending/indexing activated. Exact inventory/reservations,private attachments,scheduling/monitoring/recovery and full release acceptance remain separate engineering scope.
+
+
 ## Latest checkpoint — 27 September photographed catalogue intake
 
 Received the two user-named Desktop folders: 17 in-stock JPEGs and 12 out-of-stock JPEGs, all 1200x1600. Copied the 29 originals without modification into ignored docs/source/catalogue-2026-09-27/ and recorded source names, dimensions, sizes and SHA-256 hashes. Originals remain untouched. No exact duplicate source images.
