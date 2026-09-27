@@ -1,56 +1,54 @@
-> Update 24 September: previous phase order paused for client requirements. See [client requirements](client-requirements-2026-09-24.md) and the latest PROGRESS.md. New direct RFQ is staff-test capable; public sending remains disabled.
+# EL AMAL delivery status — 27 September 2026
 
-# Implementation phase status — 19 September 2026
+This replaces the outdated 19/24 September phase checklist. Latest implementation/deployment evidence remains in PROGRESS.md.
 
-## 24 September update — work independent of catalogue
+## Overall estimate: about 65% of the full planned scope
 
-Notification follow-up: transactional queue creation and injectable retry worker implemented/tested; sample requests are disabled, no sender or scheduler configured. Worker tests cover rollback, claim contention, retry limits and stale responses with fake sends only. Customer email verification remains unimplemented. Read latest PROGRESS.md for deployment evidence.
+This is an engineering estimate of scope completed, not a measured quality score, a delivery-date forecast or a security/SEO rating. It includes real content, operational enquiries, stock and launch acceptance. Rounded to the nearest five percentage points; allow roughly five points of uncertainty as final business scope is confirmed.
 
-Phase1 security upgrade is live and verified. Phase3 now has a tested persistence service and protected owner/sales enquiry collection: server-resolved immutable item snapshots, request-key deduplication including simultaneous retries, status/internal notes, and denied public creation/read. The public form remains preview-only. No real enquiry submission, outgoing email, verification, attachment upload or stock reservation is active. See PROGRESS.md for deployment status of the inbox increment.
+| Workstream | Approximate completion | Scope weight | Delivered | Remaining |
+|---|---:|---:|---|---|
+| Foundation and hosting | 90% | 15% | Next.js/React, Payload admin, hosted owner login, staff roles, separate Neon development/hosted PostgreSQL, migrations, GitHub and Vercel continuous review | Operational account recovery, complete role checks and staff handover |
+| Public interface and motion | 85% | 20% | EN/AR/RTL, navy/white/orange theme, responsive homepage, navigation, catalogue/detail/basket/direct RFQ, industry pages, hover/press/focus/reduced-motion behavior; new instrument opening and loading fallback | Final brand imagery, remaining About/Contact/Resources/policy pages, comprehensive usability/accessibility/device review and visual approval |
+| Catalogue and business content | 60% | 15% | CMS publication adapter, review/draft isolation, model search and category/type/application filters, datasheet fields, import validation, WIKA/contact components gated on real details | Real catalogue/photos/datasheets/translations, pilot import then full import, private SKUs/opening stock, genuine WIKA evidence and actual contact information |
+| Enquiries and email | 65% | 20% | Form preview/validation, staff-test saving, immutable snapshots, duplicate protection, private inbox/statuses, single-use verification, encrypted email queue, protected retry workers, verification-gated staff notification | Public submission/resend integration and abuse controls, private uploads/scanning, sender configuration, scheduling, real delivery/recovery tests |
+| Inventory and reservations | 10% | 10% | Private SKU structure and import validation | Stock ledger, availability, verified allocation, concurrency-safe holds, expiry/release/dispatch, reconciliation and staff screens |
+| SEO, security and release acceptance | 50% | 20% | Canonical/hreflang, metadata/social image/schema, gated sitemap/robots, server validation/access controls, security headers and dependency patches, 53 unit tests plus development DB regression and sampled browser checks | Full device/accessibility/performance audits, public intake abuse defence, monitoring/backups/restore rehearsal, remaining dependency review, final content SEO/Search Console, privacy/retention policies and launch acceptance |
 
-Work that can continue before catalogue intake: enquiry HTTP/form integration and abuse controls; email outbox/verification mechanics (delivery needs sender setup); private uploads/scanning integration; stock ledger and reservation logic using isolated synthetic SKUs; remaining content-page structures; accessibility/performance/role/restore tests. Final business wording/assets, sender configuration, stock timing policies, real catalogue/SKUs and operational opening stock remain separate inputs. Do not label any entire phase complete because its foundation exists.
+Weighted estimate: 63.5%, reported as approximately65%. The percentage is not the average of only the visible pages. Real catalogue population remains0%; the catalogue percentage above includes its implemented software. Security and SEO percentages must never be described as proof of protection, ranking or certification.
 
-Current position: phase 2 is underway, with phase 1 operational follow-ups. The live site is a client review deployment, not an operational launch.
+## What is actually delivered and how
 
-## 1. Foundation — core built
-Built: Next.js, Payload, separate development/hosted PostgreSQL databases, migrations, staff/category/product/private-SKU collections, role and publication rules, hosted owner login, protected admin and automatic Vercel deployment.
-Remaining: full non-owner HTTP permission matrix, operational email/password recovery, backup/restore rehearsal, admin browser walkthrough and owner acceptance.
+- Client review: https://el-amal-sigma.vercel.app/en and /ar. The site is publicly viewable but explicitly labelled sample content.
+- Administration: https://el-amal-sigma.vercel.app/admin. Payload CMS controls structured records and staff access. The public site can read reviewed CMS records, but stays in demo mode until content is ready.
+- Source and backups of code: local project plus https://github.com/nourabulnasr/EL-AMAL, branch codex/el-amal-foundation. The connected Vercel project builds updates. Git is not a backup of the live database.
+- Database: Neon PostgreSQL provisioned through Vercel Marketplace, with distinct development and hosted databases. Credentials stay in ignored environment files/platform settings.
+- Delivery evidence: PROGRESS.md records tested commits/deployments. Test runs use fake mail transports and disposable records; no genuine customer email delivery is claimed.
 
-## 2. Catalogue — current phase
-Built: English/Arabic homepage, catalogue/category/product routes, model search, filters, language switching/RTL, local persistent quote basket, sample records, import validation and initial browser/unit checks.
-Remaining: connect public pages to reviewed CMS records (currently fixtures), ten reviewed bilingual pilot products then full catalogue/SKUs, supplied logo and authorised images, publishing-flow tests, full accessibility/performance checks and visual approval.
+## Remaining work owned by development
 
-## 3. Enquiries / RFQ — backend pending
-Built: local basket only; it does not submit or reserve anything.
-Remaining: validated persistent submissions, immutable product/SKU snapshots, email verification tokens, private attachment validation/scanning, notification outbox/retries, staff enquiry workflow and end-to-end tests.
+1. Public enquiry and resend integration with bounded inputs, idempotency, per-client/per-email abuse limits and neutral responses.
+2. Private attachments with authorization, file-type/size validation, scanning/quarantine and retention.
+3. Inventory ledger, reservation lifecycle, expiry jobs, reconciliation and staff experience using synthetic data until real stock arrives.
+4. Operational account recovery, scheduling, delivery monitoring, error monitoring and backup/restore procedures.
+5. About, Contact, Resources and policy page structures; business/legal wording requires owner validation.
+6. End-to-end customer/staff/permission tests; device/RTL/keyboard/accessibility audits; measured mobile performance and regression fixes.
+7. Final metadata/content audit, live-domain configuration, Search Console/indexing activation after real content and launch approval.
 
-## 4. Stock — schema groundwork only
-Built: private SKU schema and import input validation.
-Remaining: inventory ledger/balances, verified exact-SKU allocation, expiry/release/dispatch, scheduled jobs, freshness policy, role enforcement, concurrency/idempotency/reconciliation tests and business approval of proposed verification/hold/staleness timings. On-hand stock decreases at dispatch.
+## Remaining inputs owned by Nour/client — collected at the end
 
-## 5. Complete website — pending
-Remaining: full reviewed catalogue rollout, industry pages, About/Contact/Resources/policies, final brand assets/content/translations, production metadata/schema/hreflang/sitemap/social previews, analytics/reporting and agreed motion. Demo labels/noindex stay until launch-ready.
+- Photographed catalogue ZIP; product specifications, datasheets and permission to use supplied images/documents. We handle extraction/import/review preparation.
+- Final logo, authorised company/product photographs and approved company facts/copy/translations.
+- Business phone/WhatsApp/address/hours and genuine WIKA relationship evidence/approved wording.
+- Final domain and verified sending account/domain. Receiving inbox is already confirmed and need not be supplied again. Secrets are configured privately, not pasted into chat.
+- Actual opening stock, exact SKU definitions and approved hold/expiry/dispatch policy.
+- Strong unique owner password; MFA enrollment when available in the chosen authentication configuration; final staff roles.
+- Review of privacy/retention/business wording, visual approval and final launch acceptance.
 
-## 6. Release acceptance — pending
-Available: continuous client review hosting and automatic deployments.
-Remaining: full T01–T14 acceptance, end-to-end enquiry/stock tests, security/role audit, mobile/RTL/accessibility and measured performance, final production data/mail, restore/rollback rehearsal, staff training/handover and owner/client approval.
+## Quality direction beyond functional completion
 
-## Hosted admin access
-URL: https://el-amal-sigma.vercel.app/admin
-Hosted credentials: ignored .env.hosted-owner.local. Development credentials: .env.owner.local (different password). Copy only values after the equals sign. Never commit or share credential files.
-Latest live verification: hosted login200 with owner role and cookie-authenticated admin200; test session logged out. This verifies server authentication, not the owner's browser walkthrough.
+Use the Capitolium reference for deliberate entrance, strong typography and coherent art direction, with EL AMAL's instrument vocabulary. Original product photography/approved 3D assets, a genuinely helpful technical selection journey, carefully edited Arabic/English content and real evidence of company capability will improve the site more than stacking unrelated effects.
 
-## UI/UX across the phases
-- Phase 1: information architecture and approved design direction (Precision in steel); basic admin foundation.
-- Phase 2: main public UI/UX — typography, colour, navigation, bilingual/RTL layouts, responsive homepage/catalogue/product detail, search/filter states, basket interactions and accessibility. Initial interface exists; authentic assets, full interaction states, usability/performance verification and Nour's visual approval remain.
-- Phase 3: enquiry form, validation, attachment, verification, confirmation and staff enquiry experience.
-- Phase 4: stock status, reservation/expiry/dispatch feedback and staff inventory workflows.
-- Phase 5: remaining content page design, visual consistency, final assets, copy and agreed motion polish.
-- Phase 6: full mobile/desktop/RTL, keyboard/accessibility and end-to-end usability acceptance. UI/UX is continuous, not deferred until phase5.
+Target Core Web Vitals: LCP<=2.5s, INP<=200ms and CLS<=0.1 at the75th percentile, mobile and desktop. These are targets, not current measured results. Sources: https://web.dev/articles/vitals and https://developers.google.com/search/docs/essentials. Reference reviewed: https://www.collabcapitolium.fr/.
 
-Browser login follow-up: used the existing hosted credentials through the live form in the user's in-app browser. Navigation reached /admin with Dashboard visible. No credential change was needed. Earlier failure was not reproduced and its cause is unconfirmed.
-
-Catalogue integration checkpoint: shared CMS-to-public adapter is implemented, with explicit demo/cms source selection and separate baskets. Public review remains in demo mode while actual products are deferred. Unit tests20, TypeScript and development database publish/draft isolation/unpublish checks succeeded. Full CMS-mode browser verification remains pending: local Next processes exited during compilation; local production build compiled but could not spawn its TypeScript worker. Cloud build and live demo browser checks are being verified separately. Do not mark phase2 complete or imply catalogue activation.
-Cloud build for01bbf9e succeeded and stable client alias updated. Deployed demo search/detail/basket/refresh/Arabic switch verified in browser; temporary basket item removed. Next: finish CMS-mode rendering verification before activation, continue role-permission and enquiry groundwork while real catalogue intake is deferred.
-
-UI/UX implementation20 September: hero spring/scroll motion, navigation glass treatment, catalogue category tabs/filter chips/empty states, product guidance and bilingual enquiry-form preview implemented. Actual submission, uploads, email verification and stock remain pending. Visual approval remains Nour's; browser verification recorded in PROGRESS.md.
+A top-ten regional award or Google position cannot be guaranteed. A finished, distinctive and demonstrably usable website can be submitted for independent design evaluation; ranking depends on the evaluator/competition and, for search, the query and market.

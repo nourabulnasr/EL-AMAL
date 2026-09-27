@@ -1,5 +1,15 @@
 # EL AMAL progress
 
+## Latest checkpoint — 27 September instrument entrance and delivery estimate
+
+Nour requested exact delivery/remaining scope percentages and a professional animated loading entrance inspired by collabcapitolium.fr. Reviewed its live entrance and narrative presentation. Built a distinct EL AMAL navy split-panel reveal with white editorial wordmark, orange gauge sweep, bilingual caption/skip action and footer replay. Brief 1.8-second entrance on document load, not every client navigation; explicitly decorative, no fake percentage counter. CSS finishes independently of hydration, no-JS hides entrance/replay, reduced motion hides entrance and stops loading needle. Pointer/keyboard/focus/scroll can dismiss; no focus steal or page-scroll lock. Actual route-loading.tsx fallback uses accessible bilingual status and resolves with Next streaming; no forced data delay or new dependency.
+
+TypeScript and cloud build succeeded. Staged browser observed desktop/390px Arabic entrance, automatic removal, Escape dismissal, no horizontal overflow, real Arabic catalogue loading status resolving to content, no full entrance replay on client navigation and no console errors in that checked flow. Screenshots artifacts/2026-09-27/intro-desktop.png and intro-mobile-ar.png. Reduced-motion/no-JS safeguards inspected in source, not emulated in browser. No performance score or visual acceptance claimed.
+
+Replaced stale docs/phase-status.md with current six-workstream delivery/remaining list. Overall about65% is a rough weighted scope estimate (63.5 rounded, roughly5-point uncertainty), not a quality/security/SEO score or award prediction. Real catalogue population remains0%; major operational work remains. Client inputs still deferred.
+
+Final deployment dpl_8Jm8mjxtVjLU7En9TKbX9KQaxZ6F reached Ready and was promoted. Live stable-domain footer replay verified and screenshot saved to artifacts/2026-09-27/intro-live.png.
+
 ## Latest checkpoint — 27 September verified-customer staff notifications
 
 Fixed a prerequisite for safe public intake: the staff notification worker now atomically requires a CMS-source enquiry with verified status and a confirmation timestamp before claiming either a new message or an expired retry lease. Test/demo confirmation does not qualify. Waiting does not consume attempts. The existing 23-hour queue-age cutoff remains; late confirmation does not reset delivery history. Updated admin queue guidance and generated type documentation. No migration, sender activation or public intake activation.
