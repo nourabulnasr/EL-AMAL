@@ -1,5 +1,18 @@
 # EL AMAL progress
 
+## Latest checkpoint — 27 September public intake, information pages and mobile performance
+
+Nour approved the entrance and requested continuing all agent-owned work while deferring client inputs. Implemented guarded public submission/resend (signed resend-only receipt, exact-origin/body guards, PostgreSQL visitor and normalized-email quotas, retry-safe snapshots), bilingual customer UI, and About/Contact/Resources pages. No real products/contact claims invented. Sending/intake remain disabled until sender/worker/CMS activation. No hosted migration or real email sent.
+
+58 unit tests, TypeScript, cloud build and independent review succeeded. Development database tests verified contention, idempotency, expired windows, duplicate/conflict handling, single queue records, resend/token rotation, confirmed exclusions, quota denial and retry after catalogue removal; disposable records removed. Reviewer found a cleanup race. Reproduced deletion of a renewed quota, then fixed cleanup with locked SKIP LOCKED candidates and outer expiry recheck plus atomic quota upsert/locking. Regression succeeded.
+
+Separated desktop Motion into a conditional dynamic import and shortened mobile entrance. Browser confirmed desktop motion pause/resume and375px mobile static fallback without overflow; bilingual new pages, preview-only RFQ and footer/contact touch targets checked. Live route/metadata/private-API guards verified. Mobile PageSpeed lab improved92→100 performance, LCP3.2→1.2s, TBT100→20ms, CLS0→0.022; automated accessibility100/best-practices100; SEO66 because demo indexing is intentionally disabled. These are homepage lab samples, not field Core Web Vitals, full-site acceptance or perfect security. See docs/release-verification-2026-09-27.md for reports and limits.
+
+Deployment dpl_FCyTJFiapTKx58GEnCwe7CttzW99 reached Ready and was promoted to the stable URL. Live About screenshot artifacts/2026-09-27/about-live.png. CLI curl debug unexpectedly emitted the preview bypass token; revoked and regenerated privately, confirmed old token absent and protection unchanged. No website admin/database credential exposure. Pinned GitHub quality workflow added (tests/types/high-critical audit/build without production secrets); first hosted run evidence to be recorded after push.
+
+Overall scope estimate remains about65% (weighted64.5, rounded). Public intake is implemented but not activated. Remaining engineering includes private attachments, inventory/reservations, scheduling/monitoring/recovery and broader acceptance checks. Client inputs remain deferred in docs/final-client-inputs.md. Do not represent these as solely catalogue blockers or claim100% completion.
+
+
 ## Latest checkpoint — 27 September instrument entrance and delivery estimate
 
 Nour requested exact delivery/remaining scope percentages and a professional animated loading entrance inspired by collabcapitolium.fr. Reviewed its live entrance and narrative presentation. Built a distinct EL AMAL navy split-panel reveal with white editorial wordmark, orange gauge sweep, bilingual caption/skip action and footer replay. Brief 1.8-second entrance on document load, not every client navigation; explicitly decorative, no fake percentage counter. CSS finishes independently of hydration, no-JS hides entrance/replay, reduced motion hides entrance and stops loading needle. Pointer/keyboard/focus/scroll can dismiss; no focus steal or page-scroll lock. Actual route-loading.tsx fallback uses accessible bilingual status and resolves with Next streaming; no forced data delay or new dependency.

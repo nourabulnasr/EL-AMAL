@@ -1,9 +1,11 @@
  'use client';
 import {useState} from 'react';
 import type {Locale} from '@/lib/catalogue';
+import {CustomerEnquirySubmit} from './customer-enquiry-submit';
+import {useBasket} from './basket-provider';
 import {TestEnquirySubmit} from './test-enquiry-submit';
 export function DirectRFQ({locale,whatsapp}:{locale:Locale;whatsapp?:string}){
- const ar=locale==='ar';
+ const ar=locale==='ar';const {publicEnquiries}=useBasket();
  const [details,setDetails]=useState({name:'',email:'',company:'',notes:''});
  const [manual,setManual]=useState({model:'',quantity:1,range:''});
  const [review,setReview]=useState(false);
@@ -19,7 +21,8 @@ export function DirectRFQ({locale,whatsapp}:{locale:Locale;whatsapp?:string}){
  </div></fieldset>
  {!review&&<button className="button button-dark">{ar?'مراجعة طلب عرض السعر':'Review RFQ'}</button>}
  </form>
- {review&&<div className="review-notice" role="status"><strong>{ar?'راجع التفاصيل أعلاه — لم يُرسل الطلب بعد.':'Review the details above — your request has not been sent.'}</strong><p>{ar?'المواصفات والتوفر يحتاجان إلى تأكيد فني.':'Specifications and availability require technical confirmation.'}</p>{whatsapp?<a className="button button-dark" href={`https://wa.me/${whatsapp}?text=${encodeURIComponent(summary)}`} target="_blank" rel="noopener noreferrer">{ar?'فتح الطلب في واتساب':'Open request in WhatsApp'}</a>:<p>{ar?'الإرسال للزوار غير مفعّل بعد. يمكن للموظفين المسجلين حفظ طلب تجريبي أدناه.':'Visitor submission is not enabled yet. Signed-in staff can save a test request below.'}</p>}<button type="button" className="text-link" onClick={()=>setReview(false)}>{ar?'تعديل التفاصيل':'Edit details'}</button></div>}
+ {review&&<div className="review-notice" role="status"><strong>{publicEnquiries?(ar?'تفاصيل طلب عرض السعر':'Your RFQ details'):ar?'راجع التفاصيل أعلاه — لم يُرسل الطلب بعد.':'Review the details above — your request has not been sent.'}</strong><p>{ar?'المواصفات والتوفر يحتاجان إلى تأكيد فني.':'Specifications and availability require technical confirmation.'}</p>{whatsapp?<a className="button button-dark" href={`https://wa.me/${whatsapp}?text=${encodeURIComponent(summary)}`} target="_blank" rel="noopener noreferrer">{ar?'فتح الطلب في واتساب':'Open request in WhatsApp'}</a>:!publicEnquiries?<p>{ar?'الإرسال للزوار غير مفعّل بعد. يمكن للموظفين المسجلين حفظ طلب تجريبي أدناه.':'Visitor submission is not enabled yet. Signed-in staff can save a test request below.'}</p>:null}<button type="button" className="text-link" onClick={()=>setReview(false)}>{ar?'تعديل التفاصيل':'Edit details'}</button></div>}
+ <CustomerEnquirySubmit locale={locale} details={details} manual={manual} active={review}/>
  <TestEnquirySubmit locale={locale} details={details} manual={manual} active={review}/>
  </section>;
 }

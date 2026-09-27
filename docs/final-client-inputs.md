@@ -10,7 +10,7 @@ Nour asked to defer requests for client-supplied information while implementatio
 - Final public domain if it will replace the current Vercel URL.
 - Client review and launch approval after real content, contact links and email receipt have been verified.
 
-Development still owed (not client input): public customer verification-email delivery/resend integration (single-use confirmation and the trusted encrypted delivery queue are implemented), anonymous intake abuse controls, safe attachment handling, stock/reservation workflow, delivery scheduling and monitoring, final accessibility/performance checks and launch acceptance. These must not be presented as finished or as blocked solely by client information.
+Development still owed (not client input): activation/end-to-end delivery tests (guarded public submission/resend, visitor/email limits, single-use confirmation and the encrypted delivery queue are implemented), safe attachment handling, stock/reservation workflow, delivery scheduling and monitoring, final accessibility/performance checks and launch acceptance. These must not be presented as finished or as blocked solely by client information.
 
 - Replace the previously chosen short admin password with a strong unique password; enroll MFA where the chosen authentication setup supports it.
 - Actual opening stock and approved reservation/expiry policy before stock commitments.

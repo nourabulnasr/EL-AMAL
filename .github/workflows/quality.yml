@@ -1,0 +1,37 @@
+name: Website quality
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: website-quality-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NEXT_TELEMETRY_DISABLED: '1'
+      CMS_ENABLED: 'false'
+      CATALOGUE_SOURCE: demo
+      SITE_INDEXING_ENABLED: 'false'
+      PUBLIC_ENQUIRIES_ENABLED: 'false'
+      SITE_URL: https://el-amal-sigma.vercel.app
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - run: npm ci
+      - name: Unit and permission checks
+        run: npm test
+      - name: TypeScript
+        run: npm run typecheck
+      - name: High and critical dependency advisories
+        run: npm audit --audit-level=high
+      - name: Production build without production credentials
+        run: npm run build

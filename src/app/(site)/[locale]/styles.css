@@ -233,3 +233,42 @@ html[lang=ar] .loading-ar { display: inline; }
   .intro-replay { display: none; }
   .route-loading-mark span { animation: none; transform: rotate(-45deg); }
 }
+
+/* Information pages: editorial hierarchy, short lines and a quiet numbered rhythm. */
+.information-hero{padding:32px 6% 56px;background:var(--navy-panel)}
+.information-hero>.section-kicker{margin-top:48px}
+.information-lead{display:grid;gap:32px;margin-top:24px}
+.information-lead h1{font-size:clamp(44px,6.6vw,104px);max-width:12ch;text-wrap:balance}
+.information-lead p{max-width:42ch;font-size:16px;line-height:1.85}
+.information-lead .text-link{margin-top:24px}
+.information-body{display:grid;gap:40px}
+.information-aside h2{font-size:clamp(32px,4vw,52px);max-width:15ch;margin-top:16px;text-wrap:balance}
+.information-rule{display:block;height:2px;width:64px;background:var(--accent);margin-top:32px}
+.information-steps{margin:0;padding:0;list-style:none}
+.information-steps>li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:16px;padding:32px 0;border-top:1px solid var(--line)}
+.information-number{font-size:12px;font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+.information-steps h3{font-size:21px;line-height:1.4;margin-bottom:16px}
+.information-steps p,.information-steps ul{font-size:15px;line-height:1.85;max-width:56ch}
+.information-steps ul{padding-inline-start:20px;margin:20px 0 0}
+.information-steps ul li+li{margin-top:12px}
+.information-contact{background:var(--navy-panel)}
+.information-contact h2,.information-closing h2{font-size:clamp(36px,5vw,64px);max-width:18ch;text-wrap:balance}
+.information-contact p{margin-top:24px;max-width:60ch}
+.information-actions{display:flex;flex-wrap:wrap;align-items:center;gap:24px;margin-top:32px}
+.information-closing{border-top:1px solid var(--line)}
+.footer-links{flex-wrap:wrap;row-gap:16px}
+html[lang=ar] .information-lead h1{max-width:15ch;font-size:clamp(40px,5.5vw,80px)}
+@media(min-width:900px){.information-hero{padding-block:48px 96px}.information-lead{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:8%;align-items:end}.information-body{grid-template-columns:minmax(0,.85fr) minmax(0,1.4fr);gap:10%}.information-steps>li{grid-template-columns:40px minmax(0,1fr);gap:24px;padding:40px 0}.information-closing{display:flex;justify-content:space-between;gap:48px;align-items:end}.information-closing .information-actions{max-width:420px;flex-shrink:0}}
+
+.footer-links a{display:inline-flex;align-items:center;min-height:44px}
+.business-contact{padding-block:4px}
+.business-contact a{display:inline-flex;align-items:center;min-height:44px;gap:8px}
+
+/* A shorter mobile entrance keeps the same sequence without holding up the headline. */
+@media(max-width:767px){
+ .site-intro{animation-duration:1.15s}
+ .intro-panel-top,.intro-panel-bottom{animation-duration:.65s;animation-delay:.5s}
+ .intro-composition,.intro-skip{animation-duration:.3s;animation-delay:.5s}
+ .intro-needle{animation-duration:.6s}
+ .intro-wordmark span{animation-duration:.5s}
+}

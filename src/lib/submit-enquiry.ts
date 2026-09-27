@@ -6,7 +6,7 @@ import {enqueueInitialVerification} from './verification-outbox.ts';
 import type {VerificationSettings} from './verification-message.ts';
 
 // Trusted server service only. Never accept product descriptions or status from a caller.
-export async function submitEnquiry(payload:Payload,raw:unknown,catalogue:Catalogue,verification?:VerificationSettings) {
+export async function submitEnquiry(payload:Payload,raw:unknown,catalogue:Catalogue,verification?:VerificationSettings,beforeCreate?:()=>Promise<void>) {
   const input=parseEnquiry(raw);
   const fingerprint=enquiryFingerprint(input,catalogue.source);
   const existing=async()=>{
@@ -19,6 +19,8 @@ export async function submitEnquiry(payload:Payload,raw:unknown,catalogue:Catalo
   const previous=await existing();
   if(previous)return previous;
   const items=input.manual?[{productId:'customer-specified',model:input.manual.model,quantity:input.manual.quantity,range:input.manual.range,nameEn:'Customer-specified model — technical review required',nameAr:'طراز حدده العميل — يتطلب مراجعة فنية'}]:snapshotItems(input.lines,catalogue.products);
+  // Existing retries resolve before catalogue changes or new-request quotas are considered.
+  if(beforeCreate)await beforeCreate();
   const transactionID=await payload.db.beginTransaction();
   if(transactionID===null)throw new Error('Enquiry persistence requires transactions');
   const req={transactionID};

@@ -20,7 +20,7 @@ Subject: industrial instruments and quotation tasks. Light: white type and orang
 - Run unit/type checks, cloud build and representative browser/HTTP checks. Record actual findings in PROGRESS.md.
 
 ## Remaining agent-owned work
-Guarded anonymous enquiry submission/resend with email-based abuse limits; delivery activation tests once configured; secure private attachments; stock ledger/reservation concurrency/expiry; scheduled workers/monitoring; broader accessibility/performance/security regression and recovery testing. These remain implementation work, not things to pretend are blocked solely by the catalogue.
+Guarded anonymous enquiry submission/resend and email-based limits are implemented. Remaining: delivery activation tests once configured; secure private attachments; stock ledger/reservation concurrency/expiry; scheduled workers/monitoring; broader accessibility/performance/security regression and recovery testing. These remain implementation work, not things to pretend are blocked solely by the catalogue.
 
 ## Client inputs at the end
 Catalogue/data/datasheets/rights; actual stock and reservation policy; final logo and company imagery; genuine WIKA evidence; phone/WhatsApp and approved company details; sender account/domain and final public domain; strong admin password/MFA enrollment; client approval. Receiving email is already known. No credentials should be pasted into chat. See final-client-inputs.md.

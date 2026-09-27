@@ -1,6 +1,8 @@
 # EL AMAL
 
-Bilingual industrial instrument catalogue built with Next.js 16, React 19 and TypeScript. Direction: Precision in steel, selected by Nour on 17 September 2026.
+Bilingual industrial-instrument website built with Next.js16, React19, TypeScript, Payload CMS and Neon PostgreSQL. The public design uses #010736 / #091540, white type and orange accents. Source is on the `codex/el-amal-foundation` branch.
+
+Client review: [English](https://el-amal-sigma.vercel.app/en) / [Arabic](https://el-amal-sigma.vercel.app/ar). Administration: [/admin](https://el-amal-sigma.vercel.app/admin).
 
 ## Run locally
 
@@ -9,37 +11,45 @@ npm ci
 npm run dev
 ```
 
-Open http://127.0.0.1:3004/en or /ar. For production preview: `npm run build` then `npm start`. Google font downloads require network access on a clean build.
+Open http://127.0.0.1:3004/en. Production preview: `npm run build`, then `npm start`. Clean builds download Google fonts. Match package.json's Node22 runtime. Do not connect a local development server to the hosted production database.
 
 ## Implemented
 
-- English and Arabic RTL homepage, catalogue, category and product routes.
-- Model/keyword search and category filters, with explicit empty states.
-- Local quote basket with quantity validation and persistence across language changes and refreshes.
-- Ten explicitly synthetic demo records; illustrative CSS instrument artwork.
-- Pure validation for catalogue imports, stock opening records and publication prerequisites.
-- Prepared CMS schemas and staff-role rules; see [CMS integration status](cms/README.md).
+- English/Arabic/RTL homepage, catalogue, category, product, industry, About, Contact and Resources pages; canonical/hreflang, social metadata and structured data.
+- Model search, category/type/application filters, datasheet fields and separate demo/CMS publication gates.
+- Persistent quote basket, model/quantity/range RFQ, validation and review, staff-test saving and private enquiry inbox.
+- Guarded public submission/resend code with durable visitor/email limits, immutable snapshots, duplicate protection and signed resend receipts. Production activation stays off until its prerequisites are ready.
+- Single-use email confirmation, encrypted transactional email queue, protected retry workers and verification-gated staff notifications. A provider is implemented, but real email delivery and scheduling are not active.
+- Payload staff roles and hosted owner login, private SKUs, separate development/hosted Neon databases and versioned migrations.
+- Responsive navy design, instrument illustration, hover/press/focus states, reduced-motion safeguards and the approved branded entrance. Desktop instrument interaction loads only when the device supports it.
+- Baseline security headers, access controls, validation, dependency review and automated GitHub quality workflow.
 
-## Validation
+## Current launch state
 
-`npm test` runs sixteen unit tests. `npm run typecheck` checks the frontend. Production build succeeded. Browser checks covered model search, language switching, Arabic product details, basket persistence, mobile menu and empty-search reset. Detailed evidence and limitations: [verification report](docs/verification-2026-09-17.md).
+The live site remains a labelled sample-content preview. Actual products are not populated, indexing is off, public enquiries are not active and stock is not reserved. Do not treat the visible interface or successful unit checks as full operational delivery.
 
-## Not yet live
+`CATALOGUE_SOURCE=demo` preserves synthetic review records. Set `cms` only after approved content is ready; CMS_ENABLED, DATABASE_URL and PAYLOAD_SECRET are also required. CMS mode never falls back to fixtures. Only explicitly projected public fields leave the server; drafts, source evidence, review identities and internal SKUs stay private. Demo/CMS baskets use different browser-storage keys.
 
-CMS dependencies, guarded admin/API routes and the initial PostgreSQL migration are integrated. The isolated free development database is connected and tested. Permanent owner setup and authenticated admin verification remain pending. The client review deployment keeps CMS disabled. No email service, customer enquiry submission or transactional inventory is configured. No actual stock or product specifications are invented. Preview pages have noindex headers; the sitemap is intentionally empty.
+See [delivery status](docs/phase-status.md) for the current scope estimate and exact work remaining. [Client inputs](docs/final-client-inputs.md) are collected together at the end.
 
-Next: bootstrap the permanent owner, verify authenticated admin/API workflows, implement and test enquiry/stock workflows, import reviewed bilingual catalogue data, replace provisional branding and illustration, complete remaining content and production SEO, then deployment and acceptance checks.
+## Verification and deployment
 
-- [Kickoff scope](docs/kickoff-2026-09-17.md)
-- [Foundation plan](docs/foundation-plan.md)
-- [Progress](PROGRESS.md)
+- `npm test`:58 unit checks as of27 September2026.
+- `npm run typecheck`: TypeScript.
+- `npm run readiness`: configuration booleans only; no secrets or network activity.
+- `npm run build`: production compilation.
+- `.github/workflows/quality.yml`: clean install, tests, types, high/critical advisory gate and credential-free demo build on pushes/PRs. This workflow does not itself block Vercel's separate automatic deployment integration.
+- `scripts/check-customer-intake.ts` and the existing database check scripts run only against development with `CMS_DATABASE_CHECK=development`; use fake mail transports/exact disposable records. Never point them at the hosted database.
 
-Source proposal text, local screenshots and secrets are ignored by Git. Visual approval belongs to Nour. This preview does not constitute delivery of the full proposal.
+Live deployment is through the existing Vercel project; pushes to the connected branch can update the stable review URL. Migration and operational changes need their separate verification. Git backs up code, not database contents. Current results, deployment IDs and limitations live in [PROGRESS.md](PROGRESS.md).
 
-Client review: https://el-amal-sigma.vercel.app/en. Vercel automatically deploys pushes to codex/el-amal-foundation to this stable URL. The deployed application is still a sample-content preview, with live enquiries and inventory pending.
+## Handover references
 
+- [Public enquiry controls and activation](docs/customer-intake.md)
+- [Verification email outbox](docs/verification-email-outbox.md)
+- [Staff notification worker](docs/notification-queue.md)
+- [SEO activation](docs/seo-readiness.md)
+- [Original brief and acceptance scope](docs/kickoff-2026-09-17.md)
+- [Continue this project](docs/continue-project.md)
 
-## Catalogue source
-The public website now uses a shared server catalogue loader. `CATALOGUE_SOURCE=demo` (default) preserves the labelled review records. Set `CATALOGUE_SOURCE=cms` and redeploy only when reviewed content is ready; `CMS_ENABLED`, database connection and Payload secret must also be configured. CMS mode reads published records at request time and explicitly projects public fields. It never falls back to demo products on empty data or failure. Drafts, review identities, source evidence and SKUs are not sent to the public UI. Demo and CMS baskets use different local-storage keys.
-
-This does not enable enquiry submission or stock reservations. Images remain labelled illustrations until authorised assets are supplied. Keep noindex enabled until release acceptance.
+Credentials, source proposal text, test artifacts and screenshots are ignored by Git. Keep them private and back up through an appropriate secure process. Visual approval belongs to Nour; release acceptance remains outstanding.

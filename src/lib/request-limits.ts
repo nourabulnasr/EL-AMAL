@@ -16,6 +16,6 @@ export async function allowRequest(payload:Payload,key:string,limit=10){
  window_ends_at=CASE WHEN request_limits.window_ends_at<=now() THEN now()+interval '1 minute' ELSE request_limits.window_ends_at END,updated_at=now()
  RETURNING hits`,[key,limit]);
  // Bounded removal of stale pseudonymous buckets; no raw IPs or tokens are stored.
- await payload.db.pool.query("DELETE FROM request_limits WHERE id IN (SELECT id FROM request_limits WHERE window_ends_at<now()-interval '1 day' LIMIT 100)");
+ await payload.db.pool.query("DELETE FROM request_limits WHERE window_ends_at<now()-interval '1 day' AND id IN (SELECT id FROM request_limits WHERE window_ends_at<now()-interval '1 day' LIMIT 100 FOR UPDATE SKIP LOCKED)");
  return Number(result.rows[0].hits)<=limit;
 }

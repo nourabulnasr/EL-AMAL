@@ -9,13 +9,13 @@ This is an engineering estimate of scope completed, not a measured quality score
 | Workstream | Approximate completion | Scope weight | Delivered | Remaining |
 |---|---:|---:|---|---|
 | Foundation and hosting | 90% | 15% | Next.js/React, Payload admin, hosted owner login, staff roles, separate Neon development/hosted PostgreSQL, migrations, GitHub and Vercel continuous review | Operational account recovery, complete role checks and staff handover |
-| Public interface and motion | 85% | 20% | EN/AR/RTL, navy/white/orange theme, responsive homepage, navigation, catalogue/detail/basket/direct RFQ, industry pages, hover/press/focus/reduced-motion behavior; new instrument opening and loading fallback | Final brand imagery, remaining About/Contact/Resources/policy pages, comprehensive usability/accessibility/device review and visual approval |
+| Public interface and motion | 85% | 20% | EN/AR/RTL, navy/white/orange theme, responsive homepage, navigation, catalogue/detail/basket/direct RFQ, industry pages, hover/press/focus/reduced-motion behavior; approved instrument opening/loading fallback; About, Contact and Resources pages | Final brand imagery, approved company/contact content and policy pages, comprehensive usability/accessibility/device review and visual approval |
 | Catalogue and business content | 60% | 15% | CMS publication adapter, review/draft isolation, model search and category/type/application filters, datasheet fields, import validation, WIKA/contact components gated on real details | Real catalogue/photos/datasheets/translations, pilot import then full import, private SKUs/opening stock, genuine WIKA evidence and actual contact information |
-| Enquiries and email | 65% | 20% | Form preview/validation, staff-test saving, immutable snapshots, duplicate protection, private inbox/statuses, single-use verification, encrypted email queue, protected retry workers, verification-gated staff notification | Public submission/resend integration and abuse controls, private uploads/scanning, sender configuration, scheduling, real delivery/recovery tests |
+| Enquiries and email | 70% | 20% | Form preview/validation, staff-test saving, immutable snapshots, duplicate protection, private inbox/statuses, single-use verification, encrypted email queue, protected retry workers, verification-gated staff notification, guarded public submission/resend and durable per-visitor/per-email limits | Activation and real delivery tests, private uploads/scanning, sender configuration, scheduling, real delivery/recovery tests |
 | Inventory and reservations | 10% | 10% | Private SKU structure and import validation | Stock ledger, availability, verified allocation, concurrency-safe holds, expiry/release/dispatch, reconciliation and staff screens |
-| SEO, security and release acceptance | 50% | 20% | Canonical/hreflang, metadata/social image/schema, gated sitemap/robots, server validation/access controls, security headers and dependency patches, 53 unit tests plus development DB regression and sampled browser checks | Full device/accessibility/performance audits, public intake abuse defence, monitoring/backups/restore rehearsal, remaining dependency review, final content SEO/Search Console, privacy/retention policies and launch acceptance |
+| SEO, security and release acceptance | 50% | 20% | Canonical/hreflang, metadata/social image/schema, gated sitemap/robots, server validation/access controls, security headers and dependency patches, 58 unit tests plus development DB regression and sampled browser checks | Full device/accessibility/performance audits, queue-capacity/abuse monitoring, monitoring/backups/restore rehearsal, remaining dependency review, final content SEO/Search Console, privacy/retention policies and launch acceptance |
 
-Weighted estimate: 63.5%, reported as approximately65%. The percentage is not the average of only the visible pages. Real catalogue population remains0%; the catalogue percentage above includes its implemented software. Security and SEO percentages must never be described as proof of protection, ranking or certification.
+Weighted estimate: 64.5%, reported as approximately65%. The percentage is not the average of only the visible pages. Real catalogue population remains0%; the catalogue percentage above includes its implemented software. Security and SEO percentages must never be described as proof of protection, ranking or certification.
 
 ## What is actually delivered and how
 
@@ -27,11 +27,11 @@ Weighted estimate: 63.5%, reported as approximately65%. The percentage is not th
 
 ## Remaining work owned by development
 
-1. Public enquiry and resend integration with bounded inputs, idempotency, per-client/per-email abuse limits and neutral responses.
+1. Activated customer enquiry browser/delivery tests once the sender and scheduled workers are ready; queue-capacity and abuse monitoring. Public submission/resend code and development database tests are implemented.
 2. Private attachments with authorization, file-type/size validation, scanning/quarantine and retention.
 3. Inventory ledger, reservation lifecycle, expiry jobs, reconciliation and staff experience using synthetic data until real stock arrives.
 4. Operational account recovery, scheduling, delivery monitoring, error monitoring and backup/restore procedures.
-5. About, Contact, Resources and policy page structures; business/legal wording requires owner validation.
+5. Policy pages and approved company-specific content; About/Contact/Resources structures and bilingual enquiry guidance are implemented.
 6. End-to-end customer/staff/permission tests; device/RTL/keyboard/accessibility audits; measured mobile performance and regression fixes.
 7. Final metadata/content audit, live-domain configuration, Search Console/indexing activation after real content and launch approval.
 
