@@ -16,7 +16,7 @@ Browser checks: desktop About; Arabic Resources and Contact; preview-only Arabic
 
 Live EN/AR home/About/Contact/Resources, RFQ and admin login returned200. Public enquiry readiness false; submit/resend503; private SKU API403; anonymous workerPOST401 and workerGET405. Page metadata/schema/hreflang, CSP and HSTS inspected. Preview content remains noindex.
 
-Deployment: dpl_FCyTJFiapTKx58GEnCwe7CttzW99, promoted to https://el-amal-sigma.vercel.app.
+Deployment: dpl_FCyTJFiapTKx58GEnCwe7CttzW99, promoted to https://el-amal-sigma.vercel.app. Implementation commit d6a691f pushed to codex/el-amal-foundation. [GitHub quality run36291545326](https://github.com/nourabulnasr/EL-AMAL/actions/runs/36291545326) completed successfully: install, tests, types, high/critical audit and production build without production credentials.
 
 The CLI interpreted the native curl -d argument as debug and emitted the project's deployment-protection bypass token. The old token was revoked and a replacement generated privately through the Vercel API; the old token's absence and unchanged protection configuration were verified. Admin/database credentials were not exposed. Future authenticated CLI curl checks must avoid -d/debug and filter diagnostics; do not print tokens. The application does not use the automation bypass environment variable.
 

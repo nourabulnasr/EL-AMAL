@@ -15,7 +15,7 @@ This is an engineering estimate of scope completed, not a measured quality score
 | Inventory and reservations | 10% | 10% | Private SKU structure and import validation | Stock ledger, availability, verified allocation, concurrency-safe holds, expiry/release/dispatch, reconciliation and staff screens |
 | SEO, security and release acceptance | 50% | 20% | Canonical/hreflang, metadata/social image/schema, gated sitemap/robots, server validation/access controls, security headers and dependency patches, 58 unit tests plus development DB regression and sampled browser checks | Full device/accessibility/performance audits, queue-capacity/abuse monitoring, monitoring/backups/restore rehearsal, remaining dependency review, final content SEO/Search Console, privacy/retention policies and launch acceptance |
 
-Weighted estimate: 64.5%, reported as approximately65%. The percentage is not the average of only the visible pages. Real catalogue population remains0%; the catalogue percentage above includes its implemented software. Security and SEO percentages must never be described as proof of protection, ranking or certification.
+Weighted estimate: 64.5%, reported as approximately 65%. The percentage is not the average of only the visible pages. Real catalogue population remains0%; the catalogue percentage above includes its implemented software. Security and SEO percentages must never be described as proof of protection, ranking or certification.
 
 ## What is actually delivered and how
 
@@ -30,7 +30,7 @@ Weighted estimate: 64.5%, reported as approximately65%. The percentage is not th
 1. Activated customer enquiry browser/delivery tests once the sender and scheduled workers are ready; queue-capacity and abuse monitoring. Public submission/resend code and development database tests are implemented.
 2. Private attachments with authorization, file-type/size validation, scanning/quarantine and retention.
 3. Inventory ledger, reservation lifecycle, expiry jobs, reconciliation and staff experience using synthetic data until real stock arrives.
-4. Operational account recovery, scheduling, delivery monitoring, error monitoring and backup/restore procedures.
+4. Operational account recovery, scheduling, delivery monitoring, error monitoring and backup/restore procedures; privacy-aware demand reporting/analytics and protected exports.
 5. Policy pages and approved company-specific content; About/Contact/Resources structures and bilingual enquiry guidance are implemented.
 6. End-to-end customer/staff/permission tests; device/RTL/keyboard/accessibility audits; measured mobile performance and regression fixes.
 7. Final metadata/content audit, live-domain configuration, Search Console/indexing activation after real content and launch approval.
