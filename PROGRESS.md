@@ -1,5 +1,21 @@
 # EL AMAL progress
 
+## Latest checkpoint — 27 September photographed catalogue intake
+
+Received the two user-named Desktop folders: 17 in-stock JPEGs and 12 out-of-stock JPEGs, all 1200x1600. Copied the 29 originals without modification into ignored docs/source/catalogue-2026-09-27/ and recorded source names, dimensions, sizes and SHA-256 hashes. Originals remain untouched. No exact duplicate source images.
+
+Nour explicitly clarified: **every model on the main page** inherits the folder stock label. Pen marks have no stock-selection meaning; products visible only on cropped neighbouring pages are excluded. This is dated model/family availability, not counted SKU balances or proof of every possible configuration being stocked. Do not ask again for the scope or a catalogue ZIP.
+
+Manually indexed all 29 main pages: 151 product cards/model groups, 90 in-stock and 61 out-of-stock. Grouped families are retained as printed; this is not 151 exact orderable SKUs. Readability notes and unknown page numbers are retained. IR80 and M12 x 1 cable have no visible printed datasheet IDs. Full technical specification extraction remains pending.
+
+Prepared ten bilingual draft product rows (DI10, DI30, DI32-1, DI35, DIH10, TC10-A, TR10-A, T15, PSM01 and IV1), traceable source references and separate availability metadata. Official WIKA product pages and downloadable PDF identities/references were checked for these ten. The rest of the index contains printed references only, not yet manufacturer-verified links. No family variants, certification claims, stock quantities or manufacturer images were invented.
+
+Read-only verification succeeded: 29 copied-source hashes/sizes, complete unique page coverage, 151 unique printed card/group labels, 90/61 stock split, ten draft import rows validated against src/lib/import.ts, ten source/link sidecars and Arabic text presence. These structural checks are not Arabic/technical approval. See catalogue/2026-09-27/README.md, model-index.md and pilot-review.md. Raw photos remain private local files; Git contains the index/drafts only. Catalogue working files are excluded from Vercel uploads.
+
+No database writes, product publication, stock changes, real messages or application behaviour changed. Public catalogue remains demo mode. No production build needed for this intake-only milestone. Overall full-site estimate remains approximately 65%; receiving/indexing catalogue content is not completed publication.
+
+Next catalogue work: complete pilot specifications/Arabic review and idempotent draft CMS import, verify draft isolation and EN/AR rendering, then expand remaining records and prepare authorised imagery. Add explicit dated model availability before displaying folder labels; current CMS has no equivalent field. Exact SKUs/quantities, rights, stock policy and final content review remain separate client inputs collected at the end. Private attachments, inventory/reservations, scheduling/monitoring/recovery and release acceptance remain engineering work.
+
 ## Latest checkpoint — 27 September public intake, information pages and mobile performance
 
 Nour approved the entrance and requested continuing all agent-owned work while deferring client inputs. Implemented guarded public submission/resend (signed resend-only receipt, exact-origin/body guards, PostgreSQL visitor and normalized-email quotas, retry-safe snapshots), bilingual customer UI, and About/Contact/Resources pages. No real products/contact claims invented. Sending/intake remain disabled until sender/worker/CMS activation. No hosted migration or real email sent.

@@ -1,0 +1,112 @@
+[
+  {
+    "external_id": "wika-di10",
+    "model": "DI10",
+    "category_key": "accessories",
+    "name_en": "WIKA DI10 — Digital current-loop indicator",
+    "name_ar": "مبيّن رقمي لحلقة التيار — WIKA DI10",
+    "description_en": "Panel-mounted indicator for displaying a current-loop measurement signal.",
+    "description_ar": "مبيّن يركّب على لوحة لعرض إشارة قياس من حلقة تيار.",
+    "source_ref": "catalogue/2026-09-27/page-index.json#in-stock-02; model=DI10; sha256=4a9b5bf424ca19bb3825402893e81538e541402503fd25642db161910eb45cb1",
+    "review_status": "draft"
+  },
+  {
+    "external_id": "wika-di30",
+    "model": "DI30",
+    "category_key": "accessories",
+    "name_en": "WIKA DI30 — Digital panel indicator",
+    "name_ar": "مبيّن رقمي للتركيب على اللوحات — WIKA DI30",
+    "description_en": "Panel-mounted digital indicator for standard electrical measurement signals.",
+    "description_ar": "مبيّن رقمي يركّب على لوحة لعرض إشارات القياس الكهربائية القياسية.",
+    "source_ref": "catalogue/2026-09-27/page-index.json#in-stock-02; model=DI30; sha256=4a9b5bf424ca19bb3825402893e81538e541402503fd25642db161910eb45cb1",
+    "review_status": "draft"
+  },
+  {
+    "external_id": "wika-di32-1",
+    "model": "DI32-1",
+    "category_key": "accessories",
+    "name_en": "WIKA DI32-1 — Digital indicator with multifunction input",
+    "name_ar": "مبيّن رقمي بمدخل متعدد الوظائف — WIKA DI32-1",
+    "description_en": "Panel-mounted digital indicator with a configurable multifunction input.",
+    "description_ar": "مبيّن رقمي يركّب على لوحة، بمدخل متعدد الوظائف قابل للتهيئة.",
+    "source_ref": "catalogue/2026-09-27/page-index.json#in-stock-02; model=DI32-1; sha256=4a9b5bf424ca19bb3825402893e81538e541402503fd25642db161910eb45cb1",
+    "review_status": "draft"
+  },
+  {
+    "external_id": "wika-di35",
+    "model": "DI35",
+    "category_key": "accessories",
+    "name_en": "WIKA DI35 — Digital panel indicator",
+    "name_ar": "مبيّن رقمي للتركيب على اللوحات — WIKA DI35",
+    "description_en": "Digital panel indicator family for displaying process measurements. The input version is selected for the application.",
+    "description_ar": "عائلة مبيّنات رقمية للتركيب على اللوحات وعرض قياسات العمليات. يُحدّد إصدار المداخل بحسب التطبيق.",
+    "source_ref": "catalogue/2026-09-27/page-index.json#in-stock-02; model=DI35; sha256=4a9b5bf424ca19bb3825402893e81538e541402503fd25642db161910eb45cb1",
+    "review_status": "draft"
+  },
+  {
+    "external_id": "wika-dih10",
+    "model": "DIH10",
+    "category_key": "temperature",
+    "name_en": "WIKA DIH10 — Connection head with digital display",
+    "name_ar": "رأس توصيل مزوّد بشاشة رقمية — WIKA DIH10",
+    "description_en": "Connection head with a digital current-loop display module for electrical thermometers.",
+    "description_ar": "رأس توصيل مزوّد بوحدة عرض رقمية لحلقة التيار، يُستخدم مع أجهزة قياس درجة الحرارة الكهربائية.",
+    "source_ref": "catalogue/2026-09-27/page-index.json#in-stock-01; model=DIH10; sha256=fc97934fd500609fd0a05ce6ea38d8a62d9698ece3f8e01d84002fad3f71a574",
+    "review_status": "draft"
+  },
+  {
+    "external_id": "wika-tc10-a",
+    "model": "TC10-A",
+    "category_key": "temperature",
+    "name_en": "WIKA TC10-A — Thermocouple measuring insert",
+    "name_ar": "عنصر قياس حراري بثرموكابل — WIKA TC10-A",
+    "description_en": "Replaceable thermocouple measuring insert for installation in a compatible protective assembly.",
+    "description_ar": "عنصر قياس بثرموكابل قابل للاستبدال، يُركّب داخل مجموعة حماية متوافقة.",
+    "source_ref": "catalogue/2026-09-27/page-index.json#in-stock-04; model=TC10-A; sha256=064345fdddbde53e91909857b0cfe8b3af2d020e7fb34cd7610f342756ebac69",
+    "review_status": "draft"
+  },
+  {
+    "external_id": "wika-tr10-a",
+    "model": "TR10-A",
+    "category_key": "temperature",
+    "name_en": "WIKA TR10-A — Resistance thermometer measuring insert",
+    "name_ar": "عنصر قياس لمقياس حرارة بالمقاومة — WIKA TR10-A",
+    "description_en": "Replaceable resistance thermometer measuring insert for installation in a compatible protective assembly.",
+    "description_ar": "عنصر قياس قابل للاستبدال لمقياس حرارة بالمقاومة، يُركّب داخل مجموعة حماية متوافقة.",
+    "source_ref": "catalogue/2026-09-27/page-index.json#in-stock-08; model=TR10-A; sha256=844de998e9eaeff9dd8829596219b3f026a6956e11478f8234ad39d2cf932de9",
+    "review_status": "draft"
+  },
+  {
+    "external_id": "wika-t15",
+    "model": "T15",
+    "category_key": "temperature",
+    "name_en": "WIKA T15 — Digital temperature transmitter",
+    "name_ar": "مرسل رقمي لدرجة الحرارة — WIKA T15",
+    "description_en": "Digital temperature transmitter for resistance sensors, available in head-mounted and rail-mounted versions.",
+    "description_ar": "مرسل رقمي لدرجة الحرارة لحساسات المقاومة، يتوفر بإصدارات للتركيب داخل رأس التوصيل أو على سكة تركيب.",
+    "source_ref": "catalogue/2026-09-27/page-index.json#in-stock-13; model=T15; sha256=2dcf1119d004c242bad3003362ecadb5f47dfe42540b2da5bbdc5a3a1ba87752",
+    "review_status": "draft"
+  },
+  {
+    "external_id": "wika-psm01",
+    "model": "PSM01",
+    "category_key": "pressure",
+    "name_en": "WIKA PSM01 — Compact pressure switch",
+    "name_ar": "مفتاح ضغط مدمج — WIKA PSM01",
+    "description_en": "Compact mechanical pressure switch with an adjustable switching point.",
+    "description_ar": "مفتاح ضغط ميكانيكي مدمج ذو نقطة تبديل قابلة للضبط.",
+    "source_ref": "catalogue/2026-09-27/page-index.json#out-of-stock-06; model=PSM01; sha256=a3cb93100c278412a5287ca5a0b77112b96881359a88e9662aa838208b74755a",
+    "review_status": "draft"
+  },
+  {
+    "external_id": "wika-iv1",
+    "model": "IV1",
+    "category_key": "accessories",
+    "name_en": "WIKA IV1 — Needle valve and multiport valve",
+    "name_ar": "صمام إبرة وصمام متعدد المنافذ — WIKA IV1",
+    "description_en": "Valve family for isolating pressure measurement connections, with needle-valve and multiport versions.",
+    "description_ar": "عائلة صمامات لعزل توصيلات قياس الضغط، تضم صمامات إبرة وإصدارات متعددة المنافذ.",
+    "source_ref": "catalogue/2026-09-27/page-index.json#out-of-stock-09; model=IV1; sha256=b98c47720226e3fd4154ea70515bab3b25cebe7c622a99cb611991c4b10b5140",
+    "review_status": "draft"
+  }
+]

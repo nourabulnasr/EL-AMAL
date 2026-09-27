@@ -5,6 +5,7 @@ node_modules
 docs/source
 artifacts
 /cms/
+/catalogue/
 README.md
 PROGRESS.md
 AGENTS.md

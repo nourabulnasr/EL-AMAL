@@ -15,7 +15,7 @@ This is an engineering estimate of scope completed, not a measured quality score
 | Inventory and reservations | 10% | 10% | Private SKU structure and import validation | Stock ledger, availability, verified allocation, concurrency-safe holds, expiry/release/dispatch, reconciliation and staff screens |
 | SEO, security and release acceptance | 50% | 20% | Canonical/hreflang, metadata/social image/schema, gated sitemap/robots, server validation/access controls, security headers and dependency patches, 58 unit tests plus development DB regression and sampled browser checks | Full device/accessibility/performance audits, queue-capacity/abuse monitoring, monitoring/backups/restore rehearsal, remaining dependency review, final content SEO/Search Console, privacy/retention policies and launch acceptance |
 
-Weighted estimate: 64.5%, reported as approximately 65%. The percentage is not the average of only the visible pages. Real catalogue population remains0%; the catalogue percentage above includes its implemented software. Security and SEO percentages must never be described as proof of protection, ranking or certification.
+Weighted estimate: 64.5%, reported as approximately 65%. The percentage is not the average of only the visible pages. Real catalogue publication remains 0%; the catalogue percentage above includes its implemented software. On 27 September, 29 supplied photos were indexed into 151 draft cards/groups (90 in stock, 61 out of stock), with ten bilingual draft rows and official model/datasheet identity checks. These are local intake files, not imported or published records. See catalogue/2026-09-27/README.md. Security and SEO percentages must never be described as proof of protection, ranking or certification.
 
 ## What is actually delivered and how
 
@@ -37,7 +37,7 @@ Weighted estimate: 64.5%, reported as approximately 65%. The percentage is not t
 
 ## Remaining inputs owned by Nour/client — collected at the end
 
-- Photographed catalogue ZIP; product specifications, datasheets and permission to use supplied images/documents. We handle extraction/import/review preparation.
+- Catalogue photos have been received; every model on each main page inherits its source-folder stock label, as Nour confirmed. Asset-reuse confirmation and final technical/content review remain. We handle extraction, translations, manufacturer document checks and import preparation; no further catalogue ZIP is required for the 29 supplied photos.
 - Final logo, authorised company/product photographs and approved company facts/copy/translations.
 - Business phone/WhatsApp/address/hours and genuine WIKA relationship evidence/approved wording.
 - Final domain and verified sending account/domain. Receiving inbox is already confirmed and need not be supplied again. Secrets are configured privately, not pasted into chat.

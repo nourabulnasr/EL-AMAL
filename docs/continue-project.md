@@ -16,6 +16,8 @@ Suggested continuation message:
 
 ## Verified checkpoint — 27 September 2026
 
+Catalogue intake now received: 29 photos, 151 main-page product cards/groups (90 in-stock, 61 out-of-stock). Ten bilingual draft rows and matching official WIKA document references are saved under catalogue/2026-09-27/. Source images are copied into ignored docs/source/catalogue-2026-09-27/. Nour confirmed every model on each main page inherits its folder status; pen marks are not selections. Do not re-ask for a ZIP or stock scope. Next catalogue work is specification/translation review and draft CMS import, then the remaining records. No real records have been imported or published, and exact stock quantities remain unknown.
+
 Next.js/Payload, live admin, separate Neon development/hosted databases, bilingual sample catalogue/search/basket/direct RFQ/industry/About/Contact/Resources pages, navy visual system and approved entrance are implemented. Public customer submission/resend and encrypted verification/staff notification queues are implemented but production sending/intake are disabled. No actual products, stock reservations, customer emails or finished launch are implied.
 
 58 unit tests, TypeScript, database contention/idempotency checks and hosted production build succeeded. GitHub quality run36291545326 succeeded on commit d6a691f. Homepage mobile PageSpeed lab100 performance/accessibility/best-practices, SEO66 due intentional noindex; LCP1.2s, TBT20ms, CLS0.022. This is not field/full-site certification. See docs/release-verification-2026-09-27.md.

@@ -1,0 +1,299 @@
+{
+  "receivedAt": "2026-09-27",
+  "status": "indexed-draft",
+  "stockClassificationConfirmedAt": "2026-09-27",
+  "stockClassificationConfirmation": "Every model on the main page",
+  "stockPolicy": "Every model on the main photographed page inherits its folder classification. Pen marks do not select stock. Cropped neighbouring pages are excluded. This is user-reported model availability as of 2026-09-27, not exact SKU quantities or a reservation promise.",
+  "images": [
+    {
+      "sourceId": "in-stock-01",
+      "folderClassification": "in-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.31.34 PM (1).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/in-stock/WhatsApp Image 2026-09-27 at 7.31.34 PM (1).jpeg",
+      "sha256": "fc97934fd500609fd0a05ce6ea38d8a62d9698ece3f8e01d84002fad3f71a574",
+      "bytes": 103077,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "in-stock-02",
+      "folderClassification": "in-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.31.34 PM.jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/in-stock/WhatsApp Image 2026-09-27 at 7.31.34 PM.jpeg",
+      "sha256": "4a9b5bf424ca19bb3825402893e81538e541402503fd25642db161910eb45cb1",
+      "bytes": 160984,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "in-stock-03",
+      "folderClassification": "in-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.31.36 PM (1).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/in-stock/WhatsApp Image 2026-09-27 at 7.31.36 PM (1).jpeg",
+      "sha256": "3af09e2af8d997395381b2ae93eaa088efc195a7e51a4bccd38b60f4d97ab05e",
+      "bytes": 178571,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "in-stock-04",
+      "folderClassification": "in-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.31.36 PM.jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/in-stock/WhatsApp Image 2026-09-27 at 7.31.36 PM.jpeg",
+      "sha256": "064345fdddbde53e91909857b0cfe8b3af2d020e7fb34cd7610f342756ebac69",
+      "bytes": 219622,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "in-stock-05",
+      "folderClassification": "in-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.31.37 PM (1).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/in-stock/WhatsApp Image 2026-09-27 at 7.31.37 PM (1).jpeg",
+      "sha256": "1169b73c7b8695852ede5408a1eca1c552701ddb41bd8d2b8386620056c43457",
+      "bytes": 136179,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "in-stock-06",
+      "folderClassification": "in-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.31.37 PM (2).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/in-stock/WhatsApp Image 2026-09-27 at 7.31.37 PM (2).jpeg",
+      "sha256": "9e0efd6ff0aa616412d4f1596954c12b6fba6727587603cf8f51c40f10fe2c21",
+      "bytes": 191720,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "in-stock-07",
+      "folderClassification": "in-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.31.37 PM (3).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/in-stock/WhatsApp Image 2026-09-27 at 7.31.37 PM (3).jpeg",
+      "sha256": "6a23387477de305da7e0f77449aa875d651a59919b594d3a198117e19cc12b31",
+      "bytes": 151398,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "in-stock-08",
+      "folderClassification": "in-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.31.37 PM (4).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/in-stock/WhatsApp Image 2026-09-27 at 7.31.37 PM (4).jpeg",
+      "sha256": "844de998e9eaeff9dd8829596219b3f026a6956e11478f8234ad39d2cf932de9",
+      "bytes": 231424,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "in-stock-09",
+      "folderClassification": "in-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.31.37 PM (5).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/in-stock/WhatsApp Image 2026-09-27 at 7.31.37 PM (5).jpeg",
+      "sha256": "2d260349a3a6a855850bc4e0b77ec5fa0e1ea45a55af37f643c3ca8a8efb280e",
+      "bytes": 198146,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "in-stock-10",
+      "folderClassification": "in-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.31.37 PM.jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/in-stock/WhatsApp Image 2026-09-27 at 7.31.37 PM.jpeg",
+      "sha256": "067cd0d6d8a953f2de87e4ef2b67fef56234b3def8fe021aa0bc9fe3ac58c62c",
+      "bytes": 180388,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "in-stock-11",
+      "folderClassification": "in-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.31.38 PM (1).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/in-stock/WhatsApp Image 2026-09-27 at 7.31.38 PM (1).jpeg",
+      "sha256": "182a555a3507ec2040b1dd2ba884f8afcef6e0b59eca3182bfb25b9811e23b1a",
+      "bytes": 201295,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "in-stock-12",
+      "folderClassification": "in-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.31.38 PM (2).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/in-stock/WhatsApp Image 2026-09-27 at 7.31.38 PM (2).jpeg",
+      "sha256": "b134cdb22f0e449d192a54c16830783c99688cc2ae3e13b128dfa2e6c5ad2798",
+      "bytes": 181801,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "in-stock-13",
+      "folderClassification": "in-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.31.38 PM (3).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/in-stock/WhatsApp Image 2026-09-27 at 7.31.38 PM (3).jpeg",
+      "sha256": "2dcf1119d004c242bad3003362ecadb5f47dfe42540b2da5bbdc5a3a1ba87752",
+      "bytes": 209304,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "in-stock-14",
+      "folderClassification": "in-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.31.38 PM (4).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/in-stock/WhatsApp Image 2026-09-27 at 7.31.38 PM (4).jpeg",
+      "sha256": "27831515050d5a69298a6ce864d789bbf2e58ad56bd707c45c77bf1510d0f571",
+      "bytes": 225049,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "in-stock-15",
+      "folderClassification": "in-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.31.38 PM (5).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/in-stock/WhatsApp Image 2026-09-27 at 7.31.38 PM (5).jpeg",
+      "sha256": "5a2373c349402bc7434941b6dad820f5a6e5470874b1cdb1ee8709359b74b025",
+      "bytes": 181532,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "in-stock-16",
+      "folderClassification": "in-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.31.38 PM (6).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/in-stock/WhatsApp Image 2026-09-27 at 7.31.38 PM (6).jpeg",
+      "sha256": "6a5f82e55a7e6eb9c5e106841a905d1eaf436c4c779db361ddcae326aa396be0",
+      "bytes": 178061,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "in-stock-17",
+      "folderClassification": "in-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.31.38 PM.jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/in-stock/WhatsApp Image 2026-09-27 at 7.31.38 PM.jpeg",
+      "sha256": "9f68d5ade55119dec46517a3ac693cb7d50c5f99d676f064b974a33fa901e134",
+      "bytes": 207673,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "out-of-stock-01",
+      "folderClassification": "out-of-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.26.18 PM.jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/out-of-stock/WhatsApp Image 2026-09-27 at 7.26.18 PM.jpeg",
+      "sha256": "f0b1903963cc2b6f2e7e874fba7cfb3d37832764891ea553445b25f20a698009",
+      "bytes": 189552,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "out-of-stock-02",
+      "folderClassification": "out-of-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.26.21 PM (1).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/out-of-stock/WhatsApp Image 2026-09-27 at 7.26.21 PM (1).jpeg",
+      "sha256": "fa7fdf38fa40cd5865b2b9d75e68ac732df91b754403a2c48b130aa3ac8684f5",
+      "bytes": 196747,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "out-of-stock-03",
+      "folderClassification": "out-of-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.26.21 PM (2).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/out-of-stock/WhatsApp Image 2026-09-27 at 7.26.21 PM (2).jpeg",
+      "sha256": "ca8163fe00afb850fd30ced124e9a84c7885a42ca4f0cc109e58af9bb9ed9643",
+      "bytes": 243284,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "out-of-stock-04",
+      "folderClassification": "out-of-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.26.21 PM (3).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/out-of-stock/WhatsApp Image 2026-09-27 at 7.26.21 PM (3).jpeg",
+      "sha256": "ae47bb2ff279ae4949cf1bb9588ba4c92813fbada45a0b288e45eed33c2c0646",
+      "bytes": 223619,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "out-of-stock-05",
+      "folderClassification": "out-of-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.26.21 PM.jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/out-of-stock/WhatsApp Image 2026-09-27 at 7.26.21 PM.jpeg",
+      "sha256": "3924bea8654ebf3ddda4f9be41b41f976cde9b8384651a1d9f1e82d81570dffe",
+      "bytes": 262984,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "out-of-stock-06",
+      "folderClassification": "out-of-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.26.22 PM (1).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/out-of-stock/WhatsApp Image 2026-09-27 at 7.26.22 PM (1).jpeg",
+      "sha256": "a3cb93100c278412a5287ca5a0b77112b96881359a88e9662aa838208b74755a",
+      "bytes": 221182,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "out-of-stock-07",
+      "folderClassification": "out-of-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.26.22 PM (2).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/out-of-stock/WhatsApp Image 2026-09-27 at 7.26.22 PM (2).jpeg",
+      "sha256": "379632ebf982aa2d6f2a2b28c9337bce0cb28b0a61edd9ea5999053c62af9937",
+      "bytes": 253775,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "out-of-stock-08",
+      "folderClassification": "out-of-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.26.22 PM (3).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/out-of-stock/WhatsApp Image 2026-09-27 at 7.26.22 PM (3).jpeg",
+      "sha256": "ceca2f0bad67d93b0d0ea08a84e862ec291b8904b310d407860b9a182453aea8",
+      "bytes": 255407,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "out-of-stock-09",
+      "folderClassification": "out-of-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.26.22 PM (4).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/out-of-stock/WhatsApp Image 2026-09-27 at 7.26.22 PM (4).jpeg",
+      "sha256": "b98c47720226e3fd4154ea70515bab3b25cebe7c622a99cb611991c4b10b5140",
+      "bytes": 272669,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "out-of-stock-10",
+      "folderClassification": "out-of-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.26.22 PM (5).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/out-of-stock/WhatsApp Image 2026-09-27 at 7.26.22 PM (5).jpeg",
+      "sha256": "b15d17e0c061c1366c12368986549b22d7308931431b65d418d1d7b635f62efb",
+      "bytes": 199430,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "out-of-stock-11",
+      "folderClassification": "out-of-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.26.22 PM (6).jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/out-of-stock/WhatsApp Image 2026-09-27 at 7.26.22 PM (6).jpeg",
+      "sha256": "878ebcab5b96f215cfddd3b4c0f92d7b0ef18a6b4cfbba39e6c11605d3f601a3",
+      "bytes": 126807,
+      "width": 1200,
+      "height": 1600
+    },
+    {
+      "sourceId": "out-of-stock-12",
+      "folderClassification": "out-of-stock",
+      "filename": "WhatsApp Image 2026-09-27 at 7.26.22 PM.jpeg",
+      "localPath": "docs/source/catalogue-2026-09-27/out-of-stock/WhatsApp Image 2026-09-27 at 7.26.22 PM.jpeg",
+      "sha256": "6c97392fbd1f8c3b556ae6d9bcc7de7762c26cbe5a94df77e2771f6c357e3fc8",
+      "bytes": 177770,
+      "width": 1200,
+      "height": 1600
+    }
+  ]
+}

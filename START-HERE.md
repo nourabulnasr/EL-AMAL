@@ -10,11 +10,15 @@ Latest: owner/sales users can now save sample requests from the bilingual quote 
 
 Notification update: queue and injectable retry worker now implemented/deployed;31 unit tests plus database queue tests succeeded. Enquiries and queue records save atomically. Samples are disabled, no sender configured and no worker scheduled. Next is customer verification and sender integration/operational delivery. See docs/notification-queue.md and newest PROGRESS entry.
 
+## Current catalogue update — 27 September 2026
+
+The catalogue is no longer deferred: 29 supplied photographs are preserved locally and indexed into 151 draft cards/model groups. Ten bilingual draft records and verified manufacturer document identities are in catalogue/2026-09-27/. Every model on each main page inherits its folder stock label, as Nour confirmed. Ignore pen marks and exclude partial neighbouring pages. No CMS import, publication or exact stock quantities yet. Read PROGRESS.md and docs/phase-status.md for the current engineering state; the dated handover sections below describe earlier milestones.
+
 ## Resume prompt
 
 Paste this into a new Codex task with this folder attached:
 
-> Continue the existing EL AMAL website in this folder. Read AGENTS.md, START-HERE.md, PROGRESS.md, docs/phase-status.md and docs/kickoff-2026-09-17.md first. Inspect git status before editing. Do not rebuild from scratch. Keep the existing Vercel client review link current. Actual catalogue products are deferred until I supply numbered page photographs in a ZIP. Preserve the Precision in steel direction; visual acceptance remains mine. The next technical priority is the recorded Payload security upgrade and permission regression checks, followed by secure enquiry/backend work. Tell me briefly what you found, then continue the next concrete step. Never print or commit secrets.
+> Continue the existing EL AMAL website in this folder. Read AGENTS.md, PROGRESS.md, docs/phase-status.md and catalogue/2026-09-27/README.md first. Inspect git status before editing. Keep the existing Vercel client review link current and preserve the navy Precision in steel design. Catalogue photos are received, with main-page stock classification confirmed. Continue the recorded catalogue review/import and remaining engineering work; defer remaining client inputs to the final checklist. Never print or commit secrets.
 
 ## Where everything lives
 

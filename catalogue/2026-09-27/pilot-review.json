@@ -1,0 +1,192 @@
+[
+  {
+    "model": "DI10",
+    "sourceId": "in-stock-02",
+    "userReportedAvailability": "in-stock",
+    "availabilityReportedAt": "2026-09-27",
+    "availabilityScope": "model-or-family; exact supplied configurations and quantities unconfirmed",
+    "printedDatasheetIds": [
+      "AC 80.06"
+    ],
+    "manufacturerPageUrl": "https://www.wika.com/en-en/di10.WIKA",
+    "datasheetUrl": "https://www.wika.com/media/Data-sheets/Temperature/Digital-indicators/ds_ac8006_en_co.pdf",
+    "datasheetRevision": "02/2026",
+    "linkCheckedAt": "2026-09-27",
+    "checkScope": "Official model page and PDF identity/reference matched. This does not verify every specification, configuration, certification or supplied SKU.",
+    "translationStatus": "draft",
+    "technicalReviewStatus": "pending",
+    "publicationStatus": "draft",
+    "rightsConfirmed": false
+  },
+  {
+    "model": "DI30",
+    "sourceId": "in-stock-02",
+    "userReportedAvailability": "in-stock",
+    "availabilityReportedAt": "2026-09-27",
+    "availabilityScope": "model-or-family; exact supplied configurations and quantities unconfirmed",
+    "printedDatasheetIds": [
+      "AC 80.05"
+    ],
+    "manufacturerPageUrl": "https://www.wika.com/en-en/di30.WIKA",
+    "datasheetUrl": "https://www.wika.com/media/Data-sheets/Temperature/Digital-indicators/ds_ac8005_en_co.pdf",
+    "datasheetRevision": "11/2025",
+    "linkCheckedAt": "2026-09-27",
+    "checkScope": "Official model page and PDF identity/reference matched. This does not verify every specification, configuration, certification or supplied SKU.",
+    "translationStatus": "draft",
+    "technicalReviewStatus": "pending",
+    "publicationStatus": "draft",
+    "rightsConfirmed": false
+  },
+  {
+    "model": "DI32-1",
+    "sourceId": "in-stock-02",
+    "userReportedAvailability": "in-stock",
+    "availabilityReportedAt": "2026-09-27",
+    "availabilityScope": "model-or-family; exact supplied configurations and quantities unconfirmed",
+    "printedDatasheetIds": [
+      "AC 80.13"
+    ],
+    "manufacturerPageUrl": "https://www.wika.com/en-en/di32_1.WIKA",
+    "datasheetUrl": "https://www.wika.com/media/Data-sheets/Temperature/Digital-indicators/ds_ac8013_en_co.pdf",
+    "datasheetRevision": "02/2026",
+    "linkCheckedAt": "2026-09-27",
+    "checkScope": "Official model page and PDF identity/reference matched. This does not verify every specification, configuration, certification or supplied SKU.",
+    "translationStatus": "draft",
+    "technicalReviewStatus": "pending",
+    "publicationStatus": "draft",
+    "rightsConfirmed": false
+  },
+  {
+    "model": "DI35",
+    "sourceId": "in-stock-02",
+    "userReportedAvailability": "in-stock",
+    "availabilityReportedAt": "2026-09-27",
+    "availabilityScope": "model-or-family; exact supplied configurations and quantities unconfirmed",
+    "printedDatasheetIds": [
+      "AC 80.03"
+    ],
+    "manufacturerPageUrl": "https://www.wika.com/en-en/di35.WIKA",
+    "datasheetUrl": "https://www.wika.com/media/Data-sheets/Temperature/Digital-indicators/ds_ac8003_en_co.pdf",
+    "datasheetRevision": "05/2017",
+    "linkCheckedAt": "2026-09-27",
+    "checkScope": "Official model page and PDF identity/reference matched. This does not verify every specification, configuration, certification or supplied SKU.",
+    "translationStatus": "draft",
+    "technicalReviewStatus": "pending",
+    "publicationStatus": "draft",
+    "rightsConfirmed": false
+  },
+  {
+    "model": "DIH10",
+    "sourceId": "in-stock-01",
+    "userReportedAvailability": "in-stock",
+    "availabilityReportedAt": "2026-09-27",
+    "availabilityScope": "model-or-family; exact supplied configurations and quantities unconfirmed",
+    "printedDatasheetIds": [
+      "AC 80.11"
+    ],
+    "manufacturerPageUrl": "https://www.wika.com/en-en/dih10_dih10_ex.WIKA",
+    "datasheetUrl": "https://www.wika.com/media/Data-sheets/Temperature/Digital-indicators/ds_ac8011_en_co.pdf",
+    "datasheetRevision": null,
+    "linkCheckedAt": "2026-09-27",
+    "checkScope": "Official model page and PDF identity/reference matched. This does not verify every specification, configuration, certification or supplied SKU.",
+    "translationStatus": "draft",
+    "technicalReviewStatus": "pending",
+    "publicationStatus": "draft",
+    "rightsConfirmed": false
+  },
+  {
+    "model": "TC10-A",
+    "sourceId": "in-stock-04",
+    "userReportedAvailability": "in-stock",
+    "availabilityReportedAt": "2026-09-27",
+    "availabilityScope": "model-or-family; exact supplied configurations and quantities unconfirmed",
+    "printedDatasheetIds": [
+      "TE 65.01"
+    ],
+    "manufacturerPageUrl": "https://www.wika.com/en-en/tc10_a.WIKA",
+    "datasheetUrl": "https://www.wika.com/media/Data-sheets/Temperature/Thermocouples/ds_te6501_en_co.pdf",
+    "datasheetRevision": "01/2026",
+    "linkCheckedAt": "2026-09-27",
+    "checkScope": "Official model page and PDF identity/reference matched. This does not verify every specification, configuration, certification or supplied SKU.",
+    "translationStatus": "draft",
+    "technicalReviewStatus": "pending",
+    "publicationStatus": "draft",
+    "rightsConfirmed": false
+  },
+  {
+    "model": "TR10-A",
+    "sourceId": "in-stock-08",
+    "userReportedAvailability": "in-stock",
+    "availabilityReportedAt": "2026-09-27",
+    "availabilityScope": "model-or-family; exact supplied configurations and quantities unconfirmed",
+    "printedDatasheetIds": [
+      "TE 60.01"
+    ],
+    "manufacturerPageUrl": "https://www.wika.com/en-en/tr10_a.WIKA",
+    "datasheetUrl": "https://www.wika.com/media/Data-sheets/Temperature/Resistance-thermometers/ds_te6001_en_co.pdf",
+    "datasheetRevision": "02/2026",
+    "linkCheckedAt": "2026-09-27",
+    "checkScope": "Official model page and PDF identity/reference matched. This does not verify every specification, configuration, certification or supplied SKU.",
+    "translationStatus": "draft",
+    "technicalReviewStatus": "pending",
+    "publicationStatus": "draft",
+    "rightsConfirmed": false
+  },
+  {
+    "model": "T15",
+    "sourceId": "in-stock-13",
+    "userReportedAvailability": "in-stock",
+    "availabilityReportedAt": "2026-09-27",
+    "availabilityScope": "model-or-family; exact supplied configurations and quantities unconfirmed",
+    "printedDatasheetIds": [
+      "TE 15.01"
+    ],
+    "manufacturerPageUrl": "https://www.wika.com/en-en/t15.WIKA",
+    "datasheetUrl": "https://www.wika.com/media/Data-sheets/Temperature/Temperature-transmitters/ds_te1501_en_co.pdf",
+    "datasheetRevision": "03/2025",
+    "linkCheckedAt": "2026-09-27",
+    "checkScope": "Official model page and PDF identity/reference matched. This does not verify every specification, configuration, certification or supplied SKU.",
+    "translationStatus": "draft",
+    "technicalReviewStatus": "pending",
+    "publicationStatus": "draft",
+    "rightsConfirmed": false
+  },
+  {
+    "model": "PSM01",
+    "sourceId": "out-of-stock-06",
+    "userReportedAvailability": "out-of-stock",
+    "availabilityReportedAt": "2026-09-27",
+    "availabilityScope": "model-or-family; exact supplied configurations and quantities unconfirmed",
+    "printedDatasheetIds": [
+      "PV34.81"
+    ],
+    "manufacturerPageUrl": "https://www.wika.com/en-en/psm01.WIKA",
+    "datasheetUrl": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-switches/ds_pv3481_en_co.pdf",
+    "datasheetRevision": "02/2026",
+    "linkCheckedAt": "2026-09-27",
+    "checkScope": "Official model page and PDF identity/reference matched. This does not verify every specification, configuration, certification or supplied SKU.",
+    "translationStatus": "draft",
+    "technicalReviewStatus": "pending",
+    "publicationStatus": "draft",
+    "rightsConfirmed": false
+  },
+  {
+    "model": "IV1",
+    "sourceId": "out-of-stock-09",
+    "userReportedAvailability": "out-of-stock",
+    "availabilityReportedAt": "2026-09-27",
+    "availabilityScope": "model-or-family; exact supplied configurations and quantities unconfirmed",
+    "printedDatasheetIds": [
+      "AC09.22"
+    ],
+    "manufacturerPageUrl": "https://www.wika.com/en-en/iv1.WIKA",
+    "datasheetUrl": "https://www.wika.com/media/Data-sheets/Pressure/Valves-and-protective-devices/ds_ac0922_en_co.pdf",
+    "datasheetRevision": "03/2026",
+    "linkCheckedAt": "2026-09-27",
+    "checkScope": "Official model page and PDF identity/reference matched. This does not verify every specification, configuration, certification or supplied SKU.",
+    "translationStatus": "draft",
+    "technicalReviewStatus": "pending",
+    "publicationStatus": "draft",
+    "rightsConfirmed": false
+  }
+]
