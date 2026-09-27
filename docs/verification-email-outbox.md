@@ -14,7 +14,7 @@ The server now supports a durable customer confirmation email outbox. Real sendi
 
 ## Operational limits and remaining work
 
-Connect guarded anonymous intake and a non-enumerating resend endpoint/UI, add email-based abuse limits and decide verified-enquiry staff notification/stock policy. The existing staff notification queue is not yet gated on verification. Do not enable it assuming otherwise.
+Connect guarded anonymous intake and a non-enumerating resend endpoint/UI, add email-based abuse limits and implement stock policy. Staff delivery now requires a CMS-source enquiry with customer verification and its confirmation timestamp. Sample/test verification never qualifies. Unverified notifications remain pending without consuming send attempts; the existing 23-hour queue-age cutoff still applies. Confirmation after that cutoff requires staff review; it does not silently reset delivery history.
 
 Configure the verified sender/API key, confirm the final HTTPS origin, run an authorized end-to-end receipt test, then add scheduling, monitoring and provider reconciliation. Do not infer activation from the presence of this code. A message already in flight when confirmation/resend occurs cannot be recalled; an old link may arrive but cannot confirm after rotation. A provider timeout may mean accepted, so the next retry uses the same key. The worker deliberately stores only generic error text.
 

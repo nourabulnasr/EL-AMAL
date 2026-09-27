@@ -11,10 +11,14 @@ export async function deliverNextNotification(payload:Payload,transport?:Notific
  // Provider deduplication expires after 24 hours. Never retry across that boundary.
  // Use queue creation as a conservative lower bound on the first possible send.
  await pool.query("UPDATE notifications SET status='failed', lease_token=NULL, lease_expires_at=NULL, last_error='Retry window expired; reconcile with provider before resending', updated_at=now() WHERE source='cms' AND created_at<=now()-interval '23 hours' AND (status='pending' OR (status='processing' AND lease_expires_at<=now()))");
+ // The same atomic claim enforces customer confirmation for first sends and retries.
+ // Demo/test confirmations never qualify. Verification is immutable once recorded.
  const lease=randomUUID();
  const claimed=await pool.query(`UPDATE notifications SET status='processing', attempts=attempts+1, lease_token=$1,
  lease_expires_at=now()+interval '5 minutes', updated_at=now() WHERE id=(
- SELECT id FROM notifications WHERE source='cms' AND attempts<5 AND created_at>now()-interval '23 hours' AND
+ SELECT n.id FROM notifications n WHERE n.source='cms'
+ AND EXISTS (SELECT 1 FROM enquiries e WHERE e.id=n.enquiry_id AND e.source='cms' AND e.verification_status='verified' AND e.verified_at IS NOT NULL)
+ AND attempts<5 AND created_at>now()-interval '23 hours' AND
  ((status='pending' AND next_attempt_at<=now()) OR (status='processing' AND lease_expires_at<=now()))
  ORDER BY created_at,id FOR UPDATE SKIP LOCKED LIMIT 1) RETURNING id,reference,recipient,delivery_key,attempts`,[lease]);
  const row=claimed.rows[0];if(!row)return {outcome:'empty' as const};

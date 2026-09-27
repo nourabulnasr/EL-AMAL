@@ -3,6 +3,7 @@ import {randomUUID} from 'node:crypto';
 import {getPayload} from 'payload';
 import config from '../src/payload.config.ts';
 import {submitEnquiry} from '../src/lib/submit-enquiry.ts';
+import {issueVerification,confirmVerification} from '../src/lib/enquiry-verification.ts';
 import {deliverNextNotification} from '../src/lib/notification-worker.ts';
 import type {Catalogue} from '../src/lib/public-catalogue.ts';
 if(process.env.CMS_DATABASE_CHECK!=='development')throw new Error('Development database only');
@@ -30,6 +31,24 @@ try{
  await submitEnquiry(payload,{...input,requestKey:keys[1]},{...catalogue,source:'cms'});
  const queue=await payload.find({collection:'notifications',overrideAccess:true,where:{reference:{equals:real.reference}}});
  assert.equal(queue.totalDocs,1,'Retry does not create another notification');const id=queue.docs[0].id;
+ // Customer notifications remain pending until a genuine customer confirmation.
+ const blockedTransport={send:async()=>{sends++;return{id:'must-not-send'};}};
+ assert.equal((await deliverNextNotification(payload,blockedTransport)).outcome,'empty');
+ assert.equal(sends,0,'Unverified customer enquiries must not notify staff');
+ // The same gate protects pending retries and abandoned leases without burning attempts.
+ await payload.db.pool.query("update notifications set status='processing',attempts=1,lease_expires_at=now()-interval '1 second' where id=$1",[id]);
+ assert.equal((await deliverNextNotification(payload,blockedTransport)).outcome,'empty');
+ assert.equal((await payload.findByID({collection:'notifications',id,overrideAccess:true})).attempts,1);
+ await payload.db.pool.query("update notifications set status='pending',attempts=0,lease_expires_at=NULL where id=$1",[id]);
+ const enquiry=(await payload.find({collection:'enquiries',overrideAccess:true,where:{reference:{equals:real.reference}}})).docs[0];
+ await payload.db.pool.query("update enquiries set verification_status='test-verified',verified_at=now() where id=$1",[enquiry.id]);
+ assert.equal((await deliverNextNotification(payload,blockedTransport)).outcome,'empty','Test verification is not customer verification');
+ await payload.db.pool.query("update enquiries set verification_status='verified',verified_at=NULL where id=$1",[enquiry.id]);
+ assert.equal((await deliverNextNotification(payload,blockedTransport)).outcome,'empty','A verified status alone is insufficient');
+ await payload.db.pool.query("update enquiries set verification_status='unverified',verified_at=NULL where id=$1",[enquiry.id]);
+ const token=await issueVerification(payload,real.reference,'cms');assert.ok(token);
+ assert.equal((await confirmVerification(payload,token))?.mode,'customer');
+ assert.equal(sends,0);
  const failed=await deliverNextNotification(payload,{send:async()=>{throw new Error('Provider secret must not be retained');}});
  assert.equal(failed.outcome,'retry');
  let row=(await payload.findByID({collection:'notifications',id,overrideAccess:true}));
@@ -66,10 +85,11 @@ try{
  const disabled=await payload.find({collection:'notifications',overrideAccess:true,where:{reference:{equals:demo.reference}}});
  assert.equal(disabled.docs[0].status,'disabled');
  await assert.rejects(payload.find({collection:'notifications',overrideAccess:false}));
- console.log('Notification checks succeeded: atomic rollback, demo suppression, unique enqueue, delayed retry, concurrent claim and retry limit. Fake sender only; no external messages.');
+ console.log('Notification checks succeeded: customer verification gate, atomic rollback, demo suppression, unique enqueue, delayed retry, concurrent claim and retry limit. Fake sender only; no external messages.');
 }finally{
  if(originalRecipient===undefined)delete process.env.ENQUIRY_NOTIFICATION_TO;else process.env.ENQUIRY_NOTIFICATION_TO=originalRecipient;
  const records=await payload.find({collection:'enquiries',overrideAccess:true,where:{requestKey:{in:keys}},limit:100,depth:0});
+ if(records.docs.length)await payload.delete({collection:'enquiry-verifications',overrideAccess:true,where:{enquiry:{in:records.docs.map(doc=>doc.id)}}});
  if(records.docs.length)await payload.delete({collection:'notifications',overrideAccess:true,where:{enquiry:{in:records.docs.map(doc=>doc.id)}}});
  await payload.delete({collection:'enquiries',overrideAccess:true,where:{requestKey:{in:keys}}});
  assert.equal(Object.keys(payload.db.sessions??{}).length,0);await payload.destroy();

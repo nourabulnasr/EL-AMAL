@@ -1,5 +1,13 @@
 # EL AMAL progress
 
+## Latest checkpoint — 27 September verified-customer staff notifications
+
+Fixed a prerequisite for safe public intake: the staff notification worker now atomically requires a CMS-source enquiry with verified status and a confirmation timestamp before claiming either a new message or an expired retry lease. Test/demo confirmation does not qualify. Waiting does not consume attempts. The existing 23-hour queue-age cutoff remains; late confirmation does not reset delivery history. Updated admin queue guidance and generated type documentation. No migration, sender activation or public intake activation.
+
+Development regression first reproduced an unverified notification being sent through a fake transport. After the fix, checks verified unverified/test-verified/missing-timestamp suppression, expired-lease suppression without attempt consumption, genuine single-use confirmation enabling delivery, rollback, duplicate enqueue, concurrent claims, retry limits and stale leases. All disposable records cleaned. All 53 unit tests and TypeScript succeeded. No external email sent. Public intake/resend abuse controls and UI remain next; client inputs still deferred.
+
+Deployment dpl_2vSP9WHgSpMuAQzhRZhLyqA5aGUL reached Ready and was promoted to the stable client URL. Live English/Arabic200, worker GET405/anonymous POST401, private notifications403 and anonymous enquiry submission403 verified.
+
 ## Latest checkpoint — 27 September navy design and quality hardening
 
 Applied Nour's exact #010736 / #091540 backgrounds, white text and retained orange accents across public routes, admin and global 404. Preserved instrument materials and existing hover/press/reduced-motion behavior. Added visible field boundaries and admin calendar/tooltip focus corrections. Added generated branded social image, Twitter large-image fallback to Next-generated OG metadata, and product-page WebPage/BreadcrumbList schema; real Product entities only for CMS records, without invented offers or ratings.

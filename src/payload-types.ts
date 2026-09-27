@@ -268,7 +268,7 @@ export interface Enquiry {
   createdAt: string;
 }
 /**
- * Sample requests never send. Delivery requires explicit sender activation. Sent means provider accepted, not confirmed inbox delivery. Failed records require review; do not reset attempts or change their creation date.
+ * Sample requests never send. Customer requests wait for email verification. Delivery requires explicit sender activation. Sent means provider accepted, not confirmed inbox delivery. Failed records require review; do not reset attempts or change their creation date.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "notifications".
