@@ -26,6 +26,14 @@ next/image on cards/detail, all technical links, family guidance and real image/
 
 Local production build succeeded after removing interrupted Webpack cache and correcting an incompatible build-command env-file flag. Windows uses SWC WASM fallback. Browser checked24 cards,no sample labels,EN/AR images/specs/stock/grouped models at390px without overflow. All151 images inspected on four contact sheets. Existing favicon.ico request returns404; no zero-diagnostic or full-site perfection claim. Independent review found pagination canonical and Arabic code isolation defects; both corrected. Final cloud/live verification is recorded in PROGRESS.md.
 
+## Production delivery
+
+Implementation commit `43faaf8abeed2e8681c01be2ac8d2f58414b4298` is pushed to `codex/el-amal-foundation`. Vercel production deployment `dpl_FeT8KpWkJPLkP6VAjjbtKEuRhfEH` reached Ready and serves [English](https://el-amal-sigma.vercel.app/en/products) and [Arabic](https://el-amal-sigma.vercel.app/ar/products). [GitHub Website quality run 36351279324](https://github.com/nourabulnasr/EL-AMAL/actions/runs/36351279324) succeeded on that exact commit, covering the final source after the bidi refinement.
+
+Live checks on 28 September local time verified all 151 public entries, the 90/61 split and SHA-256 equality for all 151 published PNG images. Private source/reviewer fields are absent from anonymous responses; SKU, enquiry, notification and verification-email collections return 403 anonymously. English and Arabic grouped-model search returns one correct result for PGS23.160. The English catalogue renders 24 real cards with no sample labels. English/Arabic grouped details at 320px have real images, technical rows, stock dates and downloads without horizontal overflow. Arabic page 7 renders its final seven entries with a self-canonical. Adding DIH10 to the quote basket survives reload; the test item was removed. M12 cable links to the matching manufacturer catalogue page.
+
+Evidence is saved under ignored `artifacts/2026-09-27/catalogue-build/`: `live-verification.json`, `live-catalogue-en.png`, `live-detail-en-320.png`, `live-detail-ar-320.png` and earlier contact sheets/build/import logs. Vercel's sampled error-level logs contain PostgreSQL SSL deprecation warnings on successful/expected-denied responses; no HTTP 5xx failure was observed in these checks. The existing favicon 404 and unused-preload warnings remain. No new Lighthouse score, field Core Web Vitals measurement, visual approval or full-site security certification is claimed.
+
 ## Operations
 
 Hosted CMS catalogue published;production source configured cms. Public enquiry/email activation and search indexing remain disabled. Exact inventory/reservations,private attachments,scheduling,monitoring,recovery and full release acceptance remain separate scope. Visual acceptance remains Nour's.

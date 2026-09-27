@@ -4,7 +4,7 @@ Nour asked to defer requests for client-supplied information while implementatio
 
 - Business phone and WhatsApp numbers with country code.
 - Exact approved WIKA relationship, supporting certificate/official listing and approved wording.
-- Catalogue photos received on 27 September: 29 images in two stock folders. Nour confirmed every model on each main page inherits its folder label; do not ask again. Remaining content inputs: asset-reuse permission, any exact offered configurations not recoverable from the sources, and final technical/Arabic review. Extraction and manufacturer datasheet checking are development work.
+- Catalogue publication authorized: all 151 entries from the 29 supplied main pages are in the hosted CMS with genuine photos, bilingual specifications and verified technical downloads. The 90/61 folder stock labels apply to every main-page model; do not ask again. Remaining catalogue inputs are exact offered configurations/opening quantities if inventory is required, and the client's final technical/content acceptance. See docs/catalogue-publication-2026-09-28.md.
 - Final logo and any approved company photographs/content that replace the provisional presentation.
 - Sending domain/address and a configured sending-service account. The receiving inbox is already confirmed; do not ask for it again. Secrets belong in local/Vercel environment settings, not chat.
 - Final public domain if it will replace the current Vercel URL.

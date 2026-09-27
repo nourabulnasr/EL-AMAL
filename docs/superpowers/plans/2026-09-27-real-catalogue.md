@@ -41,9 +41,11 @@ Only local /images/products/ raster paths are renderable. Reject unsafe/invalid 
 
 ## Tasks
 
-- [ ] 1. Source extraction: locate matching official catalogue pages; extract original product images and per-card specifications with source evidence, preserve all 151 groups and folder classification, prepare factual English/Arabic content and datasheet URLs.
-- [ ] 2. Catalogue application: extend Products/details schema and public DTO validation, image/specification/availability rendering, product metadata/schema and catalogue pagination; add focused data/access tests and additive migration. Full task brief in artifacts/2026-09-27/catalogue-build/application-brief.md.
-- [ ] 3. Independent application review: inspect full diff and test evidence; resolve issues before integration/publication.
-- [ ] 4. Idempotent import: validate full source-to-product coverage, assets, specifications and translations; import categories/products by stable external IDs through owner-authorized CMS operations. First development validation, then hosted import. No stock ledger writes.
-- [ ] 5. Verify EN/AR search, group matching, detail images/specifications, basket and CMS publication/private isolation; run unit/types/build checks and production migration; deploy with catalogue source cms and existing send/indexing gates.
-- [ ] 6. Verify live product count and routes/images, update progress and final-client inputs, commit/push and report actual delivery/remaining exceptions.
+- [x] 1. Source extraction: locate matching official catalogue pages; extract original product images and per-card specifications with source evidence, preserve all 151 groups and folder classification, prepare factual English/Arabic content and datasheet URLs.
+- [x] 2. Catalogue application: extend Products/details schema and public DTO validation, image/specification/availability rendering, product metadata/schema and catalogue pagination; add focused data/access tests and additive migration. Full task brief in artifacts/2026-09-27/catalogue-build/application-brief.md.
+- [x] 3. Independent application review: inspect full diff and test evidence; resolve issues before integration/publication.
+- [x] 4. Idempotent import: validate full source-to-product coverage, assets, specifications and translations; import categories/products by stable external IDs through owner-authorized CMS operations. First development validation, then hosted import. No stock ledger writes.
+- [x] 5. Verify EN/AR search, group matching, detail images/specifications, basket and CMS publication/private isolation; run unit/types/build checks and production migration; deploy with catalogue source cms and existing send/indexing gates.
+- [x] 6. Verify live product count and routes/images, update progress and final-client inputs, commit/push and report actual delivery/remaining exceptions.
+
+Completed release: 43faaf8, Vercel dpl_FeT8KpWkJPLkP6VAjjbtKEuRhfEH. Final evidence and content exceptions: docs/catalogue-publication-2026-09-28.md. User visual/technical acceptance and other site workstreams remain separate.

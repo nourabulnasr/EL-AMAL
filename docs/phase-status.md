@@ -1,8 +1,8 @@
-# EL AMAL delivery status — 27 September 2026
+# EL AMAL delivery status — 28 September 2026
 
 This replaces the outdated 19/24 September phase checklist. Latest implementation/deployment evidence remains in PROGRESS.md.
 
-## Overall estimate: about 65% of the full planned scope
+## Overall estimate: about 70% of the full planned scope
 
 This is an engineering estimate of scope completed, not a measured quality score, a delivery-date forecast or a security/SEO rating. It includes real content, operational enquiries, stock and launch acceptance. Rounded to the nearest five percentage points; allow roughly five points of uncertainty as final business scope is confirmed.
 
@@ -10,20 +10,21 @@ This is an engineering estimate of scope completed, not a measured quality score
 |---|---:|---:|---|---|
 | Foundation and hosting | 90% | 15% | Next.js/React, Payload admin, hosted owner login, staff roles, separate Neon development/hosted PostgreSQL, migrations, GitHub and Vercel continuous review | Operational account recovery, complete role checks and staff handover |
 | Public interface and motion | 85% | 20% | EN/AR/RTL, navy/white/orange theme, responsive homepage, navigation, catalogue/detail/basket/direct RFQ, industry pages, hover/press/focus/reduced-motion behavior; approved instrument opening/loading fallback; About, Contact and Resources pages | Final brand imagery, approved company/contact content and policy pages, comprehensive usability/accessibility/device review and visual approval |
-| Catalogue and business content | 60% | 15% | CMS publication adapter, review/draft isolation, model search and category/type/application filters, datasheet fields, import validation, WIKA/contact components gated on real details | Real catalogue/photos/datasheets/translations, pilot import then full import, private SKUs/opening stock, genuine WIKA evidence and actual contact information |
+| Catalogue and business content | 85% | 15% | All 151 photographed model groups published, 151 genuine manufacturer images, 560 bilingual specification rows, verified technical downloads, dated 90/61 availability, idempotent import, model search/filters, 24-card pagination and private draft isolation | Exact offered configurations, final technical/content acceptance, genuine WIKA relationship evidence and actual company/contact information |
 | Enquiries and email | 70% | 20% | Form preview/validation, staff-test saving, immutable snapshots, duplicate protection, private inbox/statuses, single-use verification, encrypted email queue, protected retry workers, verification-gated staff notification, guarded public submission/resend and durable per-visitor/per-email limits | Activation and real delivery tests, private uploads/scanning, sender configuration, scheduling, real delivery/recovery tests |
 | Inventory and reservations | 10% | 10% | Private SKU structure and import validation | Stock ledger, availability, verified allocation, concurrency-safe holds, expiry/release/dispatch, reconciliation and staff screens |
-| SEO, security and release acceptance | 50% | 20% | Canonical/hreflang, metadata/social image/schema, gated sitemap/robots, server validation/access controls, security headers and dependency patches, 58 unit tests plus development DB regression and sampled browser checks | Full device/accessibility/performance audits, queue-capacity/abuse monitoring, monitoring/backups/restore rehearsal, remaining dependency review, final content SEO/Search Console, privacy/retention policies and launch acceptance |
+| SEO, security and release acceptance | 50% | 20% | Canonical/hreflang including pagination, real product image/manufacturer schema, metadata/social image, gated sitemap/robots, server validation/access controls, security headers and dependency patches, 65 unit tests plus development DB regression and sampled live browser/API checks | Full device/accessibility/performance audits, queue-capacity/abuse monitoring, monitoring/backups/restore rehearsal, remaining dependency review, final content SEO/Search Console, privacy/retention policies and launch acceptance |
 
-Weighted estimate: 64.5%, reported as approximately 65%. The percentage is not the average of only the visible pages. Real catalogue publication remains 0%; the catalogue percentage above includes its implemented software. On 27 September, 29 supplied photos were indexed into 151 draft cards/groups (90 in stock, 61 out of stock), with ten bilingual draft rows and official model/datasheet identity checks. These are local intake files, not imported or published records. See catalogue/2026-09-27/README.md. Security and SEO percentages must never be described as proof of protection, ranking or certification.
+Weighted estimate: 68.25%, reported as approximately 70%. The percentage is not the average of only the visible pages. All 151 entries from the 29 supplied main pages are now published in the hosted CMS and live website. The remaining catalogue/business-content scope concerns exact commercial configurations, client acceptance and company evidence; the broad website scope still includes substantial operational work. These entries are printed model groups, not 151 counted SKUs. See docs/catalogue-publication-2026-09-28.md. Security and SEO percentages must never be described as proof of protection, ranking or certification.
 
 ## What is actually delivered and how
 
-- Client review: https://el-amal-sigma.vercel.app/en and /ar. The site is publicly viewable but explicitly labelled sample content.
-- Administration: https://el-amal-sigma.vercel.app/admin. Payload CMS controls structured records and staff access. The public site can read reviewed CMS records, but stays in demo mode until content is ready.
+- Client review: https://el-amal-sigma.vercel.app/en and /ar. The site now displays all 151 real catalogue entries with actual manufacturer images and bilingual specifications. Availability is a dated model-level report, subject to quotation confirmation.
+- Administration: https://el-amal-sigma.vercel.app/admin. Payload CMS controls structured records and staff access. The public catalogue reads published CMS records; private source/reviewer/SKU records remain restricted.
 - Source and backups of code: local project plus https://github.com/nourabulnasr/EL-AMAL, branch codex/el-amal-foundation. The connected Vercel project builds updates. Git is not a backup of the live database.
 - Database: Neon PostgreSQL provisioned through Vercel Marketplace, with distinct development and hosted databases. Credentials stay in ignored environment files/platform settings.
 - Delivery evidence: PROGRESS.md records tested commits/deployments. Test runs use fake mail transports and disposable records; no genuine customer email delivery is claimed.
+- Latest catalogue release: 43faaf8; Vercel production dpl_FeT8KpWkJPLkP6VAjjbtKEuRhfEH Ready and GitHub quality run 36351279324 succeeded. Live 151-image hash checks, anonymous privacy checks, EN/AR search/details/pagination and quote-basket persistence succeeded. Enquiry sending and indexing remain disabled.
 
 ## Remaining work owned by development
 
@@ -37,8 +38,8 @@ Weighted estimate: 64.5%, reported as approximately 65%. The percentage is not t
 
 ## Remaining inputs owned by Nour/client — collected at the end
 
-- Catalogue photos have been received; every model on each main page inherits its source-folder stock label, as Nour confirmed. Asset-reuse confirmation and final technical/content review remain. We handle extraction, translations, manufacturer document checks and import preparation; no further catalogue ZIP is required for the 29 supplied photos.
-- Final logo, authorised company/product photographs and approved company facts/copy/translations.
+- Catalogue publication is complete; every model on each main page inherits its source-folder stock label, as Nour confirmed. Exact offered configurations and final technical/content acceptance remain. No further catalogue ZIP is required for these 29 supplied pages.
+- Final logo, approved company photographs and approved company facts/copy/translations. Product images for the supplied catalogue are delivered.
 - Business phone/WhatsApp/address/hours and genuine WIKA relationship evidence/approved wording.
 - Final domain and verified sending account/domain. Receiving inbox is already confirmed and need not be supplied again. Secrets are configured privately, not pasted into chat.
 - Actual opening stock, exact SKU definitions and approved hold/expiry/dispatch policy.

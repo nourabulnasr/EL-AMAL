@@ -4,6 +4,7 @@ node_modules
 .env*
 docs/source
 artifacts
+.playwright-mcp
 /cms/
 /catalogue/
 README.md
