@@ -1,5 +1,13 @@
 # EL AMAL progress
 
+## Detailed handbook checkpoint — 29 September 2026
+
+Paused application development at Nour's request and documented release7f73267 in an85-page PDF, offline browser handbook and editable Markdown under docs/handbook/. Approximately31,400 source words cover delivered public pages/catalogue/motion, technical SEO methods and reasons, role-specific admin instructions, exact stock/report workflows, backend/API/data design, security limits, delivery gates, deployment/recovery, evidence and remaining ownership. The separate catalogue index lists all151 English/Arabic product route pairs. Credentials and raw customer data are excluded.
+
+Verified generated text bounds, internal links/anchors and accidental environment-secret inclusion; inspected rendered pages and corrected heading/table pagination. Browser checks at1440px and390px found no horizontal overflow or JavaScript errors. PDF includes clickable contents/bookmarks and page numbers. Windows has no bundled LibreOffice renderer or registered Word automation, so the checked PDF/HTML are the final formats; no unverified Word file is represented as complete. No application/database/deployment change was required to prepare this document.
+
+The handbook records the factual baseline, not final client acceptance. Further development is authorized after delivery. Two source findings are queued next: explicitly owner-only staff unlocking and field-level API privacy for notification deliveryKey/leaseToken. Also correct stale enquiry helper text and continuation notes. Customer mail/sender/frequent scheduler and other owner-dependent work remain gated; monitoring remains deferred.
+
 ## Current milestone — stock completion, reporting and verified recovery
 
 Implemented partial dispatch/release, blocked balances and audited physical counts with an optional explicit stock-freshness policy. Added owner/sales demand reports and CSV exports at /staff/reports; arbitrary customer text/contact fields are excluded. Closed independent-review pagination and backup safety findings. Public font definitions preserve the approved design while removing about202KB of unnecessary English font downloads (source measurement; new live Lighthouse result pending).

@@ -48,6 +48,7 @@ Live deployment is through the existing Vercel project; pushes to the connected 
 
 ## Handover references
 
+- [Detailed website and staff handbook (PDF, browser and editable source)](docs/handbook/README.md)
 - [Public enquiry controls and activation](docs/customer-intake.md)
 - [Verification email outbox](docs/verification-email-outbox.md)
 - [Staff notification worker](docs/notification-queue.md)
