@@ -1,5 +1,13 @@
 # EL AMAL progress
 
+## Current milestone — stock completion, reporting and verified recovery
+
+Implemented partial dispatch/release, blocked balances and audited physical counts with an optional explicit stock-freshness policy. Added owner/sales demand reports and CSV exports at /staff/reports; arbitrary customer text/contact fields are excluded. Closed independent-review pagination and backup safety findings. Public font definitions preserve the approved design while removing about202KB of unnecessary English font downloads (source measurement; new live Lighthouse result pending).
+
+137 unit tests, integrated TypeScript and isolated real PostgreSQL stock/report regressions succeeded. Additive migration20260929_141342_inventory_completion applied to development and hosted. A real encrypted backup restored into a random separate development database with all24 tables/572 rows/fingerprints and constraint counts matching; temporary database removed. Backup key is outside the OneDrive project. See docs/database-recovery.md. Automatic offsite backups are not configured.
+
+External monitoring is deferred at Nour's explicit request. The free Inngest scheduler requires Vercel terms acceptance; no resource or email sender has been provisioned. Existing daily maintenance remains active. Public intake and password recovery delivery remain disabled. New stock/report deployment and browser verification are pending in this source checkpoint; the stable site still runs the preceding verified release below.
+
 ## Latest release — 29 September operations and technical SEO
 
 Implemented private stock ledger/holds/dispatch/reconciliation and staff UI; encrypted verified-enquiry JPEG/PNG photos; authenticated bounded maintenance, queue health/capacity and stale-mail-health admission; stronger staff password/recovery safeguards, including a reproduced concurrent-token reset fix; complete bilingual technical SEO and full-route audit tooling. See docs/operations-release-2026-09-29.md and dedicated runbooks.

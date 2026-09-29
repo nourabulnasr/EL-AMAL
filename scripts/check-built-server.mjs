@@ -16,7 +16,7 @@ try{
   try{await fetch(`${origin}/robots.txt`,{signal:AbortSignal.timeout(1000)});ready=true;break;}catch{await delay(1000);}
  }
  assert.ok(ready,'Built server started');
- for(const [path,status] of [['/en/products',200],['/ar/products',200],['/staff/inventory',200],['/admin/login',200],['/api/skus',403],['/api/enquiry-attachments',403],['/api/staff/inventory',403]]){
+ for(const [path,status] of [['/en/products',200],['/ar/products',200],['/staff/inventory',200],['/staff/reports',200],['/admin/login',200],['/api/skus',403],['/api/enquiry-attachments',403],['/api/staff/inventory',403],['/api/staff/demand-report',403]]){
   const response=await fetch(origin+path,{redirect:'manual',signal:AbortSignal.timeout(20000)});
   assert.equal(response.status,status,`Built CMS runtime: ${path}`);
  }

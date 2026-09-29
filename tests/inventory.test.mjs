@@ -37,6 +37,26 @@ test('stock changes cannot consume committed holds or go negative',()=>{
   assert.throws(()=>assertStockChange(0,0,-1),InventoryError);
   assert.throws(()=>assertStockChange(999999999,0,1),InventoryError);
 });
+test('partial lifecycle commands accept only positive whole quantities and omitted quantity preserves full action',()=>{
+  for(const kind of ['dispatch','release']){
+    const command={kind,requestKey:randomUUID(),skuId:12,reservationId:5,reason:'Partial shipment'};
+    assert.equal(parseInventoryCommand({...command,quantity:2}).quantity,2);
+    assert.equal(parseInventoryCommand(command).quantity,undefined);
+    for(const quantity of [0,-1,1.5,'2',1000000,null])assert.throws(()=>parseInventoryCommand({...command,quantity}),InventoryError);
+    assert.notEqual(inventoryFingerprint(parseInventoryCommand(command),7),inventoryFingerprint(parseInventoryCommand({...command,quantity:2}),7));
+  }
+});
+test('blocked units remain protected from adjustments and owner or warehouse control their audit actions',()=>{
+  assert.throws(()=>assertStockChange(10,4,-4,3),InventoryError);
+  assert.equal(assertStockChange(10,4,-3,3),7);
+  for(const kind of ['block','unblock','confirm']){
+    assert.equal(canPerformInventory(actor('sales'),kind),false);
+    assert.equal(canPerformInventory(actor('warehouse'),kind),true);
+    assert.equal(parseInventoryCommand({...receipt(),kind}).quantity,5);
+  }
+  assert.equal(parseInventoryCommand({...receipt(),kind:'confirm',quantity:0}).quantity,0);
+  for(const kind of ['block','unblock'])assert.throws(()=>parseInventoryCommand({...receipt(),kind,quantity:0}),InventoryError);
+});
 test('ledger and reservation records deny public reads and all direct API mutation',()=>{
   for(const collection of [InventoryMovements,InventoryReservations]){
     for(const role of [null,'owner','sales','warehouse','catalogue-editor']){

@@ -10,7 +10,7 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     services:
       postgres:
         image: postgres:17
@@ -52,6 +52,14 @@ jobs:
           DATABASE_URL: postgresql://ci:ci@127.0.0.1:5432/elamal_ci
           PAYLOAD_SECRET: isolated-ci-secret-with-no-production-authority-0123456789
         run: node node_modules/payload/bin.js migrate
+      - name: Stock and report database regressions
+        env:
+          CMS_DATABASE_CHECK: development
+          DATABASE_URL: postgresql://ci:ci@127.0.0.1:5432/elamal_ci
+          PAYLOAD_SECRET: isolated-ci-secret-with-no-production-authority-0123456789
+        run: |
+          node --experimental-strip-types scripts/check-inventory.ts
+          node --experimental-strip-types scripts/check-demand-report.ts
       - name: Production build with isolated CMS
         env:
           CMS_ENABLED: 'true'

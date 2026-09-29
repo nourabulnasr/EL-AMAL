@@ -37,7 +37,7 @@ See [delivery status](docs/phase-status.md) for the current scope estimate and e
 
 ## Verification and deployment
 
-- `npm test`:122 unit checks as of29 September2026.
+- `npm test`:137 unit checks as of29 September2026.
 - `npm run typecheck`: TypeScript.
 - `npm run readiness`: configuration booleans only; no secrets or network activity.
 - `npm run build`: production compilation.
@@ -54,6 +54,8 @@ Live deployment is through the existing Vercel project; pushes to the connected 
 - [SEO activation](docs/seo-readiness.md)
 - [SEO launch and complete crawl](docs/seo-launch-2026-09-29.md)
 - [Stock control](docs/inventory-operations.md)
+- [Demand reports and CSV](docs/demand-reporting.md)
+- [Encrypted backup and recovery](docs/database-recovery.md)
 - [Private photo attachments](docs/private-enquiry-photos.md)
 - [Scheduled operations](docs/delivery-operations.md)
 - [Original brief and acceptance scope](docs/kickoff-2026-09-17.md)

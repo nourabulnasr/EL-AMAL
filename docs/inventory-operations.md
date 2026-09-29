@@ -6,8 +6,8 @@ Open `/staff/inventory` after signing in to Payload administration. The dashboar
 
 | Role | Allowed actions |
 | --- | --- |
-| Owner | Define SKUs; receipt, adjustment, hold, release, dispatch, reconciliation; read audit history |
-| Warehouse | Receipt, adjustment, dispatch, reconciliation; read private stock history |
+| Owner | Define SKUs; receipt, adjustment, hold, release, dispatch, block, unblock, physical count confirmation, reconciliation; read audit history |
+| Warehouse | Receipt, adjustment, dispatch, block, unblock, physical count confirmation, reconciliation; read private stock history |
 | Sales | Hold, release, reconciliation; read private stock history |
 | Catalogue editor / anonymous | No inventory reads or writes |
 
@@ -17,11 +17,23 @@ Only the owner can create or deactivate a SKU. Its code, product, manufacturer p
 
 1. Find the exact SKU. Check its configuration and current balance.
 2. For a delivery, select **Record receipt**, enter the physical whole-unit quantity, and put the supplier receipt or warehouse document reference in the reason.
-3. For a correction, select **Record adjustment** and enter a signed difference. For example, correcting ten units to eight means `-2`. An adjustment cannot make stock negative or consume units committed to unexpired holds. Corrections add audit events; they do not rewrite old entries.
+3. For a correction, select **Record adjustment** and enter a signed difference. For example, correcting ten units to eight means `-2`. An adjustment cannot make stock negative or consume units committed to unexpired holds or blocked units. Corrections add audit events; they do not rewrite old entries.
 4. To allocate units, sales or the owner selects **Create hold**, a verified open customer enquiry, the matching requested line, quantity, and an explicit expiry in local time. The expiry must be in the future and within 30 days. The system converts it to UTC. No default commercial hold period is imposed.
 5. Check the exact SKU configuration and the customer's requested range before creating the hold. Catalogue enquiry lines are matched by product identity. Direct model requests match the catalogue model exactly, ignoring case; other direct model names require a reviewed matching request before stock can be held.
-6. **Release hold** makes the full held quantity available. **Dispatch hold** removes the full held quantity from physical stock. Include the dispatch document number in the reason. Partial dispatch is intentionally unsupported; create appropriately sized holds for separate shipments. Dispatch after expiry is rejected.
+6. **Release hold** makes the entered quantity available. **Dispatch hold** removes the entered quantity from physical stock. Enter only the units actually released or shipped and include the dispatch document number in the reason. A partial action keeps the rest held until its original expiry; only the final consumed unit closes the hold. Dispatch after expiry is rejected. Older API requests without a quantity still process the complete remaining hold.
 7. **Reconcile ledger** verifies the physical movement total against reservations, materializes up to 100 due expiry events, and records the operator and reason. It never silently changes a balance to match a count. Investigate mismatches before additional stock changes.
+8. **Block stock** removes available units from allocation while keeping them on hand (for example, a documented inspection). **Unblock stock** returns the entered blocked quantity to availability. Blocking cannot consume held units; unblocking cannot exceed the current blocked balance. Both require a reason and create immutable audit entries.
+9. **Confirm physical count** records a warehouse or owner review without changing the balance. Count all on-hand units, including held and blocked units. The entered count must equal the ledger on-hand total; investigate a mismatch and make a documented adjustment before confirmation.
+
+Available stock is on hand minus active held units minus blocked units. The reservation table keeps the original quantity, remaining allocation, dispatched total and released total separate. Expiry releases only the unconsumed remainder, and dispatched units continue to count against the enquiry line even after its remaining hold expires or is released.
+
+## Stock freshness
+
+The private screen always shows the last explicit physical count confirmation. `INVENTORY_FRESHNESS_HOURS` is an optional positive whole number of hours from 1 to 8760. It has no default: the owner must choose the actual operating policy before configuring it. The range is a technical validation limit, not a recommended commercial policy.
+
+When configured, a new hold requires a confirmation within that interval. Unconfirmed or stale stock remains visible but requires owner/warehouse confirmation before allocation. Invalid configuration prevents new holds with an explicit service error. Existing holds can still be dispatched or released, and count corrections remain possible. A receipt, reconciliation, adjustment or dispatch does not pretend a physical recount occurred. An unset policy is clearly labelled for manual review; it does not silently adopt the proposal's 48-hour value.
+
+This is private exact-SKU stock review. It does not change model-level public availability labels. A business-approved mapping between real SKUs and catalogue model groups is still needed before public availability may be derived from these quantities. Allocation remains manual and every hold retains its explicitly entered expiry.
 
 The screen shows up to 100 SKU search results, the latest 100 matching verified enquiries, 100 reservations with active holds first, and the latest 100 ledger entries. Refine SKU/enquiry searches as necessary. All historical records can be browsed through the read-only Payload collections.
 
@@ -29,7 +41,7 @@ The screen shows up to 100 SKU search results, the latest 100 matching verified 
 
 Every command has a unique request key and a fingerprint bound to its actor and exact normalized details. A repeat returns the original result. Reusing an accepted key with different details or another actor returns a conflict. The UI keeps uncertain actions in the current tab's session storage and retries the original payload; it does not invent a new key after a timeout. A definite validation or permission rejection unlocks the form.
 
-An expired hold stops consuming availability immediately, even when the scheduler is delayed. The worker or next stock action materializes one immutable expiry event. System expiry records have `actorRole=system`, a null staff actor, a fixed explanation and a timestamp; staff events retain the actual staff ID and role. A unique terminal-event index prevents multiple releases/expirations/dispatches for a reservation.
+An expired hold stops consuming availability immediately, even when the scheduler is delayed. The worker or next stock action materializes one immutable expiry event for the remaining units. System expiry records have `actorRole=system`, a null staff actor, a fixed explanation and a timestamp; staff events retain the actual staff ID and role. A unique terminal-event index allows one final closure; partial dispatch and release events do not carry a closure key. Original hold snapshots and quantities remain unchanged.
 
 ## Engineering and recovery
 

@@ -13,8 +13,12 @@ import {customerSettings} from '@/lib/customer-readiness';
 import {BasketProvider} from '@/components/basket-provider';
 import './styles.css';
 const sans=Manrope({subsets:['latin'],variable:'--font-sans',display:'swap'});
-const display=Newsreader({subsets:['latin'],variable:'--font-display',display:'swap'});
-const arabic=Noto_Sans_Arabic({subsets:['arabic'],variable:'--font-arabic',display:'swap',weight:['400','500','600','700']});
+// Headings and the entrance wordmark use the regular cut throughout the site.
+const display=Newsreader({subsets:['latin'],variable:'--font-display',display:'swap',weight:'400'});
+// Arabic is used only by the Arabic document. CSS loads it there on demand;
+// preloading it in this shared layout also downloads 166 KB on English pages.
+// One variable face preserves every used weight without repeated declarations.
+const arabic=Noto_Sans_Arabic({subsets:['arabic'],variable:'--font-arabic',display:'swap',weight:'variable',preload:false});
 export const metadata={metadataBase:new URL(siteOrigin()),robots:{index:indexingEnabled(),follow:indexingEnabled()},title:{default:'EL AMAL | Industrial instrumentation',template:'%s | EL AMAL'},...(process.env.GOOGLE_SITE_VERIFICATION?{verification:{google:process.env.GOOGLE_SITE_VERIFICATION}}:{})};
 export default async function Layout({children,params}:{children:React.ReactNode;params:Promise<{locale:string}>}){
  const {locale}=await params;if(!isLocale(locale))notFound();const t=copy[locale];const catalogue=await loadCatalogue();

@@ -1,52 +1,19 @@
 import assert from 'node:assert/strict';
 import {randomBytes,randomUUID} from 'node:crypto';
-import {buildConfig,getPayload} from 'payload';
-import {postgresAdapter} from '@payloadcms/db-postgres';
-import {Pool} from 'pg';
-import config from '../src/payload.config.ts';
+import {isolatedPayload} from './lib/isolated-payload.ts';
 import {executeInventory,readInventory,expireInventoryHolds} from '../src/lib/inventory-service.ts';
 import {InventoryError} from '../src/lib/inventory.ts';
 import type {Staff} from '../src/payload-types.ts';
 
-if(process.env.CMS_DATABASE_CHECK!=='development')throw new Error('Development database only');
-// A complete empty schema clone keeps Payload permission checks real while ensuring
-// even worker-wide expiry scans cannot touch another development record.
-const schema=`inventory_test_${randomUUID().replaceAll('-','')}`;
-// Neon transaction poolers reject startup search_path options. Keep both pools on
-// the same verified development database through its direct endpoint when supplied.
-const connectionString=process.env.DATABASE_URL_UNPOOLED||process.env.DATABASE_URL;
-const control=new Pool({connectionString,max:1,connectionTimeoutMillis:10000});
-const quote=(value:string)=>`"${value.replaceAll('"','""')}"`;
-let schemaCreated=false;
-let payload:Awaited<ReturnType<typeof getPayload>>;
-try{
-  await control.query(`CREATE SCHEMA ${schema}`);schemaCreated=true;
-  const tables=await control.query("SELECT table_name FROM information_schema.tables WHERE table_schema='public' AND table_type='BASE TABLE'");
-  for(const {table_name:table} of tables.rows){
-    await control.query(`CREATE TABLE ${schema}.${quote(table)} (LIKE public.${quote(table)} INCLUDING ALL)`);
-    const serials=await control.query("SELECT column_name FROM information_schema.columns WHERE table_schema='public' AND table_name=$1 AND column_default LIKE 'nextval(%'",[table]);
-    for(const {column_name:column} of serials.rows){
-      const sequence=`test_${table}_${column}_seq`;
-      await control.query(`CREATE SEQUENCE ${schema}.${quote(sequence)}`);
-      await control.query(`ALTER TABLE ${schema}.${quote(table)} ALTER COLUMN ${quote(column)} SET DEFAULT nextval('${schema}.${quote(sequence)}')`);
-    }
-  }
-  // LIKE does not copy foreign keys. Restore them against the isolated schema.
-  await control.query('SET search_path=pg_catalog');
-  const foreignKeys=await control.query("SELECT c.conname,t.relname,pg_get_constraintdef(c.oid) AS definition FROM pg_constraint c JOIN pg_class t ON t.oid=c.conrelid JOIN pg_namespace n ON n.oid=t.relnamespace WHERE n.nspname='public' AND c.contype='f'");
-  for(const row of foreignKeys.rows)await control.query(`ALTER TABLE ${schema}.${quote(row.relname)} ADD CONSTRAINT ${quote(row.conname)} ${row.definition.replaceAll('public.',`${schema}.`)}`);
-  const base=await config;
-  // Sanitize the replacement adapter without sanitizing the already-built
-  // collections twice (which would duplicate Payload's internal collections).
-  const isolated=await buildConfig({secret:base.secret,db:postgresAdapter({schemaName:schema,pool:{connectionString,max:3,connectionTimeoutMillis:15000,options:`-c search_path=${schema}`},push:false})});
-  payload=await getPayload({config:{...base,db:isolated.db}});
-}catch(error){if(schemaCreated)await control.query(`DROP SCHEMA ${schema} CASCADE`);await control.end();throw error;}
+const {payload,close}=await isolatedPayload('inventory_test');
 const suffix=`inventory-check-${randomUUID()}`;
 const created:{collection:'staff'|'categories'|'products'|'skus'|'enquiries';id:number}[]=[];
 const users={} as Record<'owner'|'sales'|'warehouse'|'catalogue-editor',Staff&{collection:'staff'}>;
 const skuIds:number[]=[];let enquiryId=0;let lineId='';
 const forbidden=(error:unknown)=>error instanceof Error&&'status' in error&&error.status===403;
 const conflict=(error:unknown)=>error instanceof InventoryError&&error.status===409;
+const originalFreshness=process.env.INVENTORY_FRESHNESS_HOURS;
+delete process.env.INVENTORY_FRESHNESS_HOURS;
 try{
   for(const role of ['owner','sales','warehouse','catalogue-editor'] as const){
     const doc=await payload.create({collection:'staff',overrideAccess:true,data:{email:`${role}-${suffix}@example.invalid`,password:randomBytes(32).toString('hex'),role}});
@@ -75,6 +42,12 @@ try{
   await executeInventory(payload,users.owner,command('receipt',{skuId:skuIds[1],quantity:8}));
   await assert.rejects(executeInventory(payload,users.sales,{...hold(),skuId:skuIds[1],quantity:2}),conflict,'Different SKUs cannot over-allocate one enquiry line');
   let state=await read();const held=state.reservations.find(r=>r.status==='held')!;
+  const partial=command('dispatch',{reservationId:held.id,quantity:2});
+  const partialResults=await Promise.all([executeInventory(payload,users.warehouse,partial),executeInventory(payload,users.warehouse,partial)]);
+  assert.equal(partialResults.filter(x=>x.repeated).length,1);
+  state=await read();assert.equal(state.balance?.onHand,3);assert.equal(state.balance?.reserved,2,'Partial dispatch preserves unconsumed allocation');
+  await assert.rejects(executeInventory(payload,users.warehouse,command('dispatch',{reservationId:held.id,quantity:3})),conflict);
+  await assert.rejects(executeInventory(payload,users.sales,{...hold(),skuId:skuIds[1],quantity:2}),conflict,'Dispatched and remaining held units both count against the line');
   const dispatch=command('dispatch',{reservationId:held.id});
   const dispatched=await Promise.all([executeInventory(payload,users.warehouse,dispatch),executeInventory(payload,users.warehouse,dispatch)]);
   assert.equal(dispatched.filter(x=>x.repeated).length,1);state=await read();assert.equal(state.balance?.onHand,1);assert.equal(state.balance?.reserved,0);
@@ -106,6 +79,55 @@ try{
   await payload.db.pool.query("UPDATE enquiries SET verification_status='test-verified' WHERE id=$1",[enquiryId]);
   await assert.rejects(executeInventory(payload,users.sales,{...hold(),quantity:1}),conflict);
   await payload.db.pool.query("UPDATE enquiries SET verification_status='verified' WHERE id=$1",[enquiryId]);
+  // Quantities below belong solely to this explicitly synthetic isolated fixture.
+  await payload.db.pool.query('UPDATE enquiries_items SET quantity=20 WHERE _parent_id=$1 AND id=$2',[enquiryId,lineId]);
+  await executeInventory(payload,users.warehouse,command('receipt',{quantity:10}));
+  const mixed=await executeInventory(payload,users.sales,{...hold(),quantity:6});
+  await executeInventory(payload,users.warehouse,command('dispatch',{reservationId:mixed.reservationId,quantity:2}));
+  const partialRelease=command('release',{reservationId:mixed.reservationId,quantity:1});
+  await executeInventory(payload,users.sales,partialRelease);
+  assert.equal((await executeInventory(payload,users.sales,partialRelease)).repeated,true);
+  state=await read();assert.equal(state.balance?.onHand,9);assert.equal(state.balance?.reserved,3);
+  const mixedRow=state.reservations.find(r=>r.id===mixed.reservationId)!;
+  assert.equal(mixedRow.quantity,6);assert.equal(mixedRow.remainingQuantity,3);assert.equal(mixedRow.dispatchedQuantity,2);assert.equal(mixedRow.releasedQuantity,1);
+  const block=command('block',{quantity:2});
+  await executeInventory(payload,users.warehouse,block);
+  assert.equal((await executeInventory(payload,users.warehouse,block)).repeated,true);
+  state=await read();assert.equal(state.balance?.blocked,2);assert.equal(state.balance?.available,4);
+  await assert.rejects(executeInventory(payload,users.warehouse,command('block',{quantity:5})),conflict,'Blocked stock cannot consume protected holds');
+  await assert.rejects(executeInventory(payload,users.warehouse,command('adjustment',{quantity:-5})),conflict,'Adjustments protect both holds and blocked stock');
+  await assert.rejects(executeInventory(payload,users.warehouse,command('unblock',{quantity:3})),conflict);
+  await executeInventory(payload,users.warehouse,command('unblock',{quantity:1}));
+  await payload.db.pool.query("UPDATE inventory_reservations SET expires_at=now()-interval '1 second' WHERE id=$1 AND enquiry_id=$2",[mixed.reservationId,enquiryId]);
+  state=await read();assert.equal(state.balance?.available,8);assert.equal(state.balance?.expiredPending,3);
+  const remaining=await executeInventory(payload,users.sales,{...hold(),quantity:8});
+  await assert.rejects(executeInventory(payload,users.sales,{...hold(),skuId:skuIds[1],quantity:7}),conflict,'Shipped units remain allocated after partially shipped hold expires');
+  const remainderExpiry=await payload.db.pool.query("SELECT reserved_delta FROM inventory_movements WHERE reservation_id=$1 AND kind='expire'",[mixed.reservationId]);
+  assert.equal(Number(remainderExpiry.rows[0].reserved_delta),-3,'Expiry releases only the unconsumed remainder');
+  await executeInventory(payload,users.sales,command('release',{reservationId:remaining.reservationId}));
+  const blockedRace=await Promise.allSettled([
+    executeInventory(payload,users.sales,{...hold(),quantity:8}),
+    executeInventory(payload,users.warehouse,command('block',{quantity:8})),
+  ]);
+  assert.equal(blockedRace.filter(result=>result.status==='fulfilled').length,1,'Allocation and blocking contend for the same available units');
+  const winner=blockedRace[0];
+  if(winner.status==='fulfilled')await executeInventory(payload,users.sales,command('release',{reservationId:winner.value.reservationId}));
+  else await executeInventory(payload,users.warehouse,command('unblock',{quantity:8}));
+  process.env.INVENTORY_FRESHNESS_HOURS='2'; // A test policy, never a production default.
+  assert.equal((await read()).freshness?.status,'unconfirmed');
+  await assert.rejects(executeInventory(payload,users.sales,{...hold(),quantity:1}),conflict,'Configured freshness requires an explicit physical count');
+  await assert.rejects(executeInventory(payload,users.warehouse,command('confirm',{quantity:10})),conflict,'A count mismatch cannot silently alter the ledger');
+  const confirmation=await executeInventory(payload,users.warehouse,command('confirm',{quantity:9}));
+  assert.equal((await read()).freshness?.status,'fresh');
+  const freshHold=await executeInventory(payload,users.sales,{...hold(),quantity:1});
+  await executeInventory(payload,users.sales,command('release',{reservationId:freshHold.reservationId}));
+  await payload.db.pool.query("UPDATE inventory_movements SET created_at=now()-interval '3 hours' WHERE id=$1",[confirmation.movementId]);
+  assert.equal((await read()).freshness?.status,'stale');
+  await assert.rejects(executeInventory(payload,users.sales,{...hold(),quantity:1}),conflict);
+  process.env.INVENTORY_FRESHNESS_HOURS='invalid';
+  await assert.rejects(executeInventory(payload,users.sales,{...hold(),quantity:1}),error=>error instanceof InventoryError&&error.status===503);
+  delete process.env.INVENTORY_FRESHNESS_HOURS;
+  assert.equal((await read()).freshness?.status,'policy-unset');
   await payload.update({collection:'skus',id:skuIds[0],overrideAccess:true,data:{active:false}});
   await assert.rejects(executeInventory(payload,users.sales,{...hold(),quantity:1}),conflict);
   for(const role of ['sales','warehouse','catalogue-editor'] as const){
@@ -123,8 +145,9 @@ try{
     }
     await assert.rejects(payload.update({collection,id:rows.docs[0].id,overrideAccess:true,data:{reason:'tamper'}}),/append-only/);
   }
-  console.log('Inventory regression succeeded: empty opening balance, concurrent receipt retry and oversell prevention, line allocation, adjustment protection, dispatch/release/expiry idempotency, audit reconciliation, inactive/test-verified rejection, staff and public permission checks.');
+  console.log('Inventory regression succeeded: empty opening balance, concurrent retries and oversell prevention, full/partial dispatch and release, expired remainder accounting, shipped enquiry caps, blocked balances and allocation/block races, protected adjustments, physical count/freshness gates, audit reconciliation, inactive/test-verified rejection, staff and public permissions.');
 }finally{
+  if(originalFreshness===undefined)delete process.env.INVENTORY_FRESHNESS_HOURS;else process.env.INVENTORY_FRESHNESS_HOURS=originalFreshness;
   try{
     // Append-only production APIs have no deletion flow. Cleanup uses exact fixture IDs.
     if(skuIds.length){
@@ -135,8 +158,7 @@ try{
     if(skuIds.length)assert.equal((await payload.db.pool.query('SELECT count(*) FROM inventory_movements WHERE sku_id=ANY($1::int[])',[skuIds])).rows[0].count,'0');
     assert.equal(Object.keys(payload.db.sessions??{}).length,0);
   }finally{
-    try{await payload.destroy();}
-    finally{try{await control.query(`DROP SCHEMA ${schema} CASCADE`);}finally{await control.end();}}
+    await close();
   }
 }
 console.log('Exact inventory fixture records and isolated schema removed.');

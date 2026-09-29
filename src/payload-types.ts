@@ -424,12 +424,27 @@ export interface InventoryMovement {
   id: number;
   requestKey: string;
   fingerprint: string;
-  kind: 'receipt' | 'adjustment' | 'hold' | 'release' | 'expire' | 'dispatch' | 'reconcile';
+  kind:
+    | 'receipt'
+    | 'adjustment'
+    | 'hold'
+    | 'release'
+    | 'expire'
+    | 'dispatch'
+    | 'reconcile'
+    | 'block'
+    | 'unblock'
+    | 'confirm';
   sku: number | Skus;
   reservation?: (number | null) | InventoryReservation;
   closeKey?: string | null;
   onHandDelta: number;
   reservedDelta: number;
+  blockedDelta: number;
+  /**
+   * Physical on-hand count reviewed by the owner or warehouse for a stock confirmation event.
+   */
+  confirmedQuantity?: number | null;
   actor?: (number | null) | Staff;
   /**
    * System expiry events have no staff actor.
@@ -818,6 +833,8 @@ export interface InventoryMovementsSelect<T extends boolean = true> {
   closeKey?: T;
   onHandDelta?: T;
   reservedDelta?: T;
+  blockedDelta?: T;
+  confirmedQuantity?: T;
   actor?: T;
   actorRole?: T;
   reason?: T;
