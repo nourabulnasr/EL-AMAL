@@ -87,6 +87,7 @@ def render(items,inside_list=False):
         if kind in ('space','def'):continue
         if kind=='heading':
             depth=t['depth'];heading_counter+=1
+            if t.get('text')=='Update after the handbook baseline':out.append(PageBreak())
             p=paragraph(t,{1:'H1x',2:'H2x',3:'H3x'}.get(depth,'H4x'))
             if depth in (2,3):
                 p.chapter_key='chapter-'+str(heading_counter);p.chapter_level=depth-2

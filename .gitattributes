@@ -1,0 +1,2 @@
+# Preserve PDF stream bytes and offsets across Windows/macOS/Linux checkouts.
+*.pdf binary

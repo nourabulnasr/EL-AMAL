@@ -2,13 +2,15 @@
 
 This is the detailed 29 September 2026 delivery record and operating manual requested by Nour. It records application release `7f73267` before subsequent development resumes. It explains the existing implementation, evidence, exact admin workflows and remaining work; it does not certify final client acceptance or disclose credentials.
 
+The final PDF contains86 pages:85 baseline pages and one dated update recording the verified permission corrections deployed as `b3408a5`. The source contains about31,800 words. PDF files are explicitly stored as binary in Git so line-ending conversion cannot damage their internal offsets.
+
 - [PDF handbook](EL-AMAL-Website-Handbook.pdf)
 - [Browser handbook](EL-AMAL-Website-Handbook.html)
 - [Combined editable Markdown](EL-AMAL-Website-Handbook.md)
 - [All 151 product route pairs](catalogue-route-index.md)
 - [Changes after this baseline](post-handbook-update.md)
 
-The five chapter source files are `overview.md`, `frontend-chapters.md`, `admin-chapters.md`, `backend-chapters.md` and `remaining-and-reference.md`. Update these before rebuilding. Dated evidence in this document is not automatically changed when production changes.
+The five baseline chapter source files are `overview.md`, `frontend-chapters.md`, `admin-chapters.md`, `backend-chapters.md` and `remaining-and-reference.md`. The dated `post-handbook-update.md` is included as a final chapter in every generated format. Update the relevant source before rebuilding. Dated baseline evidence is not silently replaced when production changes.
 
 ## Rebuild and check
 

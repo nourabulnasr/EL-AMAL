@@ -7,7 +7,7 @@ const bundle=process.argv[2];
 if(!bundle)throw new Error('Pass the bundled Node package directory.');
 const {marked}=await import(pathToFileURL(resolve(bundle,'marked/lib/marked.esm.js')).href);
 const root=dirname(fileURLToPath(import.meta.url));
-const chapterFiles=['overview.md','frontend-chapters.md','admin-chapters.md','backend-chapters.md','remaining-and-reference.md'];
+const chapterFiles=['overview.md','frontend-chapters.md','admin-chapters.md','backend-chapters.md','remaining-and-reference.md','post-handbook-update.md'];
 let content=(await Promise.all(chapterFiles.map(async (x,i)=>{
  let chapter=await readFile(resolve(root,x),'utf8');
  if(i>0 && i<4)chapter=chapter.replace(/^(#{1,5}) (.+)$/gm,(_,hash,title)=>hash+'# '+title);
