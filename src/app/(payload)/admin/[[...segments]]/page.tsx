@@ -10,5 +10,8 @@ export default async function Page(props:Props) {
     return <main style={{maxWidth:640,margin:'12vh auto',padding:32}}><h1>EL AMAL administration</h1><p>Staff access requires environment configuration and a trusted owner setup. Public registration is unavailable.</p><a href="/en">Return to the website preview</a></main>;
   }
   const [{RootPage},{default:config}] = await Promise.all([import('@payloadcms/next/views'),import('@/payload.config')]);
-  return RootPage({...props,config,importMap});
+  const page = await RootPage({...props,config,importMap});
+  // Payload's minimal login template supplies neither a main landmark nor an H1.
+  if (segments[0] === 'login') return <main aria-labelledby="staff-sign-in"><h1 id="staff-sign-in" className="admin-sr-only">EL AMAL staff sign in</h1>{page}</main>;
+  return page;
 }
