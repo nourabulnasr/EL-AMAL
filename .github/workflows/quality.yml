@@ -52,7 +52,7 @@ jobs:
           DATABASE_URL: postgresql://ci:ci@127.0.0.1:5432/elamal_ci
           PAYLOAD_SECRET: isolated-ci-secret-with-no-production-authority-0123456789
         run: node node_modules/payload/bin.js migrate
-      - name: Stock and report database regressions
+      - name: Stock, report and admin boundary database regressions
         env:
           CMS_DATABASE_CHECK: development
           DATABASE_URL: postgresql://ci:ci@127.0.0.1:5432/elamal_ci
@@ -60,6 +60,7 @@ jobs:
         run: |
           node --experimental-strip-types scripts/check-inventory.ts
           node --experimental-strip-types scripts/check-demand-report.ts
+          node --experimental-strip-types scripts/check-admin-boundaries.ts
       - name: Production build with isolated CMS
         env:
           CMS_ENABLED: 'true'

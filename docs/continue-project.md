@@ -8,7 +8,7 @@ Admin: https://el-amal-sigma.vercel.app/admin
 
 ## Starting instructions
 
-Read the applicable AGENTS.md, PROGRESS.md, docs/phase-status.md and current Git status. PROGRESS.md contains the latest evidence; older dated plans describe historical increments and do not override it. Preserve ignored environment files; never print credentials. This is an existing Next.js/Payload application, not a separate frontend/CMS scaffold.
+Read the applicable AGENTS.md, PROGRESS.md, docs/phase-status.md, docs/handbook/README.md and current Git status. PROGRESS.md contains the latest evidence; older dated plans describe historical increments and do not override it. The detailed handbook records baseline7f73267 and has a dated companion update for subsequent changes. Preserve ignored environment files; never print credentials. This is an existing Next.js/Payload application, not a separate frontend/CMS scaffold.
 
 Suggested continuation message:
 
@@ -34,4 +34,4 @@ All outstanding client inputs remain collected at the end. Read docs/final-clien
 
 ## Changing devices or accounts
 
-Use the existing chat/project on a host connection already configured in the app; a new unrelated cloud chat does not automatically receive this local folder. GitHub preserves committed source, while local ignored environment files and the live database require separate secure handling/backups. Do not claim database recovery has been rehearsed. No automatic restart/continuation task is scheduled.
+Use the existing chat/project on a host connection already configured in the app; a new unrelated cloud chat does not automatically receive this local folder. GitHub preserves committed source, while local ignored environment files and the live database require separate secure handling/backups. The encrypted database restore rehearsal completed on29 September; see docs/database-recovery.md for its exact scope. Automatic offsite backups are not configured. No automatic restart/continuation task is scheduled.

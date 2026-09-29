@@ -5,7 +5,7 @@ const immutable={update:()=>false};
 const fixed=(field:Field):Field=>({...field,access:immutable,admin:{...field.admin,readOnly:true}} as Field);
 export const Enquiries:CollectionConfig={
   slug:'enquiries',
-  admin:{useAsTitle:'reference',defaultColumns:['reference','company','status','source','createdAt'],description:'Saved requests. Email delivery and stock reservation are not active yet.'},
+  admin:{useAsTitle:'reference',defaultColumns:['reference','company','status','source','createdAt'],description:'Saved requests with immutable submitted details. Update Status and Internal Notes here. Check the notification queues for email delivery; stock holds are managed in Staff stock control after exact SKUs and counts are entered.'},
   access:{create:()=>false,read:sales,update:sales,delete:()=>false},
   hooks:{beforeChange:[({operation,data,originalDoc})=>{
     // Field access protects REST/admin; this also prevents trusted updates from rewriting history.
@@ -31,7 +31,7 @@ export const Enquiries:CollectionConfig={
     ]}),
     fixed({name:'verificationStatus',type:'select',required:true,defaultValue:'unverified',options:['unverified','test-verified','verified']}),
     fixed({name:'verifiedAt',type:'date'}),
-    fixed({name:'deliveryStatus',type:'select',required:true,defaultValue:'not-configured',options:['not-configured']}),
+    fixed({name:'deliveryStatus',type:'select',required:true,defaultValue:'not-configured',options:['not-configured'],admin:{description:'Legacy submission snapshot; this is not the live email status. Check Notification queue and Verification emails for delivery results.'}}),
     {name:'status',type:'select',required:true,defaultValue:'new',options:['new','reviewing','awaiting-customer','quoted','closed']},
     {name:'internalNotes',type:'textarea',maxLength:10000},
   ],

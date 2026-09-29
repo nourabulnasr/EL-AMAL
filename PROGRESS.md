@@ -1,5 +1,11 @@
 # EL AMAL progress
 
+## Post-handbook permission corrections — 29 September 2026
+
+The completed handbook was saved and pushed as d9e3744 before development resumed. Reproduced and fixed two documented boundaries: Payload staff unlock now explicitly requires an owner, and notification deliveryKey/leaseToken are removed by field-level read access from ordinary owner/sales API responses. They are worker identifiers, not publicly exposed credentials. Corrected the enquiry admin helper and labelled the legacy deliveryStatus as a submission snapshot; actual delivery results remain in the queues. Fixed stale continuation/client-input notes.
+
+New isolated PostgreSQL regression first reported five expected failures (three non-owner unlocks and two authorized-role field leaks), then all11 checks succeeded after the fixes. The tests retain legitimate owner unlock and concurrent fake-worker delivery and remove their entire owned fixture schema. Added this regression to the existing GitHub workflow.142 unit tests and TypeScript succeeded. No schema migration, real stock write, password change or external email was needed. Cloud build/deployment and live runtime verification remain pending for this checkpoint.
+
 ## Detailed handbook checkpoint — 29 September 2026
 
 Paused application development at Nour's request and documented release7f73267 in an85-page PDF, offline browser handbook and editable Markdown under docs/handbook/. Approximately31,400 source words cover delivered public pages/catalogue/motion, technical SEO methods and reasons, role-specific admin instructions, exact stock/report workflows, backend/API/data design, security limits, delivery gates, deployment/recovery, evidence and remaining ownership. The separate catalogue index lists all151 English/Arabic product route pairs. Credentials and raw customer data are excluded.

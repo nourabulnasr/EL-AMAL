@@ -6,6 +6,7 @@ This is the detailed 29 September 2026 delivery record and operating manual requ
 - [Browser handbook](EL-AMAL-Website-Handbook.html)
 - [Combined editable Markdown](EL-AMAL-Website-Handbook.md)
 - [All 151 product route pairs](catalogue-route-index.md)
+- [Changes after this baseline](post-handbook-update.md)
 
 The five chapter source files are `overview.md`, `frontend-chapters.md`, `admin-chapters.md`, `backend-chapters.md` and `remaining-and-reference.md`. Update these before rebuilding. Dated evidence in this document is not automatically changed when production changes.
 
