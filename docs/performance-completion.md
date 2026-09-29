@@ -52,3 +52,7 @@ node --max-old-space-size=384 --v8-pool-size=1 C:/Users/noura/AppData/Local/npm-
 ```
 
 Use a fresh mobile run for `/ar`, `/en/products/cms-120` and `/ar/products/cms-120`; do not disable motion or block legitimate resources to produce acceptance scores. Visual acceptance remains Nour's.
+
+## Deployed font verification
+
+Release08e7cfb: fresh English homepage font transfer47,680bytes. Browser checks covered EN/AR home/products, 390px/1440px staff reports, no overflow/axe violations in checked rules, and a no-JavaScript Arabic product. Mobile lab samples: home91/product90 performance, LCP2.9s each, TBT210/230ms, CLS0, other categories100. These samples meet the90 score target; LCP<2.5s and field INP remain open. See ignored completion Lighthouse JSONs. No simulation/resource blocking tricks were used.

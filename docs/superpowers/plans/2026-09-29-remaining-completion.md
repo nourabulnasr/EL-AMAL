@@ -4,10 +4,10 @@ Continue the approved EL AMAL design and existing architecture. The client has a
 
 ## Implementation
 
-- [ ] Close inventory gaps: partial dispatch/release, blocked balances, optional explicit stock review policy, append-only audit and concurrent request safety.
-- [ ] Add private, bounded sales-demand aggregates and CSV exports. Only owner/sales may read them. Exclude personal/customer-entered free text from reports.
-- [ ] Reduce demonstrated public page costs without changing the approved intro/design or delaying publication changes.
-- [ ] Establish a standard encrypted PostgreSQL backup and an isolated restore rehearsal; document recovery boundaries and operator steps.
+- [x] Close inventory gaps: partial dispatch/release, blocked balances, optional explicit stock review policy, append-only audit and concurrent request safety.
+- [x] Add private, bounded sales-demand aggregates and CSV exports. Only owner/sales may read them. Exclude personal/customer-entered free text from reports.
+- [x] Reduce demonstrated public page costs without changing the approved intro/design or delaying publication changes.
+- [x] Establish a standard encrypted PostgreSQL backup and an isolated restore rehearsal; document recovery boundaries and operator steps.
 - [ ] Discover/provision real monitoring and a frequent worker scheduler if available within existing/free service authorization; keep genuine ownership/setup dependencies explicit.
 - [ ] Integrate additive schema changes, regression checks, type checking and cloud build. Review permissions and failure paths, deploy, and verify live pages and private guards.
 - [ ] Update progress, client inputs, operational runbooks and source control with measured outcomes and outstanding work.

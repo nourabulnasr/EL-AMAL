@@ -4,6 +4,7 @@ import {connection} from 'next/server';
 import {products,categories} from '@/content/catalogue';
 import {cmsEnabled} from './cms-runtime';
 import {catalogueSource,toPublicCatalogue,type Catalogue} from './public-catalogue';
+import {readCatalogueRecords} from './read-catalogue-records';
 
 // Request-scoped deduplication only: a new request sees publication/unpublication immediately.
 export const loadCatalogue=cache(async ():Promise<Catalogue>=>{
@@ -14,23 +15,11 @@ export const loadCatalogue=cache(async ():Promise<Catalogue>=>{
  const payload=await getPayload({config});
  // Trusted server read is needed for publication evidence and private category relationships.
  // Only the explicit public projection below crosses the server boundary. No staff/SKUs are queried.
- const productDocs=[];
- let page=1;
- while(true){
-  const result=await payload.find({collection:'products',overrideAccess:true,draft:false,
-   where:{_status:{equals:'published'}},depth:0,limit:200,page,sort:'id'});
-  productDocs.push(...result.docs);
-  if(!result.hasNextPage)break;
-  page++;
- }
- const categoryDocs=[];
- page=1;
- while(true){
-  const result=await payload.find({collection:'categories',overrideAccess:true,depth:0,limit:200,page,sort:'id'});
-  categoryDocs.push(...result.docs);
-  if(!result.hasNextPage)break;
-  page++;
- }
+ const [productDocs,categoryDocs]=await readCatalogueRecords(
+  page=>payload.find({collection:'products',overrideAccess:true,draft:false,
+   where:{_status:{equals:'published'}},depth:0,limit:200,page,sort:'id'}),
+  page=>payload.find({collection:'categories',overrideAccess:true,depth:0,limit:200,page,sort:'id'}),
+ );
  // Do not replace a failed or empty real catalogue with plausible-looking demo records.
  return toPublicCatalogue(productDocs,categoryDocs);
 });

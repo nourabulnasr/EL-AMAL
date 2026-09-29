@@ -37,11 +37,11 @@ See [delivery status](docs/phase-status.md) for the current scope estimate and e
 
 ## Verification and deployment
 
-- `npm test`:137 unit checks as of29 September2026.
+- `npm test`:142 unit checks as of29 September2026.
 - `npm run typecheck`: TypeScript.
 - `npm run readiness`: configuration booleans only; no secrets or network activity.
 - `npm run build`: production compilation.
-- `.github/workflows/quality.yml`: clean install, tests, types, high/critical advisory gate, disposable PostgreSQL migrations, a CMS-enabled production build and actual built-server route checks. CI uses synthetic credentials, never hosted database secrets. This workflow does not itself block Vercel's separate automatic deployment integration.
+- `.github/workflows/quality.yml`: clean install, tests, types, all-severity advisory gate, disposable PostgreSQL migrations, a CMS-enabled production build and actual built-server route checks. CI uses synthetic credentials, never hosted database secrets. This workflow does not itself block Vercel's separate automatic deployment integration.
 - `scripts/check-customer-intake.ts` and the existing database check scripts run only against development with `CMS_DATABASE_CHECK=development`; use fake mail transports/exact disposable records. Never point them at the hosted database.
 
 Live deployment is through the existing Vercel project; pushes to the connected branch can update the stable review URL. Migration and operational changes need their separate verification. Git backs up code, not database contents. Current results, deployment IDs and limitations live in [PROGRESS.md](PROGRESS.md).

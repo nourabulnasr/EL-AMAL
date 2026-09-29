@@ -45,8 +45,8 @@ jobs:
         run: npm test
       - name: TypeScript
         run: npm run typecheck
-      - name: High and critical dependency advisories
-        run: npm audit --audit-level=high
+      - name: Dependency advisory gate
+        run: npm audit --audit-level=low
       - name: Migrate disposable PostgreSQL
         env:
           DATABASE_URL: postgresql://ci:ci@127.0.0.1:5432/elamal_ci
