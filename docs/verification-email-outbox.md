@@ -1,5 +1,7 @@
 # Customer verification email delivery
 
+29 September update: [delivery operations](delivery-operations.md) documents the new batch scheduler, health collection, capacity admission and separately gated expired-secret retention. Existing sending and confirmation safeguards remain. Actual provider/scheduler activation is a separate deployment step; historical notes below describe the earlier increment.
+
 The server now supports a durable customer confirmation email outbox. Real sending remains disabled, anonymous intake is not enabled, and no scheduler is installed. Tests use a fake transport only. The public website remains a client review preview.
 
 ## Implemented

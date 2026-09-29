@@ -1,4 +1,4 @@
-import {indexingEnabled} from './src/lib/site-policy.mjs';
+import {indexingHeaders} from './src/lib/site-policy.mjs';
 import {withPayload} from '@payloadcms/next/withPayload';
 const nextConfig = {
   experimental: { globalNotFound: true, cpus: 1 },
@@ -9,8 +9,7 @@ const nextConfig = {
     {key:'Strict-Transport-Security',value:'max-age=31536000'},
     {key:'Referrer-Policy',value:'strict-origin-when-cross-origin'},
     {key:'X-Frame-Options',value:'DENY'},
-    ...(!indexingEnabled()?[{key:'X-Robots-Tag',value:'noindex, nofollow'}]:[]),
     {key:'Permissions-Policy',value:'camera=(), microphone=(), geolocation=()'},
-  ] },{source:'/admin/:path*',headers:[{key:'X-Robots-Tag',value:'noindex, nofollow'}]},{source:'/api/:path*',headers:[{key:'X-Robots-Tag',value:'noindex, nofollow'}]}]; },
+  ] },...['/admin/:path*','/staff/:path*','/api/:path*'].map(source=>({source,headers:[{key:'Cache-Control',value:'private, no-store'},{key:'Referrer-Policy',value:'no-referrer'}]})),...indexingHeaders()]; },
 };
 export default withPayload(nextConfig);

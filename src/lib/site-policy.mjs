@@ -1,6 +1,27 @@
 /** @param {Record<string,string|undefined>} env */
 export function indexingEnabled(env=process.env){
- return env.SITE_INDEXING_ENABLED==='true'&&env.CATALOGUE_SOURCE==='cms'&&env.VERCEL_ENV==='production';
+ return env.SITE_INDEXING_ENABLED==='true'&&env.CATALOGUE_SOURCE==='cms'&&env.CMS_ENABLED==='true'&&env.VERCEL_ENV==='production';
+}
+/** Forms and faceted search are crawlable so crawlers can see their noindex rule.
+ * @param {string} path locale-relative path, optionally with a query string
+ */
+export function publicPathIndexable(path){
+ const url=new URL(path||'/', 'https://site.invalid');
+ if(/^\/(quote|rfq|verify)(\/|$)/.test(url.pathname))return false;
+ return !['q','category','type','application'].some(key=>url.searchParams.has(key));
+}
+/** @param {Record<string,string|undefined>} env */
+export function robotsPolicy(env=process.env){
+ return {rules:{userAgent:'*',allow:'/',disallow:['/admin','/staff','/api/']},...(indexingEnabled(env)?{sitemap:`${siteOrigin(env)}/sitemap.xml`}:{})};
+}
+/** @param {Record<string,string|undefined>} env */
+export function indexingHeaders(env=process.env){
+ const excluded={key:'X-Robots-Tag',value:'noindex, nofollow'};
+ return [
+  ...['/admin/:path*','/staff/:path*','/api/:path*','/:locale(en|ar)/:private(quote|rfq|verify)/:path*'].map(source=>({source,headers:[excluded]})),
+  ...['q','category','type','application'].map(key=>({source:'/:locale(en|ar)/products',has:[{type:'query',key}],headers:[{key:'X-Robots-Tag',value:'noindex, follow'}]})),
+  ...(!indexingEnabled(env)?[{source:'/:path*',headers:[excluded]}]:[]),
+ ];
 }
 /** @param {Record<string,string|undefined>} env */
 export function siteOrigin(env=process.env){

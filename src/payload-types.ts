@@ -76,6 +76,10 @@ export interface Config {
     'enquiry-verifications': EnquiryVerification;
     'request-limits': RequestLimit;
     'verification-emails': VerificationEmail;
+    'delivery-operations': DeliveryOperation;
+    'inventory-reservations': InventoryReservation;
+    'inventory-movements': InventoryMovement;
+    'enquiry-attachments': EnquiryAttachment;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -92,6 +96,10 @@ export interface Config {
     'enquiry-verifications': EnquiryVerificationsSelect<false> | EnquiryVerificationsSelect<true>;
     'request-limits': RequestLimitsSelect<false> | RequestLimitsSelect<true>;
     'verification-emails': VerificationEmailsSelect<false> | VerificationEmailsSelect<true>;
+    'delivery-operations': DeliveryOperationsSelect<false> | DeliveryOperationsSelect<true>;
+    'inventory-reservations': InventoryReservationsSelect<false> | InventoryReservationsSelect<true>;
+    'inventory-movements': InventoryMovementsSelect<false> | InventoryMovementsSelect<true>;
+    'enquiry-attachments': EnquiryAttachmentsSelect<false> | EnquiryAttachmentsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -356,6 +364,102 @@ export interface VerificationEmail {
   createdAt: string;
 }
 /**
+ * Scheduler health and queue counts only. Provider acceptance does not prove inbox receipt. A missing success for 15 minutes requires investigation.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "delivery-operations".
+ */
+export interface DeliveryOperation {
+  id: number;
+  key: string;
+  leaseToken?: string | null;
+  leaseExpiresAt?: string | null;
+  lastStartedAt?: string | null;
+  lastCompletedAt?: string | null;
+  lastSuccessAt?: string | null;
+  lastOutcome?: string | null;
+  processed?: number | null;
+  failures?: number | null;
+  verificationPending?: number | null;
+  notificationPending?: number | null;
+  oldestPendingAt?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Immutable hold records. Open /staff/inventory to create, release or dispatch holds. Lifecycle events are recorded in the stock ledger.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "inventory-reservations".
+ */
+export interface InventoryReservation {
+  id: number;
+  reference: string;
+  sku: number | Skus;
+  enquiry: number | Enquiry;
+  enquiryLineId: string;
+  quantity: number;
+  expiresAt: string;
+  actor: number | Staff;
+  reason: string;
+  skuSnapshot:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Append-only stock ledger. Corrections require a new reasoned adjustment in /staff/inventory. No opening balances are inferred from catalogue availability.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "inventory-movements".
+ */
+export interface InventoryMovement {
+  id: number;
+  requestKey: string;
+  fingerprint: string;
+  kind: 'receipt' | 'adjustment' | 'hold' | 'release' | 'expire' | 'dispatch' | 'reconcile';
+  sku: number | Skus;
+  reservation?: (number | null) | InventoryReservation;
+  closeKey?: string | null;
+  onHandDelta: number;
+  reservedDelta: number;
+  actor?: (number | null) | Staff;
+  /**
+   * System expiry events have no staff actor.
+   */
+  actorRole: string;
+  reason: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Private reconstructed JPEG/PNG photos supplied after email confirmation. Files expire after 30 days. Only owner and sales can download.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "enquiry-attachments".
+ */
+export interface EnquiryAttachment {
+  id: number;
+  uploadId: string;
+  enquiry: number | Enquiry;
+  reference: string;
+  filename: string;
+  contentType: string;
+  byteCount: number;
+  contentHash: string;
+  sealedData: string;
+  expiresAt: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
@@ -414,6 +518,22 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'verification-emails';
         value: number | VerificationEmail;
+      } | null)
+    | ({
+        relationTo: 'delivery-operations';
+        value: number | DeliveryOperation;
+      } | null)
+    | ({
+        relationTo: 'inventory-reservations';
+        value: number | InventoryReservation;
+      } | null)
+    | ({
+        relationTo: 'inventory-movements';
+        value: number | InventoryMovement;
+      } | null)
+    | ({
+        relationTo: 'enquiry-attachments';
+        value: number | EnquiryAttachment;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -645,6 +765,79 @@ export interface VerificationEmailsSelect<T extends boolean = true> {
   issueCount?: T;
   issuanceWindowEndsAt?: T;
   lastIssuedAt?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "delivery-operations_select".
+ */
+export interface DeliveryOperationsSelect<T extends boolean = true> {
+  key?: T;
+  leaseToken?: T;
+  leaseExpiresAt?: T;
+  lastStartedAt?: T;
+  lastCompletedAt?: T;
+  lastSuccessAt?: T;
+  lastOutcome?: T;
+  processed?: T;
+  failures?: T;
+  verificationPending?: T;
+  notificationPending?: T;
+  oldestPendingAt?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "inventory-reservations_select".
+ */
+export interface InventoryReservationsSelect<T extends boolean = true> {
+  reference?: T;
+  sku?: T;
+  enquiry?: T;
+  enquiryLineId?: T;
+  quantity?: T;
+  expiresAt?: T;
+  actor?: T;
+  reason?: T;
+  skuSnapshot?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "inventory-movements_select".
+ */
+export interface InventoryMovementsSelect<T extends boolean = true> {
+  requestKey?: T;
+  fingerprint?: T;
+  kind?: T;
+  sku?: T;
+  reservation?: T;
+  closeKey?: T;
+  onHandDelta?: T;
+  reservedDelta?: T;
+  actor?: T;
+  actorRole?: T;
+  reason?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "enquiry-attachments_select".
+ */
+export interface EnquiryAttachmentsSelect<T extends boolean = true> {
+  uploadId?: T;
+  enquiry?: T;
+  reference?: T;
+  filename?: T;
+  contentType?: T;
+  byteCount?: T;
+  contentHash?: T;
+  sealedData?: T;
+  expiresAt?: T;
   updatedAt?: T;
   createdAt?: T;
 }

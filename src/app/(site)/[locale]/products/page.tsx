@@ -14,7 +14,7 @@ export async function generateMetadata({params,searchParams}:{params:Promise<{lo
  const path=`/products${filters.size?`?${filters}`:''}`;
  const title=(locale==='ar'?'كتالوج الأدوات':'Instrument catalogue')+(page>1?` · ${locale==='ar'?'الصفحة':'Page'} ${page}`:'');
  const metadata=pageMetadata(locale,path,title,locale==='ar'?'ابحث بالطراز ونوع الأداة والتطبيق.':'Search instruments by model, type and application.');
- if(query||category||type||application)metadata.robots={index:false,follow:indexingEnabled()};
+ if(['q','category','type','application'].some(key=>Object.hasOwn(s,key)))metadata.robots={index:false,follow:indexingEnabled()};
  return metadata;
 }
 export default async function Page({params,searchParams}:{params:Promise<{locale:string}>;searchParams:Promise<{q?:string;category?:string;type?:string;application?:string;page?:string}>}){

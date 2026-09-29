@@ -3,6 +3,9 @@ import {safeDatasheetUrl} from '../lib/public-catalogue.ts';
 import {parseCatalogueDetails,validateCatalogueDetails} from '../lib/catalogue-details.ts';
 import {instrumentTypes,applications} from '../content/product-options.ts';
 import {hasRole,canPublish} from '../lib/access.ts';
+import {validateStaffOperation} from '../lib/staff-security.ts';
+import {lockStaffReset} from '../lib/staff-reset-lock.ts';
+import {protectSkuIdentity} from '../lib/sku-identity.ts';
 const owner:Access=({req})=>hasRole(req.user,['owner']);
 const catalogue:Access=({req})=>hasRole(req.user,['owner','catalogue-editor']);
 const staff:Access=({req})=>hasRole(req.user,['owner','catalogue-editor','sales','warehouse']);
@@ -13,7 +16,12 @@ const bilingual=(name:string,type:'text'|'textarea'='text'):Field=>({
  }),
 });
 export const Staff:CollectionConfig={
- slug:'staff',auth:{maxLoginAttempts:5,lockTime:600000},admin:{useAsTitle:'email'},
+ slug:'staff',auth:{maxLoginAttempts:5,lockTime:600000,tokenExpiration:7200,cookies:{sameSite:'Lax',secure:process.env.NODE_ENV==='production'},forgotPassword:{expiration:1800000,minRequestInterval:600000}},admin:{useAsTitle:'email'},
+ hooks:{beforeOperation:[async({operation,args,req})=>{
+   validateStaffOperation(operation,args);
+   if(operation==='resetPassword')await lockStaffReset(req,(args as {data?:{token?:unknown}}).data?.token);
+   return args;
+ }]},
  endpoints:[{path:'/first-register',method:'post',handler:async()=>Response.json({error:'Owner setup requires a trusted local operation.'},{status:403})}],
  access:{create:owner,read:({req})=>hasRole(req.user,['owner'])?true:req.user?{id:{equals:req.user.id}}:false,update:owner,delete:()=>false,admin:({req})=>hasRole(req.user,['owner','catalogue-editor','sales','warehouse'])},
  fields:[{name:'role',type:'select',required:true,defaultValue:'catalogue-editor',options:['owner','catalogue-editor','sales','warehouse'],access:{create:({req})=>hasRole(req.user,['owner']),update:({req})=>hasRole(req.user,['owner'])}}],
@@ -42,7 +50,8 @@ export const Products:CollectionConfig={
 };
 export const SKUs:CollectionConfig={
  slug:'skus',admin:{useAsTitle:'skuCode'},access:{create:owner,read:staff,update:owner,delete:()=>false},
+ hooks:{beforeChange:[protectSkuIdentity]},
  fields:[{name:'skuCode',type:'text',required:true,unique:true},{name:'product',type:'relationship',relationTo:'products',required:true},{name:'manufacturerPartNumber',type:'text'},{name:'configuration',type:'json',required:true},{name:'active',type:'checkbox',defaultValue:true}],
 };
-// Quantity fields are intentionally absent. A transactional inventory service owns future stock writes.
+// Quantities belong to the append-only transactional inventory service.
 

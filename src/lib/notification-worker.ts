@@ -1,5 +1,6 @@
 import {randomUUID} from 'node:crypto';
 import type {Payload} from 'payload';
+import {maintainNotifications} from './delivery-store.ts';
 export type NotificationTransport={send:(message:{from?:string;to:string;subject:string;text:string;idempotencyKey:string})=>Promise<{id:string}>};
 export function retryDelay(attempt:number){return Math.min(3600,60*2**Math.max(0,attempt-1));}
 // No transport is configured by default. A protected caller supplies the transport.
@@ -7,10 +8,9 @@ export function retryDelay(attempt:number){return Math.min(3600,60*2**Math.max(0
 export async function deliverNextNotification(payload:Payload,transport?:NotificationTransport){
  if(!transport)return {outcome:'disabled' as const};
  const pool=payload.db.pool;
- await pool.query("UPDATE notifications SET status='failed', lease_token=NULL, lease_expires_at=NULL, last_error='Retry limit reached', updated_at=now() WHERE source='cms' AND status='processing' AND lease_expires_at<=now() AND attempts>=5");
  // Provider deduplication expires after 24 hours. Never retry across that boundary.
  // Use queue creation as a conservative lower bound on the first possible send.
- await pool.query("UPDATE notifications SET status='failed', lease_token=NULL, lease_expires_at=NULL, last_error='Retry window expired; reconcile with provider before resending', updated_at=now() WHERE source='cms' AND created_at<=now()-interval '23 hours' AND (status='pending' OR (status='processing' AND lease_expires_at<=now()))");
+ await maintainNotifications(payload);
  // The same atomic claim enforces customer confirmation for first sends and retries.
  // Demo/test confirmations never qualify. Verification is immutable once recorded.
  const lease=randomUUID();

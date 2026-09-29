@@ -4,6 +4,8 @@ import type {Catalogue} from './public-catalogue.ts';
 import {parseEnquiry,enquiryFingerprint,snapshotItems,EnquiryConflictError} from './enquiries.ts';
 import {enqueueInitialVerification} from './verification-outbox.ts';
 import type {VerificationSettings} from './verification-message.ts';
+import {sql,type PostgresAdapter} from '@payloadcms/db-postgres';
+import {assertQueueCapacity} from './queue-capacity.ts';
 
 // Trusted server service only. Never accept product descriptions or status from a caller.
 export async function submitEnquiry(payload:Payload,raw:unknown,catalogue:Catalogue,verification?:VerificationSettings,beforeCreate?:()=>Promise<void>) {
@@ -25,6 +27,14 @@ export async function submitEnquiry(payload:Payload,raw:unknown,catalogue:Catalo
   if(transactionID===null)throw new Error('Enquiry persistence requires transactions');
   const req={transactionID};
   try {
+    if(catalogue.source==='cms'){
+      // The lock and count live in Payload's exact transaction, never a pool query.
+      // This project uses the PostgreSQL adapter. Payload's base session type is
+      // unknown; narrow only this adapter-specific execution boundary.
+      const session=payload.db.sessions?.[String(transactionID)]?.db as Pick<PostgresAdapter['drizzle'],'execute'>|undefined;
+      if(!session||typeof session.execute!=='function')throw new Error('Queue admission requires an active PostgreSQL transaction');
+      await assertQueueCapacity(async statement=>session.execute(sql.raw(statement)));
+    }
     const record=await payload.create({collection:'enquiries',overrideAccess:true,depth:0,req,data:{
       reference:`EA-${randomUUID()}`,requestKey:input.requestKey,fingerprint,locale:input.locale,source:catalogue.source,
       ...input.contact,items,status:'new',verificationStatus:'unverified',deliveryStatus:'not-configured',

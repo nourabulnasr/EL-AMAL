@@ -1,5 +1,14 @@
 # EL AMAL progress
 
+## Release candidate — 29 September operations and technical SEO
+
+Implemented private stock ledger/holds/dispatch/reconciliation and staff UI; encrypted verified-enquiry JPEG/PNG photos; authenticated bounded maintenance, queue health/capacity and stale-mail-health admission; stronger staff password/recovery safeguards, including a reproduced concurrent-token reset fix; complete bilingual technical SEO and full-route audit tooling. See docs/operations-release-2026-09-29.md and dedicated runbooks.
+
+121 unit tests and TypeScript succeeded. Real isolated development regressions succeeded for inventory, delivery operations, customer intake and staff/photo security; fixture schemas removed and no external mail sent. Reviewed additive migration applied development and hosted. Undici patched; remaining audit is five moderate development-chain entries, zero high/critical. Local build hit host native-memory exhaustion after compilation; cloud build remains the release gate.
+
+Vercel authorization renewed. Actual project plan is Hobby; production indexing configured for next deployment. Daily native maintenance configured in source; sender/frequent-mail-scheduler still missing. Production flags, deployment/live crawl/browser verification and final source push are in progress at this checkpoint. Do not treat this candidate paragraph as proof that the new code is live. Existing 151-product catalogue remains live.
+
+
 ## Latest checkpoint — 28 September complete real catalogue publication
 
 Nour instructed publishing every actual catalogue entry with specifications and real photos. All29 main pages now map to151 model-group entries (90 in stock,61 out of stock),151 original manufacturer images and560 bilingual technical rows.159 official PDF downloads verified;150 entries have datasheets,M12 cable uses catalogue page29. Source/model exceptions corrected. Details: docs/catalogue-publication-2026-09-28.md and catalogue/2026-09-27/README.md.

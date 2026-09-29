@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
 import { randomUUID } from "node:crypto";
-import { getPayload } from "payload";
-import config from "../src/payload.config.ts";
+import {isolatedPayload} from './lib/isolated-payload.ts';
+import {claimDeliveryLease,completeDeliveryLease} from '../src/lib/delivery-store.ts';
+import {runDeliveryBatch} from '../src/lib/delivery-operations.ts';
 import { reserveEmailAttempt } from "../src/lib/customer-quota.ts";
 import {
   emailLimitKey,
@@ -19,8 +20,10 @@ import { openMessage } from "../src/lib/verification-message.ts";
 import { confirmVerification } from "../src/lib/enquiry-verification.ts";
 if (process.env.CMS_DATABASE_CHECK !== "development")
   throw new Error("Development database only");
-const payload = await getPayload({ config }),
-  pool = payload.db.pool;
+console.log('Preparing an empty isolated customer-intake schema.');
+const isolated=await isolatedPayload('customer_intake_test');
+const payload=isolated.payload,pool=payload.db.pool;
+console.log('Isolated customer-intake schema ready.');
 const settings = {
   secret: process.env.PAYLOAD_SECRET!,
   origin: "https://example.invalid",
@@ -56,7 +59,27 @@ const row = async (reference: string) =>
     ])
   ).rows[0];
 const token = (message: { text: string }) => message.text.split("#token=")[1];
+async function healthyHeartbeat(){
+  const lease=await claimDeliveryLease(payload);
+  assert.ok(lease,'Fixture worker must acquire its isolated lease');
+  const result=await runDeliveryBatch({verification:async()=>({outcome:'empty'}),notification:async()=>({outcome:'empty'})});
+  assert.equal(await completeDeliveryLease(payload,'delivery',lease,result),true);
+}
+async function deniedByHealth(){
+  const requestKey=randomUUID(),healthEmail=`health-${randomUUID()}@example.invalid`;
+  await assert.rejects(submitCustomerEnquiry(payload,{...input,requestKey,contact:{...input.contact,email:healthEmail}},catalogue,settings),/Delivery is temporarily unavailable/);
+  assert.equal((await pool.query('SELECT id FROM enquiries WHERE request_key=$1',[requestKey])).rowCount,0,'Unhealthy delivery must not persist a new enquiry');
+  assert.equal((await pool.query('SELECT id FROM request_limits WHERE key=$1',[emailLimitKey(healthEmail,settings.secret)])).rowCount,0,'Unhealthy delivery must not consume the customer email allowance');
+}
 try {
+  await deniedByHealth();
+  await healthyHeartbeat();
+  await pool.query("UPDATE delivery_operations SET last_success_at=now()-interval '16 minutes' WHERE key='delivery'");
+  await deniedByHealth();
+  await healthyHeartbeat();
+  await pool.query("UPDATE delivery_operations SET last_outcome='degraded' WHERE key='delivery'");
+  await deniedByHealth();
+  await healthyHeartbeat();
   const quotaEmail = `quota-${run}@example.invalid`,
     emailKey = keyFor(quotaEmail),
     attempts = Array.from({ length: 12 }, (_, i) =>
@@ -150,6 +173,9 @@ try {
     "Case-normalized email and request key deduplicate",
   );
   const reference = submissions[0].reference;
+  await pool.query("DELETE FROM delivery_operations WHERE key='delivery'");
+  assert.deepEqual(await submitCustomerEnquiry(payload,{...input,requestKey:keys[1]},catalogue,settings),{reference,repeated:true},'Accepted retry remains available without current delivery health');
+  await healthyHeartbeat();
   assert.equal(
     (
       await pool.query("SELECT id FROM enquiries WHERE request_key=$1", [
@@ -317,9 +343,10 @@ try {
     "Retry resolves saved snapshot after product removal",
   );
   console.log(
-    "Customer intake checks succeeded: concurrent daily quota, idempotent allowance, expiry reset, demo exclusion, normalized duplicate submission, conflict rejection, single queued confirmation, resend contention, token rotation, confirmed exclusion and quota denial before persistence. No email transport invoked.",
+    "Customer intake checks succeeded: isolated missing/stale/degraded health refusal before allowance or persistence, fresh worker heartbeat, accepted retry without health, concurrent daily quota, idempotent allowance, expiry reset, demo exclusion, normalized duplicate submission, conflict rejection, single queued confirmation, resend contention, token rotation, confirmed exclusion and quota denial before persistence. No email transport invoked.",
   );
 } finally {
+  try {
   const records = await payload.find({
     collection: "enquiries",
     overrideAccess: true,
@@ -348,7 +375,7 @@ try {
     [...quotaKeys],
   ]);
   assert.equal(Object.keys(payload.db.sessions ?? {}).length, 0);
-  await payload.destroy();
+  } finally {await isolated.close();}
 }
-console.log("Disposable customer intake records removed.");
+console.log("Disposable customer intake records and owned isolated schema removed.");
 process.exit(0);

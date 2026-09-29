@@ -2,6 +2,7 @@ import {cmsEnabled} from './cms-runtime';
 import {verificationHandlers} from './verification-http';
 import {requestLimitKey,allowRequest} from './request-limits';
 import {issueVerification,confirmVerification} from './enquiry-verification';
+import {createAttachmentGrant} from './enquiry-attachments';
 async function cms(){const [{getPayload},{default:config}]=await Promise.all([import('payload'),import('@/payload.config')]);return getPayload({config});}
 export const handlers=verificationHandlers({enabled:()=>cmsEnabled(),
  authenticate:async headers=>(await(await cms()).auth({headers})).user,
@@ -9,4 +10,5 @@ export const handlers=verificationHandlers({enabled:()=>cmsEnabled(),
  // This HTTP issuer is strictly for demo requests. Customer issuance is server-only.
  issue:async reference=>issueVerification(await cms(),reference,'demo'),
  confirm:async token=>confirmVerification(await cms(),token),
+ attachmentGrant:reference=>process.env.ENQUIRY_PHOTOS_ENABLED==='true'?createAttachmentGrant(reference,process.env.PAYLOAD_SECRET!):undefined,
 });

@@ -1,9 +1,11 @@
  'use client';
 import {useEffect,useRef,useState} from 'react';
 import type {Locale} from '@/lib/catalogue';
+import {EnquiryPhotoUpload} from './enquiry-photo-upload';
 export function VerifyEnquiry({locale}:{locale:Locale}){
  const ar=locale==='ar',read=useRef(false),lock=useRef(false);
  const [token,setToken]=useState(''),[state,setState]=useState<'loading'|'ready'|'busy'|'invalid'|'error'|'limited'|'test'|'customer'>('loading');
+ const [attachmentGrant,setAttachmentGrant]=useState('');
  useEffect(()=>{if(read.current)return;read.current=true;
   const value=new URLSearchParams(window.location.hash.slice(1)).get('token')??'';
   if(/^[a-f0-9]{64}$/.test(value)){setToken(value);setState('ready');}else setState('invalid');
@@ -18,6 +20,7 @@ export function VerifyEnquiry({locale}:{locale:Locale}){
    if(response.status===400){setState('invalid');setToken('');return;}
    if(!response.ok)throw new Error('Unavailable');const result=await response.json();
    if(result.mode!=='test'&&result.mode!=='customer')throw new Error('Invalid response');setState(result.mode);setToken('');
+   if(result.mode==='customer'&&typeof result.attachmentGrant==='string')setAttachmentGrant(result.attachmentGrant);
   }catch{setState('error');}finally{lock.current=false;}
- }}>{ar?'تأكيد الاستفسار':'Confirm enquiry'}</button>}</section>;
+ }}>{ar?'تأكيد الاستفسار':'Confirm enquiry'}</button>}{success&&attachmentGrant&&<EnquiryPhotoUpload grant={attachmentGrant} locale={locale}/>}</section>;
 }

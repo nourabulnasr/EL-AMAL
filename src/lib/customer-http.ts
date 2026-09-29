@@ -5,6 +5,7 @@ import {
   EnquiryConflictError,
 } from "./enquiries.ts";
 import { createReceipt, readReceipt } from "./customer-receipt.ts";
+import {QueueCapacityError} from './queue-capacity.ts';
 export class CustomerLimitError extends Error {}
 type Deps = {
   settings: () => { origin: string; secret: string } | undefined;
@@ -18,7 +19,7 @@ const json = (body: unknown, status = 200) =>
     headers: {
       "Cache-Control": "no-store",
       "Referrer-Policy": "no-referrer",
-      ...(status === 429 ? { "Retry-After": "60" } : {}),
+      ...(status === 429 || status === 503 ? { "Retry-After": "60" } : {}),
     },
   });
 export function customerHandlers(deps: Deps) {
@@ -86,7 +87,7 @@ export function customerHandlers(deps: Deps) {
         // Do not disclose missing/confirmed/expired enquiries or email quota outcomes.
         return json({ accepted: true }, 202);
       } catch (error) {
-        if (error instanceof CustomerLimitError)
+        if (error instanceof CustomerLimitError || error instanceof QueueCapacityError)
           return json({ accepted: true }, 202);
         return json(
           { error: "Unable to process request" },

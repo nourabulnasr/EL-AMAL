@@ -10,7 +10,7 @@ Nour asked to defer requests for client-supplied information while implementatio
 - Final public domain if it will replace the current Vercel URL.
 - Client review and launch approval after real content, contact links and email receipt have been verified.
 
-Development still owed (not client input): activation/end-to-end delivery tests (guarded public submission/resend, visitor/email limits, single-use confirmation and the encrypted delivery queue are implemented), safe attachment handling, stock/reservation workflow, delivery scheduling and monitoring, final accessibility/performance checks and launch acceptance. These must not be presented as finished or as blocked solely by client information.
+Development status on 29 September: stock/reservations, JPEG/PNG photo handling, password-recovery safeguards, queue capacity/health and daily maintenance are implemented with isolated database regressions. Release evidence is in PROGRESS.md. Still owed: real sender/delivery activation tests, a frequent email scheduler, general PDF/Excel scanning/storage, external alerts, complete backup/restore rehearsal and broader accessibility/device/launch acceptance. These must not be described as already finished or solely catalogue blockers. Hobby's daily maintenance schedule does not provide timely customer email delivery.
 
 - Replace the previously chosen short admin password with a strong unique password; enroll MFA where the chosen authentication setup supports it.
 - Actual opening stock and approved reservation/expiry policy before stock commitments.

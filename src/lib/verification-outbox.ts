@@ -2,6 +2,7 @@ import {randomBytes,randomUUID} from 'node:crypto';
 import type {Payload,PayloadRequest} from 'payload';
 import {tokenDigest} from './enquiry-verification.ts';
 import {sealMessage,verificationMessage,validateVerificationSettings,type VerificationSettings} from './verification-message.ts';
+import {assertQueueCapacity} from './queue-capacity.ts';
 
 function envelope(settings:VerificationSettings,email:string,locale:'en'|'ar'){
  const token=randomBytes(32).toString('hex'),deliveryKey=`verification-${randomUUID()}`;
@@ -41,6 +42,9 @@ export async function resendVerification(payload:Payload,reference:string,settin
   if(!row){await client.query('ROLLBACK');return {outcome:'unavailable' as const};}
   if(row.in_flight||row.cooling){await client.query('ROLLBACK');return {outcome:'cooldown' as const};}
   if(row.window_active&&row.issue_count>=3){await client.query('ROLLBACK');return {outcome:'limited' as const};}
+  // A terminal generation rejoining the active queue needs a fresh capacity slot.
+  // Existing pending work already owns a slot and can rotate without growing it.
+  if(row.status!=='pending'&&row.status!=='processing')await assertQueueCapacity(statement=>client.query(statement));
   const data=envelope(settings,record.email,record.locale);
   await client.query(`UPDATE enquiry_verifications SET token_hash=$1,expires_at=now()+interval '1 hour',updated_at=now() WHERE id=$2`,[data.tokenHash,record.id]);
   await client.query(`UPDATE verification_emails SET delivery_key=$1,sealed_message=$2,status='pending',attempts=0,

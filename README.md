@@ -23,10 +23,13 @@ Open http://127.0.0.1:3004/en. Production preview: `npm run build`, then `npm st
 - Payload staff roles and hosted owner login, private SKUs, separate development/hosted Neon databases and versioned migrations.
 - Responsive navy design, instrument illustration, hover/press/focus states, reduced-motion safeguards and the approved branded entrance. Desktop instrument interaction loads only when the device supports it.
 - Baseline security headers, access controls, validation, dependency review and automated GitHub quality workflow.
+- Private stock receipts, adjustments, exact-SKU reservations, expiry, release, dispatch and reconciliation with an immutable audit ledger and staff console.
+- Verified-customer private JPEG/PNG attachments, bounded encrypted storage, staff-only downloads and scheduled retention.
+- Password policy, sign-in limits, one-time concurrent-safe password recovery and durable delivery health/queue limits. Recovery delivery needs a verified sending domain.
 
 ## Current launch state
 
-The live site remains a labelled sample-content preview. Actual products are not populated, indexing is off, public enquiries are not active and stock is not reserved. Do not treat the visible interface or successful unit checks as full operational delivery.
+The real catalogue contains all 151 supplied model groups, with original manufacturer images, bilingual specifications and technical downloads. The 29 September release adds technical SEO and operations. Exact deployed state and verification are recorded in PROGRESS.md. Customer email remains gated until sender verification and a frequent delivery scheduler are provisioned; the daily Hobby-compatible maintenance cron does not establish email readiness. Staff enter actual SKU quantities; model-level catalogue availability never creates counted stock.
 
 `CATALOGUE_SOURCE=demo` preserves synthetic review records. Set `cms` only after approved content is ready; CMS_ENABLED, DATABASE_URL and PAYLOAD_SECRET are also required. CMS mode never falls back to fixtures. Only explicitly projected public fields leave the server; drafts, source evidence, review identities and internal SKUs stay private. Demo/CMS baskets use different browser-storage keys.
 
@@ -34,7 +37,7 @@ See [delivery status](docs/phase-status.md) for the current scope estimate and e
 
 ## Verification and deployment
 
-- `npm test`:58 unit checks as of27 September2026.
+- `npm test`:121 unit checks as of29 September2026.
 - `npm run typecheck`: TypeScript.
 - `npm run readiness`: configuration booleans only; no secrets or network activity.
 - `npm run build`: production compilation.
@@ -49,6 +52,10 @@ Live deployment is through the existing Vercel project; pushes to the connected 
 - [Verification email outbox](docs/verification-email-outbox.md)
 - [Staff notification worker](docs/notification-queue.md)
 - [SEO activation](docs/seo-readiness.md)
+- [SEO launch and complete crawl](docs/seo-launch-2026-09-29.md)
+- [Stock control](docs/inventory-operations.md)
+- [Private photo attachments](docs/private-enquiry-photos.md)
+- [Scheduled operations](docs/delivery-operations.md)
 - [Original brief and acceptance scope](docs/kickoff-2026-09-17.md)
 - [Continue this project](docs/continue-project.md)
 

@@ -8,6 +8,7 @@ import { resendVerification } from "./verification-outbox.ts";
 import { reserveEmailAttempt } from "./customer-quota.ts";
 import { emailLimitKey, attemptLimitKey } from "./customer-receipt.ts";
 import { CustomerLimitError } from "./customer-http.ts";
+import {assertFreshDeliveryHealth} from './delivery-operations.ts';
 async function allowance(
   payload: Payload,
   email: string,
@@ -34,14 +35,17 @@ export async function submitCustomerEnquiry(
     throw new Error("Customer intake requires reviewed catalogue mode");
   const input = parseEnquiry(raw);
   input.contact.email = input.contact.email.toLowerCase();
-  return submitEnquiry(payload, input, catalogue, settings, () =>
-    allowance(
+  return submitEnquiry(payload, input, catalogue, settings, async () => {
+    // submitEnquiry resolves committed request-key retries before this callback.
+    // Refuse a new request before consuming its email allowance during an outage.
+    await assertFreshDeliveryHealth(statement=>payload.db.pool.query(statement));
+    await allowance(
       payload,
       input.contact.email,
       `submit:${input.requestKey}`,
       settings.secret,
-    ),
-  );
+    );
+  });
 }
 export async function resendCustomerEnquiry(
   payload: Payload,

@@ -1,5 +1,7 @@
 # Notification queue
 
+29 September update: [delivery operations](delivery-operations.md) adds the bounded authenticated scheduler, durable owner-visible health, atomic queue admission and row-bounded maintenance. Production configuration and actual receipt must still be verified; earlier sections record the implementation sequence.
+
 This increment prepares staff enquiry notifications. It does not configure a sender, send email, expose a worker endpoint, or schedule delivery. Recipient defaults to the inbox confirmed by Nour and can be set with ENQUIRY_NOTIFICATION_TO; this is not a sender credential.
 
 New enquiries and one unique notification record are created in the same PostgreSQL transaction. Queue failure rolls back the enquiry. Existing request-key deduplication also deduplicates queue records. Existing enquiries are not automatically backfilled.

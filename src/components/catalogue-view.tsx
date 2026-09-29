@@ -5,14 +5,17 @@ import {searchProducts,paginateProducts} from '@/lib/catalogue';
 import {loadCatalogue} from '@/lib/load-catalogue';
 import {copy} from '@/content/copy';
 import {ProductCard} from './product-card';
+import {cataloguePath,collectionSchema} from '@/lib/seo-discovery';
+import {schemaJson} from '@/lib/product-schema';
 
-export async function CatalogueView({locale,query='',category='',instrumentType='',application='',page=''}:{locale:Locale;query?:string;category?:string;instrumentType?:string;application?:string;page?:string}){
+export async function CatalogueView({locale,query='',category='',instrumentType='',application='',page='',categoryRoute=false}:{locale:Locale;query?:string;category?:string;instrumentType?:string;application?:string;page?:string;categoryRoute?:boolean}){
  const {products,categories,source}=await loadCatalogue();
  const t=copy[locale],ar=locale==='ar',results=searchProducts(products,query,category,instrumentType,application);
  const pagination=paginateProducts(results,page);
  const selected=categories.find(c=>c.id===category);
- const link=(q:string,c:string,p=1)=>`/${locale}/products?${new URLSearchParams({...q?{q}:{},...c?{category:c}:{},...instrumentType?{type:instrumentType}:{},...application?{application}:{},...p>1?{page:String(p)}:{}})}`;
+ const link=(q:string,c:string,p=1)=>`/${locale}${cataloguePath({query:q,category:c,instrumentType,application,page:p})}`;
  return <>
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html:schemaJson(collectionSchema({locale,path:cataloguePath({query,category,instrumentType,application,page:pagination.page,categoryRoute}),title:selected?.name[locale]??t.catalogue,items:pagination.items,start:pagination.start}))}}/>
   <div className="catalogue-heading"><p className="breadcrumb"><Link href={`/${locale}`}>{t.home}</Link> / {t.catalogue}</p>
    <div className="catalogue-title-row"><h1>{selected?.name[locale]??(ar?'لكل قياس،\nأداته.':'For every measure,\nan instrument.')}</h1><p>{ar?'ابدأ بالطراز أو فئة القياس. اجمع متطلباتك، ثم أكد التفاصيل الفنية.':'Start with a model or a measurement category. Build your requirement, then confirm the technical details.'}</p></div>
    <nav className="category-tabs" aria-label={ar?'فئات المنتجات':'Product categories'}><Link href={link(query,'')} aria-current={!category?'page':undefined}>{t.all}<span>{products.length}</span></Link>{categories.map(c=><Link key={c.id} href={link(query,c.id)} aria-current={category===c.id?'page':undefined}>{c.name[locale]}<span>{products.filter(p=>p.category===c.id).length}</span></Link>)}</nav>

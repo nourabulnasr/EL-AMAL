@@ -1,5 +1,7 @@
 # Public customer enquiry intake
 
+29 September update: transactional active-queue capacity and the protected bounded scheduler are implemented. See [delivery operations](delivery-operations.md) for gates, retention, scheduler/account prerequisites and validation. Actual activation and inbox receipt remain separately verified deployment steps; the historical status below describes the original increment.
+
 Implemented 27 September 2026. Production remains disabled pending reviewed CMS catalogue mode, a verified email sender, and running/tested workers. This is implemented application code, not a claim that customer emails currently work.
 
 ## Customer journey
@@ -19,6 +21,7 @@ POST /api/customer-enquiries/resend accepts that receipt. Missing, invalid, expi
 - Atomic email-bucket upserts lock concurrent allowance checks. Cleanup skips locked expired rows and rechecks their expiry before deleting; scripts/check-request-limit-cleanup.ts covers renewal contention. Same request key does not consume another allowance. An allowance may be consumed before a failed database write or for an ineligible resend; this conservative limit counts attempts, not sent messages.
 - Same-minute resend retries share an allowance; the separate outbox enforces a one-minute cooldown and three confirmation generations per enquiry per24 hours.
 - Duplicate request retries resolve the saved snapshot, including after a product is removed from the catalogue. Changed contents with an existing request key conflict. Request keys and receipts are private random values.
+- New requests require a real `delivery_operations` heartbeat with a complete outcome and success within 15 minutes. Missing, stale, future or degraded evidence returns a generic retryable response before the email allowance and persistence. Already accepted request-key retries return their original result during an outage; neutral resend behavior is unchanged.
 - No-store/no-referrer JSON, generic errors, no contact details/tokens in responses or logs. Anonymous CMS access remains denied.
 
 These limits bound abuse; they do not prove spam prevention, DDoS immunity or protection against a distributed attacker. Site-wide queue capacity/operational alerting still needs launch validation.
@@ -27,10 +30,10 @@ These limits bound abuse; they do not prove spam prevention, DDoS immunity or pr
 
 All customerSettings checks must succeed: CMS_ENABLED, DATABASE_URL, PAYLOAD_SECRET(32+), CATALOGUE_SOURCE=cms, PUBLIC_ENQUIRIES_ENABLED=true, ENQUIRY_WORKERS_READY=true, VERIFICATION_DELIVERY_ENABLED=true and the complete mailReadiness configuration. SITE_URL must be the exact HTTPS canonical origin without a path/trailing slash. No fallback origin is used for mail links.
 
-ENQUIRY_WORKERS_READY is a manual operational assertion, not health detection. Configure and test both protected POST workers, retry/expiry behavior and actual delivery first; set this flag last. Do not enable intake using demo data or unverified sender details. npm run readiness reports booleans only, no secrets or network calls. Production flags remain off in this release.
+ENQUIRY_WORKERS_READY remains a manual launch assertion. It is now supplemented by the database heartbeat check on every new customer submission. Configure and test the protected scheduled batch, both email queues, retry/expiry behavior and actual delivery first; set this flag last. Do not enable intake using demo data or unverified sender details. npm run readiness reports booleans only, no secrets or network calls; actual intake also requires fresh durable worker health. Production activation still requires the separate deployment procedure.
 
 ## Verification
 
 Unit tests cover signed receipt tampering/expiry, purpose-separated keys, missing configuration, disabled intake, origin/content-type/body/validation limits, daily-quota responses and neutral resend behavior. scripts/check-customer-intake.ts exercises the development PostgreSQL database: concurrent quotas and identical retries, expiry reset, duplicate normalized requests, conflicts, single queue entry, resend contention/old-link invalidation, confirmed requests, daily limit denial, and saved-snapshot recovery after catalogue removal. Exact disposable rows are removed. No email transport is invoked.
 
-Run only against the development database with CMS_DATABASE_CHECK=development. Existing verification/outbox/notification regressions use fake transports. Real delivery and activated browser submission remain separate launch checks.
+Run only against the development database with CMS_DATABASE_CHECK=development. Customer-intake regressions must exercise a fresh scheduler heartbeat in an isolated fixture; do not overwrite a real operations health row to make a test succeed. Existing verification/outbox/notification regressions use fake transports. Real delivery and activated browser submission remain separate launch checks.
