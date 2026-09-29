@@ -2,9 +2,11 @@
 import {createContext,useContext,useEffect,useState,useCallback,type ReactNode} from 'react';
 import {addLine,readBasket,type BasketLine} from '@/lib/basket';
 import type {Catalogue} from '@/lib/public-catalogue';
-type BasketContextValue={catalogue:Catalogue;publicEnquiries:boolean;lines:BasketLine[];ready:boolean;storageError:boolean;add:(id:string,qty:number)=>void;update:(id:string,qty:number)=>void;remove:(id:string)=>void};
+import type {Product} from '@/lib/catalogue';
+export type BasketCatalogue={source:Catalogue['source'];products:Pick<Product,'id'|'model'|'name'>[]};
+type BasketContextValue={catalogue:BasketCatalogue;publicEnquiries:boolean;lines:BasketLine[];ready:boolean;storageError:boolean;add:(id:string,qty:number)=>void;update:(id:string,qty:number)=>void;remove:(id:string)=>void};
 const BasketContext=createContext<BasketContextValue|null>(null);
-export function BasketProvider({children,catalogue,publicEnquiries=false}:{children:ReactNode;catalogue:Catalogue;publicEnquiries?:boolean}) {
+export function BasketProvider({children,catalogue,publicEnquiries=false}:{children:ReactNode;catalogue:BasketCatalogue;publicEnquiries?:boolean}) {
  const {products,source}=catalogue;const key=source==='demo'?'el-amal-preview-basket-v1':'el-amal-cms-basket-v1';
  const [lines,setLines]=useState<BasketLine[]>([]),[ready,setReady]=useState(false),[storageError,setStorageError]=useState(false);
  useEffect(()=>{try{setLines(readBasket(localStorage.getItem(key)).filter(l=>products.some(p=>p.id===l.productId)));}catch{setStorageError(true);}setReady(true);
