@@ -29,3 +29,7 @@ Both `.enc` and `.enc.manifest.enc` files are needed. Copy them to approved offs
 Keep the affected database unchanged for diagnosis. Create a separate replacement database, restore the authenticated archive under an operator's supervision, apply any forward migrations, and validate CMS login/catalogue/private records. Point a protected candidate deployment at the replacement; verify before switching production. Never use the rehearsal command as an in-place production restore.
 
 An occasional local backup does not provide continuous recovery. Automatic offsite scheduling, retention, the Neon restore window and a recovery time/data-loss policy still require operational setup and acceptance. Do not call those active until their own execution and alerting are verified.
+
+## Verified rehearsal —29 September2026
+
+Encrypted archive `artifacts/backups/el-amal-2026-09-29-verified.enc` and its `.manifest.enc` were saved locally. A separate newly created development database restored all24 public tables and572 rows, with matching row fingerprints and constraint count. That temporary database was removed. This is a verified point-in-time local backup/rehearsal, not a claim that automatic offsite backup scheduling is active. Backup was taken before the additive inventory-completion migration. Forward migrations remain in Git.

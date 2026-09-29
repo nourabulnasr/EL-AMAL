@@ -9,8 +9,10 @@ Continue the approved EL AMAL design and existing architecture. The client has a
 - [x] Reduce demonstrated public page costs without changing the approved intro/design or delaying publication changes.
 - [x] Establish a standard encrypted PostgreSQL backup and an isolated restore rehearsal; document recovery boundaries and operator steps.
 - [ ] Discover/provision real monitoring and a frequent worker scheduler if available within existing/free service authorization; keep genuine ownership/setup dependencies explicit.
-- [ ] Integrate additive schema changes, regression checks, type checking and cloud build. Review permissions and failure paths, deploy, and verify live pages and private guards.
-- [ ] Update progress, client inputs, operational runbooks and source control with measured outcomes and outstanding work.
+- [x] Integrate additive schema changes, regression checks, type checking and cloud build. Review permissions and failure paths, deploy, and verify live pages and private guards.
+- [x] Update progress, client inputs, operational runbooks and source control with measured outcomes and outstanding work.
+
+Service outcome: Checkly monitoring was explicitly deferred by Nour. The verified free Inngest plan requires account terms acceptance; no resource was created and email remains inactive without owned sender verification. These integration tasks remain open, not mocked.
 
 ## Verification
 

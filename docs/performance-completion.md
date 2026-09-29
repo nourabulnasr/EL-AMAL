@@ -55,4 +55,6 @@ Use a fresh mobile run for `/ar`, `/en/products/cms-120` and `/ar/products/cms-1
 
 ## Deployed font verification
 
-Release08e7cfb: fresh English homepage font transfer47,680bytes. Browser checks covered EN/AR home/products, 390px/1440px staff reports, no overflow/axe violations in checked rules, and a no-JavaScript Arabic product. Mobile lab samples: home91/product90 performance, LCP2.9s each, TBT210/230ms, CLS0, other categories100. These samples meet the90 score target; LCP<2.5s and field INP remain open. See ignored completion Lighthouse JSONs. No simulation/resource blocking tricks were used.
+Release08e7cfb: fresh English homepage font transfer47,680bytes. Browser checks covered EN/AR home/products, 390px/1440px staff reports, no overflow/axe violations in checked rules, and a no-JavaScript Arabic product. Mobile lab samples: home91/product90 performance, LCP2.9s each, TBT210/230ms, CLS0, other categories100. These two samples reached90+, but repeatability, LCP<2.5s and field INP remained open. See ignored completion Lighthouse JSONs. No simulation/resource blocking tricks were used.
+
+Final release7f73267 homepage sample after concurrent fresh reads: performance89, LCP2.8s, TBT240ms, CLS0; other categories100. Observed homepage scores span89–91. The lower LCP does not justify claiming every overall performance sample improved; local CPU/network variation affects lab results. Consistent90+ and LCP<2.5s remain unfinished performance acceptance targets.
