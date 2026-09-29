@@ -12,4 +12,15 @@ const nextConfig = {
     {key:'Permissions-Policy',value:'camera=(), microphone=(), geolocation=()'},
   ] },...['/admin/:path*','/staff/:path*','/api/:path*'].map(source=>({source,headers:[{key:'Cache-Control',value:'private, no-store'},{key:'Referrer-Policy',value:'no-referrer'}]})),...indexingHeaders()]; },
 };
-export default withPayload(nextConfig);
+const payloadConfig=withPayload(nextConfig);
+export default {
+  ...payloadConfig,
+  async headers() {
+    const rules=await payloadConfig.headers();
+    // CMS theme negotiation is only useful in administration. Critical-CH on
+    // public pages makes supporting browsers repeat their first navigation.
+    return rules.map(rule=>rule.headers.some(header=>header.key.toLowerCase()==='critical-ch')
+      ? {...rule,source:'/admin/:path*'}
+      : rule);
+  },
+};
