@@ -49,7 +49,7 @@ Scoped regression tests cover launch environment gating, private/query exclusion
 
 `artifacts/2026-09-29/launch/seo-predeploy-sample.json` is an eight-page sample of the previous live deployment. All eight returned 200 with noindex and the live sitemap was empty. It found missing `x-default`/favicon links and missing sharing images on nested routes; `/favicon.ico` returned 404. The report intentionally fails because it audits the old deployment and uses an eight-page cap. It is not verification of the new deployment.
 
-Full integrated tests, TypeScript/build and the complete postdeployment crawl remain the primary release agent's gate. Preserve the final report alongside the deployment ID and source commit. No database or content records were modified by this SEO work.
+Release verification completed:122 integrated unit checks, TypeScript and cloud builds succeeded; the complete live crawl covered342 public pages and155 assets, including151 products in each language, with zero detected audit issues. The audit remains scoped as described above. Final application release b1c7632 and deployment dpl_869XeFsv2NEteNwxHPisnBDCKWBs include subsequent accessibility/performance corrections; see PROGRESS.md and operations-release-2026-09-29.md. No database or content records were modified by SEO work.
 
 ## Owner follow-through
 
