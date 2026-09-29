@@ -15,7 +15,7 @@ export function EnquiryPhotoUpload({grant,locale}:{grant:string;locale:Locale}){
       lock.current=true;setBusy(true);setNotice('');
       if(upload.current?.file!==file)upload.current={file,id:crypto.randomUUID()};
       try{
-        const response=await fetch('/api/enquiry-attachments',{method:'POST',headers:{Authorization:`Bearer ${grant}`,'Content-Type':file.type,'X-Upload-Id':upload.current.id,'X-Photo-Name':encodeURIComponent(file.name)},body:file,signal:AbortSignal.timeout(30000)});
+        const response=await fetch('/api/customer-photos',{method:'POST',headers:{Authorization:`Bearer ${grant}`,'Content-Type':file.type,'X-Upload-Id':upload.current.id,'X-Photo-Name':encodeURIComponent(file.name)},body:file,signal:AbortSignal.timeout(30000)});
         if(!response.ok)throw new Error('Unavailable');
         setCount(n=>n+1);setFile(null);upload.current=null;
         setNotice(ar?'تم حفظ الصورة بصورة خاصة مع طلبك.':'Photo saved privately with your enquiry.');

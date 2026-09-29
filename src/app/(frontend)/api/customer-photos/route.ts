@@ -1,3 +1,4 @@
+// A separate path preserves Payload's /api/enquiry-attachments collection routes.
 import {cmsEnabled} from '@/lib/cms-runtime';
 import {attachmentHandler} from '@/lib/attachment-http';
 import {saveEnquiryPhoto} from '@/lib/attachment-service';

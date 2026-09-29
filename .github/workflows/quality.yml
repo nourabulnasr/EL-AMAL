@@ -11,6 +11,20 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: ci
+          POSTGRES_PASSWORD: ci
+          POSTGRES_DB: elamal_ci
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U ci -d elamal_ci"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
     env:
       NEXT_TELEMETRY_DISABLED: '1'
       CMS_ENABLED: 'false'
@@ -33,5 +47,22 @@ jobs:
         run: npm run typecheck
       - name: High and critical dependency advisories
         run: npm audit --audit-level=high
-      - name: Production build without production credentials
+      - name: Migrate disposable PostgreSQL
+        env:
+          DATABASE_URL: postgresql://ci:ci@127.0.0.1:5432/elamal_ci
+          PAYLOAD_SECRET: isolated-ci-secret-with-no-production-authority-0123456789
+        run: node node_modules/payload/bin.js migrate
+      - name: Production build with isolated CMS
+        env:
+          CMS_ENABLED: 'true'
+          CATALOGUE_SOURCE: cms
+          DATABASE_URL: postgresql://ci:ci@127.0.0.1:5432/elamal_ci
+          PAYLOAD_SECRET: isolated-ci-secret-with-no-production-authority-0123456789
         run: npm run build
+      - name: Built CMS route regression
+        env:
+          CMS_ENABLED: 'true'
+          CATALOGUE_SOURCE: cms
+          DATABASE_URL: postgresql://ci:ci@127.0.0.1:5432/elamal_ci
+          PAYLOAD_SECRET: isolated-ci-secret-with-no-production-authority-0123456789
+        run: node scripts/check-built-server.mjs

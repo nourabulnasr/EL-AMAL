@@ -6,7 +6,7 @@ import {attachmentLimit,createAttachmentGrant} from '../src/lib/enquiry-attachme
 
 const origin='https://example.invalid',secret='synthetic-attachment-secret-'.repeat(3);
 const reference=`EA-${randomUUID()}`;
-const request=(extra={},body=Buffer.from('photo fixture'))=>new Request(`${origin}/api/enquiry-attachments`,{
+const request=(extra={},body=Buffer.from('photo fixture'))=>new Request(`${origin}/api/customer-photos`,{
   method:'POST',headers:{origin,authorization:`Bearer ${createAttachmentGrant(reference,secret)}`,'content-type':'image/png','x-upload-id':randomUUID(),'x-photo-name':encodeURIComponent('قياس — label.png'),...extra},body,
 });
 const dependencies=()=>({settings:()=>({origin,secret}),allow:async()=>true,save:async()=>({saved:true,repeated:false})});
@@ -20,7 +20,7 @@ test('photo upload checks capability, both origins, grant and MIME before consum
     const input=request(headers),response=await attachmentHandler(deps)(input);
     assert.equal(response.status,403);assert.equal(input.bodyUsed,false);
   }
-  const wrongHost=new Request('https://attacker.invalid/api/enquiry-attachments',request());
+  const wrongHost=new Request('https://attacker.invalid/api/customer-photos',request());
   assert.equal((await attachmentHandler(deps)(wrongHost)).status,403);
   for(const contentType of ['application/pdf','application/vnd.openxmlformats-officedocument.spreadsheetml.sheet','image/svg+xml','image/png; charset=utf-8']){
     assert.equal((await attachmentHandler(deps)(request({'content-type':contentType}))).status,415);
@@ -53,7 +53,7 @@ test('photo upload binds the reference to the signed grant and preserves the exa
 test('photo upload counts streamed bytes independently of a forged content length and cancels overflow',async()=>{
   let cancelled=false,stored=false,index=0;
   const body=new ReadableStream({pull(controller){controller.enqueue(Buffer.alloc(index++===0?attachmentLimit:1));},cancel(){cancelled=true;}});
-  const input=new Request(`${origin}/api/enquiry-attachments`,{method:'POST',headers:{origin,authorization:`Bearer ${createAttachmentGrant(reference,secret)}`,'content-type':'image/png','content-length':'1'},body,duplex:'half'});
+  const input=new Request(`${origin}/api/customer-photos`,{method:'POST',headers:{origin,authorization:`Bearer ${createAttachmentGrant(reference,secret)}`,'content-type':'image/png','content-length':'1'},body,duplex:'half'});
   const response=await attachmentHandler({...dependencies(),save:async()=>{stored=true;}})(input);
   assert.equal(response.status,413);assert.equal(cancelled,true);assert.equal(stored,false);
 });

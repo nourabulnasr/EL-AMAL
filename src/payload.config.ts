@@ -1,5 +1,5 @@
 import {buildConfig} from 'payload';
-import {fileURLToPath} from 'node:url';
+import {resolve} from 'node:path';
 import {postgresAdapter} from '@payloadcms/db-postgres';
 import {Staff,Categories,Products,SKUs} from './cms/collections.ts';
 import {Enquiries} from './cms/enquiries.ts';
@@ -15,7 +15,7 @@ export default buildConfig({
  secret:process.env.PAYLOAD_SECRET||'',
  serverURL:siteOrigin(),
  email:staffEmailAdapter(),
- admin:{user:'staff',importMap:{importMapFile:fileURLToPath(new URL('./app/(payload)/admin/importMap.ts',import.meta.url))},components:{beforeDashboard:['/src/components/inventory-admin-link#InventoryAdminLink']}},
+ admin:{user:'staff',importMap:{importMapFile:resolve(process.cwd(),'src/app/(payload)/admin/importMap.ts')},components:{beforeDashboard:['/src/components/inventory-admin-link#InventoryAdminLink']}},
  db:postgresAdapter({pool:{connectionString:process.env.DATABASE_URL||'',max:3,connectionTimeoutMillis:15000},push:false,migrationDir:'src/migrations'}),
  collections:[Staff,Categories,Products,SKUs,Enquiries,Notifications,EnquiryVerifications,RequestLimits,VerificationEmails,DeliveryOperations,InventoryReservations,InventoryMovements,EnquiryAttachments],
  typescript:{outputFile:'src/payload-types.ts'},
