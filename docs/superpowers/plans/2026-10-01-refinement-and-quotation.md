@@ -64,7 +64,7 @@ Files: package manifest and lock only.
 - [x] Verify official September 30 advisory and compatible Next.js fix.
 - [x] Install exact supported patch, fetch a genuinely online audit (not forced-offline empty output).
 - [x] Run the existing tests and typecheck, then production build. Cloud CI succeeded; local large checks hit memory limits.
-- [ ] Verify the production deployment through the connected GitHub integration.
+- [x] Verify the production deployment through the connected GitHub integration.
 
 ## Task 4: Existing quotation workflow
 
@@ -74,12 +74,13 @@ Files: enquiry parser/service, collections/types/migration, attachment pipeline,
 - [x] Reuse email verification and signed upload grant; reject upload before genuine verification.
 - [x] Store bounded files privately with deterministic safe filenames, expiry, quotas and no inline rendering. Validate PDF/XLSX/photo formats without claiming malware clearance.
 - [x] Finalize a request only after a valid attachment exists; queue one staff notification idempotently.
-- [ ] Exercise format spoofing, size/decompression limits, unauthorized/expired downloads, transaction retries and no-item report behavior.
+- [x] Exercise format spoofing, size/decompression limits, unauthorized/expired downloads, transaction retries and zero-item stock exclusion. Product demand remains item-based.
 - [x] Document activation dependencies and scanner limitations separately from code completion.
 
 ## Delivery
 
-- [ ] Review changes and run the appropriate checks serially on this memory-constrained laptop.
-- [ ] Update PROGRESS.md and the dated design/feature notes; commit only intended files and push the current branch.
-- [ ] Deploy authorized production changes only after checks; keep previews outside the application.
+- [x] Review changes and run focused checks locally, with the complete build/database/type suite on isolated GitHub CI after local memory exhaustion.
+- [x] Update PROGRESS.md and the dated design/feature notes; commit only intended files and push the current branch.
+- [x] Deploy the tested security/palette release and verify the stable alias; keep hero previews outside the application.
+- [ ] Deploy the quotation migration/application after the requested encrypted-backup destination authorization. Real email activation remains separately gated.
 - [ ] Report exact deliverables, remaining activation needs and the hero selection separately.
