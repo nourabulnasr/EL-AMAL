@@ -12,6 +12,7 @@ import {Header} from '@/components/header';
 import {customerSettings} from '@/lib/customer-readiness';
 import {BasketProvider} from '@/components/basket-provider';
 import './styles.css';
+import './refinement.css';
 const sans=Manrope({subsets:['latin'],variable:'--font-sans',display:'swap'});
 // Headings and the entrance wordmark use the regular cut throughout the site.
 const display=Newsreader({subsets:['latin'],variable:'--font-display',display:'swap',weight:'400'});

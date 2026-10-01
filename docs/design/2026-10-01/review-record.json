@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-01",
+  "status": "Concept review; live hero unchanged; awaiting Nour's selection",
+  "preview": "Run node docs/design/2026-10-01/serve.mjs, then open http://127.0.0.1:3012",
+  "references": ["https://uiuxagencyrankings.com/#studios", "https://fantasy.co/", "https://clay.global/", "https://www.metalab.com/"],
+  "researchLimits": "Official studio content reviewed; Fantasy hero visually inspected. Clay and Metalab renderers crashed on this laptop, so their detailed scroll behavior was not verified. The supplied ranking ranks agencies, not the best individual websites. No assets copied from the studios.",
+  "fourLayers": {
+    "subject": "Industrial process installation, abstract precision sensor assembly, or an original flow field; each leads toward the catalogue and existing-quotation journey.",
+    "light": "Deep navy with cold steel-blue rim light and the existing warm highlight.",
+    "camera": "Large asymmetrical right-hand subject with left editorial typography, breathing room and a lighter-blue second chapter.",
+    "emotion": "Technical confidence, calm authority and clarity of the next action."
+  },
+  "assets": [
+    {
+      "file": "assets/industrial-film-concept.png",
+      "generator": "Built-in image_gen tool",
+      "purpose": "Illustrative design review only; not company premises and not a video",
+      "prompt": "Create a photorealistic cinematic industrial hero background for an EL AMAL website design concept. It is illustrative concept art, not a real company facility. Landscape 16:9. A precision stainless-steel process pipe installation, close-up of a large finely machined pipe elbow, hex fittings and one compact cylindrical electronic pressure transmitter, a elegant real-world industrial still life. Heroic 50mm low three-quarter camera, very tight crop of textured machined steel on the RIGHT HALF, dramatic depth, dark negative space covering the LEFT HALF and left two-thirds at bottom for white editorial headlines to be added separately in HTML. Hard pale ice-blue rim light from upper right, soft blue reflected light along steel, tiny warm amber indicator in a fitting, deep midnight navy shadows #010736 and #091540. It should feel like an expensive industrial brand film, quiet precision and monumental scale, highly art-directed, believable metal surfaces and fine machining, crisp main foreground detail and softly defocused background pipework, rich controlled blue atmosphere. Keep all lettering absent and treat the left half as nearly empty navy. The focal subject is the process assembly and flow of pipes; the image is intended to replace a dial-gauge illustration. No text is required anywhere."
+    },
+    {
+      "file": "assets/precision-sculpture-concept.png",
+      "generator": "Built-in image_gen tool",
+      "purpose": "Illustrative concept sculpture; not a live 3D asset or an accurate manufacturer diagram",
+      "prompt": "Create a single premium industrial 3D design-concept hero asset for EL AMAL, landscape 16:9. An unbranded abstract precision pressure sensor assembly floats diagonally in a midnight navy studio, staged like a luxury engineering product launch. Its machined metal cylindrical housing, thin sensing membrane disk, small circuit disk and hexagonal threaded process connection are separated a little along ONE diagonal axis to suggest an elegant exploded assembly. This is a conceptual sculpture, not an accurate manufacturer diagram. On the RIGHT two-thirds, huge tactile brushed aluminium, graphite steel, refined concentric machined rings, subtle ice-blue edge reflections. Cinematic soft top rim light, strong pale sky-blue reflection, a tiny warm amber line. The LEFT third is clear deep navy negative space for website headline to be added later. Three-quarter 85mm camera, close heroic crop, physically plausible surfaces, clean deliberate composition with generous breathing room and a cold blue studio halo. Palette #010736 #091540 and desaturated light blue #A9D5F3. Feeling: technical mastery, calm authority, sculpture. Typography will be added in HTML; image consists only of the sculpture and seamless backdrop."
+    }
+  ],
+  "previewChecks": {
+    "desktop": "All three concepts rendered and captured; blue next-section screenshot saved.",
+    "mobile": "390x844 CSS viewport: no horizontal overflow; native screenshot scaling was unreliable, so no claim of full mobile visual acceptance.",
+    "pause": "Pause changes aria-pressed to true and label to Resume motion; resumed before leaving the preview.",
+    "javascript": "preview.js and serve.mjs parsed with node --check.",
+    "visualApproval": "Reserved for Nour; not yet received."
+  },
+  "productionPaletteContrast": {
+    "whiteOn365F94": 6.52,
+    "whiteOn183563": 12.15,
+    "A9D5F3On091540": 11.32,
+    "method": "WCAG relative sRGB luminance ratio; these pairs do not substitute for a full page accessibility audit."
+  }
+}

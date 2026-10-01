@@ -1,0 +1,108 @@
+/* Secondary blue, October 2026. The current hero is intentionally unchanged. */
+:root {
+  --blue-steel: #365f94;
+  --blue-ice: #a9d5f3;
+  --blue-wash: #183563;
+  --blue-edge: rgb(169 213 243 / .58);
+}
+@supports (color: oklch(from white l c h)) {
+  :root {
+    --blue-steel: oklch(from #365f94 l c h);
+    --blue-ice: oklch(from #a9d5f3 l c h);
+    --blue-wash: oklch(from #183563 l c h);
+  }
+}
+
+.approach, .information-contact { background: var(--blue-steel); }
+.catalogue-heading, .information-hero, .industry-hero {
+  background: linear-gradient(120deg, var(--navy-panel) 20%, var(--blue-wash));
+  border-bottom: 1px solid var(--blue-edge);
+}
+.selected-section { border-block: 1px solid rgb(169 213 243 / .25); }
+.closing, .information-closing {
+  background: linear-gradient(115deg, var(--navy-deep) 30%, var(--blue-wash));
+}
+.catalogue-filter, .technical-section, .quote-summary {
+  border-color: var(--blue-edge);
+}
+.category-tabs a[aria-current=page], .active-filters a {
+  background: var(--blue-steel);
+  border-color: var(--blue-ice);
+  color: #fff;
+}
+.catalogue-pagination a, .datasheet-links .button {
+  background: var(--blue-wash);
+  border-color: var(--blue-edge);
+}
+.product-info .model, .information-number { color: var(--blue-ice); }
+.button-dark, .button-light { background: var(--blue-steel); border-color: var(--blue-edge); }
+.quote-summary .button, .catalogue-filter .button { background: var(--blue-wash); }
+.approach .button, .information-contact .button { background: var(--navy-panel); }
+.category-row, .industry-list > a { position: relative; }
+.category-row::before, .industry-list > a::before {
+  content: '';
+  position: absolute;
+  inset-block: 22%;
+  inset-inline-start: 0;
+  width: 2px;
+  background: var(--blue-ice);
+  scale: 1 0;
+  transition: scale 450ms var(--interaction-spring);
+  pointer-events: none;
+}
+.manufacturer-image { transition: scale 650ms var(--interaction-spring); }
+.product-visual:focus-visible, .category-row:focus-visible, .industry-list > a:focus-visible {
+  outline-color: var(--blue-ice);
+}
+.category-row:focus-visible::before, .industry-list > a:focus-visible::before { scale: 1 1; }
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline-color: var(--blue-ice);
+  box-shadow: 0 0 0 4px rgb(169 213 243 / .12);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .category-row:hover, .industry-list > a:hover { background: var(--blue-wash); }
+  .category-row:hover::before, .industry-list > a:hover::before { scale: 1 1; }
+  .product-visual:hover .manufacturer-image { scale: 1.035; }
+  .catalogue-pagination a:hover { background: var(--blue-steel); border-color: var(--blue-ice); }
+  .button:not(:disabled):hover { background: var(--blue-wash); }
+}
+
+/* Native scroll timelines add no client bundle or continuous JS listeners.
+   Unsupported browsers keep static content; nothing starts hidden. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .section-heading, .information-aside {
+      animation: section-settle linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 20%;
+    }
+    .process-list li, .information-steps > li {
+      animation: process-settle linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 16%;
+    }
+  }
+  @supports (animation-timeline: scroll()) {
+    body::before {
+      content: '';
+      position: fixed;
+      z-index: 31;
+      inset: 0 0 auto;
+      height: 2px;
+      background: var(--blue-ice);
+      pointer-events: none;
+      transform-origin: left;
+      animation: page-progress linear both;
+      animation-timeline: scroll(root block);
+    }
+    html[dir=rtl] body::before { transform-origin: right; }
+  }
+}
+@keyframes section-settle { from { translate: 0 18px; } to { translate: 0 0; } }
+@keyframes process-settle { from { translate: 0 10px; } to { translate: 0 0; } }
+@keyframes page-progress { from { scale: 0 1; } to { scale: 1 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .manufacturer-image, .category-row::before, .industry-list > a::before { transition: none; }
+  .product-visual:hover .manufacturer-image { scale: 1; }
+}
