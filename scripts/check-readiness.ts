@@ -1,4 +1,4 @@
-import {customerSettings} from '../src/lib/customer-readiness.ts';
+import {customerSettings,quotationSettings} from '../src/lib/customer-readiness.ts';
 import {cmsEnabled} from '../src/lib/cms-runtime.ts';
 import {mailReadiness} from '../src/lib/mail-transport.ts';
 import {businessContact} from '../src/lib/business-contact.ts';
@@ -9,4 +9,5 @@ console.log(JSON.stringify({customerVerificationDeliveryEnabled:process.env.VERI
 const report={cms:cmsEnabled(),mail:mailReadiness(),publicContact:{phone:!!contact.phone,whatsapp:!!contact.whatsapp},wikaEvidenceConfigured:!!process.env.WIKA_RELATIONSHIP_EN&&!!process.env.WIKA_RELATIONSHIP_AR&&!!process.env.WIKA_EVIDENCE_URL,catalogueMode:process.env.CATALOGUE_SOURCE==='cms'?'cms':'demo',publicSubmissionEnabled:!!customerSettings(),workersConfirmedReady:process.env.ENQUIRY_WORKERS_READY==='true'};
 console.log(JSON.stringify(report,null,2));
 console.log(JSON.stringify({indexingEnabled:indexingEnabled(),staffRecoveryConfigured:recoveryReady(),privatePhotosConfigured:cmsEnabled()&&process.env.ENQUIRY_PHOTOS_ENABLED==='true',deliveryOperationsConfigured:cmsEnabled()&&process.env.DELIVERY_OPERATIONS_ENABLED==='true'&&(process.env.CRON_SECRET?.length??0)>=32,retentionEnabled:process.env.DELIVERY_RETENTION_ENABLED==='true'},null,2));
+console.log(JSON.stringify({quotationSubmissionConfigured:!!quotationSettings()},null,2));
 console.log('Configuration presence only: this does not verify sender ownership, evidence, email receipt or launch approval. No network requests or messages were sent.');

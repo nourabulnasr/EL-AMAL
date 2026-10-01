@@ -1,0 +1,12 @@
+.quotation-intake>p{max-width:76ch;line-height:1.75}
+.quotation-steps{display:flex;flex-wrap:wrap;gap:16px 40px;margin:32px 0;padding-inline-start:24px;font-size:14px}
+.quotation-intake form,.quotation-upload input[type=file]{margin-top:24px}
+.quotation-intake fieldset{border:0;padding:0;margin:0 0 24px}
+.quotation-intake h2,.quotation-upload h2{font-size:clamp(1.6rem,4vw,2.6rem);line-height:1.12;margin-bottom:20px}
+.quotation-upload>p{max-width:72ch;line-height:1.7}
+.quotation-upload ul{margin:24px 0;padding-inline-start:24px;line-height:1.8;overflow-wrap:anywhere}
+.quotation-upload label{display:block;font-size:14px;margin-top:24px}
+.quotation-upload input[type=file]{display:block;max-width:100%;margin-bottom:24px}
+.quotation-upload .button{margin-inline-end:16px;margin-bottom:16px}
+#manual-rfq,#existing-quotation{scroll-margin-top:120px}
+@media(max-width:600px){.quotation-steps{display:grid;gap:12px}.quotation-upload .button{width:100%;margin-inline-end:0}.quotation-intake .form-actions{gap:16px}}

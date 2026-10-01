@@ -2,8 +2,8 @@ import {hasRole} from './access.ts';
 import {readInput} from './enquiry-http.ts';
 import {EnquiryInputError} from './enquiries.ts';
 import {tokenDigest} from './enquiry-verification.ts';
-type Result={reference:string;mode:'test'|'customer'};
-type Deps={enabled:()=>boolean;authenticate:(headers:Headers)=>Promise<unknown>;allow:(headers:Headers,scope:string)=>Promise<boolean>;issue:(reference:string)=>Promise<string|null>;confirm:(token:string)=>Promise<Result|null>;attachmentGrant?:(reference:string)=>string|undefined};
+type Result={reference:string;mode:'test'|'customer';requestKind?:'products'|'quotation'};
+type Deps={enabled:()=>boolean;authenticate:(headers:Headers)=>Promise<unknown>;allow:(headers:Headers,scope:string)=>Promise<boolean>;issue:(reference:string)=>Promise<string|null>;confirm:(token:string)=>Promise<Result|null>;attachmentGrant?:(reference:string,kind?:'products'|'quotation')=>string|undefined};
 const json=(body:unknown,status=200)=>Response.json(body,{status,headers:{'Cache-Control':'no-store','Referrer-Policy':'no-referrer',...(status===429?{'Retry-After':'60'}:{})}});
 export function verificationHandlers(deps:Deps){
  const base=(r:Request)=>!deps.enabled()?json({error:'Unavailable'},503):r.headers.get('origin')!==new URL(r.url).origin?json({error:'Invalid origin'},403):r.headers.get('content-type')?.split(';')[0].trim()!=='application/json'?json({error:'JSON required'},415):null;
@@ -26,7 +26,7 @@ export function verificationHandlers(deps:Deps){
    if(!await deps.allow(r.headers,'verification-confirm'))return json({error:'Try again later'},429);
    const body=await readInput(r,4096);if(!tokenDigest(body?.token))return json({error:'Link unavailable'},400);
    const result=await deps.confirm(body.token);
-   return result?json({...result,stockReserved:false,...result.mode==='customer'&&deps.attachmentGrant?{attachmentGrant:deps.attachmentGrant(result.reference)}:{}}):json({error:'Link unavailable'},400);
+   return result?json({...result,stockReserved:false,...result.mode==='customer'&&deps.attachmentGrant?{attachmentGrant:deps.attachmentGrant(result.reference,result.requestKind)}:{}}):json({error:'Link unavailable'},400);
   }catch(e){return json({error:'Unable to confirm'},e instanceof EnquiryInputError?400:503);}
  }
  };

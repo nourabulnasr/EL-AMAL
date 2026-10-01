@@ -21,5 +21,15 @@ try{
   assert.equal(response.status,status,`Built CMS runtime: ${path}`);
  }
  console.log('Built CMS-enabled routes and private collection guards succeeded against disposable PostgreSQL.');
+ for(const locale of ['en','ar']){
+  const response=await fetch(`${origin}/${locale}/rfq`,{signal:AbortSignal.timeout(20000)});
+  assert.equal(response.status,200,'Bilingual RFQ runtime');
+  assert.ok((await response.text()).includes('id="existing-quotation"'),'Existing quotation section is server rendered');
+ }
+ for(const path of ['/api/customer-quotation-files','/api/customer-quotation-files/control']){
+  const response=await fetch(origin+path,{method:'POST',headers:{Origin:origin,'Content-Type':'application/json'},body:'{}',signal:AbortSignal.timeout(20000)});
+  assert.equal(response.status,503,'Unconfigured quotation intake stays unavailable');
+ }
+ console.log('Bilingual quotation entry and inactive upload/control runtime guards succeeded.');
 }catch(error){console.error(log);throw error;}
 finally{server.kill('SIGTERM');}

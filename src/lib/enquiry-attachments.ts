@@ -1,5 +1,7 @@
 import {createHmac,createCipheriv,createDecipheriv,randomBytes,timingSafeEqual} from 'node:crypto';
 import sharp from 'sharp';
+import {spreadsheetType,validatePdf,validateSpreadsheet} from './quotation-file-validation.ts';
+export {spreadsheetType} from './quotation-file-validation.ts';
 const referencePattern=/^EA-[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/;
 export const attachmentLimit=2*1024*1024;
 const lifetime=86400000;
@@ -41,4 +43,17 @@ export async function sanitizePhoto(bytes:Buffer,contentType:string){
   const result=await pipeline.rotate().resize({width:2400,height:2400,fit:'inside',withoutEnlargement:true}).toFormat(contentType==='image/png'?'png':'jpeg',contentType==='image/png'?{compressionLevel:9}:{quality:95}).toBuffer();
   if(result.length>attachmentLimit)throw new Error('Photo is too large after processing');
   return {bytes:result,contentType};
+}
+
+export async function validateQuotationFile(bytes:Buffer,contentType:string,filename:string){
+  if(!bytes.length||bytes.length>attachmentLimit||/[\u0000-\u001f\u007f<>:"/\\|?*]/.test(filename))throw new Error('Invalid quotation file');
+  const extension=filename.toLowerCase().split('.').pop();
+  if(['image/jpeg','image/png'].includes(contentType)){
+    if(contentType==='image/png'?extension!=='png':!['jpg','jpeg'].includes(extension??''))throw new Error('File type mismatch');
+    return {...await sanitizePhoto(bytes,contentType),safety:'reconstructed-image' as const};
+  }
+  if(contentType==='application/pdf'&&extension==='pdf')validatePdf(bytes);
+  else if(contentType===spreadsheetType&&extension==='xlsx')validateSpreadsheet(bytes);
+  else throw new Error('Use PDF, XLSX, JPEG or PNG');
+  return {bytes,contentType,safety:'unscanned-document' as const};
 }

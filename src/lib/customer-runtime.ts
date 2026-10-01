@@ -1,4 +1,4 @@
-import { customerSettings } from "./customer-readiness";
+import { customerSettings,quotationSettings } from "./customer-readiness";
 import { customerHandlers } from "./customer-http";
 import { allowRequest, requestLimitKey } from "./request-limits";
 import { loadCatalogue } from "./load-catalogue";
@@ -20,6 +20,7 @@ function settings() {
 }
 export const handlers = customerHandlers({
   settings: customerSettings,
+  quotationEnabled:()=>!!quotationSettings(),
   allow: async (headers, scope) =>
     allowRequest(await cms(), requestLimitKey(headers, scope), 6),
   submit: async (input) =>

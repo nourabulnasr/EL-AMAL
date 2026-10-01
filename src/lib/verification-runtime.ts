@@ -10,5 +10,5 @@ export const handlers=verificationHandlers({enabled:()=>cmsEnabled(),
  // This HTTP issuer is strictly for demo requests. Customer issuance is server-only.
  issue:async reference=>issueVerification(await cms(),reference,'demo'),
  confirm:async token=>confirmVerification(await cms(),token),
- attachmentGrant:reference=>process.env.ENQUIRY_PHOTOS_ENABLED==='true'?createAttachmentGrant(reference,process.env.PAYLOAD_SECRET!):undefined,
+ attachmentGrant:(reference,kind)=>(kind==='quotation'?process.env.ENQUIRY_QUOTATIONS_ENABLED:process.env.ENQUIRY_PHOTOS_ENABLED)==='true'?createAttachmentGrant(reference,process.env.PAYLOAD_SECRET!):undefined,
 });

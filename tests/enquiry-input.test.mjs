@@ -28,3 +28,13 @@ test('direct RFQ validates model, quantity and range without catalogue IDs',()=>
  for(const change of [{model:''},{model:' '.repeat(5)},{quantity:0},{quantity:1.5},{quantity:'2'},{range:''},{range:'x'.repeat(161)}])assert.throws(()=>parseEnquiry({...raw,manual:{...raw.manual,...change}}));
  assert.throws(()=>parseEnquiry({...raw,lines:input().lines}));
 });
+
+test('existing quotation accepts contact details without invented product rows and rejects mixed requests',()=>{
+ const raw={...input(),lines:[],quotation:true};
+ const parsed=parseEnquiry(raw);
+ assert.equal(parsed.quotation,true);
+ assert.deepEqual(parsed.lines,[]);
+ assert.equal(parsed.manual,undefined);
+ assert.notEqual(enquiryFingerprint(parsed,'cms'),enquiryFingerprint({...parsed,quotation:undefined},'cms'));
+ for(const value of [{...raw,lines:input().lines},{...raw,manual:{model:'X',quantity:1,range:'1 bar'}},{...raw,quotation:'true'}])assert.throws(()=>parseEnquiry(value));
+});

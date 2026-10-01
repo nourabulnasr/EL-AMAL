@@ -34,17 +34,17 @@ Files: `docs/design/2026-10-01/index.html`, `preview.css`, `preview.js`, `serve.
 - [x] Create three original directions: cinematic industrial, sculptural assembly, vector flow.
 - [x] Show exact conceptual limitations and original research references.
 - [x] Open the review and capture all three desktop alternatives.
-- [ ] Check phone layout, pause control and one scroll transition. Save observations.
+- [x] Check phone layout, pause control and one scroll transition. Save observations.
 - [ ] Record Nour's selection before any live hero replacement.
 
 ## Task 2: Secondary palette and motion
 
 Files: `src/app/(site)/[locale]/refinement.css`; import after `styles.css` in the locale layout.
 
-- [ ] Define steel and ice-blue tokens; retain existing orange and readable white copy.
-- [ ] Apply surfaces to approach, information/contact sections and catalogue controls; preserve product photos and current hero.
-- [ ] Add modest native scroll-timeline section movement and reading progress with reduced-motion/no-support fallbacks.
-- [ ] Verify desktop and Arabic/mobile layout, contrast, keyboard focus and current CSS build.
+- [x] Define steel and ice-blue tokens; retain existing orange and readable white copy.
+- [x] Apply surfaces to approach, information/contact sections and catalogue controls; preserve product photos and current hero.
+- [x] Add modest native scroll-timeline section movement and reading progress with reduced-motion/no-support fallbacks.
+- [x] Verify desktop and Arabic/mobile layout, contrast, focus styling and current CSS build. Broader assistive-technology acceptance remains open.
 
 CSS direction:
 
@@ -61,21 +61,21 @@ CSS direction:
 
 Files: package manifest and lock only.
 
-- [ ] Verify official September 30 advisory and compatible Next.js fix.
-- [ ] Install exact supported patch, fetch a genuinely online audit (not forced-offline empty output).
-- [ ] Run the existing tests and typecheck, then production build. Report memory/network restrictions accurately.
-- [ ] Verify the deployed version when Vercel authentication is restored.
+- [x] Verify official September 30 advisory and compatible Next.js fix.
+- [x] Install exact supported patch, fetch a genuinely online audit (not forced-offline empty output).
+- [x] Run the existing tests and typecheck, then production build. Cloud CI succeeded; local large checks hit memory limits.
+- [ ] Verify the production deployment through the connected GitHub integration.
 
 ## Task 4: Existing quotation workflow
 
 Files: enquiry parser/service, collections/types/migration, attachment pipeline, bilingual submission/upload UI and RFQ links; focused tests accompany each trust boundary.
 
-- [ ] Add an explicit document enquiry type with contact details and zero product rows; preserve normal RFQ validation.
-- [ ] Reuse email verification and signed upload grant; reject upload before genuine verification.
-- [ ] Store bounded files privately with deterministic safe filenames, expiry, quotas and no inline rendering. Validate PDF/XLSX/photo formats without claiming malware clearance.
-- [ ] Finalize a request only after a valid attachment exists; queue one staff notification idempotently.
+- [x] Add an explicit document enquiry type with contact details and zero product rows; preserve normal RFQ validation.
+- [x] Reuse email verification and signed upload grant; reject upload before genuine verification.
+- [x] Store bounded files privately with deterministic safe filenames, expiry, quotas and no inline rendering. Validate PDF/XLSX/photo formats without claiming malware clearance.
+- [x] Finalize a request only after a valid attachment exists; queue one staff notification idempotently.
 - [ ] Exercise format spoofing, size/decompression limits, unauthorized/expired downloads, transaction retries and no-item report behavior.
-- [ ] Document activation dependencies and any scanner limitation separately from code completion.
+- [x] Document activation dependencies and scanner limitations separately from code completion.
 
 ## Delivery
 

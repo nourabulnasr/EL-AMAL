@@ -191,7 +191,7 @@ export async function readInventory(payload:Payload,actor:unknown,url:URL):Promi
       WHERE (s.sku_code ILIKE $1 OR p.model ILIKE $1 OR s.id=$2) ORDER BY (s.id=$2) DESC,s.sku_code LIMIT 100`,[pattern(skuSearch),Number.isSafeInteger(skuId)&&skuId>0?skuId:0]);
     const enquiries=user.role==='warehouse'?{rows:[]}:await client.query(`SELECT e.id,e.reference,
       (SELECT json_agg(json_build_object('id',i.id,'model',i.model,'quantity',i.quantity,'range',i.range) ORDER BY i._order) FROM enquiries_items i WHERE i._parent_id=e.id) AS items
-      FROM enquiries e WHERE e.source='cms' AND e.verification_status='verified' AND e.verified_at IS NOT NULL AND e.status<>'closed' AND e.reference ILIKE $1
+      FROM enquiries e WHERE e.source='cms' AND e.request_kind='products' AND e.verification_status='verified' AND e.verified_at IS NOT NULL AND e.status<>'closed' AND e.reference ILIKE $1
       ORDER BY e.created_at DESC LIMIT 100`,[pattern(enquirySearch)]);
     const view:InventoryView={role:user.role,skus:skus.rows,enquiries:enquiries.rows,balance:null,freshness:null,reservations:[],movements:[]};
     if(!Number.isSafeInteger(skuId)||skuId<1)return view;

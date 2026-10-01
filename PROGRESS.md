@@ -1,5 +1,17 @@
 # EL AMAL progress
 
+## Hero review, secondary blue and existing quotations — 1 October 2026
+
+Three separate animated hero concepts are saved in `docs/design/2026-10-01/`: cinematic industry, sculptural precision and a vector flow field. Their generated images are concept art, not EL AMAL premises or manufacturer product diagrams. The film is a moving still preview and the sculpture uses image parallax, not finished video/3D production. Nour has not selected a hero; the live search/instrument hero remains unchanged. Preview phone width, pause control and desktop scroll behavior were inspected, with limitations recorded in review-record.json.
+
+Secondary steel/pale blue, native scroll-linked section movement, a reading-progress line and refined hover/focus states are implemented without a new animation dependency. White copy, navy and orange remain. White-on-steel contrast is 6.52:1. The review deployment rendered English and Arabic at 390px without measured horizontal overflow or observed JavaScript errors. Subjective visual acceptance belongs to Nour.
+
+Patched Next.js16.3.5 to16.3.8 for the official September security advisory. A fresh online audit returned zero known vulnerabilities. Commit96969af passed GitHub run36885466417: unit/permission tests, TypeScript, all-severity audit, disposable database migrations/regressions, production build and built-server routes. This tested commit was pushed to the production branch; stable-domain verification is pending. No hosted database change is needed for this patch/palette release.
+
+The next review increment adds contact-only quotation requests, PDF/XLSX/JPEG/PNG uploads after genuine email verification, encrypted private storage, explicit finalization and one queued staff notification. Three files of2MiB each,64MiB shared quota and30-day retention apply. Documents remain unscanned and require staff acknowledgment before forced download. A bounded original-proof recovery path and tab session recovery handle ambiguous confirmation; quotations are excluded from stock allocation and remain separate from product demand.29 focused tests succeeded. Generated types, additive migration/snapshot, isolated quotation regression and built-runtime guard checks are included; full cloud verification is pending. See docs/customer-intake.md for exact operation and limitations.
+
+Production quotation migration is pending. Automatic approval review rejected creating a full encrypted hosted-database export at `artifacts/backups/el-amal-2026-10-01-pre-quotation.enc` because the sensitive-data transfer destination lacked explicit authorization. Nour was asked to authorize that destination; no export or hosted migration was executed. Continue independent cloud checks while waiting. Customer intake also still requires the real verified sender and frequent healthy delivery worker; no readiness flags, provider terms or deferred monitoring were enabled.
+
 ## Post-handbook permission corrections — 29 September 2026
 
 The completed handbook was saved and pushed as d9e3744 before development resumed. Reproduced and fixed two documented boundaries: Payload staff unlock now explicitly requires an owner, and notification deliveryKey/leaseToken are removed by field-level read access from ordinary owner/sales API responses. They are worker identifiers, not publicly exposed credentials. Corrected the enquiry admin helper and labelled the legacy deliveryStatus as a submission snapshot; actual delivery results remain in the queues. Fixed stale continuation/client-input notes.

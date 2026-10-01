@@ -8,6 +8,7 @@ import * as migration_20260925_121725_verification_email_outbox from './20260925
 import * as migration_20260927_203909_catalogue_details from './20260927_203909_catalogue_details';
 import * as migration_20260929_002849_launch_operations from './20260929_002849_launch_operations';
 import * as migration_20260929_141342_inventory_completion from './20260929_141342_inventory_completion';
+import * as migration_20261001_120000_existing_quotations from './20261001_120000_existing_quotations';
 
 export const migrations = [
   {
@@ -60,4 +61,5 @@ export const migrations = [
     down: migration_20260929_141342_inventory_completion.down,
     name: '20260929_141342_inventory_completion'
   },
+  {up:migration_20261001_120000_existing_quotations.up,down:migration_20261001_120000_existing_quotations.down,name:'20261001_120000_existing_quotations'},
 ];

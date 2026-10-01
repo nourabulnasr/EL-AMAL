@@ -1,8 +1,8 @@
 import type {CollectionConfig} from 'payload';
 import {hasRole} from '../lib/access.ts';
 export const EnquiryAttachments:CollectionConfig={
-  slug:'enquiry-attachments',labels:{singular:'Enquiry photo',plural:'Enquiry photos'},
-  admin:{useAsTitle:'filename',defaultColumns:['filename','enquiry','byteCount','expiresAt','download'],description:'Private reconstructed JPEG/PNG photos supplied after email confirmation. Files expire after 30 days. Only owner and sales can download.'},
+  slug:'enquiry-attachments',labels:{singular:'Enquiry attachment',plural:'Enquiry attachments'},
+  admin:{useAsTitle:'filename',defaultColumns:['filename','enquiry','contentType','byteCount','expiresAt','download'],description:'Private files supplied after email confirmation, available for 30 days to owner and sales. Photos are reconstructed. PDF/XLSX files are unscanned; their download screen requires acknowledgment. Scan documents locally before opening; keep macros and external content disabled.'},
   access:{create:()=>false,read:({req})=>hasRole(req.user,['owner','sales']),update:()=>false,delete:()=>false},
   fields:[
     {name:'uploadId',type:'text',required:true,unique:true},

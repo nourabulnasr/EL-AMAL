@@ -1,6 +1,6 @@
 # EL AMAL
 
-Bilingual industrial-instrument website built with Next.js16, React19, TypeScript, Payload CMS and Neon PostgreSQL. The public design uses #010736 / #091540, white type and orange accents. Source is on the `codex/el-amal-foundation` branch.
+Bilingual industrial-instrument website built with Next.js16, React19, TypeScript, Payload CMS and Neon PostgreSQL. The public design uses #010736 / #091540, steel and pale blue, white type and orange accents. Production source is on the `codex/el-amal-foundation` branch; unfinished review work may be on a separate branch.
 
 Client review: [English](https://el-amal-sigma.vercel.app/en) / [Arabic](https://el-amal-sigma.vercel.app/ar). Administration: [/admin](https://el-amal-sigma.vercel.app/admin).
 
@@ -25,6 +25,7 @@ Open http://127.0.0.1:3004/en. Production preview: `npm run build`, then `npm st
 - Baseline security headers, access controls, validation, dependency review and automated GitHub quality workflow.
 - Private stock receipts, adjustments, exact-SKU reservations, expiry, release, dispatch and reconciliation with an immutable audit ledger and staff console.
 - Verified-customer private JPEG/PNG attachments, bounded encrypted storage, staff-only downloads and scheduled retention.
+- An existing-quotation route within the RFQ page accepts contact details without product lines, then verified private PDF/XLSX/photo uploads and explicit final submission. Documents are unscanned, download-only and require staff acknowledgment. Intake activation remains gated; see [current implementation and limits](docs/customer-intake.md).
 - Password policy, sign-in limits, one-time concurrent-safe password recovery and durable delivery health/queue limits. Recovery delivery needs a verified sending domain.
 
 ## Current launch state
@@ -37,7 +38,7 @@ See [delivery status](docs/phase-status.md) for the current scope estimate and e
 
 ## Verification and deployment
 
-- `npm test`:142 unit checks as of29 September2026.
+- `npm test`: unit and permission checks; the current count and release evidence are in PROGRESS.md.
 - `npm run typecheck`: TypeScript.
 - `npm run readiness`: configuration booleans only; no secrets or network activity.
 - `npm run build`: production compilation.

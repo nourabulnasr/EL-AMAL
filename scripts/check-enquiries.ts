@@ -22,7 +22,7 @@ try {
   const records=await payload.find({collection:'enquiries',overrideAccess:true,where:{requestKey:{in:requestKeys}},depth:0});
   assert.equal(records.totalDocs,2,'Concurrent retries create exactly one record per key');
   const record=records.docs.find(doc=>doc.reference===first.reference)!;
-  assert.equal(record.items[0].model,'TEST-MODEL');assert.equal(record.deliveryStatus,'not-configured');
+  assert.equal(record.items![0].model,'TEST-MODEL');assert.equal(record.deliveryStatus,'not-configured');
   // A later catalogue change cannot rewrite saved item snapshots or break a retry.
   assert.equal((await submitEnquiry(payload,input,{...catalogue,products:[]})).reference,first.reference);
   await assert.rejects(payload.find({collection:'enquiries',overrideAccess:false}),forbidden);
@@ -50,7 +50,7 @@ try {
   const saved=await submitEnquiry(payload,direct,{...catalogue,products:[]});
   assert.equal((await submitEnquiry(payload,direct,{...catalogue,products:[]})).reference,saved.reference);
   const directRecord=(await payload.find({collection:'enquiries',overrideAccess:true,where:{reference:{equals:saved.reference}}})).docs[0];
-  assert.equal(directRecord.items[0].range,'0–10 bar');assert.equal(directRecord.items[0].model,'CUSTOM-42');assert.equal(directRecord.items[0].quantity,4);
+  assert.equal(directRecord.items![0].range,'0–10 bar');assert.equal(directRecord.items![0].model,'CUSTOM-42');assert.equal(directRecord.items![0].quantity,4);
   await assert.rejects(submitEnquiry(payload,{...direct,manual:{...direct.manual,range:'0–16 bar'}},catalogue),EnquiryConflictError);
   console.log('Direct RFQ checks succeeded: model/range persistence, duplicate retry and changed-range conflict.');
   console.log('Enquiry checks succeeded: durable snapshots, repeat/conflict/concurrent requests, owner/sales workflow, private reads and immutable contact details.');

@@ -34,7 +34,7 @@
   background: var(--blue-wash);
   border-color: var(--blue-edge);
 }
-.product-info .model, .information-number { color: var(--blue-ice); }
+.product-info .model, .information-number { color: #fff; }
 .button-dark, .button-light { background: var(--blue-steel); border-color: var(--blue-edge); }
 .quote-summary .button, .catalogue-filter .button { background: var(--blue-wash); }
 .approach .button, .information-contact .button { background: var(--navy-panel); }

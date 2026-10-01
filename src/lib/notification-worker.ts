@@ -17,7 +17,8 @@ export async function deliverNextNotification(payload:Payload,transport?:Notific
  const claimed=await pool.query(`UPDATE notifications SET status='processing', attempts=attempts+1, lease_token=$1,
  lease_expires_at=now()+interval '5 minutes', updated_at=now() WHERE id=(
  SELECT n.id FROM notifications n WHERE n.source='cms'
- AND EXISTS (SELECT 1 FROM enquiries e WHERE e.id=n.enquiry_id AND e.source='cms' AND e.verification_status='verified' AND e.verified_at IS NOT NULL)
+ AND EXISTS (SELECT 1 FROM enquiries e WHERE e.id=n.enquiry_id AND e.source='cms' AND e.verification_status='verified' AND e.verified_at IS NOT NULL
+ AND (e.request_kind='products' OR e.quotation_submitted_at IS NOT NULL))
  AND attempts<5 AND created_at>now()-interval '23 hours' AND
  ((status='pending' AND next_attempt_at<=now()) OR (status='processing' AND lease_expires_at<=now()))
  ORDER BY created_at,id FOR UPDATE SKIP LOCKED LIMIT 1) RETURNING id,reference,recipient,delivery_key,attempts`,[lease]);

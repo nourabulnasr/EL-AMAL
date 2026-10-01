@@ -5,7 +5,7 @@ import {readBasket,type BasketLine} from './basket.ts';
 
 export class EnquiryInputError extends Error {}
 export class EnquiryConflictError extends Error {}
-export type EnquiryInput={requestKey:string;locale:Locale;contact:EnquiryDetails;lines:BasketLine[];manual?:{model:string;quantity:number;range:string}};
+export type EnquiryInput={requestKey:string;locale:Locale;contact:EnquiryDetails;lines:BasketLine[];manual?:{model:string;quantity:number;range:string};quotation?:true};
 const object=(value:unknown):value is Record<string,unknown>=>!!value&&typeof value==='object'&&!Array.isArray(value);
 export function parseEnquiry(value:unknown):EnquiryInput {
   if(!object(value)||!object(value.contact)||!['en','ar'].includes(String(value.locale))||
@@ -16,6 +16,11 @@ export function parseEnquiry(value:unknown):EnquiryInput {
     contact[key]=value.contact[key].trim();
   }
   if(Object.keys(validateEnquiry(contact)).length)throw new EnquiryInputError('Invalid contact details');
+  if(value.quotation!==undefined&&value.quotation!==true)throw new EnquiryInputError('Invalid quotation request');
+  if(value.quotation===true){
+    if(value.manual!==undefined||!Array.isArray(value.lines)||value.lines.length)throw new EnquiryInputError('Use either a quotation file or product lines');
+    return {requestKey:value.requestKey.toLowerCase(),locale:value.locale as Locale,contact,lines:[],quotation:true};
+  }
   let manual:EnquiryInput['manual'];
   if(value.manual!==undefined){
     const m=value.manual;
@@ -29,7 +34,7 @@ export function parseEnquiry(value:unknown):EnquiryInput {
   return {requestKey:value.requestKey.toLowerCase(),locale:value.locale as Locale,contact,lines,...manual?{manual}:{}};
 }
 export function enquiryFingerprint(input:EnquiryInput,source:'demo'|'cms') {
-  return createHash('sha256').update(JSON.stringify({source,locale:input.locale,contact:input.contact,lines:input.lines,...input.manual?{manual:input.manual}:{}})).digest('hex');
+  return createHash('sha256').update(JSON.stringify({source,locale:input.locale,contact:input.contact,lines:input.lines,...input.manual?{manual:input.manual}:{},...input.quotation?{quotation:true}:{}})).digest('hex');
 }
 export function snapshotItems(lines:BasketLine[],products:Product[]) {
   const byId=new Map(products.map(product=>[product.id,product]));

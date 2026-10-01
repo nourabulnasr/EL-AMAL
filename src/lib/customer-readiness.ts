@@ -28,3 +28,7 @@ export function customerSettings(
     return;
   }
 }
+
+export function quotationSettings(env:Record<string,string|undefined>=process.env){
+  return env.ENQUIRY_QUOTATIONS_ENABLED==='true'?customerSettings(env):undefined;
+}

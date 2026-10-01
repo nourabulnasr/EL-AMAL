@@ -37,9 +37,10 @@ export async function submitEnquiry(payload:Payload,raw:unknown,catalogue:Catalo
     }
     const record=await payload.create({collection:'enquiries',overrideAccess:true,depth:0,req,data:{
       reference:`EA-${randomUUID()}`,requestKey:input.requestKey,fingerprint,locale:input.locale,source:catalogue.source,
-      ...input.contact,items,status:'new',verificationStatus:'unverified',deliveryStatus:'not-configured',
+      ...input.contact,items,requestKind:input.quotation?'quotation':'products',status:'new',verificationStatus:'unverified',deliveryStatus:'not-configured',
     }});
-    await payload.create({collection:'notifications',overrideAccess:true,depth:0,req,data:{
+    // File-based requests queue their staff notification only after files are finalized.
+    if(!input.quotation)await payload.create({collection:'notifications',overrideAccess:true,depth:0,req,data:{
       enquiry:record.id,reference:record.reference,deliveryKey:`enquiry-${record.reference}`,
       recipient:process.env.ENQUIRY_NOTIFICATION_TO||'mohamed.sorour8@icloud.com',source:catalogue.source,
       status:catalogue.source==='demo'?'disabled':'pending',attempts:0,nextAttemptAt:new Date().toISOString(),

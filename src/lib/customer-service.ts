@@ -9,6 +9,7 @@ import { reserveEmailAttempt } from "./customer-quota.ts";
 import { emailLimitKey, attemptLimitKey } from "./customer-receipt.ts";
 import { CustomerLimitError } from "./customer-http.ts";
 import {assertFreshDeliveryHealth} from './delivery-operations.ts';
+import {quotationSettings} from './customer-readiness.ts';
 async function allowance(
   payload: Payload,
   email: string,
@@ -34,6 +35,7 @@ export async function submitCustomerEnquiry(
   if (catalogue.source !== "cms")
     throw new Error("Customer intake requires reviewed catalogue mode");
   const input = parseEnquiry(raw);
+  if(input.quotation&&!quotationSettings())throw new Error('Quotation intake unavailable');
   input.contact.email = input.contact.email.toLowerCase();
   return submitEnquiry(payload, input, catalogue, settings, async () => {
     // submitEnquiry resolves committed request-key retries before this callback.

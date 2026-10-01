@@ -21,6 +21,13 @@ export async function confirmVerification(payload:Payload,token:unknown){
  UPDATE enquiry_verifications SET consumed_at=now(),updated_at=now()
  WHERE token_hash=$1 AND consumed_at IS NULL AND expires_at>now() RETURNING enquiry_id
  ) UPDATE enquiries e SET verification_status=CASE WHEN e.source='demo' THEN 'test-verified'::enum_enquiries_verification_status ELSE 'verified'::enum_enquiries_verification_status END,
- verified_at=now(),updated_at=now() FROM consumed WHERE e.id=consumed.enquiry_id AND e.verification_status='unverified' RETURNING e.reference,e.source`,[digest]);
- const row=result.rows[0];return row?{reference:row.reference as string,mode:row.source==='demo'?'test' as const:'customer' as const}:null;
+ verified_at=now(),updated_at=now() FROM consumed WHERE e.id=consumed.enquiry_id AND e.verification_status='unverified' RETURNING e.reference,e.source,e.request_kind`,[digest]);
+ // A file request needs a capability after confirmation. An ambiguous HTTP success
+ // can be retried using the SAME original email proof only until its original expiry.
+ // Ordinary enquiries retain their one-time confirmation behavior.
+ const row=result.rows[0]??(await payload.db.pool.query(`SELECT e.reference,e.source,e.request_kind
+ FROM enquiry_verifications v JOIN enquiries e ON e.id=v.enquiry_id
+ WHERE v.token_hash=$1 AND v.consumed_at IS NOT NULL AND v.expires_at>now()
+ AND e.source='cms' AND e.request_kind='quotation' AND e.verification_status='verified' AND e.verified_at IS NOT NULL`,[digest])).rows[0];
+ return row?{reference:row.reference as string,mode:row.source==='demo'?'test' as const:'customer' as const,requestKind:row.request_kind as 'products'|'quotation'}:null;
 }

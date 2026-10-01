@@ -254,7 +254,7 @@ export interface Skus {
   createdAt: string;
 }
 /**
- * Saved requests. Email delivery and stock reservation are not active yet.
+ * Saved requests with immutable submitted details. Quotation-file requests are ready only when Quotation submitted at is set. Their files are in Enquiry attachments. PDF/XLSX documents are unscanned. Update Status and Internal Notes here; use the queues for actual email delivery.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "enquiries".
@@ -266,21 +266,28 @@ export interface Enquiry {
   fingerprint: string;
   locale: 'en' | 'ar';
   source: 'demo' | 'cms';
+  requestKind: 'products' | 'quotation';
+  quotationSubmittedAt?: string | null;
   name: string;
   email: string;
   company: string;
   notes?: string | null;
-  items: {
-    productId: string;
-    model: string;
-    nameEn: string;
-    nameAr: string;
-    quantity: number;
-    range?: string | null;
-    id?: string | null;
-  }[];
+  items?:
+    | {
+        productId: string;
+        model: string;
+        nameEn: string;
+        nameAr: string;
+        quantity: number;
+        range?: string | null;
+        id?: string | null;
+      }[]
+    | null;
   verificationStatus: 'unverified' | 'test-verified' | 'verified';
   verifiedAt?: string | null;
+  /**
+   * Legacy submission snapshot; this is not the live email status. Check Notification queue and Verification emails for delivery results.
+   */
   deliveryStatus: 'not-configured';
   status: 'new' | 'reviewing' | 'awaiting-customer' | 'quoted' | 'closed';
   internalNotes?: string | null;
@@ -455,7 +462,7 @@ export interface InventoryMovement {
   createdAt: string;
 }
 /**
- * Private reconstructed JPEG/PNG photos supplied after email confirmation. Files expire after 30 days. Only owner and sales can download.
+ * Private files supplied after email confirmation, available for 30 days to owner and sales. Photos are reconstructed. PDF/XLSX files are unscanned; their download screen requires acknowledgment. Scan documents locally before opening; keep macros and external content disabled.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "enquiry-attachments".
@@ -692,6 +699,8 @@ export interface EnquiriesSelect<T extends boolean = true> {
   fingerprint?: T;
   locale?: T;
   source?: T;
+  requestKind?: T;
+  quotationSubmittedAt?: T;
   name?: T;
   email?: T;
   company?: T;

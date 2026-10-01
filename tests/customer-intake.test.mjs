@@ -11,7 +11,7 @@ import {
   customerHandlers,
   CustomerLimitError,
 } from "../src/lib/customer-http.ts";
-import { customerSettings } from "../src/lib/customer-readiness.ts";
+import { customerSettings,quotationSettings } from "../src/lib/customer-readiness.ts";
 const secret = "s".repeat(40),
   reference = `EA-${randomUUID()}`,
   origin = "https://example.test";
@@ -73,10 +73,13 @@ test("activation fails closed unless catalogue, sender, worker and public origin
     SITE_URL: origin,
   };
   assert.ok(customerSettings(env));
+  assert.equal(quotationSettings(env),undefined);
+  assert.ok(quotationSettings({...env,ENQUIRY_QUOTATIONS_ENABLED:'true'}));
   for (const key of Object.keys(env)) {
     const copy = { ...env };
     delete copy[key];
     assert.equal(customerSettings(copy), undefined, key);
+    assert.equal(quotationSettings({...copy,ENQUIRY_QUOTATIONS_ENABLED:'true'}),undefined,key);
   }
   for (const SITE_URL of [
     "http://example.test",
@@ -85,6 +88,14 @@ test("activation fails closed unless catalogue, sender, worker and public origin
     "https://user:pass@example.test",
   ])
     assert.equal(customerSettings({ ...env, SITE_URL }), undefined);
+});
+
+test('file-only intake needs its independent enable flag and retains verification response',async()=>{
+ const quotation={...input,manual:undefined,quotation:true};
+ assert.equal((await customerHandlers(base).POST(request(quotation))).status,503);
+ const response=await customerHandlers({...base,quotationEnabled:()=>true}).POST(request(quotation));
+ assert.equal(response.status,202);
+ const result=await response.json();assert.equal(result.status,'awaiting-verification');assert.equal(result.emailSent,false);
 });
 test("intake blocks disabled, cross-origin, wrong-host, oversized, malformed and throttled requests before saving", async () => {
   let calls = 0;

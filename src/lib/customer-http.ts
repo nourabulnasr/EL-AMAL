@@ -12,6 +12,7 @@ type Deps = {
   allow: (headers: Headers, scope: string) => Promise<boolean>;
   submit: (input: unknown) => Promise<{ reference: string; repeated: boolean }>;
   resend: (reference: string) => Promise<unknown>;
+  quotationEnabled?:()=>boolean;
 };
 const json = (body: unknown, status = 200) =>
   Response.json(body, {
@@ -38,7 +39,7 @@ export function customerHandlers(deps: Deps) {
   };
   return {
     GET: async (r: Request) =>
-      json({ canSubmit: deps.settings()?.origin === new URL(r.url).origin }),
+      json({ canSubmit: deps.settings()?.origin === new URL(r.url).origin,canSubmitQuotation:deps.settings()?.origin === new URL(r.url).origin&&!!deps.quotationEnabled?.() }),
     POST: async (r: Request) => {
       const denied = check(r);
       if (denied) return denied;
@@ -46,6 +47,7 @@ export function customerHandlers(deps: Deps) {
         if (!(await deps.allow(r.headers, "customer-intake")))
           return json({ error: "Try again later" }, 429);
         const input = parseEnquiry(await readInput(r));
+        if(input.quotation&&!deps.quotationEnabled?.())return json({error:'Quotation intake unavailable'},503);
         input.contact.email = input.contact.email.toLowerCase();
         if (!/^[^\s<>@]+@[^\s<>@]+\.[^\s<>@]+$/.test(input.contact.email))
           throw new EnquiryInputError("Invalid email");

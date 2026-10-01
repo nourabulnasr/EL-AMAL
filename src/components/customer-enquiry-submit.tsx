@@ -9,11 +9,13 @@ export function CustomerEnquirySubmit({
   locale,
   active,
   manual,
+  quotation,
 }: {
   details: EnquiryDetails;
   locale: Locale;
   active: boolean;
   manual?: { model: string; quantity: number; range: string };
+  quotation?:true;
 }) {
   const { lines, catalogue, publicEnquiries } = useBasket(),
     ar = locale === "ar";
@@ -27,8 +29,9 @@ export function CustomerEnquirySubmit({
   const signature = JSON.stringify({
     locale,
     contact: details,
-    lines: manual ? [] : lines,
+    lines: manual||quotation ? [] : lines,
     manual,
+    quotation,
   });
   useEffect(() => {
     if (cooldown <= 0) return;
@@ -71,8 +74,8 @@ export function CustomerEnquirySubmit({
           <div role="status">
             <strong>
               {ar
-                ? "تم استلام طلبك — أكد بريدك الإلكتروني"
-                : "Request received — confirm your email"}
+                ? "تم استلام بياناتك — أكد بريدك الإلكتروني"
+                : "Details received — confirm your email"}
             </strong>
             <p>
               <bdi>{saved.reference}</bdi>
@@ -83,7 +86,7 @@ export function CustomerEnquirySubmit({
                 : "Your confirmation email is queued. Check your inbox and spam folder. The confirmation link expires in one hour."}
             </p>
             <p>
-              {ar
+              {quotation?(ar?'بعد التأكيد، أرفق ملفات عرض السعر ثم اضغط إرسال الملفات للمراجعة. لم تُرسل أي ملفات بعد.':'After confirmation, attach your quotation files and select Send files for review. No files have been submitted yet.'):ar
                 ? "يراجع الفريق طلبك بعد التأكيد. لم يتم حجز أي مخزون."
                 : "The team can review your enquiry after confirmation. No stock is reserved."}
             </p>
@@ -122,8 +125,8 @@ export function CustomerEnquirySubmit({
         <>
           <p>
             {ar
-              ? "سيُحفظ الطلب وتُضاف رسالة تأكيد إلى قائمة الإرسال. لن يتم حجز مخزون أو إنشاء طلب شراء."
-              : "Submitting saves your requirement and queues a confirmation email. It does not reserve stock or place an order."}
+              ? quotation?"سنحفظ بيانات التواصل ونرسل رابط التأكيد. أرفق ملفاتك بعد تأكيد البريد، دون إعادة كتابة المنتجات.":"سيُحفظ الطلب وتُضاف رسالة تأكيد إلى قائمة الإرسال. لن يتم حجز مخزون أو إنشاء طلب شراء."
+              : quotation?"We will save your contact details and queue a confirmation link. Attach your files after confirming your email, without retyping any products.":"Submitting saves your requirement and queues a confirmation email. It does not reserve stock or place an order."}
           </p>
           <button
             type="button"

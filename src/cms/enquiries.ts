@@ -5,13 +5,14 @@ const immutable={update:()=>false};
 const fixed=(field:Field):Field=>({...field,access:immutable,admin:{...field.admin,readOnly:true}} as Field);
 export const Enquiries:CollectionConfig={
   slug:'enquiries',
-  admin:{useAsTitle:'reference',defaultColumns:['reference','company','status','source','createdAt'],description:'Saved requests with immutable submitted details. Update Status and Internal Notes here. Check the notification queues for email delivery; stock holds are managed in Staff stock control after exact SKUs and counts are entered.'},
+  admin:{useAsTitle:'reference',defaultColumns:['reference','company','requestKind','quotationSubmittedAt','status','createdAt'],description:'Saved requests with immutable submitted details. Quotation-file requests are ready only when Quotation submitted at is set. Their files are in Enquiry attachments. PDF/XLSX documents are unscanned. Update Status and Internal Notes here; use the queues for actual email delivery.'},
   access:{create:()=>false,read:sales,update:sales,delete:()=>false},
   hooks:{beforeChange:[({operation,data,originalDoc})=>{
     // Field access protects REST/admin; this also prevents trusted updates from rewriting history.
-    if(operation==='update')for(const key of ['reference','requestKey','fingerprint','locale','source','name','email','company','notes','items','verificationStatus','verifiedAt','deliveryStatus']){
+    if(operation==='update')for(const key of ['reference','requestKey','fingerprint','locale','source','name','email','company','notes','items','requestKind','quotationSubmittedAt','verificationStatus','verifiedAt','deliveryStatus']){
       if(key in data&&JSON.stringify(data[key])!==JSON.stringify(originalDoc[key]))throw new Error('Submitted enquiry details are immutable.');
     }
+    if(operation==='create'&&(data.requestKind==='quotation'?(data.items?.length??0)!==0:!data.items?.length))throw new Error('Quotation requests use files; product requests require item rows.');
     return data;
   }]},
   fields:[
@@ -20,11 +21,13 @@ export const Enquiries:CollectionConfig={
     fixed({name:'fingerprint',type:'text',required:true,admin:{hidden:true}}),
     fixed({name:'locale',type:'select',required:true,options:['en','ar']}),
     fixed({name:'source',type:'select',required:true,options:['demo','cms']}),
+    fixed({name:'requestKind',type:'select',required:true,defaultValue:'products',options:['products','quotation']}),
+    fixed({name:'quotationSubmittedAt',type:'date'}),
     fixed({name:'name',type:'text',required:true}),
     fixed({name:'email',type:'email',required:true}),
     fixed({name:'company',type:'text',required:true}),
     fixed({name:'notes',type:'textarea'}),
-    fixed({name:'items',type:'array',required:true,minRows:1,maxRows:100,fields:[
+    fixed({name:'items',type:'array',maxRows:100,fields:[
       {name:'productId',type:'text',required:true},{name:'model',type:'text',required:true},
       {name:'nameEn',type:'text',required:true},{name:'nameAr',type:'text',required:true},
       {name:'quantity',type:'number',required:true,min:1,max:9999},{name:'range',type:'text',maxLength:160},
