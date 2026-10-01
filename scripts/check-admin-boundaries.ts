@@ -57,7 +57,7 @@ try{
     const current=await lockState();assert.equal(Number(current.login_attempts),0);assert.equal(current.lock_until,null);
   });
   stage='notification field projection';
-  const enquiry=await payload.create({collection:'enquiries',overrideAccess:true,data:{reference:`EA-${randomUUID()}`,requestKey:randomUUID(),fingerprint:'disposable-boundary-test',locale:'en',source:'cms',name:'Synthetic tester',email:'customer@example.invalid',company:'Disposable regression',items:[{productId:'fixture',model:'TEST',nameEn:'Fixture',nameAr:'اختبار',quantity:1}],verificationStatus:'verified',verifiedAt:new Date().toISOString(),deliveryStatus:'not-configured',status:'new'}});
+  const enquiry=await payload.create({collection:'enquiries',overrideAccess:true,data:{reference:`EA-${randomUUID()}`,requestKey:randomUUID(),fingerprint:'disposable-boundary-test',requestKind:'products',locale:'en',source:'cms',name:'Synthetic tester',email:'customer@example.invalid',company:'Disposable regression',items:[{productId:'fixture',model:'TEST',nameEn:'Fixture',nameAr:'اختبار',quantity:1}],verificationStatus:'verified',verifiedAt:new Date().toISOString(),deliveryStatus:'not-configured',status:'new'}});
   const deliveryKey=randomUUID(),leaseToken=randomUUID();
   const notification=await payload.create({collection:'notifications',overrideAccess:true,data:{reference:enquiry.reference,enquiry:enquiry.id,deliveryKey,leaseToken,recipient:'staff@example.invalid',source:'cms',status:'pending',attempts:0,nextAttemptAt:new Date(Date.now()-1000).toISOString()}});
   for(const role of ['owner','sales'] as const){

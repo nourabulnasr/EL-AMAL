@@ -25,7 +25,7 @@ try{
   }
   async function enquiry(overrides:Partial<Enquiry>={},createdAt='2026-09-28T21:00:00.000Z'){
     const record=await payload.create({collection:'enquiries',overrideAccess:true,data:{
-      reference:`DEMAND-TEST-${randomUUID()}`,requestKey:randomUUID(),fingerprint:'disposable-demand-fixture',locale:'en',source:'cms',
+      reference:`DEMAND-TEST-${randomUUID()}`,requestKey:randomUUID(),fingerprint:'disposable-demand-fixture',requestKind:'products',locale:'en',source:'cms',
       name:'Never exported',email:'private-demand-fixture@example.invalid',company:'Private company',notes:'Private customer notes',internalNotes:'Private staff notes',
       items:[{productId:'cms-101',model:'Snapshot A-10',nameEn:'Original model',nameAr:'طراز',quantity:2,range:'0–10 bar'}],
       verificationStatus:'verified',verifiedAt:'2026-09-29T10:00:00.000Z',status:'new',deliveryStatus:'not-configured',...overrides,

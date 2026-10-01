@@ -24,7 +24,7 @@ try{
   for(let i=0;i<2;i++){
     const sku=await payload.create({collection:'skus',overrideAccess:true,data:{skuCode:`${suffix}-${i}`,product:product.id,configuration:{fixture:true,variant:i},active:true}});created.push({collection:'skus',id:sku.id});skuIds.push(sku.id);
   }
-  const enquiry=await payload.create({collection:'enquiries',overrideAccess:true,data:{reference:suffix,requestKey:randomUUID(),fingerprint:'fixture-only',locale:'en',source:'cms',name:'Temporary tester',email:'inventory@example.invalid',company:'Disposable fixture',items:[{productId:`cms-${product.id}`,model:suffix,nameEn:'Fixture',nameAr:'اختبار',quantity:5}],verificationStatus:'verified',verifiedAt:new Date().toISOString(),deliveryStatus:'not-configured',status:'reviewing'}});
+  const enquiry=await payload.create({collection:'enquiries',overrideAccess:true,data:{reference:suffix,requestKey:randomUUID(),fingerprint:'fixture-only',requestKind:'products',locale:'en',source:'cms',name:'Temporary tester',email:'inventory@example.invalid',company:'Disposable fixture',items:[{productId:`cms-${product.id}`,model:suffix,nameEn:'Fixture',nameAr:'اختبار',quantity:5}],verificationStatus:'verified',verifiedAt:new Date().toISOString(),deliveryStatus:'not-configured',status:'reviewing'}});
   created.push({collection:'enquiries',id:enquiry.id});enquiryId=enquiry.id;lineId=enquiry.items![0].id!;
   const command=(kind:string,extra:Record<string,unknown>={})=>({kind,requestKey:randomUUID(),skuId:skuIds[0],reason:'Automated disposable regression',...extra});
   const read=()=>readInventory(payload,users.owner,new URL(`https://example.invalid/api/staff/inventory?skuId=${skuIds[0]}`));

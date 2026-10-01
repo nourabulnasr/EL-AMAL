@@ -67,7 +67,7 @@ try{
   stage='photo admission and retry concurrency';
   const enquiries=[] as {id:number;reference:string}[];
   for(const index of [0,1,2,3,4]){
-    const doc=await cms.create({collection:'enquiries',overrideAccess:true,data:{reference:`EA-${randomUUID()}`,requestKey:randomUUID(),fingerprint:'disposable-security-fixture',locale:'en',source:index===2?'demo':'cms',name:'Synthetic security tester',email:'customer@example.invalid',company:'Disposable regression',items:[{productId:'fixture',model:'TEST',nameEn:'Fixture',nameAr:'اختبار',quantity:1}],verificationStatus:index===2?'test-verified':index===3?'unverified':'verified',verifiedAt:index===3?undefined:new Date().toISOString(),deliveryStatus:'not-configured',status:'new'}});
+    const doc=await cms.create({collection:'enquiries',overrideAccess:true,data:{reference:`EA-${randomUUID()}`,requestKey:randomUUID(),fingerprint:'disposable-security-fixture',requestKind:'products',locale:'en',source:index===2?'demo':'cms',name:'Synthetic security tester',email:'customer@example.invalid',company:'Disposable regression',items:[{productId:'fixture',model:'TEST',nameEn:'Fixture',nameAr:'اختبار',quantity:1}],verificationStatus:index===2?'test-verified':index===3?'unverified':'verified',verifiedAt:index===3?undefined:new Date().toISOString(),deliveryStatus:'not-configured',status:'new'}});
     enquiries.push({id:doc.id,reference:doc.reference});
   }
   const bytes=await sharp({create:{width:4,height:3,channels:3,background:'#092340'}}).png().toBuffer();
