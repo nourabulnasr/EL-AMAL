@@ -22,6 +22,16 @@ try{
  }
  console.log('Built CMS-enabled routes and private collection guards succeeded against disposable PostgreSQL.');
  for(const locale of ['en','ar']){
+  const response=await fetch(`${origin}/${locale}`,{signal:AbortSignal.timeout(20000)});
+  assert.equal(response.status,200,'Bilingual home runtime');
+  const html=await response.text();
+  assert.ok(html.includes('id="precision-title"'),'Approved hero heading is server rendered');
+  assert.ok(html.includes('precision-revealed.webp'),'Approved sculpture is rendered without client initialization');
+  assert.ok(html.includes(`href="/${locale}/products"`),'Hero leads to the real catalogue');
+  assert.ok(!html.includes('id="hero-query"'),'Old hero search was replaced');
+ }
+ console.log('Approved bilingual hero, optimized image and catalogue destination rendered.');
+ for(const locale of ['en','ar']){
   const response=await fetch(`${origin}/${locale}/rfq`,{signal:AbortSignal.timeout(20000)});
   assert.equal(response.status,200,'Bilingual RFQ runtime');
   assert.ok((await response.text()).includes('id="existing-quotation"'),'Existing quotation section is server rendered');
