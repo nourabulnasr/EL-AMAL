@@ -1,8 +1,10 @@
 # EL AMAL delivery status — 6 October 2026
 
+**Latest update:** The client selected Precision Revealed. The approved hero is implemented and deployed, with a measured layout-stability/security follow-up being verified. See [the6 October hero release record](precision-release-2026-10-06.md) for exact versions, tests, performance and live status. Existing quotations remain implemented/tested on the review branch; private backup authorization and real sender/worker setup still gate production activation. Hero selection is no longer pending.
+
 See PROGRESS.md for deployed commits, measurements and limitations. Older dated plans are historical.
 
-Current checkpoint: [6 October security and launch record](operations-release-2026-10-06.md). The lighter-blue/scroll refinements, Next security patch and staff-ownership/dependency hardening are live at `469ab5d`. All cloud checks and scoped production verification succeeded. The three replacement hero concepts await client selection. The prepared quotation feature is on a separate branch and is not production-active.
+Current checkpoint: [6 October security and launch record](operations-release-2026-10-06.md). The lighter-blue/scroll refinements, Next security patch and staff-ownership/dependency hardening are live at `469ab5d`. All cloud checks and scoped production verification succeeded. The client selected Precision Revealed; see the latest update above. The prepared quotation feature is on a separate branch and is not production-active.
 
 ## Overall scope estimate: about 90%
 

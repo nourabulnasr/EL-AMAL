@@ -1,5 +1,7 @@
 # Continue EL AMAL
 
+**Latest update:** The client selected Precision Revealed. The approved hero is implemented and deployed, with a measured layout-stability/security follow-up being verified. See [the6 October hero release record](precision-release-2026-10-06.md) for exact versions, tests, performance and live status. Existing quotations remain implemented/tested on the review branch; private backup authorization and real sender/worker setup still gate production activation. Hero selection is no longer pending.
+
 Workspace: C:\Users\noura\OneDrive\Documents\ChatGPT\EL-AMAL 4
 Production branch: codex/el-amal-foundation
 Prepared quotation branch: codex/hero-review-and-quotation (do not promote before the hosted migration and activation gates)

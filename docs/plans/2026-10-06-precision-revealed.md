@@ -32,4 +32,8 @@
 - Baseline: `322dbef` on `codex/hero-review-and-quotation`, clean; production application `469ab5d`. Existing quotation checks already verified in full cloud CI at `975fc3b`.
 - Ruling: reuse the selected concept render as an optimized image with input-driven depth. An accurate live 3D model does not exist, and a full 3D engine would spend the user's mobile performance budget without adding useful catalogue functionality.
 - Ruling: hero's secondary link goes to the real bilingual RFQ route, which offers existing quotations once that release is live; it never targets a nonexistent section on the current production release.
-- Current implementation and verification: pending.
+- Implementation complete: approved sculpture optimized to70,360 bytes; server-rendered bilingual hero, desktop pointer depth/pause, native scroll compression and product crop reveal. No new runtime dependencies.
+- Fresh final review identified keyboard focus clipping on the product crop. Reproduced in browser and fixed (`clip-path` changed from `inset(8% 0px)` to `none` on actual keyboard focus). Made hero hover contrast independent of stylesheet ordering. Tightened short-screen spacing after visual inspection.
+- Review branch3dc08cd:152 units, TypeScript and full cloud run37483572520 succeeded. Independent production candidatea1b1179:142 units, TypeScript and full cloud run37483948530 succeeded. Production branch run37484323691 also succeeded. Live deployment verification recorded in docs/precision-release-2026-10-06.md.
+- Dependency gate found source-map-js1.2.1 advisory; patched only that compatible lockfile entry to1.2.2, audit clear. No gate disabled.
+- Quotation release remains gated on explicit private backup destination authorization and real sender/frequent-worker setup. Temporary Vercel discovery login cancelled; credentials expired, no integration provisioned. Monitoring still deferred.

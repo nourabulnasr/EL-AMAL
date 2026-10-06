@@ -4,6 +4,7 @@ This is the detailed 29 September 2026 delivery record and operating manual requ
 
 The final PDF contains86 pages:85 baseline pages and one dated update recording the verified permission corrections deployed as `b3408a5`. The source contains about31,800 words. PDF files are explicitly stored as binary in Git so line-ending conversion cannot damage their internal offsets.
 
+- [Precision Revealed release and quotation activation status —6 October2026](../precision-release-2026-10-06.md)
 - [PDF handbook](EL-AMAL-Website-Handbook.pdf)
 - [Browser handbook](EL-AMAL-Website-Handbook.html)
 - [Combined editable Markdown](EL-AMAL-Website-Handbook.md)
