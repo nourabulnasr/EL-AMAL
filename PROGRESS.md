@@ -1,5 +1,16 @@
 # EL AMAL progress
 
+## Precision Revealed — 6 October 2026
+
+The client selected concept02 and authorized implementation. The approved bilingual sculpture hero is live at a1b1179 (production deployment el-amal-nw9o7fz6l-nour-abulnasrs-projects.vercel.app), preserving real catalogue data and existing security/SEO boundaries. The source image is70,360bytes, with responsive Next Image, desktop pointer depth/pause, progressive scroll compression, mobile/reduced-motion fallbacks and improved hover/reveal behavior. No animation dependency was added. Fresh code review caught a focus-outline clipping bug, reproduced and fixed in the hosted preview.
+
+Independent142-unit/TypeScript/full-cloud checks succeeded (37483948530 and37484323691). Combined hero/quotation branch3dc08cd passed152 units and full cloud run37483572520. Source-map-js was patched to1.2.2 after a new advisory gate failure; audit returned zero findings. Read-only live verification checked11 routes, headers, home metadata, real catalogue, private403 boundaries and the70KB image. The initial check mistakenly expected the RFQ form to be indexable; corrected against the existing intentionally-noindex form policy, with no product change.
+
+Fresh mobile PageSpeed report yh4u9oco6v measured performance85, LCP2.3s, TBT80ms, CLS0.261, accessibility/best-practices/SEO100. Traced the shift to a half-viewport route loading placeholder exposing the footer before streamed content replaced it. Candidate29784b2 reserves100svh for that loading state; cloud verification/live measurement pending. Do not claim the new performance target is met yet.
+
+Quotation implementation remains tested on codex/hero-review-and-quotation, not production-active. The specific encrypted production backup destination request for6October is still unanswered; no export or hosted quotation migration occurred. Verified sender/frequent worker also remain absent; temporary Vercel discovery login was cancelled after credentials were unavailable. Receiving inbox is already confirmed. Checkly remains deferred. Current work is on codex/precision-revealed-live, derived from production so quotation schema cannot be deployed accidentally. See docs/precision-release-2026-10-06.md and its final release record.
+
+
 ## Post-handbook permission corrections — 29 September 2026
 
 The completed handbook was saved and pushed as d9e3744 before development resumed. Reproduced and fixed two documented boundaries: Payload staff unlock now explicitly requires an owner, and notification deliveryKey/leaseToken are removed by field-level read access from ordinary owner/sales API responses. They are worker identifiers, not publicly exposed credentials. Corrected the enquiry admin helper and labelled the legacy deliveryStatus as a submission snapshot; actual delivery results remain in the queues. Fixed stale continuation/client-input notes.

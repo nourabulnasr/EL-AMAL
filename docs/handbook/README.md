@@ -4,11 +4,13 @@ This is the detailed 29 September 2026 delivery record and operating manual requ
 
 The final PDF contains86 pages:85 baseline pages and one dated update recording the verified permission corrections deployed as `b3408a5`. The source contains about31,800 words. PDF files are explicitly stored as binary in Git so line-ending conversion cannot damage their internal offsets.
 
+- [Precision Revealed release and quotation activation status —6 October2026](../precision-release-2026-10-06.md)
 - [PDF handbook](EL-AMAL-Website-Handbook.pdf)
 - [Browser handbook](EL-AMAL-Website-Handbook.html)
 - [Combined editable Markdown](EL-AMAL-Website-Handbook.md)
 - [All 151 product route pairs](catalogue-route-index.md)
 - [Changes after this baseline](post-handbook-update.md)
+- [6 October security, administrator and launch update](../operations-release-2026-10-06.md) — separate current addendum; the dated PDF/HTML above retain their historical baseline.
 
 The five baseline chapter source files are `overview.md`, `frontend-chapters.md`, `admin-chapters.md`, `backend-chapters.md` and `remaining-and-reference.md`. The dated `post-handbook-update.md` is included as a final chapter in every generated format. Update the relevant source before rebuilding. Dated baseline evidence is not silently replaced when production changes.
 
