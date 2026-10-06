@@ -27,6 +27,7 @@ Open http://127.0.0.1:3004/en. Production preview: `npm run build`, then `npm st
 - Verified-customer private JPEG/PNG attachments, bounded encrypted storage, staff-only downloads and scheduled retention.
 - An existing-quotation route within the RFQ page accepts contact details without product lines, then verified private PDF/XLSX/photo uploads and explicit final submission. Documents are unscanned, download-only and require staff acknowledgment. Intake activation remains gated; see [current implementation and limits](docs/customer-intake.md).
 - Password policy, sign-in limits, one-time concurrent-safe password recovery and durable delivery health/queue limits. Recovery delivery needs a verified sending domain.
+- Staff ownership protection: explicit individual role changes preserve an owner; authentication/session writes cannot overwrite a newer stored role. The guard is application-level, not a restriction on privileged direct SQL.
 
 ## Current launch state
 
@@ -62,5 +63,6 @@ Live deployment is through the existing Vercel project; pushes to the connected 
 - [Scheduled operations](docs/delivery-operations.md)
 - [Original brief and acceptance scope](docs/kickoff-2026-09-17.md)
 - [Continue this project](docs/continue-project.md)
+- [6 October hardening and current launch gates](docs/operations-release-2026-10-06.md)
 
 Credentials, source proposal text, test artifacts and screenshots are ignored by Git. Keep them private and back up through an appropriate secure process. Visual approval belongs to Nour; release acceptance remains outstanding.

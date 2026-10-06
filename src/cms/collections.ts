@@ -1,10 +1,11 @@
-import type {Access,CollectionConfig,Field} from 'payload';
+import {APIError,type Access,type CollectionConfig,type Field} from 'payload';
 import {safeDatasheetUrl} from '../lib/public-catalogue.ts';
 import {parseCatalogueDetails,validateCatalogueDetails} from '../lib/catalogue-details.ts';
 import {instrumentTypes,applications} from '../content/product-options.ts';
 import {hasRole,canPublish} from '../lib/access.ts';
 import {validateStaffOperation} from '../lib/staff-security.ts';
 import {lockStaffReset} from '../lib/staff-reset-lock.ts';
+import {recordStaffRoleEdit} from '../lib/staff-ownership.ts';
 import {protectSkuIdentity} from '../lib/sku-identity.ts';
 const owner:Access=({req})=>hasRole(req.user,['owner']);
 const catalogue:Access=({req})=>hasRole(req.user,['owner','catalogue-editor']);
@@ -19,6 +20,8 @@ export const Staff:CollectionConfig={
  slug:'staff',auth:{maxLoginAttempts:5,lockTime:600000,tokenExpiration:7200,cookies:{sameSite:'Lax',secure:process.env.NODE_ENV==='production'},forgotPassword:{expiration:1800000,minRequestInterval:600000}},admin:{useAsTitle:'email'},
  hooks:{beforeOperation:[async({operation,args,req})=>{
    validateStaffOperation(operation,args);
+   if(operation==='update'&&(!('id' in args)||args.id==null))throw new APIError('Edit staff accounts individually.',400);
+   if(operation==='update')recordStaffRoleEdit(req,args);
    if(operation==='resetPassword')await lockStaffReset(req,(args as {data?:{token?:unknown}}).data?.token);
    return args;
  }]},
