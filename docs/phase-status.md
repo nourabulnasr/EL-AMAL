@@ -1,6 +1,6 @@
 # EL AMAL delivery status — 6 October 2026
 
-**Latest update:** The client selected Precision Revealed. The approved hero is implemented and deployed, with a measured layout-stability/security follow-up being verified. See [the6 October hero release record](precision-release-2026-10-06.md) for exact versions, tests, performance and live status. Existing quotations remain implemented/tested on the review branch; private backup authorization and real sender/worker setup still gate production activation. Hero selection is no longer pending.
+**Latest update:** The client selected Precision Revealed. The approved hero and layout-stability/security follow-up are live at63acd5b. Final lab measurements: mobile95/desktop99 performance, CLS0, accessibility/best-practices/SEO100. See [the6 October hero release record](precision-release-2026-10-06.md) for exact versions, tests, performance and live status. Existing quotations remain implemented/tested on the review branch; private backup authorization and real sender/worker setup still gate production activation. Hero selection is no longer pending.
 
 See PROGRESS.md for deployed commits, measurements and limitations. Older dated plans are historical.
 

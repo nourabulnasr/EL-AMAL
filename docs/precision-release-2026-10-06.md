@@ -20,7 +20,7 @@ The client chose the second concept. The home page replaces the original gauge a
 - Browser: desktop English, 390px English and Arabic, no horizontal overflow in checked mobile views, correct Arabic direction and mirrored art, image loaded, pause toggles to enabled/disabled, no errors/warnings in the inspected preview.
 - Fresh code review found one important focus-outline issue. Reproduced on the first preview: focused image link retained `clip-path: inset(8% 0px)`. Fixed preview returned `clip-path: none` with its visible outline and 4px offset. CTA hover specificity was strengthened independently of CSS chunk ordering.
 - Short-screen desktop spacing was tightened after preview inspection so the catalogue action is easier to reach.
-- Reduced-motion behavior has source review; actual OS-preference/device testing and refreshed mobile Lighthouse/field Core Web Vitals are not claimed complete.
+- Reduced-motion behavior has source review; broader actual OS-preference/device testing and field Core Web Vitals are not claimed complete. Fresh lab measurements are below.
 - First fresh [PageSpeed report](https://pagespeed.web.dev/analysis/https-el-amal-sigma-vercel-app-en/yh4u9oco6v?form_factor=mobile): mobile85, LCP2.3s, TBT80ms, CLS0.261; desktop100, LCP0.4s, TBT20ms, CLS0. Accessibility, best practices and basic SEO scored100 on both. No field data was available. The report identified the footer as the layout-shift culprit. A public HTML stream confirmed the route-loading placeholder/footer precede the hidden streamed home segment; its48svh fallback was too short. Changed only the fallback's reserved space to100svh, retaining navigation feedback and the approved intro. Re-measure after release; this is not a claim of fixed CLS yet.
 - Visual acceptance belongs to Nour/client. The concept selection is approved; this implementation has been inspected by the agent, not represented as new client acceptance.
 
@@ -38,4 +38,22 @@ Checkly monitoring remains deferred at Nour's request. Hero release proceeds ind
 
 ## Release record
 
-Hero releasea1b1179 is live through `https://el-amal-nw9o7fz6l-nour-abulnasrs-projects.vercel.app` and the stable client alias. Production branch CI37484323691 succeeded. Eleven live route/header checks, EN/AR home metadata/schema/real products and the70,360-byte image succeeded. RFQ deliberately remains noindex; private SKU/attachment APIs returned403 and public intake readiness returnedfalse. Browser confirmed the deployed desktop hero with the primary CTA inside the720px viewport. The loading-space/security follow-up63acd5b is awaiting full CI/deployment verification. Do not promote the sample-data preview; production must rebuild with the existing production environment.
+Hero releasea1b1179 is live through `https://el-amal-nw9o7fz6l-nour-abulnasrs-projects.vercel.app` and the stable client alias. Production branch CI37484323691 succeeded. Eleven live route/header checks, EN/AR home metadata/schema/real products and the70,360-byte image succeeded. RFQ deliberately remains noindex; private SKU/attachment APIs returned403 and public intake readiness returnedfalse. Browser confirmed the deployed desktop hero with the primary CTA inside the720px viewport. The loading-space/security follow-up63acd5b is now live at https://el-amal-3m6pheeed-nour-abulnasrs-projects.vercel.app and the stable client alias. Full cloud runs37485945642 and37486441262 succeeded. The delivered CSS contains min-height:100svh for route loading, and all11 scoped live route checks succeeded again. Do not promote the sample-data preview; production must rebuild with the existing production environment.
+
+## Final measurement and synchronization
+
+[Final PageSpeed report](https://pagespeed.web.dev/analysis/https-el-amal-sigma-vercel-app-en/nm5hsmeqea?form_factor=mobile),6 October2026,18:22 local:
+
+| Lab check | Mobile | Desktop |
+|---|---:|---:|
+| Performance | 95 | 99 |
+| Accessibility | 100 | 100 |
+| Best practices | 100 | 100 |
+| Basic SEO | 100 | 100 |
+| Largest Contentful Paint | 2.4s | 0.7s |
+| Total Blocking Time | 60ms | 70ms |
+| Cumulative Layout Shift | 0 | 0 |
+
+The measured footer shift fell from0.261 to0. These are individual lab samples; Google reported no real-user field data. Automated100 scores do not establish perfect accessibility/security, search ranking or an award. No resources or legitimate animations were disabled to obtain the result.
+
+Merged the tested production changes into quotation review as c2e6262. All152 local unit tests succeeded. Local TypeScript ran out of native memory; the complete cloud run37486837237 then succeeded, including TypeScript, advisory gate, isolated migrations, actual quotation/stock/report/admin regressions, production build and built-server checks. The conflict resolution retained both hero checks and quotation runtime guards. Production remains63acd5b and excludes the pending quotation migration. No customer messages, private exports, hosted migrations or provider terms acceptance occurred.
