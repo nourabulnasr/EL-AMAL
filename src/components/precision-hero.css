@@ -81,8 +81,14 @@ html[dir=rtl] .precision-image { scale: -1 1; }
 @media (min-width: 1600px) {
   .precision-hero { padding-inline: max(6%, calc((100vw - 1400px) / 2)); }
 }
+@media (min-width: 900px) and (max-height: 800px) {
+  .precision-hero { padding-top: 56px; }
+  .precision-copy { padding-bottom: 64px; }
+  .precision-copy h1 { font-size: clamp(82px, 7.4vw, 108px); margin-block: 24px; }
+  .precision-actions { margin-top: 24px; }
+}
 @media (hover: hover) and (pointer: fine) {
-  .precision-primary.button:hover { background: var(--accent); color: var(--navy-deep); box-shadow: 0 8px 32px rgb(237 155 69 / .2); }
+  .precision-hero .precision-primary.button:hover { background: var(--accent); color: var(--navy-deep); box-shadow: 0 8px 32px rgb(237 155 69 / .2); }
   .precision-secondary:hover > span { translate: calc(4px * var(--interaction-direction)) -3px; }
   .precision-motion:hover { border-color: var(--accent); }
 }

@@ -110,6 +110,8 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 @keyframes page-progress { from { scale: 0 1; } to { scale: 1 1; } }
 /* A restrained crop reveal on product imagery; names and actions stay visible. */
 @keyframes instrument-reveal { from { clip-path: inset(8% 0 8% 0); } to { clip-path: inset(0); } }
+/* Keep the external keyboard outline outside the animated crop. */
+.selected-section .product-visual:focus-visible { animation: none; clip-path: none; }
 @media (prefers-reduced-motion: reduce) {
   .manufacturer-image, .category-row::before, .industry-list > a::before { transition: none; }
   .product-visual:hover .manufacturer-image { scale: 1; }
