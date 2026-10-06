@@ -11,7 +11,9 @@ import {siteOrigin} from './lib/site-policy.mjs';
 import {DeliveryOperations} from './cms/delivery-operations.ts';
 import {InventoryReservations,InventoryMovements} from './cms/inventory.ts';
 import {EnquiryAttachments} from './cms/attachments.ts';
+import {installStaffRoleGuard} from './lib/staff-ownership.ts';
 export default buildConfig({
+ onInit:async(payload)=>{installStaffRoleGuard(payload);},
  secret:process.env.PAYLOAD_SECRET||'',
  serverURL:siteOrigin(),
  email:staffEmailAdapter(),

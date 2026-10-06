@@ -27,6 +27,7 @@ if(process.env.CI==='true'){
 const {payload,close}=await isolatedPayload('admin_boundary_test');
 const forbidden=(error:unknown)=>error instanceof Error&&'status' in error&&error.status===403;
 const users={} as Record<'owner'|'sales'|'warehouse'|'catalogue-editor',Staff&{collection:'staff'}>;
+const passwords={} as Record<Staff['role'],string>;
 let stage='fixtures',failures=0,checks=0;
 async function check(label:string,run:()=>Promise<void>){
   checks++;
@@ -35,7 +36,8 @@ async function check(label:string,run:()=>Promise<void>){
 }
 try{
   for(const role of ['owner','sales','warehouse','catalogue-editor'] as const){
-    const doc=await payload.create({collection:'staff',overrideAccess:true,data:{email:`${role}-${randomUUID()}@example.invalid`,password:randomBytes(24).toString('hex'),role}});
+    passwords[role]=randomBytes(24).toString('hex');
+    const doc=await payload.create({collection:'staff',overrideAccess:true,data:{email:`${role}-${randomUUID()}@example.invalid`,password:passwords[role],role}});
     users[role]={...doc,collection:'staff'};
   }
   stage='staff unlock authorization';
@@ -139,6 +141,55 @@ try{
     const edited=await payload.update({collection:'staff',id:users.owner.id,overrideAccess:false,user:users.owner,data:{email}});
     assert.equal(edited.email,email);assert.equal(edited.role,'owner');
     await updateRole(users.sales.id,'warehouse');assert.equal(await roleOf(users.sales.id),'warehouse');
+  });
+  // Pause the real adapter boundary, keeping real login/reset/session behavior.
+  // The fake boundary only controls ordering; assertions read persisted roles.
+  async function overlapTransfer(operation:'login'|'reset'){
+    await payload.db.pool.query("UPDATE staff SET role=CASE WHEN id=$1 THEN 'owner'::enum_staff_role ELSE 'sales'::enum_staff_role END WHERE id=ANY($2::int[])",[users.owner.id,[users.owner.id,users.sales.id]]);
+    const token=randomBytes(20).toString('hex');
+    if(operation==='reset')await payload.db.pool.query("UPDATE staff SET reset_password_token=$1,reset_password_expiration=now()+interval '10 minutes' WHERE id=$2",[token,users.sales.id]);
+    let resume!:()=>void,arrived!:()=>void,intercepted=false;
+    const pause=new Promise<void>(resolve=>{resume=resolve;}),reached=new Promise<void>(resolve=>{arrived=resolve;});
+    const original=payload.db.updateOne.bind(payload.db);
+    payload.db.updateOne=async args=>{
+      if(!intercepted&&args.collection==='staff'&&args.id===users.sales.id&&(operation==='login'?Array.isArray(args.data.sessions):typeof args.data.hash==='string')){
+        intercepted=true;arrived();await pause;
+      }
+      return original(args);
+    };
+    const pending=operation==='login'
+      ?payload.login({collection:'staff',data:{email:users.sales.email,password:passwords.sales}})
+      :payload.resetPassword({collection:'staff',overrideAccess:true,data:{token,password:randomBytes(24).toString('hex')}});
+    const outcome=pending.then(()=>({ok:true}),()=>({ok:false}));
+    let timer:ReturnType<typeof setTimeout>|undefined;
+    try{
+      await Promise.race([reached,new Promise<never>((_,reject)=>{timer=setTimeout(()=>reject(new Error('Auth write boundary not reached')),20000);})]);
+      await updateRole(users.sales.id,'owner');await updateRole(users.owner.id,'sales');
+    }finally{clearTimeout(timer);resume();payload.db.updateOne=original;}
+    assert.equal((await outcome).ok,true);
+    assert.equal(await roleOf(users.sales.id),'owner');assert.equal(await ownerCount(),1);
+  }
+  await check('an overlapping login cannot undo an ownership transfer',()=>overlapTransfer('login'));
+  await check('an overlapping password reset cannot undo an ownership transfer',()=>overlapTransfer('reset'));
+  await payload.db.pool.query("UPDATE staff SET role='owner' WHERE id=ANY($1::int[])",[[users.owner.id,users.sales.id]]);
+  await check('parallel individual edits within one transaction cannot remove both owners',async()=>{
+    const transactionID=await payload.db.beginTransaction();assert.ok(transactionID);
+    let resume!:()=>void,count=0;
+    const barrier=new Promise<void>(resolve=>{resume=resolve;}),original=payload.db.updateOne.bind(payload.db);
+    const timer=setTimeout(resume,20000);
+    payload.db.updateOne=async args=>{
+      if(args.collection==='staff'&&await args.req?.transactionID===transactionID){count++;if(count===2)resume();await barrier;}
+      return original(args);
+    };
+    let results:PromiseSettledResult<unknown>[]=[];
+    try{
+      results=await Promise.allSettled([users.owner.id,users.sales.id].map(id=>payload.update({collection:'staff',id,overrideAccess:false,user:users.owner,req:{transactionID},data:{role:'sales'}})));
+      if(payload.db.sessions?.[String(transactionID)])await payload.db.commitTransaction(transactionID);
+    }finally{
+      clearTimeout(timer);resume();payload.db.updateOne=original;
+      if(payload.db.sessions?.[String(transactionID)])await payload.db.rollbackTransaction(transactionID);
+    }
+    assert.equal(count,2);assert.ok(results.some(result=>result.status==='rejected'));assert.ok(await ownerCount()>=1);
   });
   assert.equal(Object.keys(payload.db.sessions??{}).length,0);
 }catch{
