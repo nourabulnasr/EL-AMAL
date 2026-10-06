@@ -1,8 +1,13 @@
 {
   "date": "2026-10-01",
-  "status": "Concept review; live hero unchanged; awaiting Nour's selection",
+  "status": "Client selected concept 02, Precision Revealed, on 6 October 2026; implementation and deployment verification in progress",
   "preview": "Run node docs/design/2026-10-01/serve.mjs, then open http://127.0.0.1:3012",
-  "references": ["https://uiuxagencyrankings.com/#studios", "https://fantasy.co/", "https://clay.global/", "https://www.metalab.com/"],
+  "references": [
+    "https://uiuxagencyrankings.com/#studios",
+    "https://fantasy.co/",
+    "https://clay.global/",
+    "https://www.metalab.com/"
+  ],
   "researchLimits": "Official studio content reviewed; Fantasy hero visually inspected. Clay and Metalab renderers crashed on this laptop, so their detailed scroll behavior was not verified. The supplied ranking ranks agencies, not the best individual websites. No assets copied from the studios.",
   "fourLayers": {
     "subject": "Industrial process installation, abstract precision sensor assembly, or an original flow field; each leads toward the catalogue and existing-quotation journey.",
@@ -29,12 +34,19 @@
     "mobile": "390x844 CSS viewport: no horizontal overflow; native screenshot scaling was unreliable, so no claim of full mobile visual acceptance.",
     "pause": "Pause changes aria-pressed to true and label to Resume motion; resumed before leaving the preview.",
     "javascript": "preview.js and serve.mjs parsed with node --check.",
-    "visualApproval": "Reserved for Nour; not yet received."
+    "visualApproval": "User reported the client chose concept 02 on 6 October 2026. Production implementation still subject to visual review."
   },
   "productionPaletteContrast": {
     "whiteOn365F94": 6.52,
     "whiteOn183563": 12.15,
     "A9D5F3On091540": 11.32,
     "method": "WCAG relative sRGB luminance ratio; these pairs do not substitute for a full page accessibility audit."
+  },
+  "productionAsset": {
+    "file": "public/images/precision-revealed.webp",
+    "source": "assets/precision-sculpture-concept.png",
+    "bytes": 70360,
+    "conversion": "Lossy WebP, quality 83; same composition; responsive delivery through next/image",
+    "meaning": "Concept illustration, not a product diagram or live 3D model"
   }
 }

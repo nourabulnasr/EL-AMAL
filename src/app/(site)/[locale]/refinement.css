@@ -1,4 +1,4 @@
-/* Secondary blue, October 2026. The current hero is intentionally unchanged. */
+/* Secondary blue and input-driven refinements, October 2026. */
 :root {
   --blue-steel: #365f94;
   --blue-ice: #a9d5f3;
@@ -34,7 +34,8 @@
   background: var(--blue-wash);
   border-color: var(--blue-edge);
 }
-.product-info .model, .information-number { color: var(--blue-ice); }
+.product-info .model, .information-number { color: #fff; }
+.selected-section .product-visual { transform-origin: center; }
 .button-dark, .button-light { background: var(--blue-steel); border-color: var(--blue-edge); }
 .quote-summary .button, .catalogue-filter .button { background: var(--blue-wash); }
 .approach .button, .information-contact .button { background: var(--navy-panel); }
@@ -72,6 +73,11 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
    Unsupported browsers keep static content; nothing starts hidden. */
 @media (prefers-reduced-motion: no-preference) {
   @supports (animation-timeline: view()) {
+    .selected-section .product-visual {
+      animation: instrument-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 24%;
+    }
     .section-heading, .information-aside {
       animation: section-settle linear both;
       animation-timeline: view();
@@ -102,6 +108,10 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 @keyframes section-settle { from { translate: 0 18px; } to { translate: 0 0; } }
 @keyframes process-settle { from { translate: 0 10px; } to { translate: 0 0; } }
 @keyframes page-progress { from { scale: 0 1; } to { scale: 1 1; } }
+/* A restrained crop reveal on product imagery; names and actions stay visible. */
+@keyframes instrument-reveal { from { clip-path: inset(8% 0 8% 0); } to { clip-path: inset(0); } }
+/* Keep the external keyboard outline outside the animated crop. */
+.selected-section .product-visual:focus-visible { animation: none; clip-path: none; }
 @media (prefers-reduced-motion: reduce) {
   .manufacturer-image, .category-row::before, .industry-list > a::before { transition: none; }
   .product-visual:hover .manufacturer-image { scale: 1; }
