@@ -87,6 +87,59 @@ try{
     const final=await payload.findByID({collection:'notifications',id:notification.id,overrideAccess:true,depth:0});
     assert.equal(final.status,'sent');assert.equal(final.attempts,1);assert.equal(final.leaseToken,null);
   });
+  stage='owner continuity';
+  const ownerCount=async()=>Number((await payload.db.pool.query("SELECT count(*) AS count FROM staff WHERE role='owner'")).rows[0].count);
+  const roleOf=async(id:number)=>(await payload.findByID({collection:'staff',id,overrideAccess:true})).role;
+  const updateRole=(id:number,role:Staff['role'])=>payload.update({collection:'staff',id,overrideAccess:false,user:users.owner,data:{role}});
+  await check('the last owner cannot be demoted',async()=>{
+    await assert.rejects(updateRole(users.owner.id,'sales'));
+    assert.equal(await roleOf(users.owner.id),'owner');assert.equal(await ownerCount(),1);
+  });
+  // Restore only these disposable fixtures after an expected red-stage failure.
+  await payload.db.pool.query("UPDATE staff SET role='owner' WHERE id=$1",[users.owner.id]);
+  await check('an owner can transfer ownership after appointing another owner',async()=>{
+    await updateRole(users.sales.id,'owner');
+    await updateRole(users.owner.id,'sales');
+    assert.equal(await roleOf(users.sales.id),'owner');assert.equal(await roleOf(users.owner.id),'sales');
+    await payload.update({collection:'staff',id:users.owner.id,overrideAccess:false,user:{...users.sales,role:'owner'},data:{role:'owner'}});
+  });
+  await check('bulk staff changes cannot remove every owner',async()=>{
+    await assert.rejects(payload.update({collection:'staff',overrideAccess:false,user:users.owner,where:{role:{equals:'owner'}},data:{role:'sales'}}));
+    assert.equal(await ownerCount(),2);
+  });
+  await payload.db.pool.query("UPDATE staff SET role='owner' WHERE id=ANY($1::int[])",[[users.owner.id,users.sales.id]]);
+  await check('simultaneous owner demotions preserve exactly one owner',async()=>{
+    const results=await Promise.allSettled([updateRole(users.owner.id,'sales'),updateRole(users.sales.id,'sales')]);
+    assert.equal(results.filter(result=>result.status==='fulfilled').length,1);
+    assert.equal(await ownerCount(),1);
+  });
+  await payload.db.pool.query("UPDATE staff SET role='owner' WHERE id=ANY($1::int[])",[[users.owner.id,users.sales.id]]);
+  await check('role changes fail closed without a database transaction',async()=>{
+    await assert.rejects(payload.update({collection:'staff',id:users.sales.id,overrideAccess:false,user:users.owner,disableTransaction:true,data:{role:'sales'}}));
+    assert.equal(await roleOf(users.sales.id),'owner');
+  });
+  await payload.db.pool.query("UPDATE staff SET role='owner' WHERE id=ANY($1::int[])",[[users.owner.id,users.sales.id]]);
+  await check('an uncommitted demotion holds the lock and rollback releases it',async()=>{
+    const transactionID=await payload.db.beginTransaction();assert.ok(transactionID);
+    try{
+      await payload.update({collection:'staff',id:users.sales.id,overrideAccess:false,user:users.owner,req:{transactionID},data:{role:'sales'}});
+      await assert.rejects(updateRole(users.owner.id,'sales'));
+    }finally{await payload.db.rollbackTransaction(transactionID);}
+    assert.equal(await roleOf(users.sales.id),'owner');assert.equal(await ownerCount(),2);
+    await updateRole(users.sales.id,'sales');assert.equal(await ownerCount(),1);
+    await updateRole(users.sales.id,'owner');
+  });
+  await check('failed staff validation releases the role lock for a corrected request',async()=>{
+    await assert.rejects(payload.update({collection:'staff',id:users.sales.id,overrideAccess:false,user:users.owner,data:{role:'sales',email:'invalid-email'}}));
+    assert.equal(await roleOf(users.sales.id),'owner');
+    await updateRole(users.sales.id,'sales');assert.equal(await ownerCount(),1);
+  });
+  await check('ordinary owner edits and non-owner role changes still work',async()=>{
+    const email=`edited-${randomUUID()}@example.invalid`;
+    const edited=await payload.update({collection:'staff',id:users.owner.id,overrideAccess:false,user:users.owner,data:{email}});
+    assert.equal(edited.email,email);assert.equal(edited.role,'owner');
+    await updateRole(users.sales.id,'warehouse');assert.equal(await roleOf(users.sales.id),'warehouse');
+  });
   assert.equal(Object.keys(payload.db.sessions??{}).length,0);
 }catch{
   failures++;console.error(`Boundary regression failed during ${stage}; sensitive diagnostics withheld.`);

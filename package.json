@@ -35,6 +35,9 @@
     "typescript": "5.9.3"
   },
   "overrides": {
+    "@payloadcms/next": {
+      "sass": "1.79.6"
+    },
     "@esbuild-kit/core-utils": {
       "esbuild": "0.25.12"
     },

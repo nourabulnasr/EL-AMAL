@@ -254,7 +254,7 @@ export interface Skus {
   createdAt: string;
 }
 /**
- * Saved requests. Email delivery and stock reservation are not active yet.
+ * Saved requests with immutable submitted details. Update Status and Internal Notes here. Check the notification queues for email delivery; stock holds are managed in Staff stock control after exact SKUs and counts are entered.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "enquiries".
@@ -281,6 +281,9 @@ export interface Enquiry {
   }[];
   verificationStatus: 'unverified' | 'test-verified' | 'verified';
   verifiedAt?: string | null;
+  /**
+   * Legacy submission snapshot; this is not the live email status. Check Notification queue and Verification emails for delivery results.
+   */
   deliveryStatus: 'not-configured';
   status: 'new' | 'reviewing' | 'awaiting-customer' | 'quoted' | 'closed';
   internalNotes?: string | null;
