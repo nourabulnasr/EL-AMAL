@@ -55,6 +55,8 @@ The private existing-quotation feature is on `codex/hero-review-and-quotation`. 
 
 The quotation schema migration has not been applied to production. Automatic approval review rejected the proposed full encrypted database export to the laptop because explicit authorization of that private-data destination was missing. No replacement export or migration was attempted. Normal intake also remains disabled until the verified sender and a frequent healthy mail worker are genuinely ready.
 
+The production security fixes were merged into this prepared branch as `975fc3b`. All152 combined unit tests, TypeScript and full cloud run [37393952454](https://github.com/nourabulnasr/EL-AMAL/actions/runs/37393952454) succeeded, including the quotation lifecycle, staff safeguards, build and runtime checks. Updated [quotation review preview](https://el-amal-lvu0rnxc8-nour-abulnasrs-projects.vercel.app/en/rfq#existing-quotation) uses sample content and inactive intake. It is not the production catalogue or an operational submission endpoint. The production reference remains469ab5d.
+
 ## What remains
 
 **Nour/client decisions and access:** hero choice; verified sender/domain/provider and frequent-worker authorization; explicit encrypted-backup destination approval; Search Console ownership; final business contacts/company facts/WIKA evidence; exact SKU configurations/counts and stock policy; strong owner credentials/final staff roles; privacy, content and launch acceptance. The receiving inbox and all 29 catalogue pages are already supplied—do not request them again. Checkly remains deferred.

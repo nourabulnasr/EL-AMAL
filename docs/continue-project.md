@@ -24,6 +24,8 @@ Continue from docs/operations-release-2026-10-06.md for the latest ownership/dep
 
 The prior full encrypted database export was rejected by automatic approval review pending explicit destination authorization. Do not retry elsewhere or apply the hosted quotation migration. Intake/recovery still need a real verified sender and frequent healthy worker; the receiving inbox is already confirmed. Checkly stays deferred. Update docs/final-client-inputs.md rather than repeatedly asking for the same inputs.
 
+Final review-branch synchronization975fc3b passed152 units, TypeScript and complete cloud run37393952454, including quotation and staff database regressions. Updated preview: https://el-amal-lvu0rnxc8-nour-abulnasrs-projects.vercel.app/en/rfq#existing-quotation. It uses sample content with intake off; do not promote that preview as production. Local working branch remains codex/hero-review-and-quotation, while origin/codex/el-amal-foundation stays469ab5d. Final online audit reports zero known findings.
+
 ## Earlier verified milestone — 29 September 2026
 
 Stock now supports partial dispatch/release, blocked balances, physical-count reviews and optional freshness policy. Owner/sales have private demand reports and CSV exports at /staff/reports. Encrypted PostgreSQL backup/isolated restore matched24 tables/572 rows and constraints; key is outside OneDrive.142 unit checks and TypeScript succeeded. Live font release08e7cfb measured home91/product90 mobile Lighthouse, LCP2.9s/CLS0; representative EN/AR/mobile/private/no-JS checks succeeded. Final security/concurrent-catalogue release7f73267 is live and CI36584827754 succeeded; deployment and browser evidence are in PROGRESS.md. npm audit now reports zero vulnerabilities.
