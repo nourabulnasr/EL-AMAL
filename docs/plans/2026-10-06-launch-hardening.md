@@ -22,4 +22,6 @@ External gates remain unchanged: client hero choice and business facts; sender a
 - Final: Ruling: real credentials, sender setup, hosted migration and visual acceptance remain external gates; no approval or success is inferred from this code review. Cost if ignored: an operationally incomplete launch.
 - Final: Ruling: cloud build compatibility requires successful CI and deployed runtime verification, beyond source review. Cost if ignored: a build-only or runtime-incompatible release.
 - Final: Ruling: privileged SQL/adapter deletion is outside application staff controls. Production SQL access remains restricted; this safeguard is not a database-wide invariant. Cost if violated: a privileged operator can still remove all owners.
-- Pending: final cloud CI, production release and documentation.
+- Task 3: complete.142 units, TypeScript,22 isolated admin regressions and full cloud CI37393004564 succeeded on469ab5d. Production-branch CI37393307744 also succeeded, including all-severity audit and actual CMS build/runtime checks.
+- Task 4: production release complete.469ab5d is live at the stable alias via el-amal-f8nhpc4fl-nour-abulnasrs-projects.vercel.app.10 scoped HTTP checks succeeded; browser login layout and no observed errors confirmed. Quotation branch synchronization is the final housekeeping step.
+- Task 5: current release/admin/SEO/launch runbooks updated. No hosted migration, private-data export, customer mail or real staff change occurred.
