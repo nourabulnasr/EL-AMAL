@@ -1,39 +1,12 @@
 ## Remaining work and ownership
 
-The catalogue photographs have been supplied and all 151 main page model groups are published. They are not a remaining input. The receiving email has also been supplied and confirmed. The table below is the current work register; it separates configuration, implementation, review and explicit deferral.
+The current subcategory status, exact Nour/client input register, developer responsibilities and full-launch acceptance checklist are at the start of this consolidated handbook. They are the authoritative remaining-work list for 6 October 2026. The client has already supplied the catalogue and recipient, selected Precision Revealed and requested PDF/Excel/photo quotations; do not ask for those decisions again.
 
-| Item | Current state | Needed from Nour or client | Work for developer |
-| --- | --- | --- | --- |
-| Customer and staff email | Code deployed but disabled | Owned sending domain or address and provider authorization | Configure sender, schedule workers, test delivery and retries, then enable intake and recovery. |
-| Frequent worker | Daily maintenance exists | Accept required account terms for an authorized scheduler | Provision, authenticate and verify frequent executions and stale health behavior. |
-| Exact stock | Tools built with zero exact production SKUs | Offered configurations, opening counts, hold policy, staff roles and freshness decision | Validate and import real SKUs, enter audited opening stock and rehearse staff operations. |
-| Larger documents | JPEG and PNG only | Confirm document requirement, service authorization and retention policy | Implement private direct upload, quarantine, scanner, authorized downloads and failure tests. |
-| Automatic offsite backup | Local encrypted backup and restore rehearsal complete | Approved destination, account access, retention and recovery objectives | Schedule copies, protect keys, verify freshness, alert failures and rehearse restoration. |
-| External monitoring | Deferred by Nour | Revisit only when requested | Activate approved service and alerts when authorized. |
-| Company details | Provisional or hidden where facts are missing | Phone, WhatsApp, address, hours, final logo, company imagery and approved facts | Populate, link, validate bilingual presentation and structured data. |
-| WIKA relationship | Claim component guarded until evidence exists | Genuine evidence and approved English and Arabic wording | Verify source and enable truthful relationship presentation. |
-| Domain and search ownership | Stable Vercel URL works | Final domain ownership and Search Console access or verification token | Connect DNS, update canonical base, verify redirects and submit sitemap. |
-| Content acceptance | Extracted and linked real catalogue | Technical, translation, image rights and business content acceptance | Correct specific findings and recheck affected records. |
-| Staff credentials | Login works; new password policy implemented | Choose a strong unique owner password and final staff assignments | Assist secure configuration and validate recovery once mail works. |
-| Accessibility and performance | Sampled browser and lab evidence | Client device review and acceptance | Broaden assistive technology checks, repeat representative lab tests and observe real traffic. |
-| Interaction analytics | Private enquiry demand reporting exists | Confirm analytics and privacy choices if visitor tracking is wanted | Implement approved event measurement, separate test traffic and reconcile lead counts. |
-| Final launch | Review site live | Approve business policies, visual presentation and operational workflow | Complete end to end checklist and record launch evidence. |
+Public quotation and email activation still need explicit approval of the named encrypted database-backup destination, a verified sending identity and authorized frequent scheduling. Engineering owns the backup/migration/configuration and real end-to-end checks after those dependencies are available. Business facts, WIKA evidence, strong staff credentials, privacy/backup policies, Search Console/domain ownership, exact stock data if commitments are enabled, and final client acceptance remain owner inputs.
 
-No payment, purchase or acceptance of service terms should be inferred from the existence of a configuration file. Integration authorization and a live operational check must precede claims that a service is active. Monitoring remains deliberately outside the current active work.
+Broader device/accessibility and representative performance verification remain engineering work. Automatic malware scanning, larger files, visitor analytics, application MFA and extra industry content are not delivered features; agree any expanded requirements explicitly. External monitoring remains deferred at Nour's request. No account terms, paid service or private-data export is authorized merely by updating this handbook.
 
-### Work that can continue without new client facts
-
-The developer can correct verified code defects, stale operational descriptions and inconsistent runbooks; improve current interface accessibility and measured public performance; strengthen tests for existing protection boundaries; and prepare evidence and operating procedures. Those actions use the existing architecture and the approved design. They do not require fabricated company information or speculative stock.
-
-Real email activation requires a sender and working schedule. Real stock allocation requires real configurations and counts. Search Console ownership requires control of the property. The developer can prepare these tasks but cannot replace those inputs with invented values or claim a live result based only on code.
-
-### How a stronger final website is achieved
-
-The next substantial visual improvement comes from genuine company identity: approved logo, real people or facility photography where appropriate, truthful relationship evidence and useful technical content. Repeated decorative effects cannot replace those materials. The current motion should remain subordinate to model finding, document reading and quotation preparation.
-
-SEO improvement depends on accurate original business content, technically correct pages, consistent entity details, useful product selection material and actual search performance review. The technical foundation is substantial; rankings depend on competition, authority, relevance, content and search systems outside this project. No top ten position or regional design award can be guaranteed.
-
-Security work must continue throughout operation through dependency updates, access review, backup verification and incident handling. Zero known package advisories on one date is a useful result, not a permanent guarantee. Staff password quality, correct roles and protection of provider accounts remain essential.
+Full readiness is closure of the stated launch criteria, not a promise of a top-ten award, perfect security or instant search ranking. Maintain useful technical content, measured usability, dependency/access reviews and tested recovery during operation.
 
 ## Operator routines
 
@@ -88,7 +61,7 @@ Review who has access, test restore procedures in an isolated database, inspect 
 
 ## Source ownership and continuation
 
-The project is saved in C:\Users\noura\OneDrive\Documents\ChatGPT\EL-AMAL 4 and on the codex/el-amal-foundation branch of the EL-AMAL GitHub repository. Source, migrations, tests and this handbook are versioned. node_modules and build output can be regenerated. Live database contents, credentials, ignored catalogue originals and test artifacts are separate assets.
+The project is saved in C:\Users\noura\OneDrive\Documents\ChatGPT\EL-AMAL 4 and the EL-AMAL GitHub repository. Production source is `codex/el-amal-foundation` at `63acd5b`; continuation uses `codex/hero-review-and-quotation` with combined application `c2e6262` and later documentation commits. Source, migrations, tests and this handbook are versioned. Live database contents, credentials, ignored originals and operational artifacts are separate assets.
 
 A new assistant or developer should read AGENTS.md, PROGRESS.md, docs/phase-status.md, this handbook and the current Git diff before acting. Do not restart the catalogue extraction. Do not ask again for the receiving inbox or the supplied 29 pages. Keep production and development database connections separate and never run development mutation checks against production.
 
@@ -121,13 +94,13 @@ Signing in to another ChatGPT account does not itself move or back up the databa
 
 ## Evidence and verification index
 
-The completed release has 142 passing unit checks, a successful TypeScript check, a clean package advisory audit at the recorded date, real development database regressions, and a successful cloud build with actual server route checks. GitHub run 36584827754 verified application commit 7f7326704305012e9637702b3112b5c85f554833. The live deployment identifier is dpl_4iYTN8joqJgEfHa7L2GZzR4pn2bA. The stable client address remains unchanged.
+The current production release `63acd5b` passed 142 unit checks and complete cloud run `37486441262`. The prepared combined quotation release `c2e6262` passed 152 units and complete run `37486837237`. Both include TypeScript, an all-severity advisory gate, disposable database regressions, build and actual built-server checks. Production is `el-amal-3m6pheeed-nour-abulnasrs-projects.vercel.app`, on the stable client alias. This documentation revision did not rerun application tests or deploy code.
 
-The final technical crawl covered 342 public pages, 342 sitemap URLs and 155 assets with zero detected issues in the implemented checks. Representative mobile Lighthouse samples measured homepage performance from 89 to 91 and product performance 90. The final homepage sample had LCP 2.8 seconds, total blocking time 240 ms and CLS zero. The preceding product sample had LCP 2.9 seconds. These do not establish the LCP below 2.5 seconds target or real visitor INP.
+The 6 October read-only crawl covered 342 public pages, 342 sitemap URLs and 155 assets with zero issues detected by the implemented checks. Final 6 October English-homepage PageSpeed measured mobile 95 / desktop 99; mobile LCP 2.4s, TBT 60ms and CLS 0. Automated accessibility, best-practices and basic SEO checks scored 100 on both. September product performance 90 / LCP 2.9s is a historical sample, not a newly measured October result. There is no recorded real-user field dataset or field INP.
 
 The encrypted restore rehearsal recovered 24 tables and 572 rows with matching row fingerprints and constraint count into a separate temporary development database. It was performed on the backup taken before the additive inventory completion migration. The temporary database was removed. Future recovery must apply the appropriate forward migrations before switching a replacement environment into service.
 
-The main evidence files are in the ignored artifacts/2026-09-29/completion folder: seo-final.json, live-release.json, lighthouse-final-home.json, lighthouse-home.json, lighthouse-product.json and unit-tests.log. The earlier launch checks are in artifacts/2026-09-29/launch. The published handbook summarizes those findings; screenshots and raw diagnostic files are not customer data or a substitute for operational acceptance.
+Current evidence is summarized in `docs/precision-release-2026-10-06.md` and `docs/operations-release-2026-10-06.md`, with source/test identifiers and the public PageSpeed report linked in the current readiness chapter. Scoped live artifacts are under ignored `artifacts/2026-10-06/launch/`; original crawl, restore and lab evidence remains under `artifacts/2026-09-29/`. Raw diagnostics and synthetic regression results are not a substitute for actual customer email and operational acceptance.
 
 The source references in the preceding chapters are repository relative. Open them within the local project or at the matching Git commit. Configuration variable names are provided for developers; values and credentials are intentionally kept in private environment settings. This handbook contains no login password, database URL, API key or backup key.
 

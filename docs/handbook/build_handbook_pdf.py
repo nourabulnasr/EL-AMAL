@@ -1,7 +1,7 @@
 """Render the shared Markdown token tree to a navigable, print friendly handbook."""
 import json, re, html
 from pathlib import Path
-from reportlab.platypus import BaseDocTemplate, PageTemplate, Frame, Paragraph, Spacer, PageBreak, LongTable, TableStyle, KeepTogether
+from reportlab.platypus import BaseDocTemplate, PageTemplate, Frame, Paragraph, Spacer, PageBreak, CondPageBreak, LongTable, TableStyle, KeepTogether
 from reportlab.platypus.tableofcontents import TableOfContents
 from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
@@ -65,7 +65,7 @@ class Handbook(BaseDocTemplate):
     def page(self,canvas,doc):
         canvas.saveState();canvas.setFont('Body',8);canvas.setFillColor(colors.HexColor('#506079'))
         if doc.page>1: canvas.drawString(48,817,'EL AMAL   /   Website delivery and administration handbook')
-        canvas.drawString(48,29,'29 September 2026');canvas.drawRightString(547,29,str(doc.page));canvas.restoreState()
+        canvas.drawString(48,29,'Updated 6 October 2026');canvas.drawRightString(547,29,str(doc.page));canvas.restoreState()
     def afterFlowable(self,f):
         if isinstance(f,Paragraph) and getattr(f,'chapter_key',None):
             self.canv.bookmarkPage(f.chapter_key)
@@ -73,7 +73,7 @@ class Handbook(BaseDocTemplate):
             self.notify('TOCEntry',(f.chapter_level,f.getPlainText(),self.page,f.chapter_key))
 
 tokens=json.loads((ROOT/'../../artifacts/handbook/handbook-tokens.json').read_text(encoding='utf8'))
-toc=TableOfContents();toc.levelStyles=[ParagraphStyle(name='TOC0',fontName='BodyBold',fontSize=10.3,leading=14.5,spaceBefore=8,leftIndent=0,rightIndent=18,textColor=INK),ParagraphStyle(name='TOC1',fontName='Body',fontSize=9.6,leading=13,spaceBefore=3,leftIndent=14,rightIndent=18,textColor=INK)]
+toc=TableOfContents();toc.levelStyles=[ParagraphStyle(name='TOC0',fontName='BodyBold',fontSize=10.3,leading=14,spaceBefore=6,leftIndent=0,rightIndent=18,textColor=INK),ParagraphStyle(name='TOC1',fontName='Body',fontSize=9.6,leading=12.5,spaceBefore=2,leftIndent=14,rightIndent=18,textColor=INK)]
 story=[];heading_counter=0
 
 def paragraph(t,sty='BodyText2'):
@@ -87,12 +87,12 @@ def render(items,inside_list=False):
         if kind in ('space','def'):continue
         if kind=='heading':
             depth=t['depth'];heading_counter+=1
-            if t.get('text')=='Update after the handbook baseline':out.append(PageBreak())
+            if t.get('text') in ('Historical release note from 29 September','Current delivery and the path to full launch'):out.append(CondPageBreak(700))
             p=paragraph(t,{1:'H1x',2:'H2x',3:'H3x'}.get(depth,'H4x'))
             if depth in (2,3):
                 p.chapter_key='chapter-'+str(heading_counter);p.chapter_level=depth-2
             if depth==1:
-                out.extend([Spacer(1,45),p,Paragraph('Delivery record and practical staff guide',styles['H3x']),Paragraph('Prepared for Nour Abulnasr and the EL AMAL team',styles['BodyText2']),Paragraph('Status date 29 September 2026',styles['Note']),Spacer(1,23),Paragraph('What is live, how it works, how to operate it and what remains.',styles['BodyText2']),Spacer(1,18),Paragraph('Approximately 90 percent of the recorded scope is complete. The real catalogue is published. Customer email and several operational integrations still need activation.',styles['BodyText2']),PageBreak(),Paragraph('Contents',styles['H2x']),toc,PageBreak()])
+                out.extend([Spacer(1,45),p,Paragraph('Delivery record and practical staff guide',styles['H3x']),Paragraph('Prepared for Nour Abulnasr and the EL AMAL team',styles['BodyText2']),Paragraph('Updated 6 October 2026',styles['Note']),Spacer(1,23),Paragraph('What is live, how it works, how to operate it and what remains.',styles['BodyText2']),Spacer(1,18),Paragraph('The website, actual catalogue and selected Precision Revealed hero are live. Customer email and quotation uploads still require activation. This revision names every remaining launch dependency and its owner.',styles['BodyText2']),PageBreak(),Paragraph('Contents',styles['H2x']),toc,PageBreak()])
             else:out.append(p)
         elif kind in ('paragraph','text'):out.append(paragraph(t))
         elif kind=='list':

@@ -1,6 +1,6 @@
 # EL AMAL handbook: public website, catalogue, design and search
 
-Evidence date: 29 September 2026. This chapter describes application commit `7f7326704305012e9637702b3112b5c85f554833`, deployed as `dpl_4iYTN8joqJgEfHa7L2GZzR4pn2bA`. The documentation checkpoint preceding this handbook is `f751ef5`. The stable public address is [EL AMAL English](https://el-amal-sigma.vercel.app/en) and [EL AMAL Arabic](https://el-amal-sigma.vercel.app/ar).
+Updated 6 October 2026 against production application `63acd5b` and prepared quotation application `c2e6262`. September measurements are explicitly historical. Stable public addresses: [English](https://el-amal-sigma.vercel.app/en) and [Arabic](https://el-amal-sigma.vercel.app/ar). Current readiness, ownership and launch criteria appear at the start of this handbook.
 
 This is documentation of the existing implementation. No application code, deployment, database or external account was changed to produce this chapter. Statements about live checks refer to the saved release evidence, not a fresh live audit. Repository-relative source paths below resolve from `C:\Users\noura\OneDrive\Documents\ChatGPT\EL-AMAL 4`.
 
@@ -101,7 +101,7 @@ Nour's explicit rule is that every model on a main photographed page inherits th
 
 The images came from the matching official WIKA portfolio, not AI replacement product photography. They show the model family; a supplied variant can differ. The homepage's decorative instrument remains an illustration and is explicitly captioned as such. It must not be confused with the actual product photographs.
 
-**Source:** `docs/catalogue-publication-2026-09-28.md`; `catalogue/2026-09-27/publication.json`; `catalogue/2026-09-27/datasheet-links.json`; `catalogue/2026-09-27/source-manifest.json`; `public/images/products/`; `src/components/hero-instrument.tsx`.
+**Source:** `docs/catalogue-publication-2026-09-28.md`; `catalogue/2026-09-27/publication.json`; `catalogue/2026-09-27/datasheet-links.json`; `catalogue/2026-09-27/source-manifest.json`; `public/images/products/`; `src/components/precision-hero.tsx`.
 
 ### Extraction, translation and publication path
 
@@ -169,7 +169,7 @@ The activated customer control uses a request fingerprint plus an idempotency ke
 
 The verification page reads the token from a URL fragment, shows an explicit Confirm action, and removes the fragment from browser history before the confirmation request. Statuses distinguish missing/expired/used links, rate limiting, uncertain failures, real customer verification and staff test confirmation. A test confirmation explicitly does not prove customer email ownership. Confirmation itself does not place an order or reserve stock.
 
-A genuine customer confirmation may return a short-lived attachment grant and display the photo component. The implemented subset is up to three JPEG/PNG photos, 2 MiB each, with 8-megapixel processing limits, metadata removal, private encrypted handling, 30-day access and bounded logical storage. It is not the proposal's broader three-file PDF/JPEG/PNG/XLSX, 10 MB-per-file feature. The pre-submission “Drawings & technical documents” text is a placeholder for future broader support; do not describe it as an enabled PDF/Excel uploader. Real customer entry to this path remains constrained by the disabled public intake/email chain.
+The deployed product-line confirmation path supports up to three private JPEG/PNG photos, 2 MiB each, after genuine customer email confirmation. Normal access remains blocked by inactive intake/mail. The separately built existing-quotation path adds PDF and modern Excel XLSX at the same per-file limit; it requires an additive production migration and explicit activation. Its full customer/admin steps, unscanned-file warning, shared 64 MiB capacity and 30-day expiry are described in the current readiness chapter. Neither version delivers a 10 MB-per-file allowance or automatic malware scanning.
 
 **Source:** `src/app/(site)/[locale]/verify/page.tsx`; `src/components/verify-enquiry.tsx`; `src/components/enquiry-photo-upload.tsx`; `docs/private-enquiry-photos.md`; `docs/phase-status.md`.
 
@@ -183,7 +183,7 @@ With JavaScript, the language switch replaces the first locale segment, then pre
 
 The layout starts as a vertical phone layout. Catalogue controls precede results; the filter becomes a sticky sidebar on a large screen. Product details stack and later become two columns. The final desktop catalogue uses two product columns beside the filter, while the homepage's selected-instrument composition deliberately gives the first product a larger stage. Category tabs can scroll horizontally, product/model/table text can wrap, and on widths below 420px technical definition rows become one column. Wider layouts constrain the overall readable width instead of stretching indefinitely.
 
-The important thresholds are 640px for several two-column arrangements, 768px for desktop-motion eligibility, 900px for editorial information-page composition, 1024px for full navigation/hero/filter layout, and 1500px for additional outer margins. Different components need different thresholds; there is no claim that all responsive behavior is controlled by one breakpoint.
+The important thresholds are 640px for several two-column arrangements, 900px for Precision Revealed pointer-depth eligibility, 900px for editorial information-page composition, 1024px for full navigation/hero/filter layout, and 1500px for additional outer margins. Different components need different thresholds; there is no claim that all responsive behavior is controlled by one breakpoint.
 
 Recorded browser checks include 320px grouped product details, 375/390px mobile views and 1440px desktop samples, both locales, language switching, filters, basket persistence and no horizontal page overflow in the sampled routes. These are useful samples, not coverage of every phone, browser, zoom factor or all 342 pages in a rendered browser.
 
@@ -197,7 +197,7 @@ The selected direction began as **Precision in steel**, then adopted Nour's exac
 
 The active background values are `#010736` and `#091540`, white written content, and the existing orange accent `oklch(72% .14 55)`. Source CSS retains older steel/neutral rules before the later navy overrides; reading only the first `:root` block gives the wrong current palette. It is a mixed implementation: the final navy overrides use exact hex values, with OKLCH retained for the accent and some effects. It is not a uniformly converted OKLCH-only design system.
 
-The final override deliberately makes body/muted text white, distinguishes adjacent navy surfaces with borders/spacing, and keeps dark glyphs on orange controls. Actual manufacturer images sit on white contained stages to preserve the complete photographed instrument. Metal shading inside the illustrative gauge is retained. The current A monogram/wordmark and supplied-content presentation are provisional identity work pending the final logo and approved company assets.
+The final override deliberately makes body/muted text white, distinguishes adjacent navy surfaces with borders/spacing, and keeps dark glyphs on orange controls. Actual manufacturer images sit on white contained stages to preserve the complete photographed instrument. The selected concept sculpture has metal highlights and lighter-blue emphasis; it is not a technical product photograph. The current A monogram/wordmark and supplied-content presentation are provisional identity work pending the final logo and approved company assets.
 
 Manrope handles functional text; regular-weight Newsreader provides English display hierarchy; Arabic has Noto Sans Arabic. Hero headings use responsive sizing up to approximately 142px in the large English composition, while technical copy and labels are materially smaller. Most pages use generous section spacing, clear rules and editorial asymmetry rather than repeated equal-weight rounded cards. This describes implementation and intention; only Nour grants visual acceptance.
 
@@ -205,13 +205,15 @@ Manrope handles functional text; regular-weight Newsreader provides English disp
 
 ### Hero depth and motion
 
-The hero instrument is a layered HTML/CSS illustration: gradients, a case, dial, needle, stem and shadow. Perspective/rotation make it appear dimensional. There is no polygon mesh, WebGL scene or downloadable 3D model. Its caption expressly says “Illustrative study, not product photography.”
+Precision Revealed is the client-selected second concept, live on the English and Arabic homepages. It replaces the earlier HTML/CSS gauge and hero search. The composition combines a server-rendered heading and actions with a decorative optimized sculpture image. Its caption explicitly identifies concept artwork rather than an engineering diagram. Search remains on the catalogue page.
 
-On a fine hover-capable pointer, at least 768px wide, and with normal motion preference, a dynamic import loads the interactive component. `motion/react` uses `LazyMotion` and separately loaded features. Pointer position drives spring-smoothed X/Y rotation; scrolling through the instrument region compresses its scale from 1 to 0.88 and moves it by up to 45px. The pointer spring uses stiffness 95, damping 22, mass 0.7. Leaving the instrument returns it toward neutral. A visible Pause motion / Enable motion control swaps the interactive component for the static instrument.
+The original 1,680,432-byte PNG was converted to a 70,360-byte WebP. Next Image provides responsive optimized versions with eager high-priority loading. Arabic mirrors the artwork and reading order. No new animation library, video or WebGL runtime was added.
 
-Mobile, coarse-pointer and reduced-motion visitors receive the server-rendered still instrument without loading this desktop Motion component. JavaScript-disabled visitors also retain readable static content. This is a bounded interaction around the instrument, not scroll interception for the whole site.
+On a fine hover-capable pointer at least 900px wide with normal motion preference, a small client component adjusts image position from pointer movement. At most one animation frame is pending; there is no continuous render loop. Pointer exit, document visibility changes, pause and unmount reset/clean up the interaction. CSS provides spring-shaped easing, not a true three-dimensional simulation. Supported desktop browsers use a native view timeline for gentle scroll compression. Mobile, reduced-motion and unsupported browsers keep static content.
 
-**Source:** `src/components/hero-instrument.tsx`; `src/components/interactive-instrument.tsx`; `src/components/motion-features.ts`; `src/components/instrument.tsx`.
+A visible Pause motion / Enable motion control governs the hero's decorative motion. Product crop reveals elsewhere disable clipping on keyboard focus so the focus outline remains visible. Existing Motion dependencies and older instrument source files are not evidence that the new hero uses that old component.
+
+**Source:** `src/components/precision-hero.tsx`, `precision-depth.tsx`, `precision-hero.css`; `src/app/(site)/[locale]/refinement.css`; `docs/precision-release-2026-10-06.md`.
 
 ### Introduction, loading, hover and focus
 
@@ -221,7 +223,7 @@ Mobile, coarse-pointer and reduced-motion visitors receive the server-rendered s
 | Entrance duration | Desktop CSS sequence 1.8s; mobile below 768px 1.15s; JS fallback dismissal 2.2s | Runs on document mount/replay, not every client navigation; no once-per-session storage flag |
 | Dismissal | Pointer press, any keyboard input, focus entry, wheel/touch movement and explicit Skip can dismiss | Does not lock body scroll or take focus for decoration |
 | No-JavaScript / reduced motion | Introduction/replay hidden; global animation/transition reductions; route needle static | No mandatory animated gateway to content |
-| Actual route loading | Localized `role="status"`, polite live region and `aria-busy`, with gauge needle | Fallback reflects Next route work; not a simulated duration or progress estimate |
+| Actual route loading | Reserves 100svh to prevent the streamed footer jumping; localized `role="status"`, polite live region and `aria-busy`, with gauge needle | Fallback reflects Next route work; not a simulated duration or progress estimate |
 | Header | Sticky, darker/translucent scrolled state with CSS backdrop blur | CSS glass appearance, not a liquid-glass library |
 | Buttons | Fine-pointer lift, one-pass sheen, arrow displacement; immediate press response | CSS spring-shaped `linear()` easing, not physics simulation for every element |
 | Links/categories/cards | Navigation underline, category text/arrow movement, image-stage lift, active-filter feedback | Hover movement is opt-in for fine pointers; touch retains press feedback |
@@ -301,7 +303,7 @@ The WIKA relationship block appears on home/About only after approved English wo
 
 ### What the final SEO audit actually proves
 
-The saved final read-only crawl began on 29 September at 14:46 UTC. It records 342 public HTML pages, 342 sitemap URLs, 155 checked asset URLs and zero detected issues under its implemented rules. All 151 product pages were reached in each language. The 155 assets are 151 product PNGs, `/social-image`, the icon URL, the versioned favicon URL and the plain favicon URL; they are not 155 different product photographs.
+The original full crawl began on 29 September at 14:46 UTC. A fresh 6 October crawl repeated the complete discovery coverage with zero detected issues in the covered checks. It records 342 public HTML pages, 342 sitemap URLs, 155 checked asset URLs and zero detected issues under its implemented rules. All 151 product pages were reached in each language. The 155 assets are 151 product PNGs, `/social-image`, the icon URL, the versioned favicon URL and the plain favicon URL; they are not 155 different product photographs.
 
 `scripts/audit-live-seo.mjs` starts from the sitemap/homepages, follows allowed public route families, and checks HTTP behavior, canonicals, reciprocal alternatives, language/direction, titles/descriptions/H1, robots, sharing metadata and parseable JSON-LD. It checks referenced social/product/icon assets, private-route discovery exclusions and missing-route handling. A configured page cap reached prematurely is a failure; it does not silently label a partial crawl complete. The final record has no detected issues, not a guaranteed absence of every conceivable SEO problem.
 
@@ -313,7 +315,7 @@ It does not prove Google indexed the pages, ranking, traffic, rich results, full
 
 ### Changes that reduced real work
 
-The interface uses Next.js 16.3.5, React 19.2.8, Tailwind 4.3.3, TypeScript 5.9.3 and Motion 12.43.0, with Payload 3.90.2 for CMS. Most catalogue content is rendered on the server; interactive code is concentrated in navigation, basket/forms, introduction and the conditionally loaded desktop instrument.
+The interface uses Next.js 16.3.8, React 19.2.8, Tailwind 4.3.3, TypeScript 5.9.3 and Motion 12.43.0, with Payload 3.90.2 for CMS. Most catalogue content is rendered on the server; interactive code is concentrated in navigation, basket/forms, introduction and the small desktop hero interaction.
 
 Four material improvements were made against the actual CMS catalogue:
 
@@ -330,7 +332,7 @@ Catalogue reads use request-scoped React `cache`, not a persistent cross-request
 
 **Source:** `package.json`; `src/app/(site)/[locale]/layout.tsx`; `src/components/product-image.tsx`; `next.config.mjs`; `src/lib/load-catalogue.ts`; `src/lib/read-catalogue-records.ts`; `tests/read-catalogue-records.test.mjs`; `docs/performance-completion.md`; `PROGRESS.md`.
 
-### Current measured results
+### Historical September measurements and current result
 
 | Saved mobile lab sample | Performance | LCP | Total Blocking Time | CLS | Accessibility / Best Practices / SEO |
 | --- | ---: | ---: | ---: | ---: | --- |
@@ -342,7 +344,7 @@ For normal communication these round to homepage 89–91, final LCP 2.8s/TBT 240
 
 Earlier actual-product performance was 57/LCP 5.8s/TBT 590ms before the image/payload work, then 84/LCP 3.4s/TBT 160ms. An earlier actual-home sample was 78/LCP 4.0s. The demo-era homepage 100/LCP 1.2s came from different content and conditions and must not be reused as the real catalogue's current result.
 
-The intended steady 90+ performance bar is not yet demonstrated consistently. LCP below 2.5s remains unmet in the current samples. CLS was zero in those samples, but this does not prove all real sessions have zero shift. Total Blocking Time is a lab measure and must not be relabelled INP. No field INP or real-user 75th-percentile LCP/INP/CLS evidence is recorded. These local simulated mobile measurements are not a full field Core Web Vitals assessment.
+The 6 October production English-homepage PageSpeed sample supersedes these older homepage scores: mobile 95, LCP 2.4s, TBT 60ms, CLS 0; desktop 99, LCP 0.7s, TBT 70ms, CLS 0. Accessibility, best-practices and basic SEO checks scored 100 on both. The current readiness chapter links the report. This meets the homepage lab target in that sample, not consistently across every route or real visit. No fresh October product score or field INP is claimed. TBT must not be relabelled INP; the report had no real-user field dataset.
 
 Remaining performance work includes representative repeated EN/AR home/catalogue/detail measurements, Arabic font-discovery/shift checks, investigation of server/catalogue readiness and render-blocking work, and a streaming strategy that preserves no-script content if pursued. None should be claimed complete simply because a cloud build succeeded or one score reached 90.
 
@@ -352,7 +354,7 @@ Remaining performance work includes representative repeated EN/AR home/catalogue
 
 Implemented accessibility measures include a skip link to the main content, landmark structure, real links/forms/buttons, visible focus, menu expanded-state relationships, localized labels/status/error messages, controlled focus in the basket form, text-based availability labels, image alternative text, RTL-aware layout, no-script catalogue reading and reduced-motion alternatives. Decorative gauge layers and arrows are hidden from assistive technology where appropriate. Phone/contact/footer links and main controls have deliberate touch target heights; controls generally use 44–54px minimum interactive heights.
 
-Reduced-motion CSS turns off transitions/animation and smooth scrolling, hides the introduction/replay, resets hero transforms and removes the moving route needle. The hero component also avoids importing its Motion behavior when the live media preference requests reduced motion. No-JavaScript styles hide the introduction and expose the mobile nav links, while server-rendered product content and native search/pagination remain readable. This is progressive enhancement for content, not an assertion that interactive RFQ/basket submission works without JavaScript.
+Reduced-motion CSS turns off transitions/animation and smooth scrolling, hides the introduction/replay, resets hero transforms and removes the moving route needle. Precision Revealed's live media-query check disables pointer interaction for reduced motion; it does not use the earlier hero's Motion import. No-JavaScript styles hide the introduction and expose mobile nav links, while server-rendered product content and native search/pagination remain readable. This is progressive enhancement for content, not an assertion that RFQ/basket submission works without JavaScript.
 
 The recorded launch browser audit covered ten representative public/login views: English home (1440px), Arabic home (390px), English catalogue (1440px), Arabic catalogue page 2 (390px), English actual product (390px), Arabic actual product (320px), English RFQ (390px), Arabic basket (390px), English Contact (390px), and admin login (1440px). It also sampled the authenticated stock page. Automated axe results found zero violations in the selected rules after the public-notice/login landmark fixes. Manual-review items remained. Its configured public rule tags were WCAG 2 A/AA, WCAG 2.1 A/AA and best-practice checks, so it is not evidence of comprehensive WCAG 2.2 conformance.
 
@@ -382,11 +384,11 @@ The private demand report is implemented. Owner/sales users can see aggregated s
 | Catalogue acceptance | Client technical and Arabic review; exact offered variants where relevant | Family data and source-link checks do not certify each offered configuration |
 | Real inventory | Exact SKU definitions, opening quantities and accepted reservation/expiry/freshness policy | Dated public 90/61 model labels cannot become counted stock |
 | Customer delivery | Owned sender/domain, sending service, frequent scheduler authorization and actual delivery/recovery tests | Receiving inbox is already known; it alone cannot send confirmation mail |
-| Attachments | PDF/Excel and larger-file private quarantine, malware scanning/storage plus acceptance | Current photo subset does not fulfill the original 10 MB multi-format proposal |
+| Attachments | Activate the built 2 MiB PDF/XLSX/photo quotation release after backup, migration and mail setup; reconcile larger-file/scanning scope | Current production photo journey is gated. The prepared extension still does not fulfill the original 10 MB allowance or automatic scanning |
 | Policies | Approved privacy/retention/legal wording and appropriate public policy pages | There are no current dedicated public policy routes |
 | Analytics | Agreed privacy-safe product/search/download/basket events, confirmed-lead event design and reconciliation if retained | Protected reporting alone does not complete original behavioral analytics scope |
 | Search | Final domain decision, Search Console ownership/sitemap submission and actual index observations | Technical indexability is not a ranking or indexing result |
-| Performance | Consistent 90+, LCP target and field/Arabic measurements | Current final homepage is 89; LCP remains 2.8–2.9s in the cited samples |
+| Performance | Representative repeated EN/AR route checks and real-user measurements | Current home lab result is mobile 95 / desktop 99 with mobile LCP 2.4s; this is not whole-site or field evidence |
 | Accessibility/UX | Broader screen-reader, zoom, device, real form and final client walkthrough | Sampled automated checks cover only a subset of users/tasks |
 | Operations | Automatic offsite backups and wider launch acceptance | A completed restore rehearsal does not schedule future backups |
 | Monitoring | External monitoring deferred explicitly by Nour | Record as deferred; do not repeatedly request activation |
@@ -401,8 +403,8 @@ No repeat request is needed for all 29 catalogue pages, the main-page stock scop
 Several historical documents retain their original checkpoint statements. Their dates and later amendments matter:
 
 - `docs/catalogue-publication-2026-09-28.md` and older sections of the catalogue README still say indexing is disabled, show an old favicon 404, and list operational features as future work. The 29 September code/final audit supersedes those statements; indexing is enabled for eligible public pages and favicon URLs returned 200.
-- `artifacts/2026-09-29/completion/performance-report.md` is the font investigation snapshot and says no new Lighthouse score exists yet. `docs/performance-completion.md` and the later Lighthouse JSONs record actual deployment measurements. Use the final 89 homepage result, with the observed 89–91 range.
-- Older progress sections cite 34, 53, 58, 65, 121, 122 or 137 tests and 70%/85% delivery estimates. The current source checkpoint records 142 unit checks and a roughly 90% full-scope estimate; neither is a quality, ranking or security guarantee.
+- `artifacts/2026-09-29/completion/performance-report.md` is the historical font investigation snapshot. September homepage scores of 89-91 are superseded by the 6 October homepage sample: mobile 95 and desktop 99. The older product score remains historical; no current field performance is claimed.
+- Older progress sections cite smaller test counts and approximate completion percentages. Current evidence distinguishes 142 production unit checks from 152 on the combined quotation branch. Use the opening launch checklist, not an old percentage, for operational readiness.
 - The original four-industry proposal is not the same as the later two-industry client implementation. The original 250-model allowance is not an unfulfilled claim that 250 real source models were received.
 - Existing “verified catalogue” or “reviewed catalogue record” labels describe the application's publication checks, not final client acceptance of Arabic, suitability, exact variants or stock promises.
 - The 159 verified document identities, 150 linked entries, 164 document references and 160 unique URLs measure different things. They should not be collapsed into one figure.
@@ -417,11 +419,11 @@ All 151 English/Arabic product route pairs and their model-group labels are list
 
 | Topic | Primary implementation/evidence |
 | --- | --- |
-| Current release authority | `PROGRESS.md` current milestone; application `7f73267`; `artifacts/2026-09-29/completion/final-deployment.json` |
+| Current release authority | `PROGRESS.md` current milestone; production `63acd5b`; prepared quotation `c2e6262`; `docs/precision-release-2026-10-06.md` |
 | Initial and later scope | `docs/kickoff-2026-09-17.md`; `docs/client-requirements-2026-09-24.md`; `docs/final-client-inputs.md` |
 | Public page templates | `src/app/(site)/[locale]/page.tsx`; `products/page.tsx`; `products/[slug]/page.tsx`; `categories/[slug]/page.tsx`; `industries/[slug]/page.tsx`; `[information]/page.tsx` |
 | Locale shell/navigation | `src/app/(site)/[locale]/layout.tsx`; `src/components/header.tsx`; `src/components/business-contact.tsx` |
-| Design and motion | `src/app/(site)/[locale]/styles.css`; `src/components/hero-instrument.tsx`; `interactive-instrument.tsx`; `site-intro.tsx`; `instrument.tsx` |
+| Design and motion | `src/app/(site)/[locale]/styles.css`, `refinement.css`; `src/components/precision-hero.tsx`, `precision-depth.tsx`, `precision-hero.css`, `site-intro.tsx` |
 | Catalogue/publication | `catalogue/2026-09-27/publication.json`; `datasheet-links.json`; `source-manifest.json`; `docs/catalogue-publication-2026-09-28.md` |
 | Public data boundary | `src/lib/load-catalogue.ts`; `read-catalogue-records.ts`; `public-catalogue.ts`; `catalogue-details.ts`; `access.ts` |
 | Search and result UX | `src/lib/catalogue.ts`; `src/components/catalogue-view.tsx`; `src/content/product-options.ts` |
@@ -430,10 +432,9 @@ All 151 English/Arabic product route pairs and their model-group labels are list
 | Metadata and SEO policy | `src/lib/page-metadata.ts`; `site-policy.mjs`; `seo-discovery.ts`; `product-schema.ts`; `src/components/site-schema.tsx`; `next.config.mjs` |
 | Discovery endpoints | `src/app/sitemap.ts`; `robots.ts`; `social-image/route.tsx`; `icon.svg`; `favicon.ico` |
 | Full SEO crawl | `scripts/audit-live-seo.mjs`; `artifacts/2026-09-29/completion/seo-final.json`; `docs/seo-launch-2026-09-29.md` |
-| Final performance | `artifacts/2026-09-29/completion/lighthouse-final-home.json`; `lighthouse-home.json`; `lighthouse-product.json`; `docs/performance-completion.md` |
+| Current and historical performance | `docs/precision-release-2026-10-06.md` links the final homepage report; September `lighthouse-product.json` and `docs/performance-completion.md` preserve earlier route measurements |
 | Browser/accessibility scope | `artifacts/2026-09-29/launch/browser-audit.json`; `check-browser.mjs`; `artifacts/2026-09-29/completion/final-browser.log` |
 | Reporting versus analytics | `docs/demand-reporting.md`; `src/lib/demand-report.ts`; `demand-service.ts`; `docs/kickoff-2026-09-17.md` ANA01/T11 |
 | Remaining acceptance | `docs/phase-status.md`; `docs/final-client-inputs.md`; `PROGRESS.md` current milestone |
 
 Artifact files are local saved evidence and are ignored by Git. Preserve them through the project's private backup process when handing the project to a new machine. A source checkout alone may not contain them.
-

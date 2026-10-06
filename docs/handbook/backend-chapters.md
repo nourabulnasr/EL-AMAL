@@ -1,6 +1,6 @@
 # Backend, security and operations handbook
 
-This chapter describes EL AMAL as implemented at application commit `7f7326704305012e9637702b3112b5c85f554833`, using the 29 September 2026 operational evidence recorded in `PROGRESS.md`. Documentation checkpoint `f751ef5` follows that application release. It explains both the working application and the conditions still preventing a complete operational launch. Documentation preparation did not change application code, databases, accounts, deployments or credentials, and did not send email.
+Updated 6 October 2026 against deployed application `63acd5b` and prepared quotation application `c2e6262`. Dated September recovery evidence is retained as historical evidence. Quotation schema changes are not applied to the hosted database. This documentation revision changes no application code, database, account, deployment or credential and sends no email.
 
 ## What the backend does
 
@@ -17,7 +17,7 @@ The application is an instrument catalogue and enquiry system. An enquiry is a r
 | Vercel | Hosts the Next.js application and daily cron | Existing project on the confirmed Hobby account; stable review site and administration are live. |
 | Neon PostgreSQL | Stores catalogue, staff, enquiries, queues, inventory and private photos | Separate development and hosted databases; Neon is the installed Marketplace integration. Built-in Neon Auth is not the application's staff authentication. |
 | Payload CMS | Staff login, collection administration, permissions and migrations | Embedded in the application; version 3.90.2. |
-| Next.js / React / Node | Server-rendered website, routes and runtime | Source pins Next.js 16.3.5, React 19.2.8 and Node 22.x. |
+| Next.js / React / Node | Server-rendered website, routes and runtime | Source pins Next.js 16.3.8, React 19.2.8 and Node 22.x. |
 | Resend adapter | Would deliver customer confirmations, staff notifications and password recovery | HTTPS implementation exists. No verified sender/domain and provider credentials are operationally configured; real customer and recovery delivery remain disabled. |
 | Native Vercel cron | Bounded stock expiry and enabled retention | Registered daily at 02:00 UTC. It cannot provide the frequent email-worker health required for public intake. |
 | Inngest | Proposed frequent scheduling option | Terms acceptance is outstanding; no resource was provisioned. An available free option is not an installed integration or an authorized scheduler. |
@@ -253,11 +253,11 @@ Investigate any operations 503, successful-mail timestamp older than 15 minutes,
 
 During a prolonged outage, pause new public intake while allowing authorized workers to recover pending work. Preserve records. Check provider receipts before deciding whether a timed-out message was accepted. Do not reset attempts, rewrite creation dates or reuse an old job beyond its deduplication window. Do not change sender, recipient or template while retryable staff jobs are pending without reconciling the queue. Turning off public intake alone does not drain or erase existing queues.
 
-## Private technical photos
+## Private technical photos and prepared quotation documents
 
-Photos are an implemented, deliberately narrow attachment workflow. They are not general document upload. A genuinely verified CMS customer can upload at most three JPEG/PNG still images, each up to 2 MiB (2,097,152 bytes). PDF, XLSX, SVG, video and arbitrary documents are not enabled; neither a 10 MB limit nor malware-scanned document quarantine is implemented.
+Production contains the narrow photo workflow: up to three JPEG/PNG images of 2 MiB each after genuine customer confirmation. The normal journey remains unavailable while email/intake is inactive. The prepared quotation release adds PDF and modern Excel XLSX with the same limits, private encryption, bounded validation, explicit finalization and staff-only forced download. Its production migration and feature flag are still pending. Neither version implements 10 MB uploads, antivirus scanning, SVG or video uploads. See the current readiness chapter for the complete document workflow and staff warning.
 
-The confirmation response can issue a signed enquiry-specific upload grant lasting 24 hours. The browser holds it in memory and sends it as a bearer header. It is not a public download URL, and the application has no later customer attachment portal. Refreshing the confirmation page loses the grant; the consumed original email token cannot simply be reused to obtain it again.
+The confirmation response can issue a signed enquiry-specific upload grant lasting 24 hours. The browser holds it in memory and sends it as a bearer header. It is not a public download URL, and the application has no later customer attachment portal. For the deployed product-line journey, refreshing loses the grant and its consumed email proof remains single-use. The prepared quotation path separately supports same-tab recovery and recovery from a lost confirmation response only within the original proof expiry; it does not add public email-address lookup or grant access to saved file contents.
 
 The upload route streams and bounds actual bytes, verifies declared MIME against signature, and decodes the image with an 8,000,000-pixel limit. It applies orientation, resizes inside 2400 by 2400 without enlargement and writes a fresh JPEG or PNG that must still fit the byte cap. Rebuilding the pixels discards embedded metadata and appended content. It does not scan arbitrary documents or remove private information visibly photographed in the image.
 
@@ -270,6 +270,24 @@ Only owner/sales may download. The download requires staff authentication and cu
 Photos become unavailable exactly 30 days after creation. Physical deletion requires enabled retention and a successful operations invocation. Backups can retain older encrypted copies; the live 30-day policy is not automatic erasure from every backup. When the quota fills, new admission stops instead of deleting active photos or silently expanding storage.
 
 The current encrypted format has no key ID or dual-key reader. Changing `PAYLOAD_SECRET` invalidates outstanding grants and makes old photo/outbox ciphertext unreadable with the new secret. A planned rotation needs paused dependent workflows, an encrypted backup, preserved old secret in private custody, and either a reviewed re-encryption migration or explicit expiry/retention plan. No automated re-encryption tool is included. Losing the old secret cannot be repaired by restoring only the database.
+
+### Prepared existing-quotation extension
+
+The following contracts exist on `codex/hero-review-and-quotation` at combined application `c2e6262`. They have been tested in isolated databases and a complete cloud workflow, but the production migration and normal customer activation are pending.
+
+| Component | Contract and reason |
+| --- | --- |
+| Enquiry creation | A `quotation` request uses contact details and optional notes with zero product lines. Normal `products` requests still require valid lines. |
+| `POST /api/customer-quotation-files` | Bounded individual upload, enabled quotation configuration, exact origin, enquiry-specific bearer grant and rate checks. Accepts PDF/XLSX/JPEG/PNG under the documented limits. |
+| `POST /api/customer-quotation-files/control` | Upload-session status/finalization through the customer's signed capability. Finalization locks the enquiry and creates one staff notification transactionally. |
+| `GET/POST /api/staff/enquiry-attachments/:id` | Owner/sales read. Unscanned document GET shows a warning; same-origin bounded form POST with acknowledgment forces download. It does not send the document to an external scanner. |
+| PDF checks | Reject advertised active/encrypted features and enforce bounded format validation. This is not a complete PDF sandbox or antivirus scan. |
+| XLSX checks | Limit archive entries to 200, a single expanded entry to 4 MiB, total expansion to 8 MiB; reject unsafe paths, encryption, macros, embedded and external-link packages. |
+| Migration | `src/migrations/20261001_120000_existing_quotations.ts` adds the schema and defaults existing enquiries to products. Destructive rollback is refused while quotation records exist. Not applied to production. |
+| Stock and reports | Document-only requests do not create stock allocations or product-demand rows. Sales interprets the file before an exact configuration is agreed. |
+| Regression | `scripts/check-quotations.ts`, quotation unit tests and built-server checks verify the isolated lifecycle, retries, finalization, privacy and stock/report exclusion. No real mail receipt is established by these tests. |
+
+Activation requires `ENQUIRY_QUOTATIONS_ENABLED=true` in addition to normal intake, sender and worker-health readiness. Do not turn on flags to replace provider setup, explicit backup authorization, migration or actual customer/staff acceptance. The warning and retention limits must be clear to operators before documents are accepted.
 
 ## Security controls and their limits
 
@@ -289,17 +307,15 @@ The current encrypted format has no key ID or dual-key reader. Changing `PAYLOAD
 
 Global headers disable MIME sniffing and framing, constrain objects/base URI/forms, restrict camera/microphone/geolocation and add HSTS for one year. The global CSP is `object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'`. It has no restrictive `script-src` or per-response nonce policy and should be described as baseline hardening, not comprehensive XSS prevention. Public referrers use strict-origin-when-cross-origin; private routes are overridden to no-referrer. HSTS is not configured with includeSubDomains/preload in this source. The powered-by header is disabled.
 
-### Known source limitations to address after documentation
+### Resolved findings and remaining security work
 
-1. **Notification worker metadata is only hidden in the admin UI.** `src/cms/notifications.ts` marks `deliveryKey` and `leaseToken` with `admin.hidden` but does not deny their field-level read access. Owner/sales can therefore potentially receive those values through their authorized collection reads. Anonymous readers are denied the entire collection. These values are an idempotency identity and an internal lease identity; neither authenticates a public worker endpoint. The worker routes separately require `NOTIFICATION_WORKER_SECRET` or `CRON_SECRET`, and direct queue writes are denied. No anonymous exposure or direct worker takeover is established. The minimal future change is field read denial plus owner/sales denied-field assertions and a trusted-worker regression.
-2. **Enquiry admin helper text is stale.** The collection description still says stock reservation is not active, although private staff stock operations exist. Its immutable `deliveryStatus` field is still a legacy `not-configured` value; actual email state lives in the queue collections. Operators should consult those queues, not use that field as delivery telemetry.
-3. **No application MFA or penetration-test acceptance is implemented.** Strong-password policy, login lockout and recovery controls are real safeguards but do not establish either claim. Existing owner credentials still need strengthening.
-4. **No independently provisioned external alerting.** Owner-visible health exists; Checkly remains deferred. A failed daily job can require manual discovery until an approved external alerting arrangement exists.
-5. **No automatic offsite recovery schedule.** The successful local archive/rehearsal establishes one recoverable snapshot, not a continuous recovery service.
-6. **The broader upload requirement remains open.** Larger PDF/Excel private quarantine, scanning and storage need their own design, implementation and verification.
-7. **Staff unlock inherits a broader framework default.** The staff collection does not define `access.unlock`. Installed Payload 3.90.2 fills this with `defaultUnlockAccess`, which allows an authenticated member of the configured admin collection. Because all four staff roles belong to that collection, source inspection indicates that a signed-in non-owner can use the framework unlock operation for another staff email. Anonymous access remains denied; unlock clears login-attempt/lock state and does not reveal or change a password or grant a role. This is broader than an owner-only account-administration policy. The minimal future correction is explicit owner-only unlock access, verified with owner/non-owner/anonymous requests against disposable accounts and with normal login lockout preserved. This finding is from source inspection, not a production mutation or a newly executed exploit test.
+The 29 September follow-up corrected the two concrete access findings in the original handbook: notification `deliveryKey` and `leaseToken` now deny normal field reads, and staff unlock explicitly requires the owner role. Trusted workers retain the data they need. The Enquiries helper text now directs staff to the right stock and delivery screens. The immutable legacy Delivery Status is still a submission snapshot, not current queue telemetry.
 
-No application fix was made while producing this chapter. These are concrete follow-up findings, not a claim that undocumented hardening already happened.
+The 6 October owner-continuity change preserves at least one owner and prevents stale authentication/reset writes from replacing the current role. Access-checked role edits are serialized and conditionally applied within a transaction. Bulk staff updates are rejected. Twenty-two isolated admin checks covered valid transfer, races, rollback, missing transactions, authentication overlap and prior unlock/notification boundaries. No real account was mutated to run those tests.
+
+Current limitations are: no application MFA or independent penetration-test certification; baseline rather than nonce-based script CSP; owner credential strengthening still required; automatic offsite recovery not configured; external monitoring explicitly deferred; and PDF/XLSX documents unscanned in the prepared quotation extension. Larger files and malware-scanning infrastructure remain separate work. Source validation and encryption are not malware clearance.
+
+Current patches include Next 16.3.8, Sharp 0.35.5, source-map-js 1.2.2 and the scoped Sass 1.79.6 correction. The final release advisory gate returned zero known findings; future releases need a fresh check. None of these statements is a guarantee of permanent security.
 
 ## Configuration reference
 
@@ -330,6 +346,7 @@ Values, passwords, tokens, private hostnames, provider credentials and connectio
 | `INVENTORY_FRESHNESS_HOURS` | Optional whole-hour freshness policy; absent setting leaves review manual. |
 | `SITE_INDEXING_ENABLED` | Production real-catalogue indexing gate; not a ranking guarantee. |
 | `GOOGLE_SITE_VERIFICATION` | Optional Search Console ownership token. |
+| `ENQUIRY_QUOTATIONS_ENABLED` | Prepared existing-quotation feature gate; leave off until production migration and operational prerequisites are verified. |
 | `BUSINESS_PHONE`, `BUSINESS_WHATSAPP` | Approved public contact information. |
 | `WIKA_RELATIONSHIP_EN`, `WIKA_RELATIONSHIP_AR`, `WIKA_EVIDENCE_URL` | Approved relationship wording and documentary evidence. |
 | `BACKUP_DATABASE_URL` | Optional explicit direct source for encrypted backup. |
@@ -397,7 +414,7 @@ Windows host memory has interrupted earlier parallel checks and local builds. Ru
 
 | Command or script | What it verifies | Operational caution |
 |---|---|---|
-| `npm test` | Unit/permission/validation/crypto/helper regressions | 142 checks succeeded at the current application checkpoint; new runs may change the count. |
+| `npm test` | Unit/permission/validation/crypto/helper regressions | 142 production checks and 152 on the combined quotation branch succeeded at the recorded checkpoints; new runs may change the count. |
 | `npm run typecheck` | Integrated TypeScript consistency | Type success does not prove browser or database behavior. |
 | `npm audit --audit-level=low` | Known dependency advisories at all severities | Recorded result is zero; must be rechecked for future releases. |
 | `npm run readiness` | Presence/shape of configuration gates | No network, no secrets and no real readiness/receipt proof. |
@@ -413,6 +430,8 @@ Windows host memory has interrupted earlier parallel checks and local builds. Ru
 | `scripts/check-staff-and-photos.ts` | Photo crypto/quota/access/retention and real Payload reset/session behavior | Checks intended development/hosted separation, uses owned isolated schema and fake mail. |
 | `scripts/check-inventory.ts` | Real PostgreSQL inventory access and concurrent operation invariants | Development/disposable data only. |
 | `scripts/check-demand-report.ts` | Report filtering, aggregation, access and privacy-safe export | Development/disposable data only. |
+| `scripts/check-admin-boundaries.ts` | Last-owner continuity, auth/role concurrency, owner-only unlock and private notification fields | Synthetic staff and fake transport in a disposable schema; no real account mutation. |
+| `scripts/check-quotations.ts` | Prepared document request, upload, finalization, access and stock/report exclusion | Review branch, disposable database; does not prove hosted activation or real inbox receipt. |
 | `scripts/check-built-server.mjs` | Starts the built app and checks public/private CMS routes | Explicitly restricted to the disposable CI database. |
 | `scripts/audit-live-seo.mjs` | Public route/sitemap/asset technical crawl | Public read-only crawl; follow its configured target and limits. |
 | `scripts/database-backup.mjs` | Encrypted backup or isolated restore rehearsal | Separate private configuration and intended direct hosts; not an in-place restore tool. |
@@ -421,11 +440,11 @@ Windows host memory has interrupted earlier parallel checks and local builds. Ru
 
 The pinned GitHub workflow runs on push and pull request, cancels superseded runs for the same ref, and grants read-only repository contents permission. Its Linux runner uses Node 22 and a disposable PostgreSQL 17 service with synthetic CI credentials. No hosted database secrets are required.
 
-It performs a clean install; unit/permission checks; TypeScript; all-severity dependency audit; fresh migrations into disposable Postgres; stock/report database regressions; a production build with real CMS integration enabled against that disposable database; and built-server route checks. The smoke script checks English/Arabic catalogue, staff sign-in surfaces, admin login, and denial of anonymous SKU/photo/inventory/report APIs.
+It performs a clean install; unit/permission checks; TypeScript; all-severity dependency audit; fresh migrations into disposable Postgres; stock/report/admin database regressions, plus quotation regressions on its review branch; a production build with real CMS integration enabled against that disposable database; and built-server route checks. The smoke script checks English/Arabic catalogue, staff sign-in surfaces, admin login, and denial of anonymous SKU/photo/inventory/report APIs.
 
 The current workflow does not run every standalone integration script on every push, does not send real email, does not perform a complete device/accessibility audit and does not prove hosted database migration status. Earlier isolated integration evidence covers additional services but should not be relabelled as automatic coverage in the workflow.
 
-Recorded final application evidence is GitHub run `36584827754` on `7f73267`, with 142 unit checks, TypeScript, zero audit findings, fresh migrations, stock/report regressions, build and built-server checks. Production deployment is `dpl_4iYTN8joqJgEfHa7L2GZzR4pn2bA`; the stable site remains `https://el-amal-sigma.vercel.app`. These identifiers establish the documented checkpoint, not the result of a fresh deployment during this handbook task.
+Current production evidence is GitHub run `37486441262` on `63acd5b`; combined quotation evidence is run `37486837237` on `c2e6262`. Both complete workflows succeeded. The current production deployment is `el-amal-3m6pheeed-nour-abulnasrs-projects.vercel.app`, serving the stable alias. These are recorded release results, not a fresh deployment during the documentation task. The earlier September identifiers remain historical only.
 
 ### Release and rollback discipline
 
@@ -462,7 +481,7 @@ During rollback, preserve the database and review whether the older code can use
 
 ## Evidence and source index
 
-This chapter reconciles current code with current progress. Older runbooks preserve development history and sometimes say later-completed work is pending. The latest milestone in `PROGRESS.md` and the source revision above take precedence for present status. In particular, `docs/operations-release-2026-09-29.md` retains earlier test counts/audit findings and earlier backup status; `docs/continue-project.md` still ends with a stale instruction not to claim a restore rehearsal. The actual restore report and current recovery runbook establish the later completed rehearsal.
+This revision reconciles the earlier chapter with the 6 October release. Dated runbooks and PROGRESS entries retain development history; current readiness, source revision and actual hosted migration state take precedence. The completed September restore rehearsal remains valid evidence for that snapshot, while fresh pre-quotation backup authorization and recurring offsite backups remain outstanding.
 
 | Subject | Primary repository evidence |
 |---|---|
@@ -473,7 +492,7 @@ This chapter reconciles current code with current progress. Older runbooks prese
 | Public data boundary and pagination | `src/lib/load-catalogue.ts`, `src/lib/public-catalogue.ts`, `src/lib/read-catalogue-records.ts` |
 | App API exports | `src/app/(frontend)/api/**/route.ts`, `src/app/(payload)/api/[...slug]/route.ts` |
 | Staff passwords/recovery/reset concurrency | `src/lib/staff-security.ts`, `staff-recovery.ts`, `staff-email.ts`, `staff-reset-lock.ts`; `scripts/check-staff-and-photos.ts` |
-| Inherited staff-unlock behavior | `src/cms/collections.ts`; installed `node_modules/payload/dist/collections/config/defaults.js`, `auth/defaultUnlockAccess.js`, `auth/operations/unlock.js` |
+| Staff-unlock behavior (now explicitly owner-only) | `src/cms/collections.ts`; installed `node_modules/payload/dist/collections/config/defaults.js`, `auth/defaultUnlockAccess.js`, `auth/operations/unlock.js` |
 | Enquiry contract/snapshot/transaction | `src/lib/enquiry-preview.ts`, `basket.ts`, `enquiries.ts`, `submit-enquiry.ts`; `src/cms/enquiries.ts` |
 | Public intake gates, quotas and receipts | `src/lib/customer-readiness.ts`, `customer-http.ts`, `customer-service.ts`, `customer-receipt.ts`, `customer-quota.ts`, `request-limits.ts`, `queue-capacity.ts` |
 | Confirmation and customer outbox | `src/lib/enquiry-verification.ts`, `verification-http.ts`, `verification-runtime.ts`, `verification-message.ts`, `verification-outbox.ts`, `verification-email-worker.ts`; `src/cms/verification.ts`, `verification-emails.ts` |

@@ -2,6 +2,8 @@
 
 Nour asked to defer requests for client-supplied information while implementation continues. Do not repeatedly interrupt for these items.
 
+Current consolidated register: [handbook readiness and full-launch checklist](handbook/current-readiness.md), updated6 October2026. It separates client inputs from remaining engineering and scope decisions. The original10MB upload allowance and behavioral analytics need explicit scope reconciliation; the prepared2MiB quotation implementation and demand report do not silently complete those larger requirements.
+
 - Business phone and WhatsApp numbers with country code.
 - Exact approved WIKA relationship, supporting certificate/official listing and approved wording.
 - Catalogue publication authorized: all 151 entries from the 29 supplied main pages are in the hosted CMS with genuine photos, bilingual specifications and verified technical downloads. The 90/61 folder stock labels apply to every main-page model; do not ask again. Remaining catalogue inputs are exact offered configurations/opening quantities if inventory is required, and the client's final technical/content acceptance. See docs/catalogue-publication-2026-09-28.md.

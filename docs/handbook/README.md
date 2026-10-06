@@ -1,30 +1,29 @@
 # EL AMAL website handbook
 
-This is the detailed 29 September 2026 delivery record and operating manual requested by Nour. It records application release `7f73267` before subsequent development resumes. It explains the existing implementation, evidence, exact admin workflows and remaining work; it does not certify final client acceptance or disclose credentials.
+Consolidated revision: **6 October 2026**. This replaces the dated 29 September PDF/HTML with an updated handbook, integrating the current release rather than requiring readers to reconcile separate addenda. Application reference: production `63acd5b`; prepared quotation `c2e6262`. The document update changes no live application, database, account or integration.
 
-The final PDF contains86 pages:85 baseline pages and one dated update recording the verified permission corrections deployed as `b3408a5`. The source contains about31,800 words. PDF files are explicitly stored as binary in Git so line-ending conversion cannot damage their internal offsets.
+The current PDF has **97 pages**, with about35,200 words in the editable source, clickable contents and21 top-level bookmarks. Document integrity and rendered-layout checks are recorded under `artifacts/handbook/`; they do not constitute client visual acceptance or a fresh website audit.
 
-- [Precision Revealed release and quotation activation status —6 October2026](../precision-release-2026-10-06.md)
 - [PDF handbook](EL-AMAL-Website-Handbook.pdf)
 - [Browser handbook](EL-AMAL-Website-Handbook.html)
-- [Combined editable Markdown](EL-AMAL-Website-Handbook.md)
+- [Combined editable source](EL-AMAL-Website-Handbook.md)
+- [Current subcategory status and full-launch checklist](current-readiness.md)
 - [All 151 product route pairs](catalogue-route-index.md)
-- [Changes after this baseline](post-handbook-update.md)
-- [6 October security, administrator and launch update](../operations-release-2026-10-06.md) — separate current addendum; the dated PDF/HTML above retain their historical baseline.
 
-The five baseline chapter source files are `overview.md`, `frontend-chapters.md`, `admin-chapters.md`, `backend-chapters.md` and `remaining-and-reference.md`. The dated `post-handbook-update.md` is included as a final chapter in every generated format. Update the relevant source before rebuilding. Dated baseline evidence is not silently replaced when production changes.
+The opening readiness chapter explains each delivered subcategory, implementation approach, reason, status, remaining work and owner. It includes the current hero/motion and performance evidence, SEO mechanics and indexing limits, security fixes and limits, quotation customer/admin steps, business inputs, and release order. Detailed catalogue/admin/inventory/reporting/backend/recovery procedures are retained and corrected. Historical measurements and the 29 September follow-up remain explicitly dated.
 
-## Rebuild and check
+The site is live for catalogue browsing and review. Real public intake/email and the prepared quotation feature are not yet operational. Exact production SKU definitions, business content and final operational acceptance are distinct dependencies. A former approximate completion percentage is not presented as proof of readiness.
 
-Use the Node and Python runtimes resolved by Codex workspace dependencies. `build-handbook.mjs` takes the bundled Node package directory and uses its `marked` package; `build_handbook_pdf.py` uses bundled ReportLab plus the Windows Segoe UI, Georgia and Consolas fonts. The PDF has real text, bookmarks, clickable contents, repeated table headers and page numbers. The browser version is self-contained and works offline; only its website/source links need a connection. Keep the PDF and Markdown beside the HTML for its download links.
+## Source and build
+
+Edit chapter sources before rebuilding: `overview.md`, `current-readiness.md`, `frontend-chapters.md`, `admin-chapters.md`, `backend-chapters.md`, `remaining-and-reference.md`, `post-handbook-update.md`. The builder normalizes heading hierarchy and generates the combined Markdown and self-contained HTML; ReportLab creates the PDF with clickable contents, bookmarks, repeated table headers and page numbers. Keep the three generated formats together. PDF files are stored as binary in Git.
 
 ```text
 node docs/handbook/build-handbook.mjs <bundled-node-package-directory>
 python docs/handbook/build_handbook_pdf.py
 python docs/handbook/check_handbook.py
-node docs/handbook/check_handbook_browser.mjs <bundled-node-package-directory>
 ```
 
-Render the PDF with bundled Poppler and inspect pages after meaningful changes. `check_handbook.py` checks content bounds, local links, anchors, expected coverage and accidental private environment-value inclusion without printing values. Browser verification uses an isolated headless Edge profile at 1440px and 390px. QA artifacts and token intermediates are saved under ignored `artifacts/handbook/`.
+Use the Codex-resolved Node/Python packages. The renderer uses ReportLab and Windows Segoe UI, Georgia and Consolas. The PDF checker inspects text bounds, required content, HTML anchors/local links and accidental private environment-value inclusion without printing secrets. Render with Poppler and inspect after changes. Document QA evidence is under ignored `artifacts/handbook/`. Application tests are not represented as newly run during a documentation-only revision.
 
-The bundled Windows environment has no LibreOffice renderer or registered Word automation. The verified PDF and HTML are the final document formats; no unverified Word file is presented as complete. This documentation folder is excluded from Vercel upload by `.vercelignore`.
+The PDF and offline browser handbook are the delivered document formats. No new Word file or cloud document was created. This folder is excluded from Vercel upload by `.vercelignore`. Related release evidence: [Precision Revealed](../precision-release-2026-10-06.md) and [earlier 6 October ownership/security work](../operations-release-2026-10-06.md); consolidated status takes precedence over superseded statements in those chronological records.

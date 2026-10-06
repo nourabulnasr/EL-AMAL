@@ -1,52 +1,19 @@
 # EL AMAL website delivery and administration handbook
 
-Prepared for Nour Abulnasr and the EL AMAL team. Status date 29 September 2026.
+Prepared for Nour Abulnasr and the EL AMAL team. Updated 6 October 2026.
 
-This handbook explains what has been built, what the client can use today, how staff operate it, and what remains before full operational launch. It serves two readers: the business owner who needs clear instructions and the developer who needs implementation details, reasons and evidence. The current website is a bilingual industrial instrument catalogue and quotation platform. It is approximately 90 percent complete against the recorded scope; customer email activation and some operational work remain.
+This is the consolidated delivery record and operating manual for both nontechnical owners and technical maintainers. It explains what each part does, how it was implemented, why the approach was chosen, where administrators go, what is still inactive, and who must act before full launch. This revision updates the original 29 September handbook rather than leaving the latest state in a separate addendum only.
 
-Use the public website to review the actual catalogue. Use the private administration, inventory and reporting tools with your staff account. A published catalogue entry describes a model or family; an exact SKU identifies a supplied configuration; a stock receipt records counted physical units. These are three separate records. Publishing a product does not create warehouse stock or promise a reservation.
-
-The handbook records the release serving the client review address when it was prepared. Application commit 7f7326704305012e9637702b3112b5c85f554833 was deployed and verified; documentation checkpoint f751ef5 records its evidence. Historical project notes contain earlier counts and disabled features. The current state described here takes precedence over those historical checkpoints.
+**The real website and catalogue are live. The complete customer quotation service is not yet operational.** The selected Precision Revealed hero is delivered, while real public submission/email and the existing-quotation upload journey still await activation prerequisites. The next chapter gives the current status by subcategory and the full-launch checklist. An old approximate 90% scope estimate is not a readiness certificate.
 
 ## How to use this handbook
 
-- Business owner: start with Delivery status and Where to go, then read the public experience and the remaining work register.
-- Catalogue editor: read Catalogue administration, including publication gates, source evidence and the distinction between model availability and SKU stock.
-- Sales and warehouse staff: use the administration procedures, stock examples and troubleshooting instructions. Review the permissions table before assigning roles.
-- Developer or successor: use the architecture, API, security, email, backup, deployment and verification chapters, then the source map and environment reference.
+- Nour or business owner: read Current delivery and the path to full launch first, especially the input register and acceptance checklist.
+- Catalogue editor: use the catalogue publication and administration chapters for exact fields, images, specifications, review evidence and publication steps.
+- Sales or warehouse: use the role matrix, enquiry procedures, stock examples, reports and troubleshooting guide. Follow only the procedures available to your role.
+- Developer: use the release identities, backend/API/security chapters, environment names, verification scripts and recovery/deployment instructions. Distinguish the production branch from prepared quotation code.
 
-Each chapter explains the user benefit, the mechanism and its purpose. A statement that a feature is implemented does not mean its external service is activated. The remaining work register names who must supply information, who implements the work and how completion will be checked.
-
-## Delivery status
-
-The most recent estimate is 88 percent weighted completion, rounded to about 90 percent with roughly five percentage points of uncertainty. It measures completed scope. It is not a security score, an SEO score, a design award prediction or a promise of a delivery date. A critical unfinished capability can matter more operationally than its numerical share.
-
-| Workstream | Weight | Estimated completion | Practical position |
-| --- | --- | --- | --- |
-| Foundation and hosting | 15% | 95% | Website, CMS, roles, separate databases and deployments work. Recovery delivery and staff onboarding remain. |
-| Interface and motion | 20% | 90% | Bilingual responsive interface and approved entrance are built. Final brand content and broader acceptance remain. |
-| Catalogue and content | 15% | 85% | All supplied catalogue groups are published. Exact configurations and final technical acceptance remain. |
-| Enquiries and email | 20% | 80% | Private workflow and queues are implemented. Real submission and mail activation require sender and scheduler setup. |
-| Inventory | 10% | 95% | Stock controls and audited operations are implemented. Real SKUs, counts, policy and training remain. |
-| SEO security and release | 20% | 85% | Technical SEO, protection, reporting and restore evidence exist. Field performance, offsite backups and wider acceptance remain. |
-
-The estimate above is the existing project estimate, not a new independent audit of every proposal line. The detailed remaining register also identifies original proposal items that have not become live features, including broader document uploads and visitor interaction analytics. No completion percentage should conceal those gaps.
-
-### Live and usable today
-
-The stable English and Arabic website includes the real catalogue, model search, filters, product information, genuine manufacturer images, specifications and technical document links. Visitors can build a quote basket and prepare a model and range request. Staff can sign in to the hosted CMS, manage permitted records, open the private stock console and view demand reports. The stock tools are available, although no exact production SKU definitions or opening quantities have been supplied.
-
-Eligible public pages are technically indexable. The current sitemap and crawl checks cover 342 public pages. A successful technical crawl establishes that the tested pages and metadata are reachable and internally consistent; it does not establish that Google has indexed them or that they rank for a target query.
-
-### Implemented but awaiting activation
-
-Public enquiry submission, customer confirmation email, staff notification email and emailed staff password recovery remain disabled. The confirmed receiving inbox is mohamed.sorour8@icloud.com. A receiving address does not prove ownership of a sending domain. Sender verification, provider credentials and a sufficiently frequent delivery worker must be configured and tested before those switches are enabled.
-
-Private customer photo handling is deployed and configured, but the normal customer must first complete email verification. That means the normal end to end customer photo journey is also waiting for mail activation. Internal development tests do not substitute for a real customer receipt and confirmation test.
-
-### Work still requiring implementation or operational setup
-
-Larger PDF and Excel uploads with independent scanning are not implemented. Current support is limited to three private JPEG or PNG photos of up to 2 MiB each. Automatic offsite backup scheduling is not active. Wider screen reader and device acceptance, sustained performance measurements and final operational acceptance remain. External uptime monitoring has been deliberately deferred by Nour and should not be repeatedly requested.
+Each status is supported by source or dated verification. A built feature is not necessarily enabled. Examples of stock or customer records are explanations, not real production data. Passwords, tokens, database connection strings and encryption keys are excluded from this document.
 
 ## Where to go
 
@@ -56,48 +23,267 @@ Larger PDF and Excel uploads with independent scanning are not implemented. Curr
 | Arabic website | https://el-amal-sigma.vercel.app/ar |
 | Product catalogue | https://el-amal-sigma.vercel.app/en/products |
 | Quote basket | https://el-amal-sigma.vercel.app/en/quote |
-| Direct model request | https://el-amal-sigma.vercel.app/en/rfq |
+| Direct RFQ | https://el-amal-sigma.vercel.app/en/rfq |
+| Existing quotation, after activation | /en/rfq#existing-quotation, or the Arabic equivalent; currently not production-active |
 | Staff sign in and CMS | https://el-amal-sigma.vercel.app/admin |
 | Stock operations | https://el-amal-sigma.vercel.app/staff/inventory |
-| Sales demand reports | https://el-amal-sigma.vercel.app/staff/reports |
+| Demand reports | https://el-amal-sigma.vercel.app/staff/reports |
 | Source repository | https://github.com/nourabulnasr/EL-AMAL |
-| Working branch | codex/el-amal-foundation |
+| Production branch and application | codex/el-amal-foundation; 63acd5b |
+| Continuation branch and combined application | codex/hero-review-and-quotation; c2e6262, followed by documentation updates |
 | Local project | C:\Users\noura\OneDrive\Documents\ChatGPT\EL-AMAL 4 |
 
-Replace /en with /ar for the corresponding Arabic public journey. The administration and staff tools share the existing staff account. Localhost on port 3004 is the developer's test server; the client and staff use the public HTTPS addresses above. Keep the stable client URL bookmarked instead of an individual deployment URL.
+Replace /en with /ar for the corresponding Arabic public journey. Staff use the hosted HTTPS addresses, not a developer's localhost or sample-content preview. The same staff account and role checks apply across CMS, inventory and reporting. A visible link does not grant access.
 
-## What the project includes
+## Scope and phase position
 
-EL AMAL helps engineers identify measurement instruments and helps procurement teams describe what they need. The site is designed around product identity, technical information and quotation requests. It does not include public prices, checkout, payment processing, customer accounts, ERP synchronization, automatic purchasing or AI engineering advice. Those were outside the initial scope. No such capability should be inferred from a basket icon or a product page.
+EL AMAL is a bilingual industrial instrument catalogue and enquiry platform. A published model may represent several possible configurations. An exact SKU identifies a supplied configuration, while a stock receipt records counted physical units. Publishing a model does not create stock or reserve anything.
 
-The initial brief proposed six implementation increments: foundation, catalogue slice, RFQ slice, stock slice, completion and release candidate. Later progress reports use six workstreams instead. These are two ways to organize the same project, not twelve phases. We are in completion and release acceptance across those workstreams. Core construction is substantially complete, while several operational dependencies remain.
+The original plan used six implementation increments: foundation, catalogue slice, RFQ slice, stock slice, completion and release candidate. Later reports grouped work into six workstreams. We are in completion and release acceptance, with core construction substantially delivered and specific activation/content/operating gates open. These are two ways to organize one project, not twelve phases.
 
-The original proposal mentioned four industry pages. The later client requirements prioritized oil and gas and general industry; those two are the implemented industry routes. Additional pharmaceutical, food and beverage, and construction or EPC content needs to be reconciled with the final agreed scope rather than described as already delivered. The proposal also mentioned a factory location; a verified address, hours and location presentation remain dependent on business information.
+No public prices, checkout, payment processing, customer accounts, ERP integration, automated purchasing or AI engineering advice are included. A basket is a request-preparation tool. Oil and gas and general industry are the two implemented industry routes required by the later client brief; other industry pages from the original wider proposal require scope reconciliation. The original broader 10 MB upload allowance is not delivered: the tested quotation implementation supports three files of 2 MiB each.
 
-## How the project developed
+## Delivery milestones
 
-| Milestone | What changed | Result |
+| Milestone | Delivered outcome |
+| --- | --- |
+| Foundation and first review link | Next.js/Payload, Neon databases and Vercel hosting; one stable client review address. |
+| Client workflow requirements | Search by model/type/application, direct RFQ with model/range/quantity, industry pages and conditional business contact/WIKA evidence components. |
+| Brand and entrance | Requested navy/white/orange, bilingual typography, approved loading entrance and mobile/motion safeguards. |
+| 28 September catalogue publication | All 29 supplied main pages published as 151 actual model groups, with genuine images, bilingual specifications and manufacturer documents. |
+| 29 September operations | Private inventory and reports, bounded encrypted photos, daily maintenance, crawl evidence and an isolated encrypted restore rehearsal. |
+| Permission corrections | Owner-only unlock and private notification worker fields; later last-owner continuity and authentication/role concurrency safeguards. |
+| 1 October prepared quotation extension | PDF/XLSX/photo existing-quotation workflow implemented separately; migration and public activation remain pending. |
+| 6 October selected hero release | Precision Revealed, lighter-blue/motion refinements, smaller image, layout-shift correction and narrow security patches deployed. |
+| 6 October final verification | Production 142-unit workflow and combined 152-unit workflow succeeded; homepage lab performance mobile 95 / desktop 99, measured CLS 0. |
+
+Git preserves code, migrations and this handbook. Neon contains the live records. Ignored original photographs, private settings and backup keys are separate assets. Neither this PDF nor a repository clone is a current database backup.
+
+
+## Current delivery and the path to full launch
+
+Status date: 6 October 2026. This is the current decision guide for the entire handbook. The detailed chapters that follow have also been corrected for the new hero, quotation implementation and resolved permission findings. Dated test results remain dated; updating a document does not rerun a production test or activate a service.
+
+### The direct answer
+
+The real catalogue, bilingual public website, selected Precision Revealed hero, hosted administration, inventory tools and private demand reports are delivered. Customer enquiry submission, confirmation messages, sales notifications, emailed password recovery and the normal customer attachment journey are not operational yet. The existing-quotation extension is implemented and cloud-tested on the review branch, but its production database migration and activation are outstanding.
+
+**The website is live for review and catalogue browsing. It is not yet 100% ready for the intended customer quotation service.** The launch checklist below defines what must change before that claim is justified. A high design or Lighthouse score cannot compensate for a customer being unable to submit their request.
+
+The old approximate 90% figure was a weighted scope estimate, not a measured readiness score. It is preserved as historical context in project records; this revision does not invent a new percentage. Use the actual capabilities, dependencies and acceptance evidence below to judge completion.
+
+### How to read each status
+
+| Status | What it means |
+| --- | --- |
+| Live | Released on the stable production website, with the scoped evidence recorded here. It does not mean every real-world scenario has been tested. |
+| Built, inactive | Implementation and automated tests exist, but a configuration, migration or operational dependency prevents normal customer use. |
+| Waiting for input | A business fact, account authorization, policy or acceptance must come from Nour or the client before the developer can finish it accurately. |
+| Engineering remains | Work can be completed by the developer, immediately or after the stated dependency. It is not reassigned to the client merely because it is unfinished. |
+| Deferred or additional scope | Explicitly postponed or beyond the present delivered limits. It is not silently counted as complete or made a surprise launch requirement. |
+
+### Release identity and evidence
+
+Production application: `63acd5b3630296e92a7ae8c0955e2a31686bffab`, on `codex/el-amal-foundation`. Stable public URL: https://el-amal-sigma.vercel.app/en, with Arabic at `/ar`. The corresponding deployment is `el-amal-3m6pheeed-nour-abulnasrs-projects.vercel.app`.
+
+Combined hero, security and quotation application: `c2e62620e890274b29868f7fd9424be14a92f7e3`, on `codex/hero-review-and-quotation`. This is the continuation branch, not a claim that all its features are in production. Documentation commits follow that application commit.
+
+The final production workflow [37486441262](https://github.com/nourabulnasr/EL-AMAL/actions/runs/37486441262) succeeded with 142 unit tests, TypeScript, the advisory gate, disposable database regressions, production build and built-server checks. The combined quotation workflow [37486837237](https://github.com/nourabulnasr/EL-AMAL/actions/runs/37486837237) succeeded with 152 unit tests and the additional quotation lifecycle checks. Local TypeScript exhausted native memory on the merged branch; the complete cloud TypeScript/build check subsequently succeeded. Production verification covered 11 scoped route/header checks, not every possible customer action.
+
+### Interface visual identity and motion
+
+| Subcategory | Delivered, how and why | Remaining and owner |
 | --- | --- | --- |
-| Foundation and first review link | Next.js and Payload established with Neon and Vercel | Client could review the same hosted site throughout development. |
-| Client requirement implementation | Type and application filters, model and range RFQ, two industry pages and guarded business contact components | The structure follows the client's quotation workflow. |
-| Navy design and interaction work | Requested navy colors, white type, orange details, focus and hover treatments, instrument motion | One consistent public visual system with mobile and motion safeguards. |
-| Branded entrance | Instrument inspired loading presentation, dismissal and replay | Approved entrance without blocking page reading indefinitely. |
-| Real catalogue publication on 28 September | All 29 supplied main pages imported as 151 model groups | Actual images, specifications and documents replaced review fixtures. |
-| Operations and technical SEO on 29 September | Stock service, encrypted photos, delivery maintenance, recovery safeguards and full public crawl | Private workflows and indexable real content became available. |
-| Completion release on 29 September | Partial stock operations, blocked balances, count reviews, reports, encrypted restore rehearsal, font and loader changes | Broader staff control, recovery evidence and smaller public payloads. |
+| Selected hero | Live English/Arabic Precision Revealed replaces the search-and-gauge hero. An asymmetric headline and instrument sculpture lead to catalogue and RFQ actions. Catalogue search remains on Products. | Concept choice is complete. Nour/client still reviews the implemented presentation as part of final acceptance. |
+| Artwork | The approved concept image is a 70,360-byte WebP instead of a 1,680,432-byte PNG. It is explicitly described as a concept illustration, not an actual product diagram. | Real company identity assets are separate client inputs. Do not substitute this illustration for manufacturer product evidence. |
+| Color and typography | Requested navy backgrounds, lighter steel/pale blue, white text and existing orange accents; Newsreader, Manrope and Noto Sans Arabic create display/body/language hierarchy. | Final logo and approved business imagery from client; developer integrates them. |
+| Hero movement | Small event-driven pointer depth, desktop scroll compression where supported, working pause control and static mobile fallback. No new WebGL or video engine. | Broader actual-device and OS reduced-motion testing remains engineering work. |
+| Smaller interactions | Button lift/sheen/arrow response, link underlines, section settling, progress and product-image crop reveals. Keyboard focus disables the crop to preserve its full outline. | Address specific usability findings; adding more libraries is not a launch requirement. |
+| Loading | Branded dismissible entrance plus a separate genuine route-loading status. The fallback now reserves 100svh to prevent a streamed footer jump. | Keep checking route changes; the decorative entrance is not a network-progress estimate. |
+| Mobile and access | Bilingual/RTL layout, landmarks, real controls, focus states and motion safeguards. Latest 390px EN/AR hero checks found no horizontal overflow. | Developer completes representative keyboard, screen-reader, zoom and device checks; client reviews target devices. |
 
-The source repository contains the implementation and migration history. PROGRESS.md contains dated release evidence. Database records live in Neon and change independently of Git. A pushed commit preserves code; it does not copy the current enquiries, stock ledger, users or unpublished CMS changes.
+Source: `src/components/precision-hero.tsx`, `precision-depth.tsx`, `precision-hero.css`, `src/app/(site)/[locale]/refinement.css`, `styles.css` and `loading.tsx`.
 
-## The four parts of the design
+### Catalogue technical content and contact paths
 
-The focal subject is an industrial instrument and a clear route to model selection. Light and contrast come from white type and restrained orange details against the requested #010736 and #091540 surfaces. Framing uses editorial headings, generous space and an off centre instrument composition. The intended feeling is engineering confidence and clarity. These choices carry through the catalogue and staff presentation, while technical tables remain readable.
+| Subcategory | Delivered, how and why | Remaining and owner |
+| --- | --- | --- |
+| Actual supplied catalogue | All 29 photographed main pages became 151 published model groups, with 151 actual manufacturer images, 560 bilingual specification rows and 159 verified download links at publication. | No new catalogue batch is needed. Client technical, Arabic and rights acceptance remains; developer corrects findings. |
+| Availability labels | 90 in-stock / 61 out-of-stock model labels follow the supplied folders and the instruction that every model on a main page shares its folder status. They carry a source date. | Client supplies changes. These labels never establish counted warehouse stock. |
+| Discovery | Model search, category, type/application filters, native pagination, category routes, related content and zero-result guidance. | Maintain accurate classification as products change; no fictional filters or models needed. |
+| Product details | Genuine photographs, bilingual descriptions, specifications, manufacturer datasheets and model enquiry actions. Publication requires source/review/rights evidence. | Staff can edit reviewed content; new image files still need developer deployment because no general Media library is implemented. |
+| Industries and information | Oil and gas and general industry pages, About, Contact and Resources. | Client provides genuine company facts, address/hours and approved claims. Extra industries from the original broader proposal need explicit scope reconciliation. |
+| Phone and WhatsApp | Conditional contact components and links are implemented. Missing business numbers are not invented. | Client supplies verified numbers including country code; developer configures and tests tap/call/message destinations. |
+| WIKA relationship | Evidence-gated bilingual relationship component exists. Manufacturer product identity is separate from distributor authorization. | Client supplies the genuine certificate/listing and approved wording; developer publishes only supported claims. |
 
-The requested animation list was treated as a set of possible techniques. The implementation uses lightweight CSS interactions and Motion where it benefits the hero; it does not install every animation library mentioned. The approved loading entrance is decorative. Real route loading still follows the application's actual work. Performance, reduced motion and touch usability limit how much motion each screen needs.
+### SEO and search visibility
+
+The technical SEO work is live. These are specific implementation choices, not promises of Google positions:
+
+1. **Readable server output:** real product names, descriptions and tables are delivered as HTML. Visitors and crawlers do not depend on a decorative animation to access the content.
+2. **Linked site structure:** categories, native pagination, product links and breadcrumbs expose the complete catalogue instead of hiding later products behind a search box.
+3. **Page-specific metadata:** localized titles, descriptions and canonicals identify each real page and valid pagination page. This limits generic or conflicting page identities.
+4. **English/Arabic alternatives:** reciprocal hreflang, English x-default, language and direction settings connect equivalent pages while preserving each language's URL.
+5. **Structured data:** factual organization/website, page, breadcrumb, collection/list and real-product graphs describe visible content. There are no invented ratings, zero prices or distributor claims.
+6. **Controlled indexing:** published production content is eligible; previews, admin, APIs and utility quotation pages are excluded. Filter-query duplicates are noindex/follow, while useful category and pagination URLs remain discoverable.
+7. **Dynamic sitemap and robots:** eligible bilingual records and image URLs are included; drafts, private records and arbitrary filter combinations are excluded. A robots rule is not a privacy or access-control mechanism.
+8. **Sharing and brand assets:** Open Graph, Twitter images and favicon routes resolve consistently across nested URLs.
+9. **Full discovery audit:** the latest saved 6 October crawl covered 342 public pages, 342 sitemap entries and 155 image/assets, with zero issues detected by its implemented checks. After the final hero release, scoped live metadata checks also succeeded.
+
+**Still needed from Nour/client:** confirm the final public domain and give authorized Search Console ownership/access. Supply real contact/company facts and approve the technical content. A custom domain is valuable for identity but is not a prerequisite for Google indexing the existing Vercel URL.
+
+**Still needed from engineering:** connect the chosen domain if applicable; coordinate canonical/sitemap/redirect changes; verify ownership and submit the sitemap when access is available; inspect representative URLs and resolve actual indexing diagnostics. Search Console inclusion and search impressions are not currently verified. Real traffic and indexing take observation time; neither an automated SEO score nor a sitemap submission guarantees ranking for “elamal” or “el amal industry”.
+
+### Customer enquiries existing quotations and email
+
+| Subcategory | Delivered implementation | Present operating state |
+| --- | --- | --- |
+| Quote basket | Models/quantities persist locally; review step, contact validation and bilingual feedback. | Preparation works. Real public submission remains disabled. |
+| Direct RFQ | Model, quantity and requested range without finding a catalogue item first. | Form preparation exists; same inactive mail/intake dependencies. |
+| Enquiry recording | Immutable customer snapshot, random reference, repeat-request protection and transactional queues. | Tested with isolated data; no claim of a completed real customer submission. |
+| Email confirmation | Expiring proof link, bounded resend and neutral responses, recipient limits and durable jobs. | Needs a verified sender and genuinely running frequent worker. |
+| Staff notifications | Wait for real customer confirmation; retries, leases and idempotency reduce duplicate handling. | Confirmed recipient is mohamed.sorour8@icloud.com. Receiving address is not sender-domain verification. |
+| Existing quotation | PDF, modern Excel XLSX, JPEG and PNG; contact details and optional notes instead of re-entering model lines. | Built and tested on the review branch; hosted migration not applied and public feature not active. |
+| Staff recovery email | Neutral recovery, bounded request, expiry and concurrent-token controls. | Built but disabled until real sender/recovery settings and delivery checks succeed. |
+| Scheduling | Native daily 02:00 UTC maintenance; protected frequent-worker integration prepared. Intake checks a recent successful mail heartbeat. | Daily housekeeping does not maintain the 15-minute intake heartbeat. Frequent scheduler terms/access/provisioning remains pending. |
+
+#### Exact existing-quotation limits and customer steps after activation
+
+The customer opens `/en/rfq#existing-quotation` or its Arabic equivalent, enters contact details, requests confirmation and follows the email link. The confirmation screen accepts at most three files, each at most 2 MiB. Uploads occur individually. The customer explicitly chooses **Send files for review** after uploading; uploading alone does not announce a successful staff notification. A completed document request has zero product lines and does not reserve stock or inflate product-demand reports.
+
+JPEG/PNG images are decoded and reconstructed. PDF/XLSX documents receive bounded format checks and AES-256-GCM encrypted private storage. Unsupported legacy XLS, macro-enabled XLSM, password-protected formats and files outside the accepted limits are rejected. The shared logical attachment quota is 64 MiB; files expire after 30 days. Database overhead is additional to that logical quota.
+
+**PDF/XLSX files are not antivirus scanned.** Encryption protects stored bytes; it does not make a file safe to open. Staff must acknowledge this before a forced authenticated download and use their organization's scanning tools. Files are not placed in public assets or attached to notification emails. Larger uploads, automatic malware scanning and external object storage are additional infrastructure work, not delivered capabilities.
+
+#### Administrator steps after quotation activation
+
+1. Sign in as owner or sales at `/admin` and open **Enquiries** at `/admin/collections/enquiries`.
+2. Open the request by reference. Check the request kind, email verification and quotation submission time. Do not treat a saved, unfinished upload session as a completed customer submission.
+3. Open **Enquiry attachments** at `/admin/collections/enquiry-attachments` and match the enquiry/reference. Check file type and expiry. The current production label is still **Enquiry photos** until the quotation release changes it.
+4. Use the download action. For PDF/XLSX, read and acknowledge the unscanned-document notice. Scan locally before opening; keep active/embedded content disabled. Access is restricted to owner/sales.
+5. Record permitted workflow status/internal notes. Do not rewrite the immutable customer snapshot to invent models or quantities. Review the document and agree the exact requirement with the customer through the approved sales process.
+6. Check **Notification queue** for delivery status. “Queued” is not proof of inbox receipt. Investigate failed/expired deliveries with the owner rather than editing queue internals.
+
+### Security and data protection
+
+| Subcategory | Implemented approach and reason | Remaining boundary |
+| --- | --- | --- |
+| Permissions | Four job-based roles, private collection checks, field-level protection and action-specific inventory access. Private API probes returned 403 anonymously. | Final individual accounts/roles and periodic access review need the owner. |
+| Owner continuity | Owner-only unlock; role changes preserve at least one owner with transaction/lock protection. Login/reset snapshot writes cannot overwrite the current role. | Privileged direct SQL remains outside application protections. Database credentials must be restricted. |
+| Credentials and account lifecycle | New/changed passwords require 15-128 characters, reject a small set of obvious choices; five failed attempts lock for ten minutes; production cookie controls. | Previously chosen short password needs replacement. Application MFA and a normal staff-disable/offboarding switch are not implemented; departing staff need an authorized technical revocation procedure. |
+| Recovery | Neutral responses, bounded bodies/rates, expiring tokens and serialized reset use. | Real emailed recovery has not been activated or tested in an inbox. |
+| Input and abuse | Server validation, same-origin mutation checks, bounded request bodies, pseudonymous rate keys, email limits, queue capacity and worker-health gating. | These reduce abuse; they do not prove immunity to spam or distributed attacks. |
+| Private files | Encrypted records, expiring grants, no public read, no-store/nosniff and forced staff downloads. | PDF/XLSX need cautious staff handling; automatic malware scanning is absent. |
+| Browser headers | HTTPS/HSTS, framing/object/base/form restrictions, MIME sniffing protection and private referrer policies. | Current CSP is baseline hardening, not a full nonce-based script policy or proof against all XSS. |
+| Dependencies | Pinned lockfile and all-severity CI advisory gate; Next 16.3.8, Sharp 0.35.5, source-map-js 1.2.2 and scoped Sass 1.79.6 correction in current release. | Zero known findings at the checked release is time-specific. Maintenance and new advisory checks continue. |
+| Verification | Unit tests, disposable PostgreSQL concurrency/access regressions, runtime probes and fresh code review. | No independent penetration-test certification or claim of perfect security. |
+
+**Safe ownership transfer:** at `/admin/collections/staff`, the current owner first promotes the successor to owner and confirms the successor can sign in. Only then change the former owner's role. Bulk staff updates are rejected. A reset does not promote an account. Keep provider-account MFA distinct from the unimplemented application MFA feature.
+
+### Inventory reporting and staff administration
+
+The private stock console at `/staff/inventory` includes receipts, justified adjustments, verified exact-SKU holds, partial/full release and dispatch, expiry, blocked units, count reviews, optional freshness rules and reconciliation. Unique operation keys prevent an identical retry from moving stock twice; a new operation key remains a new instruction. Posted movements are corrected by additional recorded events, not erased history.
+
+The latest recorded production check found zero exact SKU definitions. This means configuration and opening stock were not supplied; it does not claim the warehouse is empty. The client must define actual ranges/connections/materials and opening quantities before stock promises can be made. The developer imports and validates the data, then rehearses receipt, hold, release, dispatch and reconciliation with staff. This is required for activating stock commitments, not for reading the public catalogue.
+
+Owner/sales reports at `/staff/reports` include demand summaries, date/cohort filtering and CSV export with private access. Dates follow the application's Cairo reporting boundaries. These are saved-enquiry reports, not visitor analytics, revenue or paid-order reports. Document-only quotations are excluded from product demand and automatic stock allocation. Real useful reporting depends on activated intake and actual customer activity.
+
+Catalogue editors manage drafts; owners review and publish. Sales handles enquiries and holds; warehouse handles receipts/adjustments/dispatch/counts; the owner oversees configuration and accounts. The detailed role matrix and screen-by-screen instructions later in this handbook remain the operator reference. No general customer account system or public checkout is included.
+
+### Hosting recovery and operational resilience
+
+Next.js/Payload are deployed together on Vercel; Neon PostgreSQL stores durable data. GitHub stores code and migrations. Separate development databases keep mutation tests away from production. A Git push does not back up live enquiries, account records, stock history, ignored originals or private environment settings.
+
+A previous encrypted backup was restored into an isolated database: 24 tables and 572 rows with matching fingerprints and constraints. That proves the recorded snapshot could be restored. It does not prove a current pre-quotation backup exists, nor establish an automatic offsite schedule. The pending full encrypted production backup destination is `artifacts/backups/el-amal-2026-10-06-pre-quotation.enc`, relative to this project. It includes private staff/enquiry data; the key stays separately outside the synced project. Automatic approval review rejected the export without specific destination authorization. No export workaround or production quotation migration was performed.
+
+Nour/client must authorize the destination and agree backup ownership, retention and recovery targets. Engineering then takes/verifies the fresh backup, applies the additive quotation migration, verifies the migrated application and sets up an authorized recurring backup location with separate key custody. A rollback must respect database compatibility; switching a deployment alone does not undo a schema change.
+
+External Checkly monitoring remains explicitly deferred by Nour. This handbook does not reactivate it. Internal delivery health and daily maintenance exist, but neither equals independent external outage alerting. Until alerting is authorized, agree who checks operational health manually.
+
+### Performance evidence and its limits
+
+The [final 6 October PageSpeed report](https://pagespeed.web.dev/analysis/https-el-amal-sigma-vercel-app-en/nm5hsmeqea?form_factor=mobile) measured the actual English production homepage after the hero/layout correction:
+
+| Lab measure | Mobile | Desktop |
+| --- | --- | --- |
+| Performance | 95/100 | 99/100 |
+| Accessibility | 100/100 | 100/100 |
+| Best practices | 100/100 | 100/100 |
+| Basic SEO checks | 100/100 | 100/100 |
+| Largest Contentful Paint | 2.4 seconds | 0.7 seconds |
+| Total Blocking Time | 60 ms | 70 ms |
+| Cumulative Layout Shift | 0 | 0 |
+
+The earlier hero sample had mobile CLS 0.261; reserving the route-loading space removed that shift in the final sample. No legitimate resources were blocked to obtain the result. The hero adds no new runtime library; responsive image priority, reduced hydrated data and optimized font use limit cost elsewhere.
+
+These are individual homepage lab samples, not a whole-site guarantee. Product measurements from September are historical, not remeasured October product scores. There is no recorded real-user field dataset or field INP. Engineering still owes representative EN/AR catalogue/detail/form checks and broader device/accessibility acceptance. Observe real traffic after launch without calling TBT an INP measurement.
+
+### What Nour or the client must provide
+
+These inputs are collected together; passwords, API keys and database credentials belong in secure settings, never in this document or chat.
+
+| Required action | Why it is needed | What engineering does next |
+| --- | --- | --- |
+| Explicitly authorize the named encrypted database-backup destination | The export includes private records and was previously blocked for missing destination consent. | Capture/verify the current backup, apply the quotation migration and verify release compatibility. |
+| Confirm an owned sending domain/address and authorize the sending service | The known iCloud recipient cannot verify a sending domain. | Configure sender/DNS privately; test actual confirmation, sales and recovery delivery. |
+| Authorize the frequent scheduler/account terms | Customer intake requires genuine recent worker health. | Provision/authenticate the worker, verify repeated healthy runs and outage behavior. |
+| Provide business phone, WhatsApp, address/hours and final company facts | Contact links and business assertions must be real. | Populate EN/AR content, test links and update factual structured data. |
+| Provide genuine WIKA evidence and approved wording | Distributor/partner claims need evidence. | Publish the evidence-backed component or keep unsupported claims absent. |
+| Confirm final logo/imagery and review technical/Arabic content | Provisional identity and extracted content need business acceptance. | Integrate approved assets and fix specific content findings. |
+| Confirm final public domain and Search Console ownership/access | Needed to control official search identity and inspect indexing. | Connect chosen domain, update redirects/canonicals, submit sitemap and inspect URLs. |
+| Replace the short admin password and assign named staff roles | Existing account strength and access are owner decisions. | Assist secure setup, check permissions and test recovery after activation. |
+| Approve privacy/retention wording and backup arrangements | Customer files, contact data and recovery copies need an agreed operating policy. | Publish approved wording and implement the agreed retention/backup schedule. |
+| Supply exact SKUs, opening counts and reservation policy if stock commitments are launched | Catalogue labels do not define warehouse quantities or valid commercial variants. | Import with validation and run staff stock acceptance. |
+| Give final business/visual/operational acceptance | Technical tests cannot approve the client's brand or sales process. | Close the release checklist with evidence and remove review notices only when truthful. |
+
+Already supplied and not requested again: all 29 catalogue main pages, the instruction applying stock status to every main-page model, the receiving inbox, approval of PDF/Excel/photo formats, requested color direction and the Precision Revealed hero choice. Checkly remains deferred; accepting unrelated paid plans or integrations is not implied.
+
+### Engineering work that remains ours
+
+**Independent of new client facts:** maintain the corrected documentation; complete wider representative EN/AR device, keyboard, zoom and assistive-technology checks; measure representative catalogue/detail/form performance; fix reproducible failures; maintain dependency and access-control verification. These checks are not all completed by this documentation update.
+
+**After account or content inputs:** finish sender/scheduler provisioning, backup/migration, production quotation configuration, real delivery/upload/recovery acceptance, approved business-content integration, Search Console/domain setup and recurring recovery operations. The developer owns this execution; the client supplies facts/access and accepts the result.
+
+**Unclosed original proposal scope:** the original 10 MB multi-format upload allowance and behavioral/product-event analytics are not fulfilled by the current 2 MiB quotation extension and private demand report. Broader industry content also needs reconciliation with the later two-industry brief. Nour/client must explicitly accept the revised limits or retain these items for implementation; they are not automatically waived or silently counted complete.
+
+**Additional or explicitly deferred:** automatic malware scanning, external object storage, application MFA, a stricter script CSP if pursued, independent penetration testing and external monitoring. Decide which are required by the client's threat model or contracted scope before calling an expanded scope complete. They must not be advertised as delivered today. No payment, checkout or ERP work is part of this launch.
+
+### The full-launch acceptance checklist
+
+The following are proposed closure criteria for the intended enquiry website. They distinguish release blockers from ongoing optimization and optional inventory scope.
+
+| Closure criterion | Current position | Evidence required to close |
+| --- | --- | --- |
+| Approved public experience and real catalogue | Delivered; final business/content acceptance open | Client accepts current EN/AR pages, technical content and permitted brand claims; corrections verified. |
+| Working business contact paths | Inputs outstanding | Verified phone/WhatsApp and contact details resolve on desktop/mobile. |
+| Production quotation schema and release | Not migrated or activated | Authorized fresh backup, successful additive migration, compatible deployed version and private-boundary checks. |
+| Customer email and sales delivery | Inactive | Real authorized EN/AR customer submission, confirmation, one staff notification, retry/outage recovery and inbox receipt recorded. |
+| Existing quotation file journey | Built and cloud-tested only | Accepted PDF/XLSX/photo uploaded, explicitly finalized, visible only to permitted staff, downloaded with the right warning; rejected/expired/oversized cases checked. |
+| Staff account and recovery readiness | Login/security controls delivered; credential/recovery setup open | Strong named owner/staff accounts, correct role access and genuine recovery email/reset verified. |
+| Privacy and dependable recovery | Draft operating limits and one restore proof exist | Approved policy, authorized current/offsite backups, separate key custody and rehearsed recovery responsibility. |
+| Technical/browser acceptance | Automated/cloud/scoped checks complete; broader coverage open | Representative desktop/mobile EN/AR, keyboard, reduced-motion, zoom and screen-reader tasks, forms and failure states checked; material failures corrected. |
+| Search handover | Technical eligibility delivered; ownership/submission open | Chosen canonical domain, Search Console ownership, sitemap submission and representative URL inspection recorded. Ranking is not a launch pass/fail guarantee. |
+| Original proposal reconciliation | Wider uploads, behavioral analytics and broader industry scope not fully delivered | Client accepts documented scope changes, or engineering implements and verifies the retained requirements. A feature cannot be removed from the completion definition without agreement. |
+| Stock commitments, if enabled at launch | Tools delivered; exact data absent | Valid exact SKUs, counted opening stock, approved policy and staff receipt/hold/dispatch/reconciliation walkthrough. Otherwise explicitly defer commitments. |
+| Business release decision | Pending | Client accepts the operational workflow; review notices accurately reflect enabled features; operator ownership and support route recorded. |
+
+Completing this list means the agreed launch scope works and has evidence. It does not mean permanent immunity from vulnerabilities, universal accessibility certification, guaranteed inbox delivery, instant indexing or a top-ten award. Those outcomes require ongoing operation and, in some cases, independent parties.
+
+### Release order once inputs arrive
+
+1. Configure verified sender, permissions, policies and protected frequent scheduling without opening public intake prematurely.
+2. Take the explicitly authorized current encrypted backup and verify it; apply the additive quotation migration with the tested source revision.
+3. Deploy the compatible production build and validate access boundaries, attachment limits and current worker health.
+4. Perform authorized real EN/AR enquiry, quotation, staff notification and recovery journeys. Distinguish database acceptance, queued transport and actual inbox receipt.
+5. Resolve findings, finish content/domain/search work and rehearse the staff tasks appropriate to the enabled scope.
+6. Record client acceptance and enable the appropriate public gates. Verify the stable URL again after activation; keep a recovery procedure available.
+
+The document revision itself performs none of these production changes. It gives the next operator an exact scope and a truthful starting point.
 
 
 ## EL AMAL handbook public website catalogue design and search
 
-Evidence date: 29 September 2026. This chapter describes application commit `7f7326704305012e9637702b3112b5c85f554833`, deployed as `dpl_4iYTN8joqJgEfHa7L2GZzR4pn2bA`. The documentation checkpoint preceding this handbook is `f751ef5`. The stable public address is [EL AMAL English](https://el-amal-sigma.vercel.app/en) and [EL AMAL Arabic](https://el-amal-sigma.vercel.app/ar).
+Updated 6 October 2026 against production application `63acd5b` and prepared quotation application `c2e6262`. September measurements are explicitly historical. Stable public addresses: [English](https://el-amal-sigma.vercel.app/en) and [Arabic](https://el-amal-sigma.vercel.app/ar). Current readiness, ownership and launch criteria appear at the start of this handbook.
 
 This is documentation of the existing implementation. No application code, deployment, database or external account was changed to produce this chapter. Statements about live checks refer to the saved release evidence, not a fresh live audit. Repository-relative source paths below resolve from `C:\Users\noura\OneDrive\Documents\ChatGPT\EL-AMAL 4`.
 
@@ -198,7 +384,7 @@ Nour's explicit rule is that every model on a main photographed page inherits th
 
 The images came from the matching official WIKA portfolio, not AI replacement product photography. They show the model family; a supplied variant can differ. The homepage's decorative instrument remains an illustration and is explicitly captioned as such. It must not be confused with the actual product photographs.
 
-**Source:** `docs/catalogue-publication-2026-09-28.md`; `catalogue/2026-09-27/publication.json`; `catalogue/2026-09-27/datasheet-links.json`; `catalogue/2026-09-27/source-manifest.json`; `public/images/products/`; `src/components/hero-instrument.tsx`.
+**Source:** `docs/catalogue-publication-2026-09-28.md`; `catalogue/2026-09-27/publication.json`; `catalogue/2026-09-27/datasheet-links.json`; `catalogue/2026-09-27/source-manifest.json`; `public/images/products/`; `src/components/precision-hero.tsx`.
 
 #### Extraction translation and publication path
 
@@ -266,7 +452,7 @@ The activated customer control uses a request fingerprint plus an idempotency ke
 
 The verification page reads the token from a URL fragment, shows an explicit Confirm action, and removes the fragment from browser history before the confirmation request. Statuses distinguish missing/expired/used links, rate limiting, uncertain failures, real customer verification and staff test confirmation. A test confirmation explicitly does not prove customer email ownership. Confirmation itself does not place an order or reserve stock.
 
-A genuine customer confirmation may return a short-lived attachment grant and display the photo component. The implemented subset is up to three JPEG/PNG photos, 2 MiB each, with 8-megapixel processing limits, metadata removal, private encrypted handling, 30-day access and bounded logical storage. It is not the proposal's broader three-file PDF/JPEG/PNG/XLSX, 10 MB-per-file feature. The pre-submission “Drawings & technical documents” text is a placeholder for future broader support; do not describe it as an enabled PDF/Excel uploader. Real customer entry to this path remains constrained by the disabled public intake/email chain.
+The deployed product-line confirmation path supports up to three private JPEG/PNG photos, 2 MiB each, after genuine customer email confirmation. Normal access remains blocked by inactive intake/mail. The separately built existing-quotation path adds PDF and modern Excel XLSX at the same per-file limit; it requires an additive production migration and explicit activation. Its full customer/admin steps, unscanned-file warning, shared 64 MiB capacity and 30-day expiry are described in the current readiness chapter. Neither version delivers a 10 MB-per-file allowance or automatic malware scanning.
 
 **Source:** `src/app/(site)/[locale]/verify/page.tsx`; `src/components/verify-enquiry.tsx`; `src/components/enquiry-photo-upload.tsx`; `docs/private-enquiry-photos.md`; `docs/phase-status.md`.
 
@@ -280,7 +466,7 @@ With JavaScript, the language switch replaces the first locale segment, then pre
 
 The layout starts as a vertical phone layout. Catalogue controls precede results; the filter becomes a sticky sidebar on a large screen. Product details stack and later become two columns. The final desktop catalogue uses two product columns beside the filter, while the homepage's selected-instrument composition deliberately gives the first product a larger stage. Category tabs can scroll horizontally, product/model/table text can wrap, and on widths below 420px technical definition rows become one column. Wider layouts constrain the overall readable width instead of stretching indefinitely.
 
-The important thresholds are 640px for several two-column arrangements, 768px for desktop-motion eligibility, 900px for editorial information-page composition, 1024px for full navigation/hero/filter layout, and 1500px for additional outer margins. Different components need different thresholds; there is no claim that all responsive behavior is controlled by one breakpoint.
+The important thresholds are 640px for several two-column arrangements, 900px for Precision Revealed pointer-depth eligibility, 900px for editorial information-page composition, 1024px for full navigation/hero/filter layout, and 1500px for additional outer margins. Different components need different thresholds; there is no claim that all responsive behavior is controlled by one breakpoint.
 
 Recorded browser checks include 320px grouped product details, 375/390px mobile views and 1440px desktop samples, both locales, language switching, filters, basket persistence and no horizontal page overflow in the sampled routes. These are useful samples, not coverage of every phone, browser, zoom factor or all 342 pages in a rendered browser.
 
@@ -294,7 +480,7 @@ The selected direction began as **Precision in steel**, then adopted Nour's exac
 
 The active background values are `#010736` and `#091540`, white written content, and the existing orange accent `oklch(72% .14 55)`. Source CSS retains older steel/neutral rules before the later navy overrides; reading only the first `:root` block gives the wrong current palette. It is a mixed implementation: the final navy overrides use exact hex values, with OKLCH retained for the accent and some effects. It is not a uniformly converted OKLCH-only design system.
 
-The final override deliberately makes body/muted text white, distinguishes adjacent navy surfaces with borders/spacing, and keeps dark glyphs on orange controls. Actual manufacturer images sit on white contained stages to preserve the complete photographed instrument. Metal shading inside the illustrative gauge is retained. The current A monogram/wordmark and supplied-content presentation are provisional identity work pending the final logo and approved company assets.
+The final override deliberately makes body/muted text white, distinguishes adjacent navy surfaces with borders/spacing, and keeps dark glyphs on orange controls. Actual manufacturer images sit on white contained stages to preserve the complete photographed instrument. The selected concept sculpture has metal highlights and lighter-blue emphasis; it is not a technical product photograph. The current A monogram/wordmark and supplied-content presentation are provisional identity work pending the final logo and approved company assets.
 
 Manrope handles functional text; regular-weight Newsreader provides English display hierarchy; Arabic has Noto Sans Arabic. Hero headings use responsive sizing up to approximately 142px in the large English composition, while technical copy and labels are materially smaller. Most pages use generous section spacing, clear rules and editorial asymmetry rather than repeated equal-weight rounded cards. This describes implementation and intention; only Nour grants visual acceptance.
 
@@ -302,13 +488,15 @@ Manrope handles functional text; regular-weight Newsreader provides English disp
 
 #### Hero depth and motion
 
-The hero instrument is a layered HTML/CSS illustration: gradients, a case, dial, needle, stem and shadow. Perspective/rotation make it appear dimensional. There is no polygon mesh, WebGL scene or downloadable 3D model. Its caption expressly says “Illustrative study, not product photography.”
+Precision Revealed is the client-selected second concept, live on the English and Arabic homepages. It replaces the earlier HTML/CSS gauge and hero search. The composition combines a server-rendered heading and actions with a decorative optimized sculpture image. Its caption explicitly identifies concept artwork rather than an engineering diagram. Search remains on the catalogue page.
 
-On a fine hover-capable pointer, at least 768px wide, and with normal motion preference, a dynamic import loads the interactive component. `motion/react` uses `LazyMotion` and separately loaded features. Pointer position drives spring-smoothed X/Y rotation; scrolling through the instrument region compresses its scale from 1 to 0.88 and moves it by up to 45px. The pointer spring uses stiffness 95, damping 22, mass 0.7. Leaving the instrument returns it toward neutral. A visible Pause motion / Enable motion control swaps the interactive component for the static instrument.
+The original 1,680,432-byte PNG was converted to a 70,360-byte WebP. Next Image provides responsive optimized versions with eager high-priority loading. Arabic mirrors the artwork and reading order. No new animation library, video or WebGL runtime was added.
 
-Mobile, coarse-pointer and reduced-motion visitors receive the server-rendered still instrument without loading this desktop Motion component. JavaScript-disabled visitors also retain readable static content. This is a bounded interaction around the instrument, not scroll interception for the whole site.
+On a fine hover-capable pointer at least 900px wide with normal motion preference, a small client component adjusts image position from pointer movement. At most one animation frame is pending; there is no continuous render loop. Pointer exit, document visibility changes, pause and unmount reset/clean up the interaction. CSS provides spring-shaped easing, not a true three-dimensional simulation. Supported desktop browsers use a native view timeline for gentle scroll compression. Mobile, reduced-motion and unsupported browsers keep static content.
 
-**Source:** `src/components/hero-instrument.tsx`; `src/components/interactive-instrument.tsx`; `src/components/motion-features.ts`; `src/components/instrument.tsx`.
+A visible Pause motion / Enable motion control governs the hero's decorative motion. Product crop reveals elsewhere disable clipping on keyboard focus so the focus outline remains visible. Existing Motion dependencies and older instrument source files are not evidence that the new hero uses that old component.
+
+**Source:** `src/components/precision-hero.tsx`, `precision-depth.tsx`, `precision-hero.css`; `src/app/(site)/[locale]/refinement.css`; `docs/precision-release-2026-10-06.md`.
 
 #### Introduction loading hover and focus
 
@@ -318,7 +506,7 @@ Mobile, coarse-pointer and reduced-motion visitors receive the server-rendered s
 | Entrance duration | Desktop CSS sequence 1.8s; mobile below 768px 1.15s; JS fallback dismissal 2.2s | Runs on document mount/replay, not every client navigation; no once-per-session storage flag |
 | Dismissal | Pointer press, any keyboard input, focus entry, wheel/touch movement and explicit Skip can dismiss | Does not lock body scroll or take focus for decoration |
 | No-JavaScript / reduced motion | Introduction/replay hidden; global animation/transition reductions; route needle static | No mandatory animated gateway to content |
-| Actual route loading | Localized `role="status"`, polite live region and `aria-busy`, with gauge needle | Fallback reflects Next route work; not a simulated duration or progress estimate |
+| Actual route loading | Reserves 100svh to prevent the streamed footer jumping; localized `role="status"`, polite live region and `aria-busy`, with gauge needle | Fallback reflects Next route work; not a simulated duration or progress estimate |
 | Header | Sticky, darker/translucent scrolled state with CSS backdrop blur | CSS glass appearance, not a liquid-glass library |
 | Buttons | Fine-pointer lift, one-pass sheen, arrow displacement; immediate press response | CSS spring-shaped `linear()` easing, not physics simulation for every element |
 | Links/categories/cards | Navigation underline, category text/arrow movement, image-stage lift, active-filter feedback | Hover movement is opt-in for fine pointers; touch retains press feedback |
@@ -398,7 +586,7 @@ The WIKA relationship block appears on home/About only after approved English wo
 
 #### What the final SEO audit actually proves
 
-The saved final read-only crawl began on 29 September at 14:46 UTC. It records 342 public HTML pages, 342 sitemap URLs, 155 checked asset URLs and zero detected issues under its implemented rules. All 151 product pages were reached in each language. The 155 assets are 151 product PNGs, `/social-image`, the icon URL, the versioned favicon URL and the plain favicon URL; they are not 155 different product photographs.
+The original full crawl began on 29 September at 14:46 UTC. A fresh 6 October crawl repeated the complete discovery coverage with zero detected issues in the covered checks. It records 342 public HTML pages, 342 sitemap URLs, 155 checked asset URLs and zero detected issues under its implemented rules. All 151 product pages were reached in each language. The 155 assets are 151 product PNGs, `/social-image`, the icon URL, the versioned favicon URL and the plain favicon URL; they are not 155 different product photographs.
 
 `scripts/audit-live-seo.mjs` starts from the sitemap/homepages, follows allowed public route families, and checks HTTP behavior, canonicals, reciprocal alternatives, language/direction, titles/descriptions/H1, robots, sharing metadata and parseable JSON-LD. It checks referenced social/product/icon assets, private-route discovery exclusions and missing-route handling. A configured page cap reached prematurely is a failure; it does not silently label a partial crawl complete. The final record has no detected issues, not a guaranteed absence of every conceivable SEO problem.
 
@@ -410,7 +598,7 @@ It does not prove Google indexed the pages, ranking, traffic, rich results, full
 
 #### Changes that reduced real work
 
-The interface uses Next.js 16.3.5, React 19.2.8, Tailwind 4.3.3, TypeScript 5.9.3 and Motion 12.43.0, with Payload 3.90.2 for CMS. Most catalogue content is rendered on the server; interactive code is concentrated in navigation, basket/forms, introduction and the conditionally loaded desktop instrument.
+The interface uses Next.js 16.3.8, React 19.2.8, Tailwind 4.3.3, TypeScript 5.9.3 and Motion 12.43.0, with Payload 3.90.2 for CMS. Most catalogue content is rendered on the server; interactive code is concentrated in navigation, basket/forms, introduction and the small desktop hero interaction.
 
 Four material improvements were made against the actual CMS catalogue:
 
@@ -427,7 +615,7 @@ Catalogue reads use request-scoped React `cache`, not a persistent cross-request
 
 **Source:** `package.json`; `src/app/(site)/[locale]/layout.tsx`; `src/components/product-image.tsx`; `next.config.mjs`; `src/lib/load-catalogue.ts`; `src/lib/read-catalogue-records.ts`; `tests/read-catalogue-records.test.mjs`; `docs/performance-completion.md`; `PROGRESS.md`.
 
-#### Current measured results
+#### Historical September measurements and current result
 
 | Saved mobile lab sample | Performance | LCP | Total Blocking Time | CLS | Accessibility / Best Practices / SEO |
 | --- | ---: | ---: | ---: | ---: | --- |
@@ -439,7 +627,7 @@ For normal communication these round to homepage 89–91, final LCP 2.8s/TBT 240
 
 Earlier actual-product performance was 57/LCP 5.8s/TBT 590ms before the image/payload work, then 84/LCP 3.4s/TBT 160ms. An earlier actual-home sample was 78/LCP 4.0s. The demo-era homepage 100/LCP 1.2s came from different content and conditions and must not be reused as the real catalogue's current result.
 
-The intended steady 90+ performance bar is not yet demonstrated consistently. LCP below 2.5s remains unmet in the current samples. CLS was zero in those samples, but this does not prove all real sessions have zero shift. Total Blocking Time is a lab measure and must not be relabelled INP. No field INP or real-user 75th-percentile LCP/INP/CLS evidence is recorded. These local simulated mobile measurements are not a full field Core Web Vitals assessment.
+The 6 October production English-homepage PageSpeed sample supersedes these older homepage scores: mobile 95, LCP 2.4s, TBT 60ms, CLS 0; desktop 99, LCP 0.7s, TBT 70ms, CLS 0. Accessibility, best-practices and basic SEO checks scored 100 on both. The current readiness chapter links the report. This meets the homepage lab target in that sample, not consistently across every route or real visit. No fresh October product score or field INP is claimed. TBT must not be relabelled INP; the report had no real-user field dataset.
 
 Remaining performance work includes representative repeated EN/AR home/catalogue/detail measurements, Arabic font-discovery/shift checks, investigation of server/catalogue readiness and render-blocking work, and a streaming strategy that preserves no-script content if pursued. None should be claimed complete simply because a cloud build succeeded or one score reached 90.
 
@@ -449,7 +637,7 @@ Remaining performance work includes representative repeated EN/AR home/catalogue
 
 Implemented accessibility measures include a skip link to the main content, landmark structure, real links/forms/buttons, visible focus, menu expanded-state relationships, localized labels/status/error messages, controlled focus in the basket form, text-based availability labels, image alternative text, RTL-aware layout, no-script catalogue reading and reduced-motion alternatives. Decorative gauge layers and arrows are hidden from assistive technology where appropriate. Phone/contact/footer links and main controls have deliberate touch target heights; controls generally use 44–54px minimum interactive heights.
 
-Reduced-motion CSS turns off transitions/animation and smooth scrolling, hides the introduction/replay, resets hero transforms and removes the moving route needle. The hero component also avoids importing its Motion behavior when the live media preference requests reduced motion. No-JavaScript styles hide the introduction and expose the mobile nav links, while server-rendered product content and native search/pagination remain readable. This is progressive enhancement for content, not an assertion that interactive RFQ/basket submission works without JavaScript.
+Reduced-motion CSS turns off transitions/animation and smooth scrolling, hides the introduction/replay, resets hero transforms and removes the moving route needle. Precision Revealed's live media-query check disables pointer interaction for reduced motion; it does not use the earlier hero's Motion import. No-JavaScript styles hide the introduction and expose mobile nav links, while server-rendered product content and native search/pagination remain readable. This is progressive enhancement for content, not an assertion that RFQ/basket submission works without JavaScript.
 
 The recorded launch browser audit covered ten representative public/login views: English home (1440px), Arabic home (390px), English catalogue (1440px), Arabic catalogue page 2 (390px), English actual product (390px), Arabic actual product (320px), English RFQ (390px), Arabic basket (390px), English Contact (390px), and admin login (1440px). It also sampled the authenticated stock page. Automated axe results found zero violations in the selected rules after the public-notice/login landmark fixes. Manual-review items remained. Its configured public rule tags were WCAG 2 A/AA, WCAG 2.1 A/AA and best-practice checks, so it is not evidence of comprehensive WCAG 2.2 conformance.
 
@@ -479,11 +667,11 @@ The private demand report is implemented. Owner/sales users can see aggregated s
 | Catalogue acceptance | Client technical and Arabic review; exact offered variants where relevant | Family data and source-link checks do not certify each offered configuration |
 | Real inventory | Exact SKU definitions, opening quantities and accepted reservation/expiry/freshness policy | Dated public 90/61 model labels cannot become counted stock |
 | Customer delivery | Owned sender/domain, sending service, frequent scheduler authorization and actual delivery/recovery tests | Receiving inbox is already known; it alone cannot send confirmation mail |
-| Attachments | PDF/Excel and larger-file private quarantine, malware scanning/storage plus acceptance | Current photo subset does not fulfill the original 10 MB multi-format proposal |
+| Attachments | Activate the built 2 MiB PDF/XLSX/photo quotation release after backup, migration and mail setup; reconcile larger-file/scanning scope | Current production photo journey is gated. The prepared extension still does not fulfill the original 10 MB allowance or automatic scanning |
 | Policies | Approved privacy/retention/legal wording and appropriate public policy pages | There are no current dedicated public policy routes |
 | Analytics | Agreed privacy-safe product/search/download/basket events, confirmed-lead event design and reconciliation if retained | Protected reporting alone does not complete original behavioral analytics scope |
 | Search | Final domain decision, Search Console ownership/sitemap submission and actual index observations | Technical indexability is not a ranking or indexing result |
-| Performance | Consistent 90+, LCP target and field/Arabic measurements | Current final homepage is 89; LCP remains 2.8–2.9s in the cited samples |
+| Performance | Representative repeated EN/AR route checks and real-user measurements | Current home lab result is mobile 95 / desktop 99 with mobile LCP 2.4s; this is not whole-site or field evidence |
 | Accessibility/UX | Broader screen-reader, zoom, device, real form and final client walkthrough | Sampled automated checks cover only a subset of users/tasks |
 | Operations | Automatic offsite backups and wider launch acceptance | A completed restore rehearsal does not schedule future backups |
 | Monitoring | External monitoring deferred explicitly by Nour | Record as deferred; do not repeatedly request activation |
@@ -498,8 +686,8 @@ No repeat request is needed for all 29 catalogue pages, the main-page stock scop
 Several historical documents retain their original checkpoint statements. Their dates and later amendments matter:
 
 - `docs/catalogue-publication-2026-09-28.md` and older sections of the catalogue README still say indexing is disabled, show an old favicon 404, and list operational features as future work. The 29 September code/final audit supersedes those statements; indexing is enabled for eligible public pages and favicon URLs returned 200.
-- `artifacts/2026-09-29/completion/performance-report.md` is the font investigation snapshot and says no new Lighthouse score exists yet. `docs/performance-completion.md` and the later Lighthouse JSONs record actual deployment measurements. Use the final 89 homepage result, with the observed 89–91 range.
-- Older progress sections cite 34, 53, 58, 65, 121, 122 or 137 tests and 70%/85% delivery estimates. The current source checkpoint records 142 unit checks and a roughly 90% full-scope estimate; neither is a quality, ranking or security guarantee.
+- `artifacts/2026-09-29/completion/performance-report.md` is the historical font investigation snapshot. September homepage scores of 89-91 are superseded by the 6 October homepage sample: mobile 95 and desktop 99. The older product score remains historical; no current field performance is claimed.
+- Older progress sections cite smaller test counts and approximate completion percentages. Current evidence distinguishes 142 production unit checks from 152 on the combined quotation branch. Use the opening launch checklist, not an old percentage, for operational readiness.
 - The original four-industry proposal is not the same as the later two-industry client implementation. The original 250-model allowance is not an unfulfilled claim that 250 real source models were received.
 - Existing “verified catalogue” or “reviewed catalogue record” labels describe the application's publication checks, not final client acceptance of Arabic, suitability, exact variants or stock promises.
 - The 159 verified document identities, 150 linked entries, 164 document references and 160 unique URLs measure different things. They should not be collapsed into one figure.
@@ -514,11 +702,11 @@ All 151 English/Arabic product route pairs and their model-group labels are list
 
 | Topic | Primary implementation/evidence |
 | --- | --- |
-| Current release authority | `PROGRESS.md` current milestone; application `7f73267`; `artifacts/2026-09-29/completion/final-deployment.json` |
+| Current release authority | `PROGRESS.md` current milestone; production `63acd5b`; prepared quotation `c2e6262`; `docs/precision-release-2026-10-06.md` |
 | Initial and later scope | `docs/kickoff-2026-09-17.md`; `docs/client-requirements-2026-09-24.md`; `docs/final-client-inputs.md` |
 | Public page templates | `src/app/(site)/[locale]/page.tsx`; `products/page.tsx`; `products/[slug]/page.tsx`; `categories/[slug]/page.tsx`; `industries/[slug]/page.tsx`; `[information]/page.tsx` |
 | Locale shell/navigation | `src/app/(site)/[locale]/layout.tsx`; `src/components/header.tsx`; `src/components/business-contact.tsx` |
-| Design and motion | `src/app/(site)/[locale]/styles.css`; `src/components/hero-instrument.tsx`; `interactive-instrument.tsx`; `site-intro.tsx`; `instrument.tsx` |
+| Design and motion | `src/app/(site)/[locale]/styles.css`, `refinement.css`; `src/components/precision-hero.tsx`, `precision-depth.tsx`, `precision-hero.css`, `site-intro.tsx` |
 | Catalogue/publication | `catalogue/2026-09-27/publication.json`; `datasheet-links.json`; `source-manifest.json`; `docs/catalogue-publication-2026-09-28.md` |
 | Public data boundary | `src/lib/load-catalogue.ts`; `read-catalogue-records.ts`; `public-catalogue.ts`; `catalogue-details.ts`; `access.ts` |
 | Search and result UX | `src/lib/catalogue.ts`; `src/components/catalogue-view.tsx`; `src/content/product-options.ts` |
@@ -527,7 +715,7 @@ All 151 English/Arabic product route pairs and their model-group labels are list
 | Metadata and SEO policy | `src/lib/page-metadata.ts`; `site-policy.mjs`; `seo-discovery.ts`; `product-schema.ts`; `src/components/site-schema.tsx`; `next.config.mjs` |
 | Discovery endpoints | `src/app/sitemap.ts`; `robots.ts`; `social-image/route.tsx`; `icon.svg`; `favicon.ico` |
 | Full SEO crawl | `scripts/audit-live-seo.mjs`; `artifacts/2026-09-29/completion/seo-final.json`; `docs/seo-launch-2026-09-29.md` |
-| Final performance | `artifacts/2026-09-29/completion/lighthouse-final-home.json`; `lighthouse-home.json`; `lighthouse-product.json`; `docs/performance-completion.md` |
+| Current and historical performance | `docs/precision-release-2026-10-06.md` links the final homepage report; September `lighthouse-product.json` and `docs/performance-completion.md` preserve earlier route measurements |
 | Browser/accessibility scope | `artifacts/2026-09-29/launch/browser-audit.json`; `check-browser.mjs`; `artifacts/2026-09-29/completion/final-browser.log` |
 | Reporting versus analytics | `docs/demand-reporting.md`; `src/lib/demand-report.ts`; `demand-service.ts`; `docs/kickoff-2026-09-17.md` ANA01/T11 |
 | Remaining acceptance | `docs/phase-status.md`; `docs/final-client-inputs.md`; `PROGRESS.md` current milestone |
@@ -535,10 +723,9 @@ All 151 English/Arabic product route pairs and their model-group labels are list
 Artifact files are local saved evidence and are ignored by Git. Preserve them through the project's private backup process when handing the project to a new machine. A source checkout alone may not contain them.
 
 
-
 ## EL AMAL administration and staff operations handbook
 
-Evidence date: 29 September 2026. These chapters describe the checked-in application at documentation checkpoint `f751ef5ee4f14378af3c1868936bf012b8dabb8f`, whose progress record identifies application release `7f7326704305012e9637702b3112b5c85f554833` as live. Procedures were checked against collection definitions, staff components, service logic and the installed Payload implementation. This documentation task did not change application records or perform the examples in production. The field and action names below are source-verified English labels; they are not a new browser walkthrough or visual approval.
+Updated 6 October 2026. Operational procedures retain the source-checked September detail and incorporate the deployed permission/owner-continuity changes in `63acd5b`. Existing-quotation procedures refer explicitly to prepared `c2e6262`, not activated production. This documentation update performed no live staff/data mutation or new account walkthrough. Field/action labels are source-verified; client acceptance remains separate.
 
 ### 1 What is ready to use and what remains inactive
 
@@ -572,7 +759,7 @@ Use the same production host for every route below. On a local development serve
 | Staff notification state | `/admin/collections/notifications` | `Notification queue` |
 | Customer confirmation mail state | `/admin/collections/verification-emails` | `Verification email queue` |
 | Owner maintenance summary | `/admin/collections/delivery-operations` | `Delivery operations` |
-| Private customer photos | `/admin/collections/enquiry-attachments` | `Enquiry photos`; list-cell action: `Download photo` |
+| Private customer photos (production); attachments after quotation release | `/admin/collections/enquiry-attachments` | `Enquiry photos`; list-cell action: `Download photo` |
 
 Payload uses `/admin/collections/<collection>/create` for a new document and `/admin/collections/<collection>/<id>` for an existing one. Use **Create New** only where the role permits creation. For stock, create entries through **Stock control**, never through either inventory collection.
 
@@ -621,7 +808,7 @@ Normal admin/API deletion is denied for staff, categories, products, SKUs and en
 
 **Permission details that matter:** catalogue editors can read SKU definitions but cannot read warehouse quantities. Warehouse staff can see hold references and SKU snapshots in stock control but do not receive customer names, emails or the enquiry selector. A stock/report service rechecks the user's persisted staff role inside its database transaction; an outdated browser view is not authority to perform an action.
 
-The ordinary staff create/update rule is owner-only, but Payload's separate default account-**unlock** permission is broader: this project does not override its default check for an authenticated user in the admin staff collection. Do not describe account unlocking as owner-only or treat this matrix as an independent security certification. An owner should handle lockout incidents operationally until that separate permission receives explicit review.
+Staff create/update and account unlocking are explicitly owner-only. Sales, warehouse, catalogue editors and anonymous callers cannot unlock other accounts. The live last-owner safeguard prevents removal of the final owner through supported application role edits. No application permission matrix is an independent security certification.
 
 ### 4 Maintaining categories
 
@@ -805,7 +992,7 @@ The enquiry's **Delivery Status** currently has only the value `not-configured`,
 
 Notification statuses are `disabled`, `pending`, `processing`, `sent`, `failed`. Confirmation-mail queue statuses are `pending`, `processing`, `sent`, `failed`, `cancelled`. Both collections are read-only for owner/sales. A `sent` queue status means the provider accepted the message; it does not prove arrival in the recipient inbox or a completed sale. Do not reset attempts or manufacture a new date through database edits to force delivery.
 
-The Enquiries collection currently contains the old description “Email delivery and stock reservation are not active yet.” Its stock-reservation statement is stale. Stock control is implemented, while current production email/intake activation remains off for the separate prerequisites explained above.
+The Enquiries description now explains that staff may edit workflow status and internal notes, manage holds through Stock control, and inspect email outcomes in the queue collections. Its old statement that all stock reservation was inactive has been corrected. Public intake/mail remains disabled for separate activation dependencies.
 
 #### Viewing a customer's technical photo
 
@@ -981,7 +1168,7 @@ The original hold remains six units: two dispatched, one released, three expired
 
 ### 11 Demand reporting and CSV exports
 
-Owners and sales open `/staff/reports` or **Open demand reports**. Warehouse and catalogue-editor accounts cannot access it. The report counts saved enquiry demand; it does not measure website visitors, sales revenue, stock shortages, quotation acceptance or purchases.
+Owners and sales open `/staff/reports` or **Open demand reports**. Warehouse and catalogue-editor accounts cannot access it. The report counts saved product-line enquiry demand; prepared document-only quotation requests are excluded. It does not measure website visitors, sales revenue, stock shortages, quotation acceptance or purchases.
 
 #### Run a report
 
@@ -1050,7 +1237,7 @@ Open the existing account, verify the email identity, change **Role** or use **C
 
 Newly set passwords must satisfy the current 15–128 character rule. Existing older passwords were not automatically changed by that rule. The project record states that the existing owner password has not been rotated; this handbook does not reproduce it or certify its strength.
 
-Avoid changing the last available owner's role away from owner. The source does not implement a last-owner safeguard. If all owner access is lost, a trusted technical recovery operation is required; the public first-register endpoint is deliberately blocked.
+To transfer ownership, first appoint the successor as owner, save and confirm their access, then change the former owner role. The live safeguard rejects removing the last owner and protects competing role edits and authentication/reset snapshot updates. Bulk staff updates are rejected. Direct privileged SQL remains outside these guards; the public first-register endpoint stays blocked.
 
 #### Removing access is not yet a normal disable switch
 
@@ -1111,14 +1298,14 @@ This is a single aggregate balance per exact SKU. It is not a purchase-order, mu
 
 ### 15 Evidence limitations and source index
 
-The following current discrepancies are documented rather than silently corrected in application code:
+The following current limits and resolved findings distinguish what staff can rely on:
 
-- Enquiries admin helper text still says reservations are inactive; inventory functionality now exists.
+- Enquiries helper text has been corrected; stock holds and queue status have their own operating screens.
 - Enquiry **Delivery Status** remains an immutable legacy `not-configured` value. Notification/verification queues are the implementation's delivery state.
 - No catalogue Media collection or product-upload screen exists. Product media requires reviewed deployed files and Catalogue Details JSON.
 - SKU definitions are readable by all staff, including catalogue editors; stock quantities and movement history are restricted to owner/sales/warehouse.
 - Product unpublication is permitted to catalogue editors. Owner-only publication does not mean every public-content change is owner-only: categories have direct editable content too.
-- Account deletion/full disable and last-owner protection are not implemented. Payload's separate default unlock access is broader than owner-only account editing.
+- Last-owner protection and owner-only unlocking are implemented and tested. Account deletion/full disable and application MFA are not implemented.
 - The inventory view/snapshot does not provide a separate manufacturer-part-number value, although SKU definitions store one.
 - Broad historical paragraphs in the older catalogue-publication and progress documents describe earlier disabled functionality. Use the current milestone and checked source for today's scope.
 - New/changed staff passwords have a stronger rule, while a pre-existing password may still be weaker. This task did not rotate it or inspect secret values.
@@ -1157,16 +1344,15 @@ No live staff mutation, product edit, SKU creation, enquiry, photo upload, stock
 | `src/app/(payload)/api/[...slug]/route.ts` | CMS gate, blocked first registration and dedicated recovery routing |
 | `node_modules/payload/dist/utilities/formatLabels.js` and field/collection sanitizers | Generated field/collection labels verified from installed dependency |
 | `node_modules/@payloadcms/translations/dist/languages/en.js` and UI SaveDraft/Select components | English standard buttons, raw select-option labels and draft action semantics |
-| `node_modules/payload/dist/auth/defaultUnlockAccess.js`, `auth/operations/unlock.js` | Separate default staff unlock permission |
+| `src/cms/collections.ts`; `scripts/check-admin-boundaries.ts` | Explicit owner-only unlock and tested account/notification boundaries |
 | `PROGRESS.md` current milestone | Recorded live release, catalogue counts, zero exact SKU definitions, inactive intake/recovery and deferred monitoring |
 | `docs/inventory-operations.md`, `docs/demand-reporting.md`, `docs/private-enquiry-photos.md` | Supporting runbooks, cross-checked with implementation |
 | `docs/catalogue-publication-2026-09-28.md` | Historical catalogue evidence and folder-derived availability interpretation; historical activation paragraph is superseded |
 
 
-
 ## Backend security and operations handbook
 
-This chapter describes EL AMAL as implemented at application commit `7f7326704305012e9637702b3112b5c85f554833`, using the 29 September 2026 operational evidence recorded in `PROGRESS.md`. Documentation checkpoint `f751ef5` follows that application release. It explains both the working application and the conditions still preventing a complete operational launch. Documentation preparation did not change application code, databases, accounts, deployments or credentials, and did not send email.
+Updated 6 October 2026 against deployed application `63acd5b` and prepared quotation application `c2e6262`. Dated September recovery evidence is retained as historical evidence. Quotation schema changes are not applied to the hosted database. This documentation revision changes no application code, database, account, deployment or credential and sends no email.
 
 ### What the backend does
 
@@ -1183,7 +1369,7 @@ The application is an instrument catalogue and enquiry system. An enquiry is a r
 | Vercel | Hosts the Next.js application and daily cron | Existing project on the confirmed Hobby account; stable review site and administration are live. |
 | Neon PostgreSQL | Stores catalogue, staff, enquiries, queues, inventory and private photos | Separate development and hosted databases; Neon is the installed Marketplace integration. Built-in Neon Auth is not the application's staff authentication. |
 | Payload CMS | Staff login, collection administration, permissions and migrations | Embedded in the application; version 3.90.2. |
-| Next.js / React / Node | Server-rendered website, routes and runtime | Source pins Next.js 16.3.5, React 19.2.8 and Node 22.x. |
+| Next.js / React / Node | Server-rendered website, routes and runtime | Source pins Next.js 16.3.8, React 19.2.8 and Node 22.x. |
 | Resend adapter | Would deliver customer confirmations, staff notifications and password recovery | HTTPS implementation exists. No verified sender/domain and provider credentials are operationally configured; real customer and recovery delivery remain disabled. |
 | Native Vercel cron | Bounded stock expiry and enabled retention | Registered daily at 02:00 UTC. It cannot provide the frequent email-worker health required for public intake. |
 | Inngest | Proposed frequent scheduling option | Terms acceptance is outstanding; no resource was provisioned. An available free option is not an installed integration or an authorized scheduler. |
@@ -1419,11 +1605,11 @@ Investigate any operations 503, successful-mail timestamp older than 15 minutes,
 
 During a prolonged outage, pause new public intake while allowing authorized workers to recover pending work. Preserve records. Check provider receipts before deciding whether a timed-out message was accepted. Do not reset attempts, rewrite creation dates or reuse an old job beyond its deduplication window. Do not change sender, recipient or template while retryable staff jobs are pending without reconciling the queue. Turning off public intake alone does not drain or erase existing queues.
 
-### Private technical photos
+### Private technical photos and prepared quotation documents
 
-Photos are an implemented, deliberately narrow attachment workflow. They are not general document upload. A genuinely verified CMS customer can upload at most three JPEG/PNG still images, each up to 2 MiB (2,097,152 bytes). PDF, XLSX, SVG, video and arbitrary documents are not enabled; neither a 10 MB limit nor malware-scanned document quarantine is implemented.
+Production contains the narrow photo workflow: up to three JPEG/PNG images of 2 MiB each after genuine customer confirmation. The normal journey remains unavailable while email/intake is inactive. The prepared quotation release adds PDF and modern Excel XLSX with the same limits, private encryption, bounded validation, explicit finalization and staff-only forced download. Its production migration and feature flag are still pending. Neither version implements 10 MB uploads, antivirus scanning, SVG or video uploads. See the current readiness chapter for the complete document workflow and staff warning.
 
-The confirmation response can issue a signed enquiry-specific upload grant lasting 24 hours. The browser holds it in memory and sends it as a bearer header. It is not a public download URL, and the application has no later customer attachment portal. Refreshing the confirmation page loses the grant; the consumed original email token cannot simply be reused to obtain it again.
+The confirmation response can issue a signed enquiry-specific upload grant lasting 24 hours. The browser holds it in memory and sends it as a bearer header. It is not a public download URL, and the application has no later customer attachment portal. For the deployed product-line journey, refreshing loses the grant and its consumed email proof remains single-use. The prepared quotation path separately supports same-tab recovery and recovery from a lost confirmation response only within the original proof expiry; it does not add public email-address lookup or grant access to saved file contents.
 
 The upload route streams and bounds actual bytes, verifies declared MIME against signature, and decodes the image with an 8,000,000-pixel limit. It applies orientation, resizes inside 2400 by 2400 without enlargement and writes a fresh JPEG or PNG that must still fit the byte cap. Rebuilding the pixels discards embedded metadata and appended content. It does not scan arbitrary documents or remove private information visibly photographed in the image.
 
@@ -1436,6 +1622,24 @@ Only owner/sales may download. The download requires staff authentication and cu
 Photos become unavailable exactly 30 days after creation. Physical deletion requires enabled retention and a successful operations invocation. Backups can retain older encrypted copies; the live 30-day policy is not automatic erasure from every backup. When the quota fills, new admission stops instead of deleting active photos or silently expanding storage.
 
 The current encrypted format has no key ID or dual-key reader. Changing `PAYLOAD_SECRET` invalidates outstanding grants and makes old photo/outbox ciphertext unreadable with the new secret. A planned rotation needs paused dependent workflows, an encrypted backup, preserved old secret in private custody, and either a reviewed re-encryption migration or explicit expiry/retention plan. No automated re-encryption tool is included. Losing the old secret cannot be repaired by restoring only the database.
+
+#### Prepared existing-quotation extension
+
+The following contracts exist on `codex/hero-review-and-quotation` at combined application `c2e6262`. They have been tested in isolated databases and a complete cloud workflow, but the production migration and normal customer activation are pending.
+
+| Component | Contract and reason |
+| --- | --- |
+| Enquiry creation | A `quotation` request uses contact details and optional notes with zero product lines. Normal `products` requests still require valid lines. |
+| `POST /api/customer-quotation-files` | Bounded individual upload, enabled quotation configuration, exact origin, enquiry-specific bearer grant and rate checks. Accepts PDF/XLSX/JPEG/PNG under the documented limits. |
+| `POST /api/customer-quotation-files/control` | Upload-session status/finalization through the customer's signed capability. Finalization locks the enquiry and creates one staff notification transactionally. |
+| `GET/POST /api/staff/enquiry-attachments/:id` | Owner/sales read. Unscanned document GET shows a warning; same-origin bounded form POST with acknowledgment forces download. It does not send the document to an external scanner. |
+| PDF checks | Reject advertised active/encrypted features and enforce bounded format validation. This is not a complete PDF sandbox or antivirus scan. |
+| XLSX checks | Limit archive entries to 200, a single expanded entry to 4 MiB, total expansion to 8 MiB; reject unsafe paths, encryption, macros, embedded and external-link packages. |
+| Migration | `src/migrations/20261001_120000_existing_quotations.ts` adds the schema and defaults existing enquiries to products. Destructive rollback is refused while quotation records exist. Not applied to production. |
+| Stock and reports | Document-only requests do not create stock allocations or product-demand rows. Sales interprets the file before an exact configuration is agreed. |
+| Regression | `scripts/check-quotations.ts`, quotation unit tests and built-server checks verify the isolated lifecycle, retries, finalization, privacy and stock/report exclusion. No real mail receipt is established by these tests. |
+
+Activation requires `ENQUIRY_QUOTATIONS_ENABLED=true` in addition to normal intake, sender and worker-health readiness. Do not turn on flags to replace provider setup, explicit backup authorization, migration or actual customer/staff acceptance. The warning and retention limits must be clear to operators before documents are accepted.
 
 ### Security controls and their limits
 
@@ -1455,17 +1659,15 @@ The current encrypted format has no key ID or dual-key reader. Changing `PAYLOAD
 
 Global headers disable MIME sniffing and framing, constrain objects/base URI/forms, restrict camera/microphone/geolocation and add HSTS for one year. The global CSP is `object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'`. It has no restrictive `script-src` or per-response nonce policy and should be described as baseline hardening, not comprehensive XSS prevention. Public referrers use strict-origin-when-cross-origin; private routes are overridden to no-referrer. HSTS is not configured with includeSubDomains/preload in this source. The powered-by header is disabled.
 
-#### Known source limitations to address after documentation
+#### Resolved findings and remaining security work
 
-1. **Notification worker metadata is only hidden in the admin UI.** `src/cms/notifications.ts` marks `deliveryKey` and `leaseToken` with `admin.hidden` but does not deny their field-level read access. Owner/sales can therefore potentially receive those values through their authorized collection reads. Anonymous readers are denied the entire collection. These values are an idempotency identity and an internal lease identity; neither authenticates a public worker endpoint. The worker routes separately require `NOTIFICATION_WORKER_SECRET` or `CRON_SECRET`, and direct queue writes are denied. No anonymous exposure or direct worker takeover is established. The minimal future change is field read denial plus owner/sales denied-field assertions and a trusted-worker regression.
-2. **Enquiry admin helper text is stale.** The collection description still says stock reservation is not active, although private staff stock operations exist. Its immutable `deliveryStatus` field is still a legacy `not-configured` value; actual email state lives in the queue collections. Operators should consult those queues, not use that field as delivery telemetry.
-3. **No application MFA or penetration-test acceptance is implemented.** Strong-password policy, login lockout and recovery controls are real safeguards but do not establish either claim. Existing owner credentials still need strengthening.
-4. **No independently provisioned external alerting.** Owner-visible health exists; Checkly remains deferred. A failed daily job can require manual discovery until an approved external alerting arrangement exists.
-5. **No automatic offsite recovery schedule.** The successful local archive/rehearsal establishes one recoverable snapshot, not a continuous recovery service.
-6. **The broader upload requirement remains open.** Larger PDF/Excel private quarantine, scanning and storage need their own design, implementation and verification.
-7. **Staff unlock inherits a broader framework default.** The staff collection does not define `access.unlock`. Installed Payload 3.90.2 fills this with `defaultUnlockAccess`, which allows an authenticated member of the configured admin collection. Because all four staff roles belong to that collection, source inspection indicates that a signed-in non-owner can use the framework unlock operation for another staff email. Anonymous access remains denied; unlock clears login-attempt/lock state and does not reveal or change a password or grant a role. This is broader than an owner-only account-administration policy. The minimal future correction is explicit owner-only unlock access, verified with owner/non-owner/anonymous requests against disposable accounts and with normal login lockout preserved. This finding is from source inspection, not a production mutation or a newly executed exploit test.
+The 29 September follow-up corrected the two concrete access findings in the original handbook: notification `deliveryKey` and `leaseToken` now deny normal field reads, and staff unlock explicitly requires the owner role. Trusted workers retain the data they need. The Enquiries helper text now directs staff to the right stock and delivery screens. The immutable legacy Delivery Status is still a submission snapshot, not current queue telemetry.
 
-No application fix was made while producing this chapter. These are concrete follow-up findings, not a claim that undocumented hardening already happened.
+The 6 October owner-continuity change preserves at least one owner and prevents stale authentication/reset writes from replacing the current role. Access-checked role edits are serialized and conditionally applied within a transaction. Bulk staff updates are rejected. Twenty-two isolated admin checks covered valid transfer, races, rollback, missing transactions, authentication overlap and prior unlock/notification boundaries. No real account was mutated to run those tests.
+
+Current limitations are: no application MFA or independent penetration-test certification; baseline rather than nonce-based script CSP; owner credential strengthening still required; automatic offsite recovery not configured; external monitoring explicitly deferred; and PDF/XLSX documents unscanned in the prepared quotation extension. Larger files and malware-scanning infrastructure remain separate work. Source validation and encryption are not malware clearance.
+
+Current patches include Next 16.3.8, Sharp 0.35.5, source-map-js 1.2.2 and the scoped Sass 1.79.6 correction. The final release advisory gate returned zero known findings; future releases need a fresh check. None of these statements is a guarantee of permanent security.
 
 ### Configuration reference
 
@@ -1496,6 +1698,7 @@ Values, passwords, tokens, private hostnames, provider credentials and connectio
 | `INVENTORY_FRESHNESS_HOURS` | Optional whole-hour freshness policy; absent setting leaves review manual. |
 | `SITE_INDEXING_ENABLED` | Production real-catalogue indexing gate; not a ranking guarantee. |
 | `GOOGLE_SITE_VERIFICATION` | Optional Search Console ownership token. |
+| `ENQUIRY_QUOTATIONS_ENABLED` | Prepared existing-quotation feature gate; leave off until production migration and operational prerequisites are verified. |
 | `BUSINESS_PHONE`, `BUSINESS_WHATSAPP` | Approved public contact information. |
 | `WIKA_RELATIONSHIP_EN`, `WIKA_RELATIONSHIP_AR`, `WIKA_EVIDENCE_URL` | Approved relationship wording and documentary evidence. |
 | `BACKUP_DATABASE_URL` | Optional explicit direct source for encrypted backup. |
@@ -1563,7 +1766,7 @@ Windows host memory has interrupted earlier parallel checks and local builds. Ru
 
 | Command or script | What it verifies | Operational caution |
 |---|---|---|
-| `npm test` | Unit/permission/validation/crypto/helper regressions | 142 checks succeeded at the current application checkpoint; new runs may change the count. |
+| `npm test` | Unit/permission/validation/crypto/helper regressions | 142 production checks and 152 on the combined quotation branch succeeded at the recorded checkpoints; new runs may change the count. |
 | `npm run typecheck` | Integrated TypeScript consistency | Type success does not prove browser or database behavior. |
 | `npm audit --audit-level=low` | Known dependency advisories at all severities | Recorded result is zero; must be rechecked for future releases. |
 | `npm run readiness` | Presence/shape of configuration gates | No network, no secrets and no real readiness/receipt proof. |
@@ -1579,6 +1782,8 @@ Windows host memory has interrupted earlier parallel checks and local builds. Ru
 | `scripts/check-staff-and-photos.ts` | Photo crypto/quota/access/retention and real Payload reset/session behavior | Checks intended development/hosted separation, uses owned isolated schema and fake mail. |
 | `scripts/check-inventory.ts` | Real PostgreSQL inventory access and concurrent operation invariants | Development/disposable data only. |
 | `scripts/check-demand-report.ts` | Report filtering, aggregation, access and privacy-safe export | Development/disposable data only. |
+| `scripts/check-admin-boundaries.ts` | Last-owner continuity, auth/role concurrency, owner-only unlock and private notification fields | Synthetic staff and fake transport in a disposable schema; no real account mutation. |
+| `scripts/check-quotations.ts` | Prepared document request, upload, finalization, access and stock/report exclusion | Review branch, disposable database; does not prove hosted activation or real inbox receipt. |
 | `scripts/check-built-server.mjs` | Starts the built app and checks public/private CMS routes | Explicitly restricted to the disposable CI database. |
 | `scripts/audit-live-seo.mjs` | Public route/sitemap/asset technical crawl | Public read-only crawl; follow its configured target and limits. |
 | `scripts/database-backup.mjs` | Encrypted backup or isolated restore rehearsal | Separate private configuration and intended direct hosts; not an in-place restore tool. |
@@ -1587,11 +1792,11 @@ Windows host memory has interrupted earlier parallel checks and local builds. Ru
 
 The pinned GitHub workflow runs on push and pull request, cancels superseded runs for the same ref, and grants read-only repository contents permission. Its Linux runner uses Node 22 and a disposable PostgreSQL 17 service with synthetic CI credentials. No hosted database secrets are required.
 
-It performs a clean install; unit/permission checks; TypeScript; all-severity dependency audit; fresh migrations into disposable Postgres; stock/report database regressions; a production build with real CMS integration enabled against that disposable database; and built-server route checks. The smoke script checks English/Arabic catalogue, staff sign-in surfaces, admin login, and denial of anonymous SKU/photo/inventory/report APIs.
+It performs a clean install; unit/permission checks; TypeScript; all-severity dependency audit; fresh migrations into disposable Postgres; stock/report/admin database regressions, plus quotation regressions on its review branch; a production build with real CMS integration enabled against that disposable database; and built-server route checks. The smoke script checks English/Arabic catalogue, staff sign-in surfaces, admin login, and denial of anonymous SKU/photo/inventory/report APIs.
 
 The current workflow does not run every standalone integration script on every push, does not send real email, does not perform a complete device/accessibility audit and does not prove hosted database migration status. Earlier isolated integration evidence covers additional services but should not be relabelled as automatic coverage in the workflow.
 
-Recorded final application evidence is GitHub run `36584827754` on `7f73267`, with 142 unit checks, TypeScript, zero audit findings, fresh migrations, stock/report regressions, build and built-server checks. Production deployment is `dpl_4iYTN8joqJgEfHa7L2GZzR4pn2bA`; the stable site remains `https://el-amal-sigma.vercel.app`. These identifiers establish the documented checkpoint, not the result of a fresh deployment during this handbook task.
+Current production evidence is GitHub run `37486441262` on `63acd5b`; combined quotation evidence is run `37486837237` on `c2e6262`. Both complete workflows succeeded. The current production deployment is `el-amal-3m6pheeed-nour-abulnasrs-projects.vercel.app`, serving the stable alias. These are recorded release results, not a fresh deployment during the documentation task. The earlier September identifiers remain historical only.
 
 #### Release and rollback discipline
 
@@ -1628,7 +1833,7 @@ During rollback, preserve the database and review whether the older code can use
 
 ### Evidence and source index
 
-This chapter reconciles current code with current progress. Older runbooks preserve development history and sometimes say later-completed work is pending. The latest milestone in `PROGRESS.md` and the source revision above take precedence for present status. In particular, `docs/operations-release-2026-09-29.md` retains earlier test counts/audit findings and earlier backup status; `docs/continue-project.md` still ends with a stale instruction not to claim a restore rehearsal. The actual restore report and current recovery runbook establish the later completed rehearsal.
+This revision reconciles the earlier chapter with the 6 October release. Dated runbooks and PROGRESS entries retain development history; current readiness, source revision and actual hosted migration state take precedence. The completed September restore rehearsal remains valid evidence for that snapshot, while fresh pre-quotation backup authorization and recurring offsite backups remain outstanding.
 
 | Subject | Primary repository evidence |
 |---|---|
@@ -1639,7 +1844,7 @@ This chapter reconciles current code with current progress. Older runbooks prese
 | Public data boundary and pagination | `src/lib/load-catalogue.ts`, `src/lib/public-catalogue.ts`, `src/lib/read-catalogue-records.ts` |
 | App API exports | `src/app/(frontend)/api/**/route.ts`, `src/app/(payload)/api/[...slug]/route.ts` |
 | Staff passwords/recovery/reset concurrency | `src/lib/staff-security.ts`, `staff-recovery.ts`, `staff-email.ts`, `staff-reset-lock.ts`; `scripts/check-staff-and-photos.ts` |
-| Inherited staff-unlock behavior | `src/cms/collections.ts`; installed `node_modules/payload/dist/collections/config/defaults.js`, `auth/defaultUnlockAccess.js`, `auth/operations/unlock.js` |
+| Staff-unlock behavior (now explicitly owner-only) | `src/cms/collections.ts`; installed `node_modules/payload/dist/collections/config/defaults.js`, `auth/defaultUnlockAccess.js`, `auth/operations/unlock.js` |
 | Enquiry contract/snapshot/transaction | `src/lib/enquiry-preview.ts`, `basket.ts`, `enquiries.ts`, `submit-enquiry.ts`; `src/cms/enquiries.ts` |
 | Public intake gates, quotas and receipts | `src/lib/customer-readiness.ts`, `customer-http.ts`, `customer-service.ts`, `customer-receipt.ts`, `customer-quota.ts`, `request-limits.ts`, `queue-capacity.ts` |
 | Confirmation and customer outbox | `src/lib/enquiry-verification.ts`, `verification-http.ts`, `verification-runtime.ts`, `verification-message.ts`, `verification-outbox.ts`, `verification-email-worker.ts`; `src/cms/verification.ts`, `verification-emails.ts` |
@@ -1659,40 +1864,13 @@ Technical mechanisms have been described from source; live status is attributed 
 
 ## Remaining work and ownership
 
-The catalogue photographs have been supplied and all 151 main page model groups are published. They are not a remaining input. The receiving email has also been supplied and confirmed. The table below is the current work register; it separates configuration, implementation, review and explicit deferral.
+The current subcategory status, exact Nour/client input register, developer responsibilities and full-launch acceptance checklist are at the start of this consolidated handbook. They are the authoritative remaining-work list for 6 October 2026. The client has already supplied the catalogue and recipient, selected Precision Revealed and requested PDF/Excel/photo quotations; do not ask for those decisions again.
 
-| Item | Current state | Needed from Nour or client | Work for developer |
-| --- | --- | --- | --- |
-| Customer and staff email | Code deployed but disabled | Owned sending domain or address and provider authorization | Configure sender, schedule workers, test delivery and retries, then enable intake and recovery. |
-| Frequent worker | Daily maintenance exists | Accept required account terms for an authorized scheduler | Provision, authenticate and verify frequent executions and stale health behavior. |
-| Exact stock | Tools built with zero exact production SKUs | Offered configurations, opening counts, hold policy, staff roles and freshness decision | Validate and import real SKUs, enter audited opening stock and rehearse staff operations. |
-| Larger documents | JPEG and PNG only | Confirm document requirement, service authorization and retention policy | Implement private direct upload, quarantine, scanner, authorized downloads and failure tests. |
-| Automatic offsite backup | Local encrypted backup and restore rehearsal complete | Approved destination, account access, retention and recovery objectives | Schedule copies, protect keys, verify freshness, alert failures and rehearse restoration. |
-| External monitoring | Deferred by Nour | Revisit only when requested | Activate approved service and alerts when authorized. |
-| Company details | Provisional or hidden where facts are missing | Phone, WhatsApp, address, hours, final logo, company imagery and approved facts | Populate, link, validate bilingual presentation and structured data. |
-| WIKA relationship | Claim component guarded until evidence exists | Genuine evidence and approved English and Arabic wording | Verify source and enable truthful relationship presentation. |
-| Domain and search ownership | Stable Vercel URL works | Final domain ownership and Search Console access or verification token | Connect DNS, update canonical base, verify redirects and submit sitemap. |
-| Content acceptance | Extracted and linked real catalogue | Technical, translation, image rights and business content acceptance | Correct specific findings and recheck affected records. |
-| Staff credentials | Login works; new password policy implemented | Choose a strong unique owner password and final staff assignments | Assist secure configuration and validate recovery once mail works. |
-| Accessibility and performance | Sampled browser and lab evidence | Client device review and acceptance | Broaden assistive technology checks, repeat representative lab tests and observe real traffic. |
-| Interaction analytics | Private enquiry demand reporting exists | Confirm analytics and privacy choices if visitor tracking is wanted | Implement approved event measurement, separate test traffic and reconcile lead counts. |
-| Final launch | Review site live | Approve business policies, visual presentation and operational workflow | Complete end to end checklist and record launch evidence. |
+Public quotation and email activation still need explicit approval of the named encrypted database-backup destination, a verified sending identity and authorized frequent scheduling. Engineering owns the backup/migration/configuration and real end-to-end checks after those dependencies are available. Business facts, WIKA evidence, strong staff credentials, privacy/backup policies, Search Console/domain ownership, exact stock data if commitments are enabled, and final client acceptance remain owner inputs.
 
-No payment, purchase or acceptance of service terms should be inferred from the existence of a configuration file. Integration authorization and a live operational check must precede claims that a service is active. Monitoring remains deliberately outside the current active work.
+Broader device/accessibility and representative performance verification remain engineering work. Automatic malware scanning, larger files, visitor analytics, application MFA and extra industry content are not delivered features; agree any expanded requirements explicitly. External monitoring remains deferred at Nour's request. No account terms, paid service or private-data export is authorized merely by updating this handbook.
 
-### Work that can continue without new client facts
-
-The developer can correct verified code defects, stale operational descriptions and inconsistent runbooks; improve current interface accessibility and measured public performance; strengthen tests for existing protection boundaries; and prepare evidence and operating procedures. Those actions use the existing architecture and the approved design. They do not require fabricated company information or speculative stock.
-
-Real email activation requires a sender and working schedule. Real stock allocation requires real configurations and counts. Search Console ownership requires control of the property. The developer can prepare these tasks but cannot replace those inputs with invented values or claim a live result based only on code.
-
-### How a stronger final website is achieved
-
-The next substantial visual improvement comes from genuine company identity: approved logo, real people or facility photography where appropriate, truthful relationship evidence and useful technical content. Repeated decorative effects cannot replace those materials. The current motion should remain subordinate to model finding, document reading and quotation preparation.
-
-SEO improvement depends on accurate original business content, technically correct pages, consistent entity details, useful product selection material and actual search performance review. The technical foundation is substantial; rankings depend on competition, authority, relevance, content and search systems outside this project. No top ten position or regional design award can be guaranteed.
-
-Security work must continue throughout operation through dependency updates, access review, backup verification and incident handling. Zero known package advisories on one date is a useful result, not a permanent guarantee. Staff password quality, correct roles and protection of provider accounts remain essential.
+Full readiness is closure of the stated launch criteria, not a promise of a top-ten award, perfect security or instant search ranking. Maintain useful technical content, measured usability, dependency/access reviews and tested recovery during operation.
 
 ## Operator routines
 
@@ -1747,7 +1925,7 @@ Review who has access, test restore procedures in an isolated database, inspect 
 
 ## Source ownership and continuation
 
-The project is saved in C:\Users\noura\OneDrive\Documents\ChatGPT\EL-AMAL 4 and on the codex/el-amal-foundation branch of the EL-AMAL GitHub repository. Source, migrations, tests and this handbook are versioned. node_modules and build output can be regenerated. Live database contents, credentials, ignored catalogue originals and test artifacts are separate assets.
+The project is saved in C:\Users\noura\OneDrive\Documents\ChatGPT\EL-AMAL 4 and the EL-AMAL GitHub repository. Production source is `codex/el-amal-foundation` at `63acd5b`; continuation uses `codex/hero-review-and-quotation` with combined application `c2e6262` and later documentation commits. Source, migrations, tests and this handbook are versioned. Live database contents, credentials, ignored originals and operational artifacts are separate assets.
 
 A new assistant or developer should read AGENTS.md, PROGRESS.md, docs/phase-status.md, this handbook and the current Git diff before acting. Do not restart the catalogue extraction. Do not ask again for the receiving inbox or the supplied 29 pages. Keep production and development database connections separate and never run development mutation checks against production.
 
@@ -1780,13 +1958,13 @@ Signing in to another ChatGPT account does not itself move or back up the databa
 
 ## Evidence and verification index
 
-The completed release has 142 passing unit checks, a successful TypeScript check, a clean package advisory audit at the recorded date, real development database regressions, and a successful cloud build with actual server route checks. GitHub run 36584827754 verified application commit 7f7326704305012e9637702b3112b5c85f554833. The live deployment identifier is dpl_4iYTN8joqJgEfHa7L2GZzR4pn2bA. The stable client address remains unchanged.
+The current production release `63acd5b` passed 142 unit checks and complete cloud run `37486441262`. The prepared combined quotation release `c2e6262` passed 152 units and complete run `37486837237`. Both include TypeScript, an all-severity advisory gate, disposable database regressions, build and actual built-server checks. Production is `el-amal-3m6pheeed-nour-abulnasrs-projects.vercel.app`, on the stable client alias. This documentation revision did not rerun application tests or deploy code.
 
-The final technical crawl covered 342 public pages, 342 sitemap URLs and 155 assets with zero detected issues in the implemented checks. Representative mobile Lighthouse samples measured homepage performance from 89 to 91 and product performance 90. The final homepage sample had LCP 2.8 seconds, total blocking time 240 ms and CLS zero. The preceding product sample had LCP 2.9 seconds. These do not establish the LCP below 2.5 seconds target or real visitor INP.
+The 6 October read-only crawl covered 342 public pages, 342 sitemap URLs and 155 assets with zero issues detected by the implemented checks. Final 6 October English-homepage PageSpeed measured mobile 95 / desktop 99; mobile LCP 2.4s, TBT 60ms and CLS 0. Automated accessibility, best-practices and basic SEO checks scored 100 on both. September product performance 90 / LCP 2.9s is a historical sample, not a newly measured October result. There is no recorded real-user field dataset or field INP.
 
 The encrypted restore rehearsal recovered 24 tables and 572 rows with matching row fingerprints and constraint count into a separate temporary development database. It was performed on the backup taken before the additive inventory completion migration. The temporary database was removed. Future recovery must apply the appropriate forward migrations before switching a replacement environment into service.
 
-The main evidence files are in the ignored artifacts/2026-09-29/completion folder: seo-final.json, live-release.json, lighthouse-final-home.json, lighthouse-home.json, lighthouse-product.json and unit-tests.log. The earlier launch checks are in artifacts/2026-09-29/launch. The published handbook summarizes those findings; screenshots and raw diagnostic files are not customer data or a substitute for operational acceptance.
+Current evidence is summarized in `docs/precision-release-2026-10-06.md` and `docs/operations-release-2026-10-06.md`, with source/test identifiers and the public PageSpeed report linked in the current readiness chapter. Scoped live artifacts are under ignored `artifacts/2026-10-06/launch/`; original crawl, restore and lab evidence remains under `artifacts/2026-09-29/`. Raw diagnostics and synthetic regression results are not a substitute for actual customer email and operational acceptance.
 
 The source references in the preceding chapters are repository relative. Open them within the local project or at the matching Git commit. Configuration variable names are provided for developers; values and credentials are intentionally kept in private environment settings. This handbook contains no login password, database URL, API key or backup key.
 
@@ -1800,9 +1978,9 @@ The project code and recorded tests establish what EL AMAL actually does. These 
 - [OWASP authentication guidance](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html) provides the security context for strong credentials, throttling, neutral login and recovery responses, and session controls. Independent penetration testing and broader authentication hardening remain separate from implementing those controls.
 
 
-## Update after the handbook baseline
+## Historical release note from 29 September
 
-Date: 29 September 2026. The main handbook records application release 7f73267 and was delivered before further development resumed. This dated update records what changed afterward; it takes precedence over the two source findings described in the baseline security chapters.
+Date: 29 September 2026. This historical note records the first fixes after the original handbook. Its corrections are now integrated into the updated chapters. Current release identities, remaining work and acceptance criteria are in the opening 6 October readiness chapter; this historical deployment is not the current application version.
 
 - **Staff account unlocking:** only an owner may unlock a staff account. Sales, warehouse, catalogue editors and anonymous callers are refused. This keeps account administration within the owner role. Existing login and password rules are unchanged.
 - **Notification privacy:** normal owner and sales API reads retain useful delivery status, attempts and reference fields but omit the internal delivery key and worker lease identifier. Merely hiding a field in the admin interface did not restrict its API representation. Trusted internal workers retain access needed to send and finish a queued message.
@@ -1812,6 +1990,6 @@ Date: 29 September 2026. The main handbook records application release 7f73267 a
 
 No customer data, actual stock, owner password, public design or schema was changed for these fixes. All test data used an empty development schema that was removed afterward. Email tests used a fake transport. Customer sending and recovery delivery remain disabled pending their existing prerequisites; monitoring remains deferred at Nour's request.
 
-Release verified: application commit b3408a500c38dcc39e70a13a7ee68393ba50365d is live at the stable client URL as deployment dpl_8YSXSLAXwnrE3B8B1xEyHXs6J2JD. [GitHub quality run 36606118269](https://github.com/nourabulnasr/EL-AMAL/actions/runs/36606118269) succeeded, including the new database regression, production build and server startup checks. Current npm audit reports zero known advisories.
+Historical release verified: application commit b3408a500c38dcc39e70a13a7ee68393ba50365d was live on 29 September as deployment dpl_8YSXSLAXwnrE3B8B1xEyHXs6J2JD. [GitHub quality run 36606118269](https://github.com/nourabulnasr/EL-AMAL/actions/runs/36606118269) succeeded, including the new database regression, production build and server startup checks. The advisory audit at that release reported zero known findings. Production has since advanced to the version identified in the opening readiness chapter.
 
 Live checks verified English/Arabic home and product pages, anonymous private-route and unlock rejection, owner permissions, hidden notification fields, updated enquiry instructions and the staff reports screen. Checked 390px screens had no horizontal overflow or browser JavaScript errors. The initial API test omitted the Origin header required by Payload's cookie authentication; the corrected request passed without weakening that protection. No production account unlocking or stock mutation was used as a test. This is scoped release evidence, not a full security certification or final client acceptance.

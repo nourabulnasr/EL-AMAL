@@ -1,5 +1,13 @@
 # EL AMAL progress
 
+## Consolidated handbook refresh - 6 October 2026
+
+Nour requested an updated explanation of every delivered subcategory, remaining work, client inputs and full readiness. Rebuilt the existing handbook PDF, HTML and editable Markdown from seven chapter sources. The current edition has97 pages and about35,200 source words. Its opening readiness chapter separates live production63acd5b from prepared quotationc2e6262, explains implementation/reasons and admin/customer steps, names client and engineering responsibilities, and defines a full-launch checklist and release order. Corrected the old hero, performance, Next version, PDF/XLSX implementation, owner-unlock/continuity and notification-privacy statements throughout the detailed chapters. Historical evidence remains clearly dated.
+
+Original proposal gaps are explicit: the implemented2MiB quotation limit is not the original10MB allowance; demand reporting is not behavioral analytics. Those and the broader industry scope need implementation or explicit scope reconciliation. No new completion percentage, perfect-security claim or ranking guarantee. Hero choice/catalogue/recipient/file-type choices are already settled; Checkly remains deferred. Specific encrypted-backup destination authorization and verified sender/frequent-worker setup remain unanswered/unprovisioned; no private export, hosted migration, real mail, activation or website change occurred during this documentation task.
+
+Document integrity checks cover required current content, bounds, anchors/local links and accidental private environment-value inclusion; final checks report97pages,21top-level bookmarks,153HTMLinternal anchors and no issues. Poppler rendered every page for visual layout review. The existing builders now carry the current revision date, include the readiness chapter and avoid a blank page before the historical note. Application test results are preserved as dated release evidence, not falsely described as rerun for documentation. Current PDF entry point: docs/handbook/EL-AMAL-Website-Handbook.pdf. Phase/continuation/client-input indexes updated.
+
 ## Precision Revealed — completed release,6 October2026
 
 Client selected concept02. Implemented and deployed the approved EN/AR sculpture hero, desktop pointer depth/pause, progressive scroll compression, product crop reveal and stronger hover/focus responses. Mobile remains static and reduced motion is respected. Optimized the approved1.68MB concept image to70,360bytes with responsive Next Image; no runtime dependency added. It is labelled a concept, not a product diagram. Catalogue search remains on products.

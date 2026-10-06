@@ -1,6 +1,6 @@
 # EL AMAL administration and staff operations handbook
 
-Evidence date: 29 September 2026. These chapters describe the checked-in application at documentation checkpoint `f751ef5ee4f14378af3c1868936bf012b8dabb8f`, whose progress record identifies application release `7f7326704305012e9637702b3112b5c85f554833` as live. Procedures were checked against collection definitions, staff components, service logic and the installed Payload implementation. This documentation task did not change application records or perform the examples in production. The field and action names below are source-verified English labels; they are not a new browser walkthrough or visual approval.
+Updated 6 October 2026. Operational procedures retain the source-checked September detail and incorporate the deployed permission/owner-continuity changes in `63acd5b`. Existing-quotation procedures refer explicitly to prepared `c2e6262`, not activated production. This documentation update performed no live staff/data mutation or new account walkthrough. Field/action labels are source-verified; client acceptance remains separate.
 
 ## 1. What is ready to use, and what remains inactive
 
@@ -34,7 +34,7 @@ Use the same production host for every route below. On a local development serve
 | Staff notification state | `/admin/collections/notifications` | `Notification queue` |
 | Customer confirmation mail state | `/admin/collections/verification-emails` | `Verification email queue` |
 | Owner maintenance summary | `/admin/collections/delivery-operations` | `Delivery operations` |
-| Private customer photos | `/admin/collections/enquiry-attachments` | `Enquiry photos`; list-cell action: `Download photo` |
+| Private customer photos (production); attachments after quotation release | `/admin/collections/enquiry-attachments` | `Enquiry photos`; list-cell action: `Download photo` |
 
 Payload uses `/admin/collections/<collection>/create` for a new document and `/admin/collections/<collection>/<id>` for an existing one. Use **Create New** only where the role permits creation. For stock, create entries through **Stock control**, never through either inventory collection.
 
@@ -83,7 +83,7 @@ Normal admin/API deletion is denied for staff, categories, products, SKUs and en
 
 **Permission details that matter:** catalogue editors can read SKU definitions but cannot read warehouse quantities. Warehouse staff can see hold references and SKU snapshots in stock control but do not receive customer names, emails or the enquiry selector. A stock/report service rechecks the user's persisted staff role inside its database transaction; an outdated browser view is not authority to perform an action.
 
-The ordinary staff create/update rule is owner-only, but Payload's separate default account-**unlock** permission is broader: this project does not override its default check for an authenticated user in the admin staff collection. Do not describe account unlocking as owner-only or treat this matrix as an independent security certification. An owner should handle lockout incidents operationally until that separate permission receives explicit review.
+Staff create/update and account unlocking are explicitly owner-only. Sales, warehouse, catalogue editors and anonymous callers cannot unlock other accounts. The live last-owner safeguard prevents removal of the final owner through supported application role edits. No application permission matrix is an independent security certification.
 
 ## 4. Maintaining categories
 
@@ -267,7 +267,7 @@ The enquiry's **Delivery Status** currently has only the value `not-configured`,
 
 Notification statuses are `disabled`, `pending`, `processing`, `sent`, `failed`. Confirmation-mail queue statuses are `pending`, `processing`, `sent`, `failed`, `cancelled`. Both collections are read-only for owner/sales. A `sent` queue status means the provider accepted the message; it does not prove arrival in the recipient inbox or a completed sale. Do not reset attempts or manufacture a new date through database edits to force delivery.
 
-The Enquiries collection currently contains the old description “Email delivery and stock reservation are not active yet.” Its stock-reservation statement is stale. Stock control is implemented, while current production email/intake activation remains off for the separate prerequisites explained above.
+The Enquiries description now explains that staff may edit workflow status and internal notes, manage holds through Stock control, and inspect email outcomes in the queue collections. Its old statement that all stock reservation was inactive has been corrected. Public intake/mail remains disabled for separate activation dependencies.
 
 ### Viewing a customer's technical photo
 
@@ -443,7 +443,7 @@ The original hold remains six units: two dispatched, one released, three expired
 
 ## 11. Demand reporting and CSV exports
 
-Owners and sales open `/staff/reports` or **Open demand reports**. Warehouse and catalogue-editor accounts cannot access it. The report counts saved enquiry demand; it does not measure website visitors, sales revenue, stock shortages, quotation acceptance or purchases.
+Owners and sales open `/staff/reports` or **Open demand reports**. Warehouse and catalogue-editor accounts cannot access it. The report counts saved product-line enquiry demand; prepared document-only quotation requests are excluded. It does not measure website visitors, sales revenue, stock shortages, quotation acceptance or purchases.
 
 ### Run a report
 
@@ -512,7 +512,7 @@ Open the existing account, verify the email identity, change **Role** or use **C
 
 Newly set passwords must satisfy the current 15–128 character rule. Existing older passwords were not automatically changed by that rule. The project record states that the existing owner password has not been rotated; this handbook does not reproduce it or certify its strength.
 
-Avoid changing the last available owner's role away from owner. The source does not implement a last-owner safeguard. If all owner access is lost, a trusted technical recovery operation is required; the public first-register endpoint is deliberately blocked.
+To transfer ownership, first appoint the successor as owner, save and confirm their access, then change the former owner role. The live safeguard rejects removing the last owner and protects competing role edits and authentication/reset snapshot updates. Bulk staff updates are rejected. Direct privileged SQL remains outside these guards; the public first-register endpoint stays blocked.
 
 ### Removing access is not yet a normal disable switch
 
@@ -573,14 +573,14 @@ This is a single aggregate balance per exact SKU. It is not a purchase-order, mu
 
 ## 15. Evidence, limitations and source index
 
-The following current discrepancies are documented rather than silently corrected in application code:
+The following current limits and resolved findings distinguish what staff can rely on:
 
-- Enquiries admin helper text still says reservations are inactive; inventory functionality now exists.
+- Enquiries helper text has been corrected; stock holds and queue status have their own operating screens.
 - Enquiry **Delivery Status** remains an immutable legacy `not-configured` value. Notification/verification queues are the implementation's delivery state.
 - No catalogue Media collection or product-upload screen exists. Product media requires reviewed deployed files and Catalogue Details JSON.
 - SKU definitions are readable by all staff, including catalogue editors; stock quantities and movement history are restricted to owner/sales/warehouse.
 - Product unpublication is permitted to catalogue editors. Owner-only publication does not mean every public-content change is owner-only: categories have direct editable content too.
-- Account deletion/full disable and last-owner protection are not implemented. Payload's separate default unlock access is broader than owner-only account editing.
+- Last-owner protection and owner-only unlocking are implemented and tested. Account deletion/full disable and application MFA are not implemented.
 - The inventory view/snapshot does not provide a separate manufacturer-part-number value, although SKU definitions store one.
 - Broad historical paragraphs in the older catalogue-publication and progress documents describe earlier disabled functionality. Use the current milestone and checked source for today's scope.
 - New/changed staff passwords have a stronger rule, while a pre-existing password may still be weaker. This task did not rotate it or inspect secret values.
@@ -619,8 +619,7 @@ No live staff mutation, product edit, SKU creation, enquiry, photo upload, stock
 | `src/app/(payload)/api/[...slug]/route.ts` | CMS gate, blocked first registration and dedicated recovery routing |
 | `node_modules/payload/dist/utilities/formatLabels.js` and field/collection sanitizers | Generated field/collection labels verified from installed dependency |
 | `node_modules/@payloadcms/translations/dist/languages/en.js` and UI SaveDraft/Select components | English standard buttons, raw select-option labels and draft action semantics |
-| `node_modules/payload/dist/auth/defaultUnlockAccess.js`, `auth/operations/unlock.js` | Separate default staff unlock permission |
+| `src/cms/collections.ts`; `scripts/check-admin-boundaries.ts` | Explicit owner-only unlock and tested account/notification boundaries |
 | `PROGRESS.md` current milestone | Recorded live release, catalogue counts, zero exact SKU definitions, inactive intake/recovery and deferred monitoring |
 | `docs/inventory-operations.md`, `docs/demand-reporting.md`, `docs/private-enquiry-photos.md` | Supporting runbooks, cross-checked with implementation |
 | `docs/catalogue-publication-2026-09-28.md` | Historical catalogue evidence and folder-derived availability interpretation; historical activation paragraph is superseded |
-

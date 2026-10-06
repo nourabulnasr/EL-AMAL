@@ -12,7 +12,7 @@ Admin: https://el-amal-sigma.vercel.app/admin
 
 ## Starting instructions
 
-Read the applicable AGENTS.md, PROGRESS.md, docs/phase-status.md, docs/handbook/README.md and current Git status. PROGRESS.md contains the latest evidence; older dated plans describe historical increments and do not override it. The detailed handbook records baseline7f73267 and has a dated companion update for subsequent changes. Preserve ignored environment files; never print credentials. This is an existing Next.js/Payload application, not a separate frontend/CMS scaffold.
+Read the applicable AGENTS.md, PROGRESS.md, docs/phase-status.md, docs/handbook/README.md and current Git status. PROGRESS.md contains dated release evidence; older plans do not override it. The consolidated handbook was updated on6 October for production63acd5b and prepared quotationc2e6262. Its opening readiness chapter assigns remaining inputs/engineering and full-launch acceptance criteria. Preserve ignored environment files; never print credentials. This is an existing Next.js/Payload application, not a separate frontend/CMS scaffold.
 
 Suggested continuation message:
 

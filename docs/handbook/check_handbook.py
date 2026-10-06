@@ -26,7 +26,7 @@ for file in REPO.glob('.env*'):
         if len(value)<10 or not re.search(r'PASSWORD|SECRET|TOKEN|API_KEY|DATABASE_URL|ENCRYPTION_KEY',key):continue
         if value in combined:secret_hits.append(key)
 if secret_hits:issues.append({'secretFieldNames':sorted(set(secret_hits))})
-for required in ['151','342','142','64 MiB','2 MiB','90','Neon','private','Catalogue Details','Download CSV']:
+for required in ['151','342','142','152','Precision Revealed','63acd5b','c2e6262','full-launch','unscanned','64 MiB','2 MiB','95','99','Neon','private','Catalogue Details','Download CSV']:
     if required not in text:issues.append({'missingText':required})
 html=(ROOT/'EL-AMAL-Website-Handbook.html').read_text(encoding='utf8')
 ids=set(re.findall(r'id="([^"]+)"',html));anchors=re.findall(r'href="#([^"]+)"',html)

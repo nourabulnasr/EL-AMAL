@@ -1,6 +1,6 @@
-# Update after the handbook baseline
+# Historical release note from 29 September
 
-Date: 29 September 2026. The main handbook records application release 7f73267 and was delivered before further development resumed. This dated update records what changed afterward; it takes precedence over the two source findings described in the baseline security chapters.
+Date: 29 September 2026. This historical note records the first fixes after the original handbook. Its corrections are now integrated into the updated chapters. Current release identities, remaining work and acceptance criteria are in the opening 6 October readiness chapter; this historical deployment is not the current application version.
 
 - **Staff account unlocking:** only an owner may unlock a staff account. Sales, warehouse, catalogue editors and anonymous callers are refused. This keeps account administration within the owner role. Existing login and password rules are unchanged.
 - **Notification privacy:** normal owner and sales API reads retain useful delivery status, attempts and reference fields but omit the internal delivery key and worker lease identifier. Merely hiding a field in the admin interface did not restrict its API representation. Trusted internal workers retain access needed to send and finish a queued message.
@@ -10,6 +10,6 @@ Date: 29 September 2026. The main handbook records application release 7f73267 a
 
 No customer data, actual stock, owner password, public design or schema was changed for these fixes. All test data used an empty development schema that was removed afterward. Email tests used a fake transport. Customer sending and recovery delivery remain disabled pending their existing prerequisites; monitoring remains deferred at Nour's request.
 
-Release verified: application commit b3408a500c38dcc39e70a13a7ee68393ba50365d is live at the stable client URL as deployment dpl_8YSXSLAXwnrE3B8B1xEyHXs6J2JD. [GitHub quality run 36606118269](https://github.com/nourabulnasr/EL-AMAL/actions/runs/36606118269) succeeded, including the new database regression, production build and server startup checks. Current npm audit reports zero known advisories.
+Historical release verified: application commit b3408a500c38dcc39e70a13a7ee68393ba50365d was live on 29 September as deployment dpl_8YSXSLAXwnrE3B8B1xEyHXs6J2JD. [GitHub quality run 36606118269](https://github.com/nourabulnasr/EL-AMAL/actions/runs/36606118269) succeeded, including the new database regression, production build and server startup checks. The advisory audit at that release reported zero known findings. Production has since advanced to the version identified in the opening readiness chapter.
 
 Live checks verified English/Arabic home and product pages, anonymous private-route and unlock rejection, owner permissions, hidden notification fields, updated enquiry instructions and the staff reports screen. Checked 390px screens had no horizontal overflow or browser JavaScript errors. The initial API test omitted the Origin header required by Payload's cookie authentication; the corrected request passed without weakening that protection. No production account unlocking or stock mutation was used as a test. This is scoped release evidence, not a full security certification or final client acceptance.
