@@ -1,12 +1,16 @@
 # EL AMAL progress
 
-## Live product-interest reporting — 7 October 2026, verification in progress
+## Live product-interest reporting — 7 October 2026, prepared and cloud verified
 
 Nour requested per-product CTR, live admin updates and completion of independent remaining work. Implemented first-party opt-in product measurements, signed 30-minute sessions, 50%-visible/one-second impressions, qualified selections, product-heading views, basket/datasheet actions, published-product validation, bounded bulk PostgreSQL upserts, 93-day report expiry/maintenance cleanup, owner/sales report and CSV at `/staff/products`. Existing demand reporting now has the same 30-second visible-tab refresh, pause, last-success timestamp and stale-error behavior. No historical traffic or sales forecast is invented; actual RFQ demand remains separate.
 
 162 units, TypeScript and real isolated PostgreSQL regression succeeded. Fresh independent review identified right-click counting, retroactive fast-click qualification and silent stale demand refresh; corrected all three. Also corrected observer contexts on client navigation, enforced capacity for whole batches while allowing existing-row updates, and fixed secondary staff-link contrast. The separate development database received pending quotation and analytics migrations. No production database change, export, mail or readiness activation occurred.
 
-Full local Next preview hit native-memory exhaustion; actual analytics React components are being checked with synthetic data in a lightweight browser harness, separately from database integration. Full cloud CI and release evidence remain to record. See docs/product-interest.md and docs/superpowers/plans/2026-10-07-product-interest.md. Production is still63acd5b; the combined review branch must not be promoted before the specifically unanswered recovery/export gate.
+Full local Next preview hit native-memory exhaustion. Actual analytics React components were checked in a clearly marked synthetic-data browser harness, separately from database integration: opt-in, eligible impression, selection, visible heading, basket click, ignored right-click, count deduplication, manual refresh, explicit stale-result warning, Arabic withdrawal and continuing ordinary browsing were verified. Desktop1280px and mobile390px DOM width checks found no horizontal page overflow; tables scroll inside their region. After withdrawal no new events appeared in the synthetic counters. The harness uses fallback fonts and is not a full deployed application visual acceptance. Screenshot: artifacts/product-interest-report-browser.jpg.
+
+Application470462660d4d225fc94bfa85fda23c4290e40b1d passed the complete cloud run37681217472:162 units, TypeScript, dependency advisory gate, all disposable migrations, inventory/demand/admin/quotation/analytics SQL regressions, production build and built-server route guards. Vercel reports the review deployment successful at https://el-amal-4kdrhfa80-nour-abulnasrs-projects.vercel.app. It is an inactive review environment, not production analytics. A final local typecheck briefly included the ignored browser harness; renaming its plain-JavaScript server to.mjs restored a clean local result. No application type errors remained.
+
+See docs/product-interest.md and docs/superpowers/plans/2026-10-07-product-interest.md. Production is still63acd5b; the combined review branch must not be promoted before the specifically unanswered recovery/export gate. Remaining launch dependencies remain in docs/final-client-inputs.md; no perfect-security, full-launch or Google-ranking claim.
 
 ## Complete catalogue coverage check — 7 October 2026
 

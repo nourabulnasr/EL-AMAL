@@ -2,7 +2,7 @@
 
 Nour asked to defer requests for client-supplied information while implementation continues. Do not repeatedly interrupt for these items.
 
-Current consolidated register: [handbook readiness and full-launch checklist](handbook/current-readiness.md), updated6 October2026. It separates client inputs from remaining engineering and scope decisions. The original10MB upload allowance and behavioral analytics need explicit scope reconciliation; the prepared2MiB quotation implementation and demand report do not silently complete those larger requirements.
+Current consolidated register: [handbook readiness and full-launch checklist](handbook/current-readiness.md), with the7 October [product-interest addendum](product-interest.md). It separates client inputs from remaining engineering and scope decisions. Nour explicitly requested live per-product CTR on7 October; that implementation now has162 unit checks, real SQL regression and complete cloud CI. It is prepared on the review branch, not production-active. The original10MB upload/scanning allowance remains distinct from the prepared2MiB quotation implementation.
 
 - Business phone and WhatsApp numbers with country code.
 - Exact approved WIKA relationship, supporting certificate/official listing and approved wording.
@@ -21,3 +21,4 @@ Free Inngest scheduling requires terms acceptance at https://vercel.com/nour-abu
 - Hero choice is complete: the client selected concept02, Precision Revealed, on6 October. Implementation and release evidence: docs/precision-release-2026-10-06.md. Do not ask for another choice.
 - Explicit approval of the full encrypted hosted-database backup destination previously requested: artifacts/backups/el-amal-2026-10-06-pre-quotation.enc on this laptop. Automatic approval review rejected that export; no export or quotation migration was performed. Do not reinterpret a general continuation request as that specific approval.
 - Search Console ownership/access and final privacy/retention wording. Configure credentials privately; do not send them in chat.
+- Review the truthful analytics disclosure and retention policy as part of final privacy acceptance. Product measurements are opt-in and disabled on production until the migration/release gate is resolved; no new analytics account is needed.

@@ -1,5 +1,7 @@
 # EL AMAL delivery status - 6 October 2026
 
+7 October addendum: per-product measured CTR, product views/basket/datasheet actions, owner/sales reports and CSV are implemented on the review branch. Both product-interest and saved-demand reports now refresh every30seconds while visible, with pause, last-success time and stale-error handling. Application4704626 passed162units and the complete cloud build/database/runtime workflow37681217472. Production63acd5b is unchanged; activation requires the pending authorized recovery/migration release. [Feature and admin guide](product-interest.md).
+
 Current detailed reference: [updated handbook](handbook/EL-AMAL-Website-Handbook.pdf), [browser version](handbook/EL-AMAL-Website-Handbook.html), and [subcategory readiness/checklist](handbook/current-readiness.md).
 
 **Live for catalogue browsing and review; not yet a fully operational customer quotation service.** We are in completion and release acceptance. The original six increments and later six workstreams organize one project, not twelve phases. The old approximate 90% was a scope estimate, not a readiness score; use the acceptance checklist instead of silently raising it.

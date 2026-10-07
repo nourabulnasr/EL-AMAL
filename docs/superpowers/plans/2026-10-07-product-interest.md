@@ -53,3 +53,11 @@
 Ruling: existing selected visual system and the user's direct execution instruction supply scope and authorization; no repeat design/plan approval is needed. Impeccable files were not found; manual accessibility/layout checks must be reported honestly, not represented as that suite.
 
 Ruling: use a versioned additive migration and isolated test schema for analytics. The pending quotation migration must not be skipped or silently promoted when deploying this branch. Production activation is an owner-dependent release step until the existing backup restriction is resolved.
+
+## Execution outcome — 7 October
+
+Tasks1and2 implemented, with162unit checks, clean TypeScript, repeated isolated PostgreSQL regressions and complete cloud CI37681217472 on4704626. The actual components were exercised in a synthetic-data browser harness because full local Next compilation exhausted native memory. Vercel's preview deployment succeeded. The production deployment/activation portion of task3 remains blocked by the already-recorded specific backup authorization; it is not marked complete.
+
+Independent review by product_interest_review found three Important issues: non-activation mouse counts, retroactive fast-click qualification and silent stale demand refresh. Fixed with activation filtering, prior qualified-impression gating and a shared bounded refresh hook. Right-click and stale-result behavior were reproduced/checked in the browser; activation branches have a regression test. Context reuse and scheduled cleanup were corrected. Capacity now accounts for whole batches and permits existing-key updates at the ceiling; database writes are bulk operations.
+
+Review rulings: the reviewer did not independently rerun SQL, inspect visuals or verify production. Primary SQL tests and browser harness cover the first two within their documented bounds; production verification remains a required release step. Subjective visual acceptance remains Nour's. No claim that the complete Impeccable suite ran.
