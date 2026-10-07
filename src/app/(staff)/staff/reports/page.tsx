@@ -1,7 +1,7 @@
 import {headers} from 'next/headers';
 import {cmsEnabled} from '@/lib/cms-runtime';
 import {canReadDemand,parseDemandQuery,DemandError,type DemandReport} from '@/lib/demand-report';
-import {DemandReportView} from '@/components/demand-report-view';
+import {LiveDemandReport} from '@/components/live-demand-report';
 import './reports.css';
 export const dynamic='force-dynamic';
 export const metadata={title:'Demand report | EL AMAL',robots:{index:false,follow:false}};
@@ -21,5 +21,5 @@ export default async function DemandReportsPage({searchParams}:{searchParams:Sea
   }catch(error){
     return <section><h1>Demand report</h1><p role="alert">{error instanceof DemandError?error.message:'Demand reporting is temporarily unavailable. Try again or choose a shorter date range.'}</p><a className="button secondary" href="/staff/reports">Reset report filters</a></section>;
   }
-  return <DemandReportView report={report}/>;
+  return <LiveDemandReport key={JSON.stringify(report.filters)} initial={report} updatedAt={new Date().toISOString()}/>;
 }

@@ -21,6 +21,10 @@ try{
   assert.equal(response.status,status,`Built CMS runtime: ${path}`);
  }
  console.log('Built CMS-enabled routes and private collection guards succeeded against disposable PostgreSQL.');
+ for(const [path,status] of [['/staff/products',200],['/api/staff/product-interest',403]]){
+  assert.equal((await fetch(origin+path,{signal:AbortSignal.timeout(20000)})).status,status,'Private product-interest route');
+ }
+ assert.equal((await fetch(origin+'/api/product-interest',{method:'POST',headers:{Origin:origin,'Content-Type':'application/json'},body:JSON.stringify({action:'start',device:'desktop',consent:true})})).status,503,'Unconfigured analytics stays inactive');
  for(const locale of ['en','ar']){
   const response=await fetch(`${origin}/${locale}`,{signal:AbortSignal.timeout(20000)});
   assert.equal(response.status,200,'Bilingual home runtime');

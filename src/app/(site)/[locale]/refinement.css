@@ -116,3 +116,4 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
   .manufacturer-image, .category-row::before, .industry-list > a::before { transition: none; }
   .product-visual:hover .manufacturer-image { scale: 1; }
 }
+.analytics-notice{position:fixed;z-index:60;inset-inline:24px;bottom:24px;margin-inline:auto;max-width:640px;padding:24px;background:#091540;color:#fff;border:1px solid #a9c8ef;box-shadow:0 16px 64px #01073699}.analytics-notice h2{font-family:var(--font-display),Georgia,serif;font-size:28px;line-height:1.15;margin:0 0 16px}.analytics-notice p{font-size:14px;line-height:1.7;max-width:68ch;margin:0 0 16px}.analytics-actions{display:flex;flex-wrap:wrap;gap:16px}.analytics-actions .button{min-height:48px}.analytics-choice>.intro-replay{white-space:normal}@media(max-width:480px){.analytics-notice{inset-inline:12px;bottom:12px;padding:20px;max-height:80dvh;overflow:auto}.analytics-notice h2{font-size:24px}}

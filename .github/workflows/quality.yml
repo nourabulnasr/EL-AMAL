@@ -62,6 +62,7 @@ jobs:
           node --experimental-strip-types scripts/check-demand-report.ts
           node --experimental-strip-types scripts/check-admin-boundaries.ts
           node --experimental-strip-types scripts/check-quotations.ts
+          node --experimental-strip-types scripts/check-product-interest.ts
       - name: Production build with isolated CMS
         env:
           CMS_ENABLED: 'true'

@@ -1,5 +1,13 @@
 # EL AMAL progress
 
+## Live product-interest reporting — 7 October 2026, verification in progress
+
+Nour requested per-product CTR, live admin updates and completion of independent remaining work. Implemented first-party opt-in product measurements, signed 30-minute sessions, 50%-visible/one-second impressions, qualified selections, product-heading views, basket/datasheet actions, published-product validation, bounded bulk PostgreSQL upserts, 93-day report expiry/maintenance cleanup, owner/sales report and CSV at `/staff/products`. Existing demand reporting now has the same 30-second visible-tab refresh, pause, last-success timestamp and stale-error behavior. No historical traffic or sales forecast is invented; actual RFQ demand remains separate.
+
+162 units, TypeScript and real isolated PostgreSQL regression succeeded. Fresh independent review identified right-click counting, retroactive fast-click qualification and silent stale demand refresh; corrected all three. Also corrected observer contexts on client navigation, enforced capacity for whole batches while allowing existing-row updates, and fixed secondary staff-link contrast. The separate development database received pending quotation and analytics migrations. No production database change, export, mail or readiness activation occurred.
+
+Full local Next preview hit native-memory exhaustion; actual analytics React components are being checked with synthetic data in a lightweight browser harness, separately from database integration. Full cloud CI and release evidence remain to record. See docs/product-interest.md and docs/superpowers/plans/2026-10-07-product-interest.md. Production is still63acd5b; the combined review branch must not be promoted before the specifically unanswered recovery/export gate.
+
 ## Complete catalogue coverage check — 7 October 2026
 
 Nour requested a fresh comparison of both original product-photo folders with the live website. Re-enumerated and hashed all 29 originals (17 in-stock, 12 out-of-stock), verified their preserved copies, and visually checked every main-page model heading against the index. All 151 product cards/model groups are represented: 90 in stock and 61 out of stock. Fresh public API reconciliation, all 302 EN/AR product detail pages, all 14 paginated catalogue listings, all 151 image files and four grouped-model searches completed with zero discrepancies. Every source card maps to exactly one live published record; stock classifications match the supplied folders and remain dated 27 September 2026.

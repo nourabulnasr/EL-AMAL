@@ -16,7 +16,7 @@ const handler=deliveryOperationsHandler({
   return runDeliveryOperations(payload,{
    secret:process.env.PAYLOAD_SECRET??'',transport,deadlineAt,
    retentionEnabled:process.env.DELIVERY_RETENTION_ENABLED==='true',
-   maintenance:async options=>{await expireInventoryHolds(payload,options);},
+   maintenance:async options=>{await expireInventoryHolds(payload,options);if(Date.now()<deadlineAt){const {removeExpiredProductInterest}=await import('@/lib/product-interest-service');await removeExpiredProductInterest(payload);}},
   });
  },
 });

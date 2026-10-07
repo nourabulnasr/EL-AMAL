@@ -9,7 +9,7 @@ export function DemandReportView({report}:{report:DemandReport}){
   const {filters,totals}=report;
   return <>
     <section className="demand-heading">
-      <h1>What customers request.</h1>
+      <h1>What customers request.</h1><p><a href="/staff/products">Open live product CTR and browsing interest</a></p>
       <p>Model and range demand from saved enquiries. Counts reflect the requested units at submission and the current email verification state.</p>
       <p className="muted">{filters.start} to {filters.end}, inclusive. Dates follow Cairo time.</p>
     </section>
