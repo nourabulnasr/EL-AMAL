@@ -1,5 +1,11 @@
 # EL AMAL progress
 
+## Complete catalogue coverage check — 7 October 2026
+
+Nour requested a fresh comparison of both original product-photo folders with the live website. Re-enumerated and hashed all 29 originals (17 in-stock, 12 out-of-stock), verified their preserved copies, and visually checked every main-page model heading against the index. All 151 product cards/model groups are represented: 90 in stock and 61 out of stock. Fresh public API reconciliation, all 302 EN/AR product detail pages, all 14 paginated catalogue listings, all 151 image files and four grouped-model searches completed with zero discrepancies. Every source card maps to exactly one live published record; stock classifications match the supplied folders and remain dated 27 September 2026.
+
+Initial listing-parser warnings were traced to React streaming product-info fragments outside their article before browser assembly. Confirmed the actual DIH50/DIH52 card in the browser, corrected only the read-only audit parser, checked a captured 24-card fixture, and reran the complete audit successfully. No application, database or stock changes occurred. This is full supplied-card coverage, not a count of configured SKUs or warehouse quantities, and not a new technical certification of every specification. Photo-by-photo report and live links: docs/catalogue-coverage-2026-10-07.md. Reusable check: scripts/audit-catalogue-coverage.mjs. Local detailed evidence: artifacts/2026-10-07/catalogue-coverage/report.json.
+
 ## Consolidated handbook refresh - 6 October 2026
 
 Nour requested an updated explanation of every delivered subcategory, remaining work, client inputs and full readiness. Rebuilt the existing handbook PDF, HTML and editable Markdown from seven chapter sources. The current edition has97 pages and about35,200 source words. Its opening readiness chapter separates live production63acd5b from prepared quotationc2e6262, explains implementation/reasons and admin/customer steps, names client and engineering responsibilities, and defines a full-launch checklist and release order. Corrected the old hero, performance, Next version, PDF/XLSX implementation, owner-unlock/continuity and notification-privacy statements throughout the detailed chapters. Historical evidence remains clearly dated.
