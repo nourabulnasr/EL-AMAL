@@ -1,5 +1,11 @@
 # EL AMAL progress
 
+## Authorized production backup and migrations — 8 October 2026
+
+Nour explicitly approved the exact encrypted OneDrive backup destination and release. Created the approved archive plus encrypted manifest (24 tables,573 rows,204931 bytes); key stays outside OneDrive. Local verification authenticated both envelopes, matched the archive hash and read330 PostgreSQL archive entries entirely in memory. A separate development-host restore rehearsal was rejected by automatic approval review for lacking destination-specific authorization; it did not execute. Do not call the local inspection a full restore rehearsal or repeat the now-resolved encrypted-backup question.
+
+Applied reviewed quotation and product-interest migrations to production in batch11 with Payload's normal migration runner. Follow-up SQL confirms both migration records, new structures and151 unchanged product records. No real messages, account edits or intake activation. Vercel sign-in renewal currently pending; deployment/analytics activation still to follow. See docs/analytics-release-2026-10-08.md. Earlier statements that the production migration is pending are historical and superseded by this entry.
+
 ## Live product-interest reporting — 7 October 2026, prepared and cloud verified
 
 Nour requested per-product CTR, live admin updates and completion of independent remaining work. Implemented first-party opt-in product measurements, signed 30-minute sessions, 50%-visible/one-second impressions, qualified selections, product-heading views, basket/datasheet actions, published-product validation, bounded bulk PostgreSQL upserts, 93-day report expiry/maintenance cleanup, owner/sales report and CSV at `/staff/products`. Existing demand reporting now has the same 30-second visible-tab refresh, pause, last-success timestamp and stale-error behavior. No historical traffic or sales forecast is invented; actual RFQ demand remains separate.

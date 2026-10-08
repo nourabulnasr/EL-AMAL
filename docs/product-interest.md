@@ -1,6 +1,6 @@
 # Product interest and live reporting
 
-Implemented 7 October 2026 on the quotation review branch. **Prepared and tested; not yet activated on the production website.** The existing production-backup authorization, migration and release gates still apply. Historical clicks cannot be recovered.
+Implemented 7 October 2026 on the quotation review branch. **Prepared and tested; not yet activated on the production website.** On 8 October Nour authorized the encrypted backup and release; the backup was locally verified and both production migrations were applied. Vercel sign-in and application release remain pending at this checkpoint. See [release record](analytics-release-2026-10-08.md). Historical clicks cannot be recovered.
 
 ## Where the administrator goes
 
