@@ -1,10 +1,14 @@
 # EL AMAL progress
 
-## Authorized production backup and migrations — 8 October 2026
+## Product analytics live — 8 October 2026
 
 Nour explicitly approved the exact encrypted OneDrive backup destination and release. Created the approved archive plus encrypted manifest (24 tables,573 rows,204931 bytes); key stays outside OneDrive. Local verification authenticated both envelopes, matched the archive hash and read330 PostgreSQL archive entries entirely in memory. A separate development-host restore rehearsal was rejected by automatic approval review for lacking destination-specific authorization; it did not execute. Do not call the local inspection a full restore rehearsal or repeat the now-resolved encrypted-backup question.
 
-Applied reviewed quotation and product-interest migrations to production in batch11 with Payload's normal migration runner. Follow-up SQL confirms both migration records, new structures and151 unchanged product records. No real messages, account edits or intake activation. Vercel sign-in renewal currently pending; deployment/analytics activation still to follow. See docs/analytics-release-2026-10-08.md. Earlier statements that the production migration is pending are historical and superseded by this entry.
+Applied reviewed quotation and product-interest migrations to production in batch11 with Payload's normal migration runner. Follow-up SQL confirms both migration records, new structures and151 unchanged product records. No real messages or intake activation. Existing browser Vercel session enabled PRODUCT_ANALYTICS_ENABLED=true for Production only;4704626 was fast-forwarded to the existing production branch and is live through deployment dpl_C228AsHvRM5BH16vH1kwRnkfH15T / el-amal-mmzjc9mbn at the stable domain. Fresh full production CI37713816147 succeeded. CLI sign-in was not needed; the pending process exited before renewal was confirmed.
+
+28 live checks succeeded: EN/AR routes, private API denials, consent/privacy/origin/staff guards, signed secure session, persisted and deduplicated measurements, owner report, CSV and withdrawal. Both controlled synthetic sessions were removed by their exact generated hashes, leaving no test analytics. Initial scripted cookie GET403 was the expected Payload same-origin requirement; adding Origin fixed only the script, not application guards. Actual production browser owner login/manual+automatic refresh, Arabic390px consent/decline/nooverflow and no captured console errors verified. Screenshot artifacts/product-interest-live-detail.jpg. Protected daily maintenance returned200/maintenance with0messages/0failures, including the expiry cleanup path.
+
+Quotation code and schema are released but real RFQ/upload/email intake remains disabled until verified sender and frequent worker are configured; no mail was sent. All remaining client/engineering limitations stay explicit. See docs/analytics-release-2026-10-08.md. Earlier pending-backup, pending-migration and inactive-analytics statements are historical and superseded by this entry.
 
 ## Live product-interest reporting — 7 October 2026, prepared and cloud verified
 

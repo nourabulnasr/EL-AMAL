@@ -1,8 +1,10 @@
 # Items to collect together at the end
 
+**8 October update:** the exact encrypted-backup authorization was granted, the backup verified locally, both production migrations applied, and product analytics deployed and live. Do not ask for that backup approval again. [Current release evidence](analytics-release-2026-10-08.md) supersedes earlier inactive-analytics/pending-migration statements below. The separate cloud restore rehearsal was not authorized; no decrypted private records were sent to a development database.
+
 Nour asked to defer requests for client-supplied information while implementation continues. Do not repeatedly interrupt for these items.
 
-Current consolidated register: [handbook readiness and full-launch checklist](handbook/current-readiness.md), with the7 October [product-interest addendum](product-interest.md). It separates client inputs from remaining engineering and scope decisions. Nour explicitly requested live per-product CTR on7 October; that implementation now has162 unit checks, real SQL regression and complete cloud CI. It is prepared on the review branch, not production-active. The original10MB upload/scanning allowance remains distinct from the prepared2MiB quotation implementation.
+Current consolidated register: [handbook readiness and full-launch checklist](handbook/current-readiness.md), with the [product-interest guide](product-interest.md) and8October release addendum above. It separates client inputs from remaining engineering and scope decisions. Nour explicitly requested live per-product CTR on7October; the implementation is now production-active with162 unit checks, real SQL regression, fresh cloud CI and28 live checks. The original10MB upload/scanning allowance remains distinct from the deployed2MiB quotation implementation, whose public workflow still depends on sender/worker activation.
 
 - Business phone and WhatsApp numbers with country code.
 - Exact approved WIKA relationship, supporting certificate/official listing and approved wording.
@@ -19,6 +21,6 @@ Free Inngest scheduling requires terms acceptance at https://vercel.com/nour-abu
 - Replace the previously chosen short admin password with a strong unique password; enroll MFA where the chosen authentication setup supports it.
 - Actual opening stock and approved reservation/expiry policy before stock commitments.
 - Hero choice is complete: the client selected concept02, Precision Revealed, on6 October. Implementation and release evidence: docs/precision-release-2026-10-06.md. Do not ask for another choice.
-- Explicit approval of the full encrypted hosted-database backup destination previously requested: artifacts/backups/el-amal-2026-10-06-pre-quotation.enc on this laptop. Automatic approval review rejected that export; no export or quotation migration was performed. Do not reinterpret a general continuation request as that specific approval.
+- Completed on8October: specific encrypted backup destination approval, authenticated local backup verification and quotation/analytics production migrations. Additional offsite destinations or cloud restore copies still need destination-specific authorization.
 - Search Console ownership/access and final privacy/retention wording. Configure credentials privately; do not send them in chat.
-- Review the truthful analytics disclosure and retention policy as part of final privacy acceptance. Product measurements are opt-in and disabled on production until the migration/release gate is resolved; no new analytics account is needed.
+- Review the truthful analytics disclosure and retention policy as part of final privacy acceptance. Product measurements are opt-in and live from8October; no new analytics account is needed. Current policy is30-minute sessions and93-day measurement retention.

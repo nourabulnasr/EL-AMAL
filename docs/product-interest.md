@@ -1,6 +1,6 @@
 # Product interest and live reporting
 
-Implemented 7 October 2026 on the quotation review branch. **Prepared and tested; not yet activated on the production website.** On 8 October Nour authorized the encrypted backup and release; the backup was locally verified and both production migrations were applied. Vercel sign-in and application release remain pending at this checkpoint. See [release record](analytics-release-2026-10-08.md). Historical clicks cannot be recovered.
+Implemented 7 October and **live on production from 8 October 2026**. Nour authorized the encrypted backup and release; the backup was locally verified, both production migrations were applied, and the exact tested application was deployed with consent-based collection enabled. Open [the private report](https://el-amal-sigma.vercel.app/staff/products). See [release and live-test evidence](analytics-release-2026-10-08.md). Historical clicks cannot be recovered.
 
 ## Where the administrator goes
 
@@ -41,14 +41,14 @@ This is on-site product CTR. Google search CTR belongs to Search Console. Neithe
 
 ## Release procedure and evidence
 
-Apply reviewed migrations in order, including the pending quotation migration, only after the previously requested production recovery/export authorization is resolved. Deploy the verified review commit. Set `PRODUCT_ANALYTICS_ENABLED=true` only on the intended live CMS deployment with correct `SITE_URL`, a strong Payload secret and operating scheduled maintenance. Keep it false on ordinary previews.
+For future releases, apply reviewed migrations in order after an authorized recovery copy is verified. Set `PRODUCT_ANALYTICS_ENABLED=true` only on the intended live CMS deployment with correct `SITE_URL`, a strong Payload secret and operating scheduled maintenance. Keep it false on ordinary previews. The initial production release completed this sequence on8October; a separate cloud restore rehearsal was not authorized or performed.
 
-Development migrations `20261001_120000_existing_quotations` and `20261007_120000_product_interest` were applied to the separate development database on 7 October. No production migration or private export occurred.
+Development migrations `20261001_120000_existing_quotations` and `20261007_120000_product_interest` were applied to the separate development database on7October, and to production in batch11 on8October after the explicitly authorized encrypted export.
 
 Evidence so far: 162 unit checks and TypeScript succeeded; isolated real PostgreSQL tests cover concurrent deduplication, paired CTR, filtered denominators, publication checks, role revocation, aggregate privacy and expiry cleanup. Independent review found right-click, retroactive fast-click attribution and stale-demand-refresh issues; these were corrected, along with observer-context resets, bounded bulk writes and staff secondary-link contrast.
 
 The laptop's full Next development preview exhausted native memory. Browser verification therefore used the actual React report/consent/collector components in a clearly marked synthetic-data harness, separately from real database integration tests. Opt-in, qualified impression/selection, heading visibility, basket actions, ignored right-click, count deduplication, manual refresh, stale-result warning, Arabic withdrawal and continued browsing were checked. Desktop1280px/mobile390px measured no page overflow. The harness uses fallback fonts; it is not production traffic or full deployed browser acceptance.
 
-Commit `470462660d4d225fc94bfa85fda23c4290e40b1d` passed [complete cloud CI](https://github.com/nourabulnasr/EL-AMAL/actions/runs/37681217472), including all database regressions, the production build and built-server private-route/disabled-intake guards. [Vercel review deployment](https://el-amal-4kdrhfa80-nour-abulnasrs-projects.vercel.app) is successful with collection inactive. Production activation and its real end-to-end verification still follow the release procedure above.
+Commit `470462660d4d225fc94bfa85fda23c4290e40b1d` passed [review CI](https://github.com/nourabulnasr/EL-AMAL/actions/runs/37681217472) and [fresh production CI](https://github.com/nourabulnasr/EL-AMAL/actions/runs/37713816147), including all database regressions, the production build and built-server private-route/disabled-intake guards. The review environment remains inactive. Production activation,28 live API/database checks, authenticated report refresh and Arabic mobile consent checks succeeded on8October. Controlled test measurements were removed. This supersedes the earlier laptop-only browser verification limitation for the checked production journeys.
 
 References: [Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API), [Page Visibility](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API), installed Next.js route-handler documentation. These informed measured viewport visibility and hidden-tab behavior; occlusion by other applications is not reliably measured.
