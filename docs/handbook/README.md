@@ -1,5 +1,7 @@
 # EL AMAL website handbook
 
+Latest change record: [11 October custom-domain launch and final client requests](../domain-launch-2026-10-11.md). This is an addendum to the dated PDF/HTML edition, not a newly rendered handbook.
+
 Consolidated revision: **6 October 2026**. This replaces the dated 29 September PDF/HTML with an updated handbook, integrating the current release rather than requiring readers to reconcile separate addenda. Application reference: production `63acd5b`; prepared quotation `c2e6262`. The document update changes no live application, database, account or integration.
 
 The current PDF has **97 pages**, with about35,200 words in the editable source, clickable contents and21 top-level bookmarks. Document integrity and rendered-layout checks are recorded under `artifacts/handbook/`; they do not constitute client visual acceptance or a fresh website audit.

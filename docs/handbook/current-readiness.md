@@ -1,5 +1,7 @@
 ## Current delivery and the path to full launch
 
+**11 October 2026 domain/client addendum:** the custom domain is connected at `https://www.al-amaleg.com`, with HTTPS and a bare-domain redirect. The latest About/contact/icon/motion changes, exact release status and remaining client assets are recorded in [the domain launch addendum](../domain-launch-2026-10-11.md). This supersedes the old domain-purchase requirement below. The 6 October PDF has not been regenerated in this domain release.
+
 **8 October 2026 release addendum:** product-interest reporting and30-second report refresh are now live at `/staff/products`. The explicitly approved encrypted backup was locally verified, both quotation/analytics production migrations applied, and application4704626 deployed. Quotation code is deployed but customer submission still depends on the sender and frequent delivery worker. See [current release evidence](../analytics-release-2026-10-08.md) for28 live checks and recovery limitations. This supersedes older backup/migration/analytics status statements in this6October baseline; the PDF remains the6October edition with this linked addendum.
 
 Status date: 6 October 2026. This is the current decision guide for the entire handbook. The detailed chapters that follow have also been corrected for the new hero, quotation implementation and resolved permission findings. Dated test results remain dated; updating a document does not rerun a production test or activate a service.

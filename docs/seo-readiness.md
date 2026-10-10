@@ -1,5 +1,7 @@
 # Bilingual search and sharing preparation
 
+**11 October2026 update:** canonical production origin is now `https://www.al-amaleg.com`. Bare-domain and old public Vercel routes redirect to it. The fresh custom-domain audit checked342 public pages and155 images, including151 products in each language, with no covered issues. Organization schema now also contains the supplied public contact email and Arabic brand name. Search Console ownership/submission and actual Google index membership remain unverified. See [domain release evidence](domain-launch-2026-10-11.md).
+
 Current status,6 October2026: public production indexing is enabled and the live sitemap contains342 eligible URLs. The fresh complete crawl checked342 public pages/155 images with no detected issues. Google indexing and Search Console ownership/submission remain unverified. See [current release record](operations-release-2026-10-06.md) and [search launch instructions](seo-launch-2026-09-29.md). The safe defaults below describe unconfigured/development/preview behavior, not the current live production switch.
 
 All public routes now generate a matching canonical URL, English/Arabic alternatives, page title and description, Open Graph and Twitter metadata. Product/category metadata uses the selected reviewed projection or clearly marked current demo data. Shared WebSite/Organization JSON-LD contains only the business name and site URL; it asserts no WIKA relationship, certifications, address or stock.
