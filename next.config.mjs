@@ -1,8 +1,9 @@
-import {indexingHeaders} from './src/lib/site-policy.mjs';
+import {indexingHeaders,publicDomainRedirects} from './src/lib/site-policy.mjs';
 import {withPayload} from '@payloadcms/next/withPayload';
 const nextConfig = {
   experimental: { globalNotFound: true, cpus: 1 },
   poweredByHeader: false,
+  async redirects() { return publicDomainRedirects(); },
   async headers() { return [{ source: '/:path*', headers: [
     {key:'X-Content-Type-Options',value:'nosniff'},
     {key:'Content-Security-Policy',value:"object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'"},

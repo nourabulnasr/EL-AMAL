@@ -28,3 +28,18 @@ export function siteOrigin(env=process.env){
  try{const url=new URL(env.SITE_URL||'https://el-amal-sigma.vercel.app');if(url.protocol==='https:'&&!url.username&&!url.password)return url.origin;}catch{}
  return 'https://el-amal-sigma.vercel.app';
 }
+
+/** Move public pages only after the verified custom domain is configured.
+ * Keep API/cron endpoints on their original hosts so scheduled operations
+ * never depend on following a cross-host redirect.
+ * @param {Record<string,string|undefined>} env
+ */
+export function publicDomainRedirects(env=process.env){
+ const origin=siteOrigin(env);
+ if(env.VERCEL_ENV!=='production'||origin!=='https://www.al-amaleg.com')return [];
+ const has=[{type:'host',value:'el-amal-sigma.vercel.app'}];
+ return [
+  {source:'/',has,destination:`${origin}/`,permanent:true},
+  {source:'/:locale(en|ar)/:path*',has,destination:`${origin}/:locale/:path*`,permanent:true},
+ ];
+}

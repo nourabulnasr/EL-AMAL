@@ -1,4 +1,37 @@
 /* Secondary blue and input-driven refinements, October 2026. */
+/* Client launch refinements: technical silhouettes and a clear direct contact. */
+.measurement-icon{display:block;width:100%;height:auto;color:var(--blue-ice)}
+.category-icon{display:block;width:42px;max-width:100%}
+.measurement-icon .icon-detail{opacity:.6}
+.measurement-icon .icon-needle{transform-origin:32px 27px;transition:transform 550ms var(--interaction-spring)}
+.category-row:focus-visible .icon-needle{transform:rotate(18deg)}
+.footer-contact{grid-column:1/-1;padding-block:24px 32px;border-block:1px solid var(--blue-edge)}
+.site-footer .footer-contact p{font-size:14px;margin:0 0 16px}
+.footer-email{display:flex;align-items:center;justify-content:space-between;gap:16px;width:fit-content;max-width:100%;min-height:48px;font-size:clamp(17px,3.2vw,42px);line-height:1.4;color:#fff}
+.footer-email bdi{overflow-wrap:anywhere;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.2em;text-decoration-color:var(--blue-edge);transition:text-decoration-color 220ms}
+.footer-email>span{color:var(--accent);flex-shrink:0}
+.footer-email:hover bdi,.footer-email:focus-visible bdi{text-decoration-color:var(--accent)}
+.information-lead h1{white-space:pre-line}
+.about-values>li{padding-inline-start:0}
+.information-actions .button:has(bdi){flex-wrap:wrap;gap:12px}
+.information-actions bdi{overflow-wrap:anywhere;min-width:0}
+.reveal-line{display:block;overflow:clip;padding-block:.18em;margin-block:-.18em}
+.reveal-line>span{display:block}
+@media(min-width:1024px){.category-icon{width:64px}}
+@media(hover:hover) and (pointer:fine){.category-row:hover .icon-needle{transform:rotate(18deg)}}
+@media(prefers-reduced-motion:no-preference){
+  @supports(animation-timeline:view()){
+    .section-heading:has(.reveal-line),.information-aside:has(.reveal-line){animation:none}
+    .reveal-line>span{animation:heading-unveil linear both;animation-timeline:view();animation-range:entry 0% cover 22%}
+  }
+}
+@keyframes heading-unveil{from{transform:translateY(65%);opacity:.3}to{transform:translateY(0);opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  .measurement-icon .icon-needle,.footer-email bdi{transition:none}
+  .category-row:hover .icon-needle,.category-row:focus-visible .icon-needle{transform:none}
+  .reveal-line{overflow:visible}
+  .reveal-line>span{animation:none;transform:none;opacity:1}
+}
 :root {
   --blue-steel: #365f94;
   --blue-ice: #a9d5f3;

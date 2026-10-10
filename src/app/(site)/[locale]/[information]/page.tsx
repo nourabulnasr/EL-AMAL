@@ -7,6 +7,7 @@ import { siteOrigin } from "@/lib/site-policy.mjs";
 import { businessContact } from "@/lib/business-contact";
 import { customerSettings } from "@/lib/customer-readiness";
 import { WikaEvidence } from "@/components/wika-evidence";
+import { RevealText } from "@/components/reveal-text";
 type Props = { params: Promise<{ locale: string; information: string }> };
 export async function generateMetadata({ params }: Props) {
   const { locale, information } = await params;
@@ -87,15 +88,15 @@ export default async function Page({ params }: Props) {
           <p className="section-kicker">
             {ar ? "التفاصيل أولاً" : "Details first"}
           </p>
-          <h2 id="information-heading">{t.sectionTitle}</h2>
+          <h2 id="information-heading"><RevealText>{t.sectionTitle}</RevealText></h2>
           <span className="information-rule" aria-hidden="true" />
         </div>
-        <ol className="information-steps" role="list">
+        <ol className={`information-steps${information === 'about' ? ' about-values' : ''}`} role="list">
           {t.sections.map((section, i) => (
             <li role="listitem" key={section.title}>
-              <span className="information-number" aria-hidden="true">
+              {information !== 'about' && <span className="information-number" aria-hidden="true">
                 0{i + 1}
-              </span>
+              </span>}
               <div>
                 <h3>{section.title}</h3>
                 <p>{section.body}</p>
@@ -130,6 +131,9 @@ export default async function Page({ params }: Props) {
                 : "The website is currently a preview. You can prepare your details and review the form; visitor submission is not enabled yet."}
           </p>
           <div className="information-actions">
+            <a className="button button-dark" href={`mailto:${contact.email}`}>
+              {ar ? "راسلنا عبر البريد" : "Email us"} <bdi>{contact.email}</bdi>
+            </a>
             <Link className="button button-dark" href={`/${locale}/rfq`}>
               {ar ? "فتح نموذج عرض السعر" : "Open RFQ form"}
               <span aria-hidden="true">↗</span>

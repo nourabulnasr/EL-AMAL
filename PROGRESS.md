@@ -1,5 +1,13 @@
 # EL AMAL progress
 
+## Custom domain and client refinements — 11 October 2026
+
+Both authoritative Namecheap nameservers now confirm `@ A 216.198.79.1` and `www CNAME ed40385597a0ade6.vercel-dns-017.com`. HTTPS on the bare domain redirects permanently to `https://www.al-amaleg.com`; the www homepage responds successfully. Production-only `SITE_URL` has been updated to this verified origin; its application effects require a new deployment.
+
+Prepared bilingual About us navigation/content, technical SVG category icons, lightweight progressive text reveals, and the client-supplied public email `alamal4trade@hotmail.com` in the footer/contact page and organization schema. Existing industry pages and all product records are preserved. Conditional production redirects move public English/Arabic pages off the old Vercel hostname while retaining operational API endpoints. Local 164 unit tests and TypeScript succeeded. Cloud build, release and live checks are still pending at this checkpoint. Browser connection timeouts are a verification limitation, not evidence of a visual defect or approval.
+
+See `docs/domain-launch-2026-10-11.md` for the exact remaining client inputs and launch gates. Do not enable public intake merely because the domain is connected: verified sender and frequent healthy worker are still needed.
+
 ## Product analytics live — 8 October 2026
 
 Nour explicitly approved the exact encrypted OneDrive backup destination and release. Created the approved archive plus encrypted manifest (24 tables,573 rows,204931 bytes); key stays outside OneDrive. Local verification authenticated both envelopes, matched the archive hash and read330 PostgreSQL archive entries entirely in memory. A separate development-host restore rehearsal was rejected by automatic approval review for lacking destination-specific authorization; it did not execute. Do not call the local inspection a full restore rehearsal or repeat the now-resolved encrypted-backup question.

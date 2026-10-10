@@ -16,49 +16,49 @@ export const informationPages: Record<
   about: {
     en: {
       title: "About EL AMAL",
-      eyebrow: "EL AMAL / Our approach",
-      headline: "The right conversation starts with the details.",
+      eyebrow: "About EL AMAL",
+      headline: "Industrial measurement.\nA clear point of contact.",
       intro:
-        "Pressure. Temperature. Connections. This is a place to turn your measurement requirements into a clear, structured enquiry.",
-      sectionTitle: "A considered route to your next instrument.",
+        "EL AMAL focuses on pressure and temperature measurement for industrial applications. Our catalogue brings together gauges, transmitters, thermometers and instrument accessories, with model specifications and manufacturer datasheets.",
+      sectionTitle: "Our focus.\nYour application.",
       sections: [
         {
-          title: "Start with the application",
-          body: "A model reference is useful. The process around it matters just as much. Bring the medium, operating conditions, measurement range and connection requirements into the enquiry.",
+          title: "Pressure, temperature and the connections between",
+          body: "Explore mechanical and electronic measurement instruments alongside the accessories used to connect them to a process. Find model references, technical details and documentation in one place.",
         },
         {
-          title: "Keep the specification together",
-          body: "Explore by model or application, collect the quantities you need, and record the details in one request. For a replacement or a model outside the catalogue, use the direct RFQ form.",
+          title: "The application comes first",
+          body: "Oil and gas and general industrial requirements start with the process: the medium, working conditions, measurement range, material and connection. These details guide the conversation around the right configuration.",
         },
         {
-          title: "Confirm before committing",
-          body: "Final configuration, suitability, availability and commercial terms need confirmation. A catalogue entry or enquiry is not a guarantee of stock, certification or an accepted order.",
+          title: "A direct conversation about your requirement",
+          body: "Contact EL AMAL with a model reference, a replacement requirement or an existing quotation. Configuration, technical suitability, availability and commercial terms are confirmed before an order is agreed.",
         },
       ],
-      closing: "Have a model in mind? Start there.",
+      closing: "Let’s start with what you need to measure.",
     },
     ar: {
-      title: "عن الأمل",
-      eyebrow: "الأمل / منهجنا",
-      headline: "تبدأ الخطوة الصحيحة بتفاصيل واضحة.",
+      title: "من نحن — الأمل",
+      eyebrow: "عن الأمل",
+      headline: "القياس الصناعي.\nوتواصل واضح.",
       intro:
-        "الضغط. الحرارة. التوصيلات. مساحة لتحويل متطلبات القياس إلى طلب واضح ومنظم.",
-      sectionTitle: "طريق واضح إلى أداة القياس التالية.",
+        "تركز الأمل على قياس الضغط ودرجة الحرارة للتطبيقات الصناعية. يجمع كتالوجنا عدادات الضغط وأجهزة الإرسال ومقاييس الحرارة وملحقات أجهزة القياس، مع مواصفات الطرازات وأوراق البيانات من الشركات المصنعة.",
+      sectionTitle: "تخصصنا.\nوتطبيقك الصناعي.",
       sections: [
         {
-          title: "ابدأ بالتطبيق",
-          body: "مرجع الطراز مهم، وكذلك العملية التي سيعمل فيها. أضف الوسط وظروف التشغيل ونطاق القياس ومتطلبات التوصيل إلى طلبك.",
+          title: "الضغط والحرارة وملحقات التوصيل",
+          body: "تصفح أجهزة القياس الميكانيكية والإلكترونية والملحقات المستخدمة لتوصيلها بالعملية الصناعية. تجد مراجع الطرازات والتفاصيل الفنية والمستندات في مكان واحد.",
         },
         {
-          title: "اجمع المواصفات في مكان واحد",
-          body: "تصفح بالطراز أو التطبيق، وحدد الكميات وسجل التفاصيل في طلب واحد. لاستبدال أداة أو طلب طراز خارج الكتالوج، استخدم نموذج طلب عرض السعر المباشر.",
+          title: "التطبيق أولاً",
+          body: "تبدأ متطلبات البترول والغاز والصناعة العامة من تفاصيل العملية: الوسط وظروف التشغيل ونطاق القياس والمواد والتوصيلات. تساعد هذه التفاصيل في تحديد التكوين المناسب.",
         },
         {
-          title: "أكد التفاصيل قبل الاتفاق",
-          body: "يحتاج التكوين النهائي والملاءمة والتوفر والشروط التجارية إلى تأكيد. وجود منتج في الكتالوج أو إعداد طلب لا يضمن المخزون أو الشهادات ولا يمثل طلب شراء مقبولاً.",
+          title: "تواصل مباشر حول متطلباتك",
+          body: "تواصل مع الأمل بمرجع الطراز أو متطلبات استبدال جهاز أو عرض سعر موجود. يُؤكد التكوين والملاءمة الفنية والتوفر والشروط التجارية قبل الاتفاق على الطلب.",
         },
       ],
-      closing: "تعرف الطراز المطلوب؟ ابدأ به.",
+      closing: "لنبدأ بما تحتاج إلى قياسه.",
     },
   },
   contact: {
