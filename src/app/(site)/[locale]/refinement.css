@@ -12,7 +12,7 @@
 .footer-email>span{color:var(--accent);flex-shrink:0}
 .footer-email:hover bdi,.footer-email:focus-visible bdi{text-decoration-color:var(--accent)}
 .information-lead h1{white-space:pre-line}
-.about-values>li{padding-inline-start:0}
+.about-values>li{grid-template-columns:minmax(0,1fr);padding-inline-start:0}
 .information-actions .button:has(bdi){flex-wrap:wrap;gap:12px}
 .information-actions bdi{overflow-wrap:anywhere;min-width:0}
 .reveal-line{display:block;overflow:clip;padding-block:.18em;margin-block:-.18em}
