@@ -1,5 +1,11 @@
 # EL AMAL progress
 
+## Client logo, framed text and delivery schedule — 11 October 2026
+
+Integrated the supplied final logo in the public header, footer, entrance and Organization schema, plus pale-blue frames around the three marked text groups. Added a signed, production-only five-minute Inngest delivery adapter reusing existing bounded delivery/lease/idempotency logic. TypeScript and167 units succeeded, with20 local rendered-page/image checks; local scheduler correctly returns503. Browser/CDP remains unavailable for visual acceptance. Release preparation and exact Search Console steps: `docs/brand-and-email-2026-10-11.md`.
+
+Resend is explicitly selected, but the user clarified email is unverified. Provider setup still returns terms-required despite the initial acknowledgement; both pages were queued here at the user's request. No paid plan, provider credential, mail or public intake activation is claimed. Complete actual provisioning, sender DNS verification, scheduler registration and live end-to-end verification before opening intake. Logo/border examples are supplied; CEO/new featured products remain pending.
+
 ## Custom domain and client refinements — 11 October 2026
 
 Both authoritative Namecheap nameservers confirm `@ A 216.198.79.1` and `www CNAME ed40385597a0ade6.vercel-dns-017.com`. HTTPS on the bare domain redirects permanently to `https://www.al-amaleg.com`. Production-only `SITE_URL` is this verified origin and the new application has been deployed.

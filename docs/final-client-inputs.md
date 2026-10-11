@@ -1,5 +1,7 @@
 # Items to collect together at the end
 
+**11 October logo/email update:** the final logo screenshot and all three border examples are received and implemented. Do not request them again. Resend is now selected; email verification is not complete. Provider terms/account steps, sender DNS authentication, Search Console ownership, CEO/company content and the new products/chosen three remain. [Current preparation and activation record](brand-and-email-2026-10-11.md) supersedes the earlier unsupplied-logo and undecided-provider notes below.
+
 **11 October domain update:** the client purchased `al-amaleg.com`, both Namecheap records are verified, and HTTPS is working at `https://www.al-amaleg.com` with the bare-domain redirect. Do not ask for a domain choice again. The new client-request register, release evidence and remaining assets are in [domain launch and final client requests](domain-launch-2026-10-11.md). The newly supplied Hotmail address is public contact information, separate from the existing private sales recipient and the still-unconfigured verified sender.
 
 **8 October update:** the exact encrypted-backup authorization was granted, the backup verified locally, both production migrations applied, and product analytics deployed and live. Do not ask for that backup approval again. [Current release evidence](analytics-release-2026-10-08.md) supersedes earlier inactive-analytics/pending-migration statements below. The separate cloud restore rehearsal was not authorized; no decrypted private records were sent to a development database.

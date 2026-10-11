@@ -15,7 +15,7 @@ import {BasketProvider} from '@/components/basket-provider';
 import './styles.css';
 import './refinement.css';
 const sans=Manrope({subsets:['latin'],variable:'--font-sans',display:'swap'});
-// Headings and the entrance wordmark use the regular cut throughout the site.
+// Editorial headings use the regular cut throughout the site.
 const display=Newsreader({subsets:['latin'],variable:'--font-display',display:'swap',weight:'400'});
 // Arabic is used only by the Arabic document. CSS loads it there on demand;
 // preloading it in this shared layout also downloads 166 KB on English pages.

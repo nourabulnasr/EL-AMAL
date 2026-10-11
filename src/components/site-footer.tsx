@@ -4,11 +4,12 @@ import {copy} from '@/content/copy';
 import {businessEmail} from '@/lib/business-contact';
 import {IntroReplay} from './site-intro';
 import {ProductAnalyticsChoice} from './product-analytics-choice';
+import {BrandLogo} from './brand-logo';
 
 export function SiteFooter({locale,analyticsEnabled}:{locale:Locale;analyticsEnabled:boolean}) {
   const ar=locale==='ar',t=copy[locale];
   return <footer className="site-footer">
-    <div><Link className="footer-brand" href={`/${locale}`}>EL AMAL</Link><p>{t.footer}</p></div>
+    <div><Link className="footer-brand" href={`/${locale}`}><BrandLogo placement="footer"/></Link><p>{t.footer}</p></div>
     <div className="footer-links">
       <Link href={`/${locale}/products`}>{t.catalogue}</Link>
       <Link href={`/${locale}/quote`}>{t.quote}</Link>

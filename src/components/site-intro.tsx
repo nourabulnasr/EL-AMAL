@@ -2,6 +2,7 @@
 
 import {useEffect, useState} from 'react';
 import type {Locale} from '@/lib/catalogue';
+import {BrandLogo} from './brand-logo';
 
 const replayEvent = 'el-amal:replay-intro';
 
@@ -38,8 +39,7 @@ export function SiteIntro({locale}: {locale: Locale}) {
       <div className="intro-panel intro-panel-top" aria-hidden="true" />
       <div className="intro-panel intro-panel-bottom" aria-hidden="true" />
       <div className="intro-composition" aria-hidden="true">
-        <div className="intro-dial"><span className="intro-needle" /><span className="intro-pivot" /></div>
-        <div className="intro-wordmark" dir="ltr"><span>EL</span><span>AMAL</span></div>
+        <div className="intro-brand"><BrandLogo placement="intro"/></div>
         <p className="intro-caption">{locale === 'ar' ? 'الدقة في كل اتصال.' : 'Precision at every connection.'}</p>
       </div>
       <button type="button" className="intro-skip" onClick={() => setVisible(false)}>{locale === 'ar' ? 'تخطي المقدمة' : 'Skip introduction'} <span aria-hidden="true">↗</span></button>
