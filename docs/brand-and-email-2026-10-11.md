@@ -2,6 +2,64 @@
 
 Updated: 11 October 2026. This supplements the domain launch record and handbook.
 
+## Latest activation checkpoint — 12 October 2026
+
+This section supersedes the earlier terms-required status below. Both providers now recognize the accepted terms. Inngest was provisioned on its explicitly selected Hobby (Free) plan and connected to production; `INNGEST_SIGNING_KEY` and `INNGEST_EVENT_KEY` are present as encrypted production variables. No paid plan was selected. The current Vercel deployment is Ready: `dpl_6R7vYKquE2TDgnPpicttpFAbYV72`, `el-amal-ptbyxnxa1-nour-abulnasrs-projects.vercel.app`, serving the existing application commit `5135f14` and the purchased domain.
+
+The Inngest resource is `account-cinnabar-bridge` (`ir_wdjJINyRVBJuQlfd`). Its automatic sync tried the Vercel branch URL and failed with "We could not reach your URL." The dashboard manual-sync form is prepared for the public endpoint `https://www.al-amaleg.com/api/inngest`; successful registration and scheduled runs are not yet confirmed. Unsigned public GET returns401, demonstrating the deployed signing gate. Do not disable deployment protection or treat provisioning as successful delivery health.
+
+Resend's Marketplace plan list for this team offered only Pro ($20/month) and Scale ($90/month), so no resource was purchased there. Nour signed in to the direct Resend account. The domain `al-amaleg.com` was created in Ireland (`eu-west-1`), ID `fd5209c2-d14a-4efe-aee2-93ba0bb0b6e0`, with sending enabled and receiving disabled. Nour saved the exact provider-generated records in Namecheap. Public DNS resolved all three correct values; the last Resend screen still showed Pending while checking DKIM and return-path propagation. Verify provider status again before enabling mail.
+
+| Type | Host | Value | TTL |
+| --- | --- | --- | --- |
+| CNAME | `rsend` | `rsend-euw1.forge.rmta.net` | Automatic |
+| CNAME | `send` | `send.forge.rmta.net` | Automatic |
+| TXT | `resend._domainkey` | The complete public DKIM value below | Automatic |
+
+```text
+p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsLFn9tpHDO3E4V+/LrZZfQOj/AGVQcCTf/Qs4XBo/+3wsFqzSBebp5ScUlZU2byqJJnFShQhZBhaGmO+hklMMuDalO/cou/j0nmLW8E9DJ4DjIzR11fi/3yR/UrFTUVRSOt0fRWgJbrPMnBFP3njmoG44drGRzFLEwouxItuO2QIDAQAB
+```
+
+These are the actual account records, not the older Amazon SES MX/SPF examples in generic documentation. Namecheap's existing apex forwarding MX/SPF records were preserved. No DMARC record was observed. No Resend API key was created: the sending-access domain selector offered only All domains while verification was pending. Create a dedicated sending-only key restricted to this domain once available, with the required action-time credential approval; never use keys belonging to other projects or print the new secret.
+
+Google Search Console supplied this TXT record for Domain property `al-amaleg.com` under `nourabulnasr@gmail.com`:
+
+```text
+Host: @
+Value: google-site-verification=BldXHBNDZTi1Jzrs-wVLqedQxlggYETihFIgkUwkNr4
+TTL: Automatic
+```
+
+Nour confirmed saving it and explicitly approved verifying this Google account as owner. The record is publicly visible. The browser crashed during the Verify action, so ownership success, sitemap submission and indexing requests are not yet established. Resume by checking the property state; do not ask for the same ownership approval again. Browser-control recovery repeatedly failed, and a request to reopen the browser was left pending.
+
+A fresh live technical audit completed on11 October:342 pages,342 sitemap URLs,155 assets,151 product pages in each language,zero issues found by the audit. It checks titles/descriptions, canonical and language alternates, structured-data presence, public indexability, private-route exclusions and image responses. Evidence: `artifacts/2026-10-11/email-launch-seo-audit.json`. This is not proof of Google indexing, ranking, rich-result eligibility, visual accessibility or field Core Web Vitals.
+
+Public intake remains disabled. Remaining work is provider verification and a domain-restricted sending key, production mail settings, successful Inngest sync/two healthy scheduled executions, controlled confirmation/upload/final-submission and inbox-receipt tests, then public activation. No customer email has been sent in this setup session.
+
+### Manual dashboard handoff requested by Nour
+
+Browser control repeatedly failed and Nour requested the remaining manual steps. Existing DNS and ownership approvals remain valid.
+
+1. In [Resend domain settings](https://resend.com/domains/fd5209c2-d14a-4efe-aee2-93ba0bb0b6e0), confirm **Verified**. If Pending remains, use the available verification/recheck control and allow DNS propagation; preserve the exact saved records.
+2. In [Resend API keys](https://resend.com/api-keys), create **EL AMAL production quotations** with **Sending access**, restricted to **al-amaleg.com**. If the domain is not selectable, finish its verification first. Do not choose Full access or reuse another project's key.
+3. In [the Vercel EL AMAL project](https://vercel.com/nour-abulnasrs-projects/el-amal), open Settings → Environment Variables. Save the key as `RESEND_API_KEY`, Production only, Sensitive. Also add `MAIL_PROVIDER=resend` and `MAIL_FROM=enquiries@al-amaleg.com`, Production only. This is the transactional sender, not a newly created mailbox. Do not paste the key into chat, Git, or a shared document. Leave the public-intake launch flags to the release checks.
+4. Open [Inngest manual sync](https://app.inngest.com/env/production/apps/sync-new), choose Production and Sync manually, enter `https://www.al-amaleg.com/api/inngest`, then Sync app. Confirm app `el-amal-delivery` and function `process-quotation-delivery`. If it reports an error, supply the error text without revealing keys. Do not turn off Vercel deployment protection.
+5. In [Google Search Console](https://search.google.com/search-console), use `nourabulnasr@gmail.com`, select or add Domain property `al-amaleg.com`, and Verify. Its TXT value is already correct in public DNS. Submit `https://www.al-amaleg.com/sitemap.xml` in Sitemaps and inspect/request indexing for the English and Arabic homepages.
+6. Report the non-secret outcomes: Resend Verified; production key saved; Inngest app synced; Search Console verified and sitemap submitted. The developer then completes production secrets/flags, deployment, scheduler health and a controlled real-email/file-submission test before public intake is opened. Provider acceptance and inbox receipt remain distinct checks.
+
+Google's published guidance does not guarantee crawling, indexing or top rankings. Technical setup is a prerequisite; useful accurate content, company information, relevant mentions and ongoing performance/indexing review remain necessary. [Google SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)
+
+### What happens after a customer sends an existing quotation
+
+1. The customer chooses the existing-quotation route and supplies contact details instead of rebuilding product lines.
+2. The website emails a confirmation link. Confirmation is required before file upload.
+3. The customer uploads up to three PDF, XLSX, JPEG or PNG files, each up to2MiB, then selects **Send files for review**. Uploading alone does not notify sales.
+4. Final submission atomically marks the enquiry submitted and queues the owner notification. The confirmed recipient is `mohamed.sorour8@icloud.com` unless explicitly changed in production settings.
+5. The worker sends a reference-only email; it does not email attachments or customer contact details. The owner signs in at `https://www.al-amaleg.com/admin/collections/enquiries` to review details and securely download the files.
+6. Files are encrypted in private storage and expire after30 days. Only owner/sales staff can download them. PDF/XLSX downloads carry an explicit unscanned-document warning; format validation is not antivirus scanning.
+
+Ordinary RFQs use the same reference-only notification after customer email verification. Sender verification, mail transport and worker health are prerequisites for both routes; code already deployed does not mean they are publicly activated.
+
 ## Prepared changes
 
 The client supplied the final logo as a 756 × 181 PNG screenshot. The unchanged file is `public/brand/el-amal-logo.png`; a shared Next.js Image component displays it in the public header, footer and dismissible entrance. Explicit dimensions reserve its aspect ratio, responsive image sizes avoid oversized downloads, and the footer image loads lazily. Organization structured data now identifies this logo. No invented replacement mark was generated.

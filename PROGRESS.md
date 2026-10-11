@@ -1,5 +1,10 @@
 # EL AMAL progress
 
+## Email and Search Console checkpoint — 12 October 2026
+
+Inngest is now provisioned on its free Hobby plan and connected to production. Deployment dpl_6R7vYKquE2TDgnPpicttpFAbYV72 is Ready on www.al-amaleg.com, application5135f14. Automatic Inngest sync failed against the branch URL; public-domain sync and successful executions remain unconfirmed. Direct Resend domain al-amaleg.com was created after Marketplace listed only paid plans. All three exact Resend DNS records and the Google Search Console TXT record were saved by Nour and confirmed publicly. Last Resend status Pending; no sending API key created. Nour authorized Search Console ownership for nourabulnasr@gmail.com; browser crashed during Verify, so success/sitemap submission is unconfirmed. Browser recovery failed repeatedly; Nour requested manual dashboard steps, now recorded in the activation guide. Fresh live SEO audit:342 pages,342 sitemap URLs,155 assets,151 products per language,zero issues found (not ranking/indexing proof). Public RFQ/file quotation sending remains off; no emails sent. Continue sender verification/key setup, signed worker sync and real end-to-end receipt testing before activation. Exact DNS values, owner notification/file workflow and next steps: docs/brand-and-email-2026-10-11.md.
+
+
 ## Client logo, framed text and delivery schedule — 11 October 2026
 
 Released application `5135f1483ee5c4d419f493e070062fee962681f2` at `www.al-amaleg.com` through Ready deployment `dpl_67xMmyu3ZZpDSE4NAxgSF22GP6cs` / `el-amal-9im32fabh`. Both full cloud workflows38101069918 and38101250517 succeeded.32livechecks verified the logo, frames, EN/AR SEO identity and inactive/noindex scheduler. Production branch fast-forwarded to the exact tested revision. No production migration, real email or public intake activation. Temporary preview stopped; browser visual checks remain unavailable. Exact evidence is in the linked record below.
