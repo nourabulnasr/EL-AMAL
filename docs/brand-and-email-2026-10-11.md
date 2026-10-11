@@ -42,3 +42,13 @@ Local TypeScript and 167 automated tests succeeded. The scheduler tests exercise
 Browser navigation and CDP frame reads timed out. No new visual approval, mobile screenshot review, Lighthouse measurement, Google indexing proof or live email journey is claimed. Cloud build and production release evidence will be recorded below after completion.
 
 CEO/company material and the new product folder/chosen three are still awaiting the client. Existing products have not been replaced. The supplied logo and border examples are now received; do not ask for them again. A vector logo would be an optional later quality improvement, not a blocker for using the supplied file. Upload limits and unscanned-document disclosures remain as documented in the quotation guide.
+
+## Release result
+
+Application `5135f1483ee5c4d419f493e070062fee962681f2` is now live on `https://www.al-amaleg.com` through Vercel deployment `dpl_67xMmyu3ZZpDSE4NAxgSF22GP6cs` (`el-amal-9im32fabh-nour-abulnasrs-projects.vercel.app`). The production branch is `codex/el-amal-foundation`; the work and handover remain on `codex/hero-review-and-quotation`.
+
+Both complete cloud runs succeeded: [review branch](https://github.com/nourabulnasr/EL-AMAL/actions/runs/38101069918) and [production branch](https://github.com/nourabulnasr/EL-AMAL/actions/runs/38101250517). They covered167 automated tests, TypeScript, the dependency advisory gate, disposable PostgreSQL migrations/regressions, production build and built-route checks. No production migration was needed or performed for this increment.
+
+Thirty-two live HTTP/markup/image checks succeeded after Vercel reported Ready: both language homepages, all three frames, the three logo placements, original and optimized image delivery, Organization data, primary canonical and language alternates, public indexability, robots/sitemap, and inactive/noindex scheduler GET and HEAD behavior. Evidence: `artifacts/2026-10-11/brand-live-checks.json` (ignored local artifact). This was a targeted release check, not a new full342-page SEO crawl or Google indexing confirmation.
+
+Provider activation remains pending. The new scheduler is deployed but inactive, and public customer RFQ/existing-quotation submission stays disabled. No real email was sent. Browser visual/mobile checks still need a working browser connection and client acceptance. The temporary local preview used for HTTP checks has been stopped.

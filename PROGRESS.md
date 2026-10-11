@@ -2,6 +2,8 @@
 
 ## Client logo, framed text and delivery schedule — 11 October 2026
 
+Released application `5135f1483ee5c4d419f493e070062fee962681f2` at `www.al-amaleg.com` through Ready deployment `dpl_67xMmyu3ZZpDSE4NAxgSF22GP6cs` / `el-amal-9im32fabh`. Both full cloud workflows38101069918 and38101250517 succeeded.32livechecks verified the logo, frames, EN/AR SEO identity and inactive/noindex scheduler. Production branch fast-forwarded to the exact tested revision. No production migration, real email or public intake activation. Temporary preview stopped; browser visual checks remain unavailable. Exact evidence is in the linked record below.
+
 Integrated the supplied final logo in the public header, footer, entrance and Organization schema, plus pale-blue frames around the three marked text groups. Added a signed, production-only five-minute Inngest delivery adapter reusing existing bounded delivery/lease/idempotency logic. TypeScript and167 units succeeded, with20 local rendered-page/image checks; local scheduler correctly returns503. Browser/CDP remains unavailable for visual acceptance. Release preparation and exact Search Console steps: `docs/brand-and-email-2026-10-11.md`.
 
 Resend is explicitly selected, but the user clarified email is unverified. Provider setup still returns terms-required despite the initial acknowledgement; both pages were queued here at the user's request. No paid plan, provider credential, mail or public intake activation is claimed. Complete actual provisioning, sender DNS verification, scheduler registration and live end-to-end verification before opening intake. Logo/border examples are supplied; CEO/new featured products remain pending.

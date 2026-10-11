@@ -2,6 +2,14 @@
 
 The authenticated batch runner is implemented. Actual activation requires the verified sender, a suitable scheduler, the reviewed additive migration, and a controlled receipt test. Source code and configuration booleans alone do not establish email delivery.
 
+## Signed Inngest schedule — 11 October 2026
+
+The application now includes `/api/inngest` for the selected Inngest service. Its five-minute cron calls the shared `runConfiguredDelivery` runtime with concurrency one and two scheduler retries. The existing daily Vercel maintenance job remains. Both paths retain the same database lease and message idempotency; only the authentication and scheduling entry point differ.
+
+The Inngest entry point requires `VERCEL_ENV=production`, the existing CMS and operations settings, and a real `INNGEST_SIGNING_KEY`. Connect the integration to production only; it supplies that key and `INNGEST_EVENT_KEY`. The SDK is explicitly in cloud mode and validates request signatures. The configured `SITE_URL` is the public sync origin. Preview/local or incomplete configurations return503; HEAD returns405. No scheduler bearer secret is sent to Inngest. Scheduler results contain only outcome and aggregate counts; customer messages, files, addresses and tokens are not returned as function results.
+
+Provisioning, app sync and successful scheduled executions still need to be observed before setting the public launch assertion. The terms/account handoff and sender verification record are in [the current brand and email update](brand-and-email-2026-10-11.md). No paid Vercel cron upgrade was made. A `maintenance` result still cannot qualify as healthy email delivery.
+
 ## Endpoint and gates
 
 `GET` or `POST /api/internal/delivery-operations` requires `Authorization: Bearer <CRON_SECRET>`. Use a separate cryptographically random secret of at least 32 characters. Constant-time comparison happens before readiness or database access. `HEAD` explicitly returns 405, preventing Next's automatic GET fallback from sending. Responses are no-store, no-referrer and noindex, with no addresses, token material, provider errors or customer notes.
