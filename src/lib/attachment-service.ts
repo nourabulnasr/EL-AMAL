@@ -68,7 +68,7 @@ export async function finalizeQuotation(payload:Payload,reference:string){
     if(files<1||files>3)throw new AttachmentError('Upload at least one file first');
     await assertQueueCapacity(statement=>client.query(statement));
     await client.query(`INSERT INTO notifications(enquiry_id,reference,delivery_key,recipient,source,status,attempts,next_attempt_at,created_at,updated_at)
-      VALUES($1,$2,$3,$4,'cms','pending',0,now(),now(),now())`,[enquiry.id,reference,`enquiry-${reference}`,process.env.ENQUIRY_NOTIFICATION_TO||'mohamed.sorour8@icloud.com']);
+      VALUES($1,$2,$3,$4,'cms','pending',0,now(),now(),now())`,[enquiry.id,reference,`enquiry-${reference}`,process.env.ENQUIRY_NOTIFICATION_TO||'alamal4trade@hotmail.com']);
     await client.query('UPDATE enquiries SET quotation_submitted_at=now(),updated_at=now() WHERE id=$1',[enquiry.id]);
     await client.query('COMMIT');return {submitted:true,repeated:false};
   }catch(error){await client.query('ROLLBACK');throw error;}finally{client.release();}

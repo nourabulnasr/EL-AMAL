@@ -42,7 +42,7 @@ export async function submitEnquiry(payload:Payload,raw:unknown,catalogue:Catalo
     // File-based requests queue their staff notification only after files are finalized.
     if(!input.quotation)await payload.create({collection:'notifications',overrideAccess:true,depth:0,req,data:{
       enquiry:record.id,reference:record.reference,deliveryKey:`enquiry-${record.reference}`,
-      recipient:process.env.ENQUIRY_NOTIFICATION_TO||'mohamed.sorour8@icloud.com',source:catalogue.source,
+      recipient:process.env.ENQUIRY_NOTIFICATION_TO||'alamal4trade@hotmail.com',source:catalogue.source,
       status:catalogue.source==='demo'?'disabled':'pending',attempts:0,nextAttemptAt:new Date().toISOString(),
     }});
     if(verification)await enqueueInitialVerification(payload,record,verification,req);
