@@ -1,3 +1,9 @@
+## Live email and quotation release — 13 October 2026
+
+Public RFQ and existing-quotation intake is now live on https://www.al-amaleg.com. Nour corrected the owner recipient to alamal4trade@hotmail.com (footer); explicit production setting plus both source defaults and .env.example now match. Customer confirmation still goes to the address the customer enters. Verified Resend domain al-amaleg.com, restricted sender enquiries@al-amaleg.com, sensitive Vercel key, real five-minute Inngest public-domain sync and healthy execution. Controlled EN/AR confirmations delivered; real AR PDF/XLSX/PNG upload and finalization succeeded; nine authenticated/anonymous file-download checks succeeded. Ordinary controlled RFQ notification SMTP-delivered to Hotmail at01:05Cairo; one earlier quotation test alert had gone to historical iCloud before correction. Human Inbox/Spam placement is not confirmed. Source d1a783e45652c6195abc8b404082f64601d0df91 is production, Ready dpl_W9ZDbP8RGHHv3ihrQ6zgUJmKHuSE / el-amal-4qpyl97ie. Both full cloud runs38314977814/38315260531 succeeded;29focusedunits succeeded; local TypeScript hit native memory but cloud TypeScript succeeded. Eight final public API checks succeeded, including both capability flags, guards and idempotent retries with no duplicate records/mail; EN/AR forms inspected. Worker01:15Cairo complete0failures. Search Console domain ownership verified and sitemap submitted; EN/ARhome andENproducts indexing requests accepted. Sitemap report still Couldn’t fetch despite Google live-fetch success; no indexing/ranking guarantee or further DNS request. Recovery email remains off/unaccepted, owner password replacement and business content/input tasks still open; monitoring explicitlydeferred. Two labelled test enquiries remain for evidence with automatic file expiry. Current guide: docs/email-launch-2026-10-13.md. Do not disclose credentials or verification/upload tokens; no key is in projectfiles.
+
+[Current activation evidence and operator steps](email-launch-2026-10-13.md). Earlier inactive-intake, unverified-sender and iCloud-recipient entries below are historical.
+
 # Brand update and quotation activation
 
 Updated: 11 October 2026. This supplements the domain launch record and handbook.
@@ -64,7 +70,7 @@ Google's published guidance does not guarantee crawling, indexing or top ranking
 1. The customer chooses the existing-quotation route and supplies contact details instead of rebuilding product lines.
 2. The website emails a confirmation link. Confirmation is required before file upload.
 3. The customer uploads up to three PDF, XLSX, JPEG or PNG files, each up to2MiB, then selects **Send files for review**. Uploading alone does not notify sales.
-4. Final submission atomically marks the enquiry submitted and queues the owner notification. The confirmed recipient is `mohamed.sorour8@icloud.com` unless explicitly changed in production settings.
+4. Final submission atomically marks the enquiry submitted and queues the owner notification. Nour corrected the recipient on 13 October to `alamal4trade@hotmail.com`, matching the footer. Both the production setting and source defaults now use that address.
 5. The worker sends a reference-only email; it does not email attachments or customer contact details. The owner signs in at `https://www.al-amaleg.com/admin/collections/enquiries` to review details and securely download the files.
 6. Files are encrypted in private storage and expire after30 days. Only owner/sales staff can download them. PDF/XLSX downloads carry an explicit unscanned-document warning; format validation is not antivirus scanning.
 
@@ -80,7 +86,7 @@ The new server-only Inngest adapter exposes `/api/inngest`, with a five-minute s
 
 ## Email activation status
 
-Nour selected Resend and clarified that email verification has **not** been completed. The public Hotmail address is a contact address, not a verified transactional sender. The previously confirmed private sales recipient remains `mohamed.sorour8@icloud.com`.
+Historical 11 October position: Nour selected Resend and clarified that email verification had **not** been completed. The public Hotmail address is a contact/receiving address, not the transactional sender. The recipient correction and completed sender verification supersede this historical setup state; see [the 13 October email launch record](email-launch-2026-10-13.md).
 
 Vercel returned `integration_terms_acceptance_required` for both Resend and Inngest. After Nour reported completing the steps, retries still returned that status and the project resource inventory still listed only Neon. At Nour's request, both provider acceptance pages were queued in this chat. Do not treat the user acknowledgement alone as proof of successful provisioning; complete the actual integration checks.
 
