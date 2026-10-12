@@ -2,6 +2,16 @@
 
 Updated: 11 October 2026. This supplements the domain launch record and handbook.
 
+## Live setup progress — 12 October 2026
+
+The browser connection recovered. Resend now reports **Verified** for `al-amaleg.com`. Nour supplied the dedicated **EL AMAL production quotations** key; its dashboard confirms Sending access restricted to this domain. It is saved as a production Secret in Vercel, without copying its value into project files. The sender is `enquiries@al-amaleg.com`. A generated worker secret and the mail transport settings are configured in production. Deployment `dpl_5MHjS3zSmq2aD8MK2BGnnfDe8NB4` is Ready on the custom domain, using unchanged application5135f14.
+
+Manual Inngest sync to `https://www.al-amaleg.com/api/inngest` succeeded. The registered function runs every five minutes. Its19:40UTC maintenance execution completed without errors; after transport activation, the19:45UTC execution recorded genuine `complete` delivery health with zero failures. Automatic approval review initially rejected premature transport activation; the actual scheduler execution and empty-queue checks established the prerequisites for the subsequently approved configuration. No protection was disabled and no heartbeat was fabricated. A clearly labelled non-order RFQ was queued for the previously confirmed owner address to test real delivery. Public intake remains closed while that test is completed.
+
+Google Search Console has verified Domain property `al-amaleg.com` under the approved Google account. The sitemap was submitted. Its initial report remains **Couldn't fetch**, but Google's own live inspection on12October at22:38Cairo time returned **Page fetch: Successful**, **Crawl allowed: Yes**, and **URL is available to Google**. Do not describe sitemap processing as successful until its report confirms that. Indexing requests for `/en`, `/ar` and `/en/products` were accepted into Google's priority crawl queue; these URLs are not yet confirmed indexed. Keep the saved DNS verification record. No additional DNS action is currently requested from Nour.
+
+Remaining for this activation: second healthy scheduled mail run; actual confirmation and owner-notification delivery evidence; private quotation file/final-submission checks; public RFQ/quotation flags; final customer-facing verification and handover. The test does not reserve inventory. Human inbox receipt and final business acceptance are distinct from provider acceptance. Earlier checkpoints below are historical where they conflict with this section.
+
 ## Latest activation checkpoint — 12 October 2026
 
 This section supersedes the earlier terms-required status below. Both providers now recognize the accepted terms. Inngest was provisioned on its explicitly selected Hobby (Free) plan and connected to production; `INNGEST_SIGNING_KEY` and `INNGEST_EVENT_KEY` are present as encrypted production variables. No paid plan was selected. The current Vercel deployment is Ready: `dpl_6R7vYKquE2TDgnPpicttpFAbYV72`, `el-amal-ptbyxnxa1-nour-abulnasrs-projects.vercel.app`, serving the existing application commit `5135f14` and the purchased domain.

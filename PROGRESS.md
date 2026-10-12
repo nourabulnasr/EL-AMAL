@@ -1,3 +1,7 @@
+## Email and Google setup checkpoint — 12 October 2026
+
+Resend domain Verified; dedicated sending-only al-amaleg.com key saved as Vercel Production Secret. Sender enquiries@al-amaleg.com and mail transport configured/deployed Ready dpl_5MHjS3zSmq2aD8MK2BGnnfDe8NB4 (unchanged app5135f14). Manual Inngest public-domain sync succeeded, cron every5minutes;19:40UTC maintenance and19:45UTC complete/zero failures verified. Initial auto-review block resolved with real scheduler evidence and empty-queue checks; no bypass. Controlled non-order RFQ EA-91d8dbc6-964b-4fb2-85a1-9b6c28933358 queued to confirmed owner recipient for real delivery proof. Public intake stilloff. Google Domain ownership verified; sitemap submitted; Google live fetch successful but sitemap report still Couldn’t fetch; EN/AR home and EN products indexing requests accepted, indexing unconfirmed. Continue real email/quotation tests, second healthy run, final flags, handover. No more DNS input currentlyneeded. See docs/brand-and-email-2026-10-11.md. Never print/store the supplied key in projectfiles.
+
 # EL AMAL progress
 
 ## Email and Search Console checkpoint — 12 October 2026
