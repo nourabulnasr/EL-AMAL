@@ -1,0 +1,339 @@
+{
+  "reviewDate": "2026-10-13",
+  "status": "confirmed-awaiting-implementation",
+  "selectionRule": "Only groups inside green outlines",
+  "totals": {
+    "photos": 8,
+    "groups": 17,
+    "printedModelIdentifiers": 35,
+    "newGroups": 14,
+    "existingGroups": 3
+  },
+  "homepageSelection": [
+    [
+      "232.50",
+      "233.50"
+    ],
+    [
+      "IV2"
+    ],
+    [
+      "55"
+    ]
+  ],
+  "photos": [
+    {
+      "filename": "0a7c733d-5ee4-4b21-86d6-bc669748c547.jpg",
+      "archive": "docs/source/important-products-2026-10-13/0a7c733d-5ee4-4b21-86d6-bc669748c547.jpg",
+      "bytes": 200440,
+      "sha256": "e164ce359ce8df35538747d81c4ac589250bcf2d91072a2e8ffda737433ea584",
+      "category": "pressure",
+      "groups": [
+        {
+          "models": [
+            "422.12",
+            "423.12"
+          ],
+          "action": "new-group",
+          "currentStock": "in-stock",
+          "currentStockReportedAt": "2026-10-13"
+        },
+        {
+          "models": [
+            "432.50",
+            "433.50",
+            "432.30",
+            "433.30",
+            "452.50",
+            "453.50",
+            "452.30",
+            "453.30"
+          ],
+          "action": "new-group",
+          "currentStock": "in-stock",
+          "currentStockReportedAt": "2026-10-13"
+        },
+        {
+          "models": [
+            "432.56",
+            "433.56",
+            "432.36",
+            "433.36"
+          ],
+          "action": "new-group",
+          "currentStock": "in-stock",
+          "currentStockReportedAt": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "filename": "2f53ba3f-b58c-4199-96f8-3ba022c26c6b.jpg",
+      "archive": "docs/source/important-products-2026-10-13/2f53ba3f-b58c-4199-96f8-3ba022c26c6b.jpg",
+      "bytes": 182748,
+      "sha256": "3cb2c1cbd6b4bf971a4683127d81fc2a6dfd75122dfab2560ce4bb05fa05a878",
+      "category": "temperature",
+      "groups": [
+        {
+          "models": [
+            "TG53"
+          ],
+          "action": "new-group",
+          "currentStock": "in-stock",
+          "currentStockReportedAt": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "filename": "2fecab73-50c2-4992-b687-5ac8a607474d.jpg",
+      "archive": "docs/source/important-products-2026-10-13/2fecab73-50c2-4992-b687-5ac8a607474d.jpg",
+      "bytes": 195810,
+      "sha256": "3370852f4f52a580ce180a5fc8856d45c45539189fba64a94038f9fcec3e8007",
+      "category": "pressure",
+      "groups": [
+        {
+          "models": [
+            "111.10",
+            "111.12"
+          ],
+          "action": "new-group",
+          "currentStock": "in-stock",
+          "handwrittenLabels": [
+            "عدل",
+            "خلفي"
+          ],
+          "proposedOptions": [
+            {
+              "id": "bottom-connection",
+              "name": {
+                "en": "Bottom connection",
+                "ar": "توصيل سفلي"
+              },
+              "model": "111.10"
+            },
+            {
+              "id": "back-connection",
+              "name": {
+                "en": "Back connection",
+                "ar": "توصيل خلفي"
+              },
+              "model": "111.12"
+            }
+          ],
+          "currentStockReportedAt": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "filename": "71052dbe-f90a-4add-a63b-562e065f84e9.jpg",
+      "archive": "docs/source/important-products-2026-10-13/71052dbe-f90a-4add-a63b-562e065f84e9.jpg",
+      "bytes": 176272,
+      "sha256": "f74ba97c14f5cfd999fa22d8f5f69b1982471d2b48a2ecd7dd3f0b967409b012",
+      "category": "pressure",
+      "groups": [
+        {
+          "models": [
+            "212.20"
+          ],
+          "action": "new-group",
+          "currentStock": "in-stock",
+          "currentStockReportedAt": "2026-10-13"
+        },
+        {
+          "models": [
+            "213.40"
+          ],
+          "action": "new-group",
+          "currentStock": "in-stock",
+          "currentStockReportedAt": "2026-10-13"
+        },
+        {
+          "models": [
+            "113.53",
+            "213.53"
+          ],
+          "action": "new-group",
+          "currentStock": "in-stock",
+          "currentStockReportedAt": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "filename": "b869adee-975e-4227-97e8-749ed180d53e.jpg",
+      "archive": "docs/source/important-products-2026-10-13/b869adee-975e-4227-97e8-749ed180d53e.jpg",
+      "bytes": 109978,
+      "sha256": "2fbbb06852031c03f44660fab916a98a0eabbff078ede12b9669fc26af4d7c88",
+      "category": "temperature",
+      "groups": [
+        {
+          "models": [
+            "55"
+          ],
+          "action": "new-group",
+          "currentStock": "in-stock",
+          "currentStockReportedAt": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "filename": "b94af607-7186-4eea-97f1-24b36be9b12f.jpg",
+      "archive": "docs/source/important-products-2026-10-13/b94af607-7186-4eea-97f1-24b36be9b12f.jpg",
+      "bytes": 201480,
+      "sha256": "9ad1a6460ae20a3f6690dd0005e8ce0d152228bf65b5c95603c4cd8bb767283c",
+      "category": "pressure",
+      "groups": [
+        {
+          "models": [
+            "232.50",
+            "233.50"
+          ],
+          "action": "new-group",
+          "currentStock": "in-stock",
+          "handwrittenLabels": [
+            "عدل",
+            "خلفي"
+          ],
+          "proposedOptions": [
+            {
+              "id": "bottom-connection",
+              "name": {
+                "en": "Bottom connection",
+                "ar": "توصيل سفلي"
+              }
+            },
+            {
+              "id": "back-connection",
+              "name": {
+                "en": "Back connection",
+                "ar": "توصيل خلفي"
+              }
+            }
+          ],
+          "currentStockReportedAt": "2026-10-13"
+        },
+        {
+          "models": [
+            "232.30",
+            "233.30"
+          ],
+          "action": "new-group",
+          "currentStock": "in-stock",
+          "handwrittenLabels": [
+            "عدل",
+            "خلفي"
+          ],
+          "proposedOptions": [
+            {
+              "id": "bottom-connection",
+              "name": {
+                "en": "Bottom connection",
+                "ar": "توصيل سفلي"
+              }
+            },
+            {
+              "id": "back-connection",
+              "name": {
+                "en": "Back connection",
+                "ar": "توصيل خلفي"
+              }
+            }
+          ],
+          "currentStockReportedAt": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "filename": "cb4ce6e8-5635-4a35-ace6-7e2140ea49f5.jpg",
+      "archive": "docs/source/important-products-2026-10-13/cb4ce6e8-5635-4a35-ace6-7e2140ea49f5.jpg",
+      "bytes": 188454,
+      "sha256": "7dd6b7dfde6179452a7df85ec7f94ebd882bb13124f24b3583e81273beed5ebc",
+      "category": "pressure",
+      "groups": [
+        {
+          "models": [
+            "700.01",
+            "700.02"
+          ],
+          "action": "new-group",
+          "currentStock": "in-stock",
+          "currentStockReportedAt": "2026-10-13"
+        },
+        {
+          "models": [
+            "711.12",
+            "731.12"
+          ],
+          "action": "new-group",
+          "currentStock": "in-stock",
+          "currentStockReportedAt": "2026-10-13"
+        },
+        {
+          "models": [
+            "DPG40"
+          ],
+          "action": "new-group",
+          "currentStock": "in-stock",
+          "currentStockReportedAt": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "filename": "ff604f4b-26ac-4daf-96fc-8ae249cfc4be.jpg",
+      "archive": "docs/source/important-products-2026-10-13/ff604f4b-26ac-4daf-96fc-8ae249cfc4be.jpg",
+      "bytes": 199838,
+      "sha256": "990af03e4cb8e8761aed820ffba3adbe364d2a3a6bc554acf0f00c657fd50c59",
+      "category": "accessories",
+      "groups": [
+        {
+          "models": [
+            "IV1"
+          ],
+          "action": "reuse-existing",
+          "existingProductId": "cms-135",
+          "externalId": "wika-iv1",
+          "lastPublishedStock": "out-of-stock",
+          "stockReportedAt": "2026-09-27",
+          "currentStock": "in-stock",
+          "currentStockReportedAt": "2026-10-13"
+        },
+        {
+          "models": [
+            "IV2"
+          ],
+          "action": "reuse-existing",
+          "existingProductId": "cms-138",
+          "externalId": "wika-iv2",
+          "lastPublishedStock": "out-of-stock",
+          "stockReportedAt": "2026-09-27",
+          "currentStock": "in-stock",
+          "currentStockReportedAt": "2026-10-13"
+        },
+        {
+          "models": [
+            "IV3",
+            "IV5"
+          ],
+          "action": "reuse-existing",
+          "existingProductId": "cms-139",
+          "externalId": "wika-iv3-iv5",
+          "lastPublishedStock": "out-of-stock",
+          "stockReportedAt": "2026-09-27",
+          "currentStock": "in-stock",
+          "currentStockReportedAt": "2026-10-13"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Existing identities reconciled against the September publication. All three reused valve pages checked live on 13 October.",
+    "Current stock needs human confirmation; Important products does not establish availability.",
+    "232/233 filling differences are independent of mounting choices.",
+    "The new diaphragm group is distinct from the existing 432.36, 432.56 with 8xx electrical-contact group.",
+    "Do not infer thermometer options or homepage choices solely from multiple pictured instruments."
+  ],
+  "designDirection": "product-gallery",
+  "stockConfirmation": {
+    "availability": "in-stock",
+    "reportedAt": "2026-10-13",
+    "source": "Explicit user confirmation: all in stock"
+  }
+}
