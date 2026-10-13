@@ -47,7 +47,7 @@ The importer is dry-run by default, requires the saved authenticated owner and a
 
 The development import succeeded: 14 created, three stock updates, and 165 published groups in total. An immediate rerun reported zero creations, zero updates and 17 unchanged groups. Local verification completed with 192 successful unit tests and TypeScript exit 0. Independent catalogue, connection-option and gallery source reviews have no unresolved findings within their reviewed scope.
 
-Remaining release steps: complete the authenticated HTTP audit; resolve the final photo/visual approval; apply the tested migration before production code; import the reviewed catalogue; deploy and verify the new public routes, images, stock labels, options, sitemap and metadata. The expected production total is 165 groups, provided no other catalogue edits intervene.
+Remaining release steps: resolve the final photo/visual approval; apply the tested migration before production code; import the reviewed catalogue; deploy and verify the new public routes, images, stock labels, options, sitemap and metadata. The expected production total is 165 groups, provided no other catalogue edits intervene.
 
 Local preview attempts encountered native memory exhaustion, so no local browser or Lighthouse result is claimed. Nour explicitly authorized storing the separate development database connection and CMS secret in this branch's Vercel preview after automatic approval review requested that authorization. Production credentials/settings were not changed.
 
@@ -59,3 +59,7 @@ Local preview attempts encountered native memory exhaustion, so no local browser
 - Browser evidence: `artifacts/2026-10-13/preview/`. English and Arabic at 390px; desktop at 1440px and wide English at 1920px. Keyboard outline measured solid 2.4px with no clipping or active reveal animation while focused. No horizontal mobile page overflow observed.
 - The exact-photo fallback looks soft when enlarged. This is a visual quality limitation, not final visual approval. Pointer tilt/reduced-motion behavior was source-reviewed; a complete browser interaction matrix and new performance scores are not claimed.
 - Public intake, analytics writes and indexing stay disabled in this isolated review. Production release is still pending.
+
+## Recovered authenticated page audit
+
+Authenticated preview audit recovered all 34 English/Arabic product response bodies: zero metadata, canonical/hreflang, noindex or exact in-stock/date issues. The preview sitemap is empty. robots.txt intentionally allows public crawling so robots can read noindex, and excludes admin/staff/API paths; an initial audit expectation of Disallow: / was incorrect. A tool-session reset lost the final image-response and private-API transport status results, so those specific preview HTTP checks are not claimed. Browser image loading and cloud permission regressions are separately verified. Report: artifacts/2026-10-13/preview/http-audit-final.json.
