@@ -1,5 +1,7 @@
 import type {Translated} from './catalogue.ts';
+export type CatalogueOption = {id:string;name:Translated;model?:string};
 export type CatalogueDetails = {
+ options?:CatalogueOption[];
  manufacturer:'WIKA';
  image:{src:string;width:number;height:number;alt:Translated;sourceUrl:string};
  specifications:{label:Translated;value:Translated}[];
@@ -16,6 +18,13 @@ function https(value:unknown):string|undefined {
  if(!text(value,2048))return;
  try{const url=new URL(value);if(url.protocol==='https:'&&!url.username&&!url.password)return url.href;}catch{}
 }
+// Stock is reported by this Egyptian business as a calendar date, not a UTC instant.
+const businessDateFormatter=new Intl.DateTimeFormat('en',{timeZone:'Africa/Cairo',calendar:'gregory',numberingSystem:'latn',year:'numeric',month:'2-digit',day:'2-digit'});
+function businessDate(now:Date){
+ if(!Number.isFinite(now.getTime()))return '';
+ const parts=businessDateFormatter.formatToParts(now);
+ return ['year','month','day'].map(type=>parts.find(part=>part.type===type)!.value).join('-');
+}
 // Shared CMS validation and public allowlist: unknown keys never escape.
 export function parseCatalogueDetails(value:unknown,now=new Date()):CatalogueDetails|undefined {
  if(!object(value)||value.manufacturer!=='WIKA'||!object(value.image))return;
@@ -25,13 +34,24 @@ export function parseCatalogueDetails(value:unknown,now=new Date()):CatalogueDet
  if(value.availability!=='in-stock'&&value.availability!=='out-of-stock'&&value.availability!=='check')return;
  if(typeof value.availabilityReportedAt!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(value.availabilityReportedAt))return;
  const date=new Date(`${value.availabilityReportedAt}T00:00:00Z`);
- if(!Number.isFinite(date.getTime())||date.toISOString().slice(0,10)!==value.availabilityReportedAt||value.availabilityReportedAt>now.toISOString().slice(0,10))return;
+ if(!Number.isFinite(date.getTime())||date.toISOString().slice(0,10)!==value.availabilityReportedAt||value.availabilityReportedAt>businessDate(now))return;
  if(!Array.isArray(value.specifications)||value.specifications.length>80||!Array.isArray(value.datasheets)||value.datasheets.length>20)return;
  const specifications:CatalogueDetails['specifications']=[],datasheets:CatalogueDetails['datasheets']=[];
  for(const row of value.specifications){if(!object(row))return;const label=translated(row.label,200),entry=translated(row.value,4000);if(!label||!entry)return;specifications.push({label,value:entry});}
  for(const row of value.datasheets){if(!object(row)||!text(row.title,200))return;const url=https(row.url);if(!url)return;datasheets.push({title:row.title,url});}
- return {manufacturer:'WIKA',image:{src:image.src,width:image.width,height:image.height,alt,sourceUrl},specifications,availability:value.availability,availabilityReportedAt:value.availabilityReportedAt,datasheets};
+ const options:CatalogueOption[]=[];
+ if(value.options!==undefined){
+  if(!Array.isArray(value.options)||value.options.length>20)return;
+  for(const row of value.options){
+   if(!object(row)||typeof row.id!=='string'||!/^[a-z][a-z0-9-]{0,79}$/.test(row.id)||options.some(option=>option.id===row.id))return;
+   const name=translated(row.name,200);
+   if(!name||/[\r\n\u007f]/.test(name.en+name.ar))return;
+   if(row.model!==undefined&&(!text(row.model,120)||!/^[A-Za-z0-9][A-Za-z0-9 ._\/-]*$/.test(row.model)||row.model!==row.model.trim()))return;
+   options.push({id:row.id,name,...row.model!==undefined?{model:row.model as string}:{}});
+  }
+ }
+ return {...value.options!==undefined?{options}:{},manufacturer:'WIKA',image:{src:image.src,width:image.width,height:image.height,alt,sourceUrl},specifications,availability:value.availability,availabilityReportedAt:value.availabilityReportedAt,datasheets};
 }
 export function validateCatalogueDetails(value:unknown):true|string {
- return value===null||value===undefined||!!parseCatalogueDetails(value)||'Enter valid bilingual catalogue details, a local raster image and a non-future availability date (YYYY-MM-DD).';
+ return value===null||value===undefined||!!parseCatalogueDetails(value)||'Enter valid bilingual catalogue details, a local raster image and a non-future availability date in Cairo (YYYY-MM-DD).';
 }

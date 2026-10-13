@@ -108,3 +108,13 @@ test('SKU identity cannot relabel recorded stock, while activation remains edita
   const created={skuCode:'NEW',product:9};
   assert.equal(protectSkuIdentity({operation:'create',data:created}),created);
 });
+
+import {inventoryLineLabel} from '../src/lib/inventory.ts';
+test('staff allocation distinguishes equal-quantity connection choices and retains legacy labels',()=>{
+ const base={model:'232.50, 233.50',quantity:2,range:'0–10 bar'};
+ const bottom=inventoryLineLabel({...base,optionNameEn:'Bottom connection',optionNameAr:'توصيل سفلي'});
+ const back=inventoryLineLabel({...base,optionNameEn:'Back connection',optionNameAr:'توصيل خلفي'});
+ assert.notEqual(bottom,back);assert.match(bottom,/Bottom connection/);assert.match(back,/توصيل خلفي/);
+ assert.match(inventoryLineLabel({...base,optionModel:'111.12',optionNameEn:'Back connection'}),/111\.12/);
+ assert.equal(inventoryLineLabel(base),'232.50, 233.50 · requested 2 · 0–10 bar');
+});

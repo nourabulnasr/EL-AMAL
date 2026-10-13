@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { EnquiryDetails } from "@/lib/enquiry-preview";
 import type { Locale } from "@/lib/catalogue";
+import {basketSelectionRequired} from '@/lib/basket';
 import { useBasket } from "./basket-provider";
 type Saved = { signature: string; reference: string; receipt: string };
 export function CustomerEnquirySubmit({
@@ -41,7 +42,8 @@ export function CustomerEnquirySubmit({
     );
     return () => clearTimeout(timer);
   }, [cooldown]);
-  if (!active || !publicEnquiries || catalogue.source !== "cms") return null;
+  const invalidSelection=!manual&&!quotation&&lines.some(line=>{const product=catalogue.products.find(product=>product.id===line.productId);return !product||basketSelectionRequired(line,product);});
+  if (!active || invalidSelection || !publicEnquiries || catalogue.source !== "cms") return null;
   const post = async (path: string, body: unknown) => {
     const response = await fetch(path, {
       method: "POST",
@@ -50,6 +52,10 @@ export function CustomerEnquirySubmit({
       signal: AbortSignal.timeout(20000),
     });
     if (response.status === 429) throw new Error("limited");
+    if (response.status === 400) {
+      const result=await response.json().catch(()=>null);
+      if(result?.code==='option-selection')throw new Error('option-selection');
+    }
     if (!response.ok) throw new Error("unavailable");
     return response.json();
   };
@@ -167,7 +173,9 @@ export function CustomerEnquirySubmit({
       )}
       {error && (
         <p role="alert">
-          {error === "limited"
+          {error === 'option-selection'
+            ? ar?'راجع السلة واختر توصيلاً صالحاً لكل منتج.':'Review your basket and choose a valid connection for every product.'
+            : error === "limited"
             ? ar
               ? "وصلت إلى حد المحاولات. حاول لاحقاً."
               : "The request limit has been reached. Please try again later."

@@ -1,0 +1,122 @@
+{
+  "scope": "Explicit 14 highlighted new model groups only",
+  "availabilityPolicy": {
+    "availability": "in-stock",
+    "reportedAt": "2026-10-13",
+    "source": "Explicit user confirmation: all in stock"
+  },
+  "pages": [
+    {
+      "page": 4,
+      "sourceId": "important-products-4",
+      "cards": [
+        [
+          "111.10, 111.12",
+          "",
+          "PM01.01;PM01.17"
+        ]
+      ]
+    },
+    {
+      "page": 5,
+      "sourceId": "important-products-5",
+      "cards": [
+        [
+          "212.20",
+          "",
+          "PM02.01"
+        ],
+        [
+          "213.40",
+          "",
+          "PM02.06"
+        ],
+        [
+          "113.53, 213.53",
+          "",
+          "PM01.08;PM02.12"
+        ]
+      ]
+    },
+    {
+      "page": 6,
+      "sourceId": "important-products-6",
+      "cards": [
+        [
+          "232.50, 233.50",
+          "",
+          "PM02.02"
+        ],
+        [
+          "232.30, 233.30",
+          "",
+          "PM02.04"
+        ]
+      ]
+    },
+    {
+      "page": 8,
+      "sourceId": "important-products-8",
+      "cards": [
+        [
+          "422.12, 423.12",
+          "",
+          "PM04.02"
+        ],
+        [
+          "432.50, 433.50, 432.30, 433.30, 452.50, 453.50, 452.30, 453.30",
+          "",
+          "PM04.03"
+        ],
+        [
+          "432.56, 433.56, 432.36, 433.36",
+          "",
+          "PM04.07"
+        ]
+      ]
+    },
+    {
+      "page": 10,
+      "sourceId": "important-products-10",
+      "cards": [
+        [
+          "700.01, 700.02",
+          "",
+          "PM07.14"
+        ],
+        [
+          "711.12, 731.12",
+          "",
+          "PM07.02"
+        ],
+        [
+          "DPG40",
+          "",
+          "PM07.20"
+        ]
+      ]
+    },
+    {
+      "page": 30,
+      "sourceId": "important-products-30",
+      "cards": [
+        [
+          "TG53",
+          "",
+          "TM53.02"
+        ]
+      ]
+    },
+    {
+      "page": 31,
+      "sourceId": "important-products-31",
+      "cards": [
+        [
+          "55",
+          "",
+          "TM55.01"
+        ]
+      ]
+    }
+  ]
+}

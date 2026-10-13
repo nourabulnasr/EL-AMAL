@@ -54,3 +54,9 @@ export function assertStockChange(onHand:number,reserved:number,delta:number,blo
   if(!Number.isSafeInteger(next)||next<0||next<reserved+blocked||next>999999999)throw new InventoryError('This action would consume held or blocked stock, or exceed the supported balance',409);
   return next;
 }
+
+/** Preserve submitted connection snapshots when staff choose a stock-allocation line. */
+export function inventoryLineLabel(line:{model:string;quantity:number;range?:string|null;optionNameEn?:string|null;optionNameAr?:string|null;optionModel?:string|null}){
+ const option=[line.optionNameEn,line.optionNameAr,line.optionModel?`Model \u2066${line.optionModel}\u2069`:null].filter(Boolean).join(' / ');
+ return [line.model,option||null,`requested ${line.quantity}`,line.range||null].filter(Boolean).join(' · ');
+}

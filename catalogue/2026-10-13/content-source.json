@@ -1,0 +1,595 @@
+[
+  {
+    "model": "111.10, 111.12",
+    "label": "Standard version",
+    "sourceId": "important-products-4",
+    "page": 4,
+    "header": "111.10, 111.12",
+    "availability": "in-stock",
+    "availabilityReportedAt": "2026-10-13",
+    "printedDatasheetIds": "PM01.01;PM01.17",
+    "image": {
+      "src": "/images/products/wika-111-10-111-12.png",
+      "width": 135,
+      "height": 187,
+      "pdfImageName": "Im3"
+    },
+    "alternateImages": [
+      {
+        "src": "/images/products/wika-111-10-111-12-im4.png",
+        "width": 104,
+        "height": 101,
+        "pdfImageName": "Im4"
+      }
+    ],
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "27, 40, 50, 63, 80, 100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "-1 … 0 to 0 … 400 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "2.5, 1.6 optional NS 27: 4.0"
+      }
+    ],
+    "rawSpecifications": "Nominal size 27, 40, 50, 63, 80, 100, 160 mm\nScale range -1 … 0 to 0 … 400 bar\nAccuracy class 2.5, 1.6 optional\nNS 27: 4.0\nData sheet PM 01.01, PM 01.17",
+    "box": [
+      28.346,
+      339.722,
+      198.425,
+      461.65059999999994
+    ]
+  },
+  {
+    "model": "212.20",
+    "label": "Stainless steel case",
+    "sourceId": "important-products-5",
+    "page": 5,
+    "header": "212.20",
+    "availability": "in-stock",
+    "availabilityReportedAt": "2026-10-13",
+    "printedDatasheetIds": "PM02.01",
+    "image": {
+      "src": "/images/products/wika-212-20.png",
+      "width": 186,
+      "height": 243,
+      "pdfImageName": "Im0"
+    },
+    "alternateImages": [],
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "-1 ... 0 to 0 ... 1,000 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.0"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range -1 ... 0 to 0 ... 1,000 bar\nAccuracy class 1.0\nData sheet PM 02.01",
+    "box": [
+      28.346,
+      339.87399999999997,
+      198.425,
+      450.46869999999996
+    ]
+  },
+  {
+    "model": "213.40",
+    "label": "Heavy-duty version,\ncase filling",
+    "sourceId": "important-products-5",
+    "page": 5,
+    "header": "213.40",
+    "availability": "in-stock",
+    "availabilityReportedAt": "2026-10-13",
+    "printedDatasheetIds": "PM02.06",
+    "image": {
+      "src": "/images/products/wika-213-40.png",
+      "width": 168,
+      "height": 231,
+      "pdfImageName": "Im1"
+    },
+    "alternateImages": [],
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "63, 80, 100 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "-1 … 0 to 0 … 1,000 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.0, 1.6 (NS 63, 80)"
+      }
+    ],
+    "rawSpecifications": "Nominal size 63, 80, 100 mm\nScale range -1 … 0 to 0 … 1,000 bar\nAccuracy class 1.0, 1.6 (NS 63, 80)\nData sheet PM 02.06",
+    "box": [
+      212.598,
+      339.87399999999997,
+      382.677,
+      450.46869999999996
+    ]
+  },
+  {
+    "model": "113.53, 213.53",
+    "label": "Stainless steel case,\ncase filling",
+    "sourceId": "important-products-5",
+    "page": 5,
+    "header": "113.53, 213.53",
+    "availability": "in-stock",
+    "availabilityReportedAt": "2026-10-13",
+    "printedDatasheetIds": "PM01.08;PM02.12",
+    "image": {
+      "src": "/images/products/wika-113-53-213-53.png",
+      "width": 200,
+      "height": 260,
+      "pdfImageName": "Im2"
+    },
+    "alternateImages": [],
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "• 113.53: 40, 80, 100 mm\n• 213.53: 50, 63, 100 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "-1 … 0 to 0 … 600 bar (213.53: to 1,000 bar)"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "113.53: 1.6 (NS 80, 100), 2.5 213.53: 1.0 (NS 100), 1.6 (NS 50, 63)"
+      }
+    ],
+    "rawSpecifications": "Nominal size • 113.53: 40, 80, 100 mm\n• 213.53: 50, 63, 100 mm\nScale range -1 … 0 to 0 … 600 bar\n(213.53: to 1,000 bar)\nAccuracy class 113.53: 1.6 (NS 80, 100), 2.5\n213.53: 1.0 (NS 100), 1.6 (NS 50, 63)\nData sheet PM 01.08, PM 02.12",
+    "box": [
+      396.85,
+      339.87399999999997,
+      567.212,
+      484.4727
+    ]
+  },
+  {
+    "model": "232.50, 233.50",
+    "label": "For the process industry,\nstandard version",
+    "sourceId": "important-products-6",
+    "page": 6,
+    "header": "232.50, 233.50",
+    "availability": "in-stock",
+    "availabilityReportedAt": "2026-10-13",
+    "printedDatasheetIds": "PM02.02",
+    "image": {
+      "src": "/images/products/wika-232-50-233-50.png",
+      "width": 179,
+      "height": 235,
+      "pdfImageName": "Im4"
+    },
+    "alternateImages": [],
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "63, 100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "• NS 63: 0 … 1 to 0 … 1,000 bar\n• NS 100: 0 … 0.6 to 0 … 1,000 bar\n• NS 160: 0 … 0.6 to 0 … 1,600 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.0 (NS 100, 160), 1.6 (NS 63)"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 63, 100, 160 mm\nScale range • NS 63: 0 … 1 to 0 … 1,000 bar\n• NS 100: 0 … 0.6 to 0 … 1,000 bar\n• NS 160: 0 … 0.6 to 0 … 1,600 bar\nAccuracy class 1.0 (NS 100, 160), 1.6 (NS 63)\nIngress protection IP65\nData sheet PM 02.02",
+    "box": [
+      212.598,
+      339.87399999999997,
+      382.677,
+      484.48519999999996
+    ]
+  },
+  {
+    "model": "232.30, 233.30",
+    "label": "For the process industry,\nsafety version",
+    "sourceId": "important-products-6",
+    "page": 6,
+    "header": "232.30, 233.30",
+    "availability": "in-stock",
+    "availabilityReportedAt": "2026-10-13",
+    "printedDatasheetIds": "PM02.04",
+    "image": {
+      "src": "/images/products/wika-232-30-233-30.png",
+      "width": 185,
+      "height": 244,
+      "pdfImageName": "Im0"
+    },
+    "alternateImages": [],
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "63, 100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "• NS 63: 0 … 1 to 0… 1,000 bar\n• NS 100: 0 … 0.6 to 0 … 1,000 bar\n• NS 160: 0 … 0.6 to 0 … 1,600 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.0 (NS 100, 160), 1.6 (NS 63)"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 63, 100, 160 mm\nScale range • NS 63: 0 … 1 to 0… 1,000 bar\n• NS 100: 0 … 0.6 to 0 … 1,000 bar\n• NS 160: 0 … 0.6 to 0 … 1,600 bar\nAccuracy class 1.0 (NS 100, 160), 1.6 (NS 63)\nIngress protection IP65\nData sheet PM 02.04",
+    "box": [
+      396.85,
+      339.87399999999997,
+      566.9290000000001,
+      484.48519999999996
+    ]
+  },
+  {
+    "model": "422.12, 423.12",
+    "label": "Grey cast iron case",
+    "sourceId": "important-products-8",
+    "page": 8,
+    "header": "422.12, 423.12",
+    "availability": "in-stock",
+    "availabilityReportedAt": "2026-10-13",
+    "printedDatasheetIds": "PM04.02",
+    "image": {
+      "src": "/images/products/wika-422-12-423-12.png",
+      "width": 146,
+      "height": 253,
+      "pdfImageName": "Im1"
+    },
+    "alternateImages": [],
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 16 mbar to 0 … 40 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.6"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54, with liquid filling IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 0 … 16 mbar to 0 … 40 bar\nAccuracy class 1.6\nIngress protection IP54, with liquid filling IP65\nData sheet PM 04.02",
+    "box": [
+      28.346,
+      363.685,
+      198.425,
+      516.2339
+    ]
+  },
+  {
+    "model": "432.50, 433.50, 432.30, 433.30, 452.50, 453.50, 452.30, 453.30",
+    "label": "For the process industry, high overload\nsafety up to 10 times the full scale value,\nmax. 40 bar",
+    "sourceId": "important-products-8",
+    "page": 8,
+    "header": "432.50, 433.50,\n432.30, 433.30,\n452.50, 453.50,\n452.30, 453.30",
+    "availability": "in-stock",
+    "availabilityReportedAt": "2026-10-13",
+    "printedDatasheetIds": "PM04.03",
+    "image": {
+      "src": "/images/products/wika-432-50-433-50-432-30-433-30-452-50-453-50-452-30-453-30.png",
+      "width": 141,
+      "height": 224,
+      "pdfImageName": "Im2"
+    },
+    "alternateImages": [],
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 16 mbar to 0 … 25 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.6"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54, with liquid filling IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 0 … 16 mbar to 0 … 25 bar\nAccuracy class 1.6\nIngress protection IP54, with liquid filling IP65\nData sheet PM 04.03",
+    "box": [
+      212.598,
+      363.312,
+      382.677,
+      515.8607999999999
+    ]
+  },
+  {
+    "model": "432.56, 433.56, 432.36, 433.36",
+    "label": "For the process industry, high overload\nsafety to 40, 100 or 400 bar",
+    "sourceId": "important-products-8",
+    "page": 8,
+    "header": "432.56, 433.56,\n432.36, 433.36",
+    "availability": "in-stock",
+    "availabilityReportedAt": "2026-10-13",
+    "printedDatasheetIds": "PM04.07",
+    "image": {
+      "src": "/images/products/wika-432-56-433-56-432-36-433-36.png",
+      "width": 154,
+      "height": 261,
+      "pdfImageName": "Im0"
+    },
+    "alternateImages": [],
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 16 mbar to 0 … 40 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.6"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54, with liquid filling IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 0 … 16 mbar to 0 … 40 bar\nAccuracy class 1.6\nIngress protection IP54, with liquid filling IP65\nData sheet PM 04.07",
+    "box": [
+      396.85,
+      363.685,
+      566.9290000000001,
+      516.5173
+    ]
+  },
+  {
+    "model": "700.01, 700.02",
+    "label": "With magnetic piston\nor with magnetic piston\nand separating diaphragm",
+    "sourceId": "important-products-10",
+    "page": 10,
+    "header": "700.01, 700.02",
+    "availability": "in-stock",
+    "availabilityReportedAt": "2026-10-13",
+    "printedDatasheetIds": "PM07.14",
+    "image": {
+      "src": "/images/products/wika-700-01-700-02.png",
+      "width": 246,
+      "height": 209,
+      "pdfImageName": "Im5"
+    },
+    "alternateImages": [],
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "80 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "• 700.01: 0 … 400 mbar to 0 … 10 bar\n• 700.02: 0 … 160 mbar to 0 … 2.5 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "• 700.01: ±3 %\n• 700.02: ±5 % with increasing differential pressure"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP54"
+      }
+    ],
+    "rawSpecifications": "Nominal size 80 mm\nScale range • 700.01: 0 … 400 mbar to 0 … 10 bar\n• 700.02: 0 … 160 mbar to 0 … 2.5 bar\nAccuracy class • 700.01: ±3 %\n• 700.02: ±5 %\nwith increasing differential pressure\nIngress protection IP54\nData sheet PM 07.14",
+    "box": [
+      28.063,
+      362.268,
+      198.142,
+      531.8204000000001
+    ]
+  },
+  {
+    "model": "711.12, 731.12",
+    "label": "With parallel entry,\ncopper alloy or stainless steel",
+    "sourceId": "important-products-10",
+    "page": 10,
+    "header": "711.12, 731.12",
+    "availability": "in-stock",
+    "availabilityReportedAt": "2026-10-13",
+    "printedDatasheetIds": "PM07.02",
+    "image": {
+      "src": "/images/products/wika-711-12-731-12.png",
+      "width": 238,
+      "height": 272,
+      "pdfImageName": "Im0"
+    },
+    "alternateImages": [],
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 0.6 to 0 … 1,000 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "1.6"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP33"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100, 160 mm\nScale range 0 … 0.6 to 0 … 1,000 bar\nAccuracy class 1.6\nIngress protection IP33\nData sheet PM 07.02",
+    "box": [
+      212.315,
+      362.268,
+      382.394,
+      497.80869999999993
+    ]
+  },
+  {
+    "model": "DPG40",
+    "label": "With integrated\nworking pressure\nindication (DELTA-plus)",
+    "sourceId": "important-products-10",
+    "page": 10,
+    "header": "DPG40",
+    "availability": "in-stock",
+    "availabilityReportedAt": "2026-10-13",
+    "printedDatasheetIds": "PM07.20",
+    "image": {
+      "src": "/images/products/wika-dpg40.png",
+      "width": 230,
+      "height": 227,
+      "pdfImageName": "Im3"
+    },
+    "alternateImages": [],
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "100 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "0 … 0.16 to 0 … 10 bar"
+      },
+      {
+        "label": "Accuracy class",
+        "value": "2.5"
+      },
+      {
+        "label": "Ingress protection",
+        "value": "IP65"
+      }
+    ],
+    "rawSpecifications": "Nominal size 100 mm\nScale range 0 … 0.16 to 0 … 10 bar\nAccuracy class 2.5\nIngress protection IP65\nData sheet PM 07.20",
+    "box": [
+      396.567,
+      362.268,
+      566.646,
+      497.80869999999993
+    ]
+  },
+  {
+    "model": "TG53",
+    "label": "Process version per\nASME B40.200",
+    "sourceId": "important-products-30",
+    "page": 30,
+    "header": "TG53",
+    "availability": "in-stock",
+    "availabilityReportedAt": "2026-10-13",
+    "printedDatasheetIds": "TM53.02",
+    "image": {
+      "src": "/images/products/wika-tg53.png",
+      "width": 128,
+      "height": 310,
+      "pdfImageName": "Im2"
+    },
+    "alternateImages": [
+      {
+        "src": "/images/products/wika-tg53-im5.png",
+        "width": 150,
+        "height": 148,
+        "pdfImageName": "Im5"
+      }
+    ],
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "3, 4, 5, 6\""
+      },
+      {
+        "label": "Scale range",
+        "value": "-70 … +70 to 0 … +600 °C"
+      },
+      {
+        "label": "Wetted parts",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Option",
+        "value": "Liquid damping to max. 250 °C (case and probe)"
+      }
+    ],
+    "rawSpecifications": "Nominal size 3, 4, 5, 6\"\nScale range -70 … +70 to 0 … +600 °C\nWetted parts Stainless steel\nOption Liquid damping to max. 250 °C\n(case and probe)\nData sheet TM 53.02",
+    "box": [
+      212.598,
+      636.264,
+      382.677,
+      769.532
+    ]
+  },
+  {
+    "model": "55",
+    "label": "High-quality process version\nper EN 13190",
+    "sourceId": "important-products-31",
+    "page": 31,
+    "header": "55",
+    "availability": "in-stock",
+    "availabilityReportedAt": "2026-10-13",
+    "printedDatasheetIds": "TM55.01",
+    "image": {
+      "src": "/images/products/wika-55.png",
+      "width": 125,
+      "height": 352,
+      "pdfImageName": "Im1"
+    },
+    "alternateImages": [
+      {
+        "src": "/images/products/wika-55-im0.png",
+        "width": 127,
+        "height": 271,
+        "pdfImageName": "Im0"
+      }
+    ],
+    "rows": [
+      {
+        "label": "Nominal size",
+        "value": "63, 100, 160 mm"
+      },
+      {
+        "label": "Scale range",
+        "value": "-70 … +70 to 0 … 600 °C"
+      },
+      {
+        "label": "Wetted parts",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Option",
+        "value": "Liquid damping to max. 250 °C (case and probe)"
+      }
+    ],
+    "rawSpecifications": "Nominal size 63, 100, 160 mm\nScale range -70 … +70 to 0 … 600 °C\nWetted parts Stainless steel\nOption Liquid damping to max. 250 °C (case and\nprobe)\nData sheet TM 55.01",
+    "box": [
+      28.346,
+      314.04200000000003,
+      198.425,
+      447.3099999999999
+    ]
+  }
+]

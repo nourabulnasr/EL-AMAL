@@ -1,5 +1,5 @@
 import {hasRole} from './access.ts';
-import {EnquiryInputError,EnquiryConflictError} from './enquiries.ts';
+import {EnquiryInputError,EnquiryConflictError,EnquiryOptionError} from './enquiries.ts';
 type Dependencies={enabled:()=>boolean;source:()=>string;authenticate:(headers:Headers)=>Promise<unknown>;submit:(input:unknown)=>Promise<{reference:string;repeated:boolean}>};
 const json=(body:unknown,status=200)=>Response.json(body,{status,headers:{'Cache-Control':'no-store'}});
 const permitted=(user:unknown)=>!!user&&typeof user==='object'&&'collection' in user&&user.collection==='staff'&&hasRole(user,['owner','sales']);
@@ -27,6 +27,7 @@ export function enquiryHandlers(deps:Dependencies){
         const result=await deps.submit(await readInput(request));
         return json({...result,mode:'test',emailSent:false,stockReserved:false},result.repeated?200:201);
       }catch(error){
+        if(error instanceof EnquiryOptionError)return json({error:'Choose a valid connection for every selected product',code:'option-selection'},400);
         if(error instanceof EnquiryInputError)return json({error:'Check the enquiry details and selected items'},400);
         if(error instanceof EnquiryConflictError)return json({error:'Request changed; review it again'},409);
         return json({error:'Unable to save now. Retry with the same details.'},503);

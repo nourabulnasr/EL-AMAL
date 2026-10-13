@@ -4,6 +4,7 @@ import {validateEnquiry,type EnquiryDetails} from './enquiry-preview.ts';
 import {readBasket,type BasketLine} from './basket.ts';
 
 export class EnquiryInputError extends Error {}
+export class EnquiryOptionError extends EnquiryInputError {}
 export class EnquiryConflictError extends Error {}
 export type EnquiryInput={requestKey:string;locale:Locale;contact:EnquiryDetails;lines:BasketLine[];manual?:{model:string;quantity:number;range:string};quotation?:true};
 const object=(value:unknown):value is Record<string,unknown>=>!!value&&typeof value==='object'&&!Array.isArray(value);
@@ -30,7 +31,7 @@ export function parseEnquiry(value:unknown):EnquiryInput {
   }
   const lines=readBasket(JSON.stringify(value.lines));
   if(!lines.length&&!manual)throw new EnquiryInputError('Choose at least one valid product');
-  lines.sort((a,b)=>a.productId.localeCompare(b.productId,'en'));
+  lines.sort((a,b)=>a.productId.localeCompare(b.productId,'en')||(a.optionId??'').localeCompare(b.optionId??'','en'));
   return {requestKey:value.requestKey.toLowerCase(),locale:value.locale as Locale,contact,lines,...manual?{manual}:{}};
 }
 export function enquiryFingerprint(input:EnquiryInput,source:'demo'|'cms') {
@@ -41,6 +42,8 @@ export function snapshotItems(lines:BasketLine[],products:Product[]) {
   return lines.map(line=>{
     const product=byId.get(line.productId);
     if(!product)throw new EnquiryInputError('A requested product is no longer available');
-    return {productId:product.id,model:product.model,nameEn:product.name.en,nameAr:product.name.ar,quantity:line.quantity};
+    const options=product.details?.options??[],option=options.find(option=>option.id===line.optionId);
+    if((options.length&&!option)||(!options.length&&line.optionId!==undefined))throw new EnquiryOptionError('Choose a valid connection option for every requested product');
+    return {...option?{optionId:option.id,optionNameEn:option.name.en,optionNameAr:option.name.ar,...option.model?{optionModel:option.model}:{}}:{},productId:product.id,model:product.model,nameEn:product.name.en,nameAr:product.name.ar,quantity:line.quantity};
   });
 }

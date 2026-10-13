@@ -2,6 +2,7 @@ import { readInput } from "./enquiry-http.ts";
 import {
   parseEnquiry,
   EnquiryInputError,
+  EnquiryOptionError,
   EnquiryConflictError,
 } from "./enquiries.ts";
 import { createReceipt, readReceipt } from "./customer-receipt.ts";
@@ -65,6 +66,8 @@ export function customerHandlers(deps: Deps) {
       } catch (error) {
         if (error instanceof CustomerLimitError)
           return json({ error: "Try again later" }, 429);
+        if (error instanceof EnquiryOptionError)
+          return json({error:'Choose a valid connection for every selected product',code:'option-selection'},400);
         if (error instanceof EnquiryInputError)
           return json({ error: "Check your details and selected items" }, 400);
         if (error instanceof EnquiryConflictError)

@@ -1,0 +1,179 @@
+[
+  {
+    "code": "PM01.01",
+    "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0101_en_co.pdf",
+    "discovery": "Followed official WIKA product-page datasheet link or official search result",
+    "verifiedAt": "2026-10-13",
+    "filename": "ds_pm0101_en_co.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 1313785,
+    "sha256": "e2da9c47fadb88c1e7da95ce0872981393af4f1aa8566f1ced57c87079fc7b20"
+  },
+  {
+    "code": "PM02.01",
+    "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0201_en_co.pdf",
+    "discovery": "Followed official WIKA product-page datasheet link or official search result",
+    "verifiedAt": "2026-10-13",
+    "filename": "ds_pm0201_en_co.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 918140,
+    "sha256": "b8bd74aff8cc70f668c4f7c173cd0648e3aed8feb8e83f1b02f4b9b0b25738c2"
+  },
+  {
+    "code": "PM02.06",
+    "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0206_en_co.pdf",
+    "discovery": "Followed official WIKA product-page datasheet link or official search result",
+    "verifiedAt": "2026-10-13",
+    "filename": "ds_pm0206_en_co.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 1121807,
+    "sha256": "0a8b8004915a997ac4bac2bfc012c6c3141c9ab5dfdeaeaa362892e90aa166a8"
+  },
+  {
+    "code": "PM01.08",
+    "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0108_en_co.pdf",
+    "discovery": "Followed official WIKA product-page datasheet link or official search result",
+    "verifiedAt": "2026-10-13",
+    "filename": "ds_pm0108_en_co.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 896359,
+    "sha256": "bc9a756cd10e5829c3a7bf1167ad43c891352538873167b214a2436d7c07d114"
+  },
+  {
+    "code": "PM02.12",
+    "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0212_en_co.pdf",
+    "discovery": "Followed official WIKA product-page datasheet link or official search result",
+    "verifiedAt": "2026-10-13",
+    "filename": "ds_pm0212_en_co.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 899583,
+    "sha256": "78beac0272198d0f49777229a22983e0904fdb257a1c9fc0009a12482bb4ff4a"
+  },
+  {
+    "code": "PM02.02",
+    "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0202_en_co.pdf",
+    "discovery": "Followed official WIKA product-page datasheet link or official search result",
+    "verifiedAt": "2026-10-13",
+    "filename": "ds_pm0202_en_co.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 873140,
+    "sha256": "b26f462f53011593678d03fc21fbd1bcc24c7e021f487677114e86c15a1e9926"
+  },
+  {
+    "code": "PM02.04",
+    "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0204_en_co.pdf",
+    "discovery": "Followed official WIKA product-page datasheet link or official search result",
+    "verifiedAt": "2026-10-13",
+    "filename": "ds_pm0204_en_co.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 1731461,
+    "sha256": "f043b46dbe12fa2697f80603e65f33885297e082b544e3d30f48db830d0f5cf3"
+  },
+  {
+    "code": "PM04.02",
+    "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0402_en_co.pdf",
+    "discovery": "Followed official WIKA product-page datasheet link or official search result",
+    "verifiedAt": "2026-10-13",
+    "filename": "ds_pm0402_en_co.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 404494,
+    "sha256": "931ec02347400a2fa82389d665c50d785b6f9375bb4cd42c1d7f816a19ca3c20"
+  },
+  {
+    "code": "PM04.03",
+    "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0403_en_co.pdf",
+    "discovery": "Followed official WIKA product-page datasheet link or official search result",
+    "verifiedAt": "2026-10-13",
+    "filename": "ds_pm0403_en_co.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 870741,
+    "sha256": "b7e56bbf79adcc9a963d8d4d810a3713be2d4910ed2b6022bfb49ee907ce4a45"
+  },
+  {
+    "code": "PM04.07",
+    "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0407_en_co.pdf",
+    "discovery": "Followed official WIKA product-page datasheet link or official search result",
+    "verifiedAt": "2026-10-13",
+    "filename": "ds_pm0407_en_co.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 1012134,
+    "sha256": "23f6eff16f429f85c880d055fe937ea4435f185d1c78b970075647741ee333aa"
+  },
+  {
+    "code": "PM07.14",
+    "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0714_en_co.pdf",
+    "discovery": "Followed official WIKA product-page datasheet link or official search result",
+    "verifiedAt": "2026-10-13",
+    "filename": "ds_pm0714_en_co.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 531231,
+    "sha256": "0d0639f2e46c078c4947607b63896374c1ba833bf9656a7ac4c1c586426666a5"
+  },
+  {
+    "code": "PM07.02",
+    "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0702_en_co.pdf",
+    "discovery": "Followed official WIKA product-page datasheet link or official search result",
+    "verifiedAt": "2026-10-13",
+    "filename": "ds_pm0702_en_co.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 425775,
+    "sha256": "1bfa2ec98b16d159488d6b962168ea7fd30648e854f4cf78a270f69e4d9454a4"
+  },
+  {
+    "code": "PM07.20",
+    "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0720_en_co.pdf",
+    "discovery": "Followed official WIKA product-page datasheet link or official search result",
+    "verifiedAt": "2026-10-13",
+    "filename": "ds_pm0720_en_co.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 797029,
+    "sha256": "249a37894b83ee7174357a2483de6c52d9c0bfc8a903a27234178ed10491f006"
+  },
+  {
+    "code": "TM53.02",
+    "url": "https://www.wika.com/media/Data-sheets/Temperature/Dial-thermometers/ds_tm5302_en_co.pdf",
+    "discovery": "Followed official WIKA product-page datasheet link or official search result",
+    "verifiedAt": "2026-10-13",
+    "filename": "ds_tm5302_en_co.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 777435,
+    "sha256": "e6461abfff6e1d17f9295b04e9ae4ae9c2003e95e3c968583651d60bec7b7a46"
+  },
+  {
+    "code": "TM55.01",
+    "url": "https://www.wika.com/media/Data-sheets/Temperature/Dial-thermometers/ds_tm5501_en_co.pdf",
+    "discovery": "Followed official WIKA product-page datasheet link or official search result",
+    "verifiedAt": "2026-10-13",
+    "filename": "ds_tm5501_en_co.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 765460,
+    "sha256": "f8d7558de6e93b76aa726ee201720981d2928606687942f65b134f6143423ec3"
+  },
+  {
+    "code": "PM01.17",
+    "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0117_en_co.pdf",
+    "discovery": "Official WIKA UK miniature111.12.027 product page datasheet link",
+    "sourcePage": "https://www.wika.com/en-gb/111_12_027.WIKA",
+    "verifiedAt": "2026-10-13",
+    "filename": "ds_pm0117_en_co.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 530329,
+    "sha256": "c82cbeb5f4f523095f5e3392989007c3b65fb93df4482c12adac9f0c9b6fe73c"
+  }
+]

@@ -1,0 +1,505 @@
+{
+  "verifiedAt": "2026-10-13",
+  "policy": "Manufacturer-discovered HTTPS URL, HTTP 200, PDF signature, SHA256, printed code and model identity in downloaded PDF. Brochure family variants omitted by current PDFs remain disclosed in modelChecks.",
+  "byCode": {
+    "PM01.01": {
+      "code": "PM01.01",
+      "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0101_en_co.pdf",
+      "discovery": "Followed official WIKA product-page datasheet link or official search result",
+      "verifiedAt": "2026-10-13",
+      "filename": "ds_pm0101_en_co.pdf",
+      "status": "verified",
+      "contentType": "application/pdf",
+      "bytes": 1313785,
+      "sha256": "e2da9c47fadb88c1e7da95ce0872981393af4f1aa8566f1ced57c87079fc7b20",
+      "pages": 11,
+      "codeMatchesFirstThreePages": true,
+      "modelChecks": [
+        {
+          "model": "111.10",
+          "found": true
+        },
+        {
+          "model": "111.12",
+          "found": true
+        }
+      ],
+      "firstPageSummary": "Pressure WIKA data sheet PM 01.01 Page 1 of 11 Data sheets showing similar products: Panel mounting series; models 111.16, 111.26; see data sheet PM 01.10 With VdS approval; model 111.12.040; see data sheet SP 01.23 Fig. left: model 111.12, back mount Fig. right: model 111.10, lower mount (radial) Applications ■ For gaseous and liquid media that are not highly viscous or crystallising and will not attack copper alloy parts ■ Pneumatics ■ Heating and air-conditioning technology ■ Medical engineering Special features ■ Reliable and cost-effective ■ Design per EN 837-1 or ASME B40.100 ■ Nominal size 40 [1 ½\"], 50 [2\"], 63 [2 ½\"], 80 [3\"], 100 [4\"] and 160 [6\"] ■ Scale ranges to 0 ... 400 bar [0 ... 6,000 psi] Description The model 111 pressure gauges are based on the proven Bourdon tube measuring system. The deflection of the Bourdon tube is transmitted to a movement and indicated. The modular design enables a multitude of combinations of case materials, process connections, nominal sizes and scale ranges. Due to the high variance, the instrument is suitable for use in a wide range of applications within industry. For mounting in control panels, the pressure gauges can, depending on the process connection, be fitted with a surface mounting flange or with a triangular profile ring and mounting bracket. The standard version of the model 111 is manufactured, cost-optimised on modern production lines, in volumes of several million instruments per year. WIKA data sheet PM 01.01 ∙ 06/2025 For further approvals, see page 6 Bourdon tube pressure gauge, copper alloy Standard version Models 111.10, 111.12 Configurator Standard articles Certified to NSF/ANSI/CAN 61-G"
+    },
+    "PM02.01": {
+      "code": "PM02.01",
+      "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0201_en_co.pdf",
+      "discovery": "Followed official WIKA product-page datasheet link or official search result",
+      "verifiedAt": "2026-10-13",
+      "filename": "ds_pm0201_en_co.pdf",
+      "status": "verified",
+      "contentType": "application/pdf",
+      "bytes": 918140,
+      "sha256": "b8bd74aff8cc70f668c4f7c173cd0648e3aed8feb8e83f1b02f4b9b0b25738c2",
+      "pages": 11,
+      "codeMatchesFirstThreePages": true,
+      "modelChecks": [
+        {
+          "model": "212.20",
+          "found": true
+        }
+      ],
+      "firstPageSummary": "Pressure Page 1 of 11 WIKA data sheet PM 02.01 Data sheets showing similar products: Bourdon tube pressure gauge; heavy-duty version; model 213.40; see data sheet PM 02.06 Bourdon tube pressure gauge, model 212.20 Applications ■ For industrial applications requiring high accuracy and good readability of dial and pointer, also at a distance ■ For gaseous or liquid media that are suitable to the wetted parts material of the measuring element ■ For media that is not highly viscous and not crystallising Special features ■ Durable and robust design ■ Cost-effective and reliable ■ DNV approval for shipbuilding ■ Scale ranges from 0 … 0.6 to 0 … 1,000 bar [0 ... 10 to 0 ... 15,000 psi] and vacuum and compound scale ranges WIKA data sheet PM 02.01 ∙ 05/2025 For further approvals, see page 6 Description The mechanical model 212.20 Bourdon tube pressure gauge is constructed with a case from stainless steel. The wetted parts material is copper alloy or stainless steel, depending on the scale range. WIKA manufactures and qualifies the pressure gauge in accordance with the standards EN 837-1 and ASME B40.100. As a safety function, this instrument has a blow-out device. In the event of a failure, overpressure can escape there. Applications for this instrument can be found in the machine building, plant construction and building services industries. The model 212.20 can also be used in refrigeration applications. The cases are available in nominal sizes of 100 [4\"] and 160 [6\"] and fulfil IP54 ingress protection. The modular design enables a multitude of combinations of process connections, nominal sizes and scale ranges. This high variance enables universal use of the instrument in the industrial sector. For mounting in control panels, the pressure gauges can be fitted with a mounting flange or with a triangular profile ring and mounting bracket. Bourdon tube pressure gauge Stainless steel case, NS 100 [4\"] and 160 [6\"] Model 212.20 Configurator Standard articles"
+    },
+    "PM02.06": {
+      "code": "PM02.06",
+      "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0206_en_co.pdf",
+      "discovery": "Followed official WIKA product-page datasheet link or official search result",
+      "verifiedAt": "2026-10-13",
+      "filename": "ds_pm0206_en_co.pdf",
+      "status": "verified",
+      "contentType": "application/pdf",
+      "bytes": 1121807,
+      "sha256": "0a8b8004915a997ac4bac2bfc012c6c3141c9ab5dfdeaeaa362892e90aa166a8",
+      "pages": 12,
+      "codeMatchesFirstThreePages": true,
+      "modelChecks": [
+        {
+          "model": "213.40",
+          "found": true
+        }
+      ],
+      "firstPageSummary": "Pressure WIKA data sheet PM 02.06 Page 1 of 12 Bourdon tube pressure gauge, copper alloy Heavy-duty version, case filling Model 213.40, NS 63 [2 ½\"], 80 [3\"] and 100 [4\"] Data sheets showing similar products: Liquid filling, stainless steel case; model 213.53; see data sheet PM 02.12 Bourdon tube pressure gauge, model 213.40 Applications ■ For measuring locations with high dynamic pressure loads or vibrations ■ For gaseous and liquid media that are not highly viscous or crystallising and will not attack copper alloy parts ■ Mining industry ■ Hydraulics ■ Shipbuilding Special features ■ Especially robust design ■ Vibration- and shock-resistant ■ DNV approval for NS 63 [2 ½\"] and 100 [4\"] available as an option WIKA data sheet PM 02.06 ∙ 09/2025 For further approvals, see page 6 Description The liquid-filled model 213.40 Bourdon tube pressure gauge is constructed with a forged brass case and wetted parts from copper alloy. Scale ranges from 0 … 0.6 to 0 … 1,000 bar [0 ... 10 to 0 ... 15,000 psi]. Due to the case fill fluid, the measuring element and movement are efficiently damped. Therefore, these instru- ments are particularly suited to measuring locations with high dynamic loads, such as fast load cycles or vibrations. WIKA manufactures and qualifies the pressure gauge in accordance with the standards EN 837-1 and ASME B40.100. As a safety function, this instrument has a blow-out device with blow-out plug on the top of the case. In the event of a failure, overpressure can escape there. Configurator Standard articles"
+    },
+    "PM01.08": {
+      "code": "PM01.08",
+      "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0108_en_co.pdf",
+      "discovery": "Followed official WIKA product-page datasheet link or official search result",
+      "verifiedAt": "2026-10-13",
+      "filename": "ds_pm0108_en_co.pdf",
+      "status": "verified",
+      "contentType": "application/pdf",
+      "bytes": 896359,
+      "sha256": "bc9a756cd10e5829c3a7bf1167ad43c891352538873167b214a2436d7c07d114",
+      "pages": 13,
+      "codeMatchesFirstThreePages": true,
+      "modelChecks": [
+        {
+          "model": "113.53",
+          "found": true
+        },
+        {
+          "model": "213.53",
+          "found": true
+        }
+      ],
+      "firstPageSummary": "Pressure WIKA data sheet PM 01.08 Page 1 of 13 Model 113.53.100, lower mount Bourdon tube pressure gauge, copper alloy Stainless steel case, case filling Model 113.53, NS 40 [1 ½\"], 80 [3\"] and 100 [4\"] Description The liquid-filled model 113.53 mechanical Bourdon tube pressure gauge is constructed with a case from stainless steel and wetted parts from copper alloy. WIKA manufactures and qualifies the pressure gauge in accordance with the standards EN 837-1 and ASME B40.100. As a safety function, this instrument has a blow-out device. In the event of a failure, overpressure can escape there. Due to the case filling, the pressure element and movement are efficiently damped. Therefore, these instruments are particularly suited to measuring locations with high dynamic loads, such as fast load cycles or vibrations. The cases of the model 113.53 are available in nominal sizes of 40 [1 ½\"], 80 [3\"] and 100 [4\"] and fulfil IP65 ingress protection. With an accuracy of class 2.5, this pressure gauge is suitable for a wide range of applications in industry. For mounting in control panels, the pressure gauges with a back mount process connection can be fitted with a mounting flange or with a triangular profile ring and mounting bracket. WIKA data sheet PM 01.08 ∙ 09/2025 Data sheets showing similar products: Stainless steel case, liquid filling, NS 50 [2\"], 63 [2 ½\"] and 100 [4\"]; model 213.53; see data sheet PM 02.12 For further approvals, see page 6 Applications ■ For measuring locations with high dynamic pressure loads and vibrations ■ For gaseous and liquid media that are not highly viscous or crystallising and will not attack copper alloy parts ■ Pumps and compressors ■ Hydraulics Special features ■ Vibration and shock resistant ■ Robust design Configurator"
+    },
+    "PM02.12": {
+      "code": "PM02.12",
+      "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0212_en_co.pdf",
+      "discovery": "Followed official WIKA product-page datasheet link or official search result",
+      "verifiedAt": "2026-10-13",
+      "filename": "ds_pm0212_en_co.pdf",
+      "status": "verified",
+      "contentType": "application/pdf",
+      "bytes": 899583,
+      "sha256": "78beac0272198d0f49777229a22983e0904fdb257a1c9fc0009a12482bb4ff4a",
+      "pages": 12,
+      "codeMatchesFirstThreePages": true,
+      "modelChecks": [
+        {
+          "model": "113.53",
+          "found": true
+        },
+        {
+          "model": "213.53",
+          "found": true
+        }
+      ],
+      "firstPageSummary": "Pressure Page 1 of 12 WIKA data sheet PM 02.12 Configurator Standard articles For further approvals, see page 7 Bourdon tube pressure gauge, model 213.53.100, lower mount Applications ■ For measuring locations with high dynamic pressure loads and vibrations ■ For gaseous and liquid media that are not highly viscous or crystallising and will not attack copper alloy parts ■ Hydraulics ■ Compressors, shipbuilding Special features ■ Very good vibration and shock resistance ■ Especially robust design ■ T ype approval for the shipbuilding industry ■ Scale ranges to 0 ... 1,000 bar or 0 ... 15,000 psi Bourdon tube pressure gauge, copper alloy Stainless steel case, case filling Model 213.53, NS 50 [2\"], 63 [2 ½\"] and 100 [4\"] Data sheets showing similar products: Stainless steel case, liquid filling, NS 40, 80 and 100; model 113.53; see data sheet PM 01.08 Description The liquid-filled model 213.53 mechanical Bourdon tube pressure gauge is constructed with a case from stainless steel and wetted parts from copper alloy. WIKA manufactures and qualifies the pressure gauge in accordance with the standards EN 837-1 and ASME B40.100. As a safety function, this instrument has a blow-out device. In the event of a failure, overpressure can escape there. Due to the case filling, the pressure element and movement are efficiently damped. Therefore, these instruments are particularly suited to measuring locations with high dynamic loads, such as fast load cycles or vibrations. The cases of the model 213.53 are available in nominal sizes of 50 [2\"], 63 [2 ½\"] and 100 [4\"] and fulfil IP65 ingress protection. With an accuracy of up to class 1.0, this pressure gauge is suitable for a wide range of applications in industry. For mounting in control panels, the pressure gauges with a back mount process connection can be fitted with a mounting flange or with a triangular profile ring and mounting bracket. WIKA data sheet PM 02.12∙ 01/2025"
+    },
+    "PM02.02": {
+      "code": "PM02.02",
+      "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0202_en_co.pdf",
+      "discovery": "Followed official WIKA product-page datasheet link or official search result",
+      "verifiedAt": "2026-10-13",
+      "filename": "ds_pm0202_en_co.pdf",
+      "status": "verified",
+      "contentType": "application/pdf",
+      "bytes": 873140,
+      "sha256": "b26f462f53011593678d03fc21fbd1bcc24c7e021f487677114e86c15a1e9926",
+      "pages": 12,
+      "codeMatchesFirstThreePages": true,
+      "modelChecks": [
+        {
+          "model": "232.50",
+          "found": true
+        },
+        {
+          "model": "233.50",
+          "found": true
+        }
+      ],
+      "firstPageSummary": "Pressure WIKA data sheet PM 02.02 Page 1 of 12 Bourdon tube pressure gauge, stainless steel For the process industry, standard version Models 232.50, 233.50, NS 63 [2 ½\"], 100 [4\"] and 160 [6\"] Data sheets showing similar products: Stainless steel, safety version; see data sheet PM 02.04 Bourdon tube pressure gauge with switch contacts; see data sheet PV 22.02 Monel version; see data sheet PM 02.33 Pressure gauge per EN 837-1 with mounted diaphragm seal; see data sheet DS 95.12 Bourdon tube pressure gauge, model 232.50, NS 100 [4\"] WIKA data sheet PM 02.02∙ 03/2025 For further approvals, see page 6 Description This high-quality Bourdon tube pressure gauge has been designed especially for the process industry. The use of high-quality stainless steel materials and the robust design are geared to applications in the chemical and process engineering industries. Thus the instrument is suitable for liquid and gaseous media, also in aggressive environments. Scale ranges of 0 … 0.6 to 0 … 1,600 bar [0 ... 10 to 0 ... 20,000 psi] ensure the measuring ranges required for a wide variety of applications. WIKA manufactures and qualifies the pressure gauge in accordance with the standards EN 837-1 and ASME B40.100. As a safety function, this instrument has a blow-out device with blow-out plug on the back of the case. In the event of a failure, overpressure can escape there. The model 233.50 with liquid-filled case is suitable for high dynamic pressure loads and vibrations. The QR code on the dial allows instrument-specific informa- tion such as the serial number, the order number, certificates and other product data to be retrieved from the internet easily and in the long term. Applications ■ For gaseous and liquid aggressive media that are not highly viscous or crystallising, also in aggressive environments ■ Chemical and petrochemical industries, oil and gas indus- try, power engineering and also water and wastewater technology ■ Machine building and general plant construction Special features ■ Excellent load cycle stability and shock resistance ■ With case filling (model 233.50) for applications with high dynamic pressure loads and vibrations ■ Completely from stainless s"
+    },
+    "PM02.04": {
+      "code": "PM02.04",
+      "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0204_en_co.pdf",
+      "discovery": "Followed official WIKA product-page datasheet link or official search result",
+      "verifiedAt": "2026-10-13",
+      "filename": "ds_pm0204_en_co.pdf",
+      "status": "verified",
+      "contentType": "application/pdf",
+      "bytes": 1731461,
+      "sha256": "f043b46dbe12fa2697f80603e65f33885297e082b544e3d30f48db830d0f5cf3",
+      "pages": 13,
+      "codeMatchesFirstThreePages": true,
+      "modelChecks": [
+        {
+          "model": "232.30",
+          "found": true
+        },
+        {
+          "model": "233.30",
+          "found": true
+        }
+      ],
+      "firstPageSummary": "Pressure WIKA data sheet PM 02.04 Page 1 of 13 Bourdon tube pressure gauge, stainless steel For the process industry, safety version Models 232.30 and 233.30 Data sheets showing similar products: Standard version; NS 63 [2 ½\"], 100 [4\"] and 160 [6\"]; models 232.50 and 233.50; see data sheet PM 02.02 Bourdon tube pressure gauge with switch contacts; models PGS23.100 and PGS23.160; see data sheet PV 22.02 Monel version, NS 63 [2 ½\"], 100 [4\"] and 160 [6\"]; models 262 and 263; see data sheet PM 02.33 Bourdon tube pressure gauge, model 232.30, NS 100 [4\"] Applications ■ Increased safety requirements for personal protection ■ For gaseous and liquid aggressive media that are not highly viscous or crystallising, also in aggressive environments ■ Oil and gas industry, chemical and petrochemical indus- tries, power engineering and also water and wastewater technology Special features ■ Safety version with solid baffle wall (Solidfront) designed in compliance with the requirements of EN 837-1 and ASME B40.100 ■ Excellent load-cycle stability and shock resistance ■ With case filling (model 233.30) for applications with high dynamic pressure loads and vibrations ■ EMICOgauge version, to avoid fugitive emissions ■ QR code on dial links to instrument-specific information WIKA data sheet PM 02.04 ∙ 09/2026 For further approvals, see page 6 Description This high-quality Bourdon tube pressure gauge has been designed especially for increased safety requirements within the process industry. The use of high-quality stainless steel materials and the robust design are geared to applications in the chemical and process engineering industries. Thus the instrument is suitable for liquid and gaseous media, also in aggressive environments. Scale ranges of 0 … 0.6 to 0 … 1,600 bar [0 ... 10 to 0 ... 20,000 psi] ensure the measuring ranges required for a wide variety of applications. WIKA manufactures and qualifies the pressure gauge in accordance with the standards EN 837-1 and ASME B40.100. This safety version is made up of a non-splintering window, a solid baffle wall between measur- ing system and dial and a blow-out back. In the event of a failure, the operator is protected at the fron"
+    },
+    "PM04.02": {
+      "code": "PM04.02",
+      "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0402_en_co.pdf",
+      "discovery": "Followed official WIKA product-page datasheet link or official search result",
+      "verifiedAt": "2026-10-13",
+      "filename": "ds_pm0402_en_co.pdf",
+      "status": "verified",
+      "contentType": "application/pdf",
+      "bytes": 404494,
+      "sha256": "931ec02347400a2fa82389d665c50d785b6f9375bb4cd42c1d7f816a19ca3c20",
+      "pages": 4,
+      "codeMatchesFirstThreePages": true,
+      "modelChecks": [
+        {
+          "model": "422.12",
+          "found": true
+        },
+        {
+          "model": "423.12",
+          "found": true
+        }
+      ],
+      "firstPageSummary": "Pressure WIKA data sheet PM 04.02 Page 1 of 4 Diaphragm pressure gauge Grey cast iron case Models 422.12, 423.12 Data sheets showing similar products: Electrical switch contacts; models 821, 831, 851 and 830 E; see data sheet AC 08.01 Diaphragm pressure gauge, for the process industry; model 432.50; see data sheet PM 04.03 Elastic element pressure gauges; see data sheet IN 00.01 Diaphragm pressure gauge model 422.12 Applications ■ For measuring points with increased overload ■ The model 423.12 with liquid-filled case is suitable for high dynamic pressure loads and vibrations ■ For gaseous and liquid media ■ For mining, environmental technology, machine building and general plant construction ■ With the open connecting flange option also for contaminated and viscous media Special features ■ Compatible with switch contacts ■ Threaded or open flange process connection ■ Scale ranges from 0 … 16 mbar Description Diaphragm pressure gauges are preferably used for low pressure ranges. Through the large working surface of the circular, corrugated diaphragm element, small pressure ranges can be measured reliably. The diaphragm pressure gauges are manufactured in accordance with EN 837-3. The robust design is particularly suitable for applications in machine building, plant construc- tion and in the water and wastewater industry. The upper measuring flange with case and the lower measu- ring flange are made from one cast part, respectively. The instrument is used for the measurement of gaseous and liquid media that will not attack cast steel. For the measurement of highly viscous, crystallising or contaminated media, the use of an open connecting flange is recommended. The open connecting flange has the advantage over a threaded connection that the pressure port cannot become blocked. With an additional flushing connec- tion on the open connecting flange, the pressure chamber can be easily cleaned. Measuring systems with diaphragm elements, on the grounds of their design, offer good protection from overload, since the diaphragm can support itself against the upper flange. As standard, the diaphragm pressure gauges alrea- dy feature an overload safety of 3 times the full s"
+    },
+    "PM04.03": {
+      "code": "PM04.03",
+      "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0403_en_co.pdf",
+      "discovery": "Followed official WIKA product-page datasheet link or official search result",
+      "verifiedAt": "2026-10-13",
+      "filename": "ds_pm0403_en_co.pdf",
+      "status": "verified",
+      "contentType": "application/pdf",
+      "bytes": 870741,
+      "sha256": "b7e56bbf79adcc9a963d8d4d810a3713be2d4910ed2b6022bfb49ee907ce4a45",
+      "pages": 10,
+      "codeMatchesFirstThreePages": true,
+      "modelChecks": [
+        {
+          "model": "432.30",
+          "found": true
+        },
+        {
+          "model": "432.50",
+          "found": true
+        },
+        {
+          "model": "433.30",
+          "found": true
+        },
+        {
+          "model": "433.50",
+          "found": true
+        },
+        {
+          "model": "452.30",
+          "found": false
+        },
+        {
+          "model": "452.50",
+          "found": false
+        },
+        {
+          "model": "453.30",
+          "found": false
+        },
+        {
+          "model": "453.50",
+          "found": false
+        }
+      ],
+      "firstPageSummary": "Pressure WIKA data sheet PM 04.03 Page 1 of 10 Diaphragm pressure gauge for the process industry Up to 10-fold overload safety, max. 40 bar Models 432.30, 433.30, 432.50 and 433.50 Diaphragm pressure gauge model 432.50 Applications ■ For measuring locations with increased overload ■ With liquid-filled case suitability for high dynamic pressure loads and vibrations (models 433.50, 433.30) ■ For gaseous, liquid and aggressive media, also in aggressive environments ■ With open connecting flange also suitable for contaminated and viscous media ■ Process industry: Chemical industry, petrochemical industry, oil and gas, power generation, water and wastewater technology, machine building and general plant construction Special features ■ Case and wetted parts from stainless steel ■ Wide choice of special materials ■ Process connection thread or open flange ■ Scale ranges from 0 … 16 mbar ■ QR code on dial links to instrument-specific information Description Diaphragm pressure gauges are preferably used for low pressure ranges. Through the large working surface of the circular, corrugated diaphragm element, small pressure ranges can be measured reliably. The diaphragm pressure gauges are manufactured in accordance with EN 837-3. The high-quality design is particularly suitable for applications in the chemical and petrochemical industry, oil and gas industry and power engineering. The case and wetted parts from stainless steel fulfil high requirements for resistance against aggressive media. For especially high resistance requirements, the pressure chamber can be designed with a wide variety of special materials such as PTFE, tantalum or Hastelloy. For the measurement of highly viscous, crystallising or contaminated media, the use of an open connecting flange is recommended. The open connecting flange has the advantage over a threaded connection that the pressure port cannot become blocked. With an additional flushing bore on the open connecting flange, the pressure chamber can be easily cleaned. Measuring systems with diaphragm elements, on the grounds of their design, offer good protection from overload, since the diaphragm can support itself against the upper flange. A"
+    },
+    "PM04.07": {
+      "code": "PM04.07",
+      "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0407_en_co.pdf",
+      "discovery": "Followed official WIKA product-page datasheet link or official search result",
+      "verifiedAt": "2026-10-13",
+      "filename": "ds_pm0407_en_co.pdf",
+      "status": "verified",
+      "contentType": "application/pdf",
+      "bytes": 1012134,
+      "sha256": "23f6eff16f429f85c880d055fe937ea4435f185d1c78b970075647741ee333aa",
+      "pages": 12,
+      "codeMatchesFirstThreePages": true,
+      "modelChecks": [
+        {
+          "model": "432.36",
+          "found": true
+        },
+        {
+          "model": "432.56",
+          "found": true
+        },
+        {
+          "model": "433.36",
+          "found": true
+        },
+        {
+          "model": "433.56",
+          "found": true
+        }
+      ],
+      "firstPageSummary": "Pressure WIKA data sheet PM 04.07 Page 1 of 12 Diaphragm pressure gauge for the process industry High overload safety up to 400 bar Models 432.36, 433.36, 432.56 and 433.56 Diaphragm pressure gauge model 432.56 Applications ■ For measuring locations with increased overload ■ For gaseous, liquid and aggressive media, also in aggressive environments ■ With open connecting flange also suitable for contaminated and viscous media ■ Process industry: Chemical industry, petrochemical industry, oil and gas, power generation, water and wastewater technology, machine building and general plant construction Special features ■ High overload safety, optionally 40, 100 or 400 bar due to the metallic pressure element limit stop, without liquid- filled measuring cell ■ Wide choice of special materials ■ Compatible with switch contacts ■ Scale ranges from 0 … 16 mbar ■ QR code on dial links to instrument-specific information Data sheets showing similar products: Stainless steel version; models 432.50, 433.50; see data sheet PM 04.03 Description Diaphragm pressure gauges are preferably used for low pressure ranges. Through the large working surface of the circular, corrugated diaphragm element, small pressure ranges can be measured reliably. Depending on the version, the models 432.56 and 432.36 are able, already from the smallest scale range of 0 ... 16 mbar, to withstand an overload of 40, 100 or 400 bar without any subsequent impairment of their measurement characteristics. The diaphragm pressure gauge models 432.56 and 432.36 are manufactured in accordance with EN 837-3. The high-quality design is particularly suitable for applications in the chemical and petrochemical industry, oil and gas industry and power engineering. The case and wetted parts from stainless steel fulfil high requirements for resistance against aggressive media. For especially high resistance requirements, the pressure chamber can be designed with a wide variety of special materials such as PTFE, tantalum or Hastelloy. For the measurement of highly viscous, crystallising or contaminated media, the use of an open connecting flange is recommended. The open connecting flange has the advantage over a threaded"
+    },
+    "PM07.14": {
+      "code": "PM07.14",
+      "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0714_en_co.pdf",
+      "discovery": "Followed official WIKA product-page datasheet link or official search result",
+      "verifiedAt": "2026-10-13",
+      "filename": "ds_pm0714_en_co.pdf",
+      "status": "verified",
+      "contentType": "application/pdf",
+      "bytes": 531231,
+      "sha256": "0d0639f2e46c078c4947607b63896374c1ba833bf9656a7ac4c1c586426666a5",
+      "pages": 5,
+      "codeMatchesFirstThreePages": true,
+      "modelChecks": [
+        {
+          "model": "700.01",
+          "found": true
+        },
+        {
+          "model": "700.02",
+          "found": true
+        }
+      ],
+      "firstPageSummary": "Pressure WIKA data sheet PM 07.14 Page 1 of 5 Differential pressure gauge Model 700.01, with magnetic piston Model 700.02, with magnetic piston and separating diaphragm Data sheets showing similar products: Differential pressure gauge, compact version NS 80, class 2.5 to 4.0, high overload safety; model 716.05; see data sheet PM 07.12 Fig. top: model 700.01 Fig. below: model 700.02, with separating diaphragm Applications ■ For gaseous and liquid media that are not highly viscous or crystallising ■ Filter systems ■ Pump monitoring ■ Cooling circuits ■ Pipeline systems Special features ■ Differential pressure measuring ranges Model 700.01: 0 ... 400 mbar to 0 ... 10 bar Model 700.02: 0 ... 160 mbar to 0 ... 2.5 bar ■ Compact system case from stainless steel, suitable for high working pressures (static pressures), optionally 100, 250 or 400 bar ■ Overload safety either side to maximum working pressure ■ System and indicator case exchangeable on-site ■ Up to 2 reed contacts can be retrofitted and adjusted on-site Description The model 700.01 is primarily used for monitoring differential pressures, even at high working pressures, in the gas and air preparation and supply industry. The model 700.02 version with separating diaphragm is for liquid media and, thus, suitable for the water treatment and supply industries. The compact and modular design of these differential pressure gauges enables the later exchange of the measur- ing system and scale range, as well as the retrofitting and adjustment of reed contacts on-site. A panel mounting flange can be retrofitted to the model 700.01. Although these models have a substantial overload safety up to the maximum working pressure, the weight of the standard versions is very low with approx. 220 g in the case of model 700.01 and approx. 500 g in the case of model 700.02. Thus, an economical and flexible solution to your measuring tasks is provided. This compact design with a measuring system from stainless steel enables an optimal price-performance ratio. For further approvals see page 4 WIKA data sheet PM 07.14 ∙ 02/2025"
+    },
+    "PM07.02": {
+      "code": "PM07.02",
+      "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0702_en_co.pdf",
+      "discovery": "Followed official WIKA product-page datasheet link or official search result",
+      "verifiedAt": "2026-10-13",
+      "filename": "ds_pm0702_en_co.pdf",
+      "status": "verified",
+      "contentType": "application/pdf",
+      "bytes": 425775,
+      "sha256": "1bfa2ec98b16d159488d6b962168ea7fd30648e854f4cf78a270f69e4d9454a4",
+      "pages": 4,
+      "codeMatchesFirstThreePages": true,
+      "modelChecks": [
+        {
+          "model": "711.12",
+          "found": true
+        },
+        {
+          "model": "731.12",
+          "found": true
+        }
+      ],
+      "firstPageSummary": "Pressure WIKA data sheet PM 07.02 Page 1 of 4 Standard articles Differential pressure gauge, copper alloy or stainless steel Scale ranges from 0.6 ... 1,000 bar Models 711.12, 713.12, 731.12 and 733.02 Differential pressure gauge model 711.12 Applications ■ Heating, ventilation and air-conditioning ■ For gaseous and liquid media that are not highly viscous or crystallising ■ Models 731.12 and 733.02 also for aggressive media ■ Models 713.12 and 733.02 with liquid-filled case are suita- ble for high dynamic pressure loads and vibrations Special features ■ Scale ranges from 0 ... 0.6 bar to 0 … 1,000 bar ■ T wo process connections and two independent pointers ■ Differential pressure display with moving dial ■ Cost-effective and reliable Description The differential pressure gauge is based on two independ- ently operating Bourdon tube measuring systems. The instrument is therefore able to show the pressure from two measuring points and the resulting differential pressure on one display. Differential pressure display The standard version is designed with two pointers and a gauge pressure scale. The pointer for the minus connection is connected to an additional moving dial. On the scale of the moving dial, the differential pressure (± 50 % of the main scale's full scale value) can be read directly. Alternatively, in the version without additional moving dial, the differential pressure is not indicated. In the version with a subtracting movement, the differential pressure is indicated with only one pointer (the individual pressures of plus and minus connection are not displayed). The variance of scale versions ensures an optimal readability of all operating parameters. The models 731.12 and 733.02, with wetted parts from stain- less steel, have been specifically designed for the require- ments in the process industry. For harsh operating conditions (e.g. vibration), the instru- ments are also available with a liquid filling. WIKA data sheet PM 07.02 ∙ 03/2026 For further approvals see page 3"
+    },
+    "PM07.20": {
+      "code": "PM07.20",
+      "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0720_en_co.pdf",
+      "discovery": "Followed official WIKA product-page datasheet link or official search result",
+      "verifiedAt": "2026-10-13",
+      "filename": "ds_pm0720_en_co.pdf",
+      "status": "verified",
+      "contentType": "application/pdf",
+      "bytes": 797029,
+      "sha256": "249a37894b83ee7174357a2483de6c52d9c0bfc8a903a27234178ed10491f006",
+      "pages": 8,
+      "codeMatchesFirstThreePages": true,
+      "modelChecks": [
+        {
+          "model": "DPG40",
+          "found": true
+        }
+      ],
+      "firstPageSummary": "Pressure WIKA data sheet PM 07.20 Page 1 of 8 Data sheets showing similar products: DELTA-comb, differential pressure gauge with micro switches; model DPGS40; see data sheet PV 27.20 DELTA-switch, differential pressure switch; model DPS40; see data sheet PV 27.21 DELTA-trans, differential pressure gauge with output signal; model DPGT40; see data sheet PV 17.19 Differential pressure gauge With integrated working pressure indication (DELTA-plus) Model DPG40 Fig. left: With aluminium measuring chamber Fig. right: With stainless steel measuring chamber Applications Monitoring of filtration, flow and level for: ■ Boilers and pressure vessels ■ Drinking and cooling-water treatment plants ■ Pressure-boosting and pumping stations ■ Heating technology ■ Fire-extinguishing systems Special features ■ Shatterproof window and robust aluminium or stainless steel measuring chamber for increased requirements ■ Low scale ranges from 0 ... 160 mbar ■ High accuracy down to 1.6 % ■ Optionally with approvals for hazardous areas ■ Helium leak tested Description The differential pressure gauges of the DELTA-line product family are primarily used for the monitoring of low differential pressures where there are high requirements in terms of one-sided overload and static pressure. T ypical markets for these products are the process heating technology, the heating, ventilation and air-conditioning industries, the water/wastewater industry, and machine build- ing and plant construction. For these, the main function of the measuring instruments is the monitoring of filters, compres- sors and pumps. Often in these applications, alongside the indication of the differential pressure, the current working pressure is also relevant. A version with integrated working pressure indication is therefore available for the model DPG40. The two easily readable, mechanical on-site displays enable the simultaneous reading of the working and the differential pressure. Furthermore, this saves on an additional measuring and sealing point, reducing additional expense for piping and mounting. As a result of the low scale range of 0 … 160 mbar, the instrument can also be used for applications with low differ- en"
+    },
+    "TM53.02": {
+      "code": "TM53.02",
+      "url": "https://www.wika.com/media/Data-sheets/Temperature/Dial-thermometers/ds_tm5302_en_co.pdf",
+      "discovery": "Followed official WIKA product-page datasheet link or official search result",
+      "verifiedAt": "2026-10-13",
+      "filename": "ds_tm5302_en_co.pdf",
+      "status": "verified",
+      "contentType": "application/pdf",
+      "bytes": 777435,
+      "sha256": "e6461abfff6e1d17f9295b04e9ae4ae9c2003e95e3c968583651d60bec7b7a46",
+      "pages": 10,
+      "codeMatchesFirstThreePages": true,
+      "modelChecks": [
+        {
+          "model": "TG53",
+          "found": true
+        }
+      ],
+      "firstPageSummary": "T emperature WIKA data sheet TM 53.02 Bimetal thermometer Process version per ASME B40.200 Model TG53 Fig. left: Back mount (axial) Fig. right: Back mount, adjustable stem and dial For further approvals see page 6 Applications ■ General process instrumentation in the chemical and petrochemical industries, oil and gas industries, power generation and water/wastewater industries ■ T emperature measurement in harsh and aggressive environments ■ Suitable for applications with high vibrations Special features ■ Robust, hermetically sealed case ■ Accuracy: ±1 % of full scale value ASME B40.200 (grade A) ■ External reset for setting the reference temperature ■ Dished dial (anti-parallax) for ease of reading ■ Adjustable stem and dial version enables optimal process connection Description The model TG53 bimetal thermometer has been developed and manufactured in accordance with the ASME B40.200 standard. The thermometer provides high quality and performance, and is an ideal choice in the process industries. The robust, hermetically sealed case with standard IP66 (NEMA 4X) ingress protection enables use within harsh external conditions. Specifically designed for use in the chemical and petrochemical, oil and gas, power engineering and shipbuilding industries, the TG53 satisfies the rigorous requirements for resistance to aggressive media. As an available option, the case, stem and process connection can be made from 316 stainless steel. The TG53 offers the widest variety of dampening options in the industry, allowing it to operate in situations where severe vibration conditions exist. These options include case filling and a damped bearing bushing to minimise pointer oscillation. An easily accessible reset screw on the back of the case allows quick, limited reference temperature adjustment, reducing maintenance and recalibration costs. The TG53 is also available in an assortment of stem lengths (insertion length L1) to optimise its application-specific fit and performance. Seite 1 von 10WIKA data sheet TM 53.02 ∙ 10/2025 Configurator Standard article"
+    },
+    "TM55.01": {
+      "code": "TM55.01",
+      "url": "https://www.wika.com/media/Data-sheets/Temperature/Dial-thermometers/ds_tm5501_en_co.pdf",
+      "discovery": "Followed official WIKA product-page datasheet link or official search result",
+      "verifiedAt": "2026-10-13",
+      "filename": "ds_tm5501_en_co.pdf",
+      "status": "verified",
+      "contentType": "application/pdf",
+      "bytes": 765460,
+      "sha256": "f8d7558de6e93b76aa726ee201720981d2928606687942f65b134f6143423ec3",
+      "pages": 13,
+      "codeMatchesFirstThreePages": true,
+      "modelChecks": [
+        {
+          "model": "55",
+          "found": true
+        }
+      ],
+      "firstPageSummary": "T emperature WIKA data sheet TM 55.01 Page 1 of 13 Bimetal thermometer For the process industry per EN 13190, premium version Model 55 Applications ■ General process instrumentation in the chemical and petrochemical industries, oil and gas industries, energy and water/wastewater industries ■ T emperature measurement in harsh and aggressive environments Special features ■ Scale ranges from -70 ... +600 °C [-94 ... +1,112 °F] ■ For extreme ambient temperatures ■ Completely from stainless steel ■ Individual stem length from 63 ... 1,000 mm [2.5 ... 39 in] ■ QR code on dial links to instrument-specific information Description The model 55 bimetal thermometer has been developed and is manufactured in accordance with the EN 13190 standard. This high-quality thermometer has been designed especially for the requirements of the process industry. Especially in the chemical and petrochemical, oil and gas, and power engineering industries, the temperature measuring instrument completely manufactured from stainless steel is used successfully. The model 55 satisfies the high requirements for resistance against aggressive media. As an option, the case can be made from 316L to fulfil the highest requirements. T o allow optimum fitting to the process, individual insertion lengths and different process connections can be selected. When it comes to harsh climatic conditions at the place of use, the model 55 is the right choice, as it can be used at temperatures ranging from -40 °C [-40 °F] to +70 °C [+158 °F] (optionally also up to -50 °C [-58 °F] or -70 °C [-94 °F] in the POLARgauge® version). The QR code on the dial allows instrument-specific information such as the serial number, the order number, certificates and other product data to be retrieved from the internet easily and in the long term. for further approvals see page 9 Fig. left: Bimetal thermometer, adjustable stem and dial, model S5550 Fig. right: left: Bimetal thermometer, model R5502 WIKA data sheet TM 55.01 ∙ 03/2025 Configurator Standard article"
+    },
+    "PM01.17": {
+      "code": "PM01.17",
+      "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0117_en_co.pdf",
+      "discovery": "Official WIKA UK miniature111.12.027 product page datasheet link",
+      "sourcePage": "https://www.wika.com/en-gb/111_12_027.WIKA",
+      "verifiedAt": "2026-10-13",
+      "filename": "ds_pm0117_en_co.pdf",
+      "status": "verified",
+      "contentType": "application/pdf",
+      "bytes": 530329,
+      "sha256": "c82cbeb5f4f523095f5e3392989007c3b65fb93df4482c12adac9f0c9b6fe73c",
+      "pages": 5,
+      "codeMatchesFirstThreePages": true,
+      "modelChecks": [
+        {
+          "model": "111.10",
+          "found": false
+        },
+        {
+          "model": "111.12",
+          "found": true
+        }
+      ],
+      "firstPageSummary": "Pressure Page 1 of 5 WIKA data sheet PM 01.17 Fig. left: model 111.12.027, low-pressure version, case copper alloy, nickel-plated Fig. right: model 111.12.027, high-pressure version, case copper alloy, natural finish Bourdon tube pressure gauge, copper alloy Miniature design, NS 27 [1\"] Model 111.12.027 Description The miniature design of this pressure gauge is cost-effective and specifically aimed for integration solutions. This instru- ment is based on a reliable Bourdon tube measuring system. The brass measuring system guarantees low temperature influence and high measuring stability. The model 111.12.027 is available in a low-pressure version with scale ranges from 0 ... 4 to 0 ... 25 bar and in a high-pressure version from 0 ... 100 to 0 ... 400 bar. The one-piece case and process connection makes the instrument resistant to mechanical damage. This proven design is ideal for applications with compact equipment requiring built-in small pressure gauges. WIKA data sheet PM 01.17 ∙ 09/2025 Data sheets showing similar products: Miniature design, OEM version; model 101.12; see data sheet PM 01.27 For further approvals, see page 4 Applications ■ For gaseous and liquid media that are not highly viscous or crystallising and will not attack wetted materials ■ Indication of cylinder charging pressure ■ Respiratory protective equipment, sports weapons, welding engineering (compact equipment) ■ Medical equipment Special features ■ Small and compact ■ Ideal for integration solutions ■ Scale range from 0 ... 4 bar to 0... 400 bar ■ Nominal size of 27 mm [1\"] ■ One-piece case and process connection from copper alloy"
+    }
+  },
+  "cards": [
+    {
+      "model": "111.10, 111.12",
+      "codes": [
+        "PM01.01",
+        "PM01.17"
+      ],
+      "unresolvedCodes": []
+    },
+    {
+      "model": "212.20",
+      "codes": [
+        "PM02.01"
+      ],
+      "unresolvedCodes": []
+    },
+    {
+      "model": "213.40",
+      "codes": [
+        "PM02.06"
+      ],
+      "unresolvedCodes": []
+    },
+    {
+      "model": "113.53, 213.53",
+      "codes": [
+        "PM01.08",
+        "PM02.12"
+      ],
+      "unresolvedCodes": []
+    },
+    {
+      "model": "232.50, 233.50",
+      "codes": [
+        "PM02.02"
+      ],
+      "unresolvedCodes": []
+    },
+    {
+      "model": "232.30, 233.30",
+      "codes": [
+        "PM02.04"
+      ],
+      "unresolvedCodes": []
+    },
+    {
+      "model": "422.12, 423.12",
+      "codes": [
+        "PM04.02"
+      ],
+      "unresolvedCodes": []
+    },
+    {
+      "model": "432.50, 433.50, 432.30, 433.30, 452.50, 453.50, 452.30, 453.30",
+      "codes": [
+        "PM04.03"
+      ],
+      "unresolvedCodes": []
+    },
+    {
+      "model": "432.56, 433.56, 432.36, 433.36",
+      "codes": [
+        "PM04.07"
+      ],
+      "unresolvedCodes": []
+    },
+    {
+      "model": "700.01, 700.02",
+      "codes": [
+        "PM07.14"
+      ],
+      "unresolvedCodes": []
+    },
+    {
+      "model": "711.12, 731.12",
+      "codes": [
+        "PM07.02"
+      ],
+      "unresolvedCodes": []
+    },
+    {
+      "model": "DPG40",
+      "codes": [
+        "PM07.20"
+      ],
+      "unresolvedCodes": []
+    },
+    {
+      "model": "TG53",
+      "codes": [
+        "TM53.02"
+      ],
+      "unresolvedCodes": []
+    },
+    {
+      "model": "55",
+      "codes": [
+        "TM55.01"
+      ],
+      "unresolvedCodes": []
+    }
+  ]
+}

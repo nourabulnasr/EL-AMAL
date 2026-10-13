@@ -1,0 +1,135 @@
+{
+  "55": {
+    "applications": [
+      "oil-gas",
+      "general-industry"
+    ],
+    "codes": [
+      "TM55.01"
+    ],
+    "basis": "Chemical and petrochemical, oil and gas, energy, water/wastewater industries"
+  },
+  "111.10, 111.12": {
+    "applications": [
+      "general-industry"
+    ],
+    "codes": [
+      "PM01.01"
+    ],
+    "basis": "Pneumatics; heating and air-conditioning technology"
+  },
+  "212.20": {
+    "applications": [
+      "general-industry"
+    ],
+    "codes": [
+      "PM02.01"
+    ],
+    "basis": "Industrial applications"
+  },
+  "213.40": {
+    "applications": [
+      "general-industry"
+    ],
+    "codes": [
+      "PM02.06"
+    ],
+    "basis": "Mining industry; hydraulics; shipbuilding"
+  },
+  "113.53, 213.53": {
+    "applications": [
+      "general-industry"
+    ],
+    "codes": [
+      "PM01.08",
+      "PM02.12"
+    ],
+    "basis": "Pumps and compressors; hydraulics"
+  },
+  "232.50, 233.50": {
+    "applications": [
+      "oil-gas",
+      "general-industry"
+    ],
+    "codes": [
+      "PM02.02"
+    ],
+    "basis": "Oil and gas industry; chemical and petrochemical industries; machine building and general plant construction"
+  },
+  "232.30, 233.30": {
+    "applications": [
+      "oil-gas",
+      "general-industry"
+    ],
+    "codes": [
+      "PM02.04"
+    ],
+    "basis": "Oil and gas industry; chemical and petrochemical industries; water and wastewater technology"
+  },
+  "422.12, 423.12": {
+    "applications": [
+      "general-industry"
+    ],
+    "codes": [
+      "PM04.02"
+    ],
+    "basis": "Plant engineering and construction; gaseous and liquid media"
+  },
+  "432.50, 433.50, 432.30, 433.30, 452.50, 453.50, 452.30, 453.30": {
+    "applications": [
+      "oil-gas",
+      "general-industry"
+    ],
+    "codes": [
+      "PM04.03"
+    ],
+    "basis": "Process industry: chemical, petrochemical, oil and gas, power generation, water and wastewater; original brochure retains 452/453 family"
+  },
+  "432.56, 433.56, 432.36, 433.36": {
+    "applications": [
+      "oil-gas",
+      "general-industry"
+    ],
+    "codes": [
+      "PM04.07"
+    ],
+    "basis": "Process industry: chemical, petrochemical, oil and gas, power generation, water and wastewater"
+  },
+  "700.01, 700.02": {
+    "applications": [
+      "general-industry"
+    ],
+    "codes": [
+      "PM07.14"
+    ],
+    "basis": "Filter plants; pump monitoring; cooling circuits; pipeline systems"
+  },
+  "711.12, 731.12": {
+    "applications": [
+      "general-industry"
+    ],
+    "codes": [
+      "PM07.02"
+    ],
+    "basis": "Heating, ventilation and air-conditioning"
+  },
+  "DPG40": {
+    "applications": [
+      "general-industry"
+    ],
+    "codes": [
+      "PM07.20"
+    ],
+    "basis": "Monitoring filtration, flow and level; boilers, pressure vessels, water treatment, pumping stations, heating and fire-extinguishing systems"
+  },
+  "TG53": {
+    "applications": [
+      "oil-gas",
+      "general-industry"
+    ],
+    "codes": [
+      "TM53.02"
+    ],
+    "basis": "Chemical and petrochemical, oil and gas, power generation, water/wastewater industries"
+  }
+}

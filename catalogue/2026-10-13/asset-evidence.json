@@ -1,0 +1,143 @@
+{
+  "sourceUrl": "https://microsites.wika.com/upload/BR_ProductPortfolio_en_co_6434.pdf",
+  "sourceSha256": "340f7979f4fc604458dbbb1b453f46281c1a9d669299d9d7796704419917280e",
+  "policy": "Original embedded PDF image pixels; CMYK converted to RGB only for PNG compatibility. No generated imagery or photographic retouching.",
+  "assets": [
+    {
+      "src": "/images/products/wika-111-10-111-12.png",
+      "width": 135,
+      "height": 187,
+      "pdfPage": 4,
+      "pdfImageName": "Im3",
+      "sha256": "f2a2c7033f5711da2aaa84a49c6eeb9c37bd6b7341b7505aafcafd14408c9fa3"
+    },
+    {
+      "src": "/images/products/wika-111-10-111-12-im4.png",
+      "width": 104,
+      "height": 101,
+      "pdfPage": 4,
+      "pdfImageName": "Im4",
+      "sha256": "72fbe5cfd6349ea9da149a4cec29f4345185212903f89f88b6a1d0b07fcbd196"
+    },
+    {
+      "src": "/images/products/wika-212-20.png",
+      "width": 186,
+      "height": 243,
+      "pdfPage": 5,
+      "pdfImageName": "Im0",
+      "sha256": "bafe258b3302d09af40de616bb92b44f53cf0078c7154df87e7333c933dd2372"
+    },
+    {
+      "src": "/images/products/wika-213-40.png",
+      "width": 168,
+      "height": 231,
+      "pdfPage": 5,
+      "pdfImageName": "Im1",
+      "sha256": "4350368f559693c396eb71a7ecf1b226099229ba8ca710cbc5984fc7e19dd522"
+    },
+    {
+      "src": "/images/products/wika-113-53-213-53.png",
+      "width": 200,
+      "height": 260,
+      "pdfPage": 5,
+      "pdfImageName": "Im2",
+      "sha256": "b99e494cd25f14d6c286b1b9099d16cfa354c5debaf71c776dea911564c7ce3a"
+    },
+    {
+      "src": "/images/products/wika-232-50-233-50.png",
+      "width": 179,
+      "height": 235,
+      "pdfPage": 6,
+      "pdfImageName": "Im4",
+      "sha256": "a7dee5b7feeb0d54c39765f9c06a24576ed1b2b73d28ed3c7d124f8189918b25"
+    },
+    {
+      "src": "/images/products/wika-232-30-233-30.png",
+      "width": 185,
+      "height": 244,
+      "pdfPage": 6,
+      "pdfImageName": "Im0",
+      "sha256": "42be1b00dff4793806d6d1d6effab66404f1d4b7aceccc0996be6533928de935"
+    },
+    {
+      "src": "/images/products/wika-422-12-423-12.png",
+      "width": 146,
+      "height": 253,
+      "pdfPage": 8,
+      "pdfImageName": "Im1",
+      "sha256": "162a7ec8d03403d6b146cf981ed1dfec6df5cb39b0eabbbeb52bc7c5c712f848"
+    },
+    {
+      "src": "/images/products/wika-432-50-433-50-432-30-433-30-452-50-453-50-452-30-453-30.png",
+      "width": 141,
+      "height": 224,
+      "pdfPage": 8,
+      "pdfImageName": "Im2",
+      "sha256": "059d3ea5178fd68d30deafb32672108dba0f7f0d7873b5dd6e8351659665cd3a"
+    },
+    {
+      "src": "/images/products/wika-432-56-433-56-432-36-433-36.png",
+      "width": 154,
+      "height": 261,
+      "pdfPage": 8,
+      "pdfImageName": "Im0",
+      "sha256": "f08dc01a8674cf17f75b2c025788e50ac0a2aa785f6ebbfcd930d322eb6fb7dc"
+    },
+    {
+      "src": "/images/products/wika-700-01-700-02.png",
+      "width": 246,
+      "height": 209,
+      "pdfPage": 10,
+      "pdfImageName": "Im5",
+      "sha256": "2a5e3801fc8bbbf46ccbb90b123daca9d06af9f3af28d7430199b1a8b0a1ceca"
+    },
+    {
+      "src": "/images/products/wika-711-12-731-12.png",
+      "width": 238,
+      "height": 272,
+      "pdfPage": 10,
+      "pdfImageName": "Im0",
+      "sha256": "619afde18b1861d1cac984a1937d2bbec5959b1ea0dadecd4ed9b9a6a58ad99a"
+    },
+    {
+      "src": "/images/products/wika-dpg40.png",
+      "width": 230,
+      "height": 227,
+      "pdfPage": 10,
+      "pdfImageName": "Im3",
+      "sha256": "79516ddd72184e38e95eb14b60c2f3a176a2f022b191fe33889e1618e125c6a1"
+    },
+    {
+      "src": "/images/products/wika-tg53.png",
+      "width": 128,
+      "height": 310,
+      "pdfPage": 30,
+      "pdfImageName": "Im2",
+      "sha256": "36f5ffb476f3da2d9372dfe961a92bc470c816702bd377b04a7b5ed3238361a0"
+    },
+    {
+      "src": "/images/products/wika-tg53-im5.png",
+      "width": 150,
+      "height": 148,
+      "pdfPage": 30,
+      "pdfImageName": "Im5",
+      "sha256": "1411ae78042e43f5762d2839b240bd6c035d64a5837f24da6b64f965775ae386"
+    },
+    {
+      "src": "/images/products/wika-55.png",
+      "width": 125,
+      "height": 352,
+      "pdfPage": 31,
+      "pdfImageName": "Im1",
+      "sha256": "503d38f0019e4e7abb8e8f1c8684e0239cf14487d872c7c721e2b5a80401a8c6"
+    },
+    {
+      "src": "/images/products/wika-55-im0.png",
+      "width": 127,
+      "height": 271,
+      "pdfPage": 31,
+      "pdfImageName": "Im0",
+      "sha256": "983fc516bed7ce56c5d2d28e2394b122911fc22238217ce4085c3c988a25b16e"
+    }
+  ]
+}

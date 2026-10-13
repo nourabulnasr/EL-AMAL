@@ -30,6 +30,9 @@ export const Enquiries:CollectionConfig={
     fixed({name:'items',type:'array',maxRows:100,fields:[
       {name:'productId',type:'text',required:true},{name:'model',type:'text',required:true},
       {name:'nameEn',type:'text',required:true},{name:'nameAr',type:'text',required:true},
+      {name:'optionId',type:'text',maxLength:80,admin:{description:'Stable connection identity from the reviewed catalogue.'}},
+      {name:'optionNameEn',type:'text',maxLength:200},{name:'optionNameAr',type:'text',maxLength:200},
+      {name:'optionModel',type:'text',maxLength:120},
       {name:'quantity',type:'number',required:true,min:1,max:9999},{name:'range',type:'text',maxLength:160},
     ]}),
     fixed({name:'verificationStatus',type:'select',required:true,defaultValue:'unverified',options:['unverified','test-verified','verified']}),

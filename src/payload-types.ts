@@ -278,6 +278,13 @@ export interface Enquiry {
         model: string;
         nameEn: string;
         nameAr: string;
+        /**
+         * Stable connection identity from the reviewed catalogue.
+         */
+        optionId?: string | null;
+        optionNameEn?: string | null;
+        optionNameAr?: string | null;
+        optionModel?: string | null;
         quantity: number;
         range?: string | null;
         id?: string | null;
@@ -712,6 +719,10 @@ export interface EnquiriesSelect<T extends boolean = true> {
         model?: T;
         nameEn?: T;
         nameAr?: T;
+        optionId?: T;
+        optionNameEn?: T;
+        optionNameAr?: T;
+        optionModel?: T;
         quantity?: T;
         range?: T;
         id?: T;

@@ -3,6 +3,7 @@ import {TestVerificationLink} from './test-verification-link';
 import {useEffect,useRef,useState} from 'react';
 import type {EnquiryDetails} from '@/lib/enquiry-preview';
 import type {Locale} from '@/lib/catalogue';
+import {basketSelectionRequired} from '@/lib/basket';
 import {useBasket} from './basket-provider';
 
 export function TestEnquirySubmit({details,locale,active,manual}:{details:EnquiryDetails;locale:Locale;active:boolean;manual?:{model:string;quantity:number;range:string}}){
@@ -16,7 +17,8 @@ export function TestEnquirySubmit({details,locale,active,manual}:{details:Enquir
     fetch('/api/enquiry-submissions',{cache:'no-store',signal:controller.signal}).then(r=>r.json()).then(value=>setAllowed(value.canSaveTest===true)).catch(()=>{});
     return()=>controller.abort();
   },[]);
-  if(!active||!allowed||catalogue.source!=='demo')return null;
+  const invalidSelection=!manual&&lines.some(line=>{const product=catalogue.products.find(product=>product.id===line.productId);return !product||basketSelectionRequired(line,product);});
+  if(!active||invalidSelection||!allowed||catalogue.source!=='demo')return null;
   if(saved?.signature===signature)return <div className="review-notice" role="status"><strong>{ar?'تم حفظ الاستفسار التجريبي':'Test enquiry saved'}</strong><p><bdi>{saved.reference}</bdi></p><p>{ar?'لم يُرسل بريد إلكتروني ولم يُحجز مخزون.':'No email was sent and no stock was reserved.'}</p><TestVerificationLink reference={saved.reference} locale={locale}/><a className="text-link" href="/admin/collections/enquiries">{ar?'فتح الاستفسارات في لوحة الإدارة':'Open the admin enquiry inbox'}</a></div>;
   return <div className="review-notice">
     <p>{ar?'اختبار للموظفين: سيحفظ هذا الإجراء بياناتك والعناصر التجريبية في لوحة الإدارة. لن يُرسل بريد إلكتروني ولن يُحجز مخزون.':'Staff test: this saves your details and sample items in the admin inbox. It sends no email and reserves no stock.'}</p>

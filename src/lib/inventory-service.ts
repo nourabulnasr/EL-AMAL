@@ -9,7 +9,7 @@ type Reservation={id:number;reference:string;quantity:number;remainingQuantity:n
 type Movement={id:number;kind:string;onHandDelta:number;reservedDelta:number;blockedDelta:number;confirmedQuantity:number|null;actorId:number|null;actorRole:string;reason:string;createdAt:string};
 type Freshness={status:'policy-unset'|'policy-invalid'|'unconfirmed'|'fresh'|'stale';confirmedAt:string|null;thresholdHours:number|null};
 type Sku={id:number;skuCode:string;active:boolean;configuration:unknown;model:string};
-export type InventoryView={role:string;skus:Sku[];enquiries:{id:number;reference:string;items:{id:string;model:string;quantity:number;range:string|null}[]}[];balance:Balance|null;freshness:Freshness|null;reservations:Reservation[];movements:Movement[]};
+export type InventoryView={role:string;skus:Sku[];enquiries:{id:number;reference:string;items:{id:string;model:string;quantity:number;range:string|null;optionId:string|null;optionNameEn:string|null;optionNameAr:string|null;optionModel:string|null}[]}[];balance:Balance|null;freshness:Freshness|null;reservations:Reservation[];movements:Movement[]};
 
 async function transaction<T>(payload:Payload,work:(client:Client)=>Promise<T>){
   const client=await payload.db.pool.connect();
@@ -190,7 +190,7 @@ export async function readInventory(payload:Payload,actor:unknown,url:URL):Promi
     const skus=await client.query(`SELECT s.id,s.sku_code AS "skuCode",s.active,s.configuration,p.model FROM skus s JOIN products p ON p.id=s.product_id
       WHERE (s.sku_code ILIKE $1 OR p.model ILIKE $1 OR s.id=$2) ORDER BY (s.id=$2) DESC,s.sku_code LIMIT 100`,[pattern(skuSearch),Number.isSafeInteger(skuId)&&skuId>0?skuId:0]);
     const enquiries=user.role==='warehouse'?{rows:[]}:await client.query(`SELECT e.id,e.reference,
-      (SELECT json_agg(json_build_object('id',i.id,'model',i.model,'quantity',i.quantity,'range',i.range) ORDER BY i._order) FROM enquiries_items i WHERE i._parent_id=e.id) AS items
+      (SELECT json_agg(json_build_object('id',i.id,'model',i.model,'quantity',i.quantity,'range',i.range,'optionId',i.option_id,'optionNameEn',i.option_name_en,'optionNameAr',i.option_name_ar,'optionModel',i.option_model) ORDER BY i._order) FROM enquiries_items i WHERE i._parent_id=e.id) AS items
       FROM enquiries e WHERE e.source='cms' AND e.request_kind='products' AND e.verification_status='verified' AND e.verified_at IS NOT NULL AND e.status<>'closed' AND e.reference ILIKE $1
       ORDER BY e.created_at DESC LIMIT 100`,[pattern(enquirySearch)]);
     const view:InventoryView={role:user.role,skus:skus.rows,enquiries:enquiries.rows,balance:null,freshness:null,reservations:[],movements:[]};

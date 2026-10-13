@@ -1,0 +1,79 @@
+.featured-gallery { display:grid; gap:40px; }
+.featured-piece { min-width:0; position:relative; isolation:isolate; border-top:1px solid var(--blue-edge); }
+.featured-piece-top { display:flex; align-items:center; justify-content:space-between; gap:16px; padding-block:20px; }
+.featured-category { font-size:11px; color:var(--blue-ice); }
+.featured-number { color:var(--blue-ice); opacity:.7; font-size:12px; font-variant-numeric:tabular-nums; }
+.featured-stage { position:relative; isolation:isolate; display:block; height:330px; overflow:clip; }
+.featured-stage:focus-visible { outline-offset:-5px; }
+.featured-light { position:absolute; inset:6% 0; z-index:-2; background:radial-gradient(ellipse at 50% 48%,rgb(169 213 243 / .18),rgb(54 95 148 / .12) 45%,transparent 70%); }
+.featured-orbit { position:absolute; inset:10% 8%; z-index:-1; border:1px solid rgb(169 213 243 / .19); border-radius:50%; transform:rotate(-28deg) scaleY(.7); }
+.featured-depth,.featured-pointer,.featured-tilt { height:100%; width:100%; }
+.featured-art { height:100%; display:flex; align-items:center; justify-content:center; padding:20px 12%; }
+.featured-art img { display:block; width:auto; height:auto; max-width:100%; max-height:100%; object-fit:contain; filter:drop-shadow(14px 22px 16px rgb(0 0 0 / .32)); }
+.featured-piece--pressure .featured-art { rotate:-8deg; padding:20px 16%; }
+.featured-piece--valve .featured-art { rotate:12deg; padding:28px 10%; }
+.featured-piece--valve .featured-orbit { inset:16% 0; transform:rotate(18deg) scaleY(.6); }
+.featured-piece--temperature .featured-art { rotate:18deg; padding:10px 14%; }
+.featured-piece--temperature .featured-light { background:radial-gradient(ellipse at 62% 40%,rgb(169 213 243 / .19),rgb(54 95 148 / .1) 40%,transparent 70%); }
+.featured-piece--temperature .featured-orbit { inset:16% 8%; transform:rotate(-40deg) scaleY(.65); }
+.featured-view-mark { position:absolute; inset-inline-end:4px; bottom:10px; display:grid; place-items:center; width:44px; height:44px; font-size:25px; color:var(--accent); border:1px solid rgb(169 213 243 / .32); border-radius:50%; transition:translate 450ms var(--interaction-spring),background-color 220ms; }
+.featured-piece-copy { padding-top:18px; }
+.featured-model { display:flex; flex-wrap:wrap; align-items:center; gap:8px 16px; font-size:13px; }
+.featured-model bdi { color:var(--blue-ice); font-variant-numeric:tabular-nums; }
+.featured-model > span { font-size:10px; color:#fff; }
+.featured-piece-copy h3 { font-family:var(--font-heading); font-size:clamp(32px,5vw,45px); font-weight:400; letter-spacing:-.025em; line-height:1.1; margin-block:14px 12px; }
+.featured-description { font-size:13px; line-height:1.8; max-width:40ch; color:#fff; }
+.featured-piece-bottom { display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:12px 24px; margin-top:20px; }
+.featured-piece-bottom .availability { margin:0; }
+.featured-piece-bottom .availability small { font-size:9px; }
+.featured-product-link { display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:44px; padding-block:10px; border-bottom:1px solid var(--blue-edge); font-size:12px; }
+.featured-product-link > span { color:var(--accent); font-size:21px; transition:translate 450ms var(--interaction-spring); }
+html[lang=ar] .featured-piece-copy h3 { letter-spacing:0; font-size:clamp(28px,3.2vw,38px); line-height:1.6; }
+html[lang=ar] .featured-description { line-height:1.9; }
+@media(min-width:700px) {
+  .featured-gallery { grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:40px 36px; }
+  .featured-piece--pressure { grid-column:1/-1; display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); align-items:center; column-gap:32px; }
+  .featured-piece--pressure .featured-piece-top { grid-column:1/-1; }
+  .featured-piece--pressure .featured-stage { height:410px; }
+  .featured-piece--pressure .featured-piece-copy { padding-top:0; }
+  .featured-piece--pressure .featured-piece-copy h3 { font-size:clamp(40px,4.5vw,62px); }
+  html[lang=ar] .featured-piece--pressure .featured-piece-copy h3 { font-size:clamp(32px,3.5vw,48px); }
+  .featured-stage { height:300px; }
+}
+@media(min-width:1100px) {
+  .featured-gallery { grid-template-columns:minmax(0,1.13fr) minmax(0,1fr); gap:44px 64px; }
+  .featured-piece--pressure { grid-column:1; grid-row:1/3; display:flex; flex-direction:column; align-items:stretch; }
+  .featured-piece--pressure .featured-stage { height:510px; margin-top:54px; }
+  .featured-piece--pressure .featured-piece-copy { margin-top:auto; padding-top:40px; padding-bottom:12px; }
+  .featured-piece--pressure .featured-art { padding:20px 10%; }
+  .featured-piece--valve,.featured-piece--temperature { grid-column:2; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:center; gap:0 20px; }
+  .featured-piece--valve .featured-piece-top,.featured-piece--temperature .featured-piece-top { grid-column:1/-1; }
+  .featured-piece--valve .featured-stage,.featured-piece--temperature .featured-stage { grid-column:2; grid-row:2; height:280px; }
+  .featured-piece--valve .featured-piece-copy,.featured-piece--temperature .featured-piece-copy { grid-column:1; grid-row:2; padding:4px 0 16px; }
+  .featured-piece--valve .featured-piece-copy h3,.featured-piece--temperature .featured-piece-copy h3 { font-size:34px; }
+  .featured-piece--valve .featured-art { padding:24px 0; }
+  .featured-piece--temperature .featured-art { padding:10px 0; }
+  .featured-piece--valve .featured-model,.featured-piece--temperature .featured-model { align-items:flex-start; flex-direction:column; gap:6px; }
+  .featured-piece--valve .featured-view-mark,.featured-piece--temperature .featured-view-mark { display:none; }
+  html[lang=ar] .featured-piece--valve .featured-piece-copy h3,html[lang=ar] .featured-piece--temperature .featured-piece-copy h3 { font-size:29px; }
+}
+@media(hover:hover) and (pointer:fine) {
+  .featured-stage:hover .featured-view-mark { translate:3px -3px; background:var(--blue-wash); }
+  .featured-product-link:hover > span { translate:calc(3px * var(--interaction-direction)) -3px; }
+  .featured-piece-copy h3 a:hover { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:.12em; text-decoration-color:var(--blue-edge); }
+}
+@media(prefers-reduced-motion:no-preference) {
+  @supports(animation-timeline:view()) {
+    .featured-stage { animation:featured-object-reveal linear both; animation-timeline:view(); animation-range:entry 0% cover 24%; }
+  }
+}
+@keyframes featured-object-reveal { from { clip-path:inset(14% 0 14% 0); translate:0 24px; } to { clip-path:inset(0); translate:0 0; } }
+@media(prefers-reduced-motion:reduce) {
+  .featured-stage { animation:none; translate:none; clip-path:none; }
+  .featured-view-mark,.featured-product-link > span { transition:none; translate:none; }
+  .featured-stage:hover .featured-view-mark,.featured-product-link:hover > span { translate:none; }
+  .featured-tilt { transform:none!important; }
+}
+
+/* Keyboard focus exposes the complete link and its outline during scroll reveal. */
+.featured-stage:focus-visible { animation:none; translate:none; clip-path:none; }

@@ -24,7 +24,7 @@ const arabic=Noto_Sans_Arabic({subsets:['arabic'],variable:'--font-arabic',displ
 export const metadata={metadataBase:new URL(siteOrigin()),robots:{index:indexingEnabled(),follow:indexingEnabled()},title:{default:'EL AMAL | Industrial instrumentation',template:'%s | EL AMAL'},...(process.env.GOOGLE_SITE_VERIFICATION?{verification:{google:process.env.GOOGLE_SITE_VERIFICATION}}:{})};
 export default async function Layout({children,params}:{children:React.ReactNode;params:Promise<{locale:string}>}){
  const {locale}=await params;if(!isLocale(locale))notFound();const t=copy[locale];const catalogue=await loadCatalogue();
- // The basket needs identities and names; keep all technical tables server-rendered.
- const basketCatalogue={source:catalogue.source,products:catalogue.products.map(({id,model,name})=>({id,model,name}))};
+ // The basket needs identities, names and small connection choices; keep all technical tables server-rendered.
+ const basketCatalogue={source:catalogue.source,products:catalogue.products.map(({id,model,name,details})=>({id,model,name,...details?.options?.length?{options:details.options}:{}}))};
  return <html lang={locale} dir={locale==='ar'?'rtl':'ltr'} className={`${sans.variable} ${display.variable} ${arabic.variable}`}><body><SiteIntro locale={locale}/><SiteSchema locale={locale}/><a className="skip-link" href="#main-content">{t.skip}</a><BasketProvider key={catalogue.source} catalogue={basketCatalogue} publicEnquiries={!!customerSettings()}><Header locale={locale}/><BusinessContact locale={locale}/><main id="main-content">{children}</main><SiteFooter locale={locale} analyticsEnabled={!!interestSettings()}/></BasketProvider></body></html>;
 }

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {toPublicCatalogue} from '../src/lib/public-catalogue.ts';
 import {productSchema} from '../src/lib/product-schema.ts';
 import {Products} from '../src/cms/collections.ts';
-import {validateCatalogueDetails} from '../src/lib/catalogue-details.ts';
+import {validateCatalogueDetails,parseCatalogueDetails} from '../src/lib/catalogue-details.ts';
 const text={en:'Pressure',ar:'ضغط'};
 const category={id:1,key:'pressure',name:text,description:text};
 const base={id:1,model:'P',category:1,name:text,description:text,_status:'published',sourceRef:'private',reviewedBy:1,reviewedAt:'2026-01-01',rightsConfirmed:true};
@@ -35,4 +35,15 @@ test('CMS field and change hook reject malformed writes and strip private keys i
  assert.deepEqual(hook({...context,data:{catalogueDetails:{...details,private:'SECRET'}}}).catalogueDetails,details);
  assert.deepEqual(hook({...context,originalDoc:{catalogueDetails:details},data:{model:'New'}}).catalogueDetails,details);
  assert.equal(hook({...context,originalDoc:{catalogueDetails:details},data:{catalogueDetails:null}}).catalogueDetails,null);
+});
+
+test('availability dates follow the Cairo business day at summer and winter midnight',()=>{
+ for(const [reported,before,after] of [
+  ['2026-10-13','2026-10-12T20:59:59Z','2026-10-12T21:00:00Z'],
+  ['2026-01-02','2026-01-01T21:59:59Z','2026-01-01T22:00:00Z'],
+ ]){
+  const dated={...details,availabilityReportedAt:reported};
+  assert.equal(parseCatalogueDetails(dated,new Date(before)),undefined);
+  assert.ok(parseCatalogueDetails(dated,new Date(after)));
+ }
 });

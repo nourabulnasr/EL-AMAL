@@ -1,0 +1,1384 @@
+{
+  "reviewDate": "2026-10-13",
+  "categories": [
+    {
+      "key": "pressure",
+      "name": {
+        "en": "Pressure measurement",
+        "ar": "قياس الضغط"
+      },
+      "description": {
+        "en": "Pressure gauges, sensors, switches and diaphragm seal systems.",
+        "ar": "مقاييس وحساسات ومفاتيح الضغط وأنظمة العزل الغشائي."
+      }
+    },
+    {
+      "key": "temperature",
+      "name": {
+        "en": "Temperature measurement",
+        "ar": "قياس الحرارة"
+      },
+      "description": {
+        "en": "Thermocouples, resistance thermometers, probes, transmitters and displays.",
+        "ar": "المزدوجات الحرارية ومقاييس الحرارة بالمقاومة والمجسات والمرسلات وشاشات العرض."
+      }
+    }
+  ],
+  "products": [
+    {
+      "externalId": "wika-111-10-111-12",
+      "model": "111.10, 111.12",
+      "category": "pressure",
+      "name": {
+        "en": "Bourdon tube pressure gauge — standard version",
+        "ar": "مقياس ضغط بأنبوب بوردون — إصدار قياسي"
+      },
+      "description": {
+        "en": "WIKA 111.10, 111.12. Standard version. Catalogue scale ranges: -1 … 0 to 0 … 400 bar.",
+        "ar": "WIKA 111.10, 111.12. إصدار قياسي. نطاقات التدريج وفق الكتالوج: -1 … 0 إلى 0 … 400 بار."
+      },
+      "instrumentType": "pressure-gauge",
+      "applications": [
+        "general-industry"
+      ],
+      "datasheetUrl": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0101_en_co.pdf",
+      "sourceRef": "User-confirmed important catalogue products and model-level stock on 2026-10-13; important-products-4; photo 2fecab73-50c2-4992-b687-5ac8a607474d.jpg; SHA256 3370852f4f52a580ce180a5fc8856d45c45539189fba64a94038f9fcec3e8007; original WIKA portfolio p.4; exact highlighted model group; no SKU quantities inferred.",
+      "catalogueDetails": {
+        "manufacturer": "WIKA",
+        "image": {
+          "src": "/images/products/wika-111-10-111-12.png",
+          "width": 135,
+          "height": 187,
+          "alt": {
+            "en": "WIKA 111.10, 111.12 — Bourdon tube pressure gauge — standard version",
+            "ar": "WIKA 111.10, 111.12 — مقياس ضغط بأنبوب بوردون — إصدار قياسي"
+          },
+          "sourceUrl": "https://microsites.wika.com/upload/BR_ProductPortfolio_en_co_6434.pdf#page=4"
+        },
+        "specifications": [
+          {
+            "label": {
+              "en": "Version",
+              "ar": "الإصدار"
+            },
+            "value": {
+              "en": "Standard version",
+              "ar": "إصدار قياسي"
+            }
+          },
+          {
+            "label": {
+              "en": "Nominal size",
+              "ar": "المقاس الاسمي"
+            },
+            "value": {
+              "en": "27, 40, 50, 63, 80, 100, 160 mm",
+              "ar": "27, 40, 50, 63, 80, 100, 160 مم"
+            }
+          },
+          {
+            "label": {
+              "en": "Scale range",
+              "ar": "نطاق التدريج"
+            },
+            "value": {
+              "en": "-1 … 0 to 0 … 400 bar",
+              "ar": "-1 … 0 إلى 0 … 400 بار"
+            }
+          },
+          {
+            "label": {
+              "en": "Accuracy class",
+              "ar": "فئة الدقة"
+            },
+            "value": {
+              "en": "2.5, 1.6 optional NS 27: 4.0",
+              "ar": "2.5, 1.6 اختياري المقاس الاسمي 27: 4.0"
+            }
+          },
+          {
+            "label": {
+              "en": "Datasheet scope",
+              "ar": "نطاق ورقة البيانات"
+            },
+            "value": {
+              "en": "PM 01.17 describes the 27 mm miniature back-mount version 111.12.027. Other nominal sizes are covered by PM 01.01.",
+              "ar": "تصف PM 01.17 الإصدار المصغر 111.12.027 بمقاس 27 مم وتوصيل خلفي. تغطي PM 01.01 المقاسات الاسمية الأخرى."
+            }
+          }
+        ],
+        "availability": "in-stock",
+        "availabilityReportedAt": "2026-10-13",
+        "datasheets": [
+          {
+            "title": "WIKA PM 01.01",
+            "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0101_en_co.pdf"
+          },
+          {
+            "title": "WIKA PM 01.17",
+            "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0117_en_co.pdf"
+          }
+        ],
+        "options": [
+          {
+            "id": "bottom-connection",
+            "name": {
+              "en": "Bottom connection",
+              "ar": "توصيل سفلي"
+            },
+            "model": "111.10"
+          },
+          {
+            "id": "back-connection",
+            "name": {
+              "en": "Back connection",
+              "ar": "توصيل خلفي"
+            },
+            "model": "111.12"
+          }
+        ]
+      }
+    },
+    {
+      "externalId": "wika-212-20",
+      "model": "212.20",
+      "category": "pressure",
+      "name": {
+        "en": "Bourdon tube pressure gauge — stainless steel case",
+        "ar": "مقياس ضغط بأنبوب بوردون — غلاف من الفولاذ المقاوم للصدأ"
+      },
+      "description": {
+        "en": "WIKA 212.20. Stainless steel case. Catalogue scale ranges: -1 ... 0 to 0 ... 1,000 bar.",
+        "ar": "WIKA 212.20. غلاف من الفولاذ المقاوم للصدأ. نطاقات التدريج وفق الكتالوج: -1 ... 0 إلى 0 ... 1,000 بار."
+      },
+      "instrumentType": "pressure-gauge",
+      "applications": [
+        "general-industry"
+      ],
+      "datasheetUrl": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0201_en_co.pdf",
+      "sourceRef": "User-confirmed important catalogue products and model-level stock on 2026-10-13; important-products-5; photo 71052dbe-f90a-4add-a63b-562e065f84e9.jpg; SHA256 f74ba97c14f5cfd999fa22d8f5f69b1982471d2b48a2ecd7dd3f0b967409b012; original WIKA portfolio p.5; exact highlighted model group; no SKU quantities inferred.",
+      "catalogueDetails": {
+        "manufacturer": "WIKA",
+        "image": {
+          "src": "/images/products/wika-212-20.png",
+          "width": 186,
+          "height": 243,
+          "alt": {
+            "en": "WIKA 212.20 — Bourdon tube pressure gauge — stainless steel case",
+            "ar": "WIKA 212.20 — مقياس ضغط بأنبوب بوردون — غلاف من الفولاذ المقاوم للصدأ"
+          },
+          "sourceUrl": "https://microsites.wika.com/upload/BR_ProductPortfolio_en_co_6434.pdf#page=5"
+        },
+        "specifications": [
+          {
+            "label": {
+              "en": "Version",
+              "ar": "الإصدار"
+            },
+            "value": {
+              "en": "Stainless steel case",
+              "ar": "غلاف من الفولاذ المقاوم للصدأ"
+            }
+          },
+          {
+            "label": {
+              "en": "Nominal size",
+              "ar": "المقاس الاسمي"
+            },
+            "value": {
+              "en": "100, 160 mm",
+              "ar": "100, 160 mm"
+            }
+          },
+          {
+            "label": {
+              "en": "Scale range",
+              "ar": "نطاق التدريج"
+            },
+            "value": {
+              "en": "-1 ... 0 to 0 ... 1,000 bar",
+              "ar": "-1 ... 0 إلى 0 ... 1,000 بار"
+            }
+          },
+          {
+            "label": {
+              "en": "Accuracy class",
+              "ar": "فئة الدقة"
+            },
+            "value": {
+              "en": "1.0",
+              "ar": "1.0"
+            }
+          }
+        ],
+        "availability": "in-stock",
+        "availabilityReportedAt": "2026-10-13",
+        "datasheets": [
+          {
+            "title": "WIKA PM 02.01",
+            "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0201_en_co.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "externalId": "wika-213-40",
+      "model": "213.40",
+      "category": "pressure",
+      "name": {
+        "en": "Bourdon tube pressure gauge — heavy-duty, liquid-filled",
+        "ar": "مقياس ضغط بأنبوب بوردون — للخدمة الشاقة، مع تعبئة بسائل"
+      },
+      "description": {
+        "en": "WIKA 213.40. Heavy-duty version, case filling. Catalogue scale ranges: -1 … 0 to 0 … 1,000 bar.",
+        "ar": "WIKA 213.40. إصدار للخدمة الشاقة، مع تعبئة الغلاف بسائل. نطاقات التدريج وفق الكتالوج: -1 … 0 إلى 0 … 1,000 بار."
+      },
+      "instrumentType": "pressure-gauge",
+      "applications": [
+        "general-industry"
+      ],
+      "datasheetUrl": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0206_en_co.pdf",
+      "sourceRef": "User-confirmed important catalogue products and model-level stock on 2026-10-13; important-products-5; photo 71052dbe-f90a-4add-a63b-562e065f84e9.jpg; SHA256 f74ba97c14f5cfd999fa22d8f5f69b1982471d2b48a2ecd7dd3f0b967409b012; original WIKA portfolio p.5; exact highlighted model group; no SKU quantities inferred.",
+      "catalogueDetails": {
+        "manufacturer": "WIKA",
+        "image": {
+          "src": "/images/products/wika-213-40.png",
+          "width": 168,
+          "height": 231,
+          "alt": {
+            "en": "WIKA 213.40 — Bourdon tube pressure gauge — heavy-duty, liquid-filled",
+            "ar": "WIKA 213.40 — مقياس ضغط بأنبوب بوردون — للخدمة الشاقة، مع تعبئة بسائل"
+          },
+          "sourceUrl": "https://microsites.wika.com/upload/BR_ProductPortfolio_en_co_6434.pdf#page=5"
+        },
+        "specifications": [
+          {
+            "label": {
+              "en": "Version",
+              "ar": "الإصدار"
+            },
+            "value": {
+              "en": "Heavy-duty version, case filling",
+              "ar": "إصدار للخدمة الشاقة، مع تعبئة الغلاف بسائل"
+            }
+          },
+          {
+            "label": {
+              "en": "Nominal size",
+              "ar": "المقاس الاسمي"
+            },
+            "value": {
+              "en": "63, 80, 100 mm",
+              "ar": "63, 80, 100 مم"
+            }
+          },
+          {
+            "label": {
+              "en": "Scale range",
+              "ar": "نطاق التدريج"
+            },
+            "value": {
+              "en": "-1 … 0 to 0 … 1,000 bar",
+              "ar": "-1 … 0 إلى 0 … 1,000 بار"
+            }
+          },
+          {
+            "label": {
+              "en": "Accuracy class",
+              "ar": "فئة الدقة"
+            },
+            "value": {
+              "en": "1.0, 1.6 (NS 63, 80)",
+              "ar": "1.0, 1.6 (المقاس الاسمي 63, 80)"
+            }
+          }
+        ],
+        "availability": "in-stock",
+        "availabilityReportedAt": "2026-10-13",
+        "datasheets": [
+          {
+            "title": "WIKA PM 02.06",
+            "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0206_en_co.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "externalId": "wika-113-53-213-53",
+      "model": "113.53, 213.53",
+      "category": "pressure",
+      "name": {
+        "en": "Bourdon tube pressure gauge — stainless steel case, liquid-filled",
+        "ar": "مقياس ضغط بأنبوب بوردون — غلاف من الفولاذ المقاوم للصدأ، مع تعبئة بسائل"
+      },
+      "description": {
+        "en": "WIKA 113.53, 213.53. Stainless steel case, case filling. Catalogue scale ranges: -1 … 0 to 0 … 600 bar (213.53: to 1,000 bar).",
+        "ar": "WIKA 113.53, 213.53. غلاف من الفولاذ المقاوم للصدأ، مع تعبئة بسائل. نطاقات التدريج وفق الكتالوج: -1 … 0 إلى 0 … 600 بار (213.53: إلى 1,000 بار)."
+      },
+      "instrumentType": "pressure-gauge",
+      "applications": [
+        "general-industry"
+      ],
+      "datasheetUrl": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0108_en_co.pdf",
+      "sourceRef": "User-confirmed important catalogue products and model-level stock on 2026-10-13; important-products-5; photo 71052dbe-f90a-4add-a63b-562e065f84e9.jpg; SHA256 f74ba97c14f5cfd999fa22d8f5f69b1982471d2b48a2ecd7dd3f0b967409b012; original WIKA portfolio p.5; exact highlighted model group; no SKU quantities inferred.",
+      "catalogueDetails": {
+        "manufacturer": "WIKA",
+        "image": {
+          "src": "/images/products/wika-113-53-213-53.png",
+          "width": 200,
+          "height": 260,
+          "alt": {
+            "en": "WIKA 113.53, 213.53 — Bourdon tube pressure gauge — stainless steel case, liquid-filled",
+            "ar": "WIKA 113.53, 213.53 — مقياس ضغط بأنبوب بوردون — غلاف من الفولاذ المقاوم للصدأ، مع تعبئة بسائل"
+          },
+          "sourceUrl": "https://microsites.wika.com/upload/BR_ProductPortfolio_en_co_6434.pdf#page=5"
+        },
+        "specifications": [
+          {
+            "label": {
+              "en": "Version",
+              "ar": "الإصدار"
+            },
+            "value": {
+              "en": "Stainless steel case, case filling",
+              "ar": "غلاف من الفولاذ المقاوم للصدأ، مع تعبئة بسائل"
+            }
+          },
+          {
+            "label": {
+              "en": "Nominal size",
+              "ar": "المقاس الاسمي"
+            },
+            "value": {
+              "en": "• 113.53: 40, 80, 100 mm\n• 213.53: 50, 63, 100 mm",
+              "ar": "• 113.53: 40, 80, 100 مم\n• 213.53: 50, 63, 100 مم"
+            }
+          },
+          {
+            "label": {
+              "en": "Scale range",
+              "ar": "نطاق التدريج"
+            },
+            "value": {
+              "en": "-1 … 0 to 0 … 600 bar (213.53: to 1,000 bar)",
+              "ar": "-1 … 0 إلى 0 … 600 بار (213.53: إلى 1,000 بار)"
+            }
+          },
+          {
+            "label": {
+              "en": "Accuracy class",
+              "ar": "فئة الدقة"
+            },
+            "value": {
+              "en": "113.53: 1.6 (NS 80, 100), 2.5 213.53: 1.0 (NS 100), 1.6 (NS 50, 63)",
+              "ar": "113.53: 1.6 (المقاس الاسمي 80, 100), 2.5 213.53: 1.0 (المقاس الاسمي 100), 1.6 (المقاس الاسمي 50, 63)"
+            }
+          }
+        ],
+        "availability": "in-stock",
+        "availabilityReportedAt": "2026-10-13",
+        "datasheets": [
+          {
+            "title": "WIKA PM 01.08",
+            "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0108_en_co.pdf"
+          },
+          {
+            "title": "WIKA PM 02.12",
+            "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0212_en_co.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "externalId": "wika-232-50-233-50",
+      "model": "232.50, 233.50",
+      "category": "pressure",
+      "name": {
+        "en": "Bourdon tube pressure gauge — process industry, standard version",
+        "ar": "مقياس ضغط بأنبوب بوردون — للصناعات التحويلية، إصدار قياسي"
+      },
+      "description": {
+        "en": "WIKA 232.50, 233.50. For the process industry, standard version. Catalogue scale ranges: • NS 63: 0 … 1 to 0 … 1,000 bar • NS 100: 0 … 0.6 to 0 … 1,000 bar • NS 160: 0 … 0.6 to 0 … 1,600 bar.",
+        "ar": "WIKA 232.50, 233.50. للصناعات التحويلية، إصدار قياسي. نطاقات التدريج وفق الكتالوج: • المقاس الاسمي 63: 0 … 1 إلى 0 … 1,000 بار • المقاس الاسمي 100: 0 … 0.6 إلى 0 … 1,000 بار • المقاس الاسمي 160: 0 … 0.6 إلى 0 … 1,600 بار."
+      },
+      "instrumentType": "pressure-gauge",
+      "applications": [
+        "oil-gas",
+        "general-industry"
+      ],
+      "datasheetUrl": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0202_en_co.pdf",
+      "sourceRef": "User-confirmed important catalogue products and model-level stock on 2026-10-13; important-products-6; photo b94af607-7186-4eea-97f1-24b36be9b12f.jpg; SHA256 9ad1a6460ae20a3f6690dd0005e8ce0d152228bf65b5c95603c4cd8bb767283c; original WIKA portfolio p.6; exact highlighted model group; no SKU quantities inferred.",
+      "catalogueDetails": {
+        "manufacturer": "WIKA",
+        "image": {
+          "src": "/images/products/wika-232-50-233-50.png",
+          "width": 179,
+          "height": 235,
+          "alt": {
+            "en": "WIKA 232.50, 233.50 — Bourdon tube pressure gauge — process industry, standard version",
+            "ar": "WIKA 232.50, 233.50 — مقياس ضغط بأنبوب بوردون — للصناعات التحويلية، إصدار قياسي"
+          },
+          "sourceUrl": "https://microsites.wika.com/upload/BR_ProductPortfolio_en_co_6434.pdf#page=6"
+        },
+        "specifications": [
+          {
+            "label": {
+              "en": "Version",
+              "ar": "الإصدار"
+            },
+            "value": {
+              "en": "For the process industry, standard version",
+              "ar": "للصناعات التحويلية، إصدار قياسي"
+            }
+          },
+          {
+            "label": {
+              "en": "Nominal size",
+              "ar": "المقاس الاسمي"
+            },
+            "value": {
+              "en": "63, 100, 160 mm",
+              "ar": "63, 100, 160 مم"
+            }
+          },
+          {
+            "label": {
+              "en": "Scale range",
+              "ar": "نطاق التدريج"
+            },
+            "value": {
+              "en": "• NS 63: 0 … 1 to 0 … 1,000 bar\n• NS 100: 0 … 0.6 to 0 … 1,000 bar\n• NS 160: 0 … 0.6 to 0 … 1,600 bar",
+              "ar": "• المقاس الاسمي 63: 0 … 1 إلى 0 … 1,000 بار\n• المقاس الاسمي 100: 0 … 0.6 إلى 0 … 1,000 بار\n• المقاس الاسمي 160: 0 … 0.6 إلى 0 … 1,600 بار"
+            }
+          },
+          {
+            "label": {
+              "en": "Accuracy class",
+              "ar": "فئة الدقة"
+            },
+            "value": {
+              "en": "1.0 (NS 100, 160), 1.6 (NS 63)",
+              "ar": "1.0 (المقاس الاسمي 100, 160), 1.6 (المقاس الاسمي 63)"
+            }
+          },
+          {
+            "label": {
+              "en": "Ingress protection",
+              "ar": "درجة الحماية من دخول الأجسام والماء"
+            },
+            "value": {
+              "en": "IP65",
+              "ar": "IP65"
+            }
+          }
+        ],
+        "availability": "in-stock",
+        "availabilityReportedAt": "2026-10-13",
+        "datasheets": [
+          {
+            "title": "WIKA PM 02.02",
+            "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0202_en_co.pdf"
+          }
+        ],
+        "options": [
+          {
+            "id": "bottom-connection",
+            "name": {
+              "en": "Bottom connection",
+              "ar": "توصيل سفلي"
+            }
+          },
+          {
+            "id": "back-connection",
+            "name": {
+              "en": "Back connection",
+              "ar": "توصيل خلفي"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "externalId": "wika-232-30-233-30",
+      "model": "232.30, 233.30",
+      "category": "pressure",
+      "name": {
+        "en": "Bourdon tube pressure gauge — process industry, safety version",
+        "ar": "مقياس ضغط بأنبوب بوردون — للصناعات التحويلية، إصدار أمان"
+      },
+      "description": {
+        "en": "WIKA 232.30, 233.30. For the process industry, safety version. Catalogue scale ranges: • NS 63: 0 … 1 to 0… 1,000 bar • NS 100: 0 … 0.6 to 0 … 1,000 bar • NS 160: 0 … 0.6 to 0 … 1,600 bar.",
+        "ar": "WIKA 232.30, 233.30. للصناعات التحويلية، إصدار أمان. نطاقات التدريج وفق الكتالوج: • المقاس الاسمي 63: 0 … 1 إلى 0… 1,000 بار • المقاس الاسمي 100: 0 … 0.6 إلى 0 … 1,000 بار • المقاس الاسمي 160: 0 … 0.6 إلى 0 … 1,600 بار."
+      },
+      "instrumentType": "pressure-gauge",
+      "applications": [
+        "oil-gas",
+        "general-industry"
+      ],
+      "datasheetUrl": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0204_en_co.pdf",
+      "sourceRef": "User-confirmed important catalogue products and model-level stock on 2026-10-13; important-products-6; photo b94af607-7186-4eea-97f1-24b36be9b12f.jpg; SHA256 9ad1a6460ae20a3f6690dd0005e8ce0d152228bf65b5c95603c4cd8bb767283c; original WIKA portfolio p.6; exact highlighted model group; no SKU quantities inferred.",
+      "catalogueDetails": {
+        "manufacturer": "WIKA",
+        "image": {
+          "src": "/images/products/wika-232-30-233-30.png",
+          "width": 185,
+          "height": 244,
+          "alt": {
+            "en": "WIKA 232.30, 233.30 — Bourdon tube pressure gauge — process industry, safety version",
+            "ar": "WIKA 232.30, 233.30 — مقياس ضغط بأنبوب بوردون — للصناعات التحويلية، إصدار أمان"
+          },
+          "sourceUrl": "https://microsites.wika.com/upload/BR_ProductPortfolio_en_co_6434.pdf#page=6"
+        },
+        "specifications": [
+          {
+            "label": {
+              "en": "Version",
+              "ar": "الإصدار"
+            },
+            "value": {
+              "en": "For the process industry, safety version",
+              "ar": "للصناعات التحويلية، إصدار أمان"
+            }
+          },
+          {
+            "label": {
+              "en": "Nominal size",
+              "ar": "المقاس الاسمي"
+            },
+            "value": {
+              "en": "63, 100, 160 mm",
+              "ar": "63, 100, 160 مم"
+            }
+          },
+          {
+            "label": {
+              "en": "Scale range",
+              "ar": "نطاق التدريج"
+            },
+            "value": {
+              "en": "• NS 63: 0 … 1 to 0… 1,000 bar\n• NS 100: 0 … 0.6 to 0 … 1,000 bar\n• NS 160: 0 … 0.6 to 0 … 1,600 bar",
+              "ar": "• المقاس الاسمي 63: 0 … 1 إلى 0… 1,000 بار\n• المقاس الاسمي 100: 0 … 0.6 إلى 0 … 1,000 بار\n• المقاس الاسمي 160: 0 … 0.6 إلى 0 … 1,600 بار"
+            }
+          },
+          {
+            "label": {
+              "en": "Accuracy class",
+              "ar": "فئة الدقة"
+            },
+            "value": {
+              "en": "1.0 (NS 100, 160), 1.6 (NS 63)",
+              "ar": "1.0 (المقاس الاسمي 100, 160), 1.6 (المقاس الاسمي 63)"
+            }
+          },
+          {
+            "label": {
+              "en": "Ingress protection",
+              "ar": "درجة الحماية من دخول الأجسام والماء"
+            },
+            "value": {
+              "en": "IP65",
+              "ar": "IP65"
+            }
+          }
+        ],
+        "availability": "in-stock",
+        "availabilityReportedAt": "2026-10-13",
+        "datasheets": [
+          {
+            "title": "WIKA PM 02.04",
+            "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0204_en_co.pdf"
+          }
+        ],
+        "options": [
+          {
+            "id": "bottom-connection",
+            "name": {
+              "en": "Bottom connection",
+              "ar": "توصيل سفلي"
+            }
+          },
+          {
+            "id": "back-connection",
+            "name": {
+              "en": "Back connection",
+              "ar": "توصيل خلفي"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "externalId": "wika-422-12-423-12",
+      "model": "422.12, 423.12",
+      "category": "pressure",
+      "name": {
+        "en": "Diaphragm pressure gauge — grey cast iron case",
+        "ar": "مقياس ضغط غشائي — غلاف من الحديد الزهر الرمادي"
+      },
+      "description": {
+        "en": "WIKA 422.12, 423.12. Grey cast iron case. Catalogue scale ranges: 0 … 16 mbar to 0 … 40 bar.",
+        "ar": "WIKA 422.12, 423.12. غلاف من الحديد الزهر الرمادي. نطاقات التدريج وفق الكتالوج: 0 … 16 mbar إلى 0 … 40 bar."
+      },
+      "instrumentType": "pressure-gauge",
+      "applications": [
+        "general-industry"
+      ],
+      "datasheetUrl": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0402_en_co.pdf",
+      "sourceRef": "User-confirmed important catalogue products and model-level stock on 2026-10-13; important-products-8; photo 0a7c733d-5ee4-4b21-86d6-bc669748c547.jpg; SHA256 e164ce359ce8df35538747d81c4ac589250bcf2d91072a2e8ffda737433ea584; original WIKA portfolio p.8; exact highlighted model group; no SKU quantities inferred.",
+      "catalogueDetails": {
+        "manufacturer": "WIKA",
+        "image": {
+          "src": "/images/products/wika-422-12-423-12.png",
+          "width": 146,
+          "height": 253,
+          "alt": {
+            "en": "WIKA 422.12, 423.12 — Diaphragm pressure gauge — grey cast iron case",
+            "ar": "WIKA 422.12, 423.12 — مقياس ضغط غشائي — غلاف من الحديد الزهر الرمادي"
+          },
+          "sourceUrl": "https://microsites.wika.com/upload/BR_ProductPortfolio_en_co_6434.pdf#page=8"
+        },
+        "specifications": [
+          {
+            "label": {
+              "en": "Version",
+              "ar": "الإصدار"
+            },
+            "value": {
+              "en": "Grey cast iron case",
+              "ar": "غلاف من الحديد الزهر الرمادي"
+            }
+          },
+          {
+            "label": {
+              "en": "Nominal size",
+              "ar": "المقاس الاسمي"
+            },
+            "value": {
+              "en": "100, 160 mm",
+              "ar": "100, 160 mm"
+            }
+          },
+          {
+            "label": {
+              "en": "Scale range",
+              "ar": "نطاق التدريج"
+            },
+            "value": {
+              "en": "0 … 16 mbar to 0 … 40 bar",
+              "ar": "0 … 16 mbar إلى 0 … 40 bar"
+            }
+          },
+          {
+            "label": {
+              "en": "Accuracy class",
+              "ar": "فئة الدقة"
+            },
+            "value": {
+              "en": "1.6",
+              "ar": "1.6"
+            }
+          },
+          {
+            "label": {
+              "en": "Ingress protection",
+              "ar": "درجة الحماية من دخول الأجسام والماء"
+            },
+            "value": {
+              "en": "IP54, with liquid filling IP65",
+              "ar": "IP54، ومع التعبئة بالسائل IP65"
+            }
+          }
+        ],
+        "availability": "in-stock",
+        "availabilityReportedAt": "2026-10-13",
+        "datasheets": [
+          {
+            "title": "WIKA PM 04.02",
+            "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0402_en_co.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "externalId": "wika-432-50-433-50-432-30-433-30-452-50-453-50-452-30-453-30",
+      "model": "432.50, 433.50, 432.30, 433.30, 452.50, 453.50, 452.30, 453.30",
+      "category": "pressure",
+      "name": {
+        "en": "Diaphragm pressure gauge — up to 10-fold overload safety",
+        "ar": "مقياس ضغط غشائي — حماية من الضغط الزائد حتى 10 أضعاف نهاية التدريج"
+      },
+      "description": {
+        "en": "WIKA 432.50, 433.50, 432.30, 433.30, 452.50, 453.50, 452.30, 453.30. For the process industry, high overload safety up to 10 times the full scale value, max. 40 bar. Catalogue scale ranges: 0 … 16 mbar to 0 … 25 bar.",
+        "ar": "WIKA 432.50, 433.50, 432.30, 433.30, 452.50, 453.50, 452.30, 453.30. للصناعات التحويلية، حماية من الضغط الزائد حتى 10 أضعاف نهاية التدريج، وبحد أقصى 40 بار. نطاقات التدريج وفق الكتالوج: 0 … 16 mbar إلى 0 … 25 bar."
+      },
+      "instrumentType": "pressure-gauge",
+      "applications": [
+        "oil-gas",
+        "general-industry"
+      ],
+      "datasheetUrl": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0403_en_co.pdf",
+      "sourceRef": "User-confirmed important catalogue products and model-level stock on 2026-10-13; important-products-8; photo 0a7c733d-5ee4-4b21-86d6-bc669748c547.jpg; SHA256 e164ce359ce8df35538747d81c4ac589250bcf2d91072a2e8ffda737433ea584; original WIKA portfolio p.8; exact highlighted model group; no SKU quantities inferred.",
+      "catalogueDetails": {
+        "manufacturer": "WIKA",
+        "image": {
+          "src": "/images/products/wika-432-50-433-50-432-30-433-30-452-50-453-50-452-30-453-30.png",
+          "width": 141,
+          "height": 224,
+          "alt": {
+            "en": "WIKA 432.50, 433.50, 432.30, 433.30, 452.50, 453.50, 452.30, 453.30 — Diaphragm pressure gauge — up to 10-fold overload safety",
+            "ar": "WIKA 432.50, 433.50, 432.30, 433.30, 452.50, 453.50, 452.30, 453.30 — مقياس ضغط غشائي — حماية من الضغط الزائد حتى 10 أضعاف نهاية التدريج"
+          },
+          "sourceUrl": "https://microsites.wika.com/upload/BR_ProductPortfolio_en_co_6434.pdf#page=8"
+        },
+        "specifications": [
+          {
+            "label": {
+              "en": "Version",
+              "ar": "الإصدار"
+            },
+            "value": {
+              "en": "For the process industry, high overload safety up to 10 times the full scale value, max. 40 bar",
+              "ar": "للصناعات التحويلية، حماية من الضغط الزائد حتى 10 أضعاف نهاية التدريج، وبحد أقصى 40 بار"
+            }
+          },
+          {
+            "label": {
+              "en": "Nominal size",
+              "ar": "المقاس الاسمي"
+            },
+            "value": {
+              "en": "100, 160 mm",
+              "ar": "100, 160 mm"
+            }
+          },
+          {
+            "label": {
+              "en": "Scale range",
+              "ar": "نطاق التدريج"
+            },
+            "value": {
+              "en": "0 … 16 mbar to 0 … 25 bar",
+              "ar": "0 … 16 mbar إلى 0 … 25 bar"
+            }
+          },
+          {
+            "label": {
+              "en": "Accuracy class",
+              "ar": "فئة الدقة"
+            },
+            "value": {
+              "en": "1.6",
+              "ar": "1.6"
+            }
+          },
+          {
+            "label": {
+              "en": "Ingress protection",
+              "ar": "درجة الحماية من دخول الأجسام والماء"
+            },
+            "value": {
+              "en": "IP54, with liquid filling IP65",
+              "ar": "IP54، ومع التعبئة بالسائل IP65"
+            }
+          },
+          {
+            "label": {
+              "en": "Datasheet scope",
+              "ar": "نطاق ورقة البيانات"
+            },
+            "value": {
+              "en": "Current PM 04.03 covers the 432/433 series. The 452/453 specifications shown here follow the supplied WIKA catalogue; confirm the required configuration when requesting a quotation.",
+              "ar": "تغطي PM 04.03 الحالية سلسلة 432/433. مواصفات سلسلة 452/453 المعروضة هنا مستمدة من كتالوج WIKA المقدم؛ يرجى تأكيد التكوين المطلوب عند طلب عرض السعر."
+            }
+          }
+        ],
+        "availability": "in-stock",
+        "availabilityReportedAt": "2026-10-13",
+        "datasheets": [
+          {
+            "title": "WIKA PM 04.03",
+            "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0403_en_co.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "externalId": "wika-432-56-433-56-432-36-433-36",
+      "model": "432.56, 433.56, 432.36, 433.36",
+      "category": "pressure",
+      "name": {
+        "en": "Diaphragm pressure gauge — high overload safety",
+        "ar": "مقياس ضغط غشائي — حماية عالية من الضغط الزائد"
+      },
+      "description": {
+        "en": "WIKA 432.56, 433.56, 432.36, 433.36. For the process industry, high overload safety to 40, 100 or 400 bar. Catalogue scale ranges: 0 … 16 mbar to 0 … 40 bar.",
+        "ar": "WIKA 432.56, 433.56, 432.36, 433.36. للصناعات التحويلية، حماية من الضغط الزائد حتى 40 أو 100 أو 400 بار. نطاقات التدريج وفق الكتالوج: 0 … 16 mbar إلى 0 … 40 bar."
+      },
+      "instrumentType": "pressure-gauge",
+      "applications": [
+        "oil-gas",
+        "general-industry"
+      ],
+      "datasheetUrl": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0407_en_co.pdf",
+      "sourceRef": "User-confirmed important catalogue products and model-level stock on 2026-10-13; important-products-8; photo 0a7c733d-5ee4-4b21-86d6-bc669748c547.jpg; SHA256 e164ce359ce8df35538747d81c4ac589250bcf2d91072a2e8ffda737433ea584; original WIKA portfolio p.8; exact highlighted model group; no SKU quantities inferred.",
+      "catalogueDetails": {
+        "manufacturer": "WIKA",
+        "image": {
+          "src": "/images/products/wika-432-56-433-56-432-36-433-36.png",
+          "width": 154,
+          "height": 261,
+          "alt": {
+            "en": "WIKA 432.56, 433.56, 432.36, 433.36 — Diaphragm pressure gauge — high overload safety",
+            "ar": "WIKA 432.56, 433.56, 432.36, 433.36 — مقياس ضغط غشائي — حماية عالية من الضغط الزائد"
+          },
+          "sourceUrl": "https://microsites.wika.com/upload/BR_ProductPortfolio_en_co_6434.pdf#page=8"
+        },
+        "specifications": [
+          {
+            "label": {
+              "en": "Version",
+              "ar": "الإصدار"
+            },
+            "value": {
+              "en": "For the process industry, high overload safety to 40, 100 or 400 bar",
+              "ar": "للصناعات التحويلية، حماية من الضغط الزائد حتى 40 أو 100 أو 400 بار"
+            }
+          },
+          {
+            "label": {
+              "en": "Nominal size",
+              "ar": "المقاس الاسمي"
+            },
+            "value": {
+              "en": "100, 160 mm",
+              "ar": "100, 160 mm"
+            }
+          },
+          {
+            "label": {
+              "en": "Scale range",
+              "ar": "نطاق التدريج"
+            },
+            "value": {
+              "en": "0 … 16 mbar to 0 … 40 bar",
+              "ar": "0 … 16 mbar إلى 0 … 40 bar"
+            }
+          },
+          {
+            "label": {
+              "en": "Accuracy class",
+              "ar": "فئة الدقة"
+            },
+            "value": {
+              "en": "1.6",
+              "ar": "1.6"
+            }
+          },
+          {
+            "label": {
+              "en": "Ingress protection",
+              "ar": "درجة الحماية من دخول الأجسام والماء"
+            },
+            "value": {
+              "en": "IP54, with liquid filling IP65",
+              "ar": "IP54، ومع التعبئة بالسائل IP65"
+            }
+          }
+        ],
+        "availability": "in-stock",
+        "availabilityReportedAt": "2026-10-13",
+        "datasheets": [
+          {
+            "title": "WIKA PM 04.07",
+            "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0407_en_co.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "externalId": "wika-700-01-700-02",
+      "model": "700.01, 700.02",
+      "category": "pressure",
+      "name": {
+        "en": "Differential pressure gauge — magnetic piston",
+        "ar": "مقياس ضغط تفاضلي — مكبس مغناطيسي"
+      },
+      "description": {
+        "en": "WIKA 700.01, 700.02. With magnetic piston or with magnetic piston and separating diaphragm. Catalogue scale ranges: • 700.01: 0 … 400 mbar to 0 … 10 bar • 700.02: 0 … 160 mbar to 0 … 2.5 bar.",
+        "ar": "WIKA 700.01, 700.02. بمكبس مغناطيسي أو بمكبس مغناطيسي وغشاء فاصل. نطاقات التدريج وفق الكتالوج: • 700.01: 0 … 400 ملي بار إلى 0 … 10 بار • 700.02: 0 … 160 ملي بار إلى 0 … 2.5 بار."
+      },
+      "instrumentType": "pressure-gauge",
+      "applications": [
+        "general-industry"
+      ],
+      "datasheetUrl": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0714_en_co.pdf",
+      "sourceRef": "User-confirmed important catalogue products and model-level stock on 2026-10-13; important-products-10; photo cb4ce6e8-5635-4a35-ace6-7e2140ea49f5.jpg; SHA256 7dd6b7dfde6179452a7df85ec7f94ebd882bb13124f24b3583e81273beed5ebc; original WIKA portfolio p.10; exact highlighted model group; no SKU quantities inferred.",
+      "catalogueDetails": {
+        "manufacturer": "WIKA",
+        "image": {
+          "src": "/images/products/wika-700-01-700-02.png",
+          "width": 246,
+          "height": 209,
+          "alt": {
+            "en": "WIKA 700.01, 700.02 — Differential pressure gauge — magnetic piston",
+            "ar": "WIKA 700.01, 700.02 — مقياس ضغط تفاضلي — مكبس مغناطيسي"
+          },
+          "sourceUrl": "https://microsites.wika.com/upload/BR_ProductPortfolio_en_co_6434.pdf#page=10"
+        },
+        "specifications": [
+          {
+            "label": {
+              "en": "Version",
+              "ar": "الإصدار"
+            },
+            "value": {
+              "en": "With magnetic piston or with magnetic piston and separating diaphragm",
+              "ar": "بمكبس مغناطيسي أو بمكبس مغناطيسي وغشاء فاصل"
+            }
+          },
+          {
+            "label": {
+              "en": "Nominal size",
+              "ar": "المقاس الاسمي"
+            },
+            "value": {
+              "en": "80 mm",
+              "ar": "80 مم"
+            }
+          },
+          {
+            "label": {
+              "en": "Scale range",
+              "ar": "نطاق التدريج"
+            },
+            "value": {
+              "en": "• 700.01: 0 … 400 mbar to 0 … 10 bar\n• 700.02: 0 … 160 mbar to 0 … 2.5 bar",
+              "ar": "• 700.01: 0 … 400 ملي بار إلى 0 … 10 بار\n• 700.02: 0 … 160 ملي بار إلى 0 … 2.5 بار"
+            }
+          },
+          {
+            "label": {
+              "en": "Accuracy class",
+              "ar": "فئة الدقة"
+            },
+            "value": {
+              "en": "• 700.01: ±3 %\n• 700.02: ±5 % with increasing differential pressure",
+              "ar": "• 700.01: ±3 %\n• 700.02: ±5 % مع زيادة الضغط التفاضلي"
+            }
+          },
+          {
+            "label": {
+              "en": "Ingress protection",
+              "ar": "درجة الحماية من دخول الأجسام والماء"
+            },
+            "value": {
+              "en": "IP54",
+              "ar": "IP54"
+            }
+          }
+        ],
+        "availability": "in-stock",
+        "availabilityReportedAt": "2026-10-13",
+        "datasheets": [
+          {
+            "title": "WIKA PM 07.14",
+            "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0714_en_co.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "externalId": "wika-711-12-731-12",
+      "model": "711.12, 731.12",
+      "category": "pressure",
+      "name": {
+        "en": "Differential pressure gauge — parallel entry",
+        "ar": "مقياس ضغط تفاضلي — مدخلان متوازيان"
+      },
+      "description": {
+        "en": "WIKA 711.12, 731.12. With parallel entry, copper alloy or stainless steel. Catalogue scale ranges: 0 … 0.6 to 0 … 1,000 bar.",
+        "ar": "WIKA 711.12, 731.12. بمدخلين متوازيين، من سبيكة النحاس أو الفولاذ المقاوم للصدأ. نطاقات التدريج وفق الكتالوج: 0 … 0.6 إلى 0 … 1,000 بار."
+      },
+      "instrumentType": "pressure-gauge",
+      "applications": [
+        "general-industry"
+      ],
+      "datasheetUrl": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0702_en_co.pdf",
+      "sourceRef": "User-confirmed important catalogue products and model-level stock on 2026-10-13; important-products-10; photo cb4ce6e8-5635-4a35-ace6-7e2140ea49f5.jpg; SHA256 7dd6b7dfde6179452a7df85ec7f94ebd882bb13124f24b3583e81273beed5ebc; original WIKA portfolio p.10; exact highlighted model group; no SKU quantities inferred.",
+      "catalogueDetails": {
+        "manufacturer": "WIKA",
+        "image": {
+          "src": "/images/products/wika-711-12-731-12.png",
+          "width": 238,
+          "height": 272,
+          "alt": {
+            "en": "WIKA 711.12, 731.12 — Differential pressure gauge — parallel entry",
+            "ar": "WIKA 711.12, 731.12 — مقياس ضغط تفاضلي — مدخلان متوازيان"
+          },
+          "sourceUrl": "https://microsites.wika.com/upload/BR_ProductPortfolio_en_co_6434.pdf#page=10"
+        },
+        "specifications": [
+          {
+            "label": {
+              "en": "Version",
+              "ar": "الإصدار"
+            },
+            "value": {
+              "en": "With parallel entry, copper alloy or stainless steel",
+              "ar": "بمدخلين متوازيين، من سبيكة النحاس أو الفولاذ المقاوم للصدأ"
+            }
+          },
+          {
+            "label": {
+              "en": "Nominal size",
+              "ar": "المقاس الاسمي"
+            },
+            "value": {
+              "en": "100, 160 mm",
+              "ar": "100, 160 mm"
+            }
+          },
+          {
+            "label": {
+              "en": "Scale range",
+              "ar": "نطاق التدريج"
+            },
+            "value": {
+              "en": "0 … 0.6 to 0 … 1,000 bar",
+              "ar": "0 … 0.6 إلى 0 … 1,000 بار"
+            }
+          },
+          {
+            "label": {
+              "en": "Accuracy class",
+              "ar": "فئة الدقة"
+            },
+            "value": {
+              "en": "1.6",
+              "ar": "1.6"
+            }
+          },
+          {
+            "label": {
+              "en": "Ingress protection",
+              "ar": "درجة الحماية من دخول الأجسام والماء"
+            },
+            "value": {
+              "en": "IP33",
+              "ar": "IP33"
+            }
+          }
+        ],
+        "availability": "in-stock",
+        "availabilityReportedAt": "2026-10-13",
+        "datasheets": [
+          {
+            "title": "WIKA PM 07.02",
+            "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0702_en_co.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "externalId": "wika-dpg40",
+      "model": "DPG40",
+      "category": "pressure",
+      "name": {
+        "en": "Differential pressure gauge — DELTA-plus",
+        "ar": "مقياس ضغط تفاضلي — DELTA-plus"
+      },
+      "description": {
+        "en": "WIKA DPG40. With integrated working pressure indication (DELTA-plus). Catalogue scale ranges: 0 … 0.16 to 0 … 10 bar.",
+        "ar": "WIKA DPG40. مع بيان مدمج لضغط التشغيل (DELTA-plus). نطاقات التدريج وفق الكتالوج: 0 … 0.16 إلى 0 … 10 بار."
+      },
+      "instrumentType": "pressure-gauge",
+      "applications": [
+        "general-industry"
+      ],
+      "datasheetUrl": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0720_en_co.pdf",
+      "sourceRef": "User-confirmed important catalogue products and model-level stock on 2026-10-13; important-products-10; photo cb4ce6e8-5635-4a35-ace6-7e2140ea49f5.jpg; SHA256 7dd6b7dfde6179452a7df85ec7f94ebd882bb13124f24b3583e81273beed5ebc; original WIKA portfolio p.10; exact highlighted model group; no SKU quantities inferred.",
+      "catalogueDetails": {
+        "manufacturer": "WIKA",
+        "image": {
+          "src": "/images/products/wika-dpg40.png",
+          "width": 230,
+          "height": 227,
+          "alt": {
+            "en": "WIKA DPG40 — Differential pressure gauge — DELTA-plus",
+            "ar": "WIKA DPG40 — مقياس ضغط تفاضلي — DELTA-plus"
+          },
+          "sourceUrl": "https://microsites.wika.com/upload/BR_ProductPortfolio_en_co_6434.pdf#page=10"
+        },
+        "specifications": [
+          {
+            "label": {
+              "en": "Version",
+              "ar": "الإصدار"
+            },
+            "value": {
+              "en": "With integrated working pressure indication (DELTA-plus)",
+              "ar": "مع بيان مدمج لضغط التشغيل (DELTA-plus)"
+            }
+          },
+          {
+            "label": {
+              "en": "Nominal size",
+              "ar": "المقاس الاسمي"
+            },
+            "value": {
+              "en": "100 mm",
+              "ar": "100 mm"
+            }
+          },
+          {
+            "label": {
+              "en": "Scale range",
+              "ar": "نطاق التدريج"
+            },
+            "value": {
+              "en": "0 … 0.16 to 0 … 10 bar",
+              "ar": "0 … 0.16 إلى 0 … 10 بار"
+            }
+          },
+          {
+            "label": {
+              "en": "Accuracy class",
+              "ar": "فئة الدقة"
+            },
+            "value": {
+              "en": "2.5",
+              "ar": "2.5"
+            }
+          },
+          {
+            "label": {
+              "en": "Ingress protection",
+              "ar": "درجة الحماية من دخول الأجسام والماء"
+            },
+            "value": {
+              "en": "IP65",
+              "ar": "IP65"
+            }
+          }
+        ],
+        "availability": "in-stock",
+        "availabilityReportedAt": "2026-10-13",
+        "datasheets": [
+          {
+            "title": "WIKA PM 07.20",
+            "url": "https://www.wika.com/media/Data-sheets/Pressure/Pressure-gauges/ds_pm0720_en_co.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "externalId": "wika-tg53",
+      "model": "TG53",
+      "category": "temperature",
+      "name": {
+        "en": "Bimetal thermometer — process version per ASME B40.200",
+        "ar": "مقياس حرارة ثنائي المعدن — للصناعات التحويلية وفق ASME B40.200"
+      },
+      "description": {
+        "en": "WIKA TG53. Process version per ASME B40.200. Catalogue scale ranges: -70 … +70 to 0 … +600 °C.",
+        "ar": "WIKA TG53. إصدار للصناعات التحويلية وفق ASME B40.200. نطاقات التدريج وفق الكتالوج: -70 … +70 إلى 0 … +600 °C."
+      },
+      "instrumentType": "temperature-instrument",
+      "applications": [
+        "oil-gas",
+        "general-industry"
+      ],
+      "datasheetUrl": "https://www.wika.com/media/Data-sheets/Temperature/Dial-thermometers/ds_tm5302_en_co.pdf",
+      "sourceRef": "User-confirmed important catalogue products and model-level stock on 2026-10-13; important-products-30; photo 2f53ba3f-b58c-4199-96f8-3ba022c26c6b.jpg; SHA256 3cb2c1cbd6b4bf971a4683127d81fc2a6dfd75122dfab2560ce4bb05fa05a878; original WIKA portfolio p.30; exact highlighted model group; no SKU quantities inferred.",
+      "catalogueDetails": {
+        "manufacturer": "WIKA",
+        "image": {
+          "src": "/images/products/wika-tg53.png",
+          "width": 128,
+          "height": 310,
+          "alt": {
+            "en": "WIKA TG53 — Bimetal thermometer — process version per ASME B40.200",
+            "ar": "WIKA TG53 — مقياس حرارة ثنائي المعدن — للصناعات التحويلية وفق ASME B40.200"
+          },
+          "sourceUrl": "https://microsites.wika.com/upload/BR_ProductPortfolio_en_co_6434.pdf#page=30"
+        },
+        "specifications": [
+          {
+            "label": {
+              "en": "Version",
+              "ar": "الإصدار"
+            },
+            "value": {
+              "en": "Process version per ASME B40.200",
+              "ar": "إصدار للصناعات التحويلية وفق ASME B40.200"
+            }
+          },
+          {
+            "label": {
+              "en": "Nominal size",
+              "ar": "المقاس الاسمي"
+            },
+            "value": {
+              "en": "3, 4, 5, 6\"",
+              "ar": "3, 4, 5, 6\""
+            }
+          },
+          {
+            "label": {
+              "en": "Scale range",
+              "ar": "نطاق التدريج"
+            },
+            "value": {
+              "en": "-70 … +70 to 0 … +600 °C",
+              "ar": "-70 … +70 إلى 0 … +600 °C"
+            }
+          },
+          {
+            "label": {
+              "en": "Wetted parts",
+              "ar": "الأجزاء الملامسة للوسط"
+            },
+            "value": {
+              "en": "Stainless steel",
+              "ar": "فولاذ مقاوم للصدأ"
+            }
+          },
+          {
+            "label": {
+              "en": "Option",
+              "ar": "خيار"
+            },
+            "value": {
+              "en": "Liquid damping to max. 250 °C (case and probe)",
+              "ar": "تخميد بالسائل حتى 250 °C كحد أقصى (الغلاف والمسبار)"
+            }
+          }
+        ],
+        "availability": "in-stock",
+        "availabilityReportedAt": "2026-10-13",
+        "datasheets": [
+          {
+            "title": "WIKA TM 53.02",
+            "url": "https://www.wika.com/media/Data-sheets/Temperature/Dial-thermometers/ds_tm5302_en_co.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "externalId": "wika-55",
+      "model": "55",
+      "category": "temperature",
+      "name": {
+        "en": "Bimetal thermometer — high-quality process version per EN 13190",
+        "ar": "مقياس حرارة ثنائي المعدن — إصدار عالي الجودة للصناعات التحويلية وفق EN 13190"
+      },
+      "description": {
+        "en": "WIKA 55. High-quality process version per EN 13190. Catalogue scale ranges: -70 … +70 to 0 … 600 °C.",
+        "ar": "WIKA 55. إصدار عالي الجودة للصناعات التحويلية وفق EN 13190. نطاقات التدريج وفق الكتالوج: -70 … +70 إلى 0 … 600 °C."
+      },
+      "instrumentType": "temperature-instrument",
+      "applications": [
+        "oil-gas",
+        "general-industry"
+      ],
+      "datasheetUrl": "https://www.wika.com/media/Data-sheets/Temperature/Dial-thermometers/ds_tm5501_en_co.pdf",
+      "sourceRef": "User-confirmed important catalogue products and model-level stock on 2026-10-13; important-products-31; photo b869adee-975e-4227-97e8-749ed180d53e.jpg; SHA256 2fbbb06852031c03f44660fab916a98a0eabbff078ede12b9669fc26af4d7c88; original WIKA portfolio p.31; exact highlighted model group; no SKU quantities inferred.",
+      "catalogueDetails": {
+        "manufacturer": "WIKA",
+        "image": {
+          "src": "/images/products/wika-55.png",
+          "width": 125,
+          "height": 352,
+          "alt": {
+            "en": "WIKA 55 — Bimetal thermometer — high-quality process version per EN 13190",
+            "ar": "WIKA 55 — مقياس حرارة ثنائي المعدن — إصدار عالي الجودة للصناعات التحويلية وفق EN 13190"
+          },
+          "sourceUrl": "https://microsites.wika.com/upload/BR_ProductPortfolio_en_co_6434.pdf#page=31"
+        },
+        "specifications": [
+          {
+            "label": {
+              "en": "Version",
+              "ar": "الإصدار"
+            },
+            "value": {
+              "en": "High-quality process version per EN 13190",
+              "ar": "إصدار عالي الجودة للصناعات التحويلية وفق EN 13190"
+            }
+          },
+          {
+            "label": {
+              "en": "Nominal size",
+              "ar": "المقاس الاسمي"
+            },
+            "value": {
+              "en": "63, 100, 160 mm",
+              "ar": "63, 100, 160 مم"
+            }
+          },
+          {
+            "label": {
+              "en": "Scale range",
+              "ar": "نطاق التدريج"
+            },
+            "value": {
+              "en": "-70 … +70 to 0 … 600 °C",
+              "ar": "-70 … +70 إلى 0 … 600 °C"
+            }
+          },
+          {
+            "label": {
+              "en": "Wetted parts",
+              "ar": "الأجزاء الملامسة للوسط"
+            },
+            "value": {
+              "en": "Stainless steel",
+              "ar": "فولاذ مقاوم للصدأ"
+            }
+          },
+          {
+            "label": {
+              "en": "Option",
+              "ar": "خيار"
+            },
+            "value": {
+              "en": "Liquid damping to max. 250 °C (case and probe)",
+              "ar": "تخميد بالسائل حتى 250 °C كحد أقصى (الغلاف والمسبار)"
+            }
+          }
+        ],
+        "availability": "in-stock",
+        "availabilityReportedAt": "2026-10-13",
+        "datasheets": [
+          {
+            "title": "WIKA TM 55.01",
+            "url": "https://www.wika.com/media/Data-sheets/Temperature/Dial-thermometers/ds_tm5501_en_co.pdf"
+          }
+        ]
+      }
+    }
+  ],
+  "stockUpdates": [
+    {
+      "id": 135,
+      "externalId": "wika-iv1",
+      "model": "IV1",
+      "availability": "in-stock",
+      "availabilityReportedAt": "2026-10-13"
+    },
+    {
+      "id": 138,
+      "externalId": "wika-iv2",
+      "model": "IV2",
+      "availability": "in-stock",
+      "availabilityReportedAt": "2026-10-13"
+    },
+    {
+      "id": 139,
+      "externalId": "wika-iv3-iv5",
+      "model": "IV3, IV5",
+      "availability": "in-stock",
+      "availabilityReportedAt": "2026-10-13"
+    }
+  ]
+}
