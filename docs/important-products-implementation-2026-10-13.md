@@ -37,7 +37,7 @@ The gallery gives the pressure gauge a larger composition and places the valve a
 
 The gallery uses responsive Next Image and below-fold lazy loading. Spring tilt loads near the gallery only on suitable desktop pointer devices; touch and reduced-motion users retain static products. Scroll reveal has a keyboard-focus override. Product impressions are measured on a bounded visible identity region, so short desktop windows can still qualify for the existing consent-based analytics.
 
-The current authentic cutouts are small. Permission to remove white backgrounds from the higher-resolution original photos with an exact local pixel process is pending. Final appearance, mobile/Arabic layout, motion and Nour's visual approval are still outstanding.
+The current authentic cutouts are small. Permission to remove white backgrounds from the higher-resolution original photos with an exact local pixel process is pending. English/Arabic mobile and desktop layouts have now been inspected. Keyboard focus and navigation, image loading and separate bottom/back basket selections across language switching and reload were verified. Source-image softness at gallery scale remains visible. Nour's visual approval and the earlier exact-photo-processing decision remain outstanding.
 
 ## Verification and release order
 
@@ -47,6 +47,15 @@ The importer is dry-run by default, requires the saved authenticated owner and a
 
 The development import succeeded: 14 created, three stock updates, and 165 published groups in total. An immediate rerun reported zero creations, zero updates and 17 unchanged groups. Local verification completed with 192 successful unit tests and TypeScript exit 0. Independent catalogue, connection-option and gallery source reviews have no unresolved findings within their reviewed scope.
 
-Remaining release steps: complete cloud build and existing SQL regressions; inspect the real preview in English and Arabic; resolve the final photo/visual approval; apply the tested migration before production code; import the reviewed catalogue; deploy and verify the new public routes, images, stock labels, options, sitemap and metadata. The expected production total is 165 groups, provided no other catalogue edits intervene.
+Remaining release steps: complete the authenticated HTTP audit; resolve the final photo/visual approval; apply the tested migration before production code; import the reviewed catalogue; deploy and verify the new public routes, images, stock labels, options, sitemap and metadata. The expected production total is 165 groups, provided no other catalogue edits intervene.
 
 Local preview attempts encountered native memory exhaustion, so no local browser or Lighthouse result is claimed. Nour explicitly authorized storing the separate development database connection and CMS secret in this branch's Vercel preview after automatic approval review requested that authorization. Production credentials/settings were not changed.
+
+## Online review evidence
+
+- Review: https://el-amal-idofstov8-nour-abulnasrs-projects.vercel.app/en and /ar. Vercel deployment `dpl_Duq49xRkfx8ML2mLbJZD4WZ2Q1Xd`, application `4cd06a3f30561f032ae1c3c54f723498c904f077`.
+- GitHub quality run: https://github.com/nourabulnasr/EL-AMAL/actions/runs/38346243512 — all steps succeeded, including the built server.
+- The initial cloud build exposed a server-only crypto import in the staff display helper; it was corrected and the entire cloud check completed again.
+- Browser evidence: `artifacts/2026-10-13/preview/`. English and Arabic at 390px; desktop at 1440px and wide English at 1920px. Keyboard outline measured solid 2.4px with no clipping or active reveal animation while focused. No horizontal mobile page overflow observed.
+- The exact-photo fallback looks soft when enlarged. This is a visual quality limitation, not final visual approval. Pointer tilt/reduced-motion behavior was source-reviewed; a complete browser interaction matrix and new performance scores are not claimed.
+- Public intake, analytics writes and indexing stay disabled in this isolated review. Production release is still pending.
