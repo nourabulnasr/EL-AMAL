@@ -109,7 +109,7 @@ test('SKU identity cannot relabel recorded stock, while activation remains edita
   assert.equal(protectSkuIdentity({operation:'create',data:created}),created);
 });
 
-import {inventoryLineLabel} from '../src/lib/inventory.ts';
+import {inventoryLineLabel} from '../src/lib/inventory-labels.ts';
 test('staff allocation distinguishes equal-quantity connection choices and retains legacy labels',()=>{
  const base={model:'232.50, 233.50',quantity:2,range:'0–10 bar'};
  const bottom=inventoryLineLabel({...base,optionNameEn:'Bottom connection',optionNameAr:'توصيل سفلي'});

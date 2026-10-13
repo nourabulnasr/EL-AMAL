@@ -1,7 +1,8 @@
 'use client';
 import {useCallback,useEffect,useRef,useState,type FormEvent} from 'react';
 import type {InventoryView} from '@/lib/inventory-service';
-import {inventoryLineLabel,type InventoryCommand,type InventoryKind} from '@/lib/inventory';
+import type {InventoryCommand,InventoryKind} from '@/lib/inventory';
+import {inventoryLineLabel} from '@/lib/inventory-labels';
 
 const labels:Record<InventoryKind,string>={receipt:'Record receipt',adjustment:'Record adjustment',hold:'Create hold',release:'Release hold',dispatch:'Dispatch hold',reconcile:'Reconcile ledger',block:'Block stock',unblock:'Unblock stock',confirm:'Confirm physical count'};
 const roleActions:Record<string,InventoryKind[]>={owner:['receipt','adjustment','hold','release','dispatch','block','unblock','confirm','reconcile'],sales:['hold','release','reconcile'],warehouse:['receipt','adjustment','dispatch','block','unblock','confirm','reconcile']};
