@@ -1,3 +1,9 @@
+## Product discovery and technical layout — 15 October 2026
+
+Implemented varied same-category recommendations (up to three, deterministic per product/day), smaller catalogue images and compact product detail layout with source-backed short specifications and a direct full-table link. Added bilingual company-industry facets for petroleum/gas, pharmaceuticals, food/beverage and general industry, intersecting with search/category/type. Public manufacturer-derived classification covers all 165 reviewed groups: 62 petroleum, 13 pharmaceutical, 24 food/beverage,164 general (overlap); medical-gas MG-1 remains in All products without an inappropriate pharmaceutical tag. Utility-only matches have explicit bilingual scope notes. See docs/product-industries-evidence-2026-10-15.md. No database schema, stock, customer records or production settings changed.
+
+Local verification: 206 unit tests completed with zero failures. TypeScript succeeded before the final industry-link additions; final TypeScript/cloud build/browser verification pending. Review branch remains codex/hero-review-and-quotation. Preview is isolated and noindex with customer intake disabled. Production visual publication awaits Nour's review under the supplied AGENTS.md; preserve the previous product-option migration release gate.
+
 ## Important products online review checkpoint — 13 October 2026
 
 Review build is ready at https://el-amal-idofstov8-nour-abulnasrs-projects.vercel.app/en (Arabic: /ar), application commit 4cd06a3f30561f032ae1c3c54f723498c904f077, Vercel deployment dpl_Duq49xRkfx8ML2mLbJZD4WZ2Q1Xd. It uses the separate development database and branch-only settings explicitly authorized by Nour. Production at www.al-amaleg.com remains on its earlier release; this batch is not live there.

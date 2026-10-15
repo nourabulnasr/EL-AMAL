@@ -1,6 +1,7 @@
 import type {Product, Translated} from './catalogue.ts';
 import {canPublish} from './access.ts';
 import {parseCatalogueDetails} from './catalogue-details.ts';
+import {getProductIndustries} from './product-industries.ts';
 
 export type Category = {id:string;name:Translated;description:Translated};
 export type Catalogue = {source:'demo'|'cms';products:Product[];categories:Category[]};
@@ -31,6 +32,11 @@ export function toPublicCatalogue(records:ProductRecord[],categoryRecords:Catego
   products.push({id:`cms-${record.id}`,model:record.model,category:category.key,...(details?{details}:{}),
    ...(record.instrumentType?{instrumentType:record.instrumentType}:{}),...(record.applications?.length?{applications:record.applications}:{}),...(safeDatasheetUrl(record.datasheetUrl)?{datasheetUrl:safeDatasheetUrl(record.datasheetUrl)!}:{}),
    name:{en:record.name.en,ar:record.name.ar},description:{en:record.description.en,ar:record.description.ar}});
+ }
+ for(const product of products){
+  const industries=getProductIndustries(product);
+  if(industries.length)product.applications=industries;
+  else delete product.applications;
  }
  const used=new Set(products.map(p=>p.category));
  return {source:'cms',products,categories:categoryRecords.filter(c=>used.has(c.key)).map(c=>({

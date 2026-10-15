@@ -1,0 +1,29 @@
+.related-products{margin-block:48px;padding-block:32px 0;border-top:1px solid var(--blue-edge)}
+.related-products-heading{display:grid;gap:16px;margin-bottom:24px}
+.related-products-heading h2{font-size:clamp(30px,3.4vw,44px);text-wrap:balance}
+.related-products-heading p{max-width:58ch;font-size:14px;line-height:1.75;color:var(--muted)}
+.related-products-list{display:grid;gap:24px}
+.related-products .product-card{display:grid;grid-template-columns:minmax(80px,104px) minmax(0,1fr);gap:20px;padding-block:0 24px;border-bottom:1px solid var(--line);align-items:start}
+.related-products .product-visual,.related-products .product-visual:has(.manufacturer-image){height:160px;min-height:160px}
+.related-products .product-visual .manufacturer-image{height:160px;max-height:160px;padding:12px;object-fit:contain}
+.related-products .product-visual .instrument-small{transform:scale(.32) rotate(-12deg)}
+.related-products .product-info{min-width:0;padding:0}
+.related-products .product-info h3{margin-top:8px;font-size:18px;line-height:1.45}
+.related-products .product-description{margin-top:8px;font-size:13px;line-height:1.65}
+.related-products .product-info .text-link{margin-top:8px;min-height:44px}
+.related-products .sample-label{font-size:9px;inset-inline:6px;bottom:6px;padding:2px 4px}
+@media(min-width:700px){
+ .related-products-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+ .related-products .product-card{display:block;border-bottom:0;padding-bottom:0}
+ .related-products .product-info{padding-top:16px}
+ .related-products .product-visual .manufacturer-image{padding:16px}
+ .related-products .product-visual .instrument-small{transform:scale(.4) rotate(-12deg)}
+}
+@media(min-width:1100px){
+ .related-products-heading{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:32px}
+ .related-products-list{gap:32px}
+}
+@media(prefers-reduced-motion:reduce){
+ .related-products .product-visual,.related-products .manufacturer-image,.related-products .instrument{transition:none;animation:none}
+ .related-products .product-visual:hover .manufacturer-image{scale:1}
+}
