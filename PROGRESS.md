@@ -1,3 +1,36 @@
+## Product discovery review completed — 15 October 2026
+
+Review URL: https://el-amal-o8j297ssq-nour-abulnasrs-projects.vercel.app/en/products
+Product example: https://el-amal-o8j297ssq-nour-abulnasrs-projects.vercel.app/en/products/cms-167
+Application commit: 4ad15ffd0a7e0cc3538636b0f330b88d4ab0d777.
+GitHub deployment 7080420111 succeeded; Vercel deployment 5ZXrRFPHiaytjMMpyxBYPGGLLCaR.
+Cloud quality run 38658770425 succeeded: 206 unit tests, TypeScript, dependency advisory checks, disposable PostgreSQL migrations, stock/report/admin/quotation/options/product-interest SQL checks, production build, and built CMS route regression. Final local TypeScript also succeeded.
+
+Implemented all three requested changes:
+- Up to three relevant recommendations, varying by product and rotating daily.
+- Smaller catalogue and detail photos, with an early summary drawn from product specifications and an accessible jump to the full specifications.
+- Four overlapping bilingual industry filters, retaining instrument categories and combinations with type and search filters.
+
+All 165 product groups were reviewed in docs/product-industries-evidence-2026-10-15.md: 62 petroleum, 13 pharmaceutical, 24 food/beverage, and 164 general industry matches. Memberships overlap. MG-1 medical gas remains available under All, category, and type without an inaccurate pharmaceutical classification. Utility applications carry a clear direct-contact limitation. Industry links and notes also appear in the technical information. Previously incorrect petroleum classifications caused by substring matching were corrected in the public catalogue projection. CMS select definitions, stock records, and customer data were unchanged; the reviewed industry mapping is maintained in code.
+
+Additional fix: the language-link href retains query parameters, uses native navigation so modifier clicks work, and preserves the hash after hydration. Query reading is isolated behind Suspense rather than making the whole header depend on client rendering.
+
+Browser verification on this exact preview:
+- English desktop at 1440px: detail photo stage 330px, product art capped at 260px.
+- Arabic phone at 390px: detail photo stage 236px; title and summary precede the photo; three related cards; no horizontal overflow.
+- The full-specification jump focuses its target and clears the sticky header.
+- Arabic pharmaceutical filter: 13 results, 13 scope notes, 220px catalogue photos. Switching to English preserved the industry selection.
+- English tablet at 768px: combining pressure switches and pharmaceuticals returned only PSD-4, with correct selected controls, contextual counts, a query-preserving language link, and no horizontal overflow.
+- The 232.50/233.50 and PSD-4 pages showed different related selections. PSD-4 displayed pharmaceutical, food/beverage, and general-industry links.
+
+Screenshots: artifacts/2026-10-15/product-discovery/detail-en-desktop.png, detail-ar-mobile.png, industry-ar-mobile.png, and industry-en-tablet.png.
+
+Verification limits: browser navigation occasionally timed out but completed when inspected. One initial pointer submission did not navigate; keyboard Enter completed the filter GET request. No console errors were observed in that check. No fresh Lighthouse scores, field Core Web Vitals, or exhaustive browser matrix are claimed. An optional additional food-filter capture was interrupted by a tool refresh and is not counted as verified.
+
+Production is unchanged. This is the existing isolated development preview, with indexing and public enquiry submission disabled. Visual publication awaits Nour under the global AGENTS approval discipline. The earlier important-products release still requires its production options migration, controlled catalogue import, verification, and photograph review.
+
+The installed Vercel CLI was verified as 54.14.2, but its saved sign-in expired. Git deployment worked and GitHub deployment status supplied the verified preview URL. Two automatically started CLI login flows were cancelled without changing settings. No emails, customer submissions, production database writes, or paid services were initiated in this turn.
+
 ## Product discovery and technical layout — 15 October 2026
 
 Implemented varied same-category recommendations (up to three, deterministic per product/day), smaller catalogue images and compact product detail layout with source-backed short specifications and a direct full-table link. Added bilingual company-industry facets for petroleum/gas, pharmaceuticals, food/beverage and general industry, intersecting with search/category/type. Public manufacturer-derived classification covers all 165 reviewed groups: 62 petroleum, 13 pharmaceutical, 24 food/beverage,164 general (overlap); medical-gas MG-1 remains in All products without an inappropriate pharmaceutical tag. Utility-only matches have explicit bilingual scope notes. See docs/product-industries-evidence-2026-10-15.md. No database schema, stock, customer records or production settings changed.
