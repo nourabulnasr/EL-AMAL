@@ -1,5 +1,6 @@
 'use client';
 import {useRef,useState} from 'react';
+import Link from 'next/link';
 import type {Locale} from '@/lib/catalogue';
 import {basketSelectionRequired,basketLineKey} from '@/lib/basket';
 import {validateEnquiry,type EnquiryDetails} from '@/lib/enquiry-preview';
@@ -27,7 +28,7 @@ export function EnquiryPreview({locale}:{locale:Locale}){
   }}>
    <div className="enquiry-fields">{(['name','email','company'] as const).map(key=><div className={`field field-${key}`} key={key}><label htmlFor={`enquiry-${key}`}>{labels[key]} <span aria-hidden="true">*</span></label><input id={`enquiry-${key}`} name={key} type={key==='email'?'email':'text'} dir={key==='email'?'ltr':undefined} autoComplete={key==='company'?'organization':key} value={details[key]} required maxLength={key==='email'?254:key==='name'?120:160} aria-invalid={!!errors[key]} aria-describedby={errors[key]?`error-${key}`:undefined} onChange={event=>setDetails({...details,[key]:event.target.value})}/>{errors[key]&&<p className="field-error" id={`error-${key}`}>{messages[key]}</p>}</div>)}
    <div className="field field-notes"><label htmlFor="enquiry-notes">{labels.notes} <span className="optional">{ar?'اختياري':'Optional'}</span></label><textarea id="enquiry-notes" name="notes" rows={4} maxLength={2000} value={details.notes} onChange={event=>setDetails({...details,notes:event.target.value})} placeholder={ar?'اذكر الوسط أو نطاق القياس أو نوع التوصيل المطلوب، إن كان معروفاً.':'Medium, measurement range or connection requirements, if known.'}/><p className="field-hint">{ar?'المواصفات النهائية تحتاج إلى مراجعة فنية.':'Final specifications require technical review.'}</p></div></div>
-   <div className="attachment-preview"><span aria-hidden="true">＋</span><div><strong>{ar?'المخططات والملفات الفنية':'Drawings & technical documents'}</strong><p>{ar?'سيتاح رفع الملفات عند تفعيل خدمة الاستفسارات الآمنة.':'File uploads will become available with the secure enquiry service.'}</p></div></div>
+   <div className="attachment-preview"><span aria-hidden="true">＋</span><div><strong>{ar?'لديك عرض سعر أو قائمة متطلبات؟':'Have a quotation or requirements list?'}</strong><p>{publicEnquiries?(ar?'استخدم نموذج الملفات المخصص. ستظل اختيارات المنتجات محفوظة في هذه السلة.':'Use the dedicated file enquiry form. Your selected products stay in this basket.'):ar?'إرسال الملفات غير متاح في هذه المعاينة.':'File submission is unavailable in this preview.'}</p>{publicEnquiries&&<Link className="text-link" href={`/${locale}/rfq#existing-quotation`}>{ar?'فتح نموذج الاستفسار بالملفات':'Open the file enquiry form'}</Link>}</div></div>
    <div className="form-actions"><button type="submit" disabled={needsSelection} className="button button-dark">{ar?'معاينة المتطلبات':'Preview requirement'}<span aria-hidden="true">↗</span></button><p>{publicEnquiries?(ar?'راجع التفاصيل قبل الإرسال.':'Review the details before submitting.'):ar?'لن يتم إرسال بريد إلكتروني من هذه المعاينة.':'This preview does not send an email.'}</p></div>
   </form>}
   <CustomerEnquirySubmit active={review&&!needsSelection} details={details} locale={locale}/>
