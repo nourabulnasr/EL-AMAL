@@ -1,0 +1,73 @@
+name: Public Lighthouse audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/hero-review-and-quotation]
+    paths: [.github/workflows/public-lighthouse.yml]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: public-lighthouse-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  public-page:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        locale: [en, ar]
+        route: [home, catalogue, product, rfq]
+    steps:
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Audit the published public page
+        env:
+          AUDIT_LOCALE: ${{ matrix.locale }}
+          AUDIT_ROUTE: ${{ matrix.route }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          case "$AUDIT_ROUTE" in
+            home) path="/$AUDIT_LOCALE" ;;
+            catalogue) path="/$AUDIT_LOCALE/products" ;;
+            product) path="/$AUDIT_LOCALE/products/cms-156" ;;
+            rfq) path="/$AUDIT_LOCALE/rfq" ;;
+            *) exit 1 ;;
+          esac
+          mkdir -p reports
+          export CHROME_PATH="$(command -v google-chrome)"
+          google-chrome --version > reports/browser-version.txt
+          npm exec --yes --package=lighthouse@13.5.0 -- lighthouse "https://www.al-amaleg.com$path" \
+            --chrome-flags=--headless \
+            --no-enable-error-reporting \
+            --only-categories=performance,accessibility,best-practices,seo \
+            --output=json --output=html --output-path=reports/audit
+      - name: Record measured results
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const r=JSON.parse(fs.readFileSync('reports/audit.report.json','utf8'));
+          const score=id=>Math.round(r.categories[id].score*100);
+          const metric=id=>r.audits[id].displayValue;
+          const summary={url:r.finalUrl,measuredAt:r.fetchTime,lighthouse:r.lighthouseVersion,environment:r.environment,settings:r.configSettings,scores:Object.fromEntries(Object.keys(r.categories).map(id=>[id,score(id)])),metrics:Object.fromEntries(['largest-contentful-paint','total-blocking-time','cumulative-layout-shift'].map(id=>[id,metric(id)])),runtimeError:r.runtimeError,warnings:r.runWarnings};
+          fs.writeFileSync('reports/summary.json',JSON.stringify(summary,null,2));
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,`### ${r.finalUrl}\n\n| Performance | Accessibility | Best practices | SEO | LCP | TBT | CLS |\n| ---: | ---: | ---: | ---: | --- | --- | --- |\n| ${score('performance')} | ${score('accessibility')} | ${score('best-practices')} | ${score('seo')} | ${metric('largest-contentful-paint')} | ${metric('total-blocking-time')} | ${metric('cumulative-layout-shift')} |\n\nSingle lab sample. RFQ noindex is intentional. These results do not establish field Core Web Vitals or Google indexing.\n`);
+          if(r.runtimeError)throw new Error(r.runtimeError.message);
+          if(r.audits['document-title'].score!==1||r.audits['html-has-lang'].score!==1)throw new Error('Expected public document was not verified; inspect report before using scores.');
+          NODE
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: lighthouse-${{ matrix.locale }}-${{ matrix.route }}
+          path: reports/
+          if-no-files-found: error
+          retention-days: 30
