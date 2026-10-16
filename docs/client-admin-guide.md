@@ -35,7 +35,7 @@ Use Forgot password on the login page and enter the email attached to your staff
 
 Reset links expire after 30 minutes. Allow ten minutes before requesting another email for the same account. If the link has expired or was already used, request a new one. Nour can investigate delivery or account access, but the account owner should choose and enter the replacement password personally.
 
-Activation and the final owner recovery check are recorded in the release checklist supplied with this guide. A generic response alone does not prove that an email was delivered.
+Password recovery is enabled on the live website. The owner must still confirm their own reset email reaches the mailbox. A generic response alone does not prove delivery. Reset emails are sent directly through Resend; they do not appear in the customer Notification queue or Verification emails list.
 
 ## Find the most clicked products
 

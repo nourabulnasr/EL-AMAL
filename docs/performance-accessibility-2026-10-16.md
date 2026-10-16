@@ -34,7 +34,47 @@ A second unchanged-production sample gave English home **89 / 96**, LCP **3.1 s*
 3. **Consent keyboard focus:** the parent agent's browser check found that declining a manually reopened analytics notice removed the focused button and left focus on the page body. The corrected component returns focus to the settings trigger only when the visitor opened it manually. The initial notice does not jump visitors down to the footer. The trigger also exposes its expanded state. Consent, privacy-signal and tracking behavior are unchanged.
 4. **Report context filter:** the backend already supported the `related` context for similar-product impressions and selections. The admin report dropdown was missing its corresponding option. “Similar products” is now selectable without adding a metric or changing stored data.
 
-The integrated project typecheck completed successfully after these corrections. Candidate/deployed retesting is still required before claiming the corrections are verified live.
+The integrated typecheck and full cloud quality run succeeded. The corrections are deployed in application `165557a`; the independent results below verify the contrast correction. Browser transport failure prevented the final production replay of consent-focus restoration, so that interaction remains implemented but not observed on production.
+
+## Independent post-release audit
+
+[GitHub Actions run 38947327009](https://github.com/nourabulnasr/EL-AMAL/actions/runs/38947327009) completed all eight public routes using Lighthouse 13.5.0 and the runner's installed Chrome. The workflow uses read-only repository permissions, no private credentials or customer data, and preserves JSON/HTML reports. All eight reports had no runtime error or warning. These are independent single lab samples, not direct hardware-matched before/after comparisons.
+
+| Public route | Performance | Accessibility | Best practices | SEO | LCP | TBT | CLS |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| English home | 74 | 100 | 100 | 100 | 2.4 s | 940 ms | 0 |
+| Arabic home | 72 | 100 | 100 | 100 | 3.6 s | 610 ms | 0.092 |
+| English catalogue | 97 | 100 | 100 | 100 | 2.3 s | 130 ms | 0 |
+| Arabic catalogue | 78 | 100 | 100 | 100 | 3.4 s | 540 ms | 0.001 |
+| English product | 84 | 100 | 100 | 100 | 2.6 s | 500 ms | 0 |
+| Arabic product | 75 | 100 | 100 | 100 | 3.4 s | 260 ms | 0.178 |
+| English RFQ | 99 | 100 | 100 | 69 | 2.2 s | 50 ms | 0 |
+| Arabic RFQ | 88 | 100 | 100 | 69 | 3.4 s | 100 ms | 0.01 |
+
+Two clean local post-release samples also completed: English home 92/100/100/100, LCP 3.0 s, TBT 140 ms, CLS 0; Arabic home 82/100/100/100, LCP 4.3 s, TBT 170 ms, CLS 0. Other local attempts hit Chrome resource errors, protocol timeouts or Node allocation failures. Their error-page scores are retained as failed tool runs and excluded from acceptance.
+
+The homepages now pass the automated contrast audit. The original HTML already included a React-generated image preload, so the explicit Next.js preload prop alone cannot be credited with every timing change. Cloud home CPU cost includes style/layout, rendering and framework hydration; no unsupported JavaScript removal was made solely to improve a score.
+
+Arabic layout movement reproduced on the independent runner. Its homepage report explicitly attributes heading movement to a late web font. Released application `5b76c21` changes only Noto Sans Arabic's display mode from `swap` to `optional`: slow first loads retain the readable fallback rather than changing line breaks after paint; quick or cached loads use the same Noto font and weights. It does not preload the Arabic font on English pages. The full quality run succeeded and production CSS was checked before remeasurement.
+
+### Final font follow-up
+
+[Run 38949697053](https://github.com/nourabulnasr/EL-AMAL/actions/runs/38949697053) ran after the final production deployment. All eight routes completed with **CLS 0**, accessibility 100 and best practices 100. Public-page SEO remained 100; the two RFQ forms remained deliberately noindex (69). Arabic home CLS changed from 0.092 to 0 and the sampled Arabic product from 0.178 to 0. Final mobile screenshots of Arabic home/product and English home were inspected; this is not a native-device or visual-approval claim.
+
+| Public route | Performance | LCP | TBT | CLS |
+| --- | ---: | ---: | ---: | ---: |
+| English home | 82 | 2.4 s | 620 ms | 0 |
+| Arabic home | 89 | 3.3 s | 80 ms | 0 |
+| English catalogue | 83 | 2.4 s | 570 ms | 0 |
+| Arabic catalogue | 86 | 3.3 s | 270 ms | 0 |
+| English product | 86 | 2.2 s | 490 ms | 0 |
+| Arabic product | 87 | 3.4 s | 150 ms | 0 |
+| English RFQ | 54 | 4.0 s | 2,050 ms | 0 |
+| Arabic RFQ | 70 | 3.4 s | 820 ms | 0 |
+
+The final English RFQ run explicitly warned that the runner CPU was slower than Lighthouse expects. The preceding independent sample of the same English form scored 99, LCP 2.2 s and TBT 50 ms; the intervening application change affects the Arabic font. These samples demonstrate substantial runner variability, not proof of an equivalent site regression or universal high performance. All results are retained, including the low sample. No further speculative code change or repeated score-seeking run was made after the specific layout-shift issue was corrected.
+
+Evidence: `artifacts/2026-10-16/finalization/cloud-audit/` and `cloud-38949697053/` contain downloaded public reports and aggregate score summaries. The reusable `.github/workflows/public-lighthouse.yml` supports manual dispatch and uses no private account/session data.
 
 ## Investigated without speculative changes
 
@@ -53,8 +93,8 @@ The report table source has a labelled, keyboard-focusable scroll region, a capt
 
 ## Acceptance status
 
-Performance work is measurable but **the 90+ mobile score on every representative page and LCP under 2.5 seconds are not yet established**. Automated accessibility is 100 on six baseline routes and 96 on two homepages before the contrast correction. A 100 automated score does not cover every WCAG criterion. Field INP under 200 ms and a field Core Web Vitals pass require sufficient real-user measurements; these Lighthouse results cannot establish them.
+Performance work is measurable but **the 90+ mobile score on every representative page and LCP under 2.5 seconds are not yet established**. Automated accessibility is 100 on all eight final routes. A 100 automated score does not cover every WCAG criterion. Field INP under 200 ms and a field Core Web Vitals pass require sufficient real-user measurements; these Lighthouse results cannot establish them.
 
-Next verification: build/deploy the integrated candidate, repeat the eight-route audit under a new label, recheck the contrast and focus corrections, preserve any remaining failures explicitly, and complete device/assistive checks when their controls are available.
+Remaining assurance: calibrated repeatable performance measurements and field data, plus actual zoom, screen-reader and physical-device acceptance. The focused release checks and font regression measurement are complete. Google indexing and real-user INP remain distinct from these lab reports.
 
 References: [Lighthouse documentation](https://developer.chrome.com/docs/lighthouse/overview), [LCP guidance](https://web.dev/articles/optimize-lcp), [font fallbacks](https://developer.chrome.com/blog/font-fallbacks), [Next.js Image preload](https://nextjs.org/docs/app/api-reference/components/image#preload), [React DOM refs](https://react.dev/learn/manipulating-the-dom-with-refs).

@@ -1,5 +1,9 @@
 # Public customer enquiry intake
 
+## Current production status — 16 October 2026
+
+Ordinary RFQs and existing-quotation intake are active at https://www.al-amaleg.com. The verified Resend sender and five-minute Inngest worker are configured; owner alerts go to `alamal4trade@hotmail.com`. Production migration `20261016_160000_quotation_upload_chunks` is recorded in batch 13 and application `165557a` delivers the three-file/10-MiB path. Live readiness and access guards were checked. See [the finalization release](finalization-release-2026-10-16.md) for evidence and remaining acceptance limits. Statements below about initial inactivity describe the dated implementation history, not current production.
+
 ## Existing quotation files — 1 October 2026
 
 The RFQ page now includes “Already have a quotation?” in English and Arabic. The basket links to the same section. A customer can provide name, email, company and optional notes without re-entering model lines. This is an explicit `quotation` request with zero product rows; an ordinary `products` request still requires valid product lines. It never creates counted stock or a reservation.
@@ -8,7 +12,7 @@ The customer confirms their email before uploading. The confirmation page accept
 
 Files share the existing encrypted PostgreSQL attachment storage, a 64 MiB service quota and 30-day expiry. No public asset URL or email attachment is created. Owner and sales staff find files through the private enquiry attachment collection. JPEG/PNG images are decoded and reconstructed. PDFs and spreadsheets receive bounded format checks but are **not antivirus scanned**. Staff must acknowledge this before downloading documents; responses force attachment download, disable caching and prevent inline rendering. Staff should scan documents with their organization's security tools before opening them.
 
-PDF checks reject advertised active features and encryption, but do not prove that an arbitrary PDF is harmless. XLSX checks bound archive entry count, expansion and paths, and reject encrypted, macro-enabled, embedded or external-link packages. Legacy `.xls`, `.xlsm`, password-protected files and unsupported formats are rejected. Validating a format is not malware clearance. Larger files and automatic malware scanning remain separate infrastructure work.
+PDF checks reject advertised active features and encryption, but do not prove that an arbitrary PDF is harmless. XLSX checks bound archive entry count, expansion and paths, and reject encrypted, macro-enabled, embedded or external-link packages. Legacy `.xls`, `.xlsm`, password-protected files and unsupported formats are rejected. Validating a format is not malware clearance. Files above 10 MiB, additional shared capacity and automatic malware scanning remain separate infrastructure work.
 
 The page can recover its upload session after a reload in the same tab. If confirmation succeeded but its response was lost, the same original email proof can recover a quotation upload grant only until that proof's original expiry. Ordinary product confirmations retain their single-use behavior. No email-address lookup or unrestricted public resend is introduced. Upload grants do not authorize reading contact details or downloading stored file contents.
 

@@ -53,7 +53,8 @@ def table(rows, widths=None, small=False):
         widths={2:[avail*.33,avail*.67],3:[avail*.19,avail*.44,avail*.37],6:[avail*.32]+[avail*.136]*5}.get(n,[avail/n]*n)
     cells=[[para(x,'GuideHeadCell' if i==0 else ('GuideCellSmall' if small else 'GuideCell')) for x in row] for i,row in enumerate(rows)]
     t=Table(cells,colWidths=widths,repeatRows=1,hAlign='LEFT')
-    t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),NAVY),('ROWBACKGROUNDS',(0,1),(-1,-1),[colors.white,colors.HexColor('#EDF3FA')]),('GRID',(0,0),(-1,-1),.45,colors.HexColor('#D9D9D9')),('VALIGN',(0,0),(-1,-1),'MIDDLE'),('LEFTPADDING',(0,0),(-1,-1),8),('RIGHTPADDING',(0,0),(-1,-1),8),('TOPPADDING',(0,0),(-1,-1),5 if small else 7),('BOTTOMPADDING',(0,0),(-1,-1),5 if small else 7)]))
+    padding=4 if rows[0][0]=='Status' else (5 if small else 7)
+    t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),NAVY),('ROWBACKGROUNDS',(0,1),(-1,-1),[colors.white,colors.HexColor('#EDF3FA')]),('GRID',(0,0),(-1,-1),.45,colors.HexColor('#D9D9D9')),('VALIGN',(0,0),(-1,-1),'MIDDLE'),('LEFTPADDING',(0,0),(-1,-1),8),('RIGHTPADDING',(0,0),(-1,-1),8),('TOPPADDING',(0,0),(-1,-1),padding),('BOTTOMPADDING',(0,0),(-1,-1),padding)]))
     return t
 
 story=[]
