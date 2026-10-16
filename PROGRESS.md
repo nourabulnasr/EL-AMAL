@@ -1,3 +1,9 @@
+## Interactive product review candidate — 16 October 2026
+
+New requested edits are implemented on `codex/hero-review-and-quotation`: optional sculpted 3D views for the three homepage products; reviewed complementary-product suggestions; and bilingual catalogue search on product pages. Nour chose simplified illustrative 3D, not manufacturer CAD. Three.js loads only on activation, one viewer at a time, with real-photo fallback, keyboard controls and reduced-motion handling. The new visual candidate awaits review. Production remains `5b76c21`.
+
+Details and verification: `docs/product-experience-2026-10-16.md`. No production data/configuration was changed. The staff analytics label is now Suggestions while historical `related` event identifiers remain intact. The existing client PDF still uses its previously delivered label until the candidate is approved and the guide is refreshed.
+
 ## Staff recovery, larger uploads and client guide delivered — 16 October 2026
 
 Production https://www.al-amaleg.com now runs tested application `5b76c21d2bb27c621ff99fa97b8208699b1a76a9` from `codex/el-amal-foundation`. Final Vercel deployment `B37EJfsDLKKAZ9ePQBCQPkM2pisU` / GitHub deployment `7126833657` succeeded. This includes the main recovery/upload release `165557a` and a bounded Arabic font-display correction. Cloud quality runs `38945065340` and `38948924842` succeeded: 217 units, TypeScript, dependency advisory gate, migrations, database regressions, build and built-route checks.

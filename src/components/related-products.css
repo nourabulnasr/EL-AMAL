@@ -3,6 +3,8 @@
 .related-products-heading h2{font-size:clamp(30px,3.4vw,44px);text-wrap:balance}
 .related-products-heading p{max-width:58ch;font-size:14px;line-height:1.75;color:var(--muted)}
 .related-products-list{display:grid;gap:24px}
+.related-product-suggestion{min-width:0}
+.related-product-purpose{margin:0 0 16px;color:var(--muted);font-size:13px;line-height:1.6}
 .related-products .product-card{display:grid;grid-template-columns:minmax(80px,104px) minmax(0,1fr);gap:20px;padding-block:0 24px;border-bottom:1px solid var(--line);align-items:start}
 .related-products .product-visual,.related-products .product-visual:has(.manufacturer-image){height:160px;min-height:160px}
 .related-products .product-visual .manufacturer-image{height:160px;max-height:160px;padding:12px;object-fit:contain}

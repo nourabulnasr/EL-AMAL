@@ -5,6 +5,7 @@ import {ProductImage} from '@/components/product-image';
 import {ProductAvailability} from '@/components/product-availability';
 import {AddToQuote} from '@/components/add-to-quote';
 import {RelatedProducts} from '@/components/related-products';
+import {ProductDetailSearch} from '@/components/product-detail-search';
 import {productSchema,schemaJson} from '@/lib/product-schema';
 import {pageMetadata} from '@/lib/page-metadata';
 import {loadCatalogue} from '@/lib/load-catalogue';
@@ -37,6 +38,7 @@ export default async function Page({params}:{params:Promise<{locale:string;slug:
  return <div className="product-page product-page-compact" data-interest-product={source==='cms'?p.id:undefined} data-interest-locale={locale} data-interest-list="detail">
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:schemaJson(productSchema(p,locale,source))}}/>
   <p className="breadcrumb"><Link href={`/${locale}`}>{t.home}</Link> / <Link href={`/${locale}/products`}>{t.catalogue}</Link> / <bdi>{p.model}</bdi></p>
+  <ProductDetailSearch locale={locale}/>
   <div className="product-detail detail-layout">
    <header className="detail-copy detail-overview">
     <Link className="section-kicker" href={`/${locale}/categories/${p.category}`}>{category?.name[locale]}</Link>
