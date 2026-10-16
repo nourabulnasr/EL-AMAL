@@ -1,4 +1,5 @@
 import type { Locale } from "../lib/catalogue";
+import { wikaRelationship } from "./business-profile";
 type InformationCopy = {
   title: string;
   eyebrow: string;
@@ -19,7 +20,7 @@ export const informationPages: Record<
       eyebrow: "About EL AMAL",
       headline: "Industrial measurement.\nA clear point of contact.",
       intro:
-        "EL AMAL focuses on pressure and temperature measurement for industrial applications. Our catalogue brings together gauges, transmitters, thermometers and instrument accessories, with model specifications and manufacturer datasheets.",
+        `${wikaRelationship.en} Our catalogue brings together pressure gauges, transmitters, thermometers and instrument accessories for industrial applications, with model specifications and manufacturer datasheets.`,
       sectionTitle: "Our focus.\nYour application.",
       sections: [
         {
@@ -42,7 +43,7 @@ export const informationPages: Record<
       eyebrow: "عن الأمل",
       headline: "القياس الصناعي.\nوتواصل واضح.",
       intro:
-        "تركز الأمل على قياس الضغط ودرجة الحرارة للتطبيقات الصناعية. يجمع كتالوجنا عدادات الضغط وأجهزة الإرسال ومقاييس الحرارة وملحقات أجهزة القياس، مع مواصفات الطرازات وأوراق البيانات من الشركات المصنعة.",
+        `${wikaRelationship.ar} يجمع كتالوجنا عدادات الضغط وأجهزة الإرسال ومقاييس الحرارة وملحقات أجهزة القياس للتطبيقات الصناعية، مع مواصفات الطرازات وأوراق البيانات من الشركات المصنعة.`,
       sectionTitle: "تخصصنا.\nوتطبيقك الصناعي.",
       sections: [
         {

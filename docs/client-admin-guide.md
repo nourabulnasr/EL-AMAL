@@ -67,7 +67,7 @@ The report counts distinct consenting 30-minute sessions per product, not every 
 
 All contexts deduplicates the same session across lists. Do not add the individual context totals together. Use Product page views sorting when you also want to compare direct visits. Google search-result CTR is a separate metric in Search Console.
 
-Choose Similar products under Product context to see activity from the suggestion cards on product pages. Use All contexts again when you want the overall product ranking.
+Choose Suggestions under Product context to see activity from the complementary-product cards on product pages. This is the former Similar products context; its earlier measurements are retained, so a date range spanning the change includes both versions. Use All contexts for the overall ranking. Opening or rotating a 3D illustration is not a product selection and does not increase Selected or CTR.
 
 ## Compare clicks with actual enquiries
 
@@ -137,7 +137,13 @@ The Catalogue details field contains structured specifications, images, model av
 
 The company-industry filters are separate from instrument categories. A model can serve more than one industry. The reviewed classification and its limitations are maintained in the site's catalogue logic; changing the CMS Applications selector alone may not change the public reviewed mapping. Ask Nour to review new industry claims rather than treating utility suitability as approval for direct food or pharmaceutical contact.
 
-Public In stock or Out of stock is a dated catalogue availability statement. It is not a counted warehouse balance. Product suggestions are generated automatically from the same instrument category, vary by product and rotate daily; staff do not need to enter them manually. The three homepage models are selected in the website configuration, not through a homepage toggle in each product record.
+Public In stock or Out of stock is a dated catalogue availability statement. It is not a counted warehouse balance. Suggestions use reviewed complementary functions, such as a pressure gauge with an isolation valve, and vary within those reviewed groups. Each card explains its role. Confirm connections, pressure/temperature range, materials and electrical details before quoting a combination. A product without reviewed companions has no suggestions section; ask Nour to review associations for new models.
+
+### Help customers explore products
+
+The homepage features 232.50/233.50, IV2 and model 55. Choose Explore in 3D to open a simplified illustration, drag to rotate, or use the arrow keys and rotation controls. Reset restores its starting angle; Actual photo returns to the real photograph. These illustrations are not manufacturer CAD or technical drawings. Use the specifications and datasheet to confirm the supplied configuration. Only one viewer opens at a time, and the photograph remains available if 3D cannot run.
+
+Every product page has a search bar below its breadcrumb trail. Enter a model or product term and press Enter or Search to open matching catalogue results in the same language. These search and 3D controls are available in English and Arabic. The three homepage models are selected in the website configuration, not through a homepage toggle in each product record; ask Nour when replacing them.
 
 ## Use staff roles and stock control
 

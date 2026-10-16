@@ -1,4 +1,5 @@
 import {pageMetadata} from '@/lib/page-metadata';
+import {businessHomeDescription} from '@/content/business-profile';
 import {WikaEvidence} from '@/components/wika-evidence';
 import {industries} from '@/content/industries';
 import Link from 'next/link';
@@ -11,7 +12,7 @@ import {ProductCard} from '@/components/product-card';
 import {FeaturedProductGallery} from '@/components/featured-product-gallery';
 import {MeasurementIcon} from '@/components/measurement-icon';
 import {RevealText} from '@/components/reveal-text';
-export async function generateMetadata({params}:{params:Promise<{locale:string}>}){const {locale}=await params;if(!isLocale(locale))notFound();return pageMetadata(locale,'',locale==='ar'?'أجهزة القياس الصناعية':'Industrial instrumentation',locale==='ar'?'تصفح أدوات قياس الضغط والحرارة والملحقات وابدأ طلب عرض سعر.':'Explore pressure and temperature instruments and accessories, and prepare a quotation request.');}
+export async function generateMetadata({params}:{params:Promise<{locale:string}>}){const {locale}=await params;if(!isLocale(locale))notFound();return pageMetadata(locale,'',locale==='ar'?'أجهزة القياس الصناعية':'Industrial instrumentation',businessHomeDescription[locale]);}
 export default async function Home({params}:{params:Promise<{locale:string}>}){
  const {locale}=await params;if(!isLocale(locale))notFound();const t=copy[locale],ar=locale==='ar';const {products,categories,source}=await loadCatalogue();
  const featured=products.slice(0,3);
