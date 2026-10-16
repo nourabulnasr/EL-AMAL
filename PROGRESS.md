@@ -4,6 +4,8 @@ New requested edits are implemented on `codex/hero-review-and-quotation`: option
 
 Details and verification: `docs/product-experience-2026-10-16.md`. No production data/configuration was changed. The staff analytics label is now Suggestions while historical `related` event identifiers remain intact. The existing client PDF still uses its previously delivered label until the candidate is approved and the guide is refreshed.
 
+Candidate `10120d8bccf51487c20aa6c98498c81703b68726` is ready at https://el-amal-bmfubrbwn-nour-abulnasrs-projects.vercel.app/en (also `/ar`). Full cloud quality run `38963072645` and Vercel preview deployment succeeded. Deployed browser checks confirmed three models, keyboard controls, one-canvas switching/photo cleanup, both-language native search results, complementary suggestions and 390px/320px Arabic layout. Final notes distinguish the local laptop memory failures from the successful cloud suite. Screenshots: `artifacts/2026-10-16/product-experience/`. Visual approval remains Nour's; production is unchanged. Local development port 3016 was stopped after browser resource failures; use the online preview.
+
 ## Staff recovery, larger uploads and client guide delivered — 16 October 2026
 
 Production https://www.al-amaleg.com now runs tested application `5b76c21d2bb27c621ff99fa97b8208699b1a76a9` from `codex/el-amal-foundation`. Final Vercel deployment `B37EJfsDLKKAZ9ePQBCQPkM2pisU` / GitHub deployment `7126833657` succeeded. This includes the main recovery/upload release `165557a` and a bounded Arabic font-display correction. Cloud quality runs `38945065340` and `38948924842` succeeded: 217 units, TypeScript, dependency advisory gate, migrations, database regressions, build and built-route checks.

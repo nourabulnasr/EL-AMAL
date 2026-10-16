@@ -28,6 +28,23 @@ A visible, labelled search form sits immediately after the breadcrumbs in both l
 
 Local TypeScript succeeded. Existing plus updated recommendation tests succeeded, and three geometry tests confirm finite vertices, genuine depth, bounded dimensions and fewer than 60,000 triangles per model. Dependency installation reported zero known advisories. Independent code review found and resolved focus clipping in the scroll reveal and a desktop CSS specificity risk.
 
-Local desktop browser checks observed a rendered gauge and IV2, working drag/button rotation, and a single canvas when switching products. The browser subsequently became unavailable; final combined preview checks, Arabic/mobile checks and cloud quality results will be appended after deployment. No fresh Lighthouse or physical-device performance result is claimed for this candidate.
+Local desktop browser checks observed a rendered gauge and IV2, working drag/button rotation, and a single canvas when switching products. The browser subsequently became unavailable and the development server was stopped to free laptop memory. A final local unit rerun also encountered native memory failures in three unrelated test files; these are not counted as successful local results.
+
+The exact combined candidate `10120d8bccf51487c20aa6c98498c81703b68726` subsequently completed the entire cloud quality run [38963072645](https://github.com/nourabulnasr/EL-AMAL/actions/runs/38963072645): units/permission checks, TypeScript, dependency advisory gate, disposable PostgreSQL migrations and business/security regressions, production build and built CMS routes. Vercel deployment `NbvaHWoAWeyaYM6f3kE4hU7fJNWY` / GitHub deployment `7128929033` succeeded.
+
+Review: [English](https://el-amal-bmfubrbwn-nour-abulnasrs-projects.vercel.app/en) and [Arabic](https://el-amal-bmfubrbwn-nour-abulnasrs-projects.vercel.app/ar). This is the existing isolated development catalogue; its IDs differ from production, indexing and public intake remain disabled.
+
+The recovered browser verified the deployed version:
+
+- All three sculptures render; thermometer responds to arrow-key rotation; gauge/valve support rotation controls and cursor drag.
+- Only one canvas remains when switching models. Returning to Actual photo removes the final canvas.
+- English detail search submitted `IV2` and reached one matching result. Arabic detail search submitted `232.50` and reached one matching result while retaining `/ar`.
+- Gauge page showed an isolation valve, snubber and syphon. IV2 page showed a pressure gauge first, with two other pressure instruments. Both-language section labels, explanations and links were observed.
+- Arabic phone layouts at 390px and 320px showed the controls without horizontal overflow. The 320px page had a 305px document content width inside a 320px viewport with scrollbar.
+- No browser console errors were observed on the deployed preview during the sculpture checks.
+
+Screenshots are in `artifacts/2026-10-16/product-experience/`: `3d-gauge-desktop.png`, `search-ar-mobile.png`, `3d-ar-mobile.png`. Saved mobile search screenshot was reopened for inspection. Temporary viewport override was reset, and the review tab was left open.
+
+No fresh Lighthouse, field Core Web Vitals, physical touch-device test or forced GPU-context-loss test is claimed. Reduced-motion and failure cleanup were reviewed in code. Nour retains visual approval.
 
 No production database, stock, customer records, email configuration or indexing settings changed. Production remains the previously approved release until Nour reviews this visual candidate.
