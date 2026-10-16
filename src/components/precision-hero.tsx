@@ -11,7 +11,7 @@ export function PrecisionHero({locale}: {locale: Locale}) {
     <PrecisionDepth locale={locale}>
       <div className="precision-image">
         <Image src="/images/precision-revealed.webp" alt="" fill sizes="100vw"
-          loading="eager" fetchPriority="high" quality={75} />
+          preload quality={75} />
       </div>
     </PrecisionDepth>
     <div className="precision-shade" aria-hidden="true" />

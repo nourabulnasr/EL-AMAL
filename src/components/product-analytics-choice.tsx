@@ -1,9 +1,10 @@
 'use client';
-import {useEffect,useState} from 'react';
+import {useEffect,useRef,useState} from 'react';
 import type {Locale} from '@/lib/catalogue';
 const storageKey='el-amal:product-analytics:v1';
 export function ProductAnalyticsChoice({locale}:{locale:Locale}){
   const ar=locale==='ar';
+  const settingsButton=useRef<HTMLButtonElement>(null),openedFromSettings=useRef(false);
   const [choice,setChoice]=useState<string|null>('loading'),[cycle,setCycle]=useState(0),[privacySignal,setPrivacySignal]=useState(false);
   useEffect(()=>{
     const signal=navigator.doNotTrack==='1'||(navigator as Navigator&{globalPrivacyControl?:boolean}).globalPrivacyControl===true;
@@ -29,11 +30,14 @@ export function ProductAnalyticsChoice({locale}:{locale:Locale}){
   const choose=(value:'granted'|'denied')=>{
     try{localStorage.setItem(storageKey,value);}catch{}
     setChoice(value);
+    // A manually reopened notice returns keyboard users to its trigger.
+    // The initial notice must not jump a visitor to the footer.
+    if(openedFromSettings.current){settingsButton.current?.focus();openedFromSettings.current=false;}
     if(value==='denied')void fetch('/api/product-interest',{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'stop'})}).catch(()=>{});
   };
   return <div className="analytics-choice">
-    <button type="button" className="intro-replay" onClick={()=>setChoice(null)}>{ar?'إعدادات إحصاءات المنتجات':'Product analytics settings'}</button>
-    {choice===null&&<aside className="analytics-notice" aria-labelledby="analytics-choice-title">
+    <button ref={settingsButton} type="button" className="intro-replay" aria-expanded={choice===null} aria-controls="product-analytics-notice" onClick={()=>{openedFromSettings.current=true;setChoice(null);}}>{ar?'إعدادات إحصاءات المنتجات':'Product analytics settings'}</button>
+    {choice===null&&<aside id="product-analytics-notice" className="analytics-notice" aria-labelledby="analytics-choice-title">
       <h2 id="analytics-choice-title">{ar?'هل تسمح بإحصاءات المنتجات؟':'Allow product analytics?'}</h2>
       <p>{ar?'تساعدنا مشاهدات المنتجات والنقرات المجهولة الاسم على فهم اهتمام العملاء. نستخدم ملف تعريف ارتباط لمدة ٣٠ دقيقة ونحتفظ بالقياسات لمدة ٩٣ يوماً. لا نرسل بيانات الاتصال أو الملفات أو كلمات البحث. اختيارك لا يؤثر على طلب عرض السعر.':'Product views and clicks help us understand customer interest. We use a 30-minute pseudonymous cookie and keep measurements for 93 days. Contact details, files and search terms are excluded. Your choice does not affect quotation requests.'}</p>
       {privacySignal&&<p>{ar?'إشارة الخصوصية في متصفحك تمنع التتبع.':'Your browser privacy signal keeps measurement off.'}</p>}

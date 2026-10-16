@@ -22,6 +22,16 @@ test('quotation PDFs remain explicitly unscanned, bounded documents',async()=>{
  const result=await validate(bytes,'application/pdf','quote.pdf');
  assert.deepEqual(result.bytes,bytes);assert.equal(result.contentType,'application/pdf');assert.equal(result.safety,'unscanned-document');
 });
+
+test('quotation validation supports the agreed 10 MiB boundary and authenticated round trip',async()=>{
+ const size=10*1024*1024,header=Buffer.from('%PDF-1.7\n'),tail=Buffer.from('\n%%EOF\n');
+ const bytes=Buffer.concat([header,Buffer.alloc(size-header.length-tail.length,32),tail]);
+ const result=await validate(bytes,'application/pdf','large quotation.pdf');
+ assert.equal(result.bytes.length,size);
+ const secret='synthetic-encryption-secret-'.repeat(3),aad='synthetic-file';
+ assert.deepEqual(files.openAttachment(files.sealAttachment(bytes,secret,aad),secret,aad),bytes);
+ await assert.rejects(()=>validate(Buffer.concat([bytes,Buffer.from(' ')]),'application/pdf','large quotation.pdf'));
+});
 test('quotation rejects spoofed, encrypted, active and oversized PDFs',async()=>{
  for(const bytes of [Buffer.from('not PDF'),Buffer.from('%PDF-1.7\n/Encrypt 1 0 R\n%%EOF'),Buffer.from('%PDF-1.7\n/Java#53cript\n%%EOF'),Buffer.alloc(2097153)]) await assert.rejects(async()=>validate(bytes,'application/pdf','quote.pdf'));
  await assert.rejects(async()=>validate(Buffer.from('%PDF-1.7\n%%EOF'),'application/pdf','quote.exe'));

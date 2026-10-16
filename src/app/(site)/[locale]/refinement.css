@@ -50,7 +50,8 @@
     .reveal-line>span{animation:heading-unveil linear both;animation-timeline:view();animation-range:entry 0% cover 22%}
   }
 }
-@keyframes heading-unveil{from{transform:translateY(65%);opacity:.3}to{transform:translateY(0);opacity:1}}
+/* Keep the approved reveal movement without lowering readable text contrast. */
+@keyframes heading-unveil{from{transform:translateY(65%)}to{transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){
   .measurement-icon .icon-needle,.footer-email bdi{transition:none}
   .category-row:hover .icon-needle,.category-row:focus-visible .icon-needle{transform:none}

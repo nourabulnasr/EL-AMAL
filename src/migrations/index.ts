@@ -11,6 +11,7 @@ import * as migration_20260929_141342_inventory_completion from './20260929_1413
 import * as migration_20261001_120000_existing_quotations from './20261001_120000_existing_quotations';
 import * as migration_20261007_120000_product_interest from './20261007_120000_product_interest';
 import * as migration_20261013_120000_enquiry_connection_options from './20261013_120000_enquiry_connection_options';
+import * as migration_20261016_160000_quotation_upload_chunks from './20261016_160000_quotation_upload_chunks';
 
 export const migrations = [
   {
@@ -66,4 +67,5 @@ export const migrations = [
   {up:migration_20261001_120000_existing_quotations.up,down:migration_20261001_120000_existing_quotations.down,name:'20261001_120000_existing_quotations'},
   {up:migration_20261007_120000_product_interest.up,down:migration_20261007_120000_product_interest.down,name:'20261007_120000_product_interest'},
   {up:migration_20261013_120000_enquiry_connection_options.up,down:migration_20261013_120000_enquiry_connection_options.down,name:'20261013_120000_enquiry_connection_options'},
+  {up:migration_20261016_160000_quotation_upload_chunks.up,down:migration_20261016_160000_quotation_upload_chunks.down,name:'20261016_160000_quotation_upload_chunks'},
 ];

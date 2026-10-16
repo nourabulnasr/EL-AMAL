@@ -1,4 +1,4 @@
-type FileResult={bytes:Buffer|null;contentType:string;unscanned:boolean}|null;
+type FileResult={bytes:Buffer|null;contentType:string;unscanned:boolean;byteCount?:number}|null;
 type Deps={enabled:()=>boolean;read:(id:number,headers:Headers,allowUnscanned:boolean)=>Promise<FileResult>};
 const headers={'Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','X-Robots-Tag':'noindex, nofollow'};
 const denied=()=>new Response('Not found',{status:404,headers});
@@ -15,6 +15,7 @@ export function attachmentDownloadHandler(deps:Deps){return async(request:Reques
   }else if(request.method!=='GET')return denied();
   try{
     const file=await deps.read(Number(id),request.headers,acknowledged);if(!file)return denied();
+    if((file.byteCount??file.bytes?.length??0)>2*1024*1024)return new Response(null,{status:303,headers:{...headers,Location:`/staff/files/${id}`}});
     if(file.unscanned&&!acknowledged){
       return new Response(`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Review unscanned document</title><main><h1>This document has not been virus scanned</h1><p>A customer supplied this PDF or Excel file. File-type checks do not establish that it is safe. Scan it with your organisation's security software before opening. Keep macros, external content and links disabled. This website does not preview or execute the document.</p><form method="post"><button name="acknowledge" value="unscanned">I understand — download for scanning</button></form><p>Only owner and sales staff can access this file. The download does not send it to any external scanner.</p></main></html>`,{headers:{...headers,'Content-Type':'text/html; charset=utf-8','Content-Security-Policy':"default-src 'none'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'"}});
     }

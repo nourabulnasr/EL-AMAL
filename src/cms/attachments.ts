@@ -10,7 +10,7 @@ export const EnquiryAttachments:CollectionConfig={
     {name:'reference',type:'text',required:true},
     {name:'filename',type:'text',required:true},
     {name:'contentType',type:'text',required:true},
-    {name:'byteCount',type:'number',required:true,min:1,max:2097152},
+    {name:'byteCount',type:'number',required:true,min:1,max:10485760},
     {name:'contentHash',type:'text',required:true,admin:{hidden:true},access:{read:()=>false}},
     {name:'sealedData',type:'textarea',required:true,admin:{hidden:true},access:{read:()=>false}},
     {name:'expiresAt',type:'date',required:true,index:true},

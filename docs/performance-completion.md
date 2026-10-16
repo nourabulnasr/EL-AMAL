@@ -1,5 +1,7 @@
 # Public performance follow-up — 29 September 2026
 
+**Current evidence, 16 October 2026:** see [the new performance and accessibility audit](performance-accessibility-2026-10-16.md) for eight real-catalogue EN/AR lab samples, repeat measurements, targeted browser checks and current corrections. That report supersedes the historical measurements below for the current site. Consistent 90+ mobile performance, LCP below 2.5 seconds and field Core Web Vitals are not yet established.
+
 The font-loading candidate reduces unnecessary assets without changing the approved navy/white/orange design, entrance, product photographs or CMS publication behavior. A new production build and browser measurements are still required. The existing mobile targets are not yet verified as met.
 
 ## Existing production baseline
