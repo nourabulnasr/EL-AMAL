@@ -1,6 +1,6 @@
 # Interactive products and complementary discovery
 
-Nour requested three cursor-interactive homepage products, complementary suggestions instead of similar models, and catalogue search on product pages. Nour selected **sculpted, simplified 3D illustrations**, with real photography retained. This candidate is for visual review; it is not yet the production design.
+Nour requested three cursor-interactive homepage products, complementary suggestions instead of similar models, and catalogue search on product pages. Nour selected **sculpted, simplified 3D illustrations**, with real photography retained. Nour subsequently approved this candidate. It is now live; the [17 October production report](product-experience-release-2026-10-17.md) records deployment, fresh measurements and client handover. The original candidate evidence below is retained as dated history.
 
 ## Design and operation
 
@@ -47,4 +47,4 @@ Screenshots are in `artifacts/2026-10-16/product-experience/`: `3d-gauge-desktop
 
 No fresh Lighthouse, field Core Web Vitals, physical touch-device test or forced GPU-context-loss test is claimed. Reduced-motion and failure cleanup were reviewed in code. Nour retains visual approval.
 
-No production database, stock, customer records, email configuration or indexing settings changed. Production remains the previously approved release until Nour reviews this visual candidate.
+No production database, stock, customer records, email configuration or indexing settings changed. That original preview boundary is superseded by Nour's approval and the verified production release linked above.
