@@ -1,3 +1,15 @@
+## Approved product release is live — 16 October 2026
+
+Nour approved publication. Production https://www.al-amaleg.com now runs application f91ae67db11c89b58f27e22e21ddd6516c272ccb through codex/el-amal-foundation. GitHub production deployment 7118092607 succeeded; URL https://el-amal-7345cxoax-nour-abulnasrs-projects.vercel.app. Both final cloud quality workflows 38895567341 and 38895566183 succeeded, including 206 units, TypeScript, advisory gate, database regressions, build and built-route checks.
+
+Applied additive connection-options migration batch 12; targeted import created 14 products and updated stock on 3 existing valve groups, preserving IDs 135/138/139. Published count increased from 151 to 165; idempotent rerun left 17 unchanged. Homepage products are 232.50/233.50 (cms-156), IV2 (cms-138), and 55 EN 13190 (cms-165). Up to 3 same-category suggestions vary by product/day; smaller images, early specifications, connection choices and bilingual industry filters are live. Industry totals of 62 petroleum, 13 pharmaceutical, 24 food/beverage and 164 general-industry products overlap.
+
+Live audit verified 34 affected EN/AR pages, specifications/images/options, homepage selections, 64 recommendation targets and combined filters. Browser verified desktop/mobile layouts, filter-preserving language switches, separate bottom/back basket lines and suggestion navigation. Final live basket instructions were corrected in both languages; all temporary basket lines removed, no customer enquiry or email submitted this turn. Both public intake capabilities enabled; delivery-worker health fresh at 14:43 Cairo. Owner inbox remains alamal4trade@hotmail.com.
+
+Full technical SEO crawl: 372 public pages and sitemap URLs, 169 image assets, 165 products per language, zero covered issues. Google Search Console sitemap now Success; resubmitted 16 October. Google's last read on 15 October previously discovered 342 URLs; the new 372-URL sitemap awaits processing. Page indexing report labelled 12 October showed 3 indexed and 6 not indexed. English/Arabic cms-156 indexing requests were both accepted into the priority queue, not confirmed indexed. Private/form/filter exclusions are intentional. No further DNS needed. No new Lighthouse, field Core Web Vitals or independent penetration-test result claimed.
+
+Current detail and remaining ownership register: docs/production-release-2026-10-16.md and docs/final-client-inputs.md. Open: company/CEO/contact facts; strong owner credentials/staff recovery acceptance; mailbox Inbox/Spam confirmation; privacy/upload-scope decisions; agreed backups/restore; broader accessibility/performance checks and refreshed handbook. Uploads remain 3 × 2 MiB PDF/XLSX/JPEG/PNG with private access and 30-day expiry; original 10 MB scope and malware scanning are not delivered. Checkly remains explicitly deferred. Earlier 151-product, preview-only and pending-approval statements below are historical and superseded by this release.
+
 ## Product discovery review completed — 15 October 2026
 
 Review URL: https://el-amal-o8j297ssq-nour-abulnasrs-projects.vercel.app/en/products

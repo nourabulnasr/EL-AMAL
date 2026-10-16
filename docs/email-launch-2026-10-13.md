@@ -1,5 +1,15 @@
 # Email and quotation activation — 13 October 2026
 
+## Current status addendum — 16 October 2026
+
+The approved product release is now live at **https://www.al-amaleg.com**, with 165 published product groups, bilingual related-product suggestions, smaller product images and company-industry filters. The catalogue and three homepage-product choices have been supplied and implemented; they are no longer missing client inputs. The historical email activation evidence below remains applicable, including the owner recipient **alamal4trade@hotmail.com**. This release audit did not send another customer email or repeat the live upload journey.
+
+Google Search Console ownership is verified. The sitemap was resubmitted on 16 October and Google confirmed **Sitemap submitted successfully**. Its table now shows **Success**, last read 15 October and 342 previously discovered URLs, resolving the earlier **Couldn't fetch** status recorded below. The current sitemap contains **372 URLs**; Google has not yet been shown to process all of the new URLs.
+
+The fresh production technical SEO audit checked **372 public pages and 169 image assets**, including all **165 English and 165 Arabic product pages**, with zero detected issues in its covered checks. See `artifacts/2026-10-16/release/seo-live-audit.json` and [current SEO readiness](seo-readiness.md). Search Console's report inspected today, labelled 12 October, showed **3 indexed and 6 not indexed pages**. Intentional RFQ exclusions and Google's not-yet-indexed public pages are distinct; the new `/en/products/cms-156` was discovered but not indexed. Sitemap submission and a successful technical audit do not prove complete indexing or any ranking.
+
+Still outstanding from the earlier operating checklist: client confirmation of Hotmail Inbox/Spam placement, strong named staff credentials and the genuine recovery journey, final company/CEO and business-contact facts, stock quantities/configurations where required, privacy/retention acceptance and backup/recovery ownership. Monitoring remains explicitly deferred. The dated remainder of this document preserves the original activation evidence and must not be read as a new request for the already supplied product folder or homepage choices.
+
 This record supersedes older email-setup instructions. The receiving address was corrected by Nour on 13 October: **alamal4trade@hotmail.com**, matching the website footer. The earlier iCloud address is no longer the owner's notification destination.
 
 ## Addresses and responsibilities
