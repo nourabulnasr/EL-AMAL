@@ -1,3 +1,11 @@
+## Final refinements in review — 24 October 2026 (Cairo)
+
+Review commit 6bb5bbfb07d4399fa5535892d816142701ac53d3 is built at https://el-amal-4wlh2baxg-nour-abulnasrs-projects.vercel.app. It includes the bilingual EL-AMAL slogan, framed two-column WIKA section, page-three category cohorts promoted to page one, and Suggestions disclosure beside quotation controls. Next.js is 16.4.3; DOMPurify package override is 3.4.17.
+
+CI 40090215743 succeeded on units/permissions and TypeScript but failed the Zod/Inngest advisory gate; downstream database/build/runtime jobs were skipped. Monaco's actual runtime sanitiser also requires verification/remediation. No security exception was added. Scheduler request hardening is additionally implemented and reviewed, with 8 focused tests (including successful signed dispatch) and TypeScript succeeding. No real email or production data mutation was performed.
+
+Production remains 41fd9dbffe55849cc2b1bfa5e851498198f26205. Hosted review access succeeded: EN native Return/Space disclosure controls, Arabic390/320px overflow, gauge-to-valve navigation and valve-to-pressure Suggestions were checked. Arabic WIKA desktop screenshot saved. Fresh live SEO audit checked372publicURLs/169images with zero covered issues (exit0), not an indexing guarantee. Local browser was memory-limited; use hosted preview. Do not promote the isolated preview environment. Full checkpoint and remaining work: docs/final-refinements-2026-10-24.md. Historical evidence below is not a fresh release claim.
+
 ## Interactive products deployed and verified — 17 October 2026 (Cairo)
 
 Production https://www.al-amaleg.com runs `41fd9dbffe55849cc2b1bfa5e851498198f26205`, Vercel `Ehx66jrse1ua9uyv71G29brFRQMw`, GitHub deployment `7129538082`. Nour approved the sculpted 3D gallery, complementary Suggestions and bilingual product-page search. All are live and verified, with phone +201017314349 and the client-confirmed official WIKA distributor statement. WhatsApp was not inferred. Quality runs 38965761267 and 38966827297 succeeded; no production database migration was required.

@@ -1,8 +1,12 @@
 # EL AMAL remaining inputs and completion work
 
-Updated 17 October 2026 (Cairo). This is the current action register for Nour, the client and engineering. Earlier release records linked below preserve the history; their former pending items are not new requests.
+Updated 24 October 2026 (Cairo). This is the current action register for Nour, the client and engineering. Earlier release records linked below preserve the history; their former pending items are not new requests.
 
 Nour approved the three interactive 3D product illustrations, complementary Suggestions and product-page search in Arabic and English. They are deployed and verified at https://www.al-amaleg.com. Final application `41fd9dbffe55849cc2b1bfa5e851498198f26205` also publishes the confirmed official WIKA distributor relationship and supplied telephone number, with the established framed typography. The catalogue still has **165 published groups**; no database migration was needed. Full cloud quality runs succeeded, and live bilingual/mobile checks, a 372-page SEO crawl and eight-route performance/accessibility measurements are recorded in the [current release report](product-experience-release-2026-10-17.md). The refreshed nine-page client guide is delivered with this release. Earlier release records remain historical evidence.
+
+## Latest engineering checkpoint
+
+The requested slogan, WIKA panels, category ordering and prominent Suggestions are implemented in a protected review deployment, not yet production. The release is held for Zod/Inngest and Monaco runtime security findings and final bilingual browser checks. A 64 KiB scheduler request guard has eight successful focused tests, including authenticated dispatch; it mitigates exposure without declaring the dependency advisory resolved. See [24 October refinement checkpoint](final-refinements-2026-10-24.md). Vercel review access has succeeded; representative bilingual/keyboard/mobile checks are recorded in the checkpoint. Fresh production SEO crawl: 372 pages and 169 images, zero covered issues. The 17 October results below remain historical production evidence.
 
 ## Already supplied or completed
 

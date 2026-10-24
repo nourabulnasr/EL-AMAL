@@ -2,6 +2,7 @@ import {Inngest} from 'inngest';
 import {serve} from 'inngest/next';
 import type {NextRequest} from 'next/server';
 import {cmsEnabled} from './cms-runtime.ts';
+import {boundedSchedulerRequest,SchedulerRequestError} from './scheduler-request.ts';
 
 type DeliveryResult={outcome:string;processed?:number;accepted?:number;failures?:number};
 type Run=()=>Promise<DeliveryResult>;
@@ -29,7 +30,11 @@ export function createDeliveryScheduler(env:Record<string,string|undefined>,run:
   if(env.VERCEL_ENV!=='production'||!cmsEnabled(env)||env.DELIVERY_OPERATIONS_ENABLED!=='true'||!env.INNGEST_SIGNING_KEY?.trim()){
    return Response.json({error:'Delivery schedule unavailable'},{status:503,headers});
   }
-  const response=await handler(request,context);
+  let input:Request;
+  try{input=await boundedSchedulerRequest(request);}
+  catch(error){return Response.json({error:'Invalid scheduler request'},{status:error instanceof SchedulerRequestError?error.status:400,headers});}
+  // Inngest's App Router adapter consumes the standard Request body, URL and headers.
+  const response=await handler(input as NextRequest,context);
   for(const [name,value] of Object.entries(headers))response.headers.set(name,value);
   return response;
  };

@@ -1,3 +1,5 @@
+import canonicalize from 'canonicalize';
+import {createHmac} from 'node:crypto';
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {createDeliveryScheduler,runScheduledDelivery} from '../src/lib/delivery-scheduler.ts';
@@ -33,4 +35,28 @@ test('scheduler results contain only outcome and counts, with failures exposed f
  assert.deepEqual(await runScheduledDelivery(async()=>({outcome:'overlap'})),{outcome:'overlap'});
  for(const outcome of ['degraded','disabled','stale','error'])await assert.rejects(runScheduledDelivery(async()=>({outcome})),/Delivery schedule unavailable/);
  await assert.rejects(runScheduledDelivery(async()=>{throw new Error('private@example.invalid');}),error=>error.message==='Delivery schedule unavailable');
+});
+
+// Synthetic signing key and callback: no provider, database or email is contacted.
+test('signed scheduler execution survives request bounding and rejects an oversized signed body',async()=>{
+ let calls=0;
+ const handlers=createDeliveryScheduler(env,async()=>{calls++;return {outcome:'complete',processed:0,accepted:0,failures:0};});
+ const signed=body=>{
+  const timestamp=String(Math.floor(Date.now()/1000));
+  const signature=createHmac('sha256','a'.repeat(64)).update(body.trim()?canonicalize(JSON.parse(body)):body).update(timestamp).digest('hex');
+  return new Request('https://www.al-amaleg.com/api/inngest?fnId=el-amal-delivery-process-quotation-delivery&stepId=step',{
+   method:'POST',headers:{'content-type':'application/json','x-inngest-signature':`t=${timestamp}&s=${signature}`},body,
+  });
+ };
+ const event={name:'inngest/scheduled.timer',data:{},ts:Date.now()};
+ const body=JSON.stringify({version:2,event,events:[event],steps:{},ctx:{run_id:'synthetic-scheduler-regression',attempt:0,use_api:false}});
+ const response=await handlers.POST(signed(body));
+ const result=await response.text();
+ assert.equal(response.status,200,result);
+ assert.equal(calls,1);
+ assert.deepEqual(JSON.parse(result),{outcome:'complete',processed:0,accepted:0,failures:0});
+ assert.equal(response.headers.get('cache-control'),'private, no-store');
+ const oversized=await handlers.POST(signed(' '.repeat(65537)));
+ assert.equal(oversized.status,413);
+ assert.equal(calls,1);
 });
