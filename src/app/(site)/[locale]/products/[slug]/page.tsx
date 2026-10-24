@@ -57,6 +57,7 @@ export default async function Page({params}:{params:Promise<{locale:string;slug:
    <div className="detail-copy detail-purchase">
     <ProductAvailability product={p} locale={locale}/>
     <AddToQuote id={p.id} locale={locale} options={p.details?.options}/>
+    <RelatedProducts product={p} products={products} locale={locale} demo={source==='demo'}/>
     <div className="product-assurance">
      <p>{locale==='en'?'Select the model. Confirm the configuration.':'اختر الطراز. وأكد التكوين.'}</p>
      <span>{locale==='en'?'Adding to your basket does not reserve stock or place an order.':'الإضافة إلى السلة لا تحجز مخزوناً ولا تنشئ طلب شراء.'}</span>
@@ -76,7 +77,6 @@ export default async function Page({params}:{params:Promise<{locale:string;slug:
     {p.details?.specifications.map((spec,index)=><div key={index}><dt>{spec.label[locale]}</dt><dd dir="auto"><BidiText>{spec.value[locale]}</BidiText></dd></div>)}
    </dl>
   </section>
-  <RelatedProducts product={p} products={products} locale={locale} demo={source==='demo'}/>
   <Link className="text-link" href={`/${locale}/products`}>{t.back}</Link>
  </div>;
 }
