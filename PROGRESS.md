@@ -1,3 +1,9 @@
+## Refinements published — verified 25 October 2026 (Cairo)
+
+Production https://www.al-amaleg.com runs commit 0562013950c47c33de79127a7d294aff2c8240b1, Vercel HKB13UaGVTmdug6c8FD8gimA66y7, GitHub deployment 7302915531. Nour explicitly requested publication after disclosure of the remaining security findings. The bilingual slogan/reveal, framed WIKA panels, Pressure/Temperature ordering and prominent complementary Suggestions are live, with Next16.4.3 and bounded signed scheduler requests. Production settings were used; the isolated preview environment was not promoted. No DB migration or test email was required.
+
+Production checks: 12 targeted EN/AR routes, full crawl372 pages/169images with zero covered issues,165/165 product groups published, both enquiry capabilities enabled, fresh successful delivery worker. EN click/Return and Arabic Suggestions checked in the live browser. CI40121520330 units/permissions and TypeScript succeeded; dependency audit failed and downstream checks skipped. Zod/Inngest advisory and Monaco runtime sanitiser remain unresolved; no security gate was disabled. Fresh final-release performance/accessibility measurements and closed-panel analytics visibility remain work. Details and evidence: docs/refinements-production-release-2026-10-25.md. The review-only status below is historical and superseded.
+
 ## Final refinements in review — 24 October 2026 (Cairo)
 
 Review commit 6bb5bbfb07d4399fa5535892d816142701ac53d3 is built at https://el-amal-4wlh2baxg-nour-abulnasrs-projects.vercel.app. It includes the bilingual EL-AMAL slogan, framed two-column WIKA section, page-three category cohorts promoted to page one, and Suggestions disclosure beside quotation controls. Next.js is 16.4.3; DOMPurify package override is 3.4.17.

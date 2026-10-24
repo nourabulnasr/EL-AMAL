@@ -1,6 +1,8 @@
 # EL AMAL final refinements — 24 October 2026
 
-## What is ready for review
+> **Publication update, 25 October:** Nour subsequently requested publication. Commit 0562013 is now live with production settings. The review-only statements below describe the earlier checkpoint and are superseded by [the production release record](refinements-production-release-2026-10-25.md). The two dependency findings remain unresolved.
+
+## What was ready for review
 
 The English and Arabic implementation is committed as 6bb5bbfb07d4399fa5535892d816142701ac53d3 on codex/hero-review-and-quotation.
 
