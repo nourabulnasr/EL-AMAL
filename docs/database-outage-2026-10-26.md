@@ -28,3 +28,9 @@ Implementation references: installed Next.js unstable_cache documentation and ht
 - Independent code review found no blocking issue; query-contract assertions were strengthened on its recommendation. Concurrent cold requests can still each fetch records. Hosted cache/runtime verification and release remain pending. No claim of restored production service is made.
 
 Evidence: artifacts/2026-10-26 public responses and outage-tests.log. Avoid repeated whole-site crawls during quota recovery. After access is restored, verify DB health, a small bilingual route sample, product count, delivery-worker freshness and representative admin access.
+
+## Hosted checkpoint — 27 October
+
+Reviewed patch aa2699aa5925c0066b27c9700186cf95941493af is pushed to codex/hero-review-and-quotation. Vercel preview TnoxHRVxB414YWk89QB4HBsFAqnU / GitHub deployment7343864506 completed successfully at https://el-amal-bfi2s7p6a-nour-abulnasrs-projects.vercel.app. Cloud quality40403283012 passed units and TypeScript but stopped at the existing dependency-advisory gate; downstream isolated database/build/runtime checks were skipped. No gate was weakened. Production was not changed. The last direct production database check still returned quota denial.
+
+Anonymous EN/AR preview probes redirect to Vercel SSO (302). Browser control became unavailable during this turn, so authenticated hosted runtime checks remain unverified. No preview protection was disabled.
