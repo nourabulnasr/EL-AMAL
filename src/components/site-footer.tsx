@@ -14,6 +14,7 @@ export function SiteFooter({locale,analyticsEnabled}:{locale:Locale;analyticsEna
       <Link href={`/${locale}/products`}>{t.catalogue}</Link>
       <Link href={`/${locale}/quote`}>{t.quote}</Link>
       <Link href={`/${locale}/about`}>{ar?'من نحن':'About us'}</Link>
+      <Link href={`/${locale}/solutions`}>{ar?'حلول القياس':'Measurement solutions'}</Link>
       <Link href={`/${locale}/resources`}>{ar?'الموارد':'Resources'}</Link>
       <Link href={`/${locale}/contact`}>{ar?'تواصل معنا':'Contact'}</Link>
     </div>

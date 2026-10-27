@@ -1,11 +1,9 @@
 import {siteOrigin} from '@/lib/site-policy.mjs';
 import type {Locale} from '@/lib/catalogue';
 import {businessContact} from '@/lib/business-contact';
+import {buildSiteSchema} from '@/lib/site-schema';
 export function SiteSchema({locale}:{locale:Locale}){
  const origin=siteOrigin(),contact=businessContact();
- const schema={'@context':'https://schema.org','@graph':[
-  {'@type':'WebSite','@id':`${origin}/#website`,name:'EL AMAL',url:origin,inLanguage:['en','ar'],publisher:{'@id':`${origin}/#organization`}},
-  {'@type':'Organization','@id':`${origin}/#organization`,name:'EL AMAL',alternateName:'الأمل',url:origin,email:contact.email,telephone:contact.phone,logo:{'@type':'ImageObject',url:`${origin}/brand/el-amal-logo.png`,width:756,height:181}},
- ]};
+ const schema=buildSiteSchema({locale,origin,contact});
  return <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema).replace(/</g,'\\u003c')}}/>;
 }

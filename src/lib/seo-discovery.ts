@@ -13,7 +13,7 @@ export function cataloguePath({query='',category='',instrumentType='',applicatio
 export function buildCatalogueSitemap(catalogue:Catalogue,env:Record<string,string|undefined>=process.env):MetadataRoute.Sitemap{
  if(!indexingEnabled(env)||catalogue.source!=='cms')return [];
  const origin=siteOrigin(env),{products,categories}=catalogue;
- const entries:{path:string;image?:string}[]=['','/about','/contact','/resources','/industries/oil-gas','/industries/general-industry'].map(path=>({path}));
+ const entries:{path:string;image?:string}[]=['','/about','/contact','/resources','/industries/oil-gas','/industries/pharmaceuticals','/industries/food-beverage','/industries/general-industry','/solutions','/solutions/pressure-instruments-egypt','/solutions/temperature-instruments-egypt','/solutions/wika-instruments-egypt'].map(path=>({path}));
  const addPages=(items:unknown[],category='')=>{
   for(let page=1;page<=paginateProducts(items,'').pages;page++)entries.push({path:cataloguePath({category,page})});
  };

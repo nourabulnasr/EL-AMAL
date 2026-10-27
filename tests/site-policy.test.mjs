@@ -36,6 +36,11 @@ test('bilingual metadata has matching canonical, language and sharing links',()=
  assert.equal(metadata.twitter.images[0],metadata.openGraph.images[0].url);
  assert.equal(pageMetadata('en','/quote','Basket','Details').robots.index,false);
 });
+test('page titles do not duplicate the brand already supplied by the layout template',()=>{
+ const metadata=pageMetadata('en','/solutions/wika-instruments-egypt','Official WIKA Distributor in Egypt | EL AMAL','Details');
+ assert.equal(metadata.title,'Official WIKA Distributor in Egypt');
+ assert.equal(metadata.openGraph.title,'Official WIKA Distributor in Egypt | EL AMAL');
+});
 test('HTTP indexing rules protect private and filtered paths without blocking public pagination or assets',()=>{
  const live={SITE_INDEXING_ENABLED:'true',CATALOGUE_SOURCE:'cms',CMS_ENABLED:'true',VERCEL_ENV:'production'};
  const headerFor=(path,env)=>{const url=new URL(path,'https://example.com');let result='';for(const rule of indexingHeaders(env)){if(pathMatcher.pathToRegexp(rule.source).test(url.pathname)&&(!rule.has||rule.has.every(condition=>url.searchParams.has(condition.key))))result=rule.headers.find(header=>header.key==='X-Robots-Tag').value;}return result;};

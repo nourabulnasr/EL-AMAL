@@ -6,7 +6,7 @@ const products=Array.from({length:25},(_,i)=>({id:`model-${i+1}`,category:'press
 const catalogue={source:'cms',products,categories:[{id:'pressure'},{id:'empty'}]};
 test('sitemap contains public bilingual products and real pagination but excludes forms and empty categories',()=>{
  const entries=buildCatalogueSitemap(catalogue,live),urls=entries.map(entry=>entry.url);
- for(const path of ['/en/products?page=2','/ar/products?page=2','/en/categories/pressure?page=2','/ar/products/model-25'])assert.ok(urls.includes(`https://example.com${path}`),path);
+ for(const path of ['/en/products?page=2','/ar/products?page=2','/en/categories/pressure?page=2','/ar/products/model-25','/en/industries/pharmaceuticals','/ar/industries/food-beverage','/en/solutions','/ar/solutions/pressure-instruments-egypt'])assert.ok(urls.includes(`https://example.com${path}`),path);
  for(const path of ['/en/rfq','/ar/quote','/en/verify','/en/categories/empty','/en/products?page=3'])assert.ok(!urls.includes(`https://example.com${path}`),path);
  assert.equal(new Set(urls).size,urls.length);
  const product=entries.find(entry=>entry.url==='https://example.com/ar/products/model-25');
