@@ -30,10 +30,9 @@
  .related-products .product-visual:hover .manufacturer-image{scale:1}
 }
 
-/* A native disclosure keeps suggestions beside the purchase controls, usable without JavaScript. */
-.suggestions-disclosure{margin-block:24px 0;padding:0;border:1px solid var(--blue-edge);background:var(--navy-panel)}
-.suggestions-trigger{display:flex;align-items:center;gap:16px;min-height:88px;padding:20px;cursor:pointer;list-style:none;color:#fff;background:linear-gradient(110deg,var(--blue-wash),var(--navy-panel));transition:background 220ms,border-color 220ms}
-.suggestions-trigger::-webkit-details-marker{display:none}
+/* The configuration concierge remains visible for every product. */
+.suggestions-disclosure{position:relative;margin-block:24px 0;padding:0;border:1px solid var(--blue-edge);background:var(--navy-panel);scroll-margin-top:120px}
+.suggestions-trigger{display:flex;align-items:center;gap:16px;width:100%;min-height:88px;padding:20px;text-align:start;color:#fff;background:linear-gradient(110deg,var(--blue-wash),var(--navy-panel));transition:background 220ms,border-color 220ms}
 .suggestions-trigger>span:nth-child(2){display:grid;gap:6px;flex:1;min-width:0}
 .suggestions-trigger strong{font-size:17px;font-weight:500;line-height:1.45}
 .suggestions-trigger>span:nth-child(2)>span{font-size:13px;color:var(--blue-ice);line-height:1.5}
@@ -41,7 +40,7 @@
 .suggestions-count{display:grid;place-items:center;min-width:32px;height:32px;border:1px solid var(--blue-edge);font-size:13px}
 .suggestions-trigger:hover{background:var(--blue-wash)}
 .suggestions-trigger:focus-visible{outline:2px solid var(--blue-ice);outline-offset:5px}
-.suggestions-disclosure[open] .suggestions-symbol{rotate:45deg}
+.suggestions-trigger[aria-expanded=true] .suggestions-symbol{rotate:45deg}
 .suggestions-content{padding:24px 20px;border-top:1px solid var(--blue-edge)}
 .suggestions-disclosure .related-products-heading{display:block;margin-bottom:24px}
 .suggestions-disclosure .related-products-heading h2{font-size:28px;margin-bottom:12px}
@@ -50,5 +49,18 @@
 .suggestions-disclosure .product-info{padding:0}
 .suggestions-disclosure .product-visual,.suggestions-disclosure .product-visual:has(.manufacturer-image),.suggestions-disclosure .product-visual .manufacturer-image{height:128px;min-height:128px;max-height:128px}
 .suggestions-disclosure .product-info h3{font-size:17px}
+.suggestion-assistance{display:grid;gap:20px;padding-block:8px 12px}
+.suggestion-assistance h2{max-width:720px;font-size:clamp(30px,4vw,48px)}
+.suggestion-assistance p:not(.section-kicker){max-width:68ch;color:var(--blue-ice);line-height:1.75}
+.suggestion-assistance .button{width:fit-content}
+.suggestions-prompt{position:fixed;z-index:55;inset-inline-end:24px;bottom:calc(24px + env(safe-area-inset-bottom));display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;width:min(390px,calc(100vw - 32px));padding:24px 48px 24px 24px;color:#fff;background:linear-gradient(135deg,var(--navy-panel),var(--blue-wash));border:1px solid var(--blue-ice);box-shadow:0 24px 80px rgb(1 7 54 / .45);animation:suggestion-arrive 600ms var(--interaction-spring) both}
+.suggestions-prompt-mark{display:grid;place-items:center;width:40px;height:40px;color:var(--ink);background:var(--accent);font-size:24px}
+.suggestions-prompt strong{display:block;padding-inline-end:8px;font-size:17px;line-height:1.45}
+.suggestions-prompt p{margin-top:8px;color:var(--blue-ice);font-size:13px;line-height:1.65}
+.suggestions-prompt-close{position:absolute;inset-block-start:8px;inset-inline-end:8px;display:grid;place-items:center;width:44px;height:44px;color:#fff;background:transparent;font-size:24px}
+.suggestions-prompt-action{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;min-height:44px;margin-top:16px;padding:8px 0;color:#fff;background:transparent;border-bottom:1px solid var(--accent);font-weight:600;text-align:start}
+.suggestions-prompt-action span{color:var(--accent)}
+@keyframes suggestion-arrive{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:none}}
+@media(max-width:480px){.suggestions-prompt{inset-inline:16px;bottom:calc(16px + env(safe-area-inset-bottom));width:auto;padding:20px 44px 20px 18px}.suggestions-prompt-mark{width:36px;height:36px}}
 @media(max-width:380px){.suggestions-trigger{gap:12px;padding:16px}.suggestions-content{padding:20px 16px}.suggestions-disclosure .product-card{grid-template-columns:72px minmax(0,1fr);gap:12px}}
-@media(prefers-reduced-motion:reduce){.suggestions-symbol,.suggestions-trigger{transition:none}}
+@media(prefers-reduced-motion:reduce){.suggestions-symbol,.suggestions-trigger{transition:none}.suggestions-prompt{animation:none}.suggestions-disclosure{scroll-behavior:auto}}

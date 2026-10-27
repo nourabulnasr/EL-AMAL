@@ -97,11 +97,11 @@ test('the same product and UTC day give the same selection without mutating cata
  assert.deepEqual(products,before);
 });
 
-test('eligible instruments vary by the viewed accessory and rotate across days',()=>{
- const sets=new Set(['IV1','IV2','BV','910.12'].map(model=>models(choose(product(model))).sort().join(',')));
- assert.ok(sets.size>=3);
+test('eligible instruments stay reviewed and never rotate randomly',()=>{
+ for(const model of ['IV1','IV2','BV','910.12'])for(const candidate of choose(product(model)))
+  assert.ok(productSuggestionPurpose(product(model),candidate,'en'));
  const daily=new Set(Array.from({length:10},(_,day)=>models(choose(product('IV2'),products,{now:new Date(Date.UTC(2026,9,16+day))})).sort().join(',')));
- assert.ok(daily.size>=6);
+ assert.equal(daily.size,1);
 });
 
 test('limits and empty input remain bounded and graceful',()=>{

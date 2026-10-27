@@ -69,24 +69,12 @@ export function productSuggestionPurpose(product:Product,candidate:Product,local
  return relation(normalise(product.model),normalise(candidate.model))?.purpose[locale];
 }
 
-// A stable shuffle avoids client hydration changes and does not use visitor data.
-function hash(value:string) {
- let result=2166136261;
- for(const character of value){result^=character.charCodeAt(0);result=Math.imul(result,16777619);}
- // Avalanche similar model references so neighbouring catalogue IDs do not cluster.
- result^=result>>>16;result=Math.imul(result,0x85ebca6b);
- result^=result>>>13;result=Math.imul(result,0xc2b2ae35);
- return (result^(result>>>16))>>>0;
-}
-
 /** Complementary discovery from the published catalogue, never a compatibility guarantee. */
-export function selectRelatedProducts<T extends Product>(product:Product,products:readonly T[],{limit=3,now=new Date()}:RelatedProductOptions={}):T[] {
+export function selectRelatedProducts<T extends Product>(product:Product,products:readonly T[],{limit=3}:RelatedProductOptions={}):T[] {
  const count=Number.isFinite(limit)?Math.max(0,Math.min(3,Math.floor(limit))):3;
  if(!count||!isReviewedManufacturer(product))return [];
  const currentModel=normalise(product.model);
  const applications=new Set(product.applications??[]);
- const day=Number.isFinite(now.getTime())?now.toISOString().slice(0,10):'catalogue';
- const seed=`${product.id}:${currentModel}:${day}`;
  const ranked=products.flatMap(candidate=>{
   if(candidate.id===product.id||normalise(candidate.model)===currentModel||!isReviewedManufacturer(candidate))return [];
   const match=relation(currentModel,normalise(candidate.model));
@@ -94,10 +82,11 @@ export function selectRelatedProducts<T extends Product>(product:Product,product
   return [{
    product:candidate,purpose:match.purpose.en,
    relevance:match.priority*100+Math.min(9,new Set(candidate.applications?.filter(application=>applications.has(application))??[]).size),
-   order:hash(`${seed}:${normalise(candidate.model)}:${candidate.id}`),
   }];
  })
-  .sort((a,b)=>b.relevance-a.relevance||a.order-b.order||(a.product.id<b.product.id?-1:a.product.id>b.product.id?1:0));
+  .sort((a,b)=>b.relevance-a.relevance
+   ||(normalise(a.product.model)<normalise(b.product.model)?-1:normalise(a.product.model)>normalise(b.product.model)?1:0)
+   ||(a.product.id<b.product.id?-1:a.product.id>b.product.id?1:0));
  const selected:T[]=[],seenIds=new Set<string>(),seenModels=new Set<string>(),seenPurposes=new Set<string>();
  const include=(candidate:typeof ranked[number])=>{
   selected.push(candidate.product);seenIds.add(candidate.product.id);
@@ -108,7 +97,7 @@ export function selectRelatedProducts<T extends Product>(product:Product,product
  const gauge=product.category==='accessories'?ranked.find(candidate=>candidate.product.instrumentType==='pressure-gauge'):undefined;
  if(gauge)include(gauge);
  // Prefer distinct complementary functions before filling with alternative models
- // of the same accessory. The seed rotates only within reviewed candidate pools.
+ // of the same accessory. Ordering is stable and never rotates at random.
  for(const distinctPurpose of [true,false]){
   for(const candidate of ranked){
    if(selected.length===count)return selected;
