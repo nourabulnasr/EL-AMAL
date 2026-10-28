@@ -11,6 +11,7 @@ test('every public product industry has a substantial bilingual landing page',()
   for(const locale of ['en','ar']){
    const copy=industry[locale];
    assert.ok(copy.title.length>=4,`${industry.id} ${locale} title`);
+   assert.ok(copy.metaDescription.length>=100&&copy.metaDescription.length<=170,`${industry.id} ${locale} meta description length`);
    assert.ok(copy.intro.length>=120,`${industry.id} ${locale} intro`);
    assert.equal(copy.checks.length,3,`${industry.id} ${locale} checks`);
    assert.ok(copy.faqs.length>=2,`${industry.id} ${locale} FAQs`);

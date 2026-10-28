@@ -5,7 +5,7 @@ import {isLocale} from '@/lib/catalogue';
 import {industries} from '@/content/industry-pages';
 import {siteOrigin} from '@/lib/site-policy.mjs';
 import {buildIndustryPageSchema} from '@/lib/seo-page-schema';
-export async function generateMetadata({params}:{params:Promise<{locale:string;slug:string}>}){const {locale,slug}=await params;const item=industries.find(x=>x.id===slug);if(!item||!isLocale(locale))notFound();const t=item[locale];return pageMetadata(locale,`/industries/${slug}`,t.title,t.intro);}
+export async function generateMetadata({params}:{params:Promise<{locale:string;slug:string}>}){const {locale,slug}=await params;const item=industries.find(x=>x.id===slug);if(!item||!isLocale(locale))notFound();const t=item[locale];return pageMetadata(locale,`/industries/${slug}`,t.title,t.metaDescription);}
 export default async function Page({params}:{params:Promise<{locale:string;slug:string}>}){
  const {locale,slug}=await params;const item=industries.find(x=>x.id===slug);if(!isLocale(locale)||!item)notFound();const t=item[locale],ar=locale==='ar';
  const schema=buildIndustryPageSchema({locale,origin:siteOrigin(),industry:item});
