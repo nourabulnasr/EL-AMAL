@@ -9,7 +9,7 @@
 - Sitewide links from the footer and homepage industry section so the new pages are not orphaned.
 - A localized `SearchAction` pointing to the real catalogue search.
 - Organization structured data with the confirmed sales email, telephone, Egypt service area, and English/Arabic availability.
-- Sitemap discovery for every new English and Arabic URL. Expected public sitemap size after release: 386 URLs.
+- Sitemap discovery for every new English and Arabic URL. Expected public sitemap size after release: 384 URLs (372 existing URLs plus 12 new bilingual URLs).
 - Title normalization that prevents `| EL AMAL | EL AMAL` when a page title already includes the brand.
 
 ## SEO approach and why
@@ -43,7 +43,7 @@ No price, rating, review, address, opening hours, hazardous-area approval, hygie
 1. Push the isolated SEO commit and let Vercel build it in its normal cloud environment.
 2. Review the new English and Arabic pages visually on the preview.
 3. Publish the tested commit to the production domain.
-4. Run the full live SEO crawler. Expected sitemap: 386 public URLs with zero covered issues.
+4. Run the full live SEO crawler. Expected sitemap: 384 public URLs with zero covered issues.
 5. Validate representative Organization, Product, CollectionPage and FAQPage JSON-LD with Google's Rich Results Test and Schema.org validator.
 6. Resubmit `https://www.al-amaleg.com/sitemap.xml` in the verified Search Console property and request indexing for the seven new English pages and seven Arabic equivalents.
 

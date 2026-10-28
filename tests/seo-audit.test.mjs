@@ -16,7 +16,8 @@ test('live audit detects HTTP noindex, wrong canonical, missing hreflang, HTTP f
  for(const code of ['http-status','canonical','hreflang-ar','noindex','invalid-jsonld'])assert.ok(result.issues.includes(code),code);
 });
 test('audit discovery accepts only public same-origin locale routes and excludes token, private and faceted URLs',()=>{
- for(const path of ['/en','/ar/products?page=2','/en/categories/pressure?page=3','/ar/products/model'])assert.ok(publicAuditUrl(new URL(path,origin).href,origin));
+ for(const path of ['/en','/ar/products?page=2','/en/categories/pressure?page=3','/ar/products/model','/en/industries/pharmaceuticals','/ar/industries/food-beverage','/en/solutions','/ar/solutions/wika-instruments-egypt'])assert.ok(publicAuditUrl(new URL(path,origin).href,origin));
+ for(const path of ['/en/industries/unknown','/ar/solutions/unknown'])assert.equal(publicAuditUrl(new URL(path,origin).href,origin),null,path);
  for(const path of ['/admin','/api/products','/en/rfq','/ar/quote','/en/verify?token=x','/en/products?q=x','/en/products?category=pressure','/images/product.png','/fr'])assert.equal(publicAuditUrl(new URL(path,origin).href,origin),null,path);
  assert.equal(publicAuditUrl('https://unrelated.example/en',origin),null);
  assert.deepEqual(extractSitemapUrls('<url><loc>https://example.com/en/products?page=2&amp;x=1</loc><image:loc>https://example.com/image.png</image:loc></url>'),['https://example.com/en/products?page=2&x=1']);

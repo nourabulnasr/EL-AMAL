@@ -9,7 +9,7 @@ export const extractSitemapUrls=xml=>[...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].m
 export function publicAuditUrl(value,origin){
  try{
   const url=new URL(value,origin);
-  if(url.origin!==origin||!/^\/(en|ar)(?:\/(?:products(?:\/[^/]+)?|categories\/[^/]+|industries\/(?:oil-gas|general-industry)|about|contact|resources))?$/.test(url.pathname))return null;
+  if(url.origin!==origin||!/^\/(en|ar)(?:\/(?:products(?:\/[^/]+)?|categories\/[^/]+|industries\/(?:oil-gas|pharmaceuticals|food-beverage|general-industry)|solutions(?:\/(?:pressure-instruments-egypt|temperature-instruments-egypt|wika-instruments-egypt))?|about|contact|resources))?$/.test(url.pathname))return null;
   if([...url.searchParams].some(([key])=>key!=='page'))return null;
   for(const [key,value] of [...url.searchParams])if(!value)url.searchParams.delete(key);
   if(url.searchParams.has('page')&&!/^[1-9]\d*$/.test(url.searchParams.get('page')))return null;
