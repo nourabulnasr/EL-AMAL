@@ -1,4 +1,5 @@
 import type {CatalogueDetails} from './catalogue-details.ts';
+import {matchesTechnicalFilters,type TechnicalFilters} from './technical-facets.ts';
 export type Locale = 'en' | 'ar';
 export type Translated = Record<Locale, string>;
 export type Product = { id:string; model:string; category:string; name:Translated; description:Translated; instrumentType?:string; applications?:string[]; datasheetUrl?:string; details?:CatalogueDetails; };
@@ -57,10 +58,10 @@ const preferredCategoryModels:Record<string,readonly string[]> = {
   ]
 };
 const categoryRanks=new Map(Object.entries(preferredCategoryModels).map(([category,models])=>[category,new Map(models.map((model,index)=>[normalise(model),index]))]));
-export function searchProducts<T extends Product>(products:T[], query:string, category:string, instrumentType="", application=""):T[] {
+export function searchProducts<T extends Product>(products:T[], query:string, category:string, instrumentType="", application="", technical:TechnicalFilters={}):T[] {
   const q = normalise(query.trim().slice(0,120));
   const ranks=categoryRanks.get(category);
   const rank=(product:Product)=>ranks?.get(normalise(product.model))??Number.MAX_SAFE_INTEGER;
-  return products.filter(p => (!category || p.category === category) && (!instrumentType || p.instrumentType === instrumentType) && (!application || p.applications?.includes(application)) && (!q || normalise([p.model,...Object.values(p.name),...Object.values(p.description)].join(' ')).includes(q)))
+  return products.filter(p => (!category || p.category === category) && (!instrumentType || p.instrumentType === instrumentType) && (!application || p.applications?.includes(application)) && matchesTechnicalFilters(p,technical) && (!q || normalise([p.model,...Object.values(p.name),...Object.values(p.description)].join(' ')).includes(q)))
     .sort((a,b) => Number(normalise(b.model) === q) - Number(normalise(a.model) === q) || rank(a)-rank(b));
 }

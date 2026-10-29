@@ -4,20 +4,22 @@ import {isLocale,searchProducts,paginateProducts} from '@/lib/catalogue';
 import {loadCatalogue} from '@/lib/load-catalogue';
 import {indexingEnabled} from '@/lib/site-policy.mjs';
 import {CatalogueView} from '@/components/catalogue-view';
-type Search={q?:string;category?:string;type?:string;application?:string;page?:string};
+import {parseTechnicalFilters} from '@/lib/technical-facets';
+import {catalogueMetadataState} from '@/lib/seo-discovery';
+type Search=Record<string,string|string[]|undefined>;
+const scalar=(value:string|string[]|undefined,max=160)=>typeof value==='string'?value.slice(0,max):'';
 export async function generateMetadata({params,searchParams}:{params:Promise<{locale:string}>;searchParams:Promise<Search>}){
  const {locale}=await params;if(!isLocale(locale))notFound();
  const s=await searchParams,{products}=await loadCatalogue();
- const query=typeof s.q==='string'?s.q.slice(0,120):'',category=typeof s.category==='string'?s.category:'',type=typeof s.type==='string'?s.type:'',application=typeof s.application==='string'?s.application:'';
- const {page}=paginateProducts(searchProducts(products,query,category,type,application),s.page);
- const filters=new URLSearchParams({...query?{q:query}:{},...category?{category}:{},...type?{type}:{},...application?{application}:{},...page>1?{page:String(page)}:{}});
- const path=`/products${filters.size?`?${filters}`:''}`;
+ const query=scalar(s.q,120),category=scalar(s.category),type=scalar(s.type),application=scalar(s.application),technical=parseTechnicalFilters(s);
+ const {page}=paginateProducts(searchProducts(products,query,category,type,application,technical),scalar(s.page));
+ const state=catalogueMetadataState({query,category,instrumentType:type,application,technical,page});
  const title=(locale==='ar'?'كتالوج الأدوات':'Instrument catalogue')+(page>1?` · ${locale==='ar'?'الصفحة':'Page'} ${page}`:'');
- const metadata=pageMetadata(locale,path,title,locale==='ar'?'ابحث بالطراز ونوع الأداة والتطبيق.':'Search instruments by model, type and application.');
- if(['q','category','type','application'].some(key=>Object.hasOwn(s,key)))metadata.robots={index:false,follow:indexingEnabled()};
+ const metadata=pageMetadata(locale,state.canonicalPath,title,locale==='ar'?'ابحث بالطراز ونوع الأداة والتطبيق والمواصفات الفنية المؤكدة.':'Search by model, instrument type, application and verified technical specifications.');
+ if(state.filtered||Object.keys(s).some(key=>key!=='page'))metadata.robots={index:false,follow:indexingEnabled()};
  return metadata;
 }
-export default async function Page({params,searchParams}:{params:Promise<{locale:string}>;searchParams:Promise<{q?:string;category?:string;type?:string;application?:string;page?:string}>}){
+export default async function Page({params,searchParams}:{params:Promise<{locale:string}>;searchParams:Promise<Search>}){
  const {locale}=await params;if(!isLocale(locale))notFound();const s=await searchParams;
- return <CatalogueView page={typeof s.page==='string'?s.page:''} locale={locale} query={typeof s.q==='string'?s.q.slice(0,120):''} category={typeof s.category==='string'?s.category:''} instrumentType={typeof s.type==='string'?s.type:''} application={typeof s.application==='string'?s.application:''}/>;
+ return <CatalogueView page={scalar(s.page)} locale={locale} query={scalar(s.q,120)} category={scalar(s.category)} instrumentType={scalar(s.type)} application={scalar(s.application)} technical={parseTechnicalFilters(s)}/>;
 }

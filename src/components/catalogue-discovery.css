@@ -32,15 +32,63 @@
 .catalogue-layout .product-grid .instrument-small { transform: scale(.52) rotate(-12deg); }
 .catalogue-layout .product-info { padding-block: 20px 12px; }
 
+/* A compact, server-rendered technical advisor: specification evidence first,
+   with native controls retained for keyboard, zoom and reduced-motion users. */
+.technical-advisor {
+  margin-top: 12px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.advisor-heading { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; }
+.advisor-heading > span { color: var(--accent); font-size: 24px; line-height: 1; }
+.advisor-heading h3 { margin: 0; font-family: var(--font-body); font-size: 14px; letter-spacing: 0; }
+.advisor-heading p, .advisor-empty { margin: 6px 0 0; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.advisor-groups { display: grid; margin-top: 18px; }
+.advisor-groups details { border-top: 1px solid var(--line); }
+.advisor-groups details:last-child { border-bottom: 1px solid var(--line); }
+.advisor-groups summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  min-height: 46px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  list-style-position: inside;
+}
+.advisor-groups summary span { color: var(--blue-ice); font-size: 10px; font-variant-numeric: tabular-nums; }
+.advisor-options { display: grid; gap: 2px; padding: 0 0 14px; }
+.advisor-options label {
+  grid-template-columns: 18px minmax(0,1fr) auto;
+  align-items: center;
+  gap: 9px;
+  min-height: 38px;
+  padding: 5px 4px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  cursor: pointer;
+}
+.advisor-options label:hover { color: var(--ink); background: color-mix(in oklch,var(--blue-wash) 50%,transparent); }
+.advisor-options input { width: 16px; min-height: 16px; height: 16px; margin: 0; accent-color: var(--accent); }
+.advisor-options input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.advisor-options label:has(input:checked) { color: var(--ink); }
+.advisor-options b { color: var(--blue-ice); font-size: 10px; font-weight: 500; font-variant-numeric: tabular-nums; }
+
 @media (min-width: 640px) and (max-width: 1023px) {
+  .catalogue-layout .catalogue-filter .technical-advisor { grid-column: 1 / -1; grid-row: 4; }
+  .catalogue-layout .catalogue-filter .advisor-groups { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 24px; }
   .catalogue-layout .catalogue-filter .extra-filter { min-width: 0; grid-row: 4; }
   .catalogue-layout .catalogue-filter .extra-filter label { display: block; margin-bottom: 12px; }
   .catalogue-layout .catalogue-filter .extra-filter select { width: 100%; }
-  .catalogue-layout .catalogue-filter .button, .catalogue-layout .catalogue-filter .reset-link { grid-row: 5; }
+  .catalogue-layout .catalogue-filter .extra-filter { grid-row: 5; }
+  .catalogue-layout .catalogue-filter .button, .catalogue-layout .catalogue-filter .reset-link { grid-row: 6; }
   .catalogue-layout .catalogue-filter > .text-link { grid-column: 1 / -1; }
 }
 @media (min-width: 1024px) {
   .industry-tabs > span { width: auto; margin: 0; margin-inline-end: 8px; }
+  .catalogue-layout { grid-template-columns: 292px minmax(0,1fr); }
   .catalogue-layout .product-grid .product-visual { height: 240px; }
   .catalogue-layout .product-grid .product-visual .manufacturer-image { height: 240px; max-height: 240px; padding: 28px; }
 }

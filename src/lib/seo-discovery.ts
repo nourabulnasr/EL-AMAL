@@ -2,12 +2,25 @@ import type {MetadataRoute} from 'next';
 import type {Catalogue} from './public-catalogue.ts';
 import {paginateProducts,type Locale,type Product} from './catalogue.ts';
 import {indexingEnabled,siteOrigin} from './site-policy.mjs';
+import {technicalFilterParams,type TechnicalFilters} from './technical-facets.ts';
 
-export function cataloguePath({query='',category='',instrumentType='',application='',page=1,categoryRoute=true}:{query?:string;category?:string;instrumentType?:string;application?:string;page?:number;categoryRoute?:boolean}={}){
- const faceted=!!(query||instrumentType||application||!categoryRoute);
+export function cataloguePath({query='',category='',instrumentType='',application='',technical={},page=1,categoryRoute=true}:{query?:string;category?:string;instrumentType?:string;application?:string;technical?:TechnicalFilters;page?:number;categoryRoute?:boolean}={}){
+ const technicalParams=technicalFilterParams(technical);
+ const faceted=!!(query||instrumentType||application||technicalParams.size||!categoryRoute);
  const path=category&&!faceted?`/categories/${encodeURIComponent(category)}`:'/products';
  const params=new URLSearchParams({...query?{q:query}:{},...category&&faceted?{category}:{},...instrumentType?{type:instrumentType}:{},...application?{application}:{},...page>1?{page:String(page)}:{}});
+ for(const [key,value] of technicalParams)params.append(key,value);
  return `${path}${params.size?`?${params}`:''}`;
+}
+
+export function catalogueMetadataState({query='',category='',instrumentType='',application='',technical={},page=1}:{query?:string;category?:string;instrumentType?:string;application?:string;technical?:TechnicalFilters;page?:number}={}){
+ const hasTechnical=technicalFilterParams(technical).size>0;
+ const filtered=!!(query||category||instrumentType||application||hasTechnical);
+ const visiblePath=cataloguePath({query,category,instrumentType,application,technical,page,categoryRoute:false});
+ const canonicalPath=filtered
+  ? cataloguePath({category,page:query||instrumentType||application||hasTechnical?1:page})
+  : cataloguePath({page});
+ return {filtered,visiblePath,canonicalPath};
 }
 
 export function buildCatalogueSitemap(catalogue:Catalogue,env:Record<string,string|undefined>=process.env):MetadataRoute.Sitemap{
