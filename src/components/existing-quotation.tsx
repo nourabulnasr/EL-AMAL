@@ -2,9 +2,11 @@
 import {useEffect,useState} from 'react';
 import type {Locale} from '@/lib/catalogue';
 import {CustomerEnquirySubmit} from './customer-enquiry-submit';
+import {quotationDiscovery} from '@/lib/quotation-discovery';
 import './quotation.css';
 export function ExistingQuotation({locale}:{locale:Locale}){
  const ar=locale==='ar';
+ const discovery=quotationDiscovery(locale);
  const [details,setDetails]=useState({name:'',email:'',company:'',notes:''});
  const [review,setReview]=useState(false),[enabled,setEnabled]=useState(false),[checked,setChecked]=useState(false);
  useEffect(()=>{const controller=new AbortController();fetch('/api/customer-enquiries',{signal:controller.signal}).then(r=>r.ok?r.json():null).then(result=>{setEnabled(result?.canSubmitQuotation===true);setChecked(true);}).catch(()=>{if(!controller.signal.aborted)setChecked(true);});return()=>controller.abort();},[]);
@@ -12,6 +14,11 @@ export function ExistingQuotation({locale}:{locale:Locale}){
   <p className="section-kicker">{ar?'لديك عرض سعر بالفعل؟':'Already have a quotation?'}</p>
   <h2>{ar?'أرسل الملف كما هو.':'Send the file you already have.'}</h2>
   <p>{ar?'ارفع عرض سعر أو قائمة متطلبات بصيغة PDF أو Excel (.xlsx) أو صور JPEG وPNG. لا تحتاج إلى كتابة المنتجات والكميات مرة أخرى.':'Share an existing quotation or requirements list as PDF, Excel (.xlsx), or JPEG/PNG photos. No need to retype products and quantities.'}</p>
+  <div className="quotation-drop-preview" aria-label={discovery.title}>
+   <div className="quotation-drop-copy"><span className="quotation-lock" aria-hidden="true">⌑</span><div><p>{discovery.eyebrow}</p><h3>{discovery.title}</h3><span>{discovery.description}</span></div></div>
+   <ul className="quotation-format-list">{discovery.formats.map(format=><li key={format.extension}><b>{format.extension}</b><span>{format.label}</span></li>)}</ul>
+   <p className="quotation-locked-action" aria-disabled="true"><span aria-hidden="true">●</span>{discovery.lockedMessage}</p>
+  </div>
   <ol className="quotation-steps"><li>{ar?'أدخل بيانات التواصل':'Add contact details'}</li><li>{ar?'أكد بريدك الإلكتروني':'Confirm your email'}</li><li>{ar?'أرفق الملفات وأرسلها للمراجعة':'Attach files and send for review'}</li></ol>
   <p className="field-hint">{ar?'حتى ٣ ملفات، بحد أقصى ١٠ ميبيبايت للملف (١٠٬٤٨٥٬٧٦٠ بايت). يتاح التنزيل لفريق المبيعات لمدة ٣٠ يوماً. ملفات Excel القديمة (.xls) والملفات المحمية بكلمة مرور والماكرو والروابط الخارجية غير مدعومة.':'Up to 3 files, 10 MiB each (10,485,760 bytes). Private sales access for 30 days. Legacy Excel (.xls), password protection, macros and external links are unsupported.'}</p>
   {checked&&!enabled&&<p className="review-notice" role="status">{ar?'الإرسال الإلكتروني غير متاح حالياً. يمكنك تجهيز الملفات، وسيُتاح رفعها بعد تفعيل خدمة التأكيد بالبريد. لم يتم استلام أي طلب أو ملف.':'Online submission is not available yet. Prepare your files; upload will become available once email confirmation is activated. No request or file has been received.'}</p>}
