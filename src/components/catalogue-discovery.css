@@ -43,9 +43,10 @@
 .advisor-heading > span { color: var(--accent); font-size: 24px; line-height: 1; }
 .advisor-heading h3 { margin: 0; font-family: var(--font-body); font-size: 14px; letter-spacing: 0; }
 .advisor-heading p, .advisor-empty { margin: 6px 0 0; color: var(--muted); font-size: 11px; line-height: 1.7; }
-.advisor-groups { display: grid; margin-top: 18px; }
+.advisor-groups { display: grid; margin-top: 18px; gap: 10px; }
 .advisor-groups details { border-top: 1px solid var(--line); }
 .advisor-groups details:last-child { border-bottom: 1px solid var(--line); }
+.advisor-groups .advisor-featured { padding: 0 12px; border: 1px solid var(--blue-edge); background: linear-gradient(145deg,var(--blue-wash),transparent 88%); }
 .advisor-groups summary {
   display: flex;
   justify-content: space-between;
@@ -74,7 +75,10 @@
 .advisor-options input { width: 16px; min-height: 16px; height: 16px; margin: 0; accent-color: var(--accent); }
 .advisor-options input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .advisor-options label:has(input:checked) { color: var(--ink); }
+.advisor-options label:has(input:disabled) { cursor: not-allowed; opacity: .46; }
+.advisor-options label:has(input:disabled):hover { color: var(--muted); background: transparent; }
 .advisor-options b { color: var(--blue-ice); font-size: 10px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.advisor-source-note { margin: 16px 0 0; color: var(--muted); font-size: 10px; line-height: 1.7; }
 
 @media (min-width: 640px) and (max-width: 1023px) {
   .catalogue-layout .catalogue-filter .technical-advisor { grid-column: 1 / -1; grid-row: 4; }
@@ -91,5 +95,7 @@
   .catalogue-layout { grid-template-columns: 292px minmax(0,1fr); }
   .catalogue-layout .product-grid .product-visual { height: 240px; }
   .catalogue-layout .product-grid .product-visual .manufacturer-image { height: 240px; max-height: 240px; padding: 28px; }
+  .catalogue-layout .catalogue-filter { width: 340px; }
+  .catalogue-layout { grid-template-columns: 340px minmax(0,1fr); }
 }
 @media (prefers-reduced-motion: reduce) { .industry-tabs a { transition: none; } }

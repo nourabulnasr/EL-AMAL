@@ -8,6 +8,7 @@ import { businessContact } from "@/lib/business-contact";
 import { customerSettings } from "@/lib/customer-readiness";
 import { WikaEvidence } from "@/components/wika-evidence";
 import { RevealText } from "@/components/reveal-text";
+import { AboutProductStory } from "@/components/about-product-story";
 type Props = { params: Promise<{ locale: string; information: string }> };
 export async function generateMetadata({ params }: Props) {
   const { locale, information } = await params;
@@ -112,7 +113,7 @@ export default async function Page({ params }: Props) {
           ))}
         </ol>
       </section>
-      {information === "about" && <WikaEvidence locale={locale} />}
+      {information === "about" && <><WikaEvidence locale={locale} /><AboutProductStory locale={locale} /></>}
       {information === "contact" && (
         <section
           className="section information-contact"

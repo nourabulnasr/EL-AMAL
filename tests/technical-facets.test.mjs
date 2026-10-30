@@ -36,15 +36,25 @@ test('pressure facets are derived only from reviewed specification rows',()=>{
     spec('Nominal size','63, 100, 160 mm'),
     spec('Scale range','0 … 16 mbar to 0 … 40 bar'),
     spec('Accuracy class','1.0 (NS 100, 160), 1.6 (NS 63)'),
-    spec('Material','Measuring element: Stainless steel 316L; Case: Aluminium'),
-    spec('Ignition protection type','Ex ia or Ex d'),
+    spec('Wetted parts','Stainless steel 316L'),
+    spec('Case material','Stainless steel'),
+    spec('Process connection','Thread or hygienic connection'),
+    spec('Ignition protection type','ATEX, IECEx and UKEX'),
+    spec('Case filling','Glycerine filled'),
+    spec('Measuring principle','Bourdon tube'),
+    spec('Approvals','SIL, DNV and Flow 100'),
   ]}});
   assert.deepEqual(getProductTechnicalFacets(reviewed),{
     size:['size-63','size-100','size-gte-160'],
     unit:['unit-bar','unit-mbar'],
-    accuracy:['accuracy-1','accuracy-1-6'],
+    accuracy:['accuracy-standard'],
     material:['material-stainless-steel'],
-    explosion:['explosion-ex-ia','explosion-ex-d'],
+    caseMaterial:['case-stainless-steel'],
+    connection:['connection-thread','connection-hygiene'],
+    explosion:['explosion-iecex','explosion-atex','explosion-ukex'],
+    filling:['filling-filled'],
+    principle:['principle-bourdon'],
+    approval:['approval-sil','approval-dnv','approval-flow-100'],
   });
   assert.deepEqual(getProductTechnicalFacets(product({details:{...product().details,specifications:[spec('Description','Stainless steel, 100 mm, Ex d')]}})),{});
 });
@@ -74,8 +84,8 @@ test('temperature and accessory facets use their own category vocabulary',()=>{
 
 test('facet matching is OR within a facet and AND between facets',()=>{
   const candidate=product({details:{...product().details,specifications:[spec('Nominal size','63, 100 mm'),spec('Accuracy class','1.6')]}});
-  assert.equal(matchesTechnicalFilters(candidate,{size:['size-50','size-100'],accuracy:['accuracy-1-6']}),true);
-  assert.equal(matchesTechnicalFilters(candidate,{size:['size-50','size-100'],accuracy:['accuracy-1']}),false);
+  assert.equal(matchesTechnicalFilters(candidate,{size:['size-50','size-100'],accuracy:['accuracy-standard']}),true);
+  assert.equal(matchesTechnicalFilters(candidate,{size:['size-50','size-100'],accuracy:['accuracy-high']}),false);
   assert.equal(matchesTechnicalFilters(candidate,{}),true);
   assert.equal(matchesTechnicalFilters(product(),{size:['size-100']}),false);
 });
@@ -83,10 +93,15 @@ test('facet matching is OR within a facet and AND between facets',()=>{
 test('facet groups count only verified options in the current candidate set',()=>{
   const a=product({id:'a',details:{...product().details,specifications:[spec('Nominal size','63, 100 mm')]}});
   const b=product({id:'b',details:{...product().details,specifications:[spec('Nominal size','100, 160 mm')]}});
-  const groups=buildTechnicalFacetGroups([a,b],'en');
+  const groups=buildTechnicalFacetGroups([a,b],'en','pressure');
   const size=groups.find(group=>group.id==='size');
-  assert.deepEqual(size.options.map(option=>[option.id,option.count]),[['size-63',1],['size-100',2],['size-gte-160',1]]);
-  assert.equal(groups.some(group=>group.id==='connection'),false);
+  assert.deepEqual(size.options.filter(option=>option.count).map(option=>[option.id,option.count]),[['size-63',1],['size-100',2],['size-gte-160',1]]);
+  assert.equal(groups.length,10);
+  assert.deepEqual(groups.map(group=>group.label.en),[
+    'Material of wetted parts','Measuring range','Nominal size','Case material','Indication accuracy',
+    'Connector type','Explosion protection','Case filling','Measuring principle','Approvals',
+  ]);
+  assert.equal(groups.find(group=>group.id==='connection').options.every(option=>option.count===0),true);
 });
 
 test('catalogue search and URL serialization intersect technical facets with existing filters',()=>{

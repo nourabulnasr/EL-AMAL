@@ -16,7 +16,7 @@ export async function CatalogueView({locale,query='',category='',instrumentType=
  const t=copy[locale],ar=locale==='ar',results=searchProducts(products,query,category,instrumentType,application,technical);
  const pagination=paginateProducts(results,page);
  const selected=categories.find(c=>c.id===category);
- const baseCandidates=searchProducts(products,query,category,instrumentType,application),facetGroups=buildTechnicalFacetGroups(baseCandidates,locale);
+ const baseCandidates=searchProducts(products,query,category,instrumentType,application),facetGroups=buildTechnicalFacetGroups(baseCandidates,locale,category);
  const industryCandidates=searchProducts(products,query,category,instrumentType);
  const industryLink=(industry:string)=>`/${locale}${cataloguePath({query,category,instrumentType,application:industry,technical})}`;
  const link=(q:string,c:string,p=1,nextTechnical=technical)=>`/${locale}${cataloguePath({query:q,category:c,instrumentType,application,technical:nextTechnical,page:p})}`;
