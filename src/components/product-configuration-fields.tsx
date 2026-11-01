@@ -13,7 +13,7 @@ export function ProductConfigurationFields({product,locale,value,onChange}:{prod
    const fixed=f.choices.length===1,disabled=fields.slice(0,index).some(previous=>previous.choices.length>1&&!resolved[previous.id]);
    return <div className="configuration-field" key={f.id}>
     {fixed?<><span>{f.label[locale]}</span><strong><bdi>{f.choices[0].label[locale]}</bdi></strong></>:<><label htmlFor={id+f.id}>{f.label[locale]} <span aria-hidden="true">*</span></label>
-    <select id={id+f.id} value={resolved[f.id]??''} required disabled={disabled} onChange={event=>{
+    <select id={id+f.id} dir="ltr" style={{textAlign:ar?'right':'left'}} value={resolved[f.id]??''} required disabled={disabled} onChange={event=>{
      // Reset dependent fields when model/size changes; never silently substitute a different configuration.
      const next:Configuration={};for(const previous of fields.slice(0,index))if(resolved[previous.id])next[previous.id]=resolved[previous.id];
      next[f.id]=event.target.value;onChange(resolveConfiguration(product,next));

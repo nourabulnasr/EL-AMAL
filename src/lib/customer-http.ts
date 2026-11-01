@@ -67,7 +67,7 @@ export function customerHandlers(deps: Deps) {
         if (error instanceof CustomerLimitError)
           return json({ error: "Try again later" }, 429);
         if (error instanceof EnquiryOptionError)
-          return json({error:'Choose a valid connection for every selected product',code:'option-selection'},400);
+          return json({error:'Choose a valid configuration for every selected product',code:'option-selection'},400);
         if (error instanceof EnquiryInputError)
           return json({ error: "Check your details and selected items" }, 400);
         if (error instanceof EnquiryConflictError)

@@ -10,7 +10,7 @@ const field=(id:ConfigurationField['id'],en:string,ar:string,choices:Configurati
 const number='[+-]?\\d[\\d,]*(?:\\.\\d+)?';
 const rangePattern=new RegExp(`(${number})\\s*(?:…|\\.{2,3})\\s*(${number})\\s*(mbar|bar(?: abs\\.?)?|psi|MPa|kPa|°C|°F)?`,'g');
 const units:Record<string,Translated>={bar:tr('bar','بار'),mbar:tr('mbar','مللي بار'),psi:tr('psi'),MPa:tr('MPa'),kPa:tr('kPa'),c:tr('°C','°م'),f:tr('°F','°ف'),'bar-abs':tr('bar abs.','بار مطلق')};
-function scale(unit:string,low:number,high:number){const u=units[unit];return choice(`${unit}:${low}:${high}`,`${low}–${high} ${u.en}`,`${low}–${high} ${u.ar}`);}
+function scale(unit:string,low:number,high:number){const u=units[unit];return choice(`${unit}:${low}:${high}`,`${low}–${high} ${u.en}`,`\u2066${low}–${high}\u2069 ${u.ar}`);}
 const zeros=(unit:string,values:number[])=>values.map(high=>scale(unit,0,high));
 const row=(p:ConfigProduct,name:string)=>p.details?.specifications.find(r=>r.label.en.toLowerCase().trim()===name)?.value.en;
 function applicableRows(value:string,model:string,size?:string){return value.split(/\n/).filter(line=>{

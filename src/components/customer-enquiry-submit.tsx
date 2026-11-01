@@ -174,7 +174,7 @@ export function CustomerEnquirySubmit({
       {error && (
         <p role="alert">
           {error === 'option-selection'
-            ? ar?'راجع السلة واختر توصيلاً صالحاً لكل منتج.':'Review your basket and choose a valid connection for every product.'
+            ? ar?'راجع السلة وأكمل المواصفات المتاحة لكل منتج.':'Review your basket and complete each product’s available specifications.'
             : error === "limited"
             ? ar
               ? "وصلت إلى حد المحاولات. حاول لاحقاً."

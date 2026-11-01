@@ -27,7 +27,7 @@ export function enquiryHandlers(deps:Dependencies){
         const result=await deps.submit(await readInput(request));
         return json({...result,mode:'test',emailSent:false,stockReserved:false},result.repeated?200:201);
       }catch(error){
-        if(error instanceof EnquiryOptionError)return json({error:'Choose a valid connection for every selected product',code:'option-selection'},400);
+        if(error instanceof EnquiryOptionError)return json({error:'Choose a valid configuration for every selected product',code:'option-selection'},400);
         if(error instanceof EnquiryInputError)return json({error:'Check the enquiry details and selected items'},400);
         if(error instanceof EnquiryConflictError)return json({error:'Request changed; review it again'},409);
         return json({error:'Unable to save now. Retry with the same details.'},503);
