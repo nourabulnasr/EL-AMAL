@@ -26,9 +26,9 @@ export async function deliverNextNotification(payload:Payload,transport?:Notific
  const row=claimed.rows[0];if(!row)return {outcome:'empty' as const};
  try{
    // No customer contact details, notes or attachments are copied into notification content.
-   const items=await pool.query('SELECT model,quantity,option_id,option_name_en,option_name_ar,option_model FROM enquiries_items WHERE _parent_id=$1 AND option_id IS NOT NULL ORDER BY _order LIMIT 100',[row.enquiry_id]);
-   const summary=notificationOptionSummary(items.rows.map(item=>({model:item.model,quantity:Number(item.quantity),optionId:item.option_id,optionNameEn:item.option_name_en,optionNameAr:item.option_name_ar,optionModel:item.option_model})));
-   const sent=await transport.send({to:row.recipient,subject:`EL AMAL enquiry ${row.reference}`,text:`Enquiry ${row.reference} is available in the EL AMAL admin inbox. Sign in to review its details.${summary?'\n\nConnection selections:\n'+summary:''}`,idempotencyKey:row.delivery_key});
+   const items=await pool.query('SELECT model,quantity,range,option_id,option_name_en,option_name_ar,option_model FROM enquiries_items WHERE _parent_id=$1 ORDER BY _order LIMIT 100',[row.enquiry_id]);
+   const summary=notificationOptionSummary(items.rows.map(item=>({model:item.model,quantity:Number(item.quantity),range:item.range,optionId:item.option_id,optionNameEn:item.option_name_en,optionNameAr:item.option_name_ar,optionModel:item.option_model})));
+   const sent=await transport.send({to:row.recipient,subject:`EL AMAL enquiry ${row.reference}`,text:`Enquiry ${row.reference} is available in the EL AMAL admin inbox. Sign in to review its details.${summary?'\n\nProduct configuration selections:\n'+summary:''}`,idempotencyKey:row.delivery_key});
    if(typeof sent.id!=='string'||!sent.id||sent.id.length>200)throw new Error('Invalid delivery receipt');
    const result=await pool.query("UPDATE notifications SET status='sent',sent_at=now(),provider_message_id=$1,last_error=NULL,lease_token=NULL,lease_expires_at=NULL,updated_at=now() WHERE id=$2 AND lease_token=$3 AND status='processing'",[sent.id,row.id,lease]);
    return {outcome:result.rowCount?'sent' as const:'stale' as const};

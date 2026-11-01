@@ -129,6 +129,26 @@ try{
  assert.equal((await deliverNextNotification(payload,capture)).outcome,'sent');
  assert.equal(messages[2].text,`Enquiry ${legacy.reference} is available in the EL AMAL admin inbox. Sign in to review its details.`);
 
+ stage='configured instrument sizes, scales and threads persist through PostgreSQL, staff and owner message';
+ const configured={...product,id:'regression-configured',model:'232.50, 233.50',details:{...details,options:undefined,specifications:[{label:{en:'Nominal size',ar:'المقاس الاسمي'},value:{en:'63, 100, 160 mm',ar:'63، 100، 160 مم'}}]}};
+ const configuredCatalogue={...reviewed,products:[configured]};
+ const configurationInput={requestKey:randomUUID(),locale:'ar',contact,lines:[
+  {productId:configured.id,quantity:3,configuration:{model:'232.50',size:'100',scale:'bar:0:10',thread:'g-half'}},
+  {productId:configured.id,quantity:4,configuration:{model:'233.50',size:'160',scale:'bar:0:16',thread:'npt-half'}},
+ ]};
+ const submitted=await submitEnquiry(payload,configurationInput,configuredCatalogue);
+ const configuredRecord=(await payload.find({collection:'enquiries',overrideAccess:true,where:{reference:{equals:submitted.reference}}})).docs[0];
+ assert.equal(configuredRecord.items?.length,2);
+ const savedRanges=configuredRecord.items!.map(item=>item.range??'').join('\n');
+ for(const value of ['232.50','233.50','100 mm','160 mm','0–10 bar','0–16 bar','G ½ B','½ NPT'])assert.ok(savedRanges.includes(value),value);
+ assert.equal((await submitEnquiry(payload,configurationInput,{...configuredCatalogue,products:[]})).repeated,true);
+ const configuredProof=await issueVerification(payload,submitted.reference,'cms');assert.ok(configuredProof);await confirmVerification(payload,configuredProof);
+ const staffView=await readInventory(payload,{...owner,collection:'staff'},new URL('https://example.invalid/api/staff/inventory'));
+ assert.equal(staffView.enquiries.find(e=>e.id===configuredRecord.id)?.items.map(item=>item.range).join('\n'),savedRanges);
+ assert.equal((await deliverNextNotification(payload,capture)).outcome,'sent');
+ for(const value of ['232.50','233.50','100 mm','160 mm','0–10 bar','0–16 bar','G ½ B','½ NPT','Quantity: 3','Quantity: 4'])assert.ok(messages[3].text.includes(value),value);
+ assert.equal(messages[3].to,'connection-regression@example.invalid');
+
  stage='migration rollback refuses to destroy submitted option history';
  await assert.rejects(down(migrationContext),/Preserve connection option enquiry history/);
  assert.equal((await columns()).rowCount,4);

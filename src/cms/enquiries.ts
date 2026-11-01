@@ -33,7 +33,7 @@ export const Enquiries:CollectionConfig={
       {name:'optionId',type:'text',maxLength:80,admin:{description:'Stable connection identity from the reviewed catalogue.'}},
       {name:'optionNameEn',type:'text',maxLength:200},{name:'optionNameAr',type:'text',maxLength:200},
       {name:'optionModel',type:'text',maxLength:120},
-      {name:'quantity',type:'number',required:true,min:1,max:9999},{name:'range',type:'text',maxLength:160},
+      {name:'quantity',type:'number',required:true,min:1,max:9999},{name:'range',label:'Configuration / range — المواصفات والنطاق',type:'text',maxLength:160,admin:{description:'Immutable customer selection: exact model, dial size, scale/unit and process connection. Manual RFQs store their requested range here.'}},
     ]}),
     fixed({name:'verificationStatus',type:'select',required:true,defaultValue:'unverified',options:['unverified','test-verified','verified']}),
     fixed({name:'verifiedAt',type:'date'}),

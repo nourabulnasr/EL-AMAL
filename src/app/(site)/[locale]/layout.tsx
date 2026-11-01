@@ -12,6 +12,7 @@ import {Header} from '@/components/header';
 import {customerSettings} from '@/lib/customer-readiness';
 import {interestSettings} from '@/lib/product-interest-runtime';
 import {BasketProvider} from '@/components/basket-provider';
+import {configurationProduct} from '@/lib/product-configuration';
 import './styles.css';
 import './refinement.css';
 const sans=Manrope({subsets:['latin'],variable:'--font-sans',display:'swap'});
@@ -26,6 +27,6 @@ export const metadata={metadataBase:new URL(siteOrigin()),robots:{index:indexing
 export default async function Layout({children,params}:{children:React.ReactNode;params:Promise<{locale:string}>}){
  const {locale}=await params;if(!isLocale(locale))notFound();const t=copy[locale];const catalogue=await loadCatalogue();
  // The basket needs identities, names and small connection choices; keep all technical tables server-rendered.
- const basketCatalogue={source:catalogue.source,products:catalogue.products.map(({id,model,name,details})=>({id,model,name,...details?.options?.length?{options:details.options}:{}}))};
+ const basketCatalogue={source:catalogue.source,products:catalogue.products.map(p=>({id:p.id,model:p.model,name:p.name,configurationProduct:configurationProduct(p),...p.details?.options?.length?{options:p.details.options}:{}}))};
  return <html lang={locale} dir={locale==='ar'?'rtl':'ltr'} className={`${sans.variable} ${display.variable} ${arabic.variable}`}><body><SiteIntro locale={locale}/><SiteSchema locale={locale}/><a className="skip-link" href="#main-content">{t.skip}</a><BasketProvider key={catalogue.source} catalogue={basketCatalogue} publicEnquiries={!!customerSettings()}><Header locale={locale}/><BusinessContact locale={locale}/><main id="main-content">{children}</main><SiteFooter locale={locale} analyticsEnabled={!!interestSettings()}/></BasketProvider></body></html>;
 }

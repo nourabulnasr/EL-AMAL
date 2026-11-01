@@ -3,6 +3,7 @@ import {useRef,useState} from 'react';
 import Link from 'next/link';
 import type {Locale} from '@/lib/catalogue';
 import {basketSelectionRequired,basketLineKey} from '@/lib/basket';
+import {configurationSummary} from '@/lib/product-configuration';
 import {validateEnquiry,type EnquiryDetails} from '@/lib/enquiry-preview';
 import {CustomerEnquirySubmit} from './customer-enquiry-submit';
 import {useBasket} from './basket-provider';
@@ -31,6 +32,7 @@ export function EnquiryPreview({locale}:{locale:Locale}){
    <div className="attachment-preview"><span aria-hidden="true">＋</span><div><strong>{ar?'لديك عرض سعر أو قائمة متطلبات؟':'Have a quotation or requirements list?'}</strong><p>{publicEnquiries?(ar?'استخدم نموذج الملفات المخصص. ستظل اختيارات المنتجات محفوظة في هذه السلة.':'Use the dedicated file enquiry form. Your selected products stay in this basket.'):ar?'إرسال الملفات غير متاح في هذه المعاينة.':'File submission is unavailable in this preview.'}</p>{publicEnquiries&&<Link className="text-link" href={`/${locale}/rfq#existing-quotation`}>{ar?'فتح نموذج الاستفسار بالملفات':'Open the file enquiry form'}</Link>}</div></div>
    <div className="form-actions"><button type="submit" disabled={needsSelection} className="button button-dark">{ar?'معاينة المتطلبات':'Preview requirement'}<span aria-hidden="true">↗</span></button><p>{publicEnquiries?(ar?'راجع التفاصيل قبل الإرسال.':'Review the details before submitting.'):ar?'لن يتم إرسال بريد إلكتروني من هذه المعاينة.':'This preview does not send an email.'}</p></div>
   </form>}
+  {review&&<section className="configuration-review" aria-label={ar?'المواصفات المختارة':'Selected specifications'}><h3>{ar?'المواصفات المختارة':'Selected specifications'}</h3>{lines.map(line=>{const product=catalogue.products.find(p=>p.id===line.productId);if(!product?.configurationProduct)return null;const summary=configurationSummary(product.configurationProduct,line.configuration??{},locale);return summary?<p key={basketLineKey(line)}><bdi>{product.model}</bdi><br/>{summary}<br/>{ar?'الكمية':'Quantity'}: {line.quantity}</p>:null;})}</section>}
   <CustomerEnquirySubmit active={review&&!needsSelection} details={details} locale={locale}/>
   <TestEnquirySubmit active={review} details={details} locale={locale}/>
  </section>;

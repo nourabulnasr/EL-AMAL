@@ -94,7 +94,7 @@ test('notification worker sends immutable connection snapshots with its existing
  const pool={query:async(statement,params)=>{
   if(statement.startsWith('WITH candidates AS'))return {rows:[],rowCount:0};
   if(statement.includes('RETURNING id,reference,recipient'))return {rows:[{id:7,enquiry_id:9,reference:'EA-test',recipient:'owner@example.invalid',delivery_key:'enquiry-EA-test',attempts:1}],rowCount:1};
-  if(statement.startsWith('SELECT model,quantity,option_id')){assert.deepEqual(params,[9]);return {rows:[{model:'111.10 / 111.12',quantity:'2',option_id:'back-connection',option_name_en:'Back connection',option_name_ar:'توصيل خلفي',option_model:'111.12'}],rowCount:1};}
+  if(statement.startsWith('SELECT model,quantity,range,option_id')){assert.deepEqual(params,[9]);return {rows:[{model:'111.10 / 111.12',quantity:'2',option_id:'back-connection',option_name_en:'Back connection',option_name_ar:'توصيل خلفي',option_model:'111.12'}],rowCount:1};}
   if(statement.startsWith('UPDATE notifications SET status='))return {rows:[],rowCount:1};
   throw new Error('Unexpected SQL');
  }};

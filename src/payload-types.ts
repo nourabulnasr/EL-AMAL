@@ -286,6 +286,9 @@ export interface Enquiry {
         optionNameAr?: string | null;
         optionModel?: string | null;
         quantity: number;
+        /**
+         * Immutable customer selection: exact model, dial size, scale/unit and process connection. Manual RFQs store their requested range here.
+         */
         range?: string | null;
         id?: string | null;
       }[]
