@@ -2,7 +2,7 @@
 
 User approved implementation of pressure and temperature configuration choices, dependent size/range/connection, diaphragm applicability, bilingual basket/admin/email persistence and separate configuration lines.
 
-Implemented and technically checked. Cloud preview built successfully. Awaiting Nour's visual approval before production publication.
+Implemented, approved by Nour and published to production on 1 November 2026.
 
 ## Implemented
 
@@ -31,10 +31,19 @@ Additional connection sources: PM04.02, PM04.07, PM07.02, PM07.14, PM07.20; PV11
 - Screenshots: artifacts/configuration-pressure-en.png, artifacts/configuration-review-en.png, artifacts/configuration-temperature-ar-mobile.png. Local review server: http://127.0.0.1:3014. Review helper explicitly enables the development catalogue and disables public submissions.
 - Protected cloud HTML was fetched successfully using authenticated Vercel curl. No environment credentials were exported. Automatic approval review rejected a broader development-env export; the safer authenticated curl flow was used instead.
 
-## Remaining release steps
+## Production release
 
-1. Final cloud preview build for the last Arabic direction, copy and review-helper adjustments.
-2. Nour's visual approval, required by the supplied AGENTS.md approval discipline ("WAIT for Nour's approval"), then production release and smoke checks.
+- Nour explicitly approved the design and publication in the approval reply.
+- Final preview commit 52561a7 built successfully. It was rebuilt using Vercel's production environment, not promoted with development database credentials.
+- Production deployment: dpl_6ptP2eAeALLR5PiuvhijBiMEaSqA. Ready, build 1 min 25 sec. Live aliases include www.al-amaleg.com, al-amaleg.com and el-amal-sigma.vercel.app.
+- Live pressure instrument: https://www.al-amaleg.com/en/products/cms-156. Verified model232.50,63mm,0–10bar,G¼B, mounting selection and enabled basket action. Unsupported63mm/G½B choice absent.
+- Live Arabic thermometer: https://www.al-amaleg.com/ar/products/cms-165. Verified100mm,0–120°C,G½B, correct numeric direction and390px fit.
+- Live product metadata has self-canonical URLs and index/follow. Arabic thermometer has matching English, Arabic and x-default hreflang links. Search engine indexing is externally controlled, not guaranteed by this release.
+- The live catalogue still contains165 groups:59pressure,89temperature,17accessories. Production IDs differ from development; resolve model links through catalogue search instead of reusing development IDs. Initial smoke URLs used development IDs and correctly showed not-found pages; the production catalogue itself was healthy.
+- No production schema migration, stock update, customer record mutation or external test message was needed.
+- Post-release error scan: 10 records, all the existing PostgreSQL future SSL-mode compatibility warning; zero other application errors in that bounded 10-minute scan.
+
+No further user action is required for this configuration release. Special/on-request WIKA variants outside the documented choices remain commercial enquiries, not automatically invented configurations.
 
 Review preview: https://el-amal-git-codex-hero-review-an-09f530-nour-abulnasrs-projects.vercel.app/en/products/cms-167 (Vercel sign-in required). This stable branch URL follows the latest successful preview; it is not the production website.
 
