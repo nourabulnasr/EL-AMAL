@@ -81,7 +81,7 @@ Both report screens support a maximum 93-day reporting window. Narrow the demand
 
 ## Handle a customer enquiry
 
-Owner alerts are sent to alamal4trade@hotmail.com. The email identifies the enquiry; customer details and quotation files are reviewed after signing in to the private admin.
+Owner alerts are sent to elamal4supplies@gmail.com (updated 3 November 2026). The email identifies the enquiry and selected instrument configuration; customer details and quotation files are reviewed after signing in to the private admin.
 
 1. Open Enquiries and locate the reference from the alert, or review the latest records.
 2. Read Request kind, Verification status, customer/company details, notes and submitted items.

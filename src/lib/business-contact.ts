@@ -1,5 +1,5 @@
 // Public business information supplied by the client, separate from the alert inbox.
-export const businessEmail = 'alamal4trade@hotmail.com';
+export const businessEmail = 'elamal4supplies@gmail.com';
 // Confirmed 16 October 2026. Egypt's domestic 0 is removed after country code +20.
 export const businessPhone = '+201017314349';
 export function businessContact(){
