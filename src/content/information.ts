@@ -1,5 +1,4 @@
 import type { Locale } from "../lib/catalogue";
-import { wikaRelationship } from "./business-profile";
 type InformationCopy = {
   title: string;
   eyebrow: string;
@@ -17,49 +16,49 @@ export const informationPages: Record<
   about: {
     en: {
       title: "About EL AMAL",
-      eyebrow: "About EL AMAL",
-      headline: "Industrial measurement.\nA clear point of contact.",
+      eyebrow: "Serving Egypt since 1992",
+      headline: "Three decades of experience.\nA lasting commitment.",
       intro:
-        `${wikaRelationship.en} Our catalogue brings together pressure gauges, transmitters, thermometers and instrument accessories for industrial applications, with model specifications and manufacturer datasheets.`,
-      sectionTitle: "Our focus.\nYour application.",
+        "Established in 1992, EL AMAL has proudly served as the main distributor of WIKA in Egypt, maintaining a strong and long-standing partnership to this day.",
+      sectionTitle: "Our history.\nYour next chapter.",
       sections: [
         {
-          title: "Pressure, temperature and the connections between",
-          body: "Explore mechanical and electronic measurement instruments alongside the accessories used to connect them to a process. Find model references, technical details and documentation in one place.",
+          title: "Long-standing relationships across Egyptian industry",
+          body: "With over three decades of experience, EL AMAL has built strong business relationships with leading companies in oil and gas, lubricants, food and beverage, pharmaceuticals and other industrial sectors, as well as the Suez Canal Authority.",
         },
         {
-          title: "The application comes first",
-          body: "Oil and gas and general industrial requirements start with the process: the medium, working conditions, measurement range, material and connection. These details guide the conversation around the right configuration.",
+          title: "Quality instruments. Reliable service.",
+          body: "Throughout the years, we have remained committed to providing high-quality industrial measurement instruments, reliable solutions and professional service to meet the diverse needs of our customers.",
         },
         {
-          title: "A direct conversation about your requirement",
-          body: "Contact EL AMAL with a model reference, a replacement requirement or an existing quotation. Configuration, technical suitability, availability and commercial terms are confirmed before an order is agreed.",
+          title: "Ready for the needs of tomorrow",
+          body: "Looking ahead, EL AMAL will continue to offer high-quality pressure, temperature and measurement instruments from WIKA, the globally renowned German manufacturer. Our comprehensive range of industrial measurement solutions is designed to meet the evolving needs of industries across Egypt.",
         },
       ],
-      closing: "Let’s start with what you need to measure.",
+      closing: "Experience you can build on.\nPrecision you can work with.",
     },
     ar: {
       title: "من نحن — الأمل",
-      eyebrow: "عن الأمل",
-      headline: "القياس الصناعي.\nوتواصل واضح.",
+      eyebrow: "نخدم الصناعة في مصر منذ 1992",
+      headline: "خبرة تمتد لعقود.\nوالتزام يتجدد.",
       intro:
-        `${wikaRelationship.ar} يجمع كتالوجنا عدادات الضغط وأجهزة الإرسال ومقاييس الحرارة وملحقات أجهزة القياس للتطبيقات الصناعية، مع مواصفات الطرازات وأوراق البيانات من الشركات المصنعة.`,
-      sectionTitle: "تخصصنا.\nوتطبيقك الصناعي.",
+        "تأسست الأمل عام 1992، وتفخر بكونها الموزع الرئيسي لشركة ويكا (WIKA) في مصر، في شراكة قوية وراسخة مستمرة حتى اليوم.",
+      sectionTitle: "تاريخنا.\nوشراكتك القادمة.",
       sections: [
         {
-          title: "الضغط والحرارة وملحقات التوصيل",
-          body: "تصفح أجهزة القياس الميكانيكية والإلكترونية والملحقات المستخدمة لتوصيلها بالعملية الصناعية. تجد مراجع الطرازات والتفاصيل الفنية والمستندات في مكان واحد.",
+          title: "علاقات راسخة في مختلف قطاعات الصناعة المصرية",
+          body: "بخبرة تتجاوز ثلاثة عقود، بنت الأمل علاقات عمل قوية مع شركات رائدة في قطاعات البترول والغاز وزيوت التشحيم والأغذية والمشروبات والأدوية وغيرها من القطاعات الصناعية، إلى جانب هيئة قناة السويس.",
         },
         {
-          title: "التطبيق أولاً",
-          body: "تبدأ متطلبات البترول والغاز والصناعة العامة من تفاصيل العملية: الوسط وظروف التشغيل ونطاق القياس والمواد والتوصيلات. تساعد هذه التفاصيل في تحديد التكوين المناسب.",
+          title: "أجهزة عالية الجودة. وخدمة موثوقة.",
+          body: "على مدار السنوات، حافظنا على التزامنا بتوفير أجهزة قياس صناعية عالية الجودة وحلول موثوقة وخدمة احترافية تلبي الاحتياجات المتنوعة لعملائنا.",
         },
         {
-          title: "تواصل مباشر حول متطلباتك",
-          body: "تواصل مع الأمل بمرجع الطراز أو متطلبات استبدال جهاز أو عرض سعر موجود. يُؤكد التكوين والملاءمة الفنية والتوفر والشروط التجارية قبل الاتفاق على الطلب.",
+          title: "مستعدون لاحتياجات الغد",
+          body: "تواصل الأمل تقديم أجهزة قياس الضغط ودرجة الحرارة وغيرها من أجهزة القياس عالية الجودة من شركة ويكا (WIKA)، المصنّع الألماني المعروف عالمياً. ونوفر مجموعة شاملة من حلول القياس الصناعية المصممة لمواكبة الاحتياجات المتطورة لمختلف الصناعات في مصر.",
         },
       ],
-      closing: "لنبدأ بما تحتاج إلى قياسه.",
+      closing: "خبرة تبني عليها.\nودقة تعتمد عليها.",
     },
   },
   contact: {
