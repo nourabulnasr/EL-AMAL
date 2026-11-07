@@ -1,0 +1,92 @@
+{
+  "status": "LOCAL DRAFT ONLY — not uploaded, not published, no spend authorised",
+  "date": "2026-11-07",
+  "currency": "EGP",
+  "proposedCombinedAverageDailyBudget": 200,
+  "proposedFullMonthMediaLimitAtUnchangedBudget": 6080,
+  "budgetNote": "One combined budget across both campaigns, not 200 per campaign. Taxes and bank fees are additional where applicable. Obtain the client's approval and Keyword Planner forecasts before launch.",
+  "settings": {
+    "network": "Google Search only initially; disable optional Display expansion and Search partners for the controlled first test",
+    "location": "Egypt — presence, not presence or interest",
+    "languages": ["Arabic", "English"],
+    "bidding": "Choose after account forecasts and conversion tracking validation; no fabricated CPC or target CPA",
+    "matchTypes": ["Exact", "Phrase"],
+    "conversionGoal": "Completed confirmed product RFQ or finalised existing-quotation submission; not generic clicks",
+    "autoApplyRecommendations": false,
+    "schedule": "Confirm sales response hours before setting a schedule; no invented opening hours"
+  },
+  "adGroups": [
+    {
+      "campaign": "EL AMAL | Search | English",
+      "name": "Pressure instruments",
+      "locale": "en",
+      "finalUrl": "https://www.al-amaleg.com/en/categories/pressure",
+      "keywordSeeds": ["wika pressure gauge egypt", "wika 232.50 egypt", "wika 233.50 egypt", "industrial pressure gauge supplier", "pressure transmitter egypt"],
+      "headlines": ["WIKA Pressure Gauges", "EL AMAL Egypt", "Choose Your Gauge Size", "Request a Quotation", "Pressure Instrument Supplier", "Review Model Specifications", "Find Your WIKA Model", "Send Your Existing Quote"],
+      "descriptions": ["Explore WIKA pressure instruments. Choose specifications and request a quotation.", "Review model details and datasheets before sending your requirements to EL AMAL.", "Know your model? Include the dial size, range, connection and quantity in your RFQ.", "Already have a quotation? Send your PDF, XLSX or photos for review."]
+    },
+    {
+      "campaign": "EL AMAL | Search | English",
+      "name": "Temperature instruments",
+      "locale": "en",
+      "finalUrl": "https://www.al-amaleg.com/en/categories/temperature",
+      "keywordSeeds": ["wika thermometer egypt", "wika model 55 thermometer", "industrial thermometer supplier", "temperature instrument egypt", "wika temperature transmitter"],
+      "headlines": ["WIKA Temperature Instruments", "Industrial Thermometers", "EL AMAL Egypt", "Find Your Temperature Model", "Request a Quotation", "Review Technical Datasheets", "Select Your Required Range", "Send Your Existing Quote"],
+      "descriptions": ["Explore WIKA temperature instruments with model specifications and datasheets.", "Tell us your range, process connection and quantity. Request a reviewed quotation.", "Compare dial thermometers, sensors and temperature transmitters in one catalogue.", "Send an existing PDF, XLSX or photo quotation without re-entering product lines."]
+    },
+    {
+      "campaign": "EL AMAL | Search | English",
+      "name": "Valves and accessories",
+      "locale": "en",
+      "finalUrl": "https://www.al-amaleg.com/en/categories/accessories",
+      "keywordSeeds": ["wika instrument valve egypt", "wika iv2 valve", "instrument manifold supplier egypt", "pressure gauge accessories egypt", "instrument mounting accessories"],
+      "headlines": ["WIKA Valves and Accessories", "Complete Your Measuring Point", "EL AMAL Egypt", "Find Your Instrument Valve", "Request a Quotation", "Review Connections and Models", "Instrument Mounting Options", "Send Your Requirements"],
+      "descriptions": ["Explore instrument valves and mounting accessories. Send your model and quantity.", "Review connections and technical details before requesting your quotation.", "Find instruments and accessories together. EL AMAL reviews your configuration.", "Send your existing quotation as a PDF, XLSX or photo for review."]
+    },
+    {
+      "campaign": "EL AMAL | Search | Arabic",
+      "name": "Pressure instruments",
+      "locale": "ar",
+      "finalUrl": "https://www.al-amaleg.com/ar/categories/pressure",
+      "keywordSeeds": ["عداد ضغط ويكا", "عدادات ضغط WIKA مصر", "مورد عدادات ضغط صناعية", "ويكا 232.50", "مرسل ضغط ويكا"],
+      "headlines": ["عدادات ضغط WIKA", "الأمل لأجهزة القياس", "اختر مقاس عداد الضغط", "اطلب عرض سعر", "راجع مواصفات الطراز", "حدد نطاق القياس", "أرسل عرض السعر الموجود", "أجهزة قياس الضغط في مصر"],
+      "descriptions": ["تصفح عدادات الضغط ومرسلات WIKA مع المواصفات الفنية وأوراق البيانات.", "حدد المقاس ونطاق القياس والتوصيل والكمية، ثم أرسل طلب عرض السعر.", "لديك عرض سعر موجود؟ أرسله بصيغة PDF أو XLSX أو صور للمراجعة.", "تواصل مع الأمل لمراجعة التكوين والتوفر والتفاصيل التجارية قبل الطلب."]
+    },
+    {
+      "campaign": "EL AMAL | Search | Arabic",
+      "name": "Temperature instruments",
+      "locale": "ar",
+      "finalUrl": "https://www.al-amaleg.com/ar/categories/temperature",
+      "keywordSeeds": ["ترمومتر ويكا", "أجهزة قياس الحرارة الصناعية", "مورد ترمومترات صناعية مصر", "ترمومتر WIKA 55", "مرسل حرارة ويكا"],
+      "headlines": ["أجهزة قياس الحرارة WIKA", "ترمومترات صناعية", "الأمل لأجهزة القياس", "اختر نطاق الحرارة المطلوب", "اطلب عرض سعر", "راجع أوراق البيانات", "ابحث عن طراز ويكا", "أرسل متطلباتك للمراجعة"],
+      "descriptions": ["قارن أجهزة قياس الحرارة والحساسات والمرسلات مع المواصفات وأوراق البيانات.", "أرسل الطراز ونطاق القياس والتوصيل والكمية لطلب عرض سعر من الأمل.", "تصفح أجهزة WIKA للتطبيقات الصناعية في مصر وحدد متطلباتك الفنية.", "أرسل عرض السعر الموجود بصيغة PDF أو XLSX أو صور بدلاً من إعادة إدخال البنود."]
+    },
+    {
+      "campaign": "EL AMAL | Search | Arabic",
+      "name": "Valves and accessories",
+      "locale": "ar",
+      "finalUrl": "https://www.al-amaleg.com/ar/categories/accessories",
+      "keywordSeeds": ["صمامات أجهزة القياس ويكا", "صمام WIKA IV2", "مانيفولد أجهزة قياس", "ملحقات عدادات الضغط", "ملحقات تركيب أجهزة القياس"],
+      "headlines": ["صمامات وملحقات WIKA", "أكمل نقطة القياس", "الأمل لأجهزة القياس", "راجع مقاسات التوصيل", "اطلب عرض سعر", "ملحقات تركيب أجهزة القياس", "ابحث عن الطراز المطلوب", "أرسل عرض السعر الموجود"],
+      "descriptions": ["تصفح صمامات أجهزة القياس وملحقات التركيب وأرسل الطراز والكمية للمراجعة.", "راجع التوصيلات والمواصفات الفنية قبل اختيار ملحقات نقطة القياس.", "اجمع الأجهزة وملحقاتها في طلب واحد، مع مراجعة التكوين من فريق الأمل.", "لديك قائمة متطلبات؟ أرسل ملف PDF أو XLSX أو الصور للمراجعة."]
+    }
+  ],
+  "negativeKeywordCandidates": {
+    "phrase": ["jobs", "careers", "salary", "وظائف", "وظيفة", "رواتب", "توظيف"],
+    "reviewFirst": ["training", "course", "دورة", "كورس", "used", "مستعمل"],
+    "doNotBlanketExclude": ["pdf", "datasheet", "price", "سعر", "كتالوج", "manual"],
+    "note": "These are candidates, not an uploaded list. Do not exclude useful model/document searches. Review Arabic spelling variants and actual search terms; negative matches are not automatic translations."
+  },
+  "sitelinks": [
+    {"locale":"en","text":"Browse Products","url":"https://www.al-amaleg.com/en/products"},
+    {"locale":"en","text":"Send an Existing Quote","url":"https://www.al-amaleg.com/en/rfq#existing-quotation"},
+    {"locale":"en","text":"About EL AMAL","url":"https://www.al-amaleg.com/en/about"},
+    {"locale":"en","text":"Contact the Team","url":"https://www.al-amaleg.com/en/contact"},
+    {"locale":"ar","text":"تصفح المنتجات","url":"https://www.al-amaleg.com/ar/products"},
+    {"locale":"ar","text":"أرسل عرض السعر الموجود","url":"https://www.al-amaleg.com/ar/rfq#existing-quotation"},
+    {"locale":"ar","text":"عن الأمل","url":"https://www.al-amaleg.com/ar/about"},
+    {"locale":"ar","text":"تواصل مع الفريق","url":"https://www.al-amaleg.com/ar/contact"}
+  ],
+  "launchGates": ["Client-owned Ads account and access", "Billing and any advertiser verification completed by client", "Client explicitly approves media budget", "Egypt Keyword Planner forecasts reviewed", "Successful-enquiry conversion tracking tested with consent and deduplication", "Final advertisements and landing pages reviewed", "Campaigns remain paused until launch authorised"],
+  "notIncluded": ["Measured search volumes", "CPC forecasts", "Guaranteed enquiries or positions", "Uploaded campaigns", "Live Google conversion tracking"]
+}
