@@ -9,6 +9,10 @@ export function observeProductInterest(){
   const sent=new Set<string>();
   const states=new Map<HTMLElement,{state:VisibilityWindow;ratio:number;timer:number|undefined;signature:string}>();
   const visible=()=>!document.hidden&&!document.querySelector('.site-intro');
+  // IntersectionObserver delivery can lag a details toggle. Recheck actual
+  // rendering when the dwell timer fires, not just the cached intersection.
+  const exposed=(element:HTMLElement)=>visible()&&element.isConnected
+    &&!element.closest('details:not([open]),[hidden],[inert]')&&element.getClientRects().length>0;
   const context=(element:HTMLElement,kind:InterestKind):InterestEvent|undefined=>{
     const scope=element.closest<HTMLElement>('[data-interest-product]');
     const productId=scope?.dataset.interestProduct,locale=scope?.dataset.interestLocale;
@@ -35,12 +39,12 @@ export function observeProductInterest(){
   };
   const evaluate=(element:HTMLElement)=>{
     const value=states.get(element);if(!value)return;
-    const eligible=value.ratio>=.5&&visible()&&element.isConnected;
+    const eligible=value.ratio>=.5&&exposed(element);
     value.state.update(value.ratio,eligible,performance.now());
     if(!eligible){if(value.timer!==undefined)clearTimeout(value.timer);value.timer=undefined;}
     if(eligible&&value.timer===undefined)value.timer=window.setTimeout(()=>{
       value.timer=undefined;
-      value.state.update(value.ratio,visible()&&element.isConnected,performance.now());
+      value.state.update(value.ratio,exposed(element),performance.now());
       if(value.state.take(performance.now()))enqueue(context(element,element.closest<HTMLElement>('[data-interest-product]')?.dataset.interestList==='detail'?'view':'impression'));
     },1005);
   };
@@ -67,7 +71,7 @@ export function observeProductInterest(){
   };
   const visibility=()=>{for(const element of states.keys())evaluate(element);if(document.hidden)void flush();};
   const flushTimer=window.setInterval(()=>void flush(),1500);
-  scan();mutations.observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['data-interest-product','data-interest-list','data-interest-locale']});
+  scan();mutations.observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['data-interest-product','data-interest-list','data-interest-locale','open','hidden','inert']});
   document.addEventListener('click',click);document.addEventListener('auxclick',click);document.addEventListener('visibilitychange',visibility);
   return ()=>{
     // Withdrawal/navigation stops new measurements immediately. Pending unsent

@@ -1,8 +1,14 @@
+import {resolve} from 'node:path';
 import {indexingHeaders,publicDomainRedirects} from './src/lib/site-policy.mjs';
 import {withPayload} from '@payloadcms/next/withPayload';
 const nextConfig = {
   experimental: { globalNotFound: true, cpus: 1 },
   poweredByHeader: false,
+  webpack(config){
+    // Payload lazily imports this entry. Initialise a patched local instance first.
+    config.resolve.alias={...config.resolve.alias,'@monaco-editor/react$':resolve(process.cwd(),'src/components/local-monaco-editor.tsx')};
+    return config;
+  },
   async redirects() { return publicDomainRedirects(); },
   async headers() { return [{ source: '/:path*', headers: [
     {key:'X-Content-Type-Options',value:'nosniff'},

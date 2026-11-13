@@ -26,11 +26,27 @@ async function recoveryInput(request:Request){
   // Payload's own admin forms send one _payload JSON field. Bound the entire
   // stream before parsing multipart, even when Content-Length is absent or false.
   const reader=request.body?.getReader();if(!reader)throw new Error('Missing request');
-  const chunks:Uint8Array[]=[];let size=0;
-  try{while(true){const part=await reader.read();if(part.done)break;
-    size+=part.value.byteLength;if(size>8192){await reader.cancel();throw new Error('Request too large');}
+  const chunks:Uint8Array[]=[];let size=0,tooLarge=false,deadline=performance.now()+5000;
+  try{while(true){
+    const remaining=deadline-performance.now();
+    if(remaining<=0)throw new Error(tooLarge?'Request too large':'Recovery request timed out');
+    let timer:ReturnType<typeof setTimeout>|undefined;
+    const part=await Promise.race([reader.read(),new Promise<never>((_,reject)=>{
+      timer=setTimeout(()=>reject(new Error(tooLarge?'Request too large':'Recovery request timed out')),remaining);
+    })]).finally(()=>clearTimeout(timer));
+    if(part.done)break;
+    size+=part.value.byteLength;
+    // Undici's FormData producer can reject outside cancel() on Node 24.
+    // Keep at most 8 KiB, stop at the 64 KiB drain ceiling and allow at most
+    // 250 ms after overflow, even when the sender never closes the stream.
+    if(size>8192){
+      if(!tooLarge){tooLarge=true;deadline=Math.min(deadline,performance.now()+250);}
+      if(size>65536)throw new Error('Request too large');
+      continue;
+    }
     chunks.push(part.value);
   }}finally{reader.releaseLock();}
+  if(tooLarge)throw new Error('Request too large');
   const bytes=new Uint8Array(size);let offset=0;
   for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.byteLength;}
   const form=await new Response(bytes,{headers:{'content-type':contentType}}).formData();

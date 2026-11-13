@@ -1,0 +1,84 @@
+{
+  "versions": {
+    "zod": "4.6.6",
+    "monaco-editor": "0.56.0",
+    "dompurify": "3.4.17",
+    "deepmerge": "4.3.1"
+  },
+  "patches": [
+    {
+      "path": "node_modules/zod/v3/types.js",
+      "before": "d7214e1dacf9e6e70c9ca80247717b4be13b240510428fef132b7da3260d1a32",
+      "after": "5b5a015d556c8de0ace2eae5592ab480036f417f53bb78cf52fd64b91d7f5588",
+      "changes": [
+        {
+          "from": "message: def.maxLength.message,\n                });\n                status.dirty();",
+          "to": "message: def.maxLength.message,\n                });\n                return INVALID; // EL AMAL: bound before child validation."
+        },
+        {
+          "from": "message: def.maxSize.message,\n                });\n                status.dirty();",
+          "to": "message: def.maxSize.message,\n                });\n                return INVALID; // EL AMAL: bound before child validation."
+        },
+        {
+          "from": "status.dirty();\n            }\n        }\n        if (def.minLength",
+          "to": "status.dirty();\n                if (tooBig) return INVALID; // EL AMAL: bound before child validation.\n            }\n        }\n        if (def.minLength"
+        }
+      ]
+    },
+    {
+      "path": "node_modules/zod/v3/types.cjs",
+      "before": "7a2f06d88e280bdd198c60e0d292ed7f1e3993e877be4415de07e6abc7746dd1",
+      "after": "10baa5f5e4650ef7b29bde0ca899d5cf7ed044ee090fd90af23df0737306deda",
+      "changes": [
+        {
+          "from": "message: def.maxLength.message,\n                });\n                status.dirty();",
+          "to": "message: def.maxLength.message,\n                });\n                return parseUtil_js_1.INVALID; // EL AMAL: bound before child validation."
+        },
+        {
+          "from": "message: def.maxSize.message,\n                });\n                status.dirty();",
+          "to": "message: def.maxSize.message,\n                });\n                return parseUtil_js_1.INVALID; // EL AMAL: bound before child validation."
+        },
+        {
+          "from": "status.dirty();\n            }\n        }\n        if (def.minLength",
+          "to": "status.dirty();\n                if (tooBig) return parseUtil_js_1.INVALID; // EL AMAL: bound before child validation.\n            }\n        }\n        if (def.minLength"
+        }
+      ]
+    },
+    {
+      "path": "node_modules/monaco-editor/esm/vs/base/browser/dompurify/dompurify.js",
+      "before": "380497577cba9a223f307b4ffaba1c105178673acb6ac7e9a64e681934dc6b50",
+      "after": "71bcb499f824fa2fbac1b5bc7858d8500227c4c987ab60036b2046b2b4dc066d",
+      "replacement": "// Keep Monaco hooks isolated while using the audited npm sanitizer.\nimport createDOMPurify from 'dompurify';\nexport default createDOMPurify();\n"
+    },
+    {
+      "path": "node_modules/deepmerge/dist/cjs.js",
+      "before": "2e5160f84a1141bd927264afe4d15766f1e6cf07daef182b37ff53fea121de7d",
+      "after": "79761613b6ab32a97e3f6b370a4b7c54213d0262d8ce645d5583390708c739bb",
+      "changes": [
+        {
+          "from": "destination[key] = cloneUnlessOtherwiseSpecified(target[key], options);",
+          "to": "if (key !== '__proto__') destination[key] = cloneUnlessOtherwiseSpecified(target[key], options);"
+        },
+        {
+          "from": "if (propertyIsUnsafe(target, key)) {",
+          "to": "if (key === '__proto__' || propertyIsUnsafe(target, key)) {"
+        }
+      ]
+    },
+    {
+      "path": "node_modules/deepmerge/dist/umd.js",
+      "before": "f33e6596482d1fb5c7c427f8ef92f2aa849eea9223acd974176b2fb27ddbf73a",
+      "after": "ccdcd5396a3f39417fea8f7506056fe74f359540bf85ad19926fdf29c900bcb2",
+      "changes": [
+        {
+          "from": "destination[key] = cloneUnlessOtherwiseSpecified(target[key], options);",
+          "to": "if (key !== '__proto__') destination[key] = cloneUnlessOtherwiseSpecified(target[key], options);"
+        },
+        {
+          "from": "if (propertyIsUnsafe(target, key)) {",
+          "to": "if (key === '__proto__' || propertyIsUnsafe(target, key)) {"
+        }
+      ]
+    }
+  ]
+}

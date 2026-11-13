@@ -13,7 +13,9 @@
     "typecheck": "tsc --noEmit",
     "readiness": "node --experimental-strip-types scripts/check-readiness.ts",
     "test": "node --experimental-strip-types --test tests/*.test.mjs",
-    "cms": "node --env-file=.env.local --env-file=.env.development.local node_modules/payload/bin.js"
+    "cms": "node --env-file=.env.local --env-file=.env.development.local node_modules/payload/bin.js",
+    "postinstall": "node scripts/apply-dependency-security.mjs",
+    "prebuild": "node scripts/apply-dependency-security.mjs"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "3.90.2",
@@ -45,10 +47,20 @@
       "esbuild": "0.25.12"
     },
     "payload": {
-      "undici": "7.29.1"
+      "undici": "7.30.1"
     },
     "monaco-editor": {
       "dompurify": "3.4.17"
+    },
+    "fast-uri": "3.1.9",
+    "@opentelemetry/instrumentation-host-metrics": {
+      "systeminformation": "5.33.21"
+    },
+    "gaxios": {
+      "rimraf": "6.1.4"
+    },
+    "inngest": {
+      "zod": "4.6.6"
     }
   }
 }

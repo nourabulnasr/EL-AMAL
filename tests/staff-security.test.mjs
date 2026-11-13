@@ -31,3 +31,10 @@ test('reset rejects weak passwords and malformed tokens before password hashing'
   await assert.rejects(recoveryRequest(request({token:'no',password:'Strong phrase for recovery'}),'reset-password',configured),/token/);
   assert.deepEqual(await recoveryRequest(request({token:'a'.repeat(40),password:'Strong phrase for recovery'}),'reset-password',configured),{token:'a'.repeat(40),password:'Strong phrase for recovery'});
 });
+test('oversized multipart recovery rejects even when its producer never closes',async()=>{
+ const body=new ReadableStream({start(controller){controller.enqueue(new Uint8Array(9000));},pull(){return new Promise(()=>{});}});
+ const req=new Request('https://example.test/api/staff/forgot-password',{method:'POST',headers:{origin:'https://example.test','content-type':'multipart/form-data; boundary=test'},body,duplex:'half'});
+ let timer;
+ try{await assert.rejects(Promise.race([recoveryRequest(req,'forgot-password',configured),new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('Watchdog: handler did not return')),1500);})]),/Request too large/);}
+ finally{clearTimeout(timer);}
+});
