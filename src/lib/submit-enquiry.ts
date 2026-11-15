@@ -6,6 +6,7 @@ import {enqueueInitialVerification} from './verification-outbox.ts';
 import type {VerificationSettings} from './verification-message.ts';
 import {sql,type PostgresAdapter} from '@payloadcms/db-postgres';
 import {assertQueueCapacity} from './queue-capacity.ts';
+import {notificationKey} from './notification-key.ts';
 
 // Trusted server service only. Never accept product descriptions or status from a caller.
 export async function submitEnquiry(payload:Payload,raw:unknown,catalogue:Catalogue,verification?:VerificationSettings,beforeCreate?:()=>Promise<void>) {
@@ -41,7 +42,7 @@ export async function submitEnquiry(payload:Payload,raw:unknown,catalogue:Catalo
     }});
     // File-based requests queue their staff notification only after files are finalized.
     if(!input.quotation)await payload.create({collection:'notifications',overrideAccess:true,depth:0,req,data:{
-      enquiry:record.id,reference:record.reference,deliveryKey:`enquiry-${record.reference}`,
+      enquiry:record.id,reference:record.reference,deliveryKey:notificationKey(record.reference),
       recipient:process.env.ENQUIRY_NOTIFICATION_TO||'elamal4supplies@gmail.com',source:catalogue.source,
       status:catalogue.source==='demo'?'disabled':'pending',attempts:0,nextAttemptAt:new Date().toISOString(),
     }});

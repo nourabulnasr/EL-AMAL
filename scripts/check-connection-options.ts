@@ -118,7 +118,7 @@ try{
  await pool.query("UPDATE notifications SET next_attempt_at=now()-interval '1 second' WHERE enquiry_id=$1",[record.id]);
  assert.equal((await deliverNextNotification(payload,capture)).outcome,'sent');assert.equal(messages.length,2);
  assert.deepEqual(messages[0],messages[1],'Retry retains exact content, recipient and provider idempotency key');
- assert.equal(messages[1].to,'connection-regression@example.invalid');assert.equal(messages[1].idempotencyKey,'enquiry-'+record.reference);
+ assert.equal(messages[1].to,'connection-regression@example.invalid');assert.equal(messages[1].idempotencyKey,'enquiry-v2-'+record.reference);
  assert.match(messages[1].text,/111\.10/);assert.match(messages[1].text,/111\.12/);
  assert.match(messages[1].text,/Bottom connection/);assert.match(messages[1].text,/Back connection/);
  assert.match(messages[1].text,/توصيل سفلي/);assert.match(messages[1].text,/توصيل خلفي/);

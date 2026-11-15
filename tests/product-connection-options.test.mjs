@@ -91,20 +91,27 @@ test('public API reports invalid trusted option selection clearly without reflec
 test('notification worker sends immutable connection snapshots and verified reply details with its existing delivery key',async()=>{
  const {deliverNextNotification}=await import('../src/lib/notification-worker.ts');
  const sent=[];
+ let deliveryKey='enquiry-v2-EA-test';
  const pool={query:async(statement,params)=>{
   if(statement.startsWith('WITH candidates AS'))return {rows:[],rowCount:0};
-  if(statement.includes('RETURNING id,reference,recipient'))return {rows:[{id:7,enquiry_id:9,reference:'EA-test',recipient:'owner@example.invalid',delivery_key:'enquiry-EA-test',attempts:1}],rowCount:1};
+  if(statement.includes('RETURNING id,reference,recipient'))return {rows:[{id:7,enquiry_id:9,reference:'EA-test',recipient:'owner@example.invalid',delivery_key:deliveryKey,attempts:1}],rowCount:1};
   if(statement.startsWith('SELECT model,quantity,range,option_id')){assert.deepEqual(params,[9]);return {rows:[{model:'111.10 / 111.12',quantity:'2',option_id:'back-connection',option_name_en:'Back connection',option_name_ar:'توصيل خلفي',option_model:'111.12'}],rowCount:1};}
   if(statement.startsWith('SELECT name,email,company'))return {rows:[{name:'Test <buyer>',email:'buyer@example.invalid',company:'Test & Co',locale:'ar',request_kind:'products'}]};
   if(statement.startsWith('UPDATE notifications SET status='))return {rows:[],rowCount:1};
   throw new Error('Unexpected SQL');
  }};
  assert.deepEqual(await deliverNextNotification({db:{pool}},{send:async(message)=>{sent.push(message);return {id:'receipt'};}}),{outcome:'sent'});
- assert.equal(sent[0].idempotencyKey,'enquiry-EA-test');assert.equal(sent[0].to,'owner@example.invalid');assert.match(sent[0].text,/111\.12/);assert.match(sent[0].text,/توصيل خلفي/);assert.match(sent[0].text,/Quantity: 2/);
+ assert.equal(sent[0].idempotencyKey,'enquiry-v2-EA-test');assert.equal(sent[0].to,'owner@example.invalid');assert.match(sent[0].text,/111\.12/);assert.match(sent[0].text,/توصيل خلفي/);assert.match(sent[0].text,/Quantity: 2/);
  assert.equal(sent[0].replyTo,'buyer@example.invalid');
  assert.ok(sent[0].html.includes('Test &lt;buyer&gt;'));
  assert.ok(sent[0].html.includes('Test &amp; Co'));
  assert.ok(sent[0].html.includes('/admin/collections/enquiries/9'));
+ deliveryKey='enquiry-EA-test';
+ assert.deepEqual(await deliverNextNotification({db:{pool}},{send:async(message)=>{sent.push(message);return {id:'receipt'};}}),{outcome:'sent'});
+ assert.deepEqual(sent[1],{
+  to:'owner@example.invalid',idempotencyKey:'enquiry-EA-test',subject:'EL AMAL enquiry EA-test',
+  text:'Enquiry EA-test is available in the EL AMAL admin inbox. Sign in to review its details.\n\nProduct configuration selections:\n111.12 | Back connection / توصيل خلفي | Quantity: 2',
+ });
 });
 
 test('a stale basket selection event cannot restore a removed line or reuse an outdated quantity',async()=>{

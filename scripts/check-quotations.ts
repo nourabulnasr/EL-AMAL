@@ -8,7 +8,7 @@ import type {Staff} from '../src/payload-types.ts';
 import {saveEnquiryPhoto,removeExpiredPhotos,saveQuotationFile,readEnquiryFile,finalizeQuotation,quotationUploadStatus} from '../src/lib/attachment-service.ts';
 import {submitEnquiry} from '../src/lib/submit-enquiry.ts';
 import {issueVerification,confirmVerification} from '../src/lib/enquiry-verification.ts';
-import {deliverNextNotification} from '../src/lib/notification-worker.ts';
+import {deliverNextNotification,type NotificationTransport} from '../src/lib/notification-worker.ts';
 import {readInventory} from '../src/lib/inventory-service.ts';
 // Use the disposable CI database or the separately configured development DB.
 // The helper then clones an empty schema; fixtures never enter public tables.
@@ -58,7 +58,14 @@ try{
   assert.equal(docRepeats.filter(result=>result.repeated).length,1);
   await assert.rejects(saveEnquiryPhoto(cms,{...document,filename:'photo.png',contentType:'image/png',bytes},secret),'Photo endpoint cannot bypass quotation finalization');
   let notificationsSent=0;
-  const fakeTransport={send:async()=>{notificationsSent++;return {id:'synthetic-quotation-receipt'};}};
+  const fakeTransport:NotificationTransport={send:async message=>{
+    assert.equal(message.idempotencyKey,`enquiry-v2-${draft.reference}`);
+    assert.match(message.subject,/^Existing quotation submitted/);
+    assert.equal(message.replyTo,raw.contact.email);
+    assert.match(message.html??'',/The customer uploaded a quotation/);
+    notificationsSent++;
+    return {id:'synthetic-quotation-receipt'};
+  }};
   assert.equal((await deliverNextNotification(cms,fakeTransport)).outcome,'empty');assert.equal(notificationsSent,0);
   const quoteStatus=await quotationUploadStatus(cms,draft.reference);assert.equal(quoteStatus.files.length,1);assert.equal(quoteStatus.submitted,false);
   const documentRow=(await cms.db.pool.query('SELECT id,sealed_data FROM enquiry_attachments WHERE upload_id=$1',[document.uploadId])).rows[0];
