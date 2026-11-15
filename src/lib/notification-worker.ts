@@ -2,7 +2,8 @@ import {randomUUID} from 'node:crypto';
 import type {Payload} from 'payload';
 import {maintainNotifications} from './delivery-store.ts';
 import {notificationOptionSummary} from './notification-options.ts';
-export type NotificationTransport={send:(message:{from?:string;to:string;subject:string;text:string;idempotencyKey:string})=>Promise<{id:string}>};
+import {rfqEmail} from './rfq-email.ts';
+export type NotificationTransport={send:(message:{from?:string;to:string;subject:string;text:string;html?:string;replyTo?:string;idempotencyKey:string})=>Promise<{id:string}>};
 export function retryDelay(attempt:number){return Math.min(3600,60*2**Math.max(0,attempt-1));}
 // No transport is configured by default. A protected caller supplies the transport.
 // Transport implementations must deduplicate on idempotencyKey, including after an ambiguous timeout.
@@ -25,10 +26,26 @@ export async function deliverNextNotification(payload:Payload,transport?:Notific
  ORDER BY created_at,id FOR UPDATE SKIP LOCKED LIMIT 1) RETURNING id,reference,recipient,delivery_key,attempts,enquiry_id`,[lease]);
  const row=claimed.rows[0];if(!row)return {outcome:'empty' as const};
  try{
-   // No customer contact details, notes or attachments are copied into notification content.
-   const items=await pool.query('SELECT model,quantity,range,option_id,option_name_en,option_name_ar,option_model FROM enquiries_items WHERE _parent_id=$1 ORDER BY _order LIMIT 100',[row.enquiry_id]);
-   const summary=notificationOptionSummary(items.rows.map(item=>({model:item.model,quantity:Number(item.quantity),range:item.range,optionId:item.option_id,optionNameEn:item.option_name_en,optionNameAr:item.option_name_ar,optionModel:item.option_model})));
-   const sent=await transport.send({to:row.recipient,subject:`EL AMAL enquiry ${row.reference}`,text:`Enquiry ${row.reference} is available in the EL AMAL admin inbox. Sign in to review its details.${summary?'\n\nProduct configuration selections:\n'+summary:''}`,idempotencyKey:row.delivery_key});
+   const items=await pool.query('SELECT model,quantity,range,option_id,option_name_en,option_name_ar,option_model,name_en FROM enquiries_items WHERE _parent_id=$1 ORDER BY _order LIMIT 100',[row.enquiry_id]);
+   const details=await pool.query('SELECT name,email,company,locale,request_kind FROM enquiries WHERE id=$1',[row.enquiry_id]);
+   const enquiry=details.rows[0];
+   if(!enquiry)throw new Error('Missing enquiry');
+   const file=enquiry.request_kind==='quotation';
+   const heading=file?'Existing quotation submitted':'New request for quotation';
+   const lines=items.rows.map(item=>{
+     const configuration=notificationOptionSummary([{model:item.model,quantity:Number(item.quantity),range:item.range,optionId:item.option_id,optionNameEn:item.option_name_en,optionNameAr:item.option_name_ar,optionModel:item.option_model}]);
+     return `${item.name_en || item.model}\n${configuration || `${item.model} | Quantity: ${item.quantity}`}`;
+   });
+   const message=rfqEmail({
+     locale:'en',heading,
+     paragraphs:[
+       `Reference: ${row.reference}`,
+       `Requested by: ${enquiry.name}\nCompany: ${enquiry.company}\nEmail: ${enquiry.email}\nPreferred language: ${enquiry.locale==='ar'?'Arabic':'English'}`,
+       ...(file?['The customer uploaded a quotation. Sign in to review the file and any notes.']:['Requested products',...lines,'Sign in to review any notes and manage this request.']),
+     ],
+     action:{label:'Open this request in EL AMAL',url:`https://www.al-amaleg.com/admin/collections/enquiries/${encodeURIComponent(row.enquiry_id)}`},
+   });
+   const sent=await transport.send({to:row.recipient,subject:`${heading} | EL AMAL | ${row.reference}`,...message,replyTo:enquiry.email,idempotencyKey:row.delivery_key});
    if(typeof sent.id!=='string'||!sent.id||sent.id.length>200)throw new Error('Invalid delivery receipt');
    const result=await pool.query("UPDATE notifications SET status='sent',sent_at=now(),provider_message_id=$1,last_error=NULL,lease_token=NULL,lease_expires_at=NULL,updated_at=now() WHERE id=$2 AND lease_token=$3 AND status='processing'",[sent.id,row.id,lease]);
    return {outcome:result.rowCount?'sent' as const:'stale' as const};

@@ -88,18 +88,23 @@ test('public API reports invalid trusted option selection clearly without reflec
  const request=new Request(origin+'/api/customer-enquiries',{method:'POST',headers:{origin,'content-type':'application/json'},body:JSON.stringify(raw([{productId:'p1',quantity:1,optionId:'forged'}]))});
  const response=await handler.POST(request);assert.equal(response.status,400);const body=await response.json();assert.equal(body.code,'option-selection');assert.equal(JSON.stringify(body).includes('forged'),false);
 });
-test('notification worker sends immutable connection snapshots with its existing delivery key and omits contact information',async()=>{
+test('notification worker sends immutable connection snapshots and verified reply details with its existing delivery key',async()=>{
  const {deliverNextNotification}=await import('../src/lib/notification-worker.ts');
  const sent=[];
  const pool={query:async(statement,params)=>{
   if(statement.startsWith('WITH candidates AS'))return {rows:[],rowCount:0};
   if(statement.includes('RETURNING id,reference,recipient'))return {rows:[{id:7,enquiry_id:9,reference:'EA-test',recipient:'owner@example.invalid',delivery_key:'enquiry-EA-test',attempts:1}],rowCount:1};
   if(statement.startsWith('SELECT model,quantity,range,option_id')){assert.deepEqual(params,[9]);return {rows:[{model:'111.10 / 111.12',quantity:'2',option_id:'back-connection',option_name_en:'Back connection',option_name_ar:'توصيل خلفي',option_model:'111.12'}],rowCount:1};}
+  if(statement.startsWith('SELECT name,email,company'))return {rows:[{name:'Test <buyer>',email:'buyer@example.invalid',company:'Test & Co',locale:'ar',request_kind:'products'}]};
   if(statement.startsWith('UPDATE notifications SET status='))return {rows:[],rowCount:1};
   throw new Error('Unexpected SQL');
  }};
  assert.deepEqual(await deliverNextNotification({db:{pool}},{send:async(message)=>{sent.push(message);return {id:'receipt'};}}),{outcome:'sent'});
- assert.equal(sent[0].idempotencyKey,'enquiry-EA-test');assert.equal(sent[0].to,'owner@example.invalid');assert.match(sent[0].text,/111\.12/);assert.match(sent[0].text,/توصيل خلفي/);assert.match(sent[0].text,/Quantity: 2/);assert.match(sent[0].text,/admin inbox/);
+ assert.equal(sent[0].idempotencyKey,'enquiry-EA-test');assert.equal(sent[0].to,'owner@example.invalid');assert.match(sent[0].text,/111\.12/);assert.match(sent[0].text,/توصيل خلفي/);assert.match(sent[0].text,/Quantity: 2/);
+ assert.equal(sent[0].replyTo,'buyer@example.invalid');
+ assert.ok(sent[0].html.includes('Test &lt;buyer&gt;'));
+ assert.ok(sent[0].html.includes('Test &amp; Co'));
+ assert.ok(sent[0].html.includes('/admin/collections/enquiries/9'));
 });
 
 test('a stale basket selection event cannot restore a removed line or reuse an outdated quantity',async()=>{

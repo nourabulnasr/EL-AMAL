@@ -18,10 +18,11 @@ export function notificationTransport(env:Environment=process.env,fetcher:typeof
   return {send:async message=>{
     try {
       if(message.from!==undefined&&!email(message.from))throw new Error('Invalid sender');
+      if(message.replyTo!==undefined&&!email(message.replyTo))throw new Error('Invalid reply address');
       const response=await fetcher('https://api.resend.com/emails',{
         method:'POST',redirect:'error',signal:AbortSignal.timeout(15000),
         headers:{Authorization:`Bearer ${env.RESEND_API_KEY}`,'Content-Type':'application/json','Idempotency-Key':message.idempotencyKey},
-        body:JSON.stringify({from:message.from??env.MAIL_FROM,to:[message.to],subject:message.subject,text:message.text}),
+        body:JSON.stringify({from:message.from??env.MAIL_FROM,to:[message.to],subject:message.subject,text:message.text,html:message.html,reply_to:message.replyTo}),
       });
       // Do not retain provider response errors: they may contain submitted addresses.
       if(!response.ok)throw new Error('Delivery not confirmed');

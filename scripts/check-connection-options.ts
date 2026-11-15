@@ -123,11 +123,14 @@ try{
  assert.match(messages[1].text,/Bottom connection/);assert.match(messages[1].text,/Back connection/);
  assert.match(messages[1].text,/توصيل سفلي/);assert.match(messages[1].text,/توصيل خلفي/);
  assert.match(messages[1].text,/Quantity: 1/);assert.match(messages[1].text,/Quantity: 2/);
- for(const privateValue of [contact.name,contact.email,contact.company,contact.notes,'FORGED','999 |'])assert.equal(messages[1].text.includes(privateValue),false);
+ for(const contactValue of [contact.name,contact.email,contact.company])assert.ok(messages[1].text.includes(contactValue));
+ assert.equal(messages[1].replyTo,contact.email);
+ for(const privateValue of [contact.notes,'FORGED','999 |'])assert.equal(messages[1].text.includes(privateValue),false);
  assert.deepEqual((await payload.findByID({collection:'enquiries',overrideAccess:true,id:record.id})).items,snapshot,'Confirmation and delivery preserve immutable item history');
  const legacyProof=await issueVerification(payload,legacy.reference,'cms');assert.ok(legacyProof);await confirmVerification(payload,legacyProof);
  assert.equal((await deliverNextNotification(payload,capture)).outcome,'sent');
- assert.equal(messages[2].text,`Enquiry ${legacy.reference} is available in the EL AMAL admin inbox. Sign in to review its details.`);
+ assert.ok(messages[2].text.includes(legacy.reference));
+ assert.match(messages[2].text,/Quantity:/);
 
  stage='configured instrument sizes, scales and threads persist through PostgreSQL, staff and owner message';
  const configured={...product,id:'regression-configured',model:'232.50, 233.50',details:{...details,options:undefined,specifications:[{label:{en:'Nominal size',ar:'المقاس الاسمي'},value:{en:'63, 100, 160 mm',ar:'63، 100، 160 مم'}}]}};

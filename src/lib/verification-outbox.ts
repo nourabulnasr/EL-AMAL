@@ -4,15 +4,15 @@ import {tokenDigest} from './enquiry-verification.ts';
 import {sealMessage,verificationMessage,validateVerificationSettings,type VerificationSettings} from './verification-message.ts';
 import {assertQueueCapacity} from './queue-capacity.ts';
 
-function envelope(settings:VerificationSettings,email:string,locale:'en'|'ar'){
+function envelope(settings:VerificationSettings,email:string,locale:'en'|'ar',reference:string){
  const token=randomBytes(32).toString('hex'),deliveryKey=`verification-${randomUUID()}`;
- return {tokenHash:tokenDigest(token)!,deliveryKey,sealedMessage:sealMessage(verificationMessage(settings,email,locale,token),settings.secret,deliveryKey)};
+ return {tokenHash:tokenDigest(token)!,deliveryKey,sealedMessage:sealMessage(verificationMessage(settings,email,locale,token,reference),settings.secret,deliveryKey)};
 }
 // Must run in the enquiry's existing transaction. No customer token is returned.
 export async function enqueueInitialVerification(payload:Payload,record:{id:number;reference:string;email:string;locale:'en'|'ar';source:'demo'|'cms'},settings:VerificationSettings,req:Partial<PayloadRequest>){
  if(record.source!=='cms')return;
  if(!req.transactionID)throw new Error('Verification enqueue requires a transaction');
- const data=envelope(settings,record.email,record.locale),now=Date.now(),expiresAt=new Date(now+3600000).toISOString();
+ const data=envelope(settings,record.email,record.locale,record.reference),now=Date.now(),expiresAt=new Date(now+3600000).toISOString();
  await payload.create({collection:'enquiry-verifications',overrideAccess:true,req,data:{enquiry:record.id,tokenHash:data.tokenHash,expiresAt}});
  await payload.create({collection:'verification-emails',overrideAccess:true,req,data:{
   enquiry:record.id,reference:record.reference,deliveryKey:data.deliveryKey,sealedMessage:data.sealedMessage,
@@ -45,7 +45,7 @@ export async function resendVerification(payload:Payload,reference:string,settin
   // A terminal generation rejoining the active queue needs a fresh capacity slot.
   // Existing pending work already owns a slot and can rotate without growing it.
   if(row.status!=='pending'&&row.status!=='processing')await assertQueueCapacity(statement=>client.query(statement));
-  const data=envelope(settings,record.email,record.locale);
+  const data=envelope(settings,record.email,record.locale,reference);
   await client.query(`UPDATE enquiry_verifications SET token_hash=$1,expires_at=now()+interval '1 hour',updated_at=now() WHERE id=$2`,[data.tokenHash,record.id]);
   await client.query(`UPDATE verification_emails SET delivery_key=$1,sealed_message=$2,status='pending',attempts=0,
    next_attempt_at=now(),expires_at=now()+interval '1 hour',lease_token=NULL,lease_expires_at=NULL,sent_at=NULL,
