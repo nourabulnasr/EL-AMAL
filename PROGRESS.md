@@ -534,3 +534,13 @@ Live browser verification confirmed English and Arabic pressure catalogues, all 
 The redesigned owner and bilingual confirmation emails remain in review. Newly queued owner notifications use a versioned delivery key. Existing queued messages retain the original subject and body when retried with their existing key. TypeScript, 290 unit tests, and isolated PostgreSQL regressions for configured RFQs and uploaded quotations passed with simulated mail delivery.
 
 The strict npm audit still reports the low-severity deepmerge advisory through Payload; npm lists 4.3.1 as the current version, with no upstream fix. The current production deployment is separate from this review branch. After a qualified release, verify both a configured RFQ and an uploaded quotation in the live Gmail inbox. During a rollback, prevent the legacy worker from processing new-format jobs until the compatible worker is available, as Resend expects the same body for an existing delivery key.
+
+## Production email release — 2026-11-19
+
+The owner rejected the old-format test email because production still ran the November 3 release. Branded owner and personalized bilingual confirmation templates are now published from ee6c169, Vercel dpl_EihFwC43JerbM5WguboYXagSc1dz. The approved About history is included. Production build, TypeScript, 290 units before the small sender-name addition, five transport tests after it, and isolated product/upload quotation regressions succeeded. Code review found no blocking issue. Browser-rendered desktop, phone-width and Arabic email previews were inspected; actual Gmail rendering remains subject to the new test.
+
+Production security patches were applied and checksum-verified during install and prebuild. The npm advisory report still flags the low-severity deepmerge upstream version; no clean npm audit is claimed and the existing CI audit was not weakened. Release was built directly with production settings and explicitly promoted under Nour's publication authorization.
+
+Live www domain resolves to the new deployment; About and Arabic RFQ respond HTTP 200. A fresh normal-form test is EA-2d6a34a0-a41c-4c4a-995b-c9518c828996, recipient elamal4supplies@gmail.com. Its queue uses enquiry-v2, confirming the live new-format path. Customer confirmation and owner inbox acceptance are still pending. The earlier EA-ac444b80 test was delivered under the previous plaintext production template and cannot visually change in Gmail.
+
+Automatic approval review rejected exporting the entire production environment to test email. No export occurred. Verification uses the normal website form and scoped read-only queue status instead.
