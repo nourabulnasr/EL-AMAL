@@ -22,7 +22,7 @@ export function notificationTransport(env:Environment=process.env,fetcher:typeof
       const response=await fetcher('https://api.resend.com/emails',{
         method:'POST',redirect:'error',signal:AbortSignal.timeout(15000),
         headers:{Authorization:`Bearer ${env.RESEND_API_KEY}`,'Content-Type':'application/json','Idempotency-Key':message.idempotencyKey},
-        body:JSON.stringify({from:message.from??env.MAIL_FROM,to:[message.to],subject:message.subject,text:message.text,html:message.html,reply_to:message.replyTo}),
+        body:JSON.stringify({from:message.html?`EL AMAL <${message.from??env.MAIL_FROM}>`:message.from??env.MAIL_FROM,to:[message.to],subject:message.subject,text:message.text,html:message.html,reply_to:message.replyTo}),
       });
       // Do not retain provider response errors: they may contain submitted addresses.
       if(!response.ok)throw new Error('Delivery not confirmed');

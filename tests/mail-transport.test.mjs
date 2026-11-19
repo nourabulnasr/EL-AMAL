@@ -31,3 +31,13 @@ test('verification retries use the snapshotted sender even after configuration c
  assert.equal(body.from,'original@example.invalid');
  await assert.rejects(transport.send({...message,from:'invalid'}),{message:'Delivery not confirmed'});
 });
+test('branded HTML carries both formats and the verified reply address',async()=>{
+ let body;
+ const transport=notificationTransport(env,async(_url,options)=>{body=JSON.parse(options.body);return Response.json({id:'receipt'});});
+ await transport.send({...message,html:'<p>Test only</p>',replyTo:'customer@example.invalid'});
+ assert.equal(body.from,'EL AMAL <sender@example.invalid>');
+ assert.equal(body.html,'<p>Test only</p>');
+ assert.equal(body.text,'Test only');
+ assert.equal(body.reply_to,'customer@example.invalid');
+ await assert.rejects(transport.send({...message,replyTo:'customer@example.invalid\r\nBcc: other@example.invalid'}));
+});
