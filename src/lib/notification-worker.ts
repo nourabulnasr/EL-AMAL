@@ -42,17 +42,24 @@ export async function deliverNextNotification(payload:Payload,transport?:Notific
    if(!enquiry)throw new Error('Missing enquiry');
    const file=enquiry.request_kind==='quotation';
    const heading=file?'Existing quotation submitted':'New request for quotation';
-   const lines=items.rows.map((item,index)=>{
-     const configuration=configurations[index];
-     return `${item.name_en || item.model}\n${configuration || `${item.model} | Quantity: ${item.quantity}`}`;
-   });
    const message=rfqEmail({
      locale:'en',heading,
+     reference:row.reference,
      paragraphs:[
-       `Reference: ${row.reference}`,
-       `Requested by: ${enquiry.name}\nCompany: ${enquiry.company}\nEmail: ${enquiry.email}\nPreferred language: ${enquiry.locale==='ar'?'Arabic':'English'}`,
-       ...(file?['The customer uploaded a quotation. Sign in to review the file and any notes.']:['Requested products',...lines,'Sign in to review any notes and manage this request.']),
+       `${enquiry.name} from ${enquiry.company} has confirmed their email and sent ${file?'an existing quotation':'a quotation request'} for your review.`,
+       ...(file?['The customer uploaded a quotation. Sign in to review the file and any notes.']:[]),
      ],
+     details:[
+       {label:'Customer',value:enquiry.name},
+       {label:'Company',value:enquiry.company},
+       {label:'Reply email',value:enquiry.email},
+       {label:'Preferred language',value:enquiry.locale==='ar'?'Arabic':'English'},
+     ],
+     products:items.rows.map((item,index)=>({
+       name:item.name_en||item.model,model:item.option_model||item.model,quantity:Number(item.quantity),
+       configuration:configurations[index]?[item.range,item.option_name_en,item.option_name_ar].filter(Boolean).join(' | '):undefined,
+     })),
+     nextStep:'Review the selected specifications and any customer notes in the request. Use Reply in your email app to contact this customer directly. Confirm pricing, configuration and availability before issuing your quotation.',
      action:{label:'Open this request in EL AMAL',url:`https://www.al-amaleg.com/admin/collections/enquiries/${encodeURIComponent(row.enquiry_id)}`},
    });
    outgoing={to:row.recipient,subject:`${heading} | EL AMAL | ${row.reference}`,...message,replyTo:enquiry.email,idempotencyKey:row.delivery_key};

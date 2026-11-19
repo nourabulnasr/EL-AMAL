@@ -11,19 +11,20 @@ function key(secret:string){
  if(secret.length<32)throw new Error('Invalid verification configuration');
  return Buffer.from(hkdfSync('sha256',secret,'el-amal','verification-email-v1',32));
 }
-export function verificationMessage(settings:VerificationSettings,to:string,locale:'en'|'ar',token:string,reference?:string):VerificationMessage{
+export function verificationMessage(settings:VerificationSettings,to:string,locale:'en'|'ar',token:string,reference?:string,name?:string):VerificationMessage{
  validateVerificationSettings(settings);
  if(!email(to)||!/^[a-f0-9]{64}$/.test(token))throw new Error('Invalid verification message');
  const link=`${settings.origin}/${locale}/verify#token=${token}`;
  const arabic=locale==='ar';
  const heading=arabic?'أكّد طلبك لدى الأمل':'Confirm your EL AMAL enquiry';
  const message=rfqEmail({
-  locale,heading,
+  locale,heading,reference,
   paragraphs:[
+   ...(name?[arabic?`مرحباً ${name}،`:`Hello ${name},`]:[]),
    arabic?'شكراً لاختيارك الأمل. أكّد بريدك الإلكتروني حتى يتمكن فريقنا من متابعة طلبك والتواصل معك.':'Thank you for choosing EL AMAL. Please confirm your email so our team can follow up on your request.',
-   ...(reference?[arabic?`رقم طلبك: ${reference}`:`Your request reference: ${reference}`]:[]),
    arabic?'افتح الرابط واضغط «تأكيد». ينتهي الرابط خلال ساعة. إذا لم ترسل هذا الطلب، يمكنك تجاهل الرسالة.':'Open the link and press Confirm. The link expires in one hour. If you didn’t send this request, you can ignore this email.',
   ],
+  nextStep:arabic?'بعد التأكيد، يراجع فريقنا متطلباتك ويتواصل معك بشأن المواصفات والتوافر وعرض السعر. لا يؤكد هذا البريد حجز المخزون أو الأسعار.':'Once confirmed, our team will review your requirements and follow up about specifications, availability and a quotation. Stock and pricing are confirmed separately.',
   action:{label:arabic?'تأكيد البريد الإلكتروني':'Confirm my email',url:link},
  });
  return {from:settings.from,to,subject:heading,...message};
