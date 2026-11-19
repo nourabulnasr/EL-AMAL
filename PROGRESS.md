@@ -544,3 +544,5 @@ Production security patches were applied and checksum-verified during install an
 Live www domain resolves to the new deployment; About and Arabic RFQ respond HTTP 200. A fresh normal-form test is EA-2d6a34a0-a41c-4c4a-995b-c9518c828996, recipient elamal4supplies@gmail.com. Its queue uses enquiry-v2, confirming the live new-format path. Customer confirmation and owner inbox acceptance are still pending. The earlier EA-ac444b80 test was delivered under the previous plaintext production template and cannot visually change in Gmail.
 
 Automatic approval review rejected exporting the entire production environment to test email. No export occurred. Verification uses the normal website form and scoped read-only queue status instead.
+
+The new branded confirmation email was accepted by the provider at 2026-11-19 01:40:03 UTC (03:40 Cairo), receipt 01a1f175-fc4c-7cc1-9f7b-32c798369060, with no sending error. Owner notification awaits the customer's confirmation. Receipt and rendering in Gmail remain unverified.
