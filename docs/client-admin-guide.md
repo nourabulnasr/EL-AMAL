@@ -183,3 +183,9 @@ Review stock availability dates and expired holds through the appropriate stock 
 | A menu is unavailable | Confirm the account's role and contact the owner or Nour. |
 
 When asking for support, send the page address, enquiry or model reference, approximate Cairo time, and the visible error. Exclude passwords, reset links, verification tokens and unnecessary customer documents.
+# Owner dashboard in Payload
+
+The new dashboard preview adds an overview at `/admin` for owner and sales accounts. It shows new confirmed requests, requests being handled, recent confirmed requests, and the five most-clicked products during the last 30 days. Unverified requests and unfinished quotation uploads are excluded from these overview counts.
+
+Click a request to open its customer and product details. Click a count to open its filtered inbox. Use **Customer files** for uploaded quotations and technical photos; **Sales email delivery** and **Confirmation email delivery** show the two separate email stages. **Open live product report** provides the full click and CTR breakdown and automatic updates. The overview itself refreshes when you select **Refresh overview** and shows its load time in Cairo time. An unavailable metric means the data could not be loaded; it does not mean zero.
+
