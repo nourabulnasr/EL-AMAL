@@ -546,3 +546,11 @@ Live www domain resolves to the new deployment; About and Arabic RFQ respond HTT
 Automatic approval review rejected exporting the entire production environment to test email. No export occurred. Verification uses the normal website form and scoped read-only queue status instead.
 
 The new branded confirmation email was accepted by the provider at 2026-11-19 01:40:03 UTC (03:40 Cairo), receipt 01a1f175-fc4c-7cc1-9f7b-32c798369060, with no sending error. Owner notification awaits the customer's confirmation. Receipt and rendering in Gmail remain unverified.
+
+## Owner handover and Ads billing — 2026-11-24
+
+The existing owner login was successfully verified through the live form. The saved account is sorourmuhammed8@gmail.com; RFQ alerts remain elamal4supplies@gmail.com. No credential was changed or exported. Recommend a unique longer password selected privately by the owner during handover.
+
+Dashboard clarity commit d0e2733 is live at Vercel dpl_YzSUQmk2PL9nc4MxfauayDL7LHDq. The CMS dashboard now links prominently to /staff. Daily action labels are View customer requests, View uploaded quotations, Customer confirmation emails, Emails to your sales inbox, Manage stock, Most requested products, and Product clicks and CTR. TypeScript, existing route/access tests and independent review succeeded. Authenticated live verification confirmed the deployed wording and product-interest report with 30-second refresh enabled. Corrected outdated Hotmail and action-label wording in the client guide.
+
+Client Google Ads account 918-712-7088 is still in signup; the reviewed campaign advanced to the billing page without activating spend. The displayed promotion is spend EGP12,000 to receive EGP12,000, applying following successful billing setup for new advertisers, with a displayed spend deadline of 23 January 2027. A new payment profile is required. The client must supply payment details and authorize a spending cap. Real account conversion tagging remains unimplemented pending setup access, actual tag/labels and acceptance testing. No campaign activation, payment information entry or terms acceptance was performed.
