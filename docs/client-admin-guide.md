@@ -9,6 +9,7 @@ This guide explains how to sign in, handle customer enquiries and uploaded quota
 | Task | Address |
 | --- | --- |
 | Sign in to administration | https://www.al-amaleg.com/admin |
+| Start daily work | https://www.al-amaleg.com/staff |
 | See product clicks and CTR | https://www.al-amaleg.com/staff/products |
 | See requested models and quantities | https://www.al-amaleg.com/staff/reports |
 | Review customer enquiries | https://www.al-amaleg.com/admin/collections/enquiries |
@@ -16,13 +17,13 @@ This guide explains how to sign in, handle customer enquiries and uploaded quota
 | Edit catalogue products | https://www.al-amaleg.com/admin/collections/products |
 | Manage stock operations | https://www.al-amaleg.com/staff/inventory |
 
-Bookmark the admin and product-interest addresses. A sign-in page is normal when your session expires. The public site is available in English and Arabic; the staff workspace uses English labels, which are reproduced in this guide.
+Bookmark the owner workspace and product-interest addresses. The saved owner login email is sorourmuhammed8@gmail.com. Customer RFQ alerts go to elamal4supplies@gmail.com. A sign-in page is normal when your session expires. The public site is available in English and Arabic; the staff workspace uses English labels, which are reproduced in this guide.
 
 ## Sign in and protect access
 
 1. Open the administration address. Check for HTTPS and the exact website host www.al-amaleg.com.
 2. Enter your assigned staff email and password, then choose Login. Obtain credentials privately from Nour; this guide deliberately contains no password.
-3. After signing in, use Open product interest, Open demand reports, or Open stock control on the dashboard. You can also use the direct links above.
+3. After signing in, choose Open your owner workspace. Use View customer requests, View uploaded quotations, Product clicks and CTR, Most requested products, or Manage stock. You can also use the direct links above.
 4. Use your own named account. Sign out when finished, especially on a shared computer.
 
 Use a unique password of 15 to 128 characters. Keep it in a password manager. Five unsuccessful login attempts temporarily lock an account for ten minutes; wait before retrying rather than guessing repeatedly.
@@ -31,7 +32,7 @@ If access fails, first check the email, typing, keyboard language and Caps Lock.
 
 ## Recover a forgotten password
 
-Use Forgot password on the login page and enter the email attached to your staff account. This can differ from the Hotmail address that receives sales alerts. The site gives a neutral response to protect account privacy. Check the staff account mailbox, including Spam, and open the newest reset email. Follow the link and set a new unique password. You will normally return to the admin; sign in if prompted. Previous signed-in sessions are revoked.
+Use Forgot password on the login page and enter sorourmuhammed8@gmail.com for the owner account. The site gives a neutral response to protect account privacy. Check that mailbox, including Spam, and open the newest reset email. Follow the link and set a new unique password. You will normally return to the admin; sign in if prompted. Previous signed-in sessions are revoked.
 
 Reset links expire after 30 minutes. Allow ten minutes before requesting another email for the same account. If the link has expired or was already used, request a new one. Nour can investigate delivery or account access, but the account owner should choose and enter the replacement password personally.
 
@@ -39,7 +40,7 @@ Password recovery is enabled on the live website. The owner must still confirm t
 
 ## Find the most clicked products
 
-1. Sign in and choose Open product interest, or open https://www.al-amaleg.com/staff/products.
+1. Sign in and choose Product clicks and CTR, or open https://www.al-amaleg.com/staff/products.
 2. Under Choose the view, select From and Through dates. Dates are inclusive and follow Cairo time.
 3. Leave Language at Both languages, Device at session start at All devices, and Product context at All contexts for an overall view.
 4. Set Sort by to Product selections, then choose Apply filters.
@@ -125,7 +126,7 @@ Open Notification queue for alerts to the owner, and Verification emails for cus
 
 Pending means a message is waiting; processing means a worker is handling it. Sent means the provider accepted it, which is different from reaching the recipient's Inbox. Failed needs investigation. The scheduled delivery worker normally runs every five minutes. Allow for that interval and mailbox filtering before reporting a missing message.
 
-Do not change queue timestamps, attempt counters or customer verification fields to force an email. Give Nour the enquiry reference and the displayed error. The receiving inbox is Hotmail; the sender address enquiries@al-amaleg.com does not itself create a mailbox you can sign in to.
+Do not change queue timestamps, attempt counters or customer verification fields to force an email. Give Nour the enquiry reference and the displayed error. The receiving inbox is elamal4supplies@gmail.com; the sender address enquiries@al-amaleg.com does not itself create a mailbox you can sign in to.
 
 ## Maintain the product catalogue
 
@@ -178,7 +179,7 @@ Review stock availability dates and expired holds through the appropriate stock 
 | Data stopped updating | Check Last successful update, the automatic-update checkbox, connection and staff sign-in. Use Refresh now. |
 | Customer says a file was sent but the request is incomplete | Check Quotation submitted at. The customer must complete email confirmation and Send files for review. |
 | An attachment expired | Request a new file through the approved workflow; expired content is not restored by reopening the old link. |
-| Alert is missing | Match the reference in Notification queue, allow the worker interval, then check Hotmail Spam. |
+| Alert is missing | Match the reference in Notification queue, allow the worker interval, then check Gmail Spam in elamal4supplies@gmail.com. |
 | A menu is unavailable | Confirm the account's role and contact the owner or Nour. |
 
 When asking for support, send the page address, enquiry or model reference, approximate Cairo time, and the visible error. Exclude passwords, reset links, verification tokens and unnecessary customer documents.

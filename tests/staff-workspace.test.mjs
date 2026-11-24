@@ -13,7 +13,7 @@ test('workspace routes every operational question to its authoritative protected
  for(const href of ['/admin/collections/enquiries','/admin/collections/enquiry-attachments','/admin/collections/verification-emails','/admin/collections/notifications','/staff/inventory','/staff/reports','/staff/products'])assert.ok(links.includes(href),href);
  assert.equal(new Set(links).size,links.length);
  const enquiry=sections.find(section=>section.id==='enquiries');
- assert.match(enquiry.guidance,/immutable/i);assert.match(enquiry.guidance,/files/i);
+ assert.match(enquiry.guidance,/submitted/i);assert.match(enquiry.guidance,/files/i);
  const email=sections.find(section=>section.id==='delivery');
  assert.match(email.guidance,/provider accepted/i);assert.match(email.guidance,/Inbox/i);
 });
